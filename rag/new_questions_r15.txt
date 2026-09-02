@@ -1,0 +1,194 @@
+# HealthCoach — ROUND 15 delta (NEW questions only): cravings, parasites/ivermectin,
+#   energy availability/RED-S, endurance fueling & hydration, immunity & vaccines, sleep apnea,
+#   starting a compound, meal planning, cardiac screening, running GI/heat, overtraining &
+#   micronutrients, runner body maintenance, noise/hearing & caffeine.
+# All are also in interactions.txt. Run just these without repeating the full set:
+#   python3 batch_ask.py new_questions_r15.txt   -> logs/coach_log_*.md
+# (Supersedes new_cravings_parasites.txt — that older file can be deleted.)
+
+# ===== CRAVINGS — sugar & strong food cravings, and how to curb them =====
+what is the most evidence-based way to reduce sugar cravings, and how long do they take to fade?
+physiologically, why do intense food cravings happen (dopamine, blood sugar swings, habit, sleep, stress), and which lever matters most?
+how do I curb strong food cravings during a calorie deficit without relying on willpower alone?
+does cutting sugar make cravings worse before they get better, and how do I get through the adaptation period?
+how does short sleep drive sugar and food cravings, and how much does fixing sleep actually reduce them?
+how does chronic stress and cortisol drive sugar cravings, and what breaks the stress-eating loop?
+how does tirzepatide / GLP-1 reduce food cravings and 'food noise', and what happens to cravings when it's stopped?
+how do protein and fiber at a meal blunt later cravings, and what amounts are needed?
+how does the porn / scrolling dopamine loop interact with sugar and food cravings?
+do artificial sweeteners reduce sugar cravings or make them worse over time?
+does a stretch of low-sugar eating reset sweet-taste sensitivity and lower cravings?
+which supplements have any real human evidence for reducing sugar cravings (protein, fiber, chromium, berberine, glutamine), and which are hype?
+how do ultra-processed, hyper-palatable foods engineer cravings, and does removing them reduce how often cravings hit?
+what is the best evidence-based way to respond to a craving in the moment instead of giving in?
+# ===== PARASITES / DEWORMING / IVERMECTIN — human antiparasitic evidence & safety =====
+what does the human evidence actually say about ivermectin as an antiparasitic, and which infections is it proven to treat?
+what is ivermectin's human safety profile, and what are the risks of taking it without a diagnosed parasitic infection?
+is routine self-deworming without a confirmed infection supported by any evidence, and what are the downsides?
+what are the standard evidence-based antiparasitic drugs for humans (albendazole, mebendazole, praziquantel, nitazoxanide, ivermectin), and what does each treat?
+what does the evidence show about mass deworming programs, and does any of it apply to a healthy adult in a developed country?
+how would I actually know if I have an intestinal parasite — what symptoms and tests — versus just assuming I do?
+how are common human intestinal parasites (giardia, pinworm, tapeworm, hookworm, blastocystis) diagnosed and treated?
+how likely is a healthy adult in a developed country to have a parasite, and what raises the risk (travel, undercooked meat, pets)?
+do 'parasite cleanse' supplements (wormwood, black walnut, clove) have any real evidence, or are they marketing?
+how do parasites and deworming affect the gut microbiome and immune system?
+what are the genuine red-flag symptoms that should prompt seeing a doctor for a possible parasitic infection?
+when is antiparasitic treatment actually warranted versus unnecessary, and why does treating without a diagnosis carry risk?
+# ===== ENERGY AVAILABILITY & UNDER-FUELING (RED-S) — the cut + mileage + GLP-1 collision =====
+what is energy availability, how do I estimate it, and what threshold defines low energy availability (LEA)?
+am I at real risk of RED-S running a calorie deficit, high mileage, and a GLP-1 that suppresses appetite all at once?
+what are the earliest signs of under-fueling and RED-S in a male athlete, and what should I monitor?
+how does low energy availability lower testosterone, T3, and bone density, and how fast can it happen?
+how do I run a cut and marathon training at the same time without dropping into low energy availability?
+how does appetite suppression from tirzepatide raise the risk of accidental under-fueling, and how do I prevent it?
+is there a minimum calorie and carbohydrate intake I should not go below while training hard on a cut?
+how do I periodize fueling so hard-training days get more carbs and calories than rest days?
+can under-fueling actually slow fat loss by suppressing metabolism, hormones, and recovery?
+how do I tell healthy fat loss apart from harmful under-fueling using objective markers?
+# ===== ENDURANCE FUELING & HYDRATION — long runs, sodium, race day =====
+how many grams of carbohydrate per hour are recommended during long runs, and how do I train my gut to tolerate them?
+what should I eat before, during, and after a long run for performance and recovery?
+how do I estimate my sweat rate and individual sodium needs for long runs and racing?
+what causes exercise-associated hyponatremia, and how do I avoid over-drinking on long runs?
+does fasted training help or hurt endurance and fat adaptation, and when is it appropriate?
+how do carbohydrate needs differ on race day versus easy training days?
+how does tirzepatide's slowed gastric emptying affect fueling and GI comfort during runs?
+what is carbohydrate periodization / 'train-low', and is it worth doing for a marathoner?
+how much protein and carbohydrate should the post-session recovery meal contain, and does timing matter?
+how do I choose and test practical race fuels (gels, real food, drink mix) before race day?
+# ===== IMMUNITY & VACCINES — training load, illness, and staying current =====
+how does heavy endurance training affect immune function, and is the post-long-run 'open window' a real infection risk?
+what evidence-based steps reduce getting sick during high training load (sleep, fueling, hygiene, vitamin D, zinc)?
+should I train when sick, and what is the 'neck check' rule?
+which vaccines should a healthy man in his late 20s be current on?
+what is the evidence on the annual flu vaccine for a healthy young adult?
+how worthwhile are ongoing COVID boosters for a healthy young adult now?
+do intense training or a calorie deficit blunt the immune response to a vaccine?
+which immune-support supplements have real evidence versus marketing (vitamin D, zinc, vitamin C, elderberry)?
+how does gut health and the microbiome shape immune resilience?
+how does chronic sleep loss impair immunity and the response to vaccines?
+# ===== SLEEP-DISORDERED BREATHING & APNEA — the hidden recovery killer =====
+what are the signs of obstructive sleep apnea, and how would I know if I have it?
+how does carrying extra weight raise sleep apnea risk, and does losing weight reverse it?
+how do I get screened for sleep apnea (home sleep test versus lab study), and when is it worth doing?
+how does untreated sleep apnea affect testosterone, blood pressure, recovery, and cardiovascular risk?
+does mouth-taping or positional therapy actually help snoring or mild sleep-disordered breathing, and what's the evidence?
+can I have disrupted, unrefreshing sleep from upper-airway resistance without full-blown apnea?
+how do alcohol and sedatives worsen sleep-disordered breathing?
+what does a wearable's blood-oxygen and breathing data actually tell me about possible sleep apnea?
+# ===== STARTING A NEW COMPOUND CORRECTLY — the mirror of getting off =====
+what is the correct way to introduce a new supplement or peptide so I can actually tell whether it works?
+why add only one new thing at a time, and how long should I trial it before judging?
+what should I watch for in the first days and weeks of a new compound (side effects, red flags)?
+what baseline bloodwork or measurements should I take before starting a new peptide or hormone-active compound?
+how do I titrate a dose upward correctly and find the minimum effective dose?
+in what order should I add compounds to a stack to avoid confounding the effects?
+how do I set up an objective before/during/after comparison for a new intervention?
+when should I abandon a new compound versus give it more time?
+# ===== MEAL PLANNING — building the plan from scratch =====
+how do I build a meal plan from scratch for a high-protein cut — what steps, in what order?
+how do I set my calorie target and macro split for losing fat while keeping muscle at my size and training load?
+how much protein per day anchored to goal bodyweight, and how do I distribute it across meals?
+how do I structure meals around morning study, a 10-hour workday, and evening training?
+how do I hit protein and micronutrients when a GLP-1 has killed my appetite — practical high-density meals?
+what does a simple, repeatable batch meal-prep template look like?
+how do I build meals that fuel evening training and still support sleep?
+which foods give the most protein and nutrients per calorie for a cut, and which should meals be built around?
+how do I adjust the meal plan on hard-training days versus rest days?
+how do I plan for eating out, travel, and social situations without derailing the cut?
+how do I handle food safety and storage for batch-cooked meals (reheating, leftovers, how long they keep)?
+how do I keep a meal plan affordable without sacrificing protein or nutrient quality?
+# ===== CARDIOVASCULAR & CARDIAC SCREENING UNDER LOAD — heart, BP, stimulants, tadalafil =====
+what cardiovascular screening makes sense for a hybrid athlete training hard (resting HR, blood pressure, ECG, later coronary calcium)?
+can very high endurance volume cause harmful cardiac changes (athlete's heart, atrial fibrillation, coronary calcium), and at what dose?
+how do stimulants like caffeine interact with hard training and heart rhythm — is there a real arrhythmia risk?
+how do I monitor and manage blood pressure while cutting, training hard, and using tadalafil?
+what resting and recovery heart-rate patterns signal overtraining or a cardiac problem?
+when should palpitations, chest symptoms, or unusual breathlessness during training prompt medical evaluation?
+# ===== RUNNING GI DISTRESS & HEAT — the gut and thermoregulation while running =====
+what causes GI distress and 'runner's trots' during long runs, and how do I prevent it?
+how does tirzepatide's delayed gastric emptying compound GI problems during running, and how do I work around it?
+how do I acclimatize to heat for hot-weather training and racing, and how long does it take?
+how does heat change my fluid, sodium, and pacing needs on long runs?
+what are the warning signs of heat illness while running, and how do I avoid it?
+# ===== OVERTRAINING & MICRONUTRIENT GAPS — total load and low-appetite deficiencies =====
+what is the difference between functional overreaching, non-functional overreaching, and overtraining, and how do I tell which I'm in?
+which objective markers (HRV, resting HR, sleep, mood, performance) best detect overtraining early?
+with a 10-hour workday plus training plus study, how do I manage total load to avoid burnout and overtraining?
+which micronutrient deficiencies become likely when a GLP-1 suppresses how much I eat, and how do I prevent them?
+what iron and ferritin problems are common in endurance runners, and how do I catch and fix low iron?
+how do I make sure a low-calorie, low-appetite diet still covers magnesium, vitamin D, B12, and electrolytes?
+# ===== RUNNER BODY MAINTENANCE — skin, feet, chafing at high mileage =====
+how do I prevent blisters, black toenails, and chafing during high-mileage training?
+how do I prevent and treat athlete's foot and other skin issues from constant sweaty training?
+how should I choose socks and shoes and care for my feet to avoid injuries and skin problems?
+what is the evidence-based way to manage delayed-onset muscle soreness after hard or downhill running?
+# ===== NOISE / HEARING & CAFFEINE — under-queried exposures =====
+how much noise exposure damages hearing, and how do I protect it in a loud work environment?
+does noise-induced hearing loss accumulate silently, and what are the early signs to catch?
+do loud headphones or earbuds meaningfully damage hearing, and what volume and duration are safe?
+how does caffeine tolerance build, and should I cycle or take breaks to keep it effective?
+what is the caffeine-timing math to help both a hard session and study without wrecking an early bedtime?
+how much caffeine per day is safe, and does it truly improve endurance and focus or mostly offset withdrawal?
+does caffeine before evening training hurt my sleep even several hours later?
+# ===== PARASITE REDUCTION — the CORRECT way, daily use, and does it even help =====
+what is the correct, evidence-based way to reduce or eliminate a parasite if I actually have one — diagnosis first, then targeted treatment?
+is taking ivermectin or another antiparasitic every day, or on a routine schedule, supported by any human evidence — or is it harmful?
+people online take ivermectin on a fixed 'research' schedule for general health — what does human evidence actually say about that, and what are the risks?
+does routine or daily 'parasite cleansing' in a healthy person with no diagnosed infection improve health at all, or is it unnecessary?
+what are the real harms of taking antiparasitic drugs long-term or without an infection (liver, neurologic, resistance, microbiome)?
+if I suspect a parasite, what is the correct testing and treatment pathway, and when do I need a doctor?
+how long should antiparasitic treatment actually last for a real infection, and why isn't it an everyday thing?
+do healthy adults in developed countries benefit at all from periodic deworming, based on human data?
+# ===== DOPAMINE & QUITTING PORN — killing 'bad dopamine', rebuilding drive =====
+how does compulsive porn use dysregulate the dopamine and reward system, and is the change reversible?
+what is the evidence-based way to quit porn and restore normal dopamine sensitivity, and how long does recovery take?
+what actually is a 'dopamine detox' — what part is real and what is myth?
+how do I lower chronic overstimulation ('bad dopamine' from porn, scrolling, junk food) and rebuild drive for hard, meaningful work?
+how does quitting porn affect libido, erectile function, focus, and motivation according to human data?
+what practical, evidence-based tactics break a compulsive porn or scrolling habit (triggers, environment, replacement behavior)?
+does 'dopamine fasting' from high-stimulation inputs actually improve focus and motivation, or is baseline restoration the real mechanism?
+how long does the brain's reward sensitivity take to recover after cutting out a compulsive behavior?
+# ===== HEADPHONES, BLUETOOTH & EMF — hearing and wireless exposure =====
+how loud and how long can I use headphones or earbuds before risking hearing damage, and what's the safe-listening rule?
+do Bluetooth wireless earbuds emit meaningful radiation, and does human evidence show any harm?
+what does the evidence actually say about radiofrequency EMF from phones and wireless devices and risks like cancer?
+is holding a phone to my head or keeping it in my pocket a real EMF concern, or negligible?
+does wireless/EMF exposure measurably affect sleep or cognition in controlled human studies?
+if I want to be cautious, what evidence-based steps reduce EMF exposure, and do they actually matter?
+are wired headphones meaningfully safer than Bluetooth for either hearing or EMF?
+# ===== MILK & COLOSTRUM — skim/zero-fat vs raw vs bovine colostrum (a distinct idea) =====
+zero-fat/skim milk vs whole vs raw milk — what does human evidence say about which is best for health and for a cut?
+is raw (unpasteurized) milk actually more nutritious or beneficial than pasteurized, and what are the real infection risks?
+what is bovine colostrum, and what does human evidence show it does for gut health, immunity, and athletic recovery?
+is colostrum worth taking for an athlete — leaky gut, respiratory infections, body composition — or is it hype?
+does zero-fat milk spike insulin or blunt fat loss compared to whole milk?
+how do the protein and bioactives in colostrum compare to whey for recovery and immunity?
+which milk or dairy choice best supports a high-protein cut while still getting nutrients?
+does raw milk offer any probiotic or enzyme benefit that survives digestion, per the evidence?
+# ===== PERSONALIZED A/B/C/D TIERS + SCHEDULE BUILD — the capstone (human data) =====
+tier common SUPPLEMENTS into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier PEPTIDE options into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime, weighing thin or animal-only evidence honestly. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier TRAINING and exercise methods into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier SLEEP interventions into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier DIET and nutrition changes into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier BEHAVIORAL / dopamine changes (quitting porn, cutting scrolling, morning sunlight, etc.) into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier RECOVERY methods (sauna, cold, massage, deload, sleep) into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier FAT-LOSS levers for my cut into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier natural TESTOSTERONE-raising habits into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+tier LONGEVITY / healthspan levers into A/B/C/D for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime. Grade each into tiers from human evidence: A = would significantly change my life, add it; B = worth adding, moderate benefit; C = little real change; D = no meaningful change or not supported. Rank within each tier by evidence strength, and be blunt — put hype in C/D.
+CAPSTONE — across EVERYTHING (supplements, peptides, training, sleep, diet, behavior, recovery), give me ONE master A/B/C/D tier list of the highest-impact changes for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime, ranked within tiers by human-evidence strength. Only strong human data earns A or B; hype goes to C/D.
+using the A-tier and B-tier changes with the strongest human evidence, BUILD a concrete DAILY schedule for a workday for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime — show exactly when each thing happens from wake to sleep, and why.
+BUILD the WEEKLY structure for me — a man in my late 20s, ~230 lb cutting toward ~195 on tirzepatide, hybrid athlete training for a marathon with speed, morning study, a 10-hour workday Mon-Thu, evening training, and an early bedtime — training split, long run, recovery, and when each A/B change lands across Mon-Thu work days and Fri-Sun off days.
+for each A-tier change, give the smallest first step and the cue/habit that makes it actually stick in daily life, grounded in behavior-change evidence.
+# ===== NEW MATRIX CROSSES — colostrum & EMF/wireless (auto-generated) =====
+what does the evidence say about how wireless / EMF exposure (phone in bed, Bluetooth earbuds, Wi-Fi) affects the body and mind overall?
+what is bovine colostrum, what does it do, at what dose, and how strong is the human evidence?
+how does wireless / EMF exposure (phone in bed, Bluetooth earbuds, Wi-Fi) affect sleep quality and depth? What is the mechanism and how strong is the evidence?
+how does wireless / EMF exposure (phone in bed, Bluetooth earbuds, Wi-Fi) affect falling asleep and sleep onset? What is the mechanism and how strong is the evidence?
+how does wireless / EMF exposure (phone in bed, Bluetooth earbuds, Wi-Fi) affect focus and attention? What is the mechanism and how strong is the evidence?
+how does bovine colostrum affect gut health and digestion, at what dose, and how strong is the human evidence?
+how does bovine colostrum affect immune resilience, at what dose, and how strong is the human evidence?
+how does bovine colostrum affect muscle recovery and soreness, at what dose, and how strong is the human evidence?
+how does bovine colostrum affect endurance running performance, at what dose, and how strong is the human evidence?
+how does bovine colostrum affect systemic inflammation, at what dose, and how strong is the human evidence?

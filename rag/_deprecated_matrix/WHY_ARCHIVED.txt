@@ -1,0 +1,1 @@
+Matrix retired 2026-09-01: full N x N grid produced mostly noise (86% 'none', hallucinated A/B grades on unrelated pairs). Replaced by the coach_log direct answers + the Performance OS plan. Files kept here in case needed; nothing in the pipeline references them.

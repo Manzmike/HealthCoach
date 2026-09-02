@@ -1,0 +1,89 @@
+# HealthCoach cross-effects matrix — entities.
+# One entity per line.  Format:   slug :: display name :: optional retrieval hint
+# The matrix asks, for every ordered pair (X, Y) with X != Y:
+#     "how does <X> affect <Y>"
+# and fills a grid cell with direction + evidence grade, plus a sourced detail block.
+# Edit freely: add/remove lines, reorder, tweak hints. Lines starting with # are ignored.
+#
+# --- supplements ---
+creatine        :: creatine
+caffeine        :: caffeine
+magnesium       :: magnesium
+zinc            :: zinc
+omega3          :: omega-3 (EPA/DHA fish oil)
+ashwagandha     :: ashwagandha
+boron           :: boron
+taurine         :: taurine
+betaine         :: betaine (TMG)
+nac             :: N-acetylcysteine (NAC)
+berberine       :: berberine
+glycine         :: glycine
+vitamin_d       :: vitamin D
+beta_alanine    :: beta-alanine
+# --- hormones / physiology ---
+testosterone    :: testosterone
+dht             :: DHT (dihydrotestosterone)
+cortisol        :: cortisol
+prolactin       :: prolactin
+thyroid_t3      :: thyroid hormone (T3/T4)
+insulin         :: insulin sensitivity
+# --- diet / training / lifestyle levers ---
+calorie_deficit :: a calorie deficit
+carb_timing     :: carbohydrate timing around training
+protein_intake  :: high protein intake
+resistance_training :: resistance training
+endurance_running   :: endurance running
+sleep           :: sleep quality and duration
+tirzepatide     :: tirzepatide
+# --- milk (ROUND 8) ---
+whole_milk      :: whole milk
+skim_milk       :: skim / low-fat milk
+goat_milk       :: goat milk
+raw_milk        :: raw (unpasteurized) whole milk
+# --- more supplements (ROUND 9) ---
+coq10           :: CoQ10 / ubiquinol
+alpha_lipoic_acid :: alpha-lipoic acid
+l_carnitine     :: L-carnitine / ALCAR
+hmb             :: HMB
+eaa_bcaa        :: essential amino acids / BCAAs
+l_theanine      :: L-theanine
+tyrosine        :: L-tyrosine
+rhodiola        :: rhodiola
+tongkat_ali     :: tongkat ali (Eurycoma)
+fadogia_agrestis :: Fadogia agrestis
+maca            :: maca
+saw_palmetto    :: saw palmetto
+fenugreek       :: fenugreek
+citicoline      :: citicoline / CDP-choline
+melatonin       :: melatonin
+quercetin       :: quercetin
+resveratrol     :: resveratrol
+curcumin        :: curcumin
+# --- foods / diet levers ---
+fiber           :: dietary fiber
+added_sugar     :: added sugar
+alcohol         :: alcohol
+fermented_foods :: fermented foods / probiotics
+dietary_nitrate :: dietary nitrate (beets)
+# --- more hormones / physiology ---
+estradiol       :: estradiol (estrogen in men)
+shbg            :: SHBG (sex hormone binding globulin)
+dopamine        :: dopamine
+growth_hormone  :: growth hormone / IGF-1
+# --- more training / lifestyle levers ---
+sauna_heat      :: sauna / heat exposure
+cold_exposure   :: cold water immersion
+fasting_tre     :: fasting / time-restricted eating
+neat_steps      :: daily steps / NEAT walking
+chronic_stress  :: chronic psychological stress
+# --- meds he's on / relevant ---
+tadalafil       :: tadalafil
+finasteride     :: finasteride
+# --- Michael's current cognition/nootropic stack (ROUND 10) ---
+semax           :: Semax
+selank          :: Selank
+tak_653         :: TAK-653
+racetams        :: racetams (piracetam family)
+copper          :: copper
+bromantane      :: bromantane
+alpha_gpc       :: alpha-GPC

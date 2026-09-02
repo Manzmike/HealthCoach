@@ -1,0 +1,322 @@
+# HealthCoach question bank (v8 — sharpened for specificity).
+# Each question names a concrete outcome, dose/comparison, or population so retrieval and
+# answers stay precise. Run:  python3 batch_ask.py   (reranker auto-loads; ~1GB first run)
+# Subset:  copy a # section into a file -> python3 batch_ask.py that_file.txt
+
+# ================= FAT LOSS & MUSCLE RETENTION =================
+what daily protein intake in g/kg best preserves lean mass during a calorie deficit, and is there a ceiling?
+how large a calorie deficit (per day or % of maintenance) maximizes fat loss without losing muscle or strength?
+does resistance training during a deficit prevent muscle loss, and how much volume is needed?
+are diet breaks or refeeds better than a continuous deficit for preserving muscle and metabolic rate?
+how does a prolonged deficit lower T3 and testosterone, and at what body-fat level does that start?
+what body-fat percentage range is healthy and sustainable for a man, and what specifically goes wrong at ~5%?
+
+# ================= HYBRID TRAINING & PHYSIQUE =================
+how do I structure a week of lifting and running to minimize the interference effect on strength and hypertrophy?
+should resistance training come before or after endurance work in the same session or day?
+how many miles/hours of weekly running starts to measurably blunt muscle and strength gains?
+what weekly set volume per muscle group maximizes hypertrophy (evidence range)?
+do higher reps (12-20) build as much muscle as moderate reps (6-12) when taken near failure?
+which exercises produce the most growth for the back, and how do I train width vs thickness?
+which exercises best develop the traps, and does direct trap work matter?
+how much does direct core/ab training add to a visible six-pack versus just low body fat?
+does zone 2 training improve endurance without hurting lifting, and how much per week?
+
+# ================= ON TIRZEPATIDE (GLP-1) =================
+what fraction of weight lost on a GLP-1 like tirzepatide is lean mass, and how do I minimize it?
+what protein intake (g/kg) and training protocol best protect muscle while on tirzepatide?
+does tirzepatide reduce endurance or strength performance during training?
+what happens to appetite and weight after stopping tirzepatide, and how is rebound prevented?
+should hydration and electrolyte intake change on a GLP-1 due to reduced food/fluid intake?
+what evidence-based alternatives to tirzepatide exist for fat loss (diet, exercise, other drugs)?
+
+# ================= SLEEP =================
+what specific sleep-hygiene behaviors have the strongest effect on sleep quality in adults?
+how does sleep restriction therapy (as part of CBT-I) work, and how effective is it for insomnia?
+how much does one night, and chronic short sleep, reduce next-day cognition and testosterone?
+how many hours before bed should I stop caffeine, and how much does evening caffeine cut sleep?
+how does alcohol change sleep architecture (REM, deep sleep) even at moderate doses?
+does an evening workout hurt sleep, and how many hours before bed should I finish training?
+
+# ================= LIGHT, CIRCADIAN, RELOCATION =================
+how many minutes of morning outdoor light improve alertness and circadian timing?
+how consistent does wake time need to be, and how much does social jetlag harm metabolism?
+moving from low-sun Seattle to high-sun Texas, how does sun exposure change vitamin D needs?
+how do I acclimatize to training and running in hot, humid weather, and how long does it take?
+how much extra sodium and fluid is needed for endurance training in the heat?
+
+# ================= STRESS, CORTISOL, BURNOUT =================
+what interventions measurably lower cortisol or perceived stress in healthy adults?
+what ashwagandha dose and form reduces cortisol and stress in trials, and how strong is the effect?
+does slow-paced breathing (around 6 breaths/min) or HRV biofeedback lower stress and blood pressure?
+what evidence-based methods prevent and reverse burnout in knowledge workers?
+
+# ================= FOCUS, DOPAMINE, STUDY DRIVE =================
+what non-caffeine, evidence-based methods increase motivation and drive to study?
+does exercising before studying improve focus and retention, and by how much?
+how does morning light or brief cold exposure affect alertness compared to caffeine?
+does L-theanine improve attention on its own, or only paired with caffeine?
+how do frequent high-stimulation phone/social habits affect dopamine, focus, and motivation?
+what caffeine dose (mg/kg) and timing maximizes focus while minimizing sleep and anxiety effects?
+
+# ================= LEARNING & MEMORY =================
+how much does retrieval practice (testing) beat re-reading for long-term retention?
+what spacing intervals and review schedule maximize retention with spaced repetition?
+does interleaving different topics beat blocked practice for skill transfer?
+how does aerobic exercise change BDNF and memory in healthy young adults?
+how does sleep after studying affect memory consolidation, and how much sleep is needed?
+
+# ================= NOOTROPICS (specific) =================
+what human evidence exists for bromantane on fatigue and cognition, and at what doses?
+what does human evidence show for alpha-GPC on power output and cognition, and at what dose?
+what human trials exist for Semax on cognition, and how strong is the evidence?
+what human trials exist for Selank for anxiety, and how strong is the evidence?
+what does human evidence show for noopept, and is it better than placebo?
+what does Cochrane-level evidence show for piracetam and phenylpiracetam on cognition?
+what does early human evidence show for TAK-653 (AMPA potentiator)?
+what does Cochrane evidence show for cerebrolysin in stroke and vascular dementia?
+
+# ================= SUPPLEMENTS — EACH ONE (dose, effect size, who) =================
+what creatine monohydrate dose and protocol is effective, is loading needed, and does it cause hair loss?
+what beta-alanine dose improves performance, for which durations of exercise, and what is the effect size?
+does citrulline malate improve performance or just pump, and at what dose?
+what sodium bicarbonate dose improves high-intensity performance, and what are the GI side effects?
+what L-theanine dose improves focus or reduces stress, alone and with caffeine?
+what L-tyrosine dose helps cognition under acute stress or sleep loss, and is it useful otherwise?
+what ashwagandha dose affects stress, sleep, and testosterone, and how large are the effects?
+what rhodiola rosea dose reduces fatigue, and how strong is the evidence?
+do collagen peptides (plus vitamin C) improve tendon/ligament outcomes, at what dose and timing?
+does tart cherry juice improve recovery or sleep, at what dose, and how large is the effect?
+does glucosamine/chondroitin reduce joint pain or slow osteoarthritis, and by how much?
+what alpha-GPC dose affects power output or cognition in humans?
+what EPA/DHA (omega-3) dose lowers triglycerides and inflammation, and what's the CVD evidence?
+who is actually deficient in vitamin D, what 25-OH-D level is the target, and what dose corrects it?
+what magnesium form and dose helps sleep, cramps, or blood pressure, and how strong is the evidence?
+does vitamin C supplementation help immunity or blunt training adaptations, and at what dose?
+what zinc dose supports immunity and testosterone, and what are the risks of over-supplementing?
+who needs iron supplementation, what ferritin level defines low, and what are overload risks?
+do calcium and vitamin K2 improve bone density or cardiovascular outcomes, and at what dose?
+what iodine and selenium intake supports thyroid function, and what are the excess risks?
+what dietary copper intake is adequate, which foods provide it, and are supplements ever needed?
+what curcumin dose and formulation improves outcomes given its poor bioavailability?
+what caffeine dose (mg/kg) improves performance and cognition, and when does it backfire?
+what electrolyte and fluid strategy is evidence-based for training over 60-90 minutes?
+does a daily multivitamin change mortality, cognition, or any hard outcome?
+
+# ================= SUPPLEMENT INTERACTIONS & STACKING =================
+which minerals compete for absorption (zinc/iron/calcium/copper/magnesium) and how should I separate them?
+which supplements are fat-soluble and should be taken with a meal containing fat?
+what is an evidence-based supplement stack for focus and studying, and how should it be timed?
+what is an evidence-based supplement stack for sleep?
+what is an evidence-based stack for recovery and reducing muscle soreness?
+what supplements meaningfully help a cut (fat loss + muscle retention), and which are just marketing?
+what supplements have real evidence for endurance running performance?
+what is the core evidence-based stack for hypertrophy and strength?
+what is a minimal foundational daily supplement stack for a healthy young man?
+which supplements are redundant or cancel each other out when taken together?
+are there known interactions between common supplements and GLP-1 drugs like tirzepatide?
+which supplements or nootropics interact with caffeine?
+what is actually known (vs unknown) about combining supplements with peptides like BPC-157?
+how do I verify a supplement is third-party tested (NSF, Informed Sport) and free of contaminants?
+
+# ================= PEPTIDES (deep, evidence-first) =================
+what is the actual human clinical evidence for BPC-157, and what are the safety unknowns?
+what human evidence exists for TB-500 / thymosin beta-4, versus animal data?
+what is known about MOTS-c in humans versus preclinical models?
+what is the evidence for the KPV peptide?
+why do most peptide claims rest on animal/mechanism data rather than human RCTs?
+how contaminated or mislabeled are research-use-only peptides in testing studies?
+what is the 2026 FDA and compounding-pharmacy status of peptides like BPC-157?
+what do GHK-Cu copper peptides do for skin and hair, and is there human evidence?
+what is PP405, what phase of trials is it in, and what did the Phase 2a report?
+what is JXL069 and how does it relate to the mitochondrial pyruvate carrier and hair follicles?
+is PP405 the same molecule as JXL069, according to the evidence?
+do collagen peptides have better human evidence than injectable research peptides, and for what?
+why do most peptides require injection rather than oral dosing?
+
+# ================= FERMENTED & ANTI-INFLAMMATORY FOODS =================
+what health outcomes improve with regular fermented-food intake, and how many servings per day?
+what does human evidence show for yogurt and kefir on gut health and metabolism?
+what does evidence show for kombucha, and is it overhyped?
+what does human evidence show for kimchi and sauerkraut specifically?
+what does human evidence show for fermented soy (natto, tempeh, miso)?
+do fermented foods replace the need for probiotic supplements?
+which foods raise or lower inflammatory markers like CRP (dietary inflammatory index)?
+
+# ================= NUTRITION: WHOLE FOODS, BRAIN, CRAVINGS, MEAL PREP =================
+what are the most nutrient-dense whole foods to build a high-protein cut around?
+which foods and dietary patterns have the best evidence for cognition and brain health?
+what evidence-based strategies reduce strong sugar cravings?
+are non-nutritive sweeteners safe, and do they help or worsen appetite and cravings?
+how do protein and fiber intake reduce hunger and calorie intake?
+what is the evidence-based way to meal-prep high-protein meals safely (batch cooking, food safety)?
+which foods should I minimize based on outcome data — ultra-processed foods, sugary drinks, trans fat, alcohol?
+
+# ================= HORMONES, HEART, LONGEVITY =================
+what lifestyle factors (sleep, body fat, training, diet) most affect natural testosterone in young men?
+what ApoB or LDL-C level should a young man target for long-term cardiovascular risk, and how do I lower it?
+what blood pressure target and lifestyle changes matter most for a healthy young adult?
+how strongly does VO2max predict long-term mortality, and what level should I aim for?
+what do the trials (SURMOUNT) show for tirzepatide on weight and cardiometabolic outcomes?
+what do trials show for tadalafil, and what is the evidence for daily low-dose use?
+what is the role of estradiol in men, and what are the harms of driving it too low with aromatase inhibitors?
+
+# ================= HAIR, TEETH, SKIN =================
+what is the comparative evidence for minoxidil, finasteride, and dutasteride for male hair loss?
+what is the fastest evidence-based way to grow beard/facial hair (topical minoxidil, microneedling)?
+what remineralizes early enamel lesions — fluoride concentration, CPP-ACP, diet?
+when does a chipped or fractured tooth need dental treatment rather than remineralization?
+what daily habits have the best evidence for preventing gum disease and cavities?
+what sunscreen and skincare habits have the best evidence for preventing skin aging and cancer?
+
+# ================= RECOVERY, STRETCHING, JOINTS, BONE =================
+what is the best evidence for daily mobility/stretching improving recovery vs range of motion only?
+does static stretching before or after training reduce injury or impair performance?
+what training and nutrients (loading, calcium, vitamin D, protein) build and maintain bone density in young men?
+how much does sleep quantity and quality drive muscle recovery and adaptation?
+does cold water immersion after lifting blunt hypertrophy, and when is it useful vs harmful?
+what are the evidence-based effects of regular sauna use on cardiovascular health and recovery?
+
+# ================= MOVEMENT & DESK HEALTH =================
+how many daily steps are linked to lower mortality, and does the benefit plateau?
+does breaking up prolonged sitting every 30 minutes improve glucose and vascular function?
+which specific exercises reduce low-back and neck pain in desk workers?
+does non-exercise activity (NEAT) meaningfully affect fat loss, and how do I increase it?
+
+# ================= BEHAVIOR: PORN, SEMEN RETENTION =================
+what treatments (CBT, ACT) have evidence for reducing compulsive pornography use and urges?
+what does controlled evidence actually show about semen retention and testosterone or performance?
+what evidence-based techniques (urge surfing, habit substitution) help break compulsive habits?
+
+# ================= ADVANCED =================
+what are the clinical uses of mushrooms — UV-exposed vitamin D, ergothioneine, and psilocybin for depression?
+what is the current state of approved CRISPR gene-editing medicine (e.g., for sickle cell disease)?
+
+# ================= WHAT NOT TO DO (refusal / honesty) =================
+is there any evidence that fermented foods, supplements, or any diet can remove a covid vaccine or spike protein?
+how long do mRNA and spike protein actually persist and clear after vaccination?
+what are the documented cardiovascular, hepatic, and endocrine harms of SARMs and anabolic steroids?
+
+# ================= FOCUS DETAIL, ANXIETY, NEURO =================
+what morning routine (light, exercise, food, timing) best primes focused studying without caffeine?
+what specifically reduces distraction and sustains deep-work focus during long coding sessions?
+what evidence-based methods reduce anxiety, and how does anxiety impair cognitive performance?
+what actually drives neuroplasticity in healthy adults — exercise, learning, sleep?
+what is neuroinflammation, how does it relate to mood and cognition, and can diet or exercise change it?
+how do dopamine and serotonin relate to motivation and mood in practical terms?
+how long should a nap be, and when does napping help versus hurt nighttime sleep?
+
+# ================= SCREENS, EYES, HEARING, TRAVEL, IMMUNITY =================
+how does prolonged screen use affect the eyes, and does the 20-20-20 rule or blue-light blocking help?
+does blocking blue light in the evening measurably improve sleep onset and quality?
+what is the evidence-based way to manage jet lag and shift my body clock across time zones?
+how do training load, vitamin D, zinc, and sleep affect the risk of upper-respiratory infections?
+how do I prevent noise-induced hearing loss from earbuds and loud environments?
+
+# ================= PHYSIQUE DETAIL & RECOVERY SEQUENCING =================
+which exercises and rep schemes best build bigger, more defined arms (biceps and triceps)?
+how do I build strong, muscular legs while still running significant weekly mileage?
+which whole foods best support muscle gain while staying lean near maintenance?
+how do I sequence hard running days and hard lifting days across a week to recover fully?
+how do I wind down after an evening workout so training-induced alertness doesn't delay sleep?
+how do I sustainably combine morning study, a 10-hour workday, and evening training without burning out?
+
+# ================= TRACKING & MEASUREMENT =================
+how accurate are DXA and bioimpedance for tracking body fat, and how should I measure progress?
+which labs and metrics (ApoB, HbA1c, VO2max, resting HR, HRV) should a man in his 20s track, and how often?
+
+# ================= MORE NUTRITION & SUBSTANCES =================
+how does moderate alcohol affect muscle protein synthesis, recovery, testosterone, and sleep?
+what are the long-term effects of daily caffeine, and what evidence-based alternatives boost energy?
+how do I batch 4-5 days of high-protein meals in one prep session while keeping them food-safe?
+does time-restricted eating (an 8-hour window) improve fat loss beyond calorie control alone?
+
+# ================= AFRICAN AMERICAN OVERLAY =================
+how common is vitamin D deficiency in Black adults, and does the standard 25-OH-D target apply?
+how effective is the DASH diet for lowering blood pressure specifically in Black adults?
+what is central centrifugal cicatricial alopecia (CCCA), and what treatments have evidence?
+how is traction alopecia prevented and treated?
+what should Black men know about finasteride and hair-loss treatment outcomes?
+does tirzepatide's weight-loss effect differ across racial subgroups?
+what treatments reduce keloid formation and recurrence?
+
+# ================= ROUND 7: UNDER-THE-RADAR SUPPS =================
+what does the evidence show for glycine (3 g before bed) on sleep quality and next-day alertness?
+does glycine supplementation improve metabolic or vascular health in adults, and at what dose?
+what are taurine's proven effects on exercise performance and cardiovascular markers, and at what dose?
+does taurine supplementation meaningfully affect endurance or strength in trained young men?
+what does betaine (TMG, ~2.5 g/day) do for power output and body composition in resistance-trained men?
+does betaine lower homocysteine, and does that translate to any clinical benefit?
+what is the actual evidence that boron (~10 mg/day) raises free testosterone or lowers SHBG in men?
+does boron supplementation affect estradiol, inflammation, or bone in humans?
+what does NAC (N-acetylcysteine) do for glutathione status and is there human evidence for mental-health or performance benefit?
+at what dose and for what outcomes is NAC actually supported versus mechanistic-only?
+what does berberine (~500 mg 2-3x/day) do to fasting glucose, insulin sensitivity, and LDL, and how does it compare to metformin?
+what are berberine's known interactions and GI side effects?
+what human evidence supports lactoferrin for immunity or iron status, and at what dose?
+which magnesium form (glycinate vs citrate vs oxide) is best absorbed, and does form change the outcome for sleep or blood pressure?
+does magnesium status affect thyroid function, and would supplementing help a euthyroid man?
+
+# ================= ROUND 7: CARBS, OATS, TIMING, PRE-WORKOUT =================
+calories-in-calories-out versus carb timing: does when you eat carbs change fat loss if total calories are equal?
+is it better to eat carbohydrates before or after training for performance and for body composition?
+what is the evidence-based "correct" way to eat oats (whole vs rolled vs instant, soaked vs cooked) for glycemic response?
+how much oat beta-glucan per day is needed to lower LDL cholesterol, and how strong is that evidence?
+what is the best carbohydrate source around training for a lifter who also runs?
+does eating protein before a workout beat eating it after for muscle growth (the anabolic window)?
+how does dietary carbohydrate get metabolized and what actually drives insulin and glycemic response?
+
+# ================= ROUND 7: HORMONE DETAIL =================
+what raises or lowers prolactin in men, and why would a late-20s man want it lower?
+how is DHT regulated day to day, and what safely raises DHT versus what blunts it (5-alpha reductase)?
+does zinc supplementation raise testosterone in men who are not zinc-deficient?
+what is the relationship between psychological stress, cortisol, and telogen effluvium hair loss, and does stress reduction reverse it?
+
+# ================= ROUND 7: CROSS-EFFECTS (pairwise) =================
+how does zinc affect testosterone, and does the effect depend on baseline zinc status?
+how does magnesium affect sleep, and how does sleep in turn affect testosterone and recovery?
+how does creatine interact with caffeine — does caffeine blunt creatine's ergogenic effect?
+how does a calorie deficit affect thyroid (T3) and testosterone, and how does that feed back on training?
+how does tirzepatide affect protein intake, lean-mass retention, and resistance-training outcomes during a cut?
+how does chronic cortisol affect testosterone, DHT, and hair loss simultaneously?
+how does carbohydrate intake around training affect cortisol and recovery?
+how does ashwagandha affect cortisol, and does lowering cortisol change testosterone or sleep?
+how does omega-3 intake interact with resistance training for muscle protein synthesis?
+how does berberine interact with a low-carb diet or with metformin-like effects on glucose?
+how does taurine interact with caffeine for focus and cardiovascular load?
+how does NAC affect the training adaptation the way high-dose antioxidant vitamins C/E can blunt it?
+
+# ================= ROUND 8: MILK =================
+what is the best milk to drink while cutting weight but still getting good nutrition (whole vs skim vs low-fat)?
+how does whole milk compare to skim/low-fat milk for satiety, body composition, and cardiometabolic markers?
+is goat milk nutritionally better or more digestible than cow milk, and for whom?
+what does the evidence actually show about raw (unpasteurized) whole milk — benefits claimed versus pathogen risk and what pasteurization changes?
+does dairy/milk intake help or hurt fat loss while preserving lean mass in a calorie deficit?
+milk after training: does whole or skim milk drive better muscle protein synthesis and recovery, and how does it compare to whey?
+how much protein and calcium does a serving of milk provide, and how does that fit a cutting diet?
+is there evidence that dairy calcium meaningfully affects fat loss or fat absorption?
+
+# ================= ROUND 9: DEEP SUPPLEMENT BENCH =================
+does vitamin D supplementation raise testosterone or strength, and only if you're deficient?
+what does CoQ10/ubiquinol actually do for exercise performance and for statin users, and by what mechanism?
+does alpha-lipoic acid improve insulin sensitivity or glucose control, and what's the mechanism?
+does L-carnitine (or ALCAR) increase fat oxidation or reduce fatigue, and does oral dosing even raise muscle carnitine?
+is HMB worth taking over just hitting protein/leucine targets, and for whom?
+do EAAs beat whole-food protein or BCAAs for muscle protein synthesis, and why are BCAAs alone insufficient?
+does myo-inositol improve insulin sensitivity or anxiety, and by what second-messenger mechanism?
+what's the real evidence for tongkat ali on testosterone, cortisol, and libido versus the hype?
+what does the (mostly animal) evidence and mechanism suggest for Fadogia agrestis on testosterone, and what are the toxicity concerns?
+does maca affect libido or mood, and is it hormone-mediated or not?
+how strong is saw palmetto for hair loss / DHT compared to finasteride, and what's the mechanism?
+does fenugreek raise testosterone or just libido, and does it inhibit 5-alpha reductase?
+what does citicoline (CDP-choline) do for focus and attention, and how does it compare to alpha-GPC?
+what dose and timing of melatonin actually helps sleep onset without grogginess, and is it a hormone you can overdo?
+does quercetin improve endurance or blood pressure, and what's the senolytic angle?
+does resveratrol help metabolic health in humans, and does it blunt exercise adaptations?
+
+# ================= ROUND 9: STACKING / INTERACTIONS / MECHANISM =================
+what's the smartest evidence-based daily supplement stack for a lean hybrid athlete, and what's redundant?
+which supplements meaningfully interact or compete for absorption (e.g., zinc/copper, calcium/magnesium/iron), and how should I separate them?
+do high-dose antioxidants (vitamin C/E, NAC, astaxanthin) blunt hypertrophy or endurance adaptations, and at what dose does that matter?
+which of my supplements affect the same pathway (e.g., nitric oxide: citrulline, nitrate, ginseng) and would stacking them add up or plateau?
+for anything where human evidence is missing, what does the chemistry/pharmacology predict SHOULD happen in the body — labeled as theoretical?

@@ -1,0 +1,6 @@
+sentence-transformers>=3.0
+lancedb>=0.13
+tantivy>=0.22
+pypdf>=5.0
+mlx-lm>=0.19
+numpy

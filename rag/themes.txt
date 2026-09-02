@@ -1,0 +1,51 @@
+# Extra deep-dive themes — EDIT THIS FILE to add your own, no Python needed.
+# Format (blank lines and #comments ignored):
+#   :: Theme name
+#   focus: one line describing the goal / what you want to know
+#   q: a retrieval sub-query (add as many q: lines as you want; 3-6 is ideal)
+# Then run:  python3 deep_dive.py            (all themes)
+#        or: python3 deep_dive.py beard sleep  (only themes whose name contains those words)
+
+:: Workout timing for learning (AM vs PM) + Anki priming
+focus: whether to train in the morning vs evening for learning and cognition, and priming learning with Anki (spaced retrieval) before a morning workout
+q: exercise timing morning versus evening and cognition
+q: acute aerobic exercise and memory encoding consolidation
+q: physical exercise before or after learning retention
+q: spaced repetition retrieval practice effectiveness
+q: time of day and cognitive performance
+
+:: Peak physique at a sustainable rate (no overtraining)
+focus: reaching peak physical condition at a good rate without overreaching, burning out, or stalling
+q: rate of strength and hypertrophy gain progressive overload
+q: overtraining and overreaching prevention markers
+q: autoregulation and training load management
+q: minimum effective dose resistance training
+q: deload and long-term training progression
+
+:: Sleep hygiene and sleep restriction therapy
+focus: improving sleep using sleep hygiene and sleep restriction / CBT-I techniques
+q: sleep restriction therapy insomnia
+q: cognitive behavioral therapy for insomnia components
+q: stimulus control therapy insomnia
+q: sleep hygiene evidence adults
+
+:: Exercise timing for recovery
+focus: how the timing of workouts affects recovery, adaptation, and sleep
+q: evening exercise and sleep quality
+q: training timing and recovery adaptation
+q: exercise timing circadian rhythm performance
+q: late-day exercise sleep architecture
+
+:: Fascia — function, benefits, why it matters
+focus: what fascia does, why it matters for movement and recovery, and what actually helps it
+q: fascia function force transmission connective tissue
+q: myofascial stretching range of motion
+q: foam rolling myofascial release evidence
+q: fascial tissue adaptation to loading
+
+:: Fast beard growth (supplements and outside factors)
+focus: fastest evidence-based ways to grow beard and facial hair, including supplements and external factors
+q: topical minoxidil beard facial hair randomized
+q: microneedling for hair growth
+q: androgens and facial hair growth
+q: nutrition micronutrients and hair growth

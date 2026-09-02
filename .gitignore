@@ -1,0 +1,25 @@
+# ---- large data / generated: never commit ----
+# PDFs (the graded library — 6+ GB)
+*.pdf
+**/_pruned/
+# vector DB, logs, venv
+rag/lancedb/
+rag/logs/
+rag/.venv/
+.venv/
+# python caches
+**/__pycache__/
+*.pyc
+*.pyo
+# model weights / adapters / big binaries
+lora/
+adapters/
+index/
+chunks/
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.npz
+# os cruft
+.DS_Store

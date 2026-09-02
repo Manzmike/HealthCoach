@@ -1,0 +1,32 @@
+# HealthCoach — ROUND 15 delta: cravings + parasites/ivermectin (NEW questions only)
+# These are also included in interactions.txt. Run just these without repeating the 655:
+#   python3 batch_ask.py new_cravings_parasites.txt   -> logs/coach_log_*.md
+
+# ===== CRAVINGS — sugar & strong food cravings, and how to curb them =====
+what is the most evidence-based way to reduce sugar cravings, and how long do they take to fade?
+physiologically, why do intense food cravings happen (dopamine, blood sugar swings, habit, sleep, stress), and which lever matters most?
+how do I curb strong food cravings during a calorie deficit without relying on willpower alone?
+does cutting sugar make cravings worse before they get better, and how do I get through the adaptation period?
+how does short sleep drive sugar and food cravings, and how much does fixing sleep actually reduce them?
+how does chronic stress and cortisol drive sugar cravings, and what breaks the stress-eating loop?
+how does tirzepatide / GLP-1 reduce food cravings and 'food noise', and what happens to cravings when it's stopped?
+how do protein and fiber at a meal blunt later cravings, and what amounts are needed?
+how does the porn / scrolling dopamine loop interact with sugar and food cravings?
+do artificial sweeteners reduce sugar cravings or make them worse over time?
+does a stretch of low-sugar eating reset sweet-taste sensitivity and lower cravings?
+which supplements have any real human evidence for reducing sugar cravings (protein, fiber, chromium, berberine, glutamine), and which are hype?
+how do ultra-processed, hyper-palatable foods engineer cravings, and does removing them reduce how often cravings hit?
+what is the best evidence-based way to respond to a craving in the moment instead of giving in?
+# ===== PARASITES / DEWORMING / IVERMECTIN — human antiparasitic evidence & safety =====
+what does the human evidence actually say about ivermectin as an antiparasitic, and which infections is it proven to treat?
+what is ivermectin's human safety profile, and what are the risks of taking it without a diagnosed parasitic infection?
+is routine self-deworming without a confirmed infection supported by any evidence, and what are the downsides?
+what are the standard evidence-based antiparasitic drugs for humans (albendazole, mebendazole, praziquantel, nitazoxanide, ivermectin), and what does each treat?
+what does the evidence show about mass deworming programs, and does any of it apply to a healthy adult in a developed country?
+how would I actually know if I have an intestinal parasite — what symptoms and tests — versus just assuming I do?
+how are common human intestinal parasites (giardia, pinworm, tapeworm, hookworm, blastocystis) diagnosed and treated?
+how likely is a healthy adult in a developed country to have a parasite, and what raises the risk (travel, undercooked meat, pets)?
+do 'parasite cleanse' supplements (wormwood, black walnut, clove) have any real evidence, or are they marketing?
+how do parasites and deworming affect the gut microbiome and immune system?
+what are the genuine red-flag symptoms that should prompt seeing a doctor for a possible parasitic infection?
+when is antiparasitic treatment actually warranted versus unnecessary, and why does treating without a diagnosis carry risk?
