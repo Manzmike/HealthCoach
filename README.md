@@ -109,6 +109,18 @@ MAXTOK=2200 python3 -u build_schedule.py
 ```
 Output → `logs/schedule_YYYYMMDD_HHMM.md` — a daily + weekly plan that honors your inputs
 and layers evidence-based A/B habits around them, each tagged A/B/C with a why + first step.
+Every technical term (zone 2, RPE, protein g/kg…) is defined with a how-to-find-your-number,
+and it ends with a **"how to find your numbers"** cheat sheet (curated in `SCHEDULE_TIPS.md`).
+
+### Step 3b — build the full playbook (one learning document)
+For the complete report — a multi-chapter learning document, not just a schedule:
+```bash
+cd ~/GitHub/HealthCoach/rag && source .venv/bin/activate
+python3 -u build_playbook.py        # -> logs/playbook_YYYYMMDD_HHMM.md
+```
+Chapters: (1) how to find your numbers, (2) the foundations that matter most, (3) your daily
+schedule, (4) your weekly structure, (5) supplements & compounds tiered A/B/C/D, (6) your first
+four weeks — plus a full sources appendix. Everything is written for a beginner and graded.
 
 ### Step 4 — read the results
 All outputs land in `rag/logs/`:
@@ -178,7 +190,10 @@ flowchart TD
 - `coach.py` — models, retrieval, guardrails, system prompt, your `profile.txt`. Single-question CLI.
 - `batch_ask.py` — runs a question file through the coach → `logs/coach_log_*.md`. Args: `FILE [i/n]`; env `MAXTOK`.
 - `build_questions.py` — the question model → `interactions.txt`, `new_questions_r15.txt`, `personalized_tiers.txt`.
-- `build_schedule.py` + `schedule_inputs.md` — your input-driven schedule builder.
+- `build_schedule.py` + `schedule_inputs.md` — your input-driven schedule builder (with term definitions + how-to-find-your-number).
+- `build_playbook.py` — assembles the full multi-chapter learning document (`logs/playbook_*.md`).
+- `SCHEDULE_TIPS.md` — curated "how to find your numbers" reference (zone 2, RPE, protein, TDEE, caffeine cut-off, sleep) injected into the schedule/playbook.
+- `history.md` — **optional, git-ignored** personal history (current stack, recent labs, injuries, tried-and-result, trends). If present, the schedule/playbook use it to skip what you already do, avoid failed repeats, and fit your labs. Delete it to opt out.
 - `interactions.txt` — full question set. `new_questions_r15.txt` — newest delta (run this, not the whole set).
   `personalized_tiers.txt` — tier + schedule capstone. `questions.txt` — original single-topic deep dives.
 - `test_retrieval.py` — fast retrieval sanity check (no LLM).

@@ -23,3 +23,7 @@ chunks/
 *.npz
 # os cruft
 .DS_Store
+
+# personal history (health data) — keep local, never push
+history.md
+rag/history.md

@@ -18,7 +18,7 @@ is labeled and tagged C). This is a first-draft planner — sanity-check it agai
 import os, re, datetime
 import coach as C
 
-MAXTOK    = int(os.environ.get("MAXTOK", "1800"))
+MAXTOK    = int(os.environ.get("MAXTOK", "2600"))   # bigger default: plan now includes how-to + cheat sheet
 INPUTFILE = os.environ.get("INPUTS", "schedule_inputs.md")
 
 SECTIONS = ["INCORPORATE", "TO DO", "REMEMBER", "REC-LEVEL NOTES"]
@@ -72,13 +72,17 @@ def main():
     # --- retrieve evidence: your own items + core daily-timing themes ---
     themes = [
         "daily supplement timing testosterone sleep energy",
-        "caffeine timing effect on sleep",
-        "protein distribution per meal muscle",
+        "caffeine timing half-life effect on sleep",
+        "protein distribution per meal muscle grams per kilogram",
         "morning light exposure circadian alertness",
         "evening resistance training effect on sleep",
-        "zone 2 endurance training weekly volume",
-        "sleep duration recovery hormones",
-        "calorie deficit muscle retention training",
+        "zone 2 training heart rate lactate threshold talk test determination",
+        "maximum heart rate estimation training zones",
+        "rating of perceived exertion RPE reps in reserve training",
+        "VO2 max intervals endurance protocol",
+        "sleep duration need recovery hormones",
+        "calorie deficit rate energy availability muscle retention",
+        "how to estimate calorie needs TDEE deficit weight loss",
     ]
     queries = inp["INCORPORATE"] + inp["REMEMBER"] + themes
     seen, hits = set(), []
@@ -93,25 +97,44 @@ def main():
             h["grade"], h["folder"], h.get("doi") or "no-doi", h["text"][:1100]) for h in hits)
 
     profile = getattr(C, "PROFILE", "") or "(no profile on file)"
+    histfile = os.environ.get("HISTORY", "history.md")
+    history = open(histfile).read().strip() if os.path.exists(histfile) else ""
+    hist_block = ("MY HISTORY (use this: skip what I already do, respect things I tried that didn't work, "
+                  "and account for my recent labs/metrics — don't re-recommend or contradict it):\n%s\n\n"
+                  % history) if history else ""
     user = (
         "USER PROFILE:\n%s\n\n"
         "MY INPUTS — these are the highest priority and MUST be honored:\n%s\n%s\n%s\n%s\n\n"
+        "%s"
         "EVIDENCE CONTEXT (use to justify timing and to add high-value A/B items around my inputs):\n%s\n\n"
-        "TASK — build me all three, be specific with clock times:\n"
+        "Assume I am a smart beginner who does NOT know the jargon. Write so I could act on this with no "
+        "other source. Whenever you use a technical term or method (e.g. zone 2, RPE, reps-in-reserve, "
+        "minimum effective dose, TDEE, protein g/kg, sleep latency), you MUST: (a) define it in one plain "
+        "sentence, and (b) tell me the concrete way to find MY OWN number — cheapest/no-gear method first, "
+        "then more precise ones — and how to check I got it right.\n\n"
+        "TASK — build me all FOUR, be specific with clock times:\n"
         "1) A DAILY schedule for a Mon-Thu workday, wake to sleep, that: includes EVERY 'incorporate' item "
         "at the best evidence-based time; places my 'to do' items sensibly; honors EVERY 'remember' constraint; "
         "and layers in the strongest A/B-tier evidence-based habits around them.\n"
         "2) A WEEKLY structure (Mon-Thu work, Fri-Sun off, long run Sat) showing where training, recovery, "
         "and each item land across the week.\n"
-        "3) A short 'why + first step' list: for each item, tag its recommendation level A/B/C from human "
-        "evidence, give a one-line reason, and the smallest first step to make it stick.\n"
-        "Rules: honor my inputs first; don't invent doses; where evidence is weak, say so and tag it C; "
-        "if two things conflict on timing, flag the tradeoff instead of guessing."
+        "3) A 'why + how + first step' list: for each item, tag its recommendation level A/B/C from human "
+        "evidence, give a one-line reason, the how-to (definition + how to find my number, per the rule above), "
+        "and the smallest first step to make it stick.\n"
+        "4) A 'HOW TO FIND YOUR NUMBERS' cheat sheet covering every personal metric the plan relies on — "
+        "at minimum: zone 2 heart rate (give the age-estimate, the talk-test, and the more precise options), "
+        "training max-HR estimate, RPE / reps-in-reserve scale, daily protein target in grams (from bodyweight), "
+        "calorie/TDEE and deficit estimate, caffeine cut-off time (from its ~5-6h half-life and my bedtime), and "
+        "nightly sleep need. For each: what it is, how to find mine, and how to verify.\n"
+        "Rules: honor my inputs first; don't invent supplement/drug doses; where evidence is weak, say so and "
+        "tag it C; if two things conflict on timing, flag the tradeoff instead of guessing; prefer concrete "
+        "numbers and ranges over vague advice."
     ) % (profile,
          block("INCORPORATE (must be in my day)", inp["INCORPORATE"]),
          block("TO DO (place these in the day/week)", inp["TO DO"]),
          block("REMEMBER (constraints / principles to honor)", inp["REMEMBER"]),
          block("REC-LEVEL NOTES (what I think matters most)", inp["REC-LEVEL NOTES"]),
+         hist_block,
          ctx)
 
     if chat:
