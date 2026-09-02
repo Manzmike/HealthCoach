@@ -16821,3 +16821,2932 @@
 - OFF-TOPIC | 08_peptides_gray/peptide_bioregulators_khavinson | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
 - FAIL pdf | C | 10.3390/ijms23073607 | Peptides Regulating Proliferative Activity and Inflammatory Pathways in the Mono | no OA PDF resolved
 - OFF-TOPIC | 08_peptides_gray/peptide_bioregulators_khavinson | 10.3390/molecules26227053 | Peptide Regulation of Gene Expression: A Systematic Review
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s41182-026-00923-9 | In vitro cytotoxicity of medicinal plants used in prostate cancer mana
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5534/wjmh.190043 | 'Testosterone Boosting' Supplements Composition and Claims Are not Sup
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2016/9706429 | Effects of the Aqueous Extract of Eremomastax speciosa (Acanthaceae) o
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4103/0973-7847.112832 | Exploring scientifically proven herbal aphrodisiacs
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of <i>Ipomoea batatas</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A review on plants used for improvement of sexual performance and viri
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.1126/sciadv.aea2989 | Inflammation-triggered self-immolative conjugates enable oral peptide delivery b | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1177/09636897261417200 | Mechanistic studies of hydrogels in oral cancer treatment: Synergistic
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.2147/ijn.s602864 | Design and Application of Multiscale Systems and Scaffolds Based on Fu
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fimmu.2026.1739037 | Structural and temporal dynamics of nano-based therapies in ulcerative
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.2147/ijn.s573966 | The Construction Strategy of Curcumin Nanomedicine Delivery System and
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/cells12141889 | The Melanocortin System in Inflammatory Bowel Diseases: Insights into
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.2147/ijn.s502546 | Classification of Nanomaterial Drug Delivery Systems for Inflammatory
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/gels11030152 | Recent Advances in Polysaccharide-Based Hydrogels for Tumor Immunother
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1080/10717544.2024.2415580 | Recognizing the biological barriers and pathophysiological characteris
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.jconrel.2024.07.007 | Gut hormone stimulation as a therapeutic approach in oral peptide deli
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1039/d5ra03731j | Peptide-based therapeutic and delivery strategies for inflammatory bow
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1021/acsnano.5c00700 | Stimuli-Responsive Nanomedicines for the Treatment of Non-cancer Relat
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms232113471 | Computer-Aided Screening and Revealing Action Mechanism of Food-Derive
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1002/advs.202521766 | Living Hydrogels: Harnessing Microorganism-Material Synergy for Next-G
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.jcmgh.2024.03.005 | Unleashing the Potential of Oral Deliverable Nanomedicine in the Treat
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1002/adma.202412154 | LysSYL-Loaded pH-Switchable Self-Assembling Peptide Hydrogels Promote
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fphar.2024.1523052 | Analysis of nanomedicine applications for inflammatory bowel disease:
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1186/s12967-025-06430-5 | Fluorescent probes in autoimmune disease research: current status and
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/biomedicines10010085 | Oxidative Stress and Antioxidant Nanotherapeutic Approaches for Inflam
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1155/2020/6817156 | The Potential of Food Protein-Derived Bioactive Peptides against Chron
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fbioe.2021.675194 | Oral Delivery of Biologics in Inflammatory Bowel Disease Treatment
+- FAIL pdf | C | 10.4062/biomolther.2012.20.5.446 | The pharmacology of actoprotectors: practical application for improvement of men | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1745-7262.2005.00052.x | Aphrodisiac potentials of the aqueous extract of Fadogia agrestis (Schweinf. Ex  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.bjp.2018.07.006 | Microscopic characterization and HPTLC of the leaves, stems and roots of Fadogia | no OA PDF resolved
+- FAIL pdf | C | 10.1002/ibd.20334 | Melanocortin-derived tripeptide KPV has anti-inflammatory potential in murine mo | no OA PDF resolved
+- FAIL pdf | C | 10.5142/jgr.2013.37.144 | Actoprotective effect of ginseng: improving mental and physical performance | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/j.1745-7262.2007.00210.x | Study of the efficacy of Korean Red Ginseng in the treatment of erecti
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A Review on Plants Used for Improvement of Sexual Performance and Viri
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2019.01.046 | Male sexual dysfunction: A review of literature on its pathological me
+- FAIL pdf | C | 10.1053/j.gastro.2007.10.026 | PepT1-Mediated Tripeptide KPV Uptake Reduces Intestinal Inflammation | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdad060.365 | (391) Comparative Analysis of YouTube and TikTok Videos on Treatments for Low Te | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1530/rep-08-0069 | Effects of Kaempferia parviflora extracts on reproductive parameters a
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1007/s12610-009-0030-2 | Medicinal plants as potential male anti-infertility agents: a review
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/and.12677 | A review of the potential of medicinal plants in the management and tr
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2305-0500(13)60060-3 | Effects of aqueous extract of Cnestis ferruginea (Vahl ex De Cantolle)
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5897/ajb09.430 | Aphrodisiac properties of some Zimbabwean medicinal plants formulation
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1080/87559129.2023.2238055 | Ergogenic properties, safety evaluation and regulations of selected in
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2305-0500(13)60062-7 | Aqueous root extract of Lecaniodiscus cupanioides restores the alterat
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4236/asm.2013.31006 | Aphrodisiac Activity of Aqueous Extract of Phoenix dactylifera Pollen
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.sajb.2018.08.011 | Sexual prowess from nature: A systematic review of medicinal plants us
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-018-0086-7 | Evaluation of aphrodisiac activity of ethanol extract of Ganoderma luc
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of Ipomoea batatas L. Lam.
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1080/19396368.2019.1612482 | Dietary fluted pumpkin seeds induce reversible oligospermia and androg
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1007/s10068-018-00547-8 | Ameliorative effects of Lycium chinensis on male sexual dysfunction an
+- FAIL pdf | A | 10.59298/rijrms/2025/431925 | Endocrine Disruption or Enhancement? A Systematic Review of Plant Extracts Influ | no OA PDF resolved
+- FAIL pdf | C | 10.4062/biomolther.2012.20.5.446 | The Pharmacology of Actoprotectors: Practical Application for Improvement of Men | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.5142/jgr.2013.37.144 | Actoprotective effect of ginseng: improving mental and physical perfor
+- FAIL pdf | C | 10.1164/ajrccm.2025.211.abstracts.a3862 | Severe Biventricular Failure, ARDS, and DIC Linked to Fadogia Agrestis, Trimethy | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jcmgh.2016.01.006 | Critical Role of PepT1 in Promoting Colitis-Associated Cancer and Therapeutic Be | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1053/j.gastro.2009.11.003 | Drug-Loaded Nanoparticles Targeted to the Colon With Polysaccharide Hy
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1136/ard.2007.079780 | α-MSH related peptides: a new class of anti-inflammatory and immunomod
+- FAIL pdf | C | 10.4314/ijbcs.v17i6.2 | Antioxidant and cytotoxic properties of Combretum paniculatum and Fadogia agrest | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.0022-202x.2004.22404.x | α-Melanocyte-Stimulating Hormone, MSH 11–13 KPV and Adrenocorticotropic Hormone  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.nano.2015.02.018 | Advances in oral nano-delivery systems for colon targeted drug deliver
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.ajpath.2011.03.042 | The Melanocortin Agonist AP214 Exerts Anti-Inflammatory and Proresolvi
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.jff.2015.12.022 | Peptides of amaranth were targeted as containing sequences with potent
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1155/2014/874610 | Alpha-Melanocyte Stimulating Hormone: An Emerging Anti-Inflammatory An
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms24087286 | Hyaluronic Acid-Based Nanosystems for CD44 Mediated Anti-Inflammatory
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1124/dmd.109.027367 | Changes in mRNA Expression Levels of Solute Carrier Transporters in In
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.apsb.2020.11.003 | Receptor-mediated targeted drug delivery systems for treatment of infl
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1371/journal.pone.0071056 | Single Administration of Tripeptide α-MSH(11–13) Attenuates Brain Dama
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms21113956 | Natural Product-Based Nanomedicine in Treatment of Inflammatory Bowel
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1042/0264-6021:3550029 | α-Melanocyte-related tripeptide, Lys-d-Pro-Val, ameliorates endotoxin-
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.ajpath.2011.05.013 | The Tripeptide KdPT Protects from Intestinal Inflammation and Maintain
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.jpsychores.2017.09.006 | Inflammatory Bowel Disease and Eating Disorders: A systematized review
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1017/s0954422416000019 | Intestinal barrier dysfunction: implications for chronic inflammatory
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.biopha.2020.110486 | Site-specific targeted drug delivery systems for the treatment of infl
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/biom11101518 | Hyaluronic Acid: A Key Ingredient in the Therapy of Inflammation
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1111/bcp.12097 | Neuropeptide receptors as potential drug targets in the treatment of i
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms21186502 | New Insights of Oral Colonic Drug Delivery Systems for Inflammatory Bo
+- FAIL pdf | C | 10.1007/s43032-022-01050-6 | Fadogia agrestis (Schweinf. Ex Hiern) Stem Extract Restores Selected Biomolecule | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/cells12141889 | The Melanocortin System in Inflammatory Bowel Diseases: Insights into
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1371/journal.pone.0170537 | Alpha-Melanocyte Stimulating Hormone Protects against Cytokine-Induced
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1155/2014/874610 | Alpha-melanocyte stimulating hormone: an emerging anti-inflammatory an
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1100/tsw.2010.173 | The melanocortin system in control of inflammation
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1007/s00011-015-0839-4 | The 12th World Congress on Inflammation : 8-12 August, 2015 Seaport Ho
+- FAIL pdf | C | 10.4236/ojapps.2020.1011047 | Antioxidant and Antiplasmodial Activities of Extracts from Gardenia erubescens S | no OA PDF resolved
+- FAIL pdf | C | 10.1055/a-0715-1801 | Quantification of Phenolic Compounds from Fadogia agrestis and Dietary Supplemen | no OA PDF resolved
+- FAIL pdf | C | 10.1080/14786419.2018.1497031 | Glycosides of ursane-type triterpenoid, benzophenone, and iridoid from Vangueria | no OA PDF resolved
+- FAIL pdf | C | 10.1055/s-0036-1578758 | Chemical Constituents From Fadogia Agrestis | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jep.2007.10.004 | Effects of oral administration of aqueous extract of Fadogia agrestis (Schweinf. | no OA PDF resolved
+- FAIL pdf | C | 10.1177/0960327109106973 | Mode of cellular toxicity of aqueous extract of Fadogia agrestis (Schweinf. Ex H | no OA PDF resolved
+- FAIL pdf | C | 10.1053/j.gastro.2007.10.026 | PepT1-Mediated Tripeptide KPV Uptake Reduces Intestinal Inflammation | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1100/tsw.2010.173 | The Melanocortin System in Control of Inflammation
+- FAIL pdf | C | 10.1111/j.0022-202x.2004.22404.x | α-Melanocyte-Stimulating Hormone, MSH 11–13 KPV and Adrenocorticotropic Hormone  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fendo.2019.00683 | Melanocortin Regulation of Inflammation
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1136/ard.2007.079780 | α-MSH related peptides: a new class of anti-inflammatory and immunomod
+- FAIL pdf | C | 10.1002/ibd.20334 | Melanocortin-derived tripeptide KPV has anti-inflammatory potential in murine mo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1053/j.gastro.2009.11.003 | Drug-Loaded Nanoparticles Targeted to the Colon With Polysaccharide Hy
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1155/2014/874610 | Alpha-Melanocyte Stimulating Hormone: An Emerging Anti-Inflammatory An
+- FAIL pdf | C | 10.3923/rjmp.2008.66.73 | Alterations in Serum Lipid Profile of Male Rats by Oral Administration of Aqueou | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s11062-010-9140-x | Analgesic and Anti-Inflammatory Effects of an Extract of Fadogia agrestis in Rat | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.phytochem.2007.09.024 | Monoterpene glycosides isolated from Fadogia agrestis | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jcmgh.2016.01.006 | Critical Role of PepT1 in Promoting Colitis-Associated Cancer and Therapeutic Be | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fimmu.2019.01699 | Activation of Resolution Pathways to Prevent and Fight Chronic Inflamm
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1371/journal.pone.0170537 | Alpha-Melanocyte Stimulating Hormone Protects against Cytokine-Induced
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1371/journal.pone.0008958 | The Neuropeptide Alpha-Melanocyte-Stimulating Hormone Is Critically In
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fphar.2018.01535 | Probing the Role of Melanocortin Type 1 Receptor Agonists in Diverse I
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1126/scitranslmed.aaf8732 | Melanocortin-1 receptor activation is neuroprotective in mouse models
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fimmu.2023.1083333 | A novel oral formulation of the melanocortin-1 receptor agonist PL8177
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1111/bcp.12097 | Neuropeptide receptors as potential drug targets in the treatment of i
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1038/labinvest.3700423 | The oligopeptide transporter hPepT1: gateway to the innate immune resp
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/cells12141889 | The Melanocortin System in Inflammatory Bowel Diseases: Insights into
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.jpsychores.2017.09.006 | Inflammatory Bowel Disease and Eating Disorders: A systematized review
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1371/journal.pone.0083194 | Intestinal Upregulation of Melanin-Concentrating Hormone in TNBS-Induc
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3748/wjg.v30.i9.1132 | Melanocortin 3,5 receptors immunohistochemical expression in colonic m
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/life13041066 | Afamelanotide Is Associated with Dose-Dependent Protective Effect from
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fendo.2020.569241 | Activation of Melanocortin Receptors as a Potential Strategy to Reduce
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fimmu.2020.02177 | Innate Inspiration: Antifungal Peptides and Other Immunotherapeutics F
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s41182-026-00923-9 | In vitro cytotoxicity of medicinal plants used in prostate cancer mana
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of <i>Ipomoea batatas</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1136/rmdopen-2025-006045 | HLA-DR risk variants in rheumatoid arthritis: what we know and still d
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/foods15101773 | Valorization of Bread Waste Hydrolysates and Plant-Based Nitrogen Sour
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.synbio.2026.03.005 | Signal peptide engineering of a novel M4 family keratinase and the act
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1021/acsnanoscienceau.5c00108 | From Amino Acids to Proteins: Biomolecular Nanostructures as Closed-Lo
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fchem.2026.1790990 | Linking molecular architecture to antibacterial functions: a chemical
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1093/nar/gkaf1420 | Constant trouble with prolines-navigating a global translation dilemma
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.synbio.2025.10.007 | Harnessing prokaryotic amino acid transporters for metabolic engineeri
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/genes17050544 | The Evolution of the First Code
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms27125554 | Trifluoromethanesulfonamide Induces Male Sterility Through Systemic Me
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.isci.2025.114360 | Structural analyses and substrate profiling of PPEP-3 provide new insi
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1080/13510002.2026.2682046 | Enzymatic and non-enzymatic oxidation of fibrillar collagen
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1002/fsn3.71334 | Characterization of Peptide Utilization by &lt;i&gt;Bifidobacterium bi
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/molecules31071216 | Exploiting Selective Position Labeling to Unveil the Hidden Complexity
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/life16060983 | Metabolomic Analysis of the Effects of Cysteamine Zinc on the Composit
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/molecules31101718 | The Interaction Between Sour Jujube Kernel Peptide and Pea Starch and
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/molecules30183683 | Bioactive Plant Peptides: Physicochemical Features, Structure-Function
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.47895/amp.vi0.13453 | Neutralization of SARS-CoV-2 Spike Pseudotyped Viruses Using Postbioti
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1073/pnas.2522338123 | Proximity-driven acceleration of challenging solid-phase peptide coupl
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1007/s12013-026-02050-y | Amino Acids as Targets for Immunotherapy against Solid Tumors
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1021/acsomega.5c12058 | Preliminary Study on Amino Acid Profiles in Postmortem Rat Myocardial
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.mcpro.2025.101465 | Properties, Origin, and Consistency of Truncated Proteoforms Across To
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3746/pnf.2025.30.6.607 | Investigation of Angiotensin I-Converting Enzyme Inhibitory Peptides D
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1093/jvimsj/aalaf075 | Serum metabolomics identifies metabolic changes in obese cats fed enzy
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1186/s40104-026-01405-y | Butyrate combined with niacin enhances intestinal barrier function rep
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1038/s41598-026-44271-4 | Serum metabolomics identifies gut-derived uremic toxins and bile acid
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2019.01.046 | Male sexual dysfunction: A review of literature on its pathological me
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.9790/3008-09316164 | The effect of oral administration of aqueous extract of Newbouldia lae
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2305-0500(13)60060-3 | Effects of aqueous extract of Cnestis ferruginea (Vahl ex De Cantolle)
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A Review on Plants Used for Improvement of Sexual Performance and Viri
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.30574/gscbps.2020.12.3.0297 | Evaluating the effect of ethanol leaf extract of Gongronema latifolium
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1007/s10068-018-00547-8 | Ameliorative effects of Lycium chinensis on male sexual dysfunction an
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3109/13880200903207094 | Anabolic and androgenic activities of Bulbine natalensis stem in male
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2221-6189(13)60105-5 | An overview of the current methodologies used for evaluation of aphrod
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of Ipomoea batatas L. Lam.
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.apjtb.2015.12.003 | Sub-chronic effects of a Phthirusa pyrifolia aqueous extract on reprod
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s43094-020-00154-7 | Rising trends towards the development of oral herbal male contraceptiv
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5281/zenodo.4266024 | Evaluating the effect of ethanol leaf extract of Gongronema latifolium
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.21926/obm.genet.2401221 | A Review on Male Infertility and Herbal Medicine: Complementary and Al
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4236/asm.2013.31006 | Aphrodisiac Activity of Aqueous Extract of Phoenix dactylifera Pollen
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.30880/jst.2023.15.02.002 | Aphrodisiac Potentials of Aqueous Extract of Azanza Garckeana Fruit Pu
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.48077/scihor.24(8).2021.15-25 | The Development of Phyto- and Tissue Origin Medicines for Veterinary R
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1080/2314808x.2023.2300560 | Erectile dysfunction: basics and its management using plant products
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-018-0086-7 | Evaluation of aphrodisiac activity of ethanol extract of Ganoderma luc
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/biom8010004 | Antimicrobial Peptides: Diversity, Mechanism of Action and Strategies
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.molmet.2019.09.010 | Glucagon-like peptide 1 (GLP-1)
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/ijms23031445 | Bioactive Peptides: Synthesis, Sources, Applications, and Proposed Mec
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/molecules23040815 | Tryptophan-Rich and Proline-Rich Antimicrobial Peptides
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.bbamcr.2004.09.019 | Ubiquitin: structures, functions, mechanisms
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1079/bjn20041189 | Bioavailability of angiotensin I converting enzyme inhibitory peptides
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/foods6050032 | Bioactive Peptides
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1007/s13197-018-3549-4 | Bioactive food derived peptides: a review on correlation between struc
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/toxins10110461 | Insect Antimicrobial Peptides, a Mini Review
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1371/journal.pone.0053785 | Proline: The Distribution, Frequency, Positioning, and Common Function
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1042/bj0450563 | The terminal peptides of insulin
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.celrep.2012.07.006 | Proteomic Analysis of Lysine Acetylation Sites in Rat Tissues Reveals
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1039/d0cs00307g | Peptide-based coacervates as biomimetic protocells
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.jff.2011.09.001 | Bioactive peptides from marine processing waste and shellfish: A revie
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1111/j.1432-1033.1996.00335.x | A Nonribosomal System of Peptide Biosynthesis
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/0079-6107(91)90004-c | The biophysics of peptide models of ion channels
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1042/bj20050411 | Specificity and versatility of SH3 and other proline-recognition domai
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1046/j.1432-1033.2002.03119.x | Identification of crucial residues for the antibacterial activity of t
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1111/j.1432-1033.1984.tb07877.x | Nomenclature and Symbolism for Amino Acids and Peptides
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1039/d0cs00729c | The multifaceted nature of antimicrobial peptides: current synthetic c
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3389/fcimb.2021.668632 | Antimicrobial Peptides: A New Hope in Biomedical and Pharmaceutical Fi
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1016/j.cmet.2017.03.003 | SIRT4 Is a Lysine Deacylase that Controls Leucine Metabolism and Insul
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.3390/nu3090765 | Bioactive Peptides from Muscle Sources: Meat and Fish
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1074/jbc.m200601200 | Hydroxylation and Glycosylation of the Four Conserved Lysine Residues
+- OFF-TOPIC | 08_peptides_gray/kpv | 10.1074/jbc.272.45.28398 | Penaeidins, a New Family of Antimicrobial Peptides Isolated from the S
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s41182-026-00923-9 | In vitro cytotoxicity of medicinal plants used in prostate cancer mana
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3390/plants15121836 | Traditional Medicinal Plants Used for Cancer Treatment in Sub-Saharan
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2018/7804135 | Biotoxicological Analyses of Trimeroside from <i>Baccharis trimera</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of <i>Ipomoea batatas</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4103/0973-7847.112832 | Exploring scientifically proven herbal aphrodisiacs
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.21010/ajtcam.v14i1.22 | ETHNOBOTANICAL STUDY OF PLANTS USED TO TREAT ASTHMA IN THE MARITIME RE
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A review on plants used for improvement of sexual performance and viri
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/jgf2.70132 | Taste and Smell Disturbances Associated With Secondary Adrenal Insuffi
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2013/182064 | Acute and Subchronic Toxicity Study ofEuphorbia hirtaL. Methanol Extra
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2019.01.046 | Male sexual dysfunction: A review of literature on its pathological me
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-020-00228-2 | An exploratory analysis on the toxicity & safety profile of Polyherbal
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A Review on Plants Used for Improvement of Sexual Performance and Viri
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2020.110227 | Ketogenic diet improves and restores redox status and biochemical indi
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.toxrep.2020.01.020 | Combined administration of exogenous melatonin and insulin ameliorates
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2016/3509323 | Acute and Subchronic Oral Toxicity Evaluation of Aqueous Root Extract
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of Ipomoea batatas L. Lam.
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-019-0106-2 | RETRACTED ARTICLE: Acute and sub-acute (30-day) toxicity studies of Ae
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8497980 | Subcutaneous Injection of Myrrh Essential Oil in Mice: Acute and Subac
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.bjp.2016.03.004 | A subchronic toxicity study of ethanol root extract of baked Aconitum
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.sjbs.2022.01.050 | Acute oral toxicity assessment and anti-hyperuricemic activity of Aloc
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.toxrep.2018.03.004 | Bioactive profiling and therapeutic potential of mushroom (Pleurotus t
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3109/13880209.2013.764325 | Male rat hormone imbalance, testicular changes and toxicity associated
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1530/rep-08-0069 | Effects of Kaempferia parviflora extracts on reproductive parameters a
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.14202/vetworld.2022.2525-2534 | Aqueous extract of bay leaf (Laurus nobilis) ameliorates testicular to
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1088/1755-1315/210/1/012013 | Protective Effects Of Curcumin Against Benzopyrene Induced Liver Toxic
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1039/d4ma00050a | Selective induction of apoptotic cell death in lung carcinoma cells by
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3390/ph16030402 | Pirimicarb Induction of Behavioral Disorders and of Neurological and R
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2021/5543320 | Antidepressant and Anxiolytic Effects and Subacute Toxicity of the Aer
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/and.12677 | A review of the potential of medicinal plants in the management and tr
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5897/ajpp10.289 | Effects of leaf and berry extracts of Phytolacca dioica L. on haematol
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/chir.70083 | Growth Hormone-Releasing Peptides: Investigation of Their Secondary St
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/dta.3898 | Gel Electrophoretic Detection of Black Market ACE-031
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/metabo13080949 | Metabolism Study of Anamorelin, a GHSR1a Receptor Agonist Potentially
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- FAIL pdf | C | 10.1002/chir.70083 | Growth Hormone-Releasing Peptides: Investigation of Their Secondary Structure, T | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.2147/jep.s249747 | Attenuation of Visceral and Somatic Nociception by Ghrelin Mimetics | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.5056/jnm16183 | Future Treatment of Constipation-associated Disorders: Role of Relamor
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1177/1536012120952623 | A Decade's Progress in the Development of Molecular Imaging Agents Tar
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms19103067 | Enhanced Pulsatile Growth Hormone Secretion and Altered Metabolic Horm
+- FAIL pdf | B | 10.3390/ph19030468 | Growth Hormone-Releasing Peptide-6 (GHRP-6) Ameliorates Post-Infarct Ventricular | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1530/edm-26-0036 | Differential reversibility of anterior and posterior pituitary dysfunc
+- FAIL pdf | C | 10.1186/s12951-025-03888-9 | Growth hormone-releasing peptide 6 (GHRP-6) hydrogel for acute kidney injury the | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej25-0480 | Pituitary dysfunction in trans-sellar encephalocele: a two-case report
+- FAIL pdf | C | 10.2147/jep.s35396 | Efficacy of ipamorelin, a ghrelin mimetic, on gastric dysmotility in a rodent mo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/antib11010001 | Impact of Intrinsic and Extrinsic Factors on the Pharmacokinetics of P
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/molecules25051093 | Peptides from Natural or Rationally Designed Sources Can Be Used in Ov
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms18020273 | From Belly to Brain: Targeting the Ghrelin Receptor in Appetite and Fo
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1155/2010/493614 | The prokinetic face of ghrelin
+- FAIL pdf | C | 10.22074/ijfs.2025.2038272.1745 | Assessing The Effectiveness of Growth Hormone Releasing Protein-6 in Improving H | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej25-0442 | Endocrine disorders in pediatric medulloblastoma survivors treated wit
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/ccr3.72533 | Behavioral Therapy Ameliorates Severe Obesity With Low Levels of Plasm
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/cancers18050838 | Thyrotroph Pituitary Neuroendocrine Tumors: Molecular Pathology, Diagn
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth hormone (GH) hypersecretion and GH receptor resistance in streptozotocin  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.6061/clinics/2012(03)11 | Growth hormone response to growth hormone-releasing peptide-2 in growt
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2013.00081 | Ghrelin receptors in non-Mammalian vertebrates
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fphar.2010.00145 | The hungry stomach: physiology, disease, and drug development opportun
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/s0065-7743(03)38037-6 | Compound name, code numcer and subject index, vol. 38
+- FAIL pdf | C | 10.1210/endocr/bqae166 | Intranasal Delivery of a Ghrelin Mimetic Engages the Brain Ghrelin Signaling Sys | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/er.2004-0019 | Development of Growth Hormone Secretagogues
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.2004-1379 | The Endogenous Growth Hormone Secretagogue (Ghrelin) Is Synthesized an
+- FAIL pdf | C | 10.1021/jm980197u | Novel Orally Active Growth Hormone Secretagogues | no OA PDF resolved
+- FAIL pdf | C | 10.1677/joe.0.1650569 | The GH secretagogues ipamorelin and GH-releasing peptide-6 increase bone mineral | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/joe.0.1650139 | Specific binding sites for synthetic growth hormone secretagogues in n
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/eje.0.1450711 | Systemic ghrelin levels in subjects with growth hormone deficiency are
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/jme.1.01945 | The co-existence of two growth hormone receptors in teleost fish and t
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.2003-1509 | Physiological Studies of Transgenic Mice Overexpressing Growth Hormone
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1046/j.1365-2265.1999.00784.x | Growth hormone and exercise
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- FAIL pdf | C | 10.3390/biology14080941 | The Ghrelin Analog GHRP-6, Delivered Through Aquafeeds, Modulates the Endocrine  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fspor.2026.1740663 | Systematic review of undeclared prohibited substances and pharmacologi
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s13256-026-05924-0 | Pitfalls in the management of undiagnosed secondary adrenal insufficie
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.2169/internalmedicine.5932-25 | Hypopituitarism Accompanied with Delusion: The Effects of Growth Hormo
+- FAIL pdf | C | 10.3390/diseases13040112 | Benchmark for Setting ACTH Cell Dosage in Clinical Regenerative Medicine for Pos | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1093/sexmed/qfag050 | Access without approval: state-level determinants of peptide availabil
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.81495 | Slowly Progressive Secondary Adrenal Insufficiency Due to Pembrolizuma
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- FAIL pdf | C | 10.5478/msl.2016.7.3.55 | LC-MS/MS Method for Simultaneous Analysis of Growth Hormone-Releasing Peptides a | no OA PDF resolved
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth Hormone (GH) Hypersecretion and GH Receptor Resistance in Streptozotocin  | no OA PDF resolved
+- FAIL pdf | C | 10.1042/cs20050374 | Use of growth-hormone-releasing peptide-6 (GHRP-6) for the prevention of multipl | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ijms.2021.116531 | Detection of the synthetic peptide ipamorelin in dried blood spots by means of U | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/jcem.86.7.7694 | Growth Hormone-Releasing Peptide-2 Stimulates GH Secretion in GH-Defic
+- FAIL pdf | C | 10.1152/ajpendo.00196.2004 | Anti-inflammatory effect of the ghrelin agonist growth hormone-releasing peptide | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1038/sj.ijo.0800807 | Growth hormone in obesity
+- FAIL pdf | C | 10.1677/joe.1.06593 | Seabream ghrelin: cDNA cloning, genomic organization and promoter studies | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1359/jbmr.041237 | Ghrelin Directly Regulates Bone Formation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/s41467-021-25364-2 | Molecular recognition of an acyl-peptide hormone and activation of ghr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1177/00912700122009971 | Pharmacokinetic and Pharmacodynamic Modeling of NN703, a Growth Hormon
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.2460/ajvr.67.1.180 | Ghrelin, an endogenous growth hormone secretagogue with diverse endocr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1208/s12248-014-9687-3 | Strategic Approaches to Optimizing Peptide ADME Properties
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/joe-11-0373 | A novel GH secretagogue, A233, exhibits enhanced growth activity and i
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1159/000071232 | A Tripeptidyl Ensemble Perspective of Interactive Control of Growth Ho
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.1210/jcem.84.4.5636 | Reactivation of Pituitary Hormone Release and Metabolic Improvement by Infusion  | no OA PDF resolved
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms19103067 | Enhanced Pulsatile Growth Hormone Secretion and Altered Metabolic Horm
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- FAIL pdf | C | 10.1073/pnas.92.15.7001 | Design and biological activities of L-163,191 (MK-0677): a potent, orally active | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/er.2007-0036 | Growth Hormone, Insulin-Like Growth Factors, and the Skeleton
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1053/gast.2002.35954 | The role of the gastric afferent vagal nerve in ghrelin-induced feedin
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth hormone (GH) hypersecretion and GH receptor resistance in streptozotocin  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.6061/clinics/2012(03)11 | Growth hormone response to growth hormone-releasing peptide-2 in growt
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2013.00081 | Ghrelin receptors in non-Mammalian vertebrates
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1155/2010/879503 | Integrating GHS into the Ghrelin System
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | PMC7161796 | Abstracts of Poster Section B
+- FAIL pdf | C | 10.3389/fphar.2024.1402138 | Growth hormone releasing peptide-6 (GHRP-6) prevents doxorubicin-induced myocard | no OA PDF resolved
+- FAIL pdf | C | 10.1136/gut.2005.065896 | Gastric motor effects of peptide and non-peptide ghrelin agonists in mice in viv | no OA PDF resolved
+- FAIL pdf | C | 10.1677/joe.0.1650569 | The GH secretagogues ipamorelin and GH-releasing peptide-6 increase bone mineral | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/jcem.86.7.7694 | Growth Hormone-Releasing Peptide-2 Stimulates GH Secretion in GH-Defic
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/er.2004-0019 | Development of Growth Hormone Secretagogues
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.142.11.4762 | Liver-Derived IGF-I Regulates GH Secretion at the Pituitary Level in M
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.143.2.558 | GH-Releasing Peptide-2 Increases Fat Mass in Mice Lacking NPY: Indicat
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/eje.0.1450711 | Systemic ghrelin levels in subjects with growth hormone deficiency are
+- FAIL pdf | C | 10.1210/endo.138.2.4907 | Induction of c-fos Messenger Ribonucleic Acid in Neuropeptide Y and Growth Hormo | no OA PDF resolved
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth Hormone (GH) Hypersecretion and GH Receptor Resistance in Streptozotocin  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1359/jbmr.041237 | Ghrelin Directly Regulates Bone Formation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1046/j.1365-2265.1999.00784.x | Growth hormone and exercise
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.2004-1379 | The Endogenous Growth Hormone Secretagogue (Ghrelin) Is Synthesized an
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/jme.1.01945 | The co-existence of two growth hormone receptors in teleost fish and t
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/joe-11-0373 | A novel GH secretagogue, A233, exhibits enhanced growth activity and i
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/joe.0.1650139 | Specific binding sites for synthetic growth hormone secretagogues in n
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1159/000071232 | A Tripeptidyl Ensemble Perspective of Interactive Control of Growth Ho
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1177/00912700122009971 | Pharmacokinetic and Pharmacodynamic Modeling of NN703, a Growth Hormon
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.14401/kasmed.2014.21.2.51 | Human Circadian Rhythms
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms19103067 | Enhanced Pulsatile Growth Hormone Secretion and Altered Metabolic Horm
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.2460/ajvr.67.1.180 | Ghrelin, an endogenous growth hormone secretagogue with diverse endocr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/14651858.cd012229.pub2 | Ghrelin for the management of cachexia associated with cancer
+- FAIL pdf | C | 10.1210/endo.139.1.5811 | Identification of a Pituitary Growth Hormone-Releasing Peptide (GHRP) Receptor S | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1042/bsr20250362 | Integrative role of orexigenic peptides in neuroprotection and neurode
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27114956 | Special Issue "Hormone Signaling in Human Health and Diseases"
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | PMC13297421 | A Dimer for Dinner: The Impact of GHS-R1a Heterodimerization on Feedin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1042/bsr20250120 | Recent developments in GPCR signalling in appetite regulation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1007/s13679-026-00728-1 | The Ghrelin-LEAP2 System in Obesity and Diabetes: Pathophysiological R
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4292/wjgpt.v17.i2.118616 | Evolving prokinetic therapy: New targets and therapeutic opportunities
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/clinem/dgag116 | Pathogenesis of nonfamilial somatotroph adenomas
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.psj.2026.107210 | The gut-brain axis in avian appetite regulation: Integrating periphera
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1007/s44417-026-00014-7 | Neuroendocrine crosstalk between sex and metabolic hormones: mechanism
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/jne.70143 | GHSR agonism increases blood glucose but delays food intake in GHSR hy
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/jcsm.70277 | KARIs, Ghrelin Receptor Agonists With Excellent Brain Permeability, In
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/cimb48030296 | Role of Growth Hormone (GH) and Other Somatotropic Axis Elements in Re
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/nu18050787 | GABA Enhances Growth Hormone Expression by Modulating Somatotroph Pit-
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4103/ijp.ijp_176_24 | Hexarelin promotes the survival of retinal ganglion cells after optic
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/s44321-026-00416-6 | Hypothalamic regulation of sepsis-associated anorexia: cytokine and ho
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.21037/atm-2025-1-184 | Development of pharmacological interventions for the treatment of sarc
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/s42003-026-09889-0 | Membrane cholesterol modulates engagement of β-arrestin with the ghrel
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/jcsm.70312 | Targeting Cancer Cachexia: A Mechanistic Evaluation of Anti-GDF-15 Ant
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.isci.2025.113573 | Ghrelin-GHSR-LEAP2 system in the pathophysiology of type 2 diabetes
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.5455/ovj.2026.v16.i4.3 | Physiological interplay among obesity, male fertility, and aryl hydroc
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.64898/2026.07.29.26359169 | Relationships between increasing pre-load meal size, post-prandial acy
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1021/acschemneuro.5c00683 | Effects of Ghrelin Hormone on Alzheimer's and Parkinson's Disease: A S
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2026.1781163 | Laparoscopic sleeve gastrectomy in adults with Prader-Willi syndrome a
+- FAIL pdf | C | 10.1016/j.mce.2011.02.002 | Insulin and growth hormone-releasing peptide-6 (GHRP-6) have differential benefi | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1073/pnas.0305930101 | Ghrelin stimulation of growth hormone release and appetite is mediated
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1021/jm0001727 | Structure−Function Studies on the New Growth Hormone-Releasing Peptide
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/me.2005-0059 | Nonpeptide and Peptide Growth Hormone Secretagogues Act Both as Ghreli
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1073/pnas.0811680106 | Growth hormone-releasing hormone as an agonist of the ghrelin receptor
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.mce.2007.05.010 | Unacylated ghrelin is not a functional antagonist but a full agonist o
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci21134 | Ghrelin inhibits leptin- and activation-induced proinflammatory cytoki
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1124/mol.109.056101 | Growth Hormone Secretagogues and Growth Hormone Releasing Peptides Act
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.2003-0899 | Ghrelin and Des-Octanoyl Ghrelin Promote Adipogenesis Directly in Vivo
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1053/gast.2001.22158 | Ghrelin is an appetite-stimulatory signal from stomach with structural
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci26002 | Mice lacking ghrelin receptors resist the development of diet-induced
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/mp.2013.135 | A ghrelin–growth hormone axis drives stress-induced vulnerability to e
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1152/ajpendo.00196.2004 | Anti-inflammatory effect of the ghrelin agonist growth hormone-releasi
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1083/jcb.200207165 | Ghrelin and des-acyl ghrelin inhibit cell death in cardiomyocytes and
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1373/clinchem.2004.032482 | Endocrine Regulation of Energy Metabolism: Review of Pathobiochemical
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1021/acs.jmedchem.8b01644 | N-Terminal Liver-Expressed Antimicrobial Peptide 2 (LEAP2) Region Exhi
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci75276 | The arcuate nucleus mediates GLP-1 receptor agonist liraglutide-depend
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/me.2005-0084 | Ghrelin Amplifies Dopamine Signaling by Cross Talk Involving Formation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1136/gut.52.7.947 | Antagonism of ghrelin receptor reduces food intake and body weight gai
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/s0014-5793(03)00051-6 | Ghrelin and growth hormone secretagogue receptor are expressed in the
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1136/gut.2005.065896 | Gastric motor effects of peptide and non-peptide ghrelin agonists in m
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/j.1365-2036.2005.02658.x | Influence of ghrelin on gastric emptying and meal‐related symptoms in
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/s41467-021-26735-5 | Structural basis of human ghrelin receptor signaling by ghrelin and th
+- FAIL pdf | C | 10.1210/endo.138.4.5065 | Activation of the Hypothalamo-Pituitary-Adrenal Axis by the Growth Hormone (GH)  | no OA PDF resolved
+- FAIL pdf | C | 10.1161/01.res.85.9.796 | Identification and Characterization of a New Growth Hormone–Releasing Peptide Re | no OA PDF resolved
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1186/s12967-026-08126-w | Mesenchymal Stem cell therapy with GHRH receptor analog resolves post-
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41419-026-08699-w | Growth hormone-releasing hormone attenuates amyloid deposition and neu
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fragi.2026.1790247 | Therapeutic peptides in gerontology: mechanisms and applications for h
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms26073267 | Growth Hormone-Releasing Hormone Antagonists Increase Radiosensitivity
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s11154-024-09917-6 | A novel approach for the treatment of AML, through GHRH antagonism: MI
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms252011200 | Antagonist of Growth Hormone-Releasing Hormone Receptor MIA-690 Suppre
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.18632/oncotarget.28579 | Exploring the role of GHRH antagonist MIA-602 in overcoming Doxorubici
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/acs.jcim.4c00577 | Identification of Small-Molecule Antagonists Targeting the Growth Horm
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1073/pnas.2308342120 | Growth hormone-releasing hormone receptor antagonist MIA-602 attenuate
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1073/pnas.2209810120 | GHRH agonist MR-409 protects β-cells from streptozotocin-induced diabe
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fimmu.2023.1231363 | Growth hormone-releasing hormone antagonist MIA-602 inhibits inflammat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.3835 | Annual Banned-Substance Review 17th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/acsomega.2c05296 | Synthetic Peptides in Doping Control: A Powerful Tool for an Analytica
+- FAIL pdf | C | 10.1021/jm300557t | Azapeptide Analogues of the Growth Hormone Releasing Peptide 6 as Cluster of Dif | no OA PDF resolved
+- FAIL pdf | C | 10.1042/bj20040036 | Identification of the growth hormone-releasing peptide binding site in CD36: a p | no OA PDF resolved
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.celrep.2025.115836 | Discovery of peptides as key regulators of metabolic and cardiovascula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.70033 | Annual Banned-Substance Review 18th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/pros.24339 | Tumorigenic transformation of human prostatic epithelial cell line RWP
+- FAIL pdf | C | 10.1002/ansa.202200027 | Probing for peptidic drugs (2-10 kDa) in doping control blood samples | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1152/ajpendo.00371.2023 | Class B1 GPCRs: insights into multireceptor pharmacology for the treat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2008-1333 | The Effects of Central Adiposity on Growth Hormone (GH) Response to GH
+- FAIL pdf | C | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone synthetic analogs | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1172/jci32830 | Growth hormone enhances thymic function in HIV-1–infected adults
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- FAIL pdf | C | 10.1002/elps.202200278 | Online large volume sample staking preconcentration and separation of enantiomer | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1095/biolreprod66.3.555 | Placental Growth Hormone and Lactogen Production by Perifused Ovine Pl
+- FAIL pdf | C | 10.1208/pt0802043 | Formation of acylated growth hormone-releasing peptide-6 by poly(lactide-co-glyc | no OA PDF resolved
+- FAIL pdf | C | 10.1210/en.2002-220261 | Growth Hormone (GH) and GH-Releasing Peptide-6 Increase Brain Insulin-Like Growt | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s11154-024-09929-2 | The development of growth hormone-releasing hormone analogs: Therapeut
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2010-2264 | The Association of Growth Hormone Parameters with Skeletal Muscle Phos
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.1730 | Identification of the growth hormone‐releasing hormone analogue [Pro1,
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.13878 | THE CONCISE GUIDE TO PHARMACOLOGY 2017/18: G protein‐coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/acs.jcim.4c00577 | Identification of Small-Molecule Antagonists Targeting the Growth Horm
+- FAIL pdf | C | 10.1523/jneurosci.3913-06.2007 | Ghrelin Effects on the Circadian System of Mice | no OA PDF resolved
+- FAIL pdf | C | 10.1002/bmc.5741 | In‐house standards derived from doping peptides: Enzymatic and serum stability a | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐12
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41419-026-08699-w | Growth hormone-releasing hormone attenuates amyloid deposition and neu
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- FAIL pdf | C | 10.1016/j.cardiores.2003.10.012 | Growth hormone-releasing peptide can improve left ventricular dysfunction and at | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.celrep.2025.115836 | Discovery of peptides as key regulators of metabolic and cardiovascula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1371/journal.pone.0278293 | Experience of switching from a daily to a less frequent administration
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.abd.2024.09.008 | Chronic pruritus: a narrative review
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fimmu.2023.1231363 | Growth hormone-releasing hormone antagonist MIA-602 inhibits inflammat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1073/pnas.2308342120 | Growth hormone-releasing hormone receptor antagonist MIA-602 attenuate
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- FAIL pdf | C | 10.1210/mend.10.1.8838145 | Identification of a new G-protein-linked receptor for growth hormone secretagogu | no OA PDF resolved
+- FAIL pdf | C | 10.1177/1557988317718662 | Growth Hormone Secretagogue Treatment in Hypogonadal Men Raises Serum Insulin-Li | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/medicina58101373 | Fatal Form of COVID-19 in a Young Male Bodybuilder Anabolic Steroid Us
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41598-019-57292-z | Antinflammatory, antioxidant, and behavioral effects induced by admini
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/jgf2.70132 | Taste and Smell Disturbances Associated With Secondary Adrenal Insuffi
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.2147/ciia.2006.1.4.307 | Sermorelin: a better approach to management of adult-onset growth hormone insuff | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | PMC2544375 | Comments on "growth hormone (GH)-releasing hormone and GH secretagogue
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1161/jaha.114.001464 | Growth hormone-releasing hormone agonists reduce myocardial infarct sc
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.6061/clinics/2012(03)11 | Growth hormone response to growth hormone-releasing peptide-2 in growt
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.31887/dcns.2001.3.3/mvvitiello | Treating age-related changes in somatotrophic hormones, sleep, and cog
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.13878 | THE CONCISE GUIDE TO PHARMACOLOGY 2017/18: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.13348 | The Concise Guide to PHARMACOLOGY 2015/16: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1155/edr.2003.73 | Growth hormone (GH) hypersecretion and GH receptor resistance in strep
+- OFF-TOPIC | 08_peptides_gray/sermorelin | PMC7271219 | Spezielle Arzneimitteltherapie in der Schwangerschaft
+- FAIL pdf | C | 10.1016/j.psj.2025.106199 | Effect of intracerebroventricular (ICV) injection of antimicrobial peptide expre | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | PMC13296771 | The Ghrelin/GHSR-1a Axis Attenuates Preeclampsia-like Features with De
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s13256-026-05924-0 | Pitfalls in the management of undiagnosed secondary adrenal insufficie
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fspor.2026.1740663 | Systematic review of undeclared prohibited substances and pharmacologi
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1172/jci32830 | Growth hormone enhances thymic function in HIV-1–infected adults
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2008-1333 | The Effects of Central Adiposity on Growth Hormone (GH) Response to GH
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2010-2264 | The Association of Growth Hormone Parameters with Skeletal Muscle Phos
+- FAIL pdf | C | 10.1210/endocr/bqae166 | Intranasal Delivery of a Ghrelin Mimetic Engages the Brain Ghrelin Signaling Sys | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1093/sexmed/qfag050 | Access without approval: state-level determinants of peptide availabil
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s13679-026-00728-1 | The Ghrelin-LEAP2 System in Obesity and Diabetes: Pathophysiological R
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.81495 | Slowly Progressive Secondary Adrenal Insufficiency Due to Pembrolizuma
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.70401 | Gilteritinib-Induced Hypopituitarism: A Case Report
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1042/bsr20250362 | Integrative role of orexigenic peptides in neuroprotection and neurode
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s12917-025-04823-8 | The interaction between rumen microbiota and neurotransmitters plays a
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fcell.2025.1709098 | G protein-coupled receptors in prostate cancer: research progress and
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej24-0568 | Severe obesity with hypo-leptinemia
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fphys.2025.1627607 | The dual burden of obesity: decoding metabolism and female reproductiv
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7717/peerj.18898 | Potential role of ghrelin in neuroprotection and cognitive function: i
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fnmol.2025.1549366 | How the ghrelin receptor recognizes the acyl-modified orexigenic hormo
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms262110539 | Key Signals Produced by Gut Microbiota Associated with Metabolic Syndr
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1053/gast.2002.35954 | The role of the gastric afferent vagal nerve in ghrelin-induced feedin
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐12
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1371/journal.pone.0278293 | Experience of switching from a daily to a less frequent administration
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41514-025-00231-2 | A 50-year journey in the development of treatment for benign prostatic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2161-0673.1000113 | Exercise, Science and Designer Doping: Traditional and Emerging Trends
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.jaci.2022.01.030 | Selected recent advances in understanding the role of human mast cells
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s13346-024-01609-7 | Porous silicon and silica carriers for delivery of peptide therapeutic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/app11083393 | Proteomics in Forensic Analysis: Applications for Human Samples
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/elps.202300141 | Capillary electrophoresis in the analysis of therapeutic peptides—A re
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.2337/dbi24-0026 | A Contemporary Rationale for Agonism of the GIP Receptor in the Treatm
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/ejoc.202300028 | Synthesis and Applications of Peptides and Peptidomimetics in Drug Dis
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/cells12111506 | Degranulation of Mast Cells as a Target for Drug Development
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.21518/ms2025-223 | L-Ornithine salts as somatotropic axis modulators for the correction o
+- FAIL pdf | C | 10.1210/jc.2004-1719 | Growth Hormone Releasing Peptide-2 (GHRP-2), Like Ghrelin, Increases Food Intake | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/er.2004-0019 | Development of Growth Hormone Secretagogues
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/en.2005-1357 | Des-Acyl Ghrelin Induces Food Intake by a Mechanism Independent of the
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms15034837 | The Growth Hormone Secretagogue Receptor: Its Intracellular Signaling
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms18020273 | From Belly to Brain: Targeting the Ghrelin Receptor in Appetite and Fo
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fragi.2026.1790247 | Therapeutic peptides in gerontology: mechanisms and applications for h
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.3898 | Gel Electrophoretic Detection of Black Market ACE-031
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.celrep.2025.115836 | Discovery of peptides as key regulators of metabolic and cardiovascula
+- FAIL pdf | C | 10.1210/me.2005-0059 | Nonpeptide and Peptide Growth Hormone Secretagogues Act Both as Ghrelin Receptor | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1038/mp.2013.135 | A ghrelin–growth hormone axis drives stress-induced vulnerability to e
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/nu10030360 | Protein for Life: Review of Optimal Protein Intake, Sustainable Dietar
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1111/j.1365-2826.2009.01896.x | Ghrelin and Dopamine: New Insights on the Peripheral Regulation of App
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1079/bjn20061787 | Ghrelin: a hormone regulating food intake and energy homeostasis
+- FAIL pdf | C | 10.1177/1557988317718662 | Growth Hormone Secretagogue Treatment in Hypogonadal Men Raises Serum Insulin-Li | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.5056/jnm16183 | Future Treatment of Constipation-associated Disorders: Role of Relamor
+- OFF-TOPIC | 08_peptides_gray/sermorelin | PMC2544375 | Comments on "growth hormone (GH)-releasing hormone and GH secretagogue
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fimmu.2018.03027 | Mas-Related G Protein-Coupled Receptor-X2 (MRGPRX2) in Drug Hypersensi
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1155/2010/493614 | The prokinetic face of ghrelin
+- FAIL pdf | C | 10.3748/wjg.14.6303 | Growth hormone releasing peptide 2 reverses anorexia associated with chemotherap | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1038/sj.npp.1300670 | Ghrelin Stimulates Appetite, Imagination of Food, GH, ACTH, and Cortis
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s40263-014-0178-y | Role of Appetite-Regulating Peptides in the Pathophysiology of Addicti
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- FAIL pdf | C | 10.1038/oby.2006.121 | Obese Subjects Respond to the Stimulatory Effect of the Ghrelin Agonist Growth H | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1371/journal.pone.0009159 | Ghrelin Stimulation of Growth Hormone-Releasing Hormone Neurons Is Dir
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/s0304-3940(00)01498-1 | Both corticotropin releasing factor and neuropeptide Y are involved in
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1080/07853890601149179 | Ghrelin, the peripheral hunger hormone
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1093/humupd/dmp005 | Growth hormone, menopause and ageing: no definite evidence for 'rejuve
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/jc.2007-2234 | Evidence for Acyl-Ghrelin Modulation of Growth Hormone Release in the
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci21134 | Ghrelin inhibits leptin- and activation-induced proinflammatory cytoki
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- FAIL pdf | B | 10.3390/ph19030468 | Growth Hormone-Releasing Peptide-6 (GHRP-6) Ameliorates Post-Infarct Ventricular | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.5937/jomb0-61972 | Endocrine effect of ghrelin on histological, hormonal and morphometric
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms262211065 | Differential Features of Cholecystokinin-Releasing Peptides Derived fr
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/endocr/bqag037 | TRH can stimulate the release of two POMC-derived pituitary hormones,
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1038/s44321-026-00416-6 | Hypothalamic regulation of sepsis-associated anorexia: cytokine and ho
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1042/bsr20250120 | Recent developments in GPCR signalling in appetite regulation
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/j.ensci.2026.100616 | The effect of growth hormone-releasing hormone on cognition and brain
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/j.psj.2025.106331 | Effects of commercial genetic selection on gene expression in the deve
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/clinem/dgag116 | Pathogenesis of nonfamilial somatotroph adenomas
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/cimb48030296 | Role of Growth Hormone (GH) and Other Somatotropic Axis Elements in Re
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s13679-026-00728-1 | The Ghrelin-LEAP2 System in Obesity and Diabetes: Pathophysiological R
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fragi.2026.1790247 | Therapeutic peptides in gerontology: mechanisms and applications for h
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.talanta.2017.06.034 | Analysis of illegal peptide drugs via HILIC-DAD-MS
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s00210-016-1247-1 | Pharmacological treatment options for mast cell activation disease
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1080/1547691x.2021.1877375 | In vitro prediction of in vivo pseudo-allergenic response via MRGPRX2
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/elps.202300141 | Capillary electrophoresis in the analysis of therapeutic peptides—A re
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/app11083393 | Proteomics in Forensic Analysis: Applications for Human Samples
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.peh.2024.100293 | Novel wellbeing and repair peptide use in the UK: Netnographic finding
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.22541/au.159122261.11891577 | State-of-the-Art Clinical Results of Growth Hormone Secretagogues, SAR
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.37118/ijdr.19112.06.2020 | State-of-the-art clinical results of growth hormone secretagogues, sar
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1155/2023/5852315 | New Psychoactive Substances: Major Groups, Laboratory Testing Challeng
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.21518/ms2025-223 | L-Ornithine salts as somatotropic axis modulators for the correction o
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.3602 | Annual banned‐substance review 16th edition—Analytical approaches in h
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1177/19417381251411343 | Injuries, Injections, and Internet Forums: A Qualitative Study of Redd
+- FAIL pdf | C | 10.1002/chir.70083 | Growth Hormone-Releasing Peptides: Investigation of Their Secondary Structure, T | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/jcm15020541 | Pharmacologic Treatments for the Preservation of Lean Body Mass During
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/nu18081299 | The NeuroImmunoEndocrine Circuit of Umami Peptides: A Systems Biology
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s13104-026-07672-2 | An exploratory microarray analysis of estrogen-mediated gene expressio
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1111/jne.70117 | The gatekeepers of growth: The neural roles and regulation of growth h
+- FAIL pdf | C | 10.3390/ijms26062691 | Overview of Epitalon-Highly Bioactive Pineal Tetrapeptide with Promising Propert | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.37796/2211-8039.1433 | Biomedicines in Longevity and Aging the Quest to Resist Biological Dec
+- FAIL pdf | C | 10.1210/endocr/bqae166 | Intranasal Delivery of a Ghrelin Mimetic Engages the Brain Ghrelin Signaling Sys | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1111/acer.70221 | Alcohol and the endocrine system: A critical review of disruptions, po
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1111/jne.70104 | Food and the brain: Neural and endocrine control of feeding, metabolis
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s11102-026-01646-0 | Cardiovascular and metabolic outcomes of GH replacement therapy in adu
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s11154-025-09951-y | Hypothalamic GHRH
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.37796/2211-8039.1433 | Biomedicines in Longevity and Aging The Quest to Resist Biological Dec
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.14200/rmd.2024.0002 | Exploring Peptides for Neurological Health & Longevity
+- FAIL pdf | C | 10.3390/ijms26062691 | Overview of Epitalon-Highly Bioactive Pineal Tetrapeptide with Promising Propert | no OA PDF resolved
+- FAIL pdf | C | 10.1021/jm0001727 | Structure−Function Studies on the New Growth Hormone-Releasing Peptide, Ghrelin: | no OA PDF resolved
+- FAIL pdf | C | 10.1210/endo.138.2.4907 | Induction of c-fos Messenger Ribonucleic Acid in Neuropeptide Y and Growth Hormo | no OA PDF resolved
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/diseases9040067 | Empowering Melatonin Therapeutics with <i>Drosophila</i> Models
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10522-023-10025-2 | "Development of gerontology would be more effective under governmental
+- OFF-TOPIC | 08_peptides_gray/epitalon | PMC7103906 | Posters
+- OFF-TOPIC | 08_peptides_gray/epitalon | PMC7111269 | Neuronal and glial cell biology
+- FAIL pdf | C | 10.1210/endo.138.4.5065 | Activation of the Hypothalamo-Pituitary-Adrenal Axis by the Growth Hormone (GH)  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1074/jbc.m002784200 | Purification and Characterization of Rat des-Gln14-Ghrelin, a Second E
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1111/jpi.12360 | Melatonin as an antioxidant: under promises but over delivers
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10571-023-01324-w | Melatonin and Health: Insights of Melatonin Action, Biological Functio
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1111/j.1600-079x.2007.00519.x | Melatonin, endocrine pancreas and diabetes
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.14748/ssm.v54i2.8149 | Influence of the thymus and pineal gland on immunity and aging
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1093/carcin/17.9.1931 | Study of the post-natal effects of chemopreventive agents on ethylnitr
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.25557/2310-0435.2021.01.19-29 | Medicinal peptide drugs in evidence-based medicine
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.5772/intechopen.112433 | The Relationships of Age-Related Changes in the Biorhythms of the Thym
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/metabo13030405 | Biological Health Markers Associated with Oxidative Stress in Dairy Co
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.17816/maj632545 | Main scientific achievements of the academician of the RAS Vladimir Kh
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.35841/molecular-oncology.1.1.7-13 | The psychoneuroimmunotherapy of human immune-mediated systemic disease
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1111/j.1440-1746.2004.03579.x | Exposure to continuous darkness ameliorates gastric and colonic inflam
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/diseases9040067 | Empowering Melatonin Therapeutics with Drosophila Models
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.2147/cpt.s40209 | Melatonin and its use in atherosclerosis and dyslipidemia
+- FAIL pdf | C | 10.1073/pnas.92.15.7001 | Design and biological activities of L-163,191 (MK-0677): a potent, orally active | no OA PDF resolved
+- FAIL pdf | C | 10.1021/jm300557t | Azapeptide Analogues of the Growth Hormone Releasing Peptide 6 as Cluster of Dif | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/en.2002-220852 | Interrelationship between the Novel Peptide Ghrelin and Somatostatin/G
+- FAIL pdf | C | 10.31491/apt.2026.06.227 | The microgram hypothesis: a translational dosing error in Epitalon peptide resea | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1134/s2079086421040046 | The Use of Thymalin for Immunocorrection and Molecular Aspects of Biol
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.23937/2469-5750/1510048 | Natural or Synthetic Anti-Melanogenic Compounds That Block the PDGFR-E
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.31579/2640-1045/219 | Pineal and Coccygeal Glands with Some Functions Poorly Defined: Perspe
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.28933/ijoar-2018-12-0101 | Age-related circadian disturbances in melatonin causing changes in thy
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10522-023-10025-2 | “Development of gerontology would be more effective under governmental
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.36468/pharmaceutical-sciences.spl.492 | Melatonin’s Antioxidative Characteristic in Human Aging Retinal Pigmen
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.14200/rmd.2024.0002 | Exploring Peptides for Neurological Health & Longevity
+- FAIL pdf | C | 10.1007/s000180050257 | Growth hormone-releasing peptide (GHRP) | no OA PDF resolved
+- FAIL pdf | C | 10.1124/mol.109.056101 | Growth Hormone Secretagogues and Growth Hormone Releasing Peptides Act As Orthos | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/j.molmet.2019.09.010 | Glucagon-like peptide 1 (GLP-1)
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/en.2005-1357 | Des-Acyl Ghrelin Induces Food Intake by a Mechanism Independent of the
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1053/gast.2002.35954 | The role of the gastric afferent vagal nerve in ghrelin-induced feedin
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/er.2007-0036 | Growth Hormone, Insulin-Like Growth Factors, and the Skeleton
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/er.2004-0019 | Development of Growth Hormone Secretagogues
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1083/jcb.200207165 | Ghrelin and des-acyl ghrelin inhibit cell death in cardiomyocytes and
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/jcem.86.2.7190 | The Expression of the Growth Hormone Secretagogue Receptor Ligand Ghre
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/en.141.11.4255 | Ghrelin, a Novel Growth Hormone-Releasing Acylated Peptide, Is Synthes
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/mend.12.1.0051 | Structural Requirements for the Activation of the Human Growth Hormone
+- FAIL pdf | C | 10.18632/aging.204007 | Epitalon protects against post-ovulatory aging-related damage of mouse oocytes < | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jcem.84.4.5636 | Reactivation of Pituitary Hormone Release and Metabolic Improvement by Infusion  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.2337/db06-s020 | Glucagon-Like Peptide 1 Secretion by the L-Cell
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
+- FAIL pdf | C | 10.1210/mend.10.1.8838145 | Identification of a new G-protein-linked receptor for growth hormone secretagogu | no OA PDF resolved
+- FAIL pdf | C | 10.18632/aging.204007 | Epitalon protects against post-ovulatory aging-related damage of mouse oocytes i | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms23073607 | Peptides Regulating Proliferative Activity and Inflammatory Pathways in the Mono | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.00196.2004 | Anti-inflammatory effect of the ghrelin agonist growth hormone-releasing peptide | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1074/jbc.270.14.7882 | Glucose, Other Secretagogues, and Nerve Growth Factor Stimulate Mitoge
+- FAIL pdf | C | 10.25557/gm.2017.3.8493 | Pineal peptides and their role in ageing | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10522-010-9283-6 | Gerontology research in Georgia
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/ijms252111363 | Short Peptides Protect Fibroblast-Derived Induced Neurons from Age-Rel
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1186/s12903-025-05856-z | How short peptides interact with oral cells? A systematic review
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.2174/1876523800902010022 | Modulatory Effects of Cortexin and Cortagen on Locomotor Activity and
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4103/aja202570 | Phytochemical-based nanomedicine as a promising therapeutic strategy f
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40263-025-01246-9 | Multiple Sclerosis in Women: Impact of Different Life Stages on Treatm
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2024.1460033 | The multifaceted nature of diabetic erectile dysfunction: uncovering t
+- FAIL pdf | C | 10.31491/apt.2026.06.227 | The microgram hypothesis: a translational dosing error in Epitalon peptide resea | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.5772/35651 | The Functioning of “Aged” Heterochromatin
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.18008/1816-5095-2015-2-43-47 | ОТДАЛЁННЫЕ РЕЗУЛЬТАТЫ ЛЕЧЕНИЯ ДИСТРОФИЧЕСКИХ ЗАБОЛЕВАНИЙ СЕТЧАТКИ ПЕПТ
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/cimb47090739 | The Influence of Short Peptides on Cell Senescence and Neuronal Differ
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10522-023-10025-2 | “Development of gerontology would be more effective under governmental
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.31579/2640-1045/219 | Pineal and Coccygeal Glands with Some Functions Poorly Defined: Perspe
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/cti2.1443 | Naturally derived cytokine peptides limit virus replication and severe
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2011/928165 | Pharmacological treatment of obesity in children and adolescents: pres
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and future drug targets in weight management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s12967-015-0762-z | Insulin-like growth factor-1 deficiency and metabolic syndrome
+- FAIL pdf | C | 10.3390/biom12101407 | Ligands for Melanocortin Receptors: Beyond Melanocyte-Stimulating Hormones and A | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/jcm11226723 | Sexual Health after a Breast Cancer Diagnosis: Addressing a Forgotten
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms241512152 | Melanocortin 1 Receptor (MC1R): Pharmacological and Therapeutic Aspect
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.5534/wjmh.200007 | Novel Emerging Therapies for Erectile Dysfunction
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/brainsci13050802 | Erectile Dysfunction: Treatments, Advances and New Therapeutic Strateg
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.12688/f1000research.7885.1 | Advances in the treatment of erectile dysfunction: what's new and upco
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.21037/tau.2016.11.17 | Research in pharmacotherapy for erectile dysfunction
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s11606-020-05890-3 | Abstracts from the 2020 Annual Meeting of the Society of General Inter
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC7167823 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.mayocp.2017.11.002 | The International Society for the Study of Women's Sexual Health Proce
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.jsxm.2016.01.007 | Endocrinologic Control of Men’s Sexual Desire and Arousal/Erection
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/j.1755-5949.2010.00154.x | Dopamine and Oxytocin Interactions Underlying Behaviors: Potential Con
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/jcm11226723 | Sexual Health after a Breast Cancer Diagnosis: Addressing a Forgotten
+- FAIL pdf | C | 10.1038/oby.2006.294 | Potential Role of New Therapies in Modifying Cardiovascular Risk in Overweight P | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and Future Drug Targets in Weight Management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/cti2.1443 | Naturally derived cytokine peptides limit virus replication and severe
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1093/infdis/jiad566 | Harnessing Endogenous Peptide Compounds as Potential Therapeutics for
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ph3010125 | Approved and Off-Label Uses of Obesity Medications, and Potential New
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.61186/cmja.12.4.13 | The Effect of 8 Weeks High-Intensity Interval Training and Portulaca O
+- FAIL pdf | C | 10.1016/j.neuropharm.2025.110299 | Female Syrian hamster analyses of bremelanotide, a US FDA approved drug for the  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/ijwh.s83747 | Female sexual dysfunction: a focus on flibanserin
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2017.06.015 | Evaluation of a melanocortin-4 receptor (MC4R) agonist (Setmelanotide)
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/toxics13010025 | Volumetric Absorptive Microsampling in Toxicology
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2011/928165 | Pharmacological treatment of obesity in children and adolescents: pres
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ph3010125 | Approved and Off-Label Uses of Obesity Medications, and Potential New
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and future drug targets in weight management
+- FAIL pdf | C | 10.22237/crp/1622161200 | There is insufficient evidence to recommend bremelanotide for hypoactive sexual  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2021.101206 | The melanocortin pathway and energy homeostasis: From discovery to obe
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1039/d1cb00154j | Cyclic peptide drugs approved in the last two decades (2001–2021)
+- FAIL pdf | C | 10.1038/oby.2006.294 | Potential Role of New Therapies in Modifying Cardiovascular Risk in Overweight P | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2011/928165 | Pharmacological Treatment of Obesity in Children and Adolescents: Pres
+- FAIL pdf | C | 10.4103/2347-2618.137568 | Pharmacological management of obesity: Past, present and future | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s12967-015-0762-z | Insulin-like growth factor-1 deficiency and metabolic syndrome
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ph3010125 | Approved and Off-Label Uses of Obesity Medications, and Potential New
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.anpedi.2011.03.018 | Obesidades pediátricas: de la lactancia a la adolescencia
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and Future Drug Targets in Weight Management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1677/jme.0.0250287 | Molecular and cellular actions of a structural domain of human growth
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.14943/doctoral.k13325 | Anti-obesity study of Indonesian medicinal plants : an in vitro study
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.21203/rs.3.rs-885615/v1 | Evaluation of Indonesian Anti-obesity Traditional Medicinal Plants: A
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/cti2.1443 | Naturally derived cytokine peptides limit virus replication and severe
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1093/infdis/jiad566 | Harnessing Endogenous Peptide Compounds as Potential Therapeutics for
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.22038/ajp.2024.23734 | The comparison of the effects of nano-silymarin and silymarin on high-
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/toxics13010025 | Volumetric Absorptive Microsampling in Toxicology
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.61186/cmja.12.4.13 | The Effect of 8 Weeks High-Intensity Interval Training and Portulaca O
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s40842-018-0068-1 | Growth hormone: isoforms, clinical aspects and assays interference
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11102-021-01191-y | Mice with gene alterations in the GH and IGF family
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2020.00033 | Growth Hormone(s), Testosterone, Insulin-Like Growth Factors, and Cort
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2020/3491764 | Lipoprotein(a) the Insurgent: A New Insight into the Structure, Functi
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.mce.2012.02.009 | Differential placental expression profile of human Growth Hormone/Chor
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/med.21789 | Adipose-derived stromal cells for nonhealing wounds: Emerging opportun
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC12507378 | Poster Presentation
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.2174/157340313805076322 | Obesity pharmacotherapy: current perspectives and future directions
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-017-4350-z | 53 &lt;sup&gt;rd&lt;/sup&gt; EASD Annual Meeting of the European Assoc
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.jbiotec.2005.02.016 | Optimising two-dye microarray designs for estimating associations with
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7163937 | Poster Sessions
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-008-1203-9 | Diet, delusion and diabetes
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-005-1907-z | Abstracts of the 41st Annual Meeting of the EASD (European Association
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-013-3012-z | Abstracts of the 49th EASD (European Association for the Study of Diab
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7164111 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s40635-017-0151-4 | ESICM LIVES 2017 : 30th ESICM Annual Congress. September 23-27, 2017
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7163973 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1083/jcb.70.2.261 | Membrane receptors for hormones and neurotransmitters
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7101945 | Abstracts of the 9th Congress of the International Pediatric Nephrolog
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7104462 | Abstracts
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00431-006-0349-z | European Academy of Paediatrics, Barcelona, Spain, October 7-10, 2006.
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1210/er.2007-0017 | What Can We Learn from Rodents about Prolactin in Humans?
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3168/jds.s0022-0302(87)80028-0 | Physiology of the Somatotropic Axis with Particular Reference to the R
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2020.00033 | Growth Hormone(s), Testosterone, Insulin-Like Growth Factors, and Cort
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3892/br.2017.930 | Human placental growth hormone in normal and abnormal fetal growth
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.apsb.2021.04.001 | Oral delivery of proteins and peptides: Challenges, status quo and fut
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1210/clinem/dgz149 | Long-Acting Growth Hormone Preparations – Current Status and Future Co
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s40842-018-0068-1 | Growth hormone: isoforms, clinical aspects and assays interference
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1039/c8mt00221e | Metal-dependent hormone function: the emerging interdisciplinary field
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11102-021-01191-y | Mice with gene alterations in the GH and IGF family
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1038/srep43537 | Adipokines (Leptin, Adiponectin, Resistin) Differentially Regulate All
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/agriculture13050974 | Challenges of Pasture Feeding Systems—Opportunities and Constraints
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s42269-019-0238-z | Physiological process of fat loss
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1210/en.141.3.910 | Differential Cloning of Growth Hormone-Regulated Hepatic Transcripts i
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ijms252212195 | Oxidative Stress and Placental Pathogenesis: A Contemporary Overview o
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1515/ntrev-2021-0115 | Approved and marketed nanoparticles for disease targeting and applicat
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s13167-023-00329-1 | Growth hormone proteoformics atlas created to promote predictive, prev
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2025.1584303 | Secretion of placental peptide hormones: functions and trafficking
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1152/physrev.00057.2024 | Proglucagon-derived peptides: human physiology and therapeutic potenti
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.26420/austinjwomenshealth.2019.1034 | Skin Aging and Modern Age Anti-Aging Strategies
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.18276/ab.2017.24-10 | Growth hormone and growth hormone gene of the American mink (Neovison
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.33745/ijzi.2023.v09i02.001 | Neuro-Endocrinology of Amphibians and Reptiles: An Overview
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fneur.2026.1709559 | Insulin-like growth factor 1 associated research in Alzheimer's diseas
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- FAIL pdf | C | 10.1210/jcemcr/luae148 | Reversible Gynecomastia and Hypogonadism Due to Usage of Commercial Performance- | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1177/1098612x251379924 | Capromorelin promotes weight gain in cats with unintended weight loss:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.7759/cureus.52011 | Social Interest Data as a Proxy for Off-Label Performance-Enhancing Dr
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3803/enm.2021.1081 | Receptor-Mediated Muscle Homeostasis as a Target for Sarcopenia Therap
+- FAIL pdf | C | 10.3349/ymj.2018.59.10.1174 | Effect of the Orally Active Growth Hormone Secretagogue MK-677 on Somatic Growth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/dta.3835 | Annual Banned-Substance Review 17th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13539-014-0159-5 | Anamorelin HCl (ONO-7643), a novel ghrelin receptor agonist, for the t
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12603-011-0012-x | Progress in the development of new drugs in Alzheimer's disease
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4103/0019-5545.44900 | The prevention and treatment of cognitive decline and dementia: An ove
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.arr.2018.07.004 | Towards frailty biomarkers: Candidates from genes and pathways regulat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/jvp.12344 | Capromorelin increases food consumption, body weight, growth hormone,
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- FAIL pdf | C | 10.1113/ep090741 | LGD‐4033 and MK‐677 use impacts body composition, circulating biomarkers, and sk | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.3252 | Equine metabolism of the growth hormone secretagogue MK‐0677 in vitro and in uri | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1159/000475732 | Ghrelin and Growth
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/gerona/glad022 | Growth Hormone Secretagogues as Potential Therapeutic Agents to Restor
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/clinem/dgaf010 | Loss-of-Function GHSR Variants Are Associated With Short Stature and L
+- FAIL pdf | C | 10.1210/jendso/bvab096 | Treatment of Pediatric Growth Hormone Deficiency With Oral Secretagogues Revisit | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2478/jtim-2022-0033 | Binding domain characterization of growth hormone secretagogue recepto
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.biopha.2020.110721 | New understanding of the pathogenesis and treatment of stroke-related
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2174/1874216501206010068 | The Involvement of the GH/IGF-I Axis in Cognitive Functions of Adult P
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab029 | Corroboration of Height Velocity Prediction Markers for rhGH With an O
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/endrev/bnae011 | Relative Energy Deficiency in Sport (REDs): Endocrine Manifestations,
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3803/enm.2021.1081 | Receptor-Mediated Muscle Homeostasis as a Target for Sarcopenia Therap
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1590/s0004-27302008000500003 | Ghrelina e secretagogos do hormônio de crescimento (GHS): modulação da
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- FAIL pdf | C | 10.22541/au.159050681.10910720 | MAJOR APPROACHES THE USE OF GH SECRETAGOGUE (MK-677) FOR MUSCLE MASS GAIN IN ELD | no OA PDF resolved
+- FAIL pdf | C | PMC12545285 | SUN-658 Ibutamoren Mesylate, an Oral Growth Hormone (GH) Secretagogue, Modifies  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.21037/atm-2025-1-184 | Development of pharmacological interventions for the treatment of sarc
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5114/pedm.2025.158544 | New directions in growth hormone treatment in children | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1080/15502783.2022.2056381 | Proceedings of the Eighteenth International Society of Sports Nutritio
+- FAIL pdf | C | 10.3349/ymj.2018.59.10.1174 | Effect of the Orally Active Growth Hormone Secretagogue MK-677 on Somatic Growth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4235/agmr.2018.22.2.52 | Current Status of Sarcopenia in Korea: A Focus on Korean Geripausal Wo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/jvp.12344 | Capromorelin increases food consumption, body weight, growth hormone,
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.arr.2018.07.004 | Towards frailty biomarkers: Candidates from genes and pathways regulat
+- FAIL pdf | C | 10.1113/ep090741 | LGD‐4033 and MK‐677 use impacts body composition, circulating biomarkers, and sk | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12891-023-06512-9 | Post-surgery interventions for hip fracture: a systematic review of ra
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.biopha.2020.110721 | New understanding of the pathogenesis and treatment of stroke-related
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/gerona/glad022 | Growth Hormone Secretagogues as Potential Therapeutic Agents to Restor
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13539-014-0149-7 | Are we closer to having drugs to treat muscle wasting disease?
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00223-019-00561-w | Is There Enough Evidence for Osteosarcopenic Obesity as a Distinct Ent
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s11912-025-01718-7 | Host-related Determinants of Response to Immunotherapy in Non-small Ce
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00198-023-06922-4 | Evaluation of mobility recovery after hip fracture: a scoping review o
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pharmrev.123.001087 | Steatotic Liver Disease: Pathophysiology and Emerging Pharmacotherapie
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/jcm15020541 | Pharmacologic Treatments for the Preservation of Lean Body Mass During
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms19061800 | MK-0677, a Ghrelin Agonist, Alleviates Amyloid Beta-Related Pathology
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4235/agmr.2018.22.2.52 | Current Status of Sarcopenia in Korea: A Focus on Korean Geripausal Wo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2174/1874216501206010068 | The Involvement of the GH/IGF-I Axis in Cognitive Functions of Adult P
+- FAIL pdf | C | 10.1002/dta.3252 | Equine metabolism of the growth hormone secretagogue MK‐0677 in vitro and in uri | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/endrev/bnae011 | Relative Energy Deficiency in Sport (REDs): Endocrine Manifestations,
+- FAIL pdf | C | 10.1210/jendso/bvaf149.168 | SUN-658 Ibutamoren Mesylate, an Oral Growth Hormone (GH) Secretagogue, Modifies  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3803/enm.2025.2656 | Sarcopenia and Muscle Aging: Updated Insights into Molecular Mechanism
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s40520-025-03119-z | World Congress on Osteoporosis, Osteoarthritis and Musculoskeletal Dis
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1159/000552071 | 33rd European Congress on Obesity (ECO 2026) - Late Breaking Abstracts
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/jox13020017 | Systematic Review of Safety of Selective Androgen Receptor Modulators
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.molmet.2025.102118 | Glucose-dependent insulinotropic polypeptide (GIP)
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/eci.70059 | Bridging the gap in obesity research: A consensus statement from the E
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC13254489 | Publication Only
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41392-024-01823-2 | Tumor biomarkers for diagnosis, prognosis and targeted therapy
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1080/15502783.2022.2056381 | Proceedings of the Eighteenth International Society of Sports Nutritio
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC12163242 | Publication Only
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/ene.70629 | ePoster
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/cas.70254 | Abstracts of the 84&lt;sup&gt;th&lt;/sup&gt; Annual Meeting of the Jap
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41392-023-01464-x | TRP (transient receptor potential) ion channel family: structures, bio
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4093/dmj.2025.0469 | 2025 Clinical Practice Guidelines for Diabetes Management in Korea: Re
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12919-021-00227-2 | Novelties in Sport Sciences : Novi Sad, Serbia. 11 September 2021
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41392-023-01589-z | Recent advances in targeting the "undruggable" proteins: from drug dis
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC10800223 | 2023 ACVIM Forum Research Abstract Program
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1155/2012/127362 | Sarcopenia and age-related endocrine function
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.9758/cpn.2016.14.3.238 | Effects of Antipsychotics on Bone Mineral Density in Patients with Sch
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4248/br201301005 | Bone Remodeling and Energy Metabolism: New Perspectives
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/ajcn/82.5.923 | Obesity in older adults: technical review and position statement of th
+- FAIL pdf | C | 10.1210/me.2005-0059 | Nonpeptide and Peptide Growth Hormone Secretagogues Act Both as Ghrelin Receptor | no OA PDF resolved
+- FAIL pdf | C | 10.1113/ep090741 | LGD‐4033 and MK‐677 use impacts body composition, circulating biomarkers, and sk | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/nu13124499 | Exercise and Nutrition Impact on Osteoporosis and Sarcopenia—The Incid
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/ejcn.2013.116 | Beyond weight loss: a review of the therapeutic uses of very-low-carbo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/er.2004-0019 | Development of Growth Hormone Secretagogues
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.yfrne.2010.06.002 | Leptin in human physiology and therapeutics
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/1475-2891-10-9 | Weight Science: Evaluating the Evidence for a Paradigm Shift
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1017/s095442241000034x | Associations between dairy consumption and body weight: a review of th
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jc.2009-2631 | Congenital Adrenal Hyperplasia Due to Steroid 21-Hydroxylase Deficienc
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/wps.20204 | Effects of antipsychotics, antidepressants and mood stabilizers on ris
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s13098-024-01412-x | The multiple actions of dipeptidyl peptidase 4 (DPP-4) and its pharmac
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41573-019-0019-2 | AMP-activated protein kinase: the current landscape for drug developme
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2023.1161521 | Obesity and type 2 diabetes mellitus: connections in epidemiology, pat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/1743-8977-10-15 | Titanium dioxide nanoparticles: a review of current toxicological data
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1530/joe-16-0211 | Adipose tissue in control of metabolism
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/me.2005-0084 | Ghrelin Amplifies Dopamine Signaling by Cross Talk Involving Formation
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jc.2004-1069 | Ghrelin Stimulates, Whereas Des-Octanoyl Ghrelin Inhibits, Glucose Out
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1017/s0029665115002438 | The wasting continuum in heart failure: from sarcopenia to cachexia
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3109/09637486.2012.687366 | Wheat bran: its composition and benefits to health, a European perspec
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1042/bsr20181061 | Ghrelin, a gastrointestinal hormone, regulates energy balance and lipi
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/ndt/gft070 | Uraemic sarcopenia: aetiology and implications
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1053/gast.2002.35514 | AGA technical review on obesity
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5114/pedm.2025.158544 | New directions in growth hormone treatment in children | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.21037/atm-2025-1-184 | Development of pharmacological interventions for the treatment of sarc
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC10554400 | OR21-06 Growth Response Of Oral LUM-201 In OraGrowtH210 And OraGrowtH2
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1177/1098612x251379924 | Capromorelin promotes weight gain in cats with unintended weight loss:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- FAIL pdf | C | 10.1210/jcemcr/luae148 | Reversible Gynecomastia and Hypogonadism Due to Usage of Commercial Performance- | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC10911832 | Severe liver injury following use of RAD-140, a selective androgen rec
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab096 | Treatment of Pediatric Growth Hormone Deficiency With Oral Secretagogu
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab029 | Corroboration of Height Velocity Prediction Markers for rhGH With an O
+- FAIL pdf | C | PMC8265876 | LUM-201 Elicits Greater GH Response than Standard GH Secretagogues in Pediatric  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/prp2.1243 | Novel Pharmaceuticals in Appetite Regulation: Exploring emerging gut p
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1097/cm9.0000000000003629 | MASLD development: From molecular pathogenesis toward therapeutic stra
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.pccm.2024.02.003 | Understanding cachexia and its impact on lung cancer and beyond
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1021/acs.jmedchem.1c02191 | Advances in the Development of Nonpeptide Small Molecules Targeting Gh
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1530/ec-22-0504 | Diagnosis and testing for growth hormone deficiency across the ages: a
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.7759/cureus.35094 | Selective Androgen Receptor Modulators (SARMs)-Induced Liver Injury: A
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ph14111084 | Towards Drug Repurposing in Cancer Cachexia: Potential Targets and Can
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- FAIL pdf | C | 10.1210/jendso/bvab096 | Treatment of Pediatric Growth Hormone Deficiency With Oral Secretagogues Revisit | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms20184361 | Growth Hormone Secretagogues and the Regulation of Calcium Signaling i
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab029 | Corroboration of Height Velocity Prediction Markers for rhGH With an O
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/gerona/glad022 | Growth Hormone Secretagogues as Potential Therapeutic Agents to Restor
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/mp.2013.135 | A ghrelin–growth hormone axis drives stress-induced vulnerability to e
+- FAIL pdf | C | 10.2337/cd21-0044 | Could Overt Diabetes Be Triggered by Abuse of Selective Androgen Receptor Modula | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1159/000475732 | Ghrelin and Growth
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.arr.2018.07.004 | Towards frailty biomarkers: Candidates from genes and pathways regulat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13539-014-0149-7 | Are we closer to having drugs to treat muscle wasting disease?
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00223-019-00561-w | Is There Enough Evidence for Osteosarcopenic Obesity as a Distinct Ent
+- FAIL pdf | C | 10.1002/dta.2991 | An in vitro assay approach to investigate the potential impact of different dopi | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.chroma.2019.04.050 | Development and validation of a semi-quantitative ultra-high performan
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/clinem/dgaf010 | Loss-of-Function GHSR Variants Are Associated With Short Stature and L
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4235/agmr.2018.22.2.52 | Current Status of Sarcopenia in Korea: A Focus on Korean Geripausal Wo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms23105380 | Role of the Ghrelin System in Colorectal Cancer
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/jvp.12344 | Capromorelin increases food consumption, body weight, growth hormone,
+- FAIL pdf | C | 10.3390/biom15091281 | Nicotinamide N-Methyltransferase in Cardiovascular Diseases: Metabolic Regulator | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/cancers16173085 | Biological Functions and Therapeutic Potential of NAD&lt;sup&gt;+&lt;/
+- FAIL pdf | C | 10.3390/biom15050719 | Nicotinamide N-Methyltransferase (NNMT) and Liver Cancer: From Metabolic Network | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2024.1410479 | Nicotinamide N-methyltransferase (NNMT): a novel therapeutic target fo
+- FAIL pdf | C | 10.1155/2021/9924314 | Roles of Nicotinamide N-Methyltransferase in Obesity and Type 2 Diabetes | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2024.1410479 | Nicotinamide N-methyltransferase (NNMT): a novel therapeutic target fo
+- FAIL pdf | C | 10.1155/2021/9924314 | Roles of Nicotinamide N‐Methyltransferase in Obesity and Type 2 Diabetes | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom15050719 | Nicotinamide N-Methyltransferase (NNMT) and Liver Cancer: From Metabolic Network | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/cancers16173085 | Biological Functions and Therapeutic Potential of NAD+ Metabolism in G
+- FAIL pdf | C | 10.3390/biom15091281 | Nicotinamide N-Methyltransferase in Cardiovascular Diseases: Metabolic Regulator | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/cancers15020466 | Chromatin and Cancer: Implications of Disrupted Chromatin Organization
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-024-66034-9 | Nicotinamide N-methyltransferase inhibition mimics and boosts exercise
+- FAIL pdf | C | 10.3390/biom15091281 | Nicotinamide N-Methyltransferase in Cardiovascular Diseases: Metabolic Regulator | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fendo.2026.1694542 | Thiamine transporter 2 and Janus kinase 2 inhibitor, fedratinib suppre
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-026-36534-x | Construction and initial validation of key gene network for progestero
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | PMC13300466 | Tryptophan Metabolism in Cardiometabolic Diseases: Focus on the Kynure
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2024.1410479 | Nicotinamide N-methyltransferase (NNMT): a novel therapeutic target fo
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1007/s10565-025-10106-7 | NAD + in fatty liver disease: mechanistic insights and associated targ
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/nu18101608 | Simulation Effect and Mechanism of High-Polymeric Persimmon Tannin on
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/ani15202950 | Effects of Dietary Crude Protein Level on Growth Performance, Carcass
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s12276-026-01687-2 | Metabolic oxidoreductases: central regulators of the epigenetic landsc
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fnut.2026.1769818 | Association between apolipoprotein E gene polymorphisms and the effect
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2024.1415310 | Inhibition of NNMT enhances drug sensitivity in lung cancer cells thro
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s44324-025-00067-0 | The role of NAD&lt;sup&gt;+&lt;/sup&gt; metabolism and its modulation
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-023-34916-z | Nicotinamide N-methyltransferase (NNMT) regulates the glucocorticoid s
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1002/fsn3.3939 | Ethyl acetate fraction of oregano seed protects non-alcoholic fatty li
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3892/mi.2026.310 | Osteopontin in pancreatic cancer: A systematic review
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/biomedicines11092560 | The Role of NAD<sup>+</sup> in Metabolic Regulation of Adipose Tissue:
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/biomedicines13081802 | Targeting the Opioid System in Cardiovascular Disease: Liver Proteomic
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1002/2056-4538.70101 | Oestrogen receptor phosphorylation profiles and in silico PAM50 subtyp
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1080/21655979.2022.2074768 | Effect of nicotinamide N-methyltransferase on lipid accumulation in 3T
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2025.1670032 | Wedelolactone, a natural coumestan with multiple pharmacological effec
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1172/jci.insight.164771 | The histone methyltransferase SUV420H2 regulates brown and beige adipo
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/cancers16030624 | Stem Cell Theory of Cancer: Clinical Implications for Cellular Metabol
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fimmu.2023.1238664 | Fat and inflammation: adipocyte-myeloid cell crosstalk in atherosclero
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.12865/chsj.51.01.04 | The Role of miRNAs and Epigenetic Factors in Non-Alcoholic Fatty Liver
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1186/s13046-023-02607-2 | GPX8 regulates clear cell renal cell carcinoma tumorigenesis through p
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/nature13198 | Nicotinamide N-methyltransferase knockdown protects against diet-induc
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41586-019-1173-8 | Proteomics reveals NNMT as a master metabolic regulator of cancer-asso
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-018-26882-8 | NNMT activation can contribute to the development of fatty liver disea
+- FAIL pdf | C | 10.1016/j.drudis.2021.05.011 | Nicotinamide N-methyl transferase (NNMT): An emerging therapeutic target | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-023-34916-z | Nicotinamide N-methyltransferase (NNMT) regulates the glucocorticoid s
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1101/gad.258350.115 | Loss of the RNA polymerase III repressor MAF1 confers obesity resistan
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2024.1410479 | Nicotinamide N-methyltransferase (NNMT): a novel therapeutic target fo
+- FAIL pdf | C | 10.19163/2307-9266-2024-12-4-295-308 | Psychotropic activity evaluation of bromantane — N-(camphan-2-yl)anilines new st | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.molmet.2021.101165 | Nicotinamide N-methyltransferase: At the crossroads between cellular metabolism  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1186/s13046-023-02607-2 | GPX8 regulates clear cell renal cell carcinoma tumorigenesis through p
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41392-020-00311-7 | NAD+ metabolism: pathophysiologic mechanisms and therapeutic potential
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-018-22081-7 | A small molecule inhibitor of Nicotinamide N-methyltransferase for the
+- FAIL pdf | C | 10.35333/jrp.2020.136 | The effect of 3,7-diazabicyclo[3.3.1]nonanescontaining monoterpenoid moieties on | no OA PDF resolved
+- FAIL pdf | C | 10.3390/metabo14060343 | Nicotinamide N-Methyltransferase (NNMT): A New Hope for Treating Aging and Age-R | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41419-022-04713-z | Complex roles of nicotinamide N-methyltransferase in cancer progressio
+- FAIL pdf | C | 10.1155/2021/9924314 | Roles of Nicotinamide N‐Methyltransferase in Obesity and Type 2 Diabetes | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1073/pnas.1721814115 | KDM4B protects against obesity and metabolic dysfunction
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.70033 | Annual Banned-Substance Review 18th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3835 | Annual Banned-Substance Review 17th Edition-Analytical Approaches in H
+- FAIL pdf | C | 10.1002/ansa.202200027 | Probing for peptidic drugs (2-10 kDa) in doping control blood samples | no OA PDF resolved
+- FAIL pdf | C | 10.1111/dom.15879 | Nicotinamide N‐methyltransferase inhibition mitigates obesity‐related metabolic  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/ijms20010026 | Oxyresveratrol Increases Energy Expenditure through Foxo3a-Mediated Uc
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/metabo14060344 | The Impact of Weight Cycling on Health and Obesity
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-021-85051-6 | Combined nicotinamide N-methyltransferase inhibition and reduced-calor
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s12276-023-01013-0 | Cancer-associated fibroblasts: from basic science to anticancer therap
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-017-09598-z | Antisense oligonucleotide and thyroid hormone conjugates for obesity t
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.18632/aging.205142 | Lipid reprogramming induced by the NNMT-ABCA1 axis enhanced membrane f
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41467-022-28749-z | Methionine adenosyltransferase 1a antisense oligonucleotides activate
+- FAIL pdf | C | 10.1016/j.ghir.2009.03.001 | Activation of the GH/IGF-1 axis by CJC-1295, a long-acting GHRH analog, results  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fvets.2026.1803699 | Effects of dietary black soldier fly larvae meal inclusion on the seru
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fphar.2026.1837046 | Tubulointerstitial inflammation and fibrosis induced by proteinuria: f
+- FAIL pdf | C | 10.1210/jc.2005-1536 | Prolonged Stimulation of Growth Hormone (GH) and Insulin-Like Growth Factor I Se | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone syntheti
+- FAIL pdf | C | 10.1073/pnas.0900977106 | Neuronal M 3 muscarinic acetylcholine receptors are essential for somatotroph pr | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1172/jci138540 | DNA damage and growth hormone hypersecretion in pituitary somatotroph
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.peptides.2021.170716 | Synthesis of potent antagonists of receptors for growth hormone-releas
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/elps.202200278 | Online large volume sample staking preconcentration and separation of
+- FAIL pdf | C | 10.3390/biom15091281 | Nicotinamide N-Methyltransferase in Cardiovascular Diseases: Metabolic Regulator | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s44324-025-00067-0 | The role of NAD&lt;sup&gt;+&lt;/sup&gt; metabolism and its modulation
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fimmu.2025.1572764 | The impact of the tumor microenvironment on macrophages
+- FAIL pdf | C | 10.1016/j.jbc.2025.108492 | Mechanism and kinetics of turnover inhibitors of nicotinamide N-methyl transfera | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-024-79567-w | A new chromatographic method for the determination of cysteine, glutat
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1101/2025.01.06.631437 | NNMT promotes tubular senescence and fibrosis in chronic kidney diseas
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/cancers16173085 | Biological Functions and Therapeutic Potential of NAD&lt;sup&gt;+&lt;/
+- FAIL pdf | C | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐1295 and oth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41598-017-09968-7 | Plasma biomarker proteins for detection of human growth hormone admini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2020.606089 | Growth Hormone and Neuronal Hemoglobin in the Brain—Roles in Neuroprot
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.1730 | Identification of the growth hormone‐releasing hormone analogue [Pro1,
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.17925/ee.2011.07.01.40 | Optimal Therapy of Growth Hormone Deficiency in the Child and Adolesce
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0090916 | Polymorphisms in the Insulin-Like Growth Factor Axis Are Associated wi
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/oby.2011.235 | Heterogeneity Among White Adipose Tissue Depots in Male C57BL/6J Mice
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.forsciint.2021.110771 | Analysis of pharmaceutical products and dietary supplements seized fro
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/jms.4996 | Chromatographic–mass spectrometric analysis of peptidic analytes (2–10
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s11357-010-9179-z | Plasma biomarkers of mouse aging
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1186/1472-6882-12-118 | Protective effect of the Japanese traditional medicine juzentaihoto on
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3199 | Annual banned‐substance review: Analytical approaches in human sports
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1590/s0004-27302008000500024 | Novas opções e preparações na terapia com hormônio de crescimento
+- FAIL pdf | C | 10.1136/jitc-2024-009281 | NAD<sup>+</sup> metabolism enzyme NNMT in cancer-associated fibroblasts drives t | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1002/med.22111 | The Quinoline Photoremovable Group (PPG) Platform-A Medicinal Chemist'
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1167/iovs.66.5.3 | Nicotinamide N-Methyltransferase in the Inflammatory Pathogenesis of G
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | PMC9537025 | Mass spectrometry-based approaches to explore metabolism regulating fe
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1021/acs.inorgchem.2c03903 | Selective, Disruptive Luminescent Ru(II) Polypyridyl Probes of G-Quadr
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC12545866 | SAT-014 ATAC sequencing analysis elucidates novel GHRH-Induced DNA Dam
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.70033 | Annual Banned-Substance Review 18th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1021/acsomega.2c05296 | Synthetic Peptides in Doping Control: A Powerful Tool for an Analytica
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/elps.70052 | Recent Developments in Capillary and Microchip Electroseparations of P
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41598-017-09968-7 | Plasma biomarker proteins for detection of human growth hormone admini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC6796240 | UEG Week 2018 Oral Presentations
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/bf03375463 | 40<sup>th</sup> EASD Annual Meeting of the European Association for th
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC7161867 | Abstracts of Poster Section C
+- FAIL pdf | C | 10.1155/2021/9924314 | Roles of Nicotinamide N-Methyltransferase in Obesity and Type 2 Diabetes | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s44318-023-00009-w | Control of NAD&lt;sup&gt;+&lt;/sup&gt; homeostasis by autophagic flux
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-021-85051-6 | Combined nicotinamide N-methyltransferase inhibition and reduced-calor
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-023-36548-9 | Simultaneous determination of 2-(3-hydroxy-5-phosphonooxymethyl-2-meth
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1016/j.apsb.2025.06.008 | FtsZ as a novel target for antibiotics development: Promises and chall
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3389/fmicb.2021.732796 | Targeting the Achilles Heel of FtsZ: The Interdomain Cleft
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/molecules25040973 | Higher Levels of Low Molecular Weight Sulfur Compounds and Homocystein
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/antiox12010202 | Potential Antioxidative Activity of Homocysteine in Erythrocytes under
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-024-66034-9 | Nicotinamide N-methyltransferase inhibition mimics and boosts exercise
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41586-019-1173-8 | Proteomics reveals NNMT as a master metabolic regulator of cancer-asso
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s41598-021-85051-6 | Combined nicotinamide N-methyltransferase inhibition and reduced-calor
+- FAIL pdf | C | 10.1210/jc.2005-1536 | Prolonged Stimulation of Growth Hormone (GH) and Insulin-Like Growth Factor I Se | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1093/gerona/glx143 | Trajectories of IGF-I Predict Mortality in Older Adults: The Cardiovas
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2022.1033479 | The mechanism and efficacy of GLP-1 receptor agonists in the treatment
+- FAIL pdf | C | 10.1080/01443615.2020.1854696 | Small molecule inhibitor of nicotinamide N-methyltransferase shows anti-prolifer | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/molecules24234253 | Glutathione Deficiency and Alterations in the Sulfur Amino Acid Homeos
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1042/bj3270747 | Tetramerization domain of human butyrylcholinesterase is at the C-term
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1002/elps.200800034 | Method for determination of total cysteamine in human plasma by high p
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1038/s44324-025-00067-0 | The role of NAD+ metabolism and its modulation of mitochondria in agin
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1016/j.pnsc.2008.06.004 | Progress in modifications and applications of fluorescent dye probe
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.18388/abp.2004_3564 | Plasma levels of total, free and protein bound thiols as well as sulfa
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.22358/jafs/67697/2003 | A highly efficient method for determination of some amino acids and gl
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1039/d0qo00387e | Recent developments in 1,6-addition reactions of para -quinone methide
+- FAIL pdf | C | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐1295 and oth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone syntheti
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0014205 | Reversal of Obesity and Insulin Resistance by a Non-Peptidic Glucagon-
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2020.606089 | Growth Hormone and Neuronal Hemoglobin in the Brain—Roles in Neuroprot
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/oby.2011.235 | Heterogeneity Among White Adipose Tissue Depots in Male C57BL/6J Mice
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0090916 | Polymorphisms in the Insulin-Like Growth Factor Axis Are Associated wi
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41598-017-09968-7 | Plasma biomarker proteins for detection of human growth hormone admini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.forsciint.2016.09.017 | The study of doping market: How to produce intelligence from Internet
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/life13020301 | The Role of Adiponectin during Pregnancy and Gestational Diabetes
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/cancers10120471 | Chemoresistance and the Self-Maintaining Tumor Microenvironment
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.17925/ee.2011.07.01.40 | Optimal Therapy of Growth Hormone Deficiency in the Child and Adolesce
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.2147/ijn.s217923 | Mesenchymal stem cell therapy assisted by nanotechnology: a possible c
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fonc.2022.869672 | Bax/Bcl-2 Cascade Is Regulated by the EGFR Pathway: Therapeutic Target
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1186/1687-9856-2014-9 | Proteomic analysis allows for early detection of potential markers of
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/app11083393 | Proteomics in Forensic Analysis: Applications for Human Samples
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/cells11061008 | MicroRNA as a Potential Therapeutic Molecule in Cancer
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jendso/bvac077 | Adult Growth Hormone Deficiency: Diagnostic and Treatment Journeys Fro
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.2162 | Challenges in detecting substances for equine anti‐doping
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.ensci.2026.100616 | The effect of growth hormone-releasing hormone on cognition and brain
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41419-026-08699-w | Growth hormone-releasing hormone attenuates amyloid deposition and neu
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/jcm15020541 | Pharmacologic Treatments for the Preservation of Lean Body Mass During
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fnmol.2025.1549366 | How the ghrelin receptor recognizes the acyl-modified orexigenic hormo
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/cimb47030192 | The Role of the Arcuate Nucleus in Regulating Hunger and Satiety in Pr
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2024.1456195 | Growth hormone/insulin-like growth factor I axis in health and disease
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1177/1098612x251380011 | Clinical therapeutics in feline medicine: updates for old and new drug
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms252313086 | The Aggravating Role of Failing Neuropeptide Networks in the Developme
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fimmu.2023.1108630 | Intrathymic somatotropic circuitry: consequences upon thymus involutio
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1089/neu.2022.0384 | Growth Hormone Deficiency Following Traumatic Brain Injury in Pediatri
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1177/1557988317718662 | Growth Hormone Secretagogue Treatment in Hypogonadal Men Raises Serum
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41392-019-0036-y | Targeting growth hormone function: strategies and therapeutic applicat
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/life16010104 | The Roles of the Membrane-Anchored Glycoprotein RECK in Animal Develop
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fcell.2021.630248 | A Balanced Act: The Effects of GH-GHR-IGF1 Axis on Mitochondrial Funct
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/molecules25051093 | Peptides from Natural or Rationally Designed Sources Can Be Used in Ov
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.12688/f1000research.12057.1 | Update on GH therapy in adults
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1042/bsr20181061 | Ghrelin, a gastrointestinal hormone, regulates energy balance and lipi
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2023.1087053 | Cell non-autonomous regulation of cerebrovascular aging processes by t
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms21228848 | Effect of Acute Sprint Exercise on Myokines and Food Intake Hormones i
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1124/pr.117.015388 | International Union of Basic and Clinical Pharmacology. CV. Somatostat
+- FAIL pdf | C | 10.3390/biom15091281 | Nicotinamide N-Methyltransferase in Cardiovascular Diseases: Metabolic Regulator | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/molecules23030607 | PET Imaging of Microglial Activation—Beyond Targeting TSPO
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/ph11010012 | Alpha-Secretase ADAM10 Regulation: Insights into Alzheimer’s Disease T
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1021/acsabm.4c01294 | Near-Infrared Visualization of NAD(P)H Dynamics in Live Cells and Dros
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.3390/s121115907 | Thiol Reactive Probes and Chemosensors
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.18388/abp.2010_2432 | Homocysteine and vitamin therapy in stroke prevention and treatment: a
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1016/j.jpha.2020.03.007 | Challenges for cysteamine stabilization, quantification, and biologica
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1021/jf903485k | Determination of Thiols in Yeast by HPLC Coupled with LTQ-Orbitrap Mas
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1042/bj20021862 | Acetylcholinesterase active centre and gorge conformations analysed by
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.18388/abp.2004_3550 | Kinetics and specificity of guinea pig liver aldehyde oxidase and bovi
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1021/acsabm.4c01345 | Deep-Red and Near-Infrared Compact Cyanine Dyes for Sensitive NAD(P)H
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/er.2004-0019 | Development of Growth Hormone Secretagogues
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1093/annonc/12.suppl_2.s89 | Ectopic secretion of growth hormone-releasing hormone (GHRH) in neuroe
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3109/07853899808999399 | Orally active growth hormone secretagogues: state of the art and clini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.138.11.4552 | Hypothalamic Growth Hormone Secretagogue-Receptor (GHS-R) Expression I
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/endo.138.4.5065 | Activation of the Hypothalamo-Pituitary-Adrenal Axis by the Growth Hor
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1177/153537020122601102 | Peripheral Signals Conveying Metabolic Information to the Brain: Short
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.molmet.2019.09.010 | Glucagon-like peptide 1 (GLP-1)
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/edrv.22.6.0451 | Dopamine as a Prolactin (PRL) Inhibitor
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1046/j.1365-2265.1999.00753.x | Can GHRH or GH secretagogues re‐initiate pituitary GH pulsatility?
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.2741/1033 | Biochemical regulation of non-rapid-eye-movement sleep
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1155/2013/518909 | Structure and Physiological Actions of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.2019-00111 | Actions and Potential Therapeutic Applications of Growth Hormone–Relea
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/er.2018-00216 | Growth Hormone Deficiency: Health and Longevity
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.7860/jcdr/2014/9863.4767 | Ghrelin: Ghrelin as a Regulatory Peptide in Growth Hormone Secretion
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0009159 | Ghrelin Stimulation of Growth Hormone-Releasing Hormone Neurons Is Dir
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1172/jci118516 | Endogenous growth hormone (GH)-releasing hormone is required for GH re
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.2008-1482 | Use of the Metallothionein Promoter-Human Growth Hormone-Releasing Hor
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1172/jci119587 | Simultaneous stimulation of slow-wave sleep and growth hormone secreti
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/er.2011-1035 | Growth Hormone Doping in Sports: A Critical Review of Use and Detectio
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s11154-024-09930-9 | GHRH in diabetes and metabolism
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1079/bjn20061787 | Ghrelin: a hormone regulating food intake and energy homeostasis
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1677/joe.1.05883 | Hypothalamic hormones a.k.a. hypothalamic releasing factors
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1677/joe.0.1630269 | Effect of GHRH and peptides from the vasoactive intestinal peptide fam
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone syntheti
+- FAIL pdf | A | 10.1002/vms3.71042 | Cryptosporidium spp. infections in Tunisia: Epidemiology and public health impli | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ghir.2009.03.001 | Activation of the GH/IGF-1 axis by CJC-1295, a long acting GHRH analog, results  | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.00201.2006 | Once-daily administration of CJC-1295, a long-acting growth hormone-releasing ho | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/s1096-6374(12)60023-9 | OR03-4 Five months treatment with a long-acting GHRH analog improves c
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1021/acs.jmedchem.5c03408 | Peptidomimetic Long-Acting Growth Hormone-Releasing Hormone Agonists P
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.2004-1044 | Partial reversibility of growth hormone (GH) deficiency in the GH-rele
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jcem-66-1-16 | Treatment of acromegaly with the long-acting somatostatin analog SMS 2
+- FAIL pdf | C | 10.1210/jc.2005-1536 | Prolonged stimulation of growth hormone (GH) and insulin-like growth factor I se | no OA PDF resolved
+- FAIL pdf | B | 10.1210/jc.2006-1702 | Pulsatile secretion of growth hormone (GH) persists during continuous stimulatio | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1152/ajpregu.1997.273.4.r1484 | Changes in rat sleep after single and repeated injections of the long-
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/bf03349598 | Resistance to a long-acting somatostatin analog (SMS 201-995) reversed
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1089/dia.2018.0103 | The Clinical Impact of GLP-1 Receptor Agonists in Type 2 Diabetes: Foc
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/rcm.9337 | Characterization of Growth Hormone Secretagogue Small Molecule Ibutamo
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jcem.83.9.5088 | Long-acting lanreotide induces clinical and biochemical remission of a
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jcem.85.9.6824 | Long-acting peptidomimergic control of gigantism caused by pituitary a
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.2337/db24-1056 | Sustained Weight Loss With Combined LEAP2 and Semaglutide Treatment in
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s11102-007-0019-9 | Ectopic growth hormone-releasing hormone secretion by a metastatic bro
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1152/ajpendo.00203.2005 | Effects of long-term treatment with growth hormone-releasing peptide-2
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.2337/db24-897-p | 897-P: Insulin-Sensitizing Effects of Efruxifermin Improve Glycemic Co
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/genes14071455 | Nutrient-Sensing Ghrelin Receptor in Macrophages Modulates Bisphenol A
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jcem-68-2-239 | Effects of the somatostatin analog BIM 23014 on the secretion of growt
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/rp.56.1.377 | Glucagon-like peptide-1
+- FAIL pdf | C | 10.3205/dgkh000631 | Risk factors for co-infections of helicobacter pylori and intestinal parasites:  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/brainsci11111487 | AngIV-Analog Dihexa Rescues Cognitive Impairment and Recovers Memory in the APP/ | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1021/acsomega.8b00595 | Structural Basis of Inhibition of Human Insulin-Regulated Aminopeptida
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1002/eji.201970400 | 17th International Congress of Immunology, 19-23 October 2019, Beijing
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1016/j.neubiorev.2018.05.005 | Cognitive benefits of angiotensin IV and angiotensin-(1–7): A systemat
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.112.199497 | Evaluation of Metabolically Stabilized Angiotensin IV Analogs as Proco
+- OFF-TOPIC | 15_health_maintenance/intestinal_parasites_humans | 10.1371/journal.pone.0351741 | Association between increased duodenal eosinophil count and functional
+- FAIL pdf | C | 10.3390/brainsci11111487 | AngIV-Analog Dihexa Rescues Cognitive Impairment and Recovers Memory in the APP/ | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer’s and Parkinson’s Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1021/acsomega.8b00595 | Structural Basis of Inhibition of Human Insulin-Regulated Aminopeptida
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.2147/jir.s401385 | Diminazene Ameliorates Neuroinflammation by Suppression of Astrocytic
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.54014/ad6f-r6vs | The role of glucose transporter 4 during cognitive enhancement by Angi
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.11648/j.ajpn.20150305.11 | The Development of Small Molecule Angiotensin IV-Based Analogs to Trea
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.71097/ijsat.v17.i2.11342 | From Anti-Aging Medicine to Precision Healthspan Pharmacology: Evidenc
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.26420/annhematoloncol.2022.1388 | Brain RAS in CNS Diseases: Beneficial Effects of Small Molecule Agonis
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1101/2025.09.25.678537 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1177/2689288x251392851 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.12677/pi.2016.51001 | Research Progress for Relative Treatment Targets in Alzheimer’s Diseas
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer's and Parkinson's Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1002/eji.201970400 | 17th International Congress of Immunology, 19-23 October 2019, Beijing
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.112.199497 | Evaluation of Metabolically Stabilized Angiotensin IV Analogs as Proco
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer’s and Parkinson’s Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1021/acsomega.8b00595 | Structural Basis of Inhibition of Human Insulin-Regulated Aminopeptida
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- FAIL pdf | C | 10.3233/jhd-231507 | Effects of an Angiotensin IV Analog on 3-Nitropropionic Acid-Induced Huntington’ | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.11648/j.ajpn.20150305.11 | The Development of Small Molecule Angiotensin IV-Based Analogs to Trea
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.26420/annhematoloncol.2022.1388 | Brain RAS in CNS Diseases: Beneficial Effects of Small Molecule Agonis
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.71097/ijsat.v17.i2.11342 | From Anti-Aging Medicine to Precision Healthspan Pharmacology: Evidenc
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1186/s12967-026-08008-1 | Umbilical cord mesenchymal stromal cells-derived HGF inhibits STING-me
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1007/s13770-023-00559-4 | Regenerative Strategies in Treatment of Peripheral Nerve Injuries in D
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1002/eji.201970400 | 17th International Congress of Immunology, 19-23 October 2019, Beijing
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.112.199497 | Evaluation of Metabolically Stabilized Angiotensin IV Analogs as Proco
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer’s and Parkinson’s Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1007/s13770-023-00559-4 | Regenerative Strategies in Treatment of Peripheral Nerve Injuries in D
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1186/s13195-025-01694-x | Pathway-based network medicine identifies novel natural products for A
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.15789/1563-0625-2018-4-577-588 | INTRANASAL INHALATIONS OF BIOACTIVE FACTORS PRODUCED BY M2 MACROPHAGES
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/cells14151188 | Human-Induced Pluripotent Stem Cells (iPSCs) for Disease Modeling and
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.11648/j.ajpn.20150305.11 | The Development of Small Molecule Angiotensin IV-Based Analogs to Trea
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1177/2689288x251392851 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1101/2025.09.25.678537 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.71097/ijsat.v17.i2.11342 | From Anti-Aging Medicine to Precision Healthspan Pharmacology: Evidenc
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.26420/annhematoloncol.2022.1388 | Brain RAS in CNS Diseases: Beneficial Effects of Small Molecule Agonis
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fcell.2025.1715009 | Molecular communication from bone to skeletal muscle: an overview
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms27052185 | Research Progress on Dance Training as a Mechanical Stimulus for the P
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/j.afos.2025.06.004 | Sclerostin's role in bone-muscle crosstalk and osteoporosis pathogenes
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1097/js9.0000000000004694 | The interrelationship between prostate cancer and osteoporosis: new pe
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1007/s12013-026-02024-0 | Understanding Intracellular Transport Impairments in Maternal Protein
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fphar.2026.1786112 | Mechanisms of active metabolites from traditional Chinese medicine in
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fphys.2022.954948 | Sheep recombinant IGF-1 promotes organ-specific growth in fetal sheep
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1002/jcsm.70115 | Slo1 Deficient Myoblast Exosomes-Derived miR-222-3p Inhibits Osteogeni
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1007/s42000-025-00699-3 | The association between body mass index and total lumbar bone mineral
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ph17121697 | Osteoporosis: Causes, Mechanisms, Treatment and Prevention: Role of Di
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms26199268 | Rheumatoid Arthritis and Osteoporosis as Prototypes of Immunosenescenc
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/biomedicines12081635 | Mechanistic Insights and Therapeutic Strategies in Osteoporosis: A Com
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fendo.2025.1684658 | G-protein coupled receptors synergy in bone health: new avenues for os
+- FAIL pdf | C | 10.1016/j.parepi.2026.e00508 | Prevalence and associated factors of intestinal parasitic infections in the scho | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms24032370 | In Vitro and In Vivo Effects of IGF-1 Delivery Strategies on Tendon Healing: A R | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s40779-024-00540-9 | Bone-organ axes: bidirectional crosstalk
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/j.aninu.2025.06.004 | Effects of the α-ketoglutaric acid on the performance, hair follicle d
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s13018-025-05890-1 | Optimal resistance training parameters for improving bone mineral dens
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/biom15071043 | β-Catenin: A Key Molecule in Osteoblast Differentiation
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/cells13050406 | PTH and the Regulation of Mesenchymal Cells within the Bone Marrow Nic
+- FAIL pdf | C | 10.3390/ijerph23050553 | Impact of Community-Based Health Education and Sanitation Interventions on &lt;i | no OA PDF resolved
+- FAIL pdf | C | 10.1210/endrev/bnad008 | Signaling Pathways of the Insulin-like Growth Factor Binding Proteins | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu15173854 | Recent Advances in Nutraceuticals for the Treatment of Sarcopenic Obes
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/pharmaceutics17081088 | Integrating Graphene Oxide and Mesenchymal Stem Cells in 3D-Printed Sy
+- FAIL pdf | C | 10.3390/biom11020217 | Insulin-Like Growth Factor-1 (IGF-1) and Its Monitoring in Medical Diagnostic an | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fphys.2022.954948 | Sheep recombinant IGF-1 promotes organ-specific growth in fetal sheep
+- FAIL pdf | C | 10.1038/jid.2012.228 | Insulin-Like Growth Factor-1 Promotes Wound Healing in Estrogen-Deprived Mice: N | no OA PDF resolved
+- FAIL pdf | C | 10.1210/en.2005-0714 | The Local Expression and Abundance of Insulin-Like Growth Factor (IGF) Binding P | no OA PDF resolved
+- FAIL pdf | C | 10.1111/pim.70080 | A Scoping Review of the Associations Between Ascariasis, Helicobacter pylori Inf | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms24032370 | In Vitro and In Vivo Effects of IGF-1 Delivery Strategies on Tendon Healing: A R | no OA PDF resolved
+- FAIL pdf | A | 10.3390/ijms27114957 | The Hidden Link Between Intestinal Helminthiasis, Gut Microbiome Alterations, an | no OA PDF resolved
+- FAIL pdf | C | 10.1530/jme-17-0298 | 40 YEARS OF IGF1: Insulin-like growth factors: actions on the skeleton | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1677/joe-07-0556 | Enhancement of maternal lactation performance during prolonged lactati
+- FAIL pdf | C | 10.3390/microorganisms14061250 | Infectious Risks Associated with Biologic Therapies in Autoimmune, Rheumatologic | no OA PDF resolved
+- FAIL pdf | C | 10.1042/bj3010769 | Effects of insulin and insulin-like growth factors on protein and energy metabol | no OA PDF resolved
+- FAIL pdf | C | 10.2527/jas.2015-0178 | Active G protein–coupled receptors (GPCR), matrix metalloproteinases 2/9 (MMP2/9 | no OA PDF resolved
+- FAIL pdf | C | 10.1017/s2040174423000090 | Attenuated glucose-stimulated insulin secretion during an acute IGF-1 LR3 infusi | no OA PDF resolved
+- FAIL pdf | C | 10.1530/joe-24-0058 | IGF-1 infusion increases growth in fetal sheep when euinsulinemia is maintained | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fendo.2014.00246 | New Insights into Wnt–Lrp5/6–β-Catenin Signaling in Mechanotransductio
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1017/s2040174425100111 | Fetal programming under maternal heat stress: a focus on skeletal musc
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3109/10826084.2015.1082595 | Netnography of Female Use of the Synthetic Growth Hormone CJC-1295: Pu
+- FAIL pdf | C | 10.1093/ps/80.7.944 | The Effect of Insulin-Like Growth Factor Analogs on Turkey Satellite Cell and Em | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/foods13060919 | Zein-Derived Peptides from Corn Promote the Proliferation of C2C12 Myo
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1113/jp290141 | Oxygen and glucose supplementation increases rates of linear growth an
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1210/en.141.3.910 | Differential Cloning of Growth Hormone-Regulated Hepatic Transcripts i
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.36837/chapman.000208 | Synovial Fibrosis in Osteoarthritis of the Knee: Mechanism of Developm
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.33545/27077012.2025.v6.i2a.330 | Controversial supplements and emerging doping alternatives in sports:
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | PMC13297092 | Potential Influence of Myokines on Skeletal Muscle Tissue Hypertrophy
+- FAIL pdf | C | 10.1210/clinem/dgag031 | Clinical spectrum of extreme insulin resistance syndromes treated with rhIGF-1:  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1002/dmrr.70167 | Intersecting Molecular Pathways in Cardiovascular Disease and Diabetes
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1515/jtim-2026-0043 | Inflammation, metabolism, and aging in heart failure with preserved ej
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18111720 | Immunometabolic Organ Crosstalk in Heart Failure with Preserved Ejecti
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1038/s41387-026-00431-z | Interplay between sarcopenia and type 2 diabetes: mechanisms, implicat
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | PMC13297320 | Sirtuins in Medicine: Multifaceted Roles in Physiological Processes an
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/j.molmet.2026.102353 | Fibroblast growth factor 23: Regulation, signalling and systemic links
+- FAIL pdf | C | 10.1016/j.parepi.2026.e00491 | Parasite burden: Prevalence and risk factors in Ko-ae, Ubon Ratchathani, Thailan | no OA PDF resolved
+- FAIL pdf | C | 10.3201/eid3114.241793 | Postinfectious Syndromes and Long-Term Sequelae after Giardia Infections | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms27062761 | Left Ventricular and Right Ventricular Hypertrophy Modelling to Study PAPP-A-Med | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/j.ekir.2026.106592 | Beyond eGFR and Albuminuria: Biological Pathways and Multiomics in Car
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1210/clinem/dgag114 | Acromegaly complications: an update
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms27114814 | Molecular Mechanisms and Multi-Omics Integration in Heart Failure: Fro
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1002/open.70230 | Epoxy Clerodane Diterpene Attenuates the Differentiated Adipocyte Hype
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | PMC13296698 | Across Clinical Profiles of Cardiorenal–Metabolic (CKM) Syndrome: A Ph
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fendo.2026.1598164 | Hepatokines and polycystic ovary syndrome: investigating the connectio
+- FAIL pdf | C | 10.1210/clinem/dgag189 | Acromegaly diagnosis | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1161/jaha.125.047539 | Structural and Functional Abnormalities in the Preterm Heart: From Dev
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/medicina62050875 | The Contribution of Ultrasound and Doppler Studies on Impaired Intraut
+- FAIL pdf | C | 10.3390/ijms27125250 | Precision Cardiogenomics in Athletes | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s12986-026-01123-2 | Molecular and cellular mechanisms of muscle-adipose tissue crosstalk d
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.21037/tgh-2025-151 | Enhancing future liver remnant hypertrophy: innovative preoperative st
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fragi.2026.1800288 | Integrating evolutionary theory into a framework for the mechanistic e
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | PMC13297222 | AMPK Signalling in Heart Failure: From Metabolic Sensor to Context-Dep
+- FAIL pdf | C | 10.1210/er.2007-0036 | Growth Hormone, Insulin-Like Growth Factors, and the Skeleton | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1210/er.2003-0027 | Vascular Endothelial Growth Factor: Basic Science and Clinical Progres
+- FAIL pdf | C | 10.3390/microorganisms14010062 | First Assessment of Risk Factors for <i>Giardia</i> spp. Infection in Hospitaliz | no OA PDF resolved
+- FAIL pdf | A | 10.1159/000452150 | Guidelines for Growth Hormone and Insulin-Like Growth Factor-I Treatment in Chil | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1172/jci29126 | Adiponectin and adiponectin receptors in insulin resistance, diabetes,
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s12933-018-0762-4 | Association between insulin resistance and the development of cardiova
+- FAIL pdf | C | 10.3390/tropicalmed11060157 | Rapid and Sensitive Detection of &lt;i&gt;Schistosoma mansoni&lt;/i&gt; in the I | no OA PDF resolved
+- FAIL pdf | C | 10.1210/er.2009-0010 | The Role of Liver-Derived Insulin-Like Growth Factor-I | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/s0008-6363(99)00017-6 | Electrophysiological remodeling in hypertrophy and heart failure
+- FAIL pdf | C | 10.3390/cells9091970 | Mechanisms of IGF-1-Mediated Regulation of Skeletal Muscle Hypertrophy and Atrop | no OA PDF resolved
+- FAIL pdf | C | 10.3390/tropicalmed11010020 | Imported Eosinophilia in Migrants from Endemic Areas in Spain | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1161/circulationaha.115.020406 | Shared Risk Factors in Cardiovascular Disease and Cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/j.biopha.2021.111315 | Adipose tissue and insulin resistance in obese
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1161/01.res.0000053618.86362.df | Myocyte Death, Growth, and Regeneration in Cardiac Hypertrophy and Fai
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1161/circresaha.107.165472 | Role of Mitochondrial Dysfunction in Insulin Resistance
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1172/jci34260 | Insulin sensitivity: modulation by nutrients and inflammation
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1172/jci36154 | MicroRNA-208a is a regulator of cardiac hypertrophy and conduction in
+- OFF-TOPIC | 15_health_maintenance/intestinal_parasites_humans | 10.1016/s0140-6736(18)32203-7 | Global, regional, and national age-sex-specific mortality for 282 caus
+- OFF-TOPIC | 15_health_maintenance/intestinal_parasites_humans | 10.1002/ijc.21731 | The global health burden of infection‐associated cancers in the year 2
+- OFF-TOPIC | 15_health_maintenance/intestinal_parasites_humans | 10.1503/cmaj.050342 | Malnutrition and health in developing countries
+- FAIL pdf | C | 10.3390/ijms22126434 | Insulin-Like Growth Factor 1 (IGF-1) Signaling in Glucose Metabolism in Colorect | no OA PDF resolved
+- FAIL pdf | C | 10.1161/01.res.83.5.516 | Regulation of Cardiomyocyte Apoptotic Signaling by Insulin-like Growth Factor I | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/intestinal_parasites_humans | 10.1017/s1368980008002401 | Worldwide prevalence of anaemia, WHO Vitamin and Mineral Nutrition Inf
+- FAIL pdf | C | 10.1155/2015/538019 | Insulin-Like Growth Factor System in Cancer: Novel Targeted Therapies | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1172/jci24682 | Disruption of coordinated cardiac hypertrophy and angiogenesis contrib
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1161/circresaha.119.315896 | Metabolic Inflammation and Insulin Resistance in Obesity
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1172/jci24178 | Protein kinase cascades in the regulation of cardiac hypertrophy
+- OFF-TOPIC | 15_health_maintenance/intestinal_parasites_humans | 10.1016/s2214-109x(18)30186-4 | Antimicrobial consumption and resistance in adult hospital inpatients
+- FAIL pdf | C | 10.1530/jme-17-0298 | 40 YEARS OF IGF1: Insulin-like growth factors: actions on the skeleton | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18101552 | Dietary Antioxidants and Redox Signaling in Cancer Prevention: Mechani
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1210/clinem/dgag114 | Acromegaly complications: an update
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18101579 | The Effects of Colostrum Bovinum Supplementation on Human Body Fat Con
+- FAIL pdf | C | 10.3390/jcm15103946 | Ketogenic and Low-Carbohydrate Diets in Prostate Cancer: Metabolic Rationale, Pr | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3389/fendo.2026.1818207 | Linking the relationship between drug-induced osteoporosis and the gut
+- FAIL pdf | C | 10.3390/ijms27125495 | Insulin Resistance as a Systemic Metabolic Risk State for Cancer: Mechanisms, Bi | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.17179/excli2026-9426 | Malnutrition-Sarcopenia Syndrome in older adults: Causes, consequences
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/cancers18060998 | The Role of Gut Microbiome in Prostate Cancer: Current Evidence and Em
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s40798-026-01026-9 | Cardiovascular Implications of the Enhanced Games: Performance Enhanci
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | PMC13300202 | Exploring the Therapeutic Potential of Lycopene: Mechanisms, Biologica
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/cancers18081276 | Myosteatosis and Sarcopenic Obesity in Men Receiving Androgen Deprivat
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18121909 | From Leaky Gut to a Vulnerable Brain: Obesity-Associated Gut Barrier F
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/j.toxrep.2026.102247 | Toxicological profile of anti-diabetic drugs and emerging measures to
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms27114793 | Evidence for a Potential Context-Dependent Dual Role of Eb Peptide of
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18091431 | Sarcopenia in Chronic Heart Failure: Pathophysiology, Clinical Consequ
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18111712 | Feasibility and Safety of a Ketogenic Diet During Systemic Therapy for
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18101562 | Leveraging Dietary Interventions to Benefit Patients with Hematologic
+- FAIL pdf | C | 10.1038/nrmicro2438 | Developing vaccines to combat hookworm infection and intestinal schistosomiasis | no OA PDF resolved
+- FAIL pdf | C | 10.1080/07853890.2026.2626085 | Endocrinological aspects of sarcopenic obesity | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18030494 | Optimizing Nutrition to Counter Sarcopenia in Hepatocellular Carcinoma
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.4082/kjfm.25.0215 | Nutritional pathways from treatment to management of sarcopenia in pat
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/life16040628 | Postbiotics as Emerging Strategy Targeting Obesity- and Aging-Related
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu18040685 | Obesity, Bariatric Surgery, and Cancer Risk: Nutritional Perspectives
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s13098-026-02113-3 | Marine nutraceuticals and their role in modulating diabetes-induced ca
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.14740/wjon1191 | Epidemiology of Prostate Cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.18632/oncotarget.16723 | Combination therapy in combating cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1038/nrdp.2016.22 | Pancreatic cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/cancers13174287 | Breast Cancer—Epidemiology, Risk Factors, Classification, Prognostic M
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1002/cncr.20408 | Human prostate cancer risk factors
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1038/s41416-019-0650-z | Reprogramming of fatty acid metabolism in cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1038/s41572-020-00240-3 | Hepatocellular carcinoma
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/cancers14071732 | Colorectal Cancer: A Review of Carcinogenesis, Global Epidemiology, Cu
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1053/j.gastro.2010.01.057 | Primary Prevention of Colorectal Cancer
+- FAIL pdf | C | 10.33647/2074-5982-17-1-43-56 | Effects of Delta-sleep-inducing, Kisspeptin-10 and pt-141 Neuropeptides on Sexua | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ph13030040 | 2019 FDA TIDES (Peptides and Oligonucleotides) Harvest
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.bbadis.2017.03.020 | Bench-top to clinical therapies: A review of melanocortin ligands from
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1053/j.ackd.2013.09.004 | Leveraging Melanocortin Pathways to Treat Glomerular Diseases
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/sxmrev/qeaf025 | The hormonal regulation of men’s sexual desire, arousal, and penile er
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2014-4024 | RM-493, a Melanocortin-4 Receptor (MC4R) Agonist, Increases Resting En
+- FAIL pdf | C | 10.3390/biom12101407 | Ligands for Melanocortin Receptors: Beyond Melanocyte-Stimulating Hormones and A | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/jcph.211 | Investigation of safety, tolerability, pharmacokinetics, and pharmacod
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.5772/26773 | Paradigms for Preclinical Investigations of Female Sexual Function and
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.gocm.2022.04.003 | Drug flibanserin–in hypoactive sexual desire disorder
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.12688/f1000research.7885.1 | Advances in the treatment of erectile dysfunction: what’s new and upco
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2023.983670 | Melanocortin 4 receptor signaling in Sim1 neurons permits sexual recep
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/dddt.s15852 | Future prospects in the treatment of erectile dysfunction: focus on av
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2026.1797586 | The melanocortin receptors as targets for general obesity: contextuali
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s13098-025-02071-2 | The effect of melanocortin-4 receptor agonist drugs on obesity and met
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1080/14756366.2026.2616556 | Synthetic strategies and therapeutic insights into FDA-approved indole
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/sexmed/qfag050 | Access without approval: state-level determinants of peptide availabil
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2025.1630199 | A glimpse into the pipeline of anti-obesity medication development: co
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41467-026-73372-x | Dual activation of MC3R and MC4R drives weight loss and reduces food i
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC13296721 | Neural Melanocortin Receptors in Fish: Insights into Growth Regulation
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/jdv.20269 | An overview of benefits and risks of chronic melanocortin-1 receptor a
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1021/acssynbio.5c00466 | Tuning the Response of GPCR-Based Yeast Sensors Using Fluorescent Repo
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- FAIL pdf | C | 10.1155/2014/235060 | Effect of GH/IGF-1 on Bone Metabolism and Osteoporsosis | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1186/s12943-023-01740-y | Lung cancer immunotherapy: progress, pitfalls, and promises
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1079/phn2003588 | Diet, nutrition and the prevention of cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/molecules17033202 | Cancer Chemoprevention by Carotenoids
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1093/cvr/cvz035 | Common risk factors for heart failure and cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/ijms18122589 | The Role of Resveratrol in Cancer Therapy
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1136/bjsports-2018-099027 | IOC consensus statement: dietary supplements and the high-performance
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.3390/nu16060800 | Healthy Lifestyle and Cancer Risk: Modifiable Risk Factors to Prevent
+- FAIL pdf | C | 10.1002/ijc.21058 | Antioxidant vitamin and mineral supplementation and prostate cancer prevention i | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom12101407 | Ligands for Melanocortin Receptors: Beyond Melanocyte-Stimulating Hormones and A | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/bs15050642 | Sexual Motivation (Desire): Problems with Current Preclinical and Clin
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/biomedicines13020262 | Deep Learning-Based Drug Compounds Discovery for Gynecomastia
+- FAIL pdf | C | PMC9625176 | RF01 | PMON43 Melanocortin-4 Receptor Agonism Enhances Sexual Brain Processing i | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/noajnl/vdaf252 | Nuclear and membrane-bound hormone receptors in glioblastoma: Expressi
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41467-024-50827-7 | Structure elucidation of a human melanocortin-4 receptor specific orth
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms241512152 | Melanocortin 1 Receptor (MC1R): Pharmacological and Therapeutic Aspect
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fchem.2023.1302169 | Big peptide drugs in a small molecule world
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s12170-025-00770-z | Triple Agonism Based Therapies for Obesity
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1001/jamaoncol.2018.1771 | Association of Body Mass Index and Age With Subsequent Breast Cancer R
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.7150/ijms.10001 | Risk Factors Contributing to Type 2 Diabetes and Recent Advances in th
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1016/s1470-2045(14)70211-6 | Prevention and early detection of prostate cancer
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.1210/er.2013-1058 | Adverse Health Consequences of Performance-Enhancing Drugs: An Endocri
+- OFF-TOPIC | 08_peptides_gray/igf1_lr3 | 10.2147/clep.s16747 | Risk factors for the onset of prostatic cancer: age, location, and beh
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/fsn3.71819 | The Role of Nootropic Supplements in Sports: Enhancing Cognitive and P
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/medicina60121957 | Health Benefits of Epigallocatechin Gallate and Forskolin with a Speci
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/nep3.42 | Research progress on intranasal treatment for Parkinson's disease
+- FAIL pdf | C | 10.3390/sports14060256 | Risk of Menstrual Dysfunction, Low Energy Availability, Eating Disorders and Inj | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2017.06.015 | Evaluation of a melanocortin-4 receptor (MC4R) agonist (Setmelanotide)
+- FAIL pdf | C | 10.1097/hjh.0000000000001221 | Usefulness of ambulatory blood pressure monitoring to assess the melanocortin re | no OA PDF resolved
+- FAIL pdf | B | 10.2217/whe-2016-0018 | Bremelanotide for Female Sexual Dysfunctions in Premenopausal Women: A Randomize | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2021.101206 | The melanocortin pathway and energy homeostasis: From discovery to obe
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2014-4024 | RM-493, a Melanocortin-4 Receptor (MC4R) Agonist, Increases Resting En
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41422-021-00552-3 | Structural insights into ligand recognition and activation of the mela
+- FAIL pdf | C | 10.3390/ijms24010690 | Intranasal Administration of Forskolin and Noopept Reverses Parkinsonian Patholo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.5142/jgr.2013.37.144 | Actoprotective effect of ginseng: improving mental and physical perfor
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1080/14756366.2023.2171026 | Research progress of natural products and their derivatives against Al
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/nep3.42 | Research progress on intranasal treatment for Parkinson's disease
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.4236/nm.2013.44035 | A New Generation of Drugs: Synthetic Peptides Based on Natural Regulat
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.24075/medet.2022.036 | The issues of classification and characterization of neurotropic agent
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.20944/preprints202504.0388.v1 | Search for Potential Neuroprotectors for Correction of Cognitive and B
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.12688/f1000research.160416.2 | Ginkgo Biloba as a niche theme cognitive enhancer agent, 1420 dokumen
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1111/jnc.70337 | Discovery and Characterization of Novel Spirotriazoloquinazolines as P
+- FAIL pdf | C | 10.3390/jcm15083077 | Stress Fracture in Athletes: A Practical Approach | no OA PDF resolved
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.bbadis.2017.03.020 | Bench-top to clinical therapies: A review of melanocortin ligands from
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/molecules24101892 | Current Mechanistic and Pharmacodynamic Understanding of Melanocortin-
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1053/j.ackd.2013.09.004 | Leveraging Melanocortin Pathways to Treat Glomerular Diseases
+- FAIL pdf | B | 10.1111/dom.14672 | Effect of bremelanotide on body weight of obese women: Data from two phase 1 ran | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41467-024-50827-7 | Structure elucidation of a human melanocortin-4 receptor specific orth
+- FAIL pdf | C | 10.3390/ijms24010690 | Intranasal Administration of Forskolin and Noopept Reverses Parkinsonian Patholo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/nep3.42 | Research progress on intranasal treatment for Parkinson's disease
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/medicina60121957 | Health Benefits of Epigallocatechin Gallate and Forskolin with a Speci
+- FAIL pdf | C | 10.1016/j.esxm.2018.01.004 | Evaluation and Management of Hypoactive Sexual Desire Disorder | no OA PDF resolved
+- FAIL pdf | C | 10.3390/jfmk11020236 | Between Aesthetics and Health: Disordered Eating, Exercise Addiction, and Body I | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/epidemiologia7020046 | Lower Urinary Tract Symptoms (LUTSs) in Elite Female and Male Athletes
+- FAIL pdf | C | 10.2174/1381612824666181008105641 | Novel Technologies for Dipeptide Drugs Design and their Implantation | no OA PDF resolved
+- FAIL pdf | C | 10.1038/bjp.2008.253 | Pharmacological profiling of neuropeptides on rabbit vaginal wall and vaginal ar | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.smim.2022.101603 | Translational advances of melanocortin drugs: Integrating biology, che
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms241512152 | Melanocortin 1 Receptor (MC1R): Pharmacological and Therapeutic Aspect
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1155/2013/985815 | Curbing Inflammation through Endogenous Pathways: Focus on Melanocorti
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms21165728 | Structural Complexity and Plasticity of Signaling Regulation at the Me
+- FAIL pdf | B | 10.1016/j.clinthera.2017.01.018 | Phase I Randomized Placebo-controlled, Double-blind Study of the Safety and Tole | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- FAIL pdf | C | 10.32607/20758251-2016-8-1-82-89 | Molecular Mechanism Underlying the Action of Substituted Pro-Gly Dipeptide Noope | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18030379 | Rethinking Energy Availability from Conceptual Models to Applied Practice: A Nar | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom12101407 | Ligands for Melanocortin Receptors: Beyond Melanocyte-Stimulating Hormones and A | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/jdv.20269 | An overview of benefits and risks of chronic melanocortin‐1 receptor a
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.17925/ee.2024.20.2.9 | Setmelanotide: A Melanocortin-4 Receptor Agonist for the Treatment of
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1515/bmc-2015-0023 | Developments and new vistas in the field of melanocortins
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.jacbts.2020.11.007 | Restoration of Cardiac Function After Myocardial Infarction by Long-Te
+- FAIL pdf | C | PMC12849792 | Low Energy Availability and Its Impact on Bone Health and Metabolism in Athletes | no OA PDF resolved
+- FAIL pdf | C | 10.21873/anticanres.17214 | Melanocortin Receptor Agonist Bremelanotide Induces Cell Death and Growth Inhibi | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jash.2014.03.052 | Effects of the novel melanocortin receptor agonist bremelanotide on ambulatory b | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdaf068.108 | (122) POSITIVE EFFECTS OF BREMELANOTIDE ON FEMALE SEXUAL AROUSAL AND ORGASM IN P | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1743-6109.2006.00268.x | An effect on the subjective sexual response in premenopausal women with sexual a | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms24010690 | Intranasal Administration of Forskolin and Noopept Reverses Parkinsonian Patholo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1134/s1819712423020198 | Cognitive Impairment and Nootropic Drugs: Mechanism of Action and Spec
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.5142/jgr.2013.37.144 | Actoprotective effect of ginseng: improving mental and physical perfor
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/nu12051372 | The Mixture of Gotu Kola, Cnidium Fruit, and Goji Berry Enhances Memor
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.4236/nm.2013.44035 | A New Generation of Drugs: Synthetic Peptides Based on Natural Regulat
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1080/14756366.2023.2171026 | Research progress of natural products and their derivatives against Al
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3389/fvets.2022.1016720 | The neurobiology of pain and facial movements in rodents: Clinical app
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/nep3.42 | Research progress on intranasal treatment for Parkinson's disease
+- FAIL pdf | B | 10.1111/j.1743-6109.2007.00698.x | RETRACTED: Evaluation of the safety and efficacy of bremelanotide, a melanocorti | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s1090-798x(08)70145-0 | An Effect on the Subjective Sexual Response in Premenopausal Women with Sexual A | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1038/s41598-026-45581-3 | Dietary assessment of elite orienteering athletes
+- FAIL pdf | C | 10.1093/jsxmed/qdad061.020 | (020) Real-World Use of Bremelanotide in One Sexual Medicine Clinic Treating Wom | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2026.2634184 | Seasonal changes in energy intake and emerging indicators of energy availability | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/sports14040162 | A Longitudinal Evaluation of Bone Mineral Density Across a Macrocycle
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3389/fnut.2026.1767162 | Impact of a sport-specific nutrition education program on knowledge an
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1007/s44192-026-00469-6 | Exercise addiction risk in recreational athletes: a cross-sectional st
+- FAIL pdf | C | 10.1093/jsxmed/qdad061.033 | (033) Examining the Neuroanatomical Basis of Bremelanotide, a Drug for Low Sexua | no OA PDF resolved
+- FAIL pdf | A | 10.1111/sms.70249 | Biochemical Responses to Experimentally Induced Short-Term Low Energy Availabili | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.21203/rs.3.rs-9486208/v1 | Supporting adolescent menstrual health to improve participation and pe
+- FAIL pdf | C | 10.1021/acs.jmedchem.6c01074 | Goldilocks-Inspired Design of Mid-Size Macrocycles for Selective Targeting of Hu | no OA PDF resolved
+- FAIL pdf | C | 10.1080/14656566.2022.2132144 | An evaluation of bremelanotide injection for the treatment of hypoactive sexual  | no OA PDF resolved
+- FAIL pdf | C | 10.1002/jcsm.70082 | Impact of Relative Energy Deficiency in Sport (REDs) on Bone Health in Elite Ath | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/jfmk10040474 | Differences in Total Daily Energy Expenditure Across Field Sports: A N
+- FAIL pdf | C | 10.1017/s109285292100002x | The neurobiology of bremelanotide for the treatment of hypoactive sexual desire  | no OA PDF resolved
+- FAIL pdf | C | 10.1089/jwh.2021.0191 | Safety Profile of Bremelanotide Across the Clinical Development Program | no OA PDF resolved
+- FAIL pdf | C | 10.1089/jwh.2021.0225 | Prespecified and Integrated Subgroup Analyses from the RECONNECT Phase 3 Studies | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s40265-019-01187-w | Bremelanotide: First Approval | no OA PDF resolved
+- FAIL pdf | C | 10.1177/1060028019899152 | Bremelanotide: New Drug Approved for Treating Hypoactive Sexual Desire Disorder | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2026.2665547 | Association between energy availability and sleep quality in elite female and ma | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1080/15502783.2026.2676190 | Post-competition recovery in natural physique athletes: body compositi
+- FAIL pdf | C | 10.1097/01.aog.0000533221.21767.0a | Efficacy of Bremelanotide for HSDD in Women: RECONNECT Open-Label Extension Phas | no OA PDF resolved
+- FAIL pdf | C | 10.1097/01.aog.0000447299.24824.6b | Bremelanotide for Hypoactive Sexual Desire Disorder: Analyses From a Phase 2B Do | no OA PDF resolved
+- FAIL pdf | C | 10.1097/01.aog.0000447289.23270.72 | Bremelanotide for Female Sexual Dysfunctions: Responder Analyses From a Phase 2B | no OA PDF resolved
+- FAIL pdf | C | 10.1097/01.aog.0000447296.23039.ce | Distress Reduction in Female Sexual Dysfunctions: A Dose-Ranging Study of Subcut | no OA PDF resolved
+- FAIL pdf | C | 10.1586/17446651.1.4.465 | Bremelanotide: the female Viagra? | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4103/aja202570 | Phytochemical-based nanomedicine as a promising therapeutic strategy f
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s13293-026-00833-9 | Steroid hormones and nephrolithiasis: regulation of urine components m
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.apsb.2026.03.006 | Microneedle technology integrated with diverse therapeutic modalities
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s40959-024-00293-3 | A comprehensive review on the effects of sex hormones on chemotherapy-
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40263-025-01246-9 | Multiple Sclerosis in Women: Impact of Different Life Stages on Treatm
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41398-025-03286-7 | Dissecting biological heterogeneity in major depressive disorder based
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/cimb47100790 | Pathogenic and Regulatory Roles of Fibrinolytic Factors in Autoimmune
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2026.1797586 | The melanocortin receptors as targets for general obesity: contextuali
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms26209948 | Estrogenic Effect of Probiotics on Anxiety and Depression: A Narrative
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/medsci13010013 | Update on the Complications and Management of Liver Cirrhosis
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1021/acsptsci.4c00299 | Structure-Activity Relationship of Synthetic Cathinones: An Updated Re
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/jcm11226723 | Sexual Health after a Breast Cancer Diagnosis: Addressing a Forgotten
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40820-025-01662-y | Microneedle-Based Approaches for Skin Disease Treatment
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/antiox14070771 | Betaine Dietary Supplementation: Healthy Aspects in Human and Animal N
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/jpr.s537222 | Consensus Guidelines for the Use of Peripheral Nerve Stimulation in th
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/cancers14174305 | Bone Health Management in the Continuum of Prostate Cancer Disease
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/cancers14061585 | The Role of ROS as a Double-Edged Sword in (In)Fertility: The Impact o
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4103/jmh.jmh_302_25 | Clinical Practice Guidelines for Menopause: An Executive Summary and R
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC13254489 | Publication Only
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.36660/abc.20240478 | Brazilian Guideline on Menopausal Cardiovascular Health - 2024
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s00415-024-12730-5 | Diagnosis and treatment of autonomic failure, pain and sleep disturban
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC11086049 | Oral Presentations
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/jhmas/jraa045 | Puer barbatus: Precocious Puberty in Early Modern Medicine
+- FAIL pdf | C | 10.3390/sports14040150 | Energy Availability as a Neurocognitive Regulator of Endurance Performance: Inte | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/j.1939-4640.2004.tb02845.x | Insulin‐Dependent Diabetes Affects Testicular Function by FSH‐ and LH‐
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s40035-017-0099-z | Current understanding of the molecular mechanisms in Parkinson's disea
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1080/10253890802046281 | Stress, depression and cardiovascular dysregulation: A review of neuro
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.18632/oncotarget.10901 | Molecular mechanisms underlying resistance to androgen deprivation the
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/brb3.7 | Epidemic of illicit drug use, mechanisms of action/addiction and strok
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.15406/mseij.2022.06.00183 | Human exposure to heavy metals: toxicity mechanisms and health implica
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1161/cir.0000000000000351 | Acute Myocardial Infarction in Women
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/ncomms5256 | Regulating proton-coupled electron transfer for efficient water splitt
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms22158217 | Mechanisms of Central Hypogonadism
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3122/jabfm.2009.01.080102 | Overtreating Chronic Back Pain: Time to Back Off?
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.15406/jabb.2017.03.00082 | Antidepressants: Mechanism of Action, Toxicity and Possible Ameliorati
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/tcrm.s3025 | The benefits and risks of testosterone replacement therapy: a review
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2174/157015912800604542 | Immunomodulation Mechanism of Antidepressants: Interactions between Se
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s00429-008-0189-x | Brain structural and functional abnormalities in mood disorders: impli
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2009-0345 | Endocrine Treatment of Transsexual Persons:An Endocrine Society Clinic
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/er.2003-0023 | Coregulator Function: A Key to Understanding Tissue Specificity of Sel
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/brain/awq010 | The default-mode, ego-functions and free-energy: a neurobiological acc
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2018-02697 | Functional Hypogonadotropic Hypogonadism in Men: Underlying Neuroendoc
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1136/gut.2003.035758 | Iron, anaemia, and inflammatory bowel diseases
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2012-4075 | Endocrine Side Effects Induced by Immune Checkpoint Inhibitors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/ijgo.13102 | Epidemiology and management of uterine fibroids
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/s2215-0366(19)30132-4 | The Lancet Psychiatry Commission: a blueprint for protecting physical
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/er.2013-1058 | Adverse Health Consequences of Performance-Enhancing Drugs: An Endocri
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2009-1251 | Effects of Testosterone on Muscle Strength, Physical Function, Body Co
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/npp.2009.104 | Neurocircuitry of Mood Disorders
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.1136/bjsports-2018-099193 | IOC consensus statement on relative energy deficiency in sport (RED-S): 2018 upd | no OA PDF resolved
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.nbscr.2025.100114 | Synergies from a distance: Inspirations from the struggles of Dr James
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.nbscr.2025.100118 | Sleep and immune health: How dogs, goats and 'factor S' shaped a field
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27020685 | Peptide-Based Approaches for Pain Relief and Healing in Wounds
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1021/acs.analchem.3c05194 | Deuterium Labeling of Isoaspartic and Isoglutamic Acids for Mass Spect
+- FAIL pdf | C | 10.1136/bjsports-2023-106994 | 2023 International Olympic Committee’s (IOC) consensus statement on Relative Ene | no OA PDF resolved
+- FAIL pdf | C | 10.3390/molecules26175173 | Delta Sleep-Inducing Peptide Recovers Motor Function in SD Rats after Focal Stro | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13062-023-00377-7 | Probing pathways by which rhynchophylline modifies sleep using spatial
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1007/s40211-023-00466-z | [Insomniac symptoms and suicidality-link and management]
+- FAIL pdf | C | 10.3390/nu12030835 | Low Energy Availability in Athletes 2020: An Updated Narrative Review of Prevale | no OA PDF resolved
+- FAIL pdf | B | 10.3390/biomedicines9040407 | DSIP-Like KND Peptide Reduces Brain Infarction in C57Bl/6 and Reduces Myocardial | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fneur.2025.1627172 | Research progress on the correlation between biological rhythms and th
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood-brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu12082328 | Circadian Variation in Human Milk Composition, a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines10112934 | Rodent Models of Audiogenic Epilepsy: Genetic Aspects, Advantages, Cur
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu14102084 | Nutrients and the Circadian Clock: A Partnership Controlling Adipose T
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines9111575 | Neuropeptides Involved in Facial Nerve Regeneration
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fnins.2021.675732 | Disruptions of Circadian Rhythms and Thrombolytic Therapy During Ische
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1039/d2sc02593k | Development of Cu(ii)-specific peptide shuttles capable of preventing
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1371/journal.pone.0160314 | Novel Nuclear Factor-KappaB Targeting Peptide Suppresses β-Amyloid Ind
+- FAIL pdf | C | 10.1016/j.bbrep.2015.08.015 | Enzymatic attributes of an l-isoaspartyl methyltransferase from <i>Candida utili | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1038/s41598-019-42099-9 | Brain-transportable dipeptides across the blood-brain barrier in mice
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1155/2013/687575 | The role of neuropeptides in suicidal behavior: a systematic review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fpsyt.2016.00072 | Is there Progress? An Overview of Selecting Biomarker Candidates for M
+- FAIL pdf | C | 10.1136/bjsports-2015-094873 | The IOC relative energy deficiency in sport clinical assessment tool (RED-S CAT) | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1136/bjsports-2019-100715 | Mental health in elite athletes: International Olympic Committee conse
+- FAIL pdf | C | 10.2741/1033 | Biochemical regulation of non-rapid-eye-movement sleep | no OA PDF resolved
+- FAIL pdf | C | 10.1080/02640414.2021.1883312 | “I’d got self-destruction down to a fine art”: a qualitative exploration of rela | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1471-4159.2006.03693.x | Delta sleep‐inducing peptide (DSIP): a still unresolved riddle | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2014-093958 | Misunderstanding the Female Athlete Triad: Refuting the IOC Consensus Statement  | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1136/bjsports-2019-101969 | International Olympic Committee consensus statement: methods for recor
+- FAIL pdf | C | 10.1073/pnas.74.3.1282 | Characterization of a delta-electroencephalogram (-sleep)-inducing peptide | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1523/jneurosci.20-21-08138.2000 | The CircadianClockMutation Alters Sleep Homeostasis in the Mouse
+- FAIL pdf | C | 10.3109/10253890109115728 | Delta-Sleep Inducing Peptide (DSIP) and ACTH (4-10) Analogue Influence Fos-Induc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.2741/1159 | Hypothalamic regulation of sleep and arousal
+- FAIL pdf | C | 10.1111/j.1432-1033.1993.tb18160.x | A novel 77‐residue peptide from porcine brain contains a leucine‐zipper motif an | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2014-094559 | Relative Energy Deficiency in Sport (RED-S) | no OA PDF resolved
+- FAIL pdf | C | 10.1073/pnas.85.10.3653 | Evidence for a role of delta sleep-inducing peptide in slow-wave sleep and sleep | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bmjsem-2018-000424 | Low energy availability assessed by a sport-specific questionnaire and clinical  | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000125705 | Colocalization of Delta Sleep Inducing Peptide and Luteinizing Hormone Releasing | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1523/jneurosci.1653-09.2009 | The Effects of Caffeine on Sleep inDrosophilaRequire PKA Activity, But
+- FAIL pdf | C | 10.1016/j.pathophys.2004.03.003 | Delta-sleep inducing peptide and neuronal activity after glutamate microiontopho | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0021-5198(19)58214-2 | The mechanism of Che antinociceptive effect of delta-sleep-inducing peptide (DSI | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.seizure.2005.02.001 | Antiepileptic activity of delta sleep-inducing peptide and its analogue in metap | no OA PDF resolved
+- FAIL pdf | C | 10.4067/s0716-97602001000100013 | Distribution of delta sleep-inducing peptide in the newborn and infant human hyp | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1038/jcbfm.1985.49 | Blood—Brain Barrier and Peptides
+- FAIL pdf | C | 10.1007/s10571-007-9222-5 | Interaction of Delta Sleep-inducing Peptide and Valproate on Metaphit Audiogenic | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1182/blood-2006-02-001115 | Glucocorticoids induce differentiation of a specifically activated, an
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/s0306-9877(98)90200-6 | Essential fatty acids and sleep: mini-review and hypothesis
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/s0196-9781(97)00295-7 | Fatty Acids and Brain Peptides
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/0006-3223(92)90017-t | EEG sleep in cushing's disease and cushing's syndrome: comparison with
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1002/cphc.200400345 | Folding Structures of Isolated Peptides as Revealed by Gas‐Phase Mid‐I
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1038/sj.bjp.0701918 | Modulation of GABAA receptors and inhibitory synaptic currents by the
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1007/s13167-011-0101-2 | Sleep disturbances and suicidality: a common association to look for i
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27020685 | Peptide-Based Approaches for Pain Relief and Healing in Wounds
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.nbscr.2025.100118 | Sleep and immune health: How dogs, goats and 'factor S' shaped a field
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ncrna11020021 | MicroRNAs: A Novel Approach for Monitoring Treatment Response in Major
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fneur.2025.1627172 | Research progress on the correlation between biological rhythms and th
+- FAIL pdf | B | 10.3390/biomedicines9040407 | DSIP-Like KND Peptide Reduces Brain Infarction in C57Bl/6 and Reduces Myocardial | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | PMC9575633 | The Role of Polyamines in the Mechanisms of Cognitive Impairment
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines10112934 | Rodent Models of Audiogenic Epilepsy: Genetic Aspects, Advantages, Cur
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood-brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu12082328 | Circadian Variation in Human Milk Composition, a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu14102084 | Nutrients and the Circadian Clock: A Partnership Controlling Adipose T
+- FAIL pdf | C | 10.1016/j.bbrep.2015.08.015 | Enzymatic attributes of an l-isoaspartyl methyltransferase from <i>Candida utili | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1155/2013/687575 | The role of neuropeptides in suicidal behavior: a systematic review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fmolb.2022.900882 | Innovative Approach for a Classic Target: Fragment Screening on Trypan
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fpsyt.2022.871754 | The Relationship Between 5-Hydroxytryptamine and Its Metabolite Change
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1039/d2sc02593k | Development of Cu(ii)-specific peptide shuttles capable of preventing
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1371/journal.pone.0160314 | Novel Nuclear Factor-KappaB Targeting Peptide Suppresses β-Amyloid Ind
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fnins.2021.675732 | Disruptions of Circadian Rhythms and Thrombolytic Therapy During Ische
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fncir.2018.00014 | Sleep Deprivation and the Epigenome
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fpsyt.2016.00072 | Is there Progress? An Overview of Selecting Biomarker Candidates for M
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.18699/vj20.687 | The role of microRNAs in learning and long-term memory
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/2045-8118-8-3 | Molecular biology of the blood-brain and the blood-cerebrospinal fluid
+- OFF-TOPIC | 08_peptides_gray/dsip | PMC7162311 | Dedicated Poster Abstracts
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1182/blood-2006-02-001115 | Glucocorticoids induce differentiation of a specifically activated, an
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu12082328 | Circadian Variation in Human Milk Composition, a Systematic Review
+- FAIL pdf | C | 10.2741/1033 | Biochemical regulation of non-rapid-eye-movement sleep | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood–brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1111/j.1742-4658.2006.05569.x | Specific TSC22 domain transcripts are hypertonically induced and alter
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1155/2019/1245749 | Oxidized Cell-Free DNA Role in the Antioxidant Defense Mechanisms unde
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fncel.2014.00369 | Cerebrospinal fluid biochemical studies in patients with Parkinson's d
+- FAIL pdf | B | 10.3390/biomedicines9040407 | DSIP-Like KND Peptide Reduces Brain Infarction in C57Bl/6 and Reduces Myocardial | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.22004/ag.econ.135134 | A REVIEW OF AGRICULTURE, FOOD SECURITY AND HUMAN NUTRITION ISSUES IN U
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/2045-8118-8-3 | Molecular biology of the blood-brain and the blood-cerebrospinal fluid
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1038/jcbfm.1985.49 | Blood—Brain Barrier and Peptides
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1002/j.1536-4801.2001.tb07429.x | Beta Endorphin Concentrations in Human Milk
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1007/s00586-009-1054-1 | In vitro study of accuracy of cervical pedicle screw insertion using a
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/su122310222 | The Need for New Product Development Capabilities from Digitalization,
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/s0196-9781(97)00295-7 | Fatty Acids and Brain Peptides
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1155/2013/687575 | The Role of Neuropeptides in Suicidal Behavior: A Systematic Review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.athoracsur.2017.02.054 | Ozone Therapy Protects Against Rejection in a Lung Transplantation Mod
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1007/s00586-007-0573-x | Cervical anterior transpedicular screw fixation (ATPS)—Part II. Accura
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1523/jneurosci.1653-09.2009 | The Effects of Caffeine on Sleep inDrosophilaRequire PKA Activity, But
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1523/jneurosci.22-15-06380.2002 | Cholecystokinin Tunes Firing of an Electrically Distinct Subset of Arc
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/s0306-9877(98)90200-6 | Essential fatty acids and sleep: mini-review and hypothesis
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.21767/2171-6625.1000145 | System Organization of the Relationship Between Emotional Stress and S
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fncir.2018.00014 | Sleep Deprivation and the Epigenome
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1134/s1819712422030059 | The Role of Polyamines in the Mechanisms of Cognitive Impairment
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood-brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines9111575 | Neuropeptides Involved in Facial Nerve Regeneration
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/s0196-9781(97)00295-7 | Fatty Acids and Brain Peptides
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood–brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines9111575 | Neuropeptides Involved in Facial Nerve Regeneration
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.26444/monz/90885 | Bioactive properties of carnosine
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.21248/gups.67459 | Circuits and mechanisms controlling SW-REM alternation in sleep
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1007/s00204-026-04398-9 | The role of oxidative stress and antioxidant therapy in cisplatin neur
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fnagi.2025.1607669 | The interplay of homeostasis, inflammation, and oxidative stress in ne
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1186/s43556-026-00443-2 | Alzheimer's disease: from molecular pathways to therapies
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1007/s10787-026-02151-3 | Bridging the gaps in alzheimer's disease: a comprehensive review of cu
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fcell.2026.1766762 | Monoclonal antibodies and small molecules: on the cutting edge of Alzh
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fphar.2026.1819165 | Advances in the treatment of Alzheimer's disease
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/ijms27083560 | Theranostic Nanoplatforms for Alzheimer's Disease: A Critical Analysis
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/antiox14070774 | Interplay Between Aging and Tau Pathology in Alzheimer's Disease: Mech
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1007/s12035-025-05151-6 | Huang Lian Jie Du Decoction Prevents Chronic Alcoholic Encephalopathy
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/ph18081117 | New Approaches to the Treatment of Alzheimer's Disease
+- FAIL pdf | C | 10.3390/ph18091259 | Empagliflozin Protects Against Oxidative Stress in the Diabetic Brain by Inducin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/cells15030295 | Targeting Amyloid Beta Aggregation and Neuroinflammation in Alzheimer'
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.2174/011570159x370790250317045223 | Photodynamic and Photothermal Therapies using Nanotechnology Approach
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1186/s13024-026-00925-5 | Targeting tau in Alzheimer's Disease: rationale, approach and challeng
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fnagi.2026.1752446 | Intervention of ginseng-derived macromolecular drugs in Alzheimer's di
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1186/s13550-024-01099-1 | Mitochondrial complex I density is associated with IQ and cognition in
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/antiox14030360 | The Janus Face of Oxidative Stress and Hydrogen Sulfide: Insights into
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/brainsci16030340 | Probiotic &lt;i&gt;Bacillus subtilis&lt;/i&gt;, but Not a &lt;i&gt;Lac
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1038/s41392-025-02375-9 | Understanding the toxicity induced by radiation-triggered neuroinflamm
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fnagi.2023.1206572 | Current and future therapeutic strategies for Alzheimer's disease: an
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/antiox11122402 | Therapeutics of Alzheimer's Disease: Recent Developments
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/ijms26010157 | Recent Advances in the Search for Effective Anti-Alzheimer's Drugs
+- FAIL pdf | C | 10.3390/microorganisms12050909 | Combining Double-Dose and High-Dose Pulsed Dapsone Combination Therapy for Chron | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/cells14151179 | Chaperone-Mediated Responses and Mitochondrial-Endoplasmic Reticulum C
+- FAIL pdf | C | 10.1136/bjsports-2023-106932 | Primary, secondary and tertiary prevention of Relative Energy Deficiency in Spor | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1007/s00421-019-04157-y | Iron considerations for the athlete: a narrative review
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1136/bjsports-2016-096121 | International Olympic Committee consensus statement: harassment and ab
+- FAIL pdf | C | 10.1136/bjsports-2014-094371 | Authors’ 2015 additions to the IOC consensus statement: Relative Energy Deficien | no OA PDF resolved
+- FAIL pdf | C | 10.1210/endrev/bnae011 | Relative Energy Deficiency in Sport (REDs): Endocrine Manifestations, Pathophysi | no OA PDF resolved
+- FAIL pdf | C | 10.4161/auto.19048 | Methylthioninium chloride (methylene blue) induces autophagy and attenuates tauo | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1136/bjsports-2020-102411 | International Olympic Committee (IOC) Sport Mental Health Assessment T
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1136/gutjnl-2016-313627 | The microbiome of professional athletes differs from that of more sede
+- FAIL pdf | C | 10.1016/j.pmrj.2018.03.008 | Sex Differences in Common Sports Injuries | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu15204457 | Considerations of Low Carbohydrate Availability (LCA) to Relative Energy Deficie | no OA PDF resolved
+- FAIL pdf | C | 10.1523/jneurosci.0895-12.2012 | Methylene Blue Modulates Huntingtin Aggregation Intermediates and Is Protective  | no OA PDF resolved
+- FAIL pdf | C | 10.1123/ijsnem.2020-0368 | Prevalence of Surrogate Markers of Relative Energy Deficiency in Male Norwegian  | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.14814/phy2.70972 | Testosterone status and bone mineral density in Finnish male endurance
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1111/cen.70150 | Physiological Basis of Sex Differences in Human Performance and Exerci
+- FAIL pdf | C | 10.3390/sports14030121 | Ageing, Sex Differences, and REDs Risk in Endurance Runners: An Integrated Cross | no OA PDF resolved
+- FAIL pdf | A | 10.1111/sms.70249 | Biochemical Responses to Experimentally Induced Short-Term Low Energy Availabili | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18030379 | Rethinking Energy Availability from Conceptual Models to Applied Practice: A Nar | no OA PDF resolved
+- FAIL pdf | C | 10.3390/sports14060256 | Risk of Menstrual Dysfunction, Low Energy Availability, Eating Disorders and Inj | no OA PDF resolved
+- FAIL pdf | C | PMC12849792 | Low Energy Availability and Its Impact on Bone Health and Metabolism in Athletes | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2026.2634184 | Seasonal changes in energy intake and emerging indicators of energy availability | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.7759/cureus.103530 | Testosterone Replacement Therapy in Athletes: Implications for Injury
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.7717/peerj.21388 | Structural &lt;i&gt;vs.&lt;/i&gt; functional specialization: distinct
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/sports14050196 | Integrating Biological Maturity into Fitness Assessment and Physical A
+- FAIL pdf | C | 10.3390/jcm15083077 | Stress Fracture in Athletes: A Practical Approach | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | PMC13301037 | The Oxygen Imperative: Cardiorespiratory Fitness, Dose-Dependent Exerc
+- FAIL pdf | B | 10.1080/15502783.2025.2566373 | Comparison of cheese with and without &lt;i&gt;Propionibacterium freudenreichii& | no OA PDF resolved
+- FAIL pdf | A | 10.3390/sports13120453 | Pharmacological vs. Non-Pharmacological Treatment in the Management of Relative  | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/sports14050199 | Strength and Conditioning Society (SCS) 8th Annual Meeting, Oslo, Norw
+- FAIL pdf | B | 10.3233/jad-170560 | Potential of Low Dose Leuco-Methylthioninium Bis(Hydromethanesulphonate) (LMTM)  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1016/j.cell.2019.09.001 | Alzheimer Disease: An Update on Pathobiology and Treatment Strategies
+- FAIL pdf | C | 10.2147/jn.s49207 | Rotenone-induced nigrostriatal toxicity is reduced by methylene blue | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18101502 | Sex-Specific Responses to Intermittent Fasting: A Narrative Review Across Physio | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/healthcare13182328 | Conservative and Pharmacological Strategies for Preventing Osteoporoti
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.3390/nu18091344 | Sexual Dimorphism and Menopausal Transition: A Narrative Review of the
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3390/molecules25245789 | Comprehensive Review on Alzheimer’s Disease: Causes and Treatment
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1186/s12974-024-03285-3 | Unraveling the role and mechanism of mitochondria in postoperative cog
+- FAIL pdf | C | 10.1016/j.redox.2018.09.023 | Apoptosis inducing factor deficiency causes retinal photoreceptor degeneration.  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fnagi.2021.617588 | Mitochondrial Dysfunction and Oxidative Stress in Alzheimer’s Disease
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1016/j.arr.2024.102480 | Dysfunctional mitochondria in age-related neurodegeneration: Utility o
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1210/jc.2005-2847 | Testosterone Therapy in Adult Men with Androgen Deficiency Syndromes:
+- FAIL pdf | C | 10.1155/2016/3245935 | Tau-Centric Targets and Drugs in Clinical Development for the Treatment of Alzhe | no OA PDF resolved
+- FAIL pdf | C | 10.1177/0271678x231157958 | The effects of acute Methylene Blue administration on cerebral blood flow and me | no OA PDF resolved
+- FAIL pdf | C | 10.4081/ejtm.2023.11104 | Hungry runners – low energy availability in male endurance athletes and its impa | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.2147/cia.s190 | Testosterone for the aging male; current evidence and recommended prac
+- FAIL pdf | C | 10.1136/bjsports-2018-099193 | IOC consensus statement on relative energy deficiency in sport (RED-S): 2018 upd | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu12030835 | Low Energy Availability in Athletes 2020: An Updated Narrative Review of Prevale | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.2147/tcrm.s3025 | The benefits and risks of testosterone replacement therapy: a review
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1093/humupd/dmh035 | Testosterone replacement therapy: current trends and future directions
+- FAIL pdf | C | 10.1136/bjsports-2023-106994 | 2023 International Olympic Committee’s (IOC) consensus statement on Relative Ene | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1136/bjsm.30.3.205 | Effect of altered reproductive function and lowered testosterone level
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1161/circheartfailure.111.965632 | Testosterone Supplementation in Heart Failure
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1186/s40798-017-0076-1 | Total Energy Expenditure, Energy Intake, and Body Composition in Endur
+- FAIL pdf | C | 10.3390/medicina55100665 | Prevalence of Low Energy Availability in Competitively Trained Male Endurance At | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bmjsem-2018-000424 | Low energy availability assessed by a sport-specific questionnaire and clinical  | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1007/s42000-018-0010-z | Low testosterone in male endurance-trained distance runners: impact of
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1210/jc.2006-0357 | Effects of Testosterone Supplementation on Skeletal Muscle Fiber Hyper
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.2147/cia.s1417 | The many faces of testosterone
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1007/s40279-020-01389-3 | Transgender Women in the Female Category of Sport: Perspectives on Tes
+- FAIL pdf | C | 10.1016/j.pneurobio.2011.10.007 | Neurometabolic mechanisms for memory enhancement and neuroprotection of methylen | no OA PDF resolved
+- FAIL pdf | C | 10.4161/auto.19048 | Methylthioninium chloride (methylene blue) induces autophagy and attenuates tauo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.3389/fneur.2019.00585 | Ketone Bodies in Neurological Diseases: Focus on Neuroprotection and U
+- OFF-TOPIC | 08_peptides_gray/methylene_blue | 10.1016/j.neuropharm.2015.05.031 | An introduction to the roles of purinergic signalling in neurodegenera
+- FAIL pdf | C | 10.1523/jneurosci.0895-12.2012 | Methylene Blue Modulates Huntingtin Aggregation Intermediates and Is Protective  | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/energy_availability_reds | 10.1101/cshperspect.a029827 | Exosomes as Mediators of the Systemic Adaptations to Endurance Exercis
+- FAIL pdf | C | 10.1093/toxres/tfac050 | Methylene blue: a controversial diagnostic acid and medication? | no OA PDF resolved
+- FAIL pdf | C | 10.1021/acschembio.2c00720 | Synthetic ERRα/β/γ Agonist Induces an ERRα-Dependent Acute Aerobic Exercise Resp | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000445154 | Exercise, Training, and the Hypothalamic-Pituitary-Gonadal Axis in Men and Women | no OA PDF resolved
+- FAIL pdf | C | 10.1124/jpet.123.001733 | A Synthetic ERR Agonist Alleviates Metabolic Syndrome | no OA PDF resolved
+- FAIL pdf | C | 10.1002/rcm.70039 | In Vitro Metabolism and Analytical Characterization of SLU‐PP‐332 and SLU‐PP‐915 | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ajpath.2023.07.008 | Estrogen-Related Receptor Agonism Reverses Mitochondrial Dysfunction and Inflamm | no OA PDF resolved
+- FAIL pdf | C | 10.1101/2022.10.05.510974 | A Synthetic ERRα Agonist Induces an Acute Aerobic Exercise Response and Enhances | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1186/s43556-026-00483-8 | Exercise mimetics: molecular mechanisms, biological and therapeutic ef
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1124/molpharm.124.000889 | The Estrogen Receptor-Related Orphan Receptors Regulate Autophagy thro
+- FAIL pdf | C | 10.1016/j.ijbiomac.2026.151450 | Chemical optimization of the exercise mimetic SLU-PP-332 enables insight into es | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/ijms26157573 | Which Approach to Choose to Counteract Musculoskeletal Aging? A Compre
+- FAIL pdf | C | 10.4067/s0034-98872026000200237 | Activación farmacológica de ERRα/β/γ como mimético del ejercicio: Potenciales ap | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom16020272 | Nuclear Receptor-Targeted Therapies: Reprogramming Metabolism with TRβ, ERRα, an | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1124/jpet.123.001908 | Conquering Metabolic Syndrome: Navigating Pharmacological Avenues for
+- FAIL pdf | C | 10.1249/01.mss.0000518609.08986.6f | Circulating Sclerostin Responses To Acute Weight And Non Weight Bearing Sport Ac | no OA PDF resolved
+- FAIL pdf | C | 10.1039/d6cb00077k | Pharmacology of estrogen-related receptors (ERRs) agonists | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fcell.2026.1745201 | Hepatic mitochondrial signaling as a systemic hub: inter-organ communi
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.22541/au.176150016.60795129/v1 | Dual-targeted exercise mimetic extracellular vesicles regulate the mus
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.21474/ijar01/22957 | THE EXERCISE PILLAR OF LIFESTYLE MEDICINE: EMERGING EVIDENCE, NOVEL MO
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.20944/preprints202410.2224.v1 | Metabolic Syndrome: Current State and Prospects
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1007/s44337-025-00384-9 | Potential targets of protecting podocyte in glomerular aging and injur
+- FAIL pdf | C | 10.4081/ejtm.2025.13900 | Correction. Hungry runners – low energy availability in male endurance athletes  | no OA PDF resolved
+- FAIL pdf | C | 10.1074/jbc.m110.125401 | Estrogen-related Receptor γ Is a Key Regulator of Muscle Mitochondrial Activity  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fendo.2019.00557 | Estrogens, Estrogen Receptors Effects on Cardiac and Skeletal Muscle M
+- FAIL pdf | C | 10.37586/2686-8636-1-2026-115-123 | Potential uses of omberacetam (Noopept©) in the early prevention and management  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1111/ejn.15783 | α‐Glyceryl‐phosphoryl‐ethanolamine protects human hippocampal neurons
+- FAIL pdf | C | 10.3390/ijms24031853 | Roles of Estrogen, Estrogen Receptors, and Estrogen-Related Receptors in Skeleta | no OA PDF resolved
+- FAIL pdf | C | 10.35988/sm-hs.2022.173 | NOOPEPT – PROTEKCINIŲ SAVYBIŲ TURINTIS PREPARATAS | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.24075/medet.2022.036 | The issues of classification and characterization of neurotropic agent
+- FAIL pdf | C | 10.1016/j.bbadis.2015.06.016 | Constitutive activities of estrogen-related receptors: Transcriptional regulatio | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1210/er.2009-0027 | The Role of Mitochondria in the Pathogenesis of Type 2 Diabetes
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1186/ar2791 | Osteoarthritis associated with estrogen deficiency
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.redox.2020.101435 | Estrogenic control of mitochondrial function
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.cell.2012.01.017 | Resveratrol Ameliorates Aging-Related Metabolic Phenotypes by Inhibiti
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.jacc.2012.08.1021 | Mitochondria as a Therapeutic Target in Heart Failure
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1210/en.2016-1677 | Sex Hormones and Cardiometabolic Health: Role of Estrogen and Estrogen
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1002/jcsm.12178 | Mitochondria and ageing: role in heart, skeletal muscle and adipose ti
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.pneurobio.2018.09.003 | New insights into the complex role of mitochondria in Parkinson’s dise
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.21037/atm.2018.06.21 | Mitochondria and cardiovascular diseases—from pathophysiology to treat
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1101/cshperspect.a029694 | Health Benefits of Exercise
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/medicina60121957 | Health Benefits of Epigallocatechin Gallate and Forskolin with a Speci
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.12688/f1000research.160416.2 | Ginkgo Biloba as a niche theme cognitive enhancer agent, 1420 dokumen
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1111/apha.13753 | Oral Communications
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.17816/hmj689989 | Pharmaceuticals for performance adjustment during regular physical act
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.33667/2782-4101-2025-3-13-18 | Nootropics: effects on brain plasticity and cognitive functions
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.32598/bcn.2023.401.3 | A New Dipeptide H-MGL Partially Ameliorating Memory Impairment in an S
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.14711/thesis-991013340344903412 | The stemwood of dracaena cochinchinensis, a Thai herb, exerts neuropro
+- FAIL pdf | C | 10.1073/pnas.1212976110 | Skeletal muscle PGC-1α controls whole-body lactate homeostasis through estrogen- | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fphys.2018.01883 | Mitochondria as a Target for Mitigating Sarcopenia
+- FAIL pdf | C | 10.1080/15502783.2025.2496448 | Assessing the risk of low energy availability, bone mineral density and psycholo | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms24010690 | Intranasal Administration of Forskolin and Noopept Reverses Parkinsonian Patholo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3389/fvets.2022.1016720 | The neurobiology of pain and facial movements in rodents: Clinical app
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1016/j.heliyon.2023.e18368 | Changes in the central nervous system in diabetic neuropathy
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3389/fpsyt.2020.546796 | The Psychonauts’ World of Cognitive Enhancers
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.4236/nm.2013.44035 | A New Generation of Drugs: Synthetic Peptides Based on Natural Regulat
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1371/journal.pone.0188537 | Unpredictable chronic mild stress differentially impairs social and co
+- FAIL pdf | C | 10.1210/me.2014-1281 | Estrogen-Related Receptor-α Coordinates Transcriptional Programs Essential for E | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1210/en.2008-1311 | Increased Exposure to Estrogens Disturbs Maturation, Steroidogenesis,
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1172/jci27794 | PGC-1 coactivators: inducible regulators of energy metabolism in healt
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.4061/2011/810619 | Mitochondria and PGC-1α in Aging and Age-Associated Diseases
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.jacbts.2019.07.009 | Targeting the Mitochondria in Heart Failure
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1161/circresaha.118.312563 | Mechanisms of Dysfunction in the Aging Vasculature and Role in Age-Rel
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.2174/138161282035140911142118 | Editorial (Thematic Issue: Mitochondrial Biogenesis: Pharmacological A
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.jsbmb.2017.06.008 | The effect of estrogen on tendon and ligament metabolism and function
+- FAIL pdf | C | 10.3390/jox15030088 | The Occurrence of Illicit Smart Drugs or Nootropics in Europe and Australia and  | no OA PDF resolved
+- FAIL pdf | B | 10.1056/nejmoa1411892 | A Randomized, Controlled Trial of 3.0 mg of Liraglutide in Weight Management | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00394-024-03433-8 | Measurement of energy availability in highly trained male endurance athletes and | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2015.9676 | Efficacy of Liraglutide for Weight Loss Among Patients With Type 2 Diabetes | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu16213729 | Male Endurance Athletes: Examination of Energy and Carbohydrate Availability and | no OA PDF resolved
+- FAIL pdf | C | 10.1080/17461391.2022.2157336 | Signs of low energy availability in elite male volleyball athletes but no associ | no OA PDF resolved
+- FAIL pdf | C | 10.1249/mss.0000000000003783 | 24-Hour Low Energy Availability Induced by Diet or Exercise Exhibits Divergent I | no OA PDF resolved
+- FAIL pdf | B | 10.1093/ajcn/nqaa328 | Liraglutide after diet-induced weight loss for pain and weight control in knee o | no OA PDF resolved
+- FAIL pdf | C | 10.1249/01.mss.0001057952.70669.c1 | Examination Of Low Energy Availability And Bone Health In Endurance Trained Runn | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2021.23619 | Effect of Weekly Subcutaneous Semaglutide vs Daily Liraglutide on Body Weight in | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu17020278 | Effects of Short-Term Low Energy Availability on Metabolism and Performance-Rela | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2024-109165 | Low energy availability surrogates are associated with Relative Energy Deficienc | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s40279-024-02130-0 | Low Energy Availability and Relative Energy Deficiency in Sport: A Systematic Re | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2016.7602 | Association of Pharmacological Treatments for Obesity With Weight Loss and Adver | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jsams.2024.10.008 | Effects of low energy availability on performance in male athletes: A scoping re | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmj.d7771 | Effects of glucagon-like peptide-1 receptor agonists on weight loss: systematic  | no OA PDF resolved
+- FAIL pdf | C | 10.1002/osp4.84 | Liraglutide for weight management: a critical review of the evidence | no OA PDF resolved
+- FAIL pdf | C | 10.2337/dc08-2124 | Efficacy and Safety of the Human Glucagon-Like Peptide-1 Analog Liraglutide in C | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1136/bmj.c869 | CONSORT 2010 Explanation and Elaboration: updated guidelines for repor
+- FAIL pdf | B | 10.1002/oby.22726 | Liraglutide 3.0 mg and Intensive Behavioral Therapy (IBT) for Obesity in Primary | no OA PDF resolved
+- FAIL pdf | B | 10.1002/osp4.486 | Energy intake as a short‐term biomarker for weight loss in adults with obesity r | no OA PDF resolved
+- FAIL pdf | B | 10.1002/oby.23481 | Effects of liraglutide on gastrointestinal functions and weight in obesity: A ra | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.soard.2024.08.037 | A randomized, double-blind, placebo-controlled trial of weight loss using liragl | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.rbmo.2017.03.023 | Effects of liraglutide on ovarian dysfunction in polycystic ovary syndrome: a ra | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jamasurg.2023.2930 | Safety and Efficacy of Liraglutide, 3.0 mg, Once Daily vs Placebo in Patients Wi | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/nu18111781 | GLP-1RA- and Incretin-Based Therapies Within Lifestyle Interventions f
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/jpm16060284 | Glucagon-like Peptide-1 Receptor Agonists in Rheumatoid Arthritis: A S
+- FAIL pdf | A | 10.1111/dom.70742 | Cardiometabolic Profiles of Oral and Subcutaneous Glucagon-Like Peptide-1 Recept | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1016/j.obpill.2026.100281 | Effects of lifestyle and glucagon-like Peptide-1 receptor agonist-base
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1093/ajh/hpaf205 | GLP-1 Receptor Agonists and Blood Pressure: A State-of-the-Art Review
+- FAIL pdf | C | 10.1002/cdt3.70048 | GLP-1 Receptor Agonists in Metabolic Dysfunction-Associated Steatotic Liver Dise | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.36628/ijhf.2026.0002 | Nutrient-Stimulated Hormone Therapies in Heart Failure: Targeting Card
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1161/circheartfailure.125.013279 | Mechanisms of GLP-1 Receptor Agonists in HFpEF: Exploring Weight-Depen
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/nu18111688 | GLP-1 Receptor Agonists in the Rehabilitation of Patients with Heart F
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1093/hropen/hoag016 | When drugs meet disease: disentangling diabetes, obesity, and periconc
+- FAIL pdf | A | 10.3390/ijms27125618 | Therapeutic Effects of Glucagon-like Peptide-1 Receptor Agonists in Non-Alcoholi | no OA PDF resolved
+- FAIL pdf | A | 10.4103/jfmpc.jfmpc_1811_25 | Indications, efficacy, and safety of glucagon-like peptide-1 receptor agonists i | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.7759/cureus.108005 | Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists and Thyroid Function
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3389/fnut.2026.1809416 | Balancing metabolic optimization and reproductive safety in Polycystic
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/ph19050732 | Oral GLP-1-Based Therapeutics in the Obesity-Metabolic Syndrome-Diabet
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1093/eurheartjsupp/suag029 | Pharmacological therapy in the obese patient: is it only a matter of f
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.6004/jadpro.2026.17.3.3 | Addressing Tamoxifen-Associated Weight Gain: Lifestyle and Pharmacothe
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/biomedicines14040743 | Integrating GLP-1 Receptor Agonists into Modern Stroke Prevention: Evi
+- FAIL pdf | C | 10.3390/pharmaceutics18050620 | Diabetes Mellitus and Stroke: Pathophysiological Connections and Therapeutic Pot | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2015.9676 | Efficacy of Liraglutide for Weight Loss Among Patients With Type 2 Diabetes | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2021.23619 | Effect of Weekly Subcutaneous Semaglutide vs Daily Liraglutide on Body Weight in | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1016/s0140-6736(21)00536-5 | SGLT2 inhibitors and GLP-1 receptor agonists: established and emerging
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3389/fendo.2021.721135 | GLP-1 Receptor Agonists: Beyond Their Pancreatic Effects
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1016/j.bbadis.2018.05.012 | GLP-1 receptor agonists and reduction of cardiometabolic risk: Potenti
+- FAIL pdf | C | 10.1210/clinem/dgaa285 | Obesity, Polycystic Ovary Syndrome, and Infertility: A New Avenue for GLP-1 Rece | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1056/nejmoa2032183 | Once-Weekly Semaglutide in Adults with Overweight or Obesity
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3389/fendo.2024.1431292 | Mechanisms of action and therapeutic applications of GLP-1 and dual GI
+- FAIL pdf | B | 10.1111/dom.15113 | Effect of the glucagon‐like peptide‐1 receptor agonist liraglutide, compared to  | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1136/bmj.m4573 | Sodium-glucose cotransporter protein-2 (SGLT-2) inhibitors and glucago
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1038/s41392-024-01931-z | Glucagon-like peptide-1 receptor: mechanisms and advances in therapy
+- FAIL pdf | C | 10.1001/jamanetworkopen.2024.57349 | Discontinuation and Reinitiation of Dual-Labeled GLP-1 Receptor Agonists Among U | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1007/s12325-022-02153-x | Efficacy of GLP-1 RA Approved for Weight Management in Patients With o
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/ijms241310449 | Emerging Role of GLP-1 Agonists in Obesity: A Comprehensive Review of
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/ijms24021703 | GLP-1 Receptor Agonists in Non-Alcoholic Fatty Liver Disease: Current
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1007/s00125-018-4729-5 | Management of hyperglycaemia in type 2 diabetes, 2018. A consensus rep
+- FAIL pdf | C | 10.1001/jamasurg.2023.2930 | Safety and Efficacy of Liraglutide, 3.0 mg, Once Daily vs Placebo in Patients Wi | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1016/j.eclinm.2024.102782 | GLP-1 single, dual, and triple receptor agonists for treating type 2 d
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1111/bph.13813 | Lifestyle use of drugs by healthy people for enhancing cognition, crea
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1515/chem-2021-0196 | Overview of the major classes of new psychoactive substances, psychoac
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3389/fphar.2022.898574 | The Involvement of Caspases in Neuroinflammation and Neuronal Apoptosi
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/nep3.42 | Research progress on intranasal treatment for Parkinson's disease
+- FAIL pdf | C | 10.1002/oby.21107 | GLP ‐1 receptor agonists: Nonglycemic clinical effects in weight loss and beyond | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1007/s00125-017-4330-3 | The GLP-1 analogue lixisenatide decreases atherosclerosis in insulin-r
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3389/fimmu.2022.997578 | GLP-1 receptor agonist as a modulator of innate immunity
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1210/clinem/dgab098 | Fasting Plasma GLP-1 Is Associated With Overweight/Obesity and Cardiom
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1146/annurev-med-043021-014919 | New Frontiers in Obesity Treatment: GLP-1 and Nascent Nutrient-Stimula
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1007/s13668-026-00777-x | GLP-1 Receptor Agonists for Obesity Management in Older Adults: A Scop
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1002/dmrr.70194 | The Effects of Glucagon-Like Peptide-1 Receptor Agonists and Sodium-Gl
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/nu18111781 | GLP-1RA- and Incretin-Based Therapies Within Lifestyle Interventions f
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1111/dom.70779 | Dietary Strategies and Nutritional Management in Patients Receiving GL
+- FAIL pdf | C | 10.1136/bmjsem-2024-002250 | Prevalence of physiological and perceptual markers of low energy availability in | no OA PDF resolved
+- FAIL pdf | A | 10.2147/dmso.s590529 | The Effects of Exercise Combined with Pharmacotherapy on Body Composition and Me | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/nu18111688 | GLP-1 Receptor Agonists in the Rehabilitation of Patients with Heart F
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1111/liv.70643 | Effects of GLP-1 Receptor Agonists on Muscle Mass, Strength, and Quali
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3803/enm.2026.2986 | Beyond Weight Loss: Skeletal Considerations in Obesity Treatment
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1097/ms9.0000000000005145 | Semaglutide-induced lean mass loss: clinical concern or physiological
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1172/jci.insight.205174 | Cycling GLP-1 receptor agonist treatment induces therapeutic resistanc
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/healthcare14060734 | A Narrative Review of the Metabolic Benefits of GLP-1 and GIP Receptor
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/ijms262412130 | The Influence of Glucagon-like Peptide-1 Receptor Agonists and Other I
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/nu18010131 | Nutrition and Physical Activity in Optimizing Weight Loss and Lean Mas
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1111/eci.70155 | Muscle health in the modern era of incretin-based therapies
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1177/15563316261438492 | GLP-1 Agonists in Orthopedic Surgery: A Narrative Review of Bone Healt
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1111/obr.70041 | Understanding Impact of Anti-Obesity Medications on Skeletal Muscle Ma
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.2196/101874 | After the Prescription: The Clinical Support Gap in Telehealth-Based G
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1186/s13098-026-02133-z | Research progress on the molecular mechanism and clinical evidence of
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/ph19050766 | Dosing Strategies for High-Alert Medications in Obese Pediatric Patien
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.6004/jadpro.2026.17.3.3 | Addressing Tamoxifen-Associated Weight Gain: Lifestyle and Pharmacothe
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/ph19060897 | Optimizing Weight Loss in the GLP-1 Era: Preserving Muscle Mass, Funct
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1016/j.obpill.2025.100222 | Optimizing GLP-1 therapies for obesity and diabetes management
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.3390/medicina61091691 | Impact of Incretin-Based Therapy on Skeletal Muscle Health
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1056/nejmoa2032183 | Once-Weekly Semaglutide in Adults with Overweight or Obesity
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1159/000442721 | European Guidelines for Obesity Management in Adults
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1161/circresaha.120.316101 | Obesity Phenotypes, Diabetes, and Cardiovascular Diseases
+- FAIL pdf | C | 10.3389/fmmed.2026.1801523 | Blood biomarkers and atrial remodeling in patients at risk of atrial fibrillatio | no OA PDF resolved
+- FAIL pdf | C | PMC13302012 | Physical activity across the spectrum: protective and proarrhythmic effects on a | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2015.9676 | Efficacy of Liraglutide for Weight Loss Among Patients With Type 2 Diabetes | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1210/endrev/bnaa004 | Metabolically Healthy Obesity
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1016/j.jacc.2017.11.011 | Obesity
+- FAIL pdf | C | 10.1001/jama.2016.7602 | Association of Pharmacological Treatments for Obesity With Weight Loss and Adver | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107061 | Atrial Fibrillation in Athletes: Mechanisms, Management, and Future Directions | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2023.19897 | Obesity Management in Adults | no OA PDF resolved
+- FAIL pdf | C | 10.1161/jaha.125.048048 | In Endurance Athletes at Risk for Arrhythmias, Screen Early and Gauge Often | no OA PDF resolved
+- FAIL pdf | C | 10.2337/diacare.27.8.1915 | The Effect of Liraglutide, a Long-Acting Glucagon-Like Peptide 1 Derivative, on  | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1038/s41573-021-00337-8 | Anti-obesity drug discovery: advances and challenges
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107352 | Clinical and Cardiovascular Magnetic Resonance Findings in Endurance Athletes Wi | no OA PDF resolved
+- FAIL pdf | C | 10.2147/dddt.s58459 | Liraglutide and obesity: a review of the data so far | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1001/jama.2021.3224 | Effect of Continued Weekly Subcutaneous Semaglutide vs Placebo on Weig
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1210/jc.2016-2573 | Pediatric Obesity—Assessment, Treatment, and Prevention: An Endocrine
+- FAIL pdf | C | 10.1210/clinem/dgz140 | GLP-1 Analog Modulates Appetite, Taste Preference, Gut Hormones, and Regional Bo | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1111/dom.15728 | Changes in lean body mass with glucagon‐like peptide ‐1‐based therapie
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1002/hep.29367 | The diagnosis and management of nonalcoholic fatty liver disease: Prac
+- FAIL pdf | C | 10.3390/ijms27125250 | Precision Cardiogenomics in Athletes | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.molmet.2021.101351 | GLP-1 physiology informs the pharmacotherapy of obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/liraglutide | 10.1186/s13098-020-00570-y | NAFLD as a continuum: from obesity to metabolic syndrome and diabetes
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2025.1630199 | A glimpse into the pipeline of anti-obesity medication development: co
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4274/jcrpe.galenos.2025.2025-12-12 | Current Approaches and Therapeutic Strategies for Hypothalamic Syndrom
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/medicines12030019 | Obesity: Clinical Impact, Pathophysiology, Complications, and Modern I
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3345/cep.2025.02838 | Systematic review of influence of ethnicity on efficacy and safety of
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.obpill.2024.100139 | Obesity in patients with craniopharyngioma in the South Asian region -
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s00213-025-06861-4 | Ascending single-dose study of the safety, pharmacokinetics, and pharm
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2026.1768254 | Quality of life, morbidity, mortality, and long-term prognosis after c
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ijms25158202 | Molecular Mechanisms behind Obesity and Their Potential Exploitation i
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2023.1256514 | Treatment of hypothalamic obesity in people with hypothalamic injury:
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1507/endocrj.ej25-0408 | Diagnostic criteria for acquired hypothalamic obesity - international
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnaf025 | Management of Acquired Hypothalamic Dysfunction and the Hypothalamic S
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/biomedicines13051016 | Management of Acquired Hypothalamic Obesity After Childhood-Onset Cran
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/cancers16193275 | Mechanisms by Which Pharmacotherapy May Impact Cancer Risk among Indiv
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/jendso/bvae200 | Treatment of Hypothalamic Obesity With GLP-1 Analogs
+- FAIL pdf | B | 10.1530/eje-21-0972 | Randomized controlled trial of Tesomet for weight loss in hypothalamic obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.ajcnut.2025.06.015 | Novel strategies for medical management of obesity: mechanisms, clinic
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ijms27041925 | Reexamining Fat: Exploring Diversity, Plasticity, Development, Functio
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/healthcare11030433 | Pharmacological Support for the Treatment of Obesity-Present and Futur
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s11102-024-01429-5 | Semaglutide treatment of hypothalamic obesity - a real-life data study
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.eclinm.2023.101882 | Pharmacotherapy of obesity: an update on the available medications and
+- FAIL pdf | C | PMC8089137 | Weight Loss, Improved Body Composition and Fat Distribution by Tesomet in Acquir | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2022.846880 | Treatment of Acquired Hypothalamic Obesity: Now and the Future
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.jsps.2023.101757 | A narrative review of approved and emerging anti-obesity medications
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2020.0258 | Comprehensive Review of Current and Upcoming Anti-Obesity Drugs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnad033 | Appetite- and Weight-Regulating Neuroendocrine Circuitry in Hypothalam
+- FAIL pdf | C | 10.1016/j.hrcr.2025.10.027 | Navigating atrial fibrillation in an endurance athlete: Evaluation, risk stratif | no OA PDF resolved
+- FAIL pdf | C | 10.1161/jaha.125.044421 | Preserved Cardiorespiratory Fitness After Catheter Ablation in Athletes With Atr | no OA PDF resolved
+- FAIL pdf | C | 10.1038/oby.2011.197 | The Effect of Tesofensine on Appetite Sensations | no OA PDF resolved
+- FAIL pdf | B | 10.1530/eje-21-0972 | Randomized controlled trial of Tesomet for weight loss in hypothalamic obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1038/s41573-021-00337-8 | Anti-obesity drug discovery: advances and challenges
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.2147/ndt.s113099 | Antipsychotic-associated weight gain: management strategies and impact
+- FAIL pdf | C | 10.1155/2011/179674 | Pharmacotherapies for Obesity: Past, Current, and Future Therapies | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.eclinm.2023.101882 | Pharmacotherapy of obesity: an update on the available medications and
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s13679-020-00422-w | Long-Term Efficacy and Safety of Anti-Obesity Treatment: Where Do We S
+- FAIL pdf | C | 10.3390/jcm15062170 | The Use of Digital Devices in the Management of Athletes with Paroxysmal Arrhyth | no OA PDF resolved
+- FAIL pdf | C | 10.1093/eurheartj/ehaf410 | Atrial fibrillation in elite rowers: a genetic and endurance sport nexus? | no OA PDF resolved
+- FAIL pdf | C | 10.1161/jaha.125.042308 | Clinical and Cardiovascular Magnetic Resonance Characteristics of Veteran Male E | no OA PDF resolved
+- FAIL pdf | C | 10.1038/npp.2010.16 | Tesofensine, a Novel Triple Monoamine Reuptake Inhibitor, Induces Appetite Suppr | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnaa004 | Metabolically Healthy Obesity
+- FAIL pdf | C | 10.1002/oby.20122 | Anti‐hypertensive treatment preserves appetite suppression while preventing card | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2012.36.1.13 | Anti-Obesity Drugs: A Review about Their Effects and Safety
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ph14080717 | Current Therapies in Clinical Trials of Parkinson’s Disease: A 2021 Up
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s11095-010-0341-1 | Current and Future Drug Targets in Weight Management
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1038/ijo.2015.220 | Altered gut and adipose tissue hormones in overweight and obese indivi
+- FAIL pdf | C | 10.1208/s12248-009-9164-6 | Quantitative Pharmacology Approach in Alzheimer’s Disease: Efficacy Modeling of  | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18050736 | Forensic Perspective of Unintentional Doping, Cardiovascular Health, and the Rol | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jendso/bvab048.130 | Weight Loss, Improved Body Composition and Fat Distribution by Tesomet in Acquir | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1186/s11689-021-09373-2 | Behavioral features in Prader-Willi syndrome (PWS): consensus paper fr
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2020.0258 | Comprehensive Review of Current and Upcoming Anti-Obesity Drugs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ijms24032150 | Clinical Trials in Prader–Willi Syndrome: A Review
+- FAIL pdf | C | 10.1111/j.1755-5949.2010.00172.x | Neuropsychiatric Adverse Effects of Centrally Acting Antiobesity Drugs | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/s2213-8587(14)70004-x | Combating the dual burden: therapeutic targeting of common pathways in
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnad033 | Appetite- and Weight-Regulating Neuroendocrine Circuitry in Hypothalam
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.2147/dmso.s58786 | Combination of the sodium-glucose cotransporter-2 inhibitor empagliflo
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1155/2011/459263 | Usage, Risk, and Benefit of Weight-Loss Drugs in Primary Care
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s00213-025-06861-4 | Ascending single-dose study of the safety, pharmacokinetics, and pharm
+- OFF-TOPIC | 14_hormones_thyroid_heart/athlete_cardiac_health | PMC13301037 | The Oxygen Imperative: Cardiorespiratory Fitness, Dose-Dependent Exerc
+- FAIL pdf | C | 10.1371/journal.pone.0325067 | Sex-specific effects of appetite suppressants on stereotypy in rats | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4274/jcrpe.galenos.2025.2025-12-12 | Current Approaches and Therapeutic Strategies for Hypothalamic Syndrom
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/medicines12030019 | Obesity: Clinical Impact, Pathophysiology, Complications, and Modern I
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2025.1630199 | A glimpse into the pipeline of anti-obesity medication development: co
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/genes16121436 | Barriers, Limitations, and Experiences with Clinical Trials-Treatment
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2023.1256514 | Treatment of hypothalamic obesity in people with hypothalamic injury:
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnaf025 | Management of Acquired Hypothalamic Dysfunction and the Hypothalamic S
+- FAIL pdf | C | 10.3390/jcdd12070260 | Divergent Cardiac Adaptations in Endurance Sport: Atrial Fibrillation Markers in | no OA PDF resolved
+- FAIL pdf | B | 10.1530/eje-21-0972 | Randomized controlled trial of Tesomet for weight loss in hypothalamic obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1155/jobe/7821115 | A Complex Network of Obesity-Risk Genes Revealed by Systematic Bioinfo
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2022.846880 | Treatment of Acquired Hypothalamic Obesity: Now and the Future
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2021.781361 | Editorial: Developmental Programming of Metabolic Diseases
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/jendso/bvae200 | Treatment of Hypothalamic Obesity With GLP-1 Analogs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/healthcare11030433 | Pharmacological Support for the Treatment of Obesity-Present and Futur
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.eclinm.2023.101882 | Pharmacotherapy of obesity: an update on the available medications and
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnad033 | Appetite- and Weight-Regulating Neuroendocrine Circuitry in Hypothalam
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ph16020212 | Pharmacological Treatments and Natural Biocompounds in Weight Manageme
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2020.0258 | Comprehensive Review of Current and Upcoming Anti-Obesity Drugs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/jcm10194540 | Anti-Obesity Medication Use in Children and Adolescents with Prader-Wi
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s13679-020-00422-w | Long-Term Efficacy and Safety of Anti-Obesity Treatment: Where Do We S
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/nu14091950 | Prader-Willi Syndrome: Possibilities of Weight Gain Prevention and Tre
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1038/s41573-021-00337-8 | Anti-obesity drug discovery: advances and challenges
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.obpill.2022.100018 | Anti-Obesity Medications and Investigational Agents: An Obesity Medici
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.2147/dnnd.s452009 | Review of Pharmacotherapeutic Targets in Alzheimer's Disease and Its M
+- FAIL pdf | C | 10.3390/jcdd12100401 | Extensive Approach to Atrial Fibrillation: Background and Future Perspectives | no OA PDF resolved
+- FAIL pdf | C | 10.3390/jcm14186601 | Atrial Fibrillation Ablation After Three Decades: Mechanistic Insight or Just a  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2025.103507 | Atrial Fibrillation in an Elite Athlete: Continuous ECG Monitoring Guiding Thera | no OA PDF resolved
+- FAIL pdf | C | 10.1038/npp.2010.16 | Tesofensine, a Novel Triple Monoamine Reuptake Inhibitor, Induces Appetite Suppr | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnaa004 | Metabolically Healthy Obesity
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1038/s41573-021-00337-8 | Anti-obesity drug discovery: advances and challenges
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.eclinm.2023.101882 | Pharmacotherapy of obesity: an update on the available medications and
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1242/dmm.009621 | Anti-obesity drugs: past, present and future
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.7861/clinmedicine.19-3-205 | Current treatments for obesity
+- FAIL pdf | C | 10.1002/oby.20122 | Anti‐hypertensive treatment preserves appetite suppression while preventing card | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s13679-020-00422-w | Long-Term Efficacy and Safety of Anti-Obesity Treatment: Where Do We S
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.pharmthera.2016.10.015 | Obesity: Current and potential pharmacotherapeutics and targets
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1038/ijo.2015.220 | Altered gut and adipose tissue hormones in overweight and obese indivi
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1111/j.1365-2125.2009.03550.x | New central targets for the treatment of obesity
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2020.0258 | Comprehensive Review of Current and Upcoming Anti-Obesity Drugs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1161/circulationaha.111.026567 | Medical Therapy for the Patient With Obesity
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnab034 | Novel Noninvasive Approaches to the Treatment of Obesity: From Pharmac
+- FAIL pdf | C | 10.1016/j.jaccas.2025.106502 | Cardiopulmonary Exercise Testing to Troubleshoot Rate-Responsive Pacing in an At | no OA PDF resolved
+- FAIL pdf | A | 10.1093/eurheartj/ehq278 | Guidelines for the management of atrial fibrillation | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circresaha.117.309732 | Atrial Fibrillation | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circresaha.120.316340 | Epidemiology of Atrial Fibrillation in the 21st Century | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circresaha.114.303211 | The Clinical Profile and Pathophysiology of Atrial Fibrillation | no OA PDF resolved
+- FAIL pdf | C | 10.1093/europace/eun289 | Endurance sport practice as a risk factor for atrial fibrillation and atrial flu | no OA PDF resolved
+- FAIL pdf | C | 10.1517/13543780902967632 | Tesofensine – a novel potent weight loss medicine | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1111/j.1476-5381.2011.01245.x | The utility of animal models to evaluate novel anti‐obesity agents
+- FAIL pdf | C | 10.1111/j.1755-5949.2010.00172.x | Neuropsychiatric Adverse Effects of Centrally Acting Antiobesity Drugs | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4306/pi.2008.5.3.142 | Triple Reuptake Inhibitors: A Premise and Promise
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2022.846880 | Treatment of Acquired Hypothalamic Obesity: Now and the Future
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.nurt.2008.10.039 | Dual- and Triple-Acting Agents for Treating Core and Co-morbid Symptom
+- FAIL pdf | C | 10.1093/eurheartj/ehy136 | The 2018 European Heart Rhythm Association Practical Guide on the use of non-vit | no OA PDF resolved
+- FAIL pdf | B | 10.1530/eje-21-0972 | Randomized controlled trial of Tesomet for weight loss in hypothalamic obesity | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circresaha.114.303772 | Role of the Autonomic Nervous System in Atrial Fibrillation | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1365-2125.2007.02855.x | Population pharmacokinetic modelling of NS2330 (tesofensine) and its major metab | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.2147/dmso.s56924 | Inhibition of the methionine aminopeptidase 2 enzyme for the treatment
+- FAIL pdf | C | 10.1177/2047487313476414 | Atrial fibrillation in endurance athletes | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jacc.2013.01.091 | Atrial Fibrillation Promotion by Endurance Exercise | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s41182-026-00995-7 | Soil-transmitted helminth infections among migrants and travelers: a 10-year ret | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/antiparasitic_deworming_humans | 10.1503/cmaj.251445 | Locally acquired ascariasis in northern Ontario
+- FAIL pdf | A | 10.1002/brb3.71326 | Parasitic Infections and Associated Cognitive Outcome Among School-Aged Children | no OA PDF resolved
+- FAIL pdf | C | 10.1155/japr/2720965 | Prevalence of Malaria and Soil-Transmitted Helminths and Associated Factors Amon | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/antiparasitic_deworming_humans | 10.2196/76450 | Effects of Cash Transfer and Incentive Programs on Service Utilization
+- FAIL pdf | C | 10.1371/journal.pntd.0012415 | Prevalence and intensity of soil-transmitted helminth infections in Narok and Bo | no OA PDF resolved
+- FAIL pdf | C | 10.1038/s41598-024-73164-7 | Modeling transmission mechanism to infer treatment efficacy of different drugs a | no OA PDF resolved
+- FAIL pdf | A | 10.1097/md.0000000000041280 | Efficacy and safety of ivermectin-albendazole combination versus ivermectin or a | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/antiparasitic_deworming_humans | 10.3389/fphar.2026.1742086 | Neglected tropical diseases: recent trends and challenges associated w
+- FAIL pdf | C | 10.1371/journal.pntd.0012689 | Human intestinal nematode infections in Sri Lanka: A scoping review | no OA PDF resolved
+- FAIL pdf | B | 10.1371/journal.pntd.0012687 | Efficacy and safety of albendazole alone versus albendazole in combination with  | no OA PDF resolved
+- FAIL pdf | C | 10.3201/eid3101.240995 | Trichuriasis in Human Patients from Côte d'Ivoire Caused by Novel Trichuris inco | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2022-106035 | Elite female endurance athletes are at increased risk of atrial fibrillation com | no OA PDF resolved
+- FAIL pdf | A | 10.1093/europace/eup197 | Is the risk of atrial fibrillation higher in athletes than in the general popula | no OA PDF resolved
+- FAIL pdf | C | 10.1093/europace/eup320 | Efficacy of circumferential pulmonary vein ablation of atrial fibrillation in en | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2012-091171 | Atrial fibrillation and atrial flutter in athletes | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bjsports-2021-103994 | Risk of atrial fibrillation in athletes: a systematic review and meta-analysis | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jacc.2017.09.002 | Obesity and Atrial Fibrillation Prevalence, Pathogenesis, and Prognosis | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jacc.2005.04.052 | Prevalence and Clinical Significance of Left Atrial Remodeling in Competitive At | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.amjcard.2011.03.086 | Atrial Remodeling, Autonomic Tone, and Lifetime Training Hours in Nonelite Athle | no OA PDF resolved
+- FAIL pdf | C | 10.1093/europace/eun071 | Long-term endurance sport practice increases the incidence of lone atrial fibril | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/antiparasitic_deworming_humans | 10.1186/s40560-025-00843-6 | Extracorporeal membrane oxygenation support for tropical infections: a
+- FAIL pdf | C | 10.1016/j.jacep.2017.03.019 | Atrial Fibrillation in Athletes | no OA PDF resolved
+- FAIL pdf | C | 10.1177/20499361251332148 | Not your typical hookworm infection-a case report from the Peruvian Amazon and r | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107061 | Atrial Fibrillation in Athletes: Mechanisms, Management, and Future Directions | no OA PDF resolved
+- FAIL pdf | C | 10.1161/jaha.125.046704 | Wrestler's Heart: Cardiac Remodeling in World Wrestling Entertainment Athletes | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmj.j4307 | Efficacy of recommended drugs against soil transmitted helminths: systematic rev | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107402 | Arrhythmogenic Cardiomyopathy Versus Viral Myocarditis in a Professional Athlete | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107195 | Navigating the Intersection of Complex Anatomy and Extreme Physiology in Adult C | no OA PDF resolved
+- FAIL pdf | A | 10.1371/journal.pntd.0001621 | Soil-Transmitted Helminth Reinfection after Drug Treatment: A Systematic Review  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.106873 | Aortic Regurgitation and Progressive Left Ventricular Dilation in a Professional | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.106939 | Aortic Root Dilation in a Masters Dressage Athlete With Familial TAAD | no OA PDF resolved
+- FAIL pdf | C | 10.3347/kjp.2021.59.3.189 | Albendazole and Mebendazole as Anti-Parasitic and Anti-Cancer Agents: an Update | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107493 | Electroanatomical Mapping May Identify Concealed Arrhythmogenic Cardiomyopathy i | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ijpddr.2011.09.002 | Is anthelmintic resistance a concern for the control of human soil-transmitted h | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fcvm.2026.1746819 | Role of exercise in cardiovascular health: a narrative review from prevention to | no OA PDF resolved
+- FAIL pdf | A | 10.4103/indianjpsychiatry_986_25 | Non-invasive brain stimulation as an experimental treatment approach for bulimia | no OA PDF resolved
+- FAIL pdf | B | 10.1001/jamanetworkopen.2026.14898 | Once-Weekly Semaglutide in Adults With Daily Cigarette Use: A Randomized Clinica | no OA PDF resolved
+- FAIL pdf | C | 10.1111/fcp.70103 | Glucagon-Like Peptide-1 Receptor Agonists in Cocaine Use Disorder: Clinical Obse | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1186/s12991-026-00673-2 | Efficacy and safety of repetitive transcranial magnetic stimulation in
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1111/dme.70328 | Safety and efficacy of intermittent fasting with or without exercise i
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107030 | Bicuspid Aortic Valve Aortopathy in an Athlete: A Case Report and Mini-Review | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107412 | Complete Heart Block Related to Bicuspid Aortic Valve Calcification in a Triathl | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fnut.2026.1845848 | Exercise modulates food reward: neurobiological mechanisms and implications for  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jaccas.2026.107276 | Aortic Root Enlargement in a Young Athlete | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.2196/78973 | PATH Trial for Examining Yoga as a Strategy to Improve Remote-Based We
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1002/eat.70034 | Cannabidiol in Anorexia Nervosa: A Double-Blind Randomized Placebo Con
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1186/s12884-026-08846-3 | A randomized digital behavioral intervention for prenatal and postpart
+- FAIL pdf | C | 10.1002/hsr2.72398 | Genotype-Phenotype Discordance in Cardiomyopathies: Pathophysiology, Clinical Ex | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bmjopen-2025-115675 | Repurposing semaglutide as an adjunctive treatment for cocaine use disorder: pro | no OA PDF resolved
+- FAIL pdf | B | 10.1186/s40337-025-01522-5 | The MotivATE randomized controlled trial: treating food addiction with adapted m | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/jpm16060313 | Personalized Combination of a Ketogenic Diet and Low-Dose Semaglutide
+- FAIL pdf | C | 10.1080/20008066.2026.2650920 | Attenuating trauma- and cocaine-related intrusions by blocking memory reconsolid | no OA PDF resolved
+- FAIL pdf | C | 10.1161/jaha.125.042308 | Clinical and Cardiovascular Magnetic Resonance Characteristics of Veteran Male E | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.2196/91761 | Combining Digital Cognitive Behavioral Therapy With Mindfulness Traini
+- FAIL pdf | C | 10.1080/19490976.2026.2647535 | Dysregulated eating behaviour and microbiota-based interventions targeting eatin | no OA PDF resolved
+- FAIL pdf | C | 10.1111/sms.70071 | Effects on Cardiac Dimensions and Peak Oxygen Uptake After Long-Term Decondition | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s13063-025-09306-7 | Comparison of morning vs evening exercise on weight loss and related health beha | no OA PDF resolved
+- FAIL pdf | C | 10.14412/2074-2711-2022-2-49-55 | Possibilities nootropic drugs in non-demented patients with vascular cognitive d | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3897/rrpharmacology.6.55142 | Influence of Diazepino[1,2-a]benzimidazole derivative (DAB-19) on beha
+- FAIL pdf | B | 10.3390/nu17233778 | Consuming Tree Nuts Daily as Between-Meal Snacks Reduces Food Cravings and Impro | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1134/s1819712423020198 | Cognitive Impairment and Nootropic Drugs: Mechanism of Action and Spec
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/molecules25215132 | The New Dipeptide TSPO Ligands: Design, Synthesis and Structure–Anxiol
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/foods13060908 | Adulteration of Brain Health (Cognitive, Mood, and Sleep Enhancement)
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.1002/iid3.1345 | Silencing of FTO inhibits oxidative stress to relieve neuropathic pain
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.25009/eb.v10i25.2568 | The effect of using kefir grains and mesenchymal stem cells in LPS-ind
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/ijms25031840 | Extracts of Sideritis scardica and Clinopodium vulgare Alleviate Cogni
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.5817/csf2021-3-91 | Investigation of the effect of a modified fragment of neuropeptide Y o
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.3390/pharmaceutics14040716 | Development of Peptide Biopharmaceuticals in Russia
+- OFF-TOPIC | 08_peptides_gray/noopept | 10.33647/2074-5982-15-2-69-74 | METHODS FOR ESTIMATING NEUROLOGICAL DISTURBANCES IN EXPERIMENTAL CEREB
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s43556-026-00483-8 | Exercise mimetics: molecular mechanisms, biological and therapeutic ef
+- OFF-TOPIC | 08_peptides_gray/aicar | PMC13296738 | Modulation of Stress and Anabolic Signalling Pathways by Whey Protein
+- FAIL pdf | A | 10.3390/nu18101579 | The Effects of Colostrum Bovinum Supplementation on Human Body Fat Content and/o | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu18111687 | Sports Drinks for Rehydration, Amelioration of Fatigue, and Recovery f
+- FAIL pdf | C | 10.1080/14756366.2026.2616019 | Investigation of exercise-mimetic bioactive molecules as modulators of MMP activ | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms27062599 | Restoring Mitochondrial Homeostasis: Therapeutic Strategies for Metabo
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.jshs.2025.101092 | Kidney betaine: A potential broad spectrum exercise mimetic against ag
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.metop.2026.100466 | Bridging exercise biology and immunometabolism: A novel irisin pathway
+- OFF-TOPIC | 08_peptides_gray/aicar | PMC13297222 | AMPK Signalling in Heart Failure: From Metabolic Sensor to Context-Dep
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms27083475 | Canonical and Alternative Pathways (Insulin and Exercise) of GLUT4 Syn
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.jare.2025.08.022 | Exercise improves hypobaric hypoxia-induced skeletal muscle dysfunctio
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/nu17060969 | Exercise Mimetics in Aging: Suggestions from a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.7150/ijbs.126841 | Exercise Impacts Liver Disease: Balancing Metabolic and Immune Homeost
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.redox.2026.104186 | Multi-omics reveals molecular signatures of moderate intensity exercis
+- FAIL pdf | C | 10.1016/j.appet.2010.05.044 | Coping with food cravings. Investigating the potential of a mindfulness-based in | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1007/s13142-014-0265-0 | Introduction to SMART designs for the development of adaptive interven
+- FAIL pdf | C | 10.3390/ijms26010080 | Administration of AICAR, an AMPK Activator, Prevents and Reverses Diabetic Polyn | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1111/cns.70657 | AMPK/SIRT1/PGC-1α Signaling Pathway: Molecular Mechanisms and Targeted
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/antiox14050615 | Sex-Specific Antioxidant and Anti-Inflammatory Protective Effects of A
+- FAIL pdf | C | 10.3390/ijms262110673 | Clinical Applications of Bovine Colostrum in GastrointestinaI Disorders: Mechani | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1002/14651858.cd001872.pub2 | Interventions for treating obesity in children
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1007/s12160-016-9830-8 | Just-in-Time Adaptive Interventions (JITAIs) in Mobile Health: Key Com
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1159/000442721 | European Guidelines for Obesity Management in Adults
+- FAIL pdf | C | 10.1159/000548603 | Potential Role of Aerobic Exercise in Attenuating Diabetic Cardiomyopathy via Mo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/metabo16030196 | Exercise Reprograms the Spatial Function of Phosphoglycerate Dehydroge
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1111/febs.70241 | Combating muscle atrophy: emerging therapeutic targets that are fiber-
+- FAIL pdf | C | 10.1101/2024.12.08.627390 | Exercise-induced differential transcriptional output of AMPK signalling improves | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms26167936 | Exploring the Therapeutic Potential of Bovine Colostrum for Cancer Therapies | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1093/nutrit/nuae082 | Nutritional Strategies for Optimizing Health, Sports Performance, and
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s40279-025-02186-6 | Sports Dietitians Australia and Ultra Sports Science Foundation Joint
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fphys.2025.1551284 | Gastrointestinal function and microbiota in endurance athletes
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s40279-025-02292-5 | Evaluating the Impact of Urolithin A Supplementation on Running Perfor
+- FAIL pdf | C | 10.1016/j.appet.2013.08.005 | Brief guided imagery and body scanning interventions reduce food cravings | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1371/journal.pmed.1001362 | The Effectiveness of Mobile-Health Technology-Based Health Behaviour C
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu6104552 | The Prevalence of Food Addiction as Assessed by the Yale Food Addictio
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1038/oby.2010.147 | Weight Loss With Naltrexone SR/Bupropion SR Combination Therapy as an
+- FAIL pdf | C | 10.1096/fba.2024-00252 | Chronic treatment of old mice with AICAR reverses age-related changes in exercis | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1002/mco2.70601 | LKB1-AMPK Signaling Pathway in Cardiovascular and Other Diseases
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1007/s12672-025-02229-4 | AMPK: an enzyme that may be effective in cancer and metabolic diseases
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms26157573 | Which Approach to Choose to Counteract Musculoskeletal Aging? A Compre
+- FAIL pdf | A | 10.1080/15502783.2025.2467890 | Effects of different dietary supplements on athletic performance in soccer playe | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.cell.2008.06.051 | AMPK and PPARδ Agonists Are Exercise Mimetics
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/nrm3311 | AMPK: a nutrient and energy sensor that maintains energy homeostasis
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/emm.2016.16 | AMPK activators: mechanisms of action and physiological activities
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.tcb.2015.10.013 | AMPK: An Energy-Sensing Pathway with Multiple Inputs and Outputs
+- FAIL pdf | C | 10.1523/jneurosci.2105-10.2010 | Weight Gain Is Associated with Reduced Striatal Response to Palatable Food | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1111/obr.12241 | Effectiveness of weight loss interventions – is there a difference bet
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1002/oby.20967 | NIH working group report: Innovative research to improve maintenance o
+- FAIL pdf | C | 10.18632/oncotarget.4715 | Exercise-mimetic AICAR transiently benefits brain function | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/sj.emboj.7600667 | Deficiency of LKB1 in skeletal muscle prevents AMPK activation and glu
+- FAIL pdf | C | 10.3390/nu16132007 | A Review: The Effect of Bovine Colostrum on Immunity in People of All Ages | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.phrs.2014.04.004 | Naltrexone/bupropion for obesity: An investigational combination pharmacotherapy | no OA PDF resolved
+- FAIL pdf | A | 10.3390/cells10051095 | AICAr, a Widely Used AMPK Activator with Important AMPK-Independent Effects: A S | no OA PDF resolved
+- FAIL pdf | C | 10.3233/bpl-160043 | Exercise in a Pill: The Latest on Exercise-Mimetics | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu16244305 | Bovine Colostrum in Pediatric Nutrition and Health | no OA PDF resolved
+- FAIL pdf | C | 10.1101/lm.033332.113 | AMPK agonist AICAR improves cognition and motor coordination in young and aged m | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1101/cshperspect.a029694 | Health Benefits of Exercise
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.2147/dmso.s43731 | AMPK activation: a therapeutic target for type 2 diabetes?
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1128/mcb.00118-16 | AMPK Facilitates Nuclear Accumulation of Nrf2 by Phosphorylating at Se
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s13045-020-00949-4 | The MAPK and AMPK signalings: interplay and implication in targeted ca
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.cmet.2014.03.031 | Estradiol Regulates Brown Adipose Tissue Thermogenesis via Hypothalami
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms21144987 | AMPK, Mitochondrial Function, and Cardiovascular Disease
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1111/j.1476-5381.2012.01970.x | Exercise acts as a drug; the pharmacological benefits of exercise
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.2741/3460 | Targeting the AMPK pathway for the treatment of Type 2 diabetes
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1042/bj20080557 | Important role of the LKB1–AMPK pathway in suppressing tumorigenesis i
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1101/gad.17420111 | AMP-activated protein kinase—an energy sensor that regulates all aspec
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.ajpath.2012.04.004 | AMPK Activation Stimulates Autophagy and Ameliorates Muscular Dystroph
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms19103125 | The Role of AMPK in the Regulation of Skeletal Muscle Size, Hypertroph
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1111/febs.15863 | AMPK, metabolism, and vascular function
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.4161/cc.7.23.7164 | Comparing and contrasting the roles of AMPK and SIRT1 in metabolic tis
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1172/jci29044 | AMP-activated protein kinase signaling in metabolic regulation
+- FAIL pdf | B | 10.3389/fimmu.2024.1395437 | Exploring the impact of colostrum supplementation on athletes: a comprehensive a | no OA PDF resolved
+- FAIL pdf | C | 10.1038/s41593-020-00742-z | Acute social isolation evokes midbrain craving responses similar to hunger | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1002/oby.21396 | Effects of a mindfulness‐based weight loss intervention in adults with
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1136/bmj.k4583 | Effects of a low carbohydrate diet on energy expenditure during weight
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s43556-026-00483-8 | Exercise mimetics: molecular mechanisms, biological and therapeutic ef
+- FAIL pdf | C | 10.3390/nu18111770 | Whey Proteins and Immunity: Mechanisms Underlying Immune System Reinforcement an | no OA PDF resolved
+- FAIL pdf | C | 10.1002/jcsm.70261 | Elevated Kallistatin Induces Myosteatosis and Exercise Intolerance by Antagonizi | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.jbc.2026.111219 | Disruptions of cell signaling pathways in myotonic dystrophy type 1 sk
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1126/sciadv.aeb3338 | Ampk alpha2 T172 activation dictates exercise performance and energy t
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s13578-025-01519-2 | PGC-1α: key regulator of mitochondrial biogenesis and cellular differe
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1111/febs.70241 | Combating muscle atrophy: emerging therapeutic targets that are fiber-
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fspor.2026.1710264 | Effects of exercise training on skeletal muscle function in patients w
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.jare.2025.08.022 | Exercise improves hypobaric hypoxia-induced skeletal muscle dysfunctio
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.isci.2026.115024 | Skeletal muscle metabolism in health and disease: Mechanisms, interven
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.7150/ijbs.126841 | Exercise Impacts Liver Disease: Balancing Metabolic and Immune Homeost
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.isci.2025.114403 | SportsXbiodata: A web platform for integrative analysis of exercise-in
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/nu17060969 | Exercise Mimetics in Aging: Suggestions from a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms27041817 | Metabolic Overdrive in Elite Sport: A Systems Model of AMPK-mTOR Oscil
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms27083475 | Canonical and Alternative Pathways (Insulin and Exercise) of GLUT4 Syn
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fcell.2026.1878702 | Targeting nuclear receptors in muscular dystrophies and regenerative m
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms262311348 | Therapeutic Potential of Irisin in Neurodegenerative Diseases
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fphys.2026.1760364 | Targeting necroptosis: how does exercise protect against metabolic dys
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.redox.2026.104186 | Multi-omics reveals molecular signatures of moderate intensity exercis
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fcvm.2026.1746819 | Role of exercise in cardiovascular health: a narrative review from pre
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.7759/cureus.96018 | The Role of Mammalian Target of Rapamycin (mTOR) and Adenosine Monopho
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fcvm.2025.1638515 | Isoform-specific roles of AMP-activated protein kinase in cardiac phys
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1113/ep093049 | The skeletal muscle-adipose creatine metabolic axis: A novel paradigm
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms262412096 | Exercise-Induced Molecular Adaptations in Chronic Non-Communicable Dis
+- OFF-TOPIC | 08_peptides_gray/aicar | PMC12721820 | Effect of Muscle Contraction Under Caloric Restriction on Irisin and F
+- FAIL pdf | C | 10.1093/jn/133.3.835s | Sugar and Fat: Cravings and Aversions | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1002/14651858.cd006219.pub3 | Interventions for preventing weight gain after smoking cessation
+- FAIL pdf | B | 10.3390/nu15224779 | Long-Term Bovine Colostrum Supplementation in Football Players | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu17243877 | Effects of Supplementation with Milk Proteins on Body Composition and
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.14814/phy2.70479 | Rigorous methodological approaches to address knowledge gaps in exerci
+- FAIL pdf | C | 10.1096/fba.2024-00252 | Chronic treatment of old mice with AICAR reverses age-related changes in exercis | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1001/jama.2021.23619 | Effect of Weekly Subcutaneous Semaglutide vs Daily Liraglutide on Body
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu18111751 | Nutrition-First Support for GLP-1 and Dual Incretin Therapy in Obesity
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/ph19060897 | Optimizing Weight Loss in the GLP-1 Era: Preserving Muscle Mass, Funct
+- FAIL pdf | C | 10.1074/jbc.c200171200 | AMP-activated Protein Kinase Suppresses Protein Synthesis in Rat Skeletal Muscle | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1002/cphy.c190029 | Role of Skeletal Muscle in Insulin Resistance and Glucose Uptake
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.2337/db07-0255 | Skeletal Muscle Adaptation to Exercise Training
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1002/jcsm.12178 | Mitochondria and ageing: role in heart, skeletal muscle and adipose ti
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fphys.2021.702826 | Branched-chain Amino Acids: Catabolism in Skeletal Muscle and Implicat
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/nm.3213 | Rev-erb-α modulates skeletal muscle oxidative capacity by regulating m
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fphys.2011.00112 | The Role of Skeletal Muscle Glycogen Breakdown for Regulation of Insul
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1002/oby.23227 | Skeletal muscle energy metabolism in obesity
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fphys.2020.00963 | Myosteatosis in the Context of Skeletal Muscle Function Deficit: An In
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1101/cshperspect.a029769 | Adaptations to Endurance and Strength Training
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.cmet.2021.03.020 | The many actions of insulin in skeletal muscle, the paramount tissue d
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/nrm3311 | AMPK: a nutrient and energy sensor that maintains energy homeostasis
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.22029/eir.2015.1693 | Cytokine expression and secretion by skeletal muscle cells: regulatory
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fneur.2018.00698 | Endocrine Crosstalk Between Skeletal Muscle and the Brain
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/nu11102432 | Regulation of Skeletal Muscle Glucose Transport and Glucose Metabolism
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1002/j.2040-4603.2020.tb00136.x | Role of Skeletal Muscle in Insulin Resistance and Glucose Uptake
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s12967-023-04369-z | Mitochondrial dysfunction: roles in skeletal muscle atrophy
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms19103125 | The Role of AMPK in the Regulation of Skeletal Muscle Size, Hypertroph
+- FAIL pdf | C | 10.3390/molecules30071507 | Lactoferrin-A Regulator of Iron Homeostasis and Its Implications in Cancer | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ijms252111501 | The Variability of the Salivary Antimicrobial Peptide Profile: Impact
+- FAIL pdf | C | 10.3390/nu18111767 | Emotional Eating and Abdominal Obesity: A Narrative Review of the Potential Mech | no OA PDF resolved
+- FAIL pdf | C | 10.2337/diabetes.53.12.3074 | The α2–5′AMP-Activated Protein Kinase Is a Site 2 Glycogen Synthase Kinase in Sk | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1536/ihj.15-108 | Skeletal Muscle Abnormalities in Heart Failure
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1002/iub.21 | Signaling mechanisms in skeletal muscle: Acute responses and chronic a
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/emboj.2010.60 | Mitochondrial fission and remodelling contributes to muscle atrophy
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1172/jci29044 | AMP-activated protein kinase signaling in metabolic regulation
+- FAIL pdf | C | 10.1016/j.eclinm.2026.103992 | Weight maintenance after discontinuation of GLP-1 therapies | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu18030397 | The Ketogenic Diet in Type 2 Diabetes and Obesity: A Narrative Review
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu18060962 | New Drugs on the Block: Dietary Management and Nutritional Considerati
+- FAIL pdf | C | 10.3390/nu16213684 | Effects of Chicken Egg Powder, Bovine Colostrum, and Combination Therapy for the | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu17081384 | Selective Influence of Hemp Fiber Ingestion on Post-Exercise Gut Perme
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu17162579 | Whey Protein Supplementation Combined with Exercise on Muscle Protein
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/cells15090817 | Zika Virus-Induced Metabolic Reprogramming Drives Lipid Droplet Biogen
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/ijms27062599 | Restoring Mitochondrial Homeostasis: Therapeutic Strategies for Metabo
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.psj.2026.106573 | The adiponectin receptor agonist AdipoRon alleviates lipotoxic injury
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3892/br.2026.2130 | Chalinasterol attenuates ethanol-induced hepatic lipid accumulation by
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.jbc.2026.113098 | Variants in glycine decarboxylase activate catabolic mechanisms of mit
+- FAIL pdf | A | 10.1093/nutrit/nuaf083 | Cereal Fibers and Satiety: A Systematic Review | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.redox.2026.104183 | RAB5A regulates cell proliferation and lipid metabolism by modulating mitochondr | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu15010186 | Effects of Long-Term Supplementation of Bovine Colostrum on Iron Homeostasis, Ox | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00018-025-06043-7 | AICAR attenuates ischemia-reperfusion-induced AKI by modulating AMPK-TXNIP-NLRP3 | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1080/21505594.2026.2629674 | PLIN3-triggered lipophagic flux releases FFAs to facilitate CSFV propa
+- OFF-TOPIC | 08_peptides_gray/aicar | PMC13108632 | Citrate‐Dependent Activation of Acetyl CoA Carboxylase Promotes Renal
+- FAIL pdf | C | 10.3390/nu17152544 | The Impact of Environmental Factors on the Secretion of Gastrointestinal Hormone | no OA PDF resolved
+- FAIL pdf | C | 10.1172/jci.insight.200168 | A nutrient-responsive AMPK/TBK1 circuit restricts adipocyte catabolism | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1007/s00018-025-06041-9 | Macrophage polarization in inflammatory regulation: molecular mechanis
+- OFF-TOPIC | 08_peptides_gray/aicar | PMC13297222 | AMPK Signalling in Heart Failure: From Metabolic Sensor to Context-Dep
+- FAIL pdf | B | 10.3390/nu15081925 | Moderate Dose Bovine Colostrum Supplementation in Prevention of Upper Respirator | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s40104-025-01343-1 | Vitamin A-activated PPARγ signaling enhances intramuscular fat accumulation by o | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71061 | Synergistic Effects of Bioactive Compounds on Human Adiposity Mechanisms of Fat  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1007/s13668-026-00777-x | GLP-1 Receptor Agonists for Obesity Management in Older Adults: A Scop
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1007/s11883-026-01426-y | To Reenvision and Redefine: Considering the Role of Lifestyle Interven
+- FAIL pdf | C | 10.1093/cvr/cvag089 | Plasma proteomics stratification identifies phospholamban R14del carriers at ris | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s13578-025-01519-2 | PGC-1α: key regulator of mitochondrial biogenesis and cellular differe
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.celrep.2026.117135 | Eicosapentaenoic acid reprograms cerebrovascular metabolism and impair
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/biomedicines14040765 | Targeting the AMPK Pathway with Natural Products for Heart Failure: A
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3892/ijmm.2026.5861 | Autophagy and metabolic homeostasis: Exploration in obesity‑related me
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s12906-025-05024-4 | Inhibitory effects of the flavonoids extracted from Pollen Typhae on p
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.7150/ijms.121198 | &lt;i&gt;Zingiber officinale&lt;/i&gt; Leaf Subcritical Water Extract
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3389/fcvm.2025.1638515 | Isoform-specific roles of AMP-activated protein kinase in cardiac phys
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s43556-026-00483-8 | Exercise mimetics: molecular mechanisms, biological and therapeutic ef
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1186/s12951-026-04104-y | A novel nanotherapeutic strategy: rescuing nucleus pulposus cells from
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1097/hc9.0000000000000885 | Mitochondria-derived peptides in liver disease: Emerging regulators of
+- FAIL pdf | A | 10.3390/nu14122512 | A Systematic Review of the Influence of Bovine Colostrum Supplementation on Leak | no OA PDF resolved
+- FAIL pdf | C | 10.3390/foods14223940 | Therapeutic Potential of White Kidney Beans (&lt;i&gt;Phaseolus vulgaris&lt;/i&g | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | PMC13295857 | Probiotic Modulation of Gut Microbiota: Antioxidant Mechanisms and Cli
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1186/s12986-026-01115-2 | Mechanisms of weight recurrence after bariatric surgery
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1016/j.advnut.2025.100522 | Nutritional Challenges of Incretin-Based Obesity Management Medication
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu18071093 | A Narrative Review on Pseudocereals and Cardiometabolic Health: Biolog
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu18010012 | Dietary and Behavioral Strategies for Weight Loss and Weight Loss Main
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1136/bjsports-2018-099027 | IOC consensus statement: dietary supplements and the high-performance
+- FAIL pdf | C | 10.1016/j.obpill.2026.100290 | Micronutrient risk with GLP-1 receptor and dual incretin agonists in obesity: Me | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1111/obr.70079 | Nutrition Strategies for Next-Generation Incretin Therapies: A Systema
+- FAIL pdf | C | 10.3390/nu13010265 | Bovine Colostrum: Its Constituents and Uses | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1123/ijsnem.2018-0020 | IOC Consensus Statement: Dietary Supplements and the High-Performance
+- FAIL pdf | C | 10.3389/fnut.2026.1737280 | The collapse of the food matrix: how ultra-processed foods impact satiety and me | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu9040370 | Oral Supplementation with Bovine Colostrum Decreases Intestinal Permeability and | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18071075 | Research Advances of Neuroregulatory Effects of Dietary Polyphenols on Obesity C | no OA PDF resolved
+- FAIL pdf | C | 10.1093/nutrit/nuv063 | Dietary fiber and satiety: the effects of oats on satiety | no OA PDF resolved
+- FAIL pdf | C | 10.1051/lait:2005048 | Growth factors from bovine milk and colostrum: composition, extraction and biolo | no OA PDF resolved
+- FAIL pdf | C | 10.1677/joe.1.05866 | Appetite control | no OA PDF resolved
+- FAIL pdf | C | 10.1093/advances/nmaa120 | Supplementation of Bovine Colostrum in Inflammatory Bowel Disease: Benefits and  | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu14122512 | A Systematic Review of the Influence of Bovine Colostrum Supplementation on Leak | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu10030360 | Protein for Life: Review of Optimal Protein Intake, Sustainable Dietary Sources  | no OA PDF resolved
+- FAIL pdf | C | 10.1080/09540105.2021.1892594 | Bovine colostrum: benefits for the human respiratory system and potential contri | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.1997.273.6.e1107 | AICA riboside increases AMP-activated protein kinase, fatty acid oxidation, and  | no OA PDF resolved
+- FAIL pdf | C | 10.1113/jphysiol.2004.081679 | AMP kinase activation with AICAR simultaneously increases fatty acid and glucose | no OA PDF resolved
+- FAIL pdf | C | 10.3390/medicina56100495 | Post-Delivery Milking Delay Influence on the Effect of Oral Supplementation with | no OA PDF resolved
+- FAIL pdf | C | 10.1074/jbc.c200171200 | AMP-activated Protein Kinase Suppresses Protein Synthesis in Rat Skeletal Muscle | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.tifs.2014.10.007 | Optimising foods for satiety | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.nfs.2021.10.001 | Bovine colostrum: A source of bioactive compounds for prevention and treatment o | no OA PDF resolved
+- FAIL pdf | C | 10.1158/0008-5472.can-06-4447 | Systemic Treatment with the Antidiabetic Drug Metformin Selectively Impairs p53- | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.2337/db05-1404 | Interleukin-6 Increases Insulin-Stimulated Glucose Disposal in Humans
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3390/nu11051155 | Dietary Fiber, Atherosclerosis, and Cardiovascular Disease
+- FAIL pdf | B | 10.3945/an.113.003723 | Effect of Dairy Proteins on Appetite, Energy Expenditure, Body Weight, and Compo | no OA PDF resolved
+- FAIL pdf | C | 10.1113/jphysiol.2008.159814 | AMPK‐independent pathways regulate skeletal muscle fatty acid oxidation | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1111/bph.12475 | Mitochondrial fatty acid oxidation alterations in heart failure, ischa
+- FAIL pdf | C | 10.2337/db08-1512 | Activation of the AMPK-FOXO3 Pathway Reduces Fatty Acid–Induced Increase in Intr | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1210/en.2003-0410 | Saturated Fatty Acids Synergize with Elevated Glucose to Cause Pancrea
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1007/s00125-014-3273-1 | AMPK phosphorylation of ACC2 is required for skeletal muscle fatty aci
+- FAIL pdf | C | 10.1053/j.gastro.2004.09.049 | The role of AMP-activated protein kinase in the action of ethanol in the liver | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.plefa.2010.02.029 | Fatty acid transport across the cell membrane: Regulation by fatty aci
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1074/jbc.m110.124164 | SIRT4 Regulates Fatty Acid Oxidation and Mitochondrial Gene Expression
+- FAIL pdf | C | 10.1074/jbc.m402165200 | C75, a Fatty Acid Synthase Inhibitor, Reduces Food Intake via Hypothalamic AMP-a | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.3390/molecules25173935 | Fatty Acid Synthase: An Emerging Target in Cancer
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1038/ncomms8176 | AMPK activation promotes lipid droplet dispersion on detyrosinated mic
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1074/jbc.m107895200 | Mechanism for Fatty Acid “Sparing” Effect on Glucose-induced Transcrip
+- FAIL pdf | C | 10.1016/j.febslet.2004.11.118 | The subcellular compartmentation of fatty acid transporters is regulated differe | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jc.2003-031583 | Ghrelin and Measures of Satiety Are Altered in Polycystic Ovary Syndrome But Not | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.2337/db05-1322 | Adiponectin Increases Fatty Acid Oxidation in Skeletal Muscle Cells by
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1172/jci43378 | Lipid-induced insulin resistance mediated by the proinflammatory recep
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1042/bj3380783 | AMP-activated kinase reciprocally regulates triacylglycerol synthesis
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1007/s11010-006-9140-8 | Prolonged AMPK Activation Increases the Expression of Fatty Acid Trans
+- FAIL pdf | C | 10.1101/2022.08.17.504253 | AICAR prevents doxorubicin-induced heart failure in rats by ameliorating cardiac | no OA PDF resolved
+- FAIL pdf | C | 10.1096/fj.201600522r | The AMP analog AICAR modulates the Treg/Th17 axis through enhancement of fatty a | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.1093/ajcn/84.1.274 | Intake of sugar-sweetened beverages and weight gain: a systematic revi
+- FAIL pdf | C | 10.1152/ajpendo.2001.281.2.e335 | Regulation of fatty acid oxidation and glucose metabolism in rat soleus muscle:  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3389/fmicb.2017.00563 | Gut Microbiota Modulation and Its Relationship with Obesity Using Preb
+- OFF-TOPIC | 01_food_inflammation/food_craving_appetite_control | 10.3945/jn.109.115436 | A Psyllium Fiber-Enriched Meal Strongly Attenuates Postprandial Gastro
+- FAIL pdf | C | 10.1113/jphysiol.2004.081687 | AMP kinase activation with AICAR further increases fatty acid oxidation and blun | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.00518.2005 | Impact of in vivo fatty acid oxidation blockade on glucose turnover and muscle g | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.2337/db16-0356 | FNDC5 Alleviates Hepatosteatosis by Restoring AMPK/mTOR-Mediated Autop
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3389/fnut.2026.1853124 | Beyond the bare minimum: the case for revised physical activity guidel
+- FAIL pdf | C | 10.1097/00005768-200305001-00506 | AICAR-STIMULATED AMP-KINASE ACTIVATION INCREASES FATTY ACID OXIDATION AT REST, B | no OA PDF resolved
+- FAIL pdf | C | 10.22038/ijbms.2018.24002.6016 | The effects of ginsenoside Rb1 on fatty acid β-oxidation, mediated by AMPK, in t | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2025.2561670 | Comparative effects of continuous glucose monitoring-informed and traditional in | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2026.2630487 | A comprehensive review of the physiology and evidence base to guide the use of e | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajprenal.00454.2013 | Susceptibility of podocytes to palmitic acid is regulated by fatty acid oxidatio | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1095/biolreprod.113.109058 | A Requirement for Fatty Acid Oxidation in the Hormone-Induced Meiotic
+- FAIL pdf | B | 10.3390/nu18121961 | Effects of Modest Carbohydrate-Energy Supplementation on Resistance Training Ada | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu13010118 | Effects of Long-Term Supplementation of Bovine Colostrum on the Immune System in | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18111735 | Effects of Collagen Hydrolysate-Based Protein Complexes on Physical Endurance, G | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.cmet.2009.11.008 | Acute or chronic upregulation of mitochondrial fatty acid oxidation has no net e | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1152/ajpendo.90908.2008 | Restoring AS160 phosphorylation rescues skeletal muscle insulin resist
+- OFF-TOPIC | 08_peptides_gray/aicar | 10.1016/j.bbrc.2005.12.011 | AMPK activation increases fatty acid oxidation in skeletal muscle by a
+- FAIL pdf | C | 10.1002/mrd.21047 | FATTY ACID OXIDATION AND MEIOTIC RESUMPTION IN MOUSE OOCYTES | no OA PDF resolved
+- FAIL pdf | C | 10.3390/jfmk11010003 | Energy Expenditure Exceeds Nutritional Intake of ROTC Members During a Field Tra | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3389/fnut.2026.1784740 | Applications of food science innovations in sports nutrition: from lab
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.25259/ijmr_2041_2025 | Evolution of incretin-based therapies: From GLP-1 monotherapy to dual
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3389/fendo.2026.1788698 | Do no harm: managing nausea and vomiting in GLP-1 based obesity therap
+- FAIL pdf | C | 10.1016/j.metop.2026.100463 | Obesity pharmacotherapy reimagined: The era of multi-receptor agonists and next- | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3390/pharmaceutics18040447 | Acute Contractile Effects of Glucagon-like-Peptide-1 Receptor Agonists
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1186/s12889-026-27310-7 | Effects of unsupervised campus HIIT on fitness and sleep in sedentary
+- FAIL pdf | A | 10.1002/edm2.70187 | Comparative Efficacy and Safety of Glucagon Receptor Agonists on Metabolic Outco | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1136/bmjgast-2026-002343 | Liver fibrosis in metabolic dysfunction-associated steatotic liver dis
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1007/s12325-026-03576-6 | Future Directions in the Medical Treatment of Obesity: A Narrative Rev
+- FAIL pdf | C | 10.1016/j.molmet.2026.102326 | Survodutide acts through circumventricular organs in the brain and activates neu | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.21037/hbsn-2025-732 | The ESSENCE of hope: what semaglutide's Food and Drug Administration a
+- FAIL pdf | C | PMC13241674 | How does survodutide work? Plain language review of a potential new medication f | no OA PDF resolved
+- FAIL pdf | C | 10.1111/dom.70359 | Hepatic GCGR is required for the superior weight loss and metabolic effects of a | no OA PDF resolved
+- FAIL pdf | B | 10.1111/dom.70196 | Survodutide for treatment of obesity: Baseline characteristics of participants i | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3390/nu18091463 | Effects of Dietary Nitrate and Caffeine on End Power and Work Above En
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1007/s00223-025-01469-4 | 20% Caloric Restriction did not Impact Bone Health nor Exercise-Induce
+- FAIL pdf | B | 10.1111/dom.70263 | Baseline characteristics in the SYNCHRONIZE™-2 randomized phase 3 trial of survo | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3389/fimmu.2026.1831174 | Hidradenitis suppurativa and psoriasis: shared immunological links wit
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3390/biomedicines14040778 | Management of Obese Patients with Cardiovascular Disease with Emerging
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3390/ijms27083694 | Biomarkers and Endothelial Damage in Obesity: An Insight into the Phar
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.4291/wjgp.v17.i1.118132 | Incretin polyagonists as an alternative to bariatric surgery to manage
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3350/cmh.2025.0744 | Engineered nutrient-stimulated hormonal multi-agonists for precision t
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3389/fphar.2026.1846714 | Efficacy and safety of incretin-based therapies in patients with type
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3803/enm.2025.2803 | Nutrient-Stimulated Hormone-Based Therapies: Transforming Obesity Mana
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1111/dom.70662 | Current Trends in the Epidemiology of Obesity and the Association Betw
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1007/s11892-026-01621-w | Pharmacologic Treatment of Metabolic Dysfunction-Associated Steatotic
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.17925/ee.2025.21.2.5 | Dual GIP/GLP1-RA, GCGR/GLP-1 RA and GLP1-RA for the Treatment of Metab
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1093/ajh/hpaf205 | GLP-1 Receptor Agonists and Blood Pressure: A State-of-the-Art Review
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1186/s13643-025-03011-x | Effects of glucagon-like peptide-1 receptor agonists on patients with
+- FAIL pdf | C | 10.3390/nu17233801 | Does Distance Matter? Metabolic and Muscular Challenges of a Non-Stop Ultramarat | no OA PDF resolved
+- FAIL pdf | B | 10.1002/ejsc.12336 | Different Carbohydrate Ingestion Patterns Do Not Affect Physiological Responses, | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2026.2671431 | Dietary intake, nutrition knowledge, and behavior in youth team sport athletes:  | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.jhep.2023.07.033 | Incretins (GLP-1 receptor agonists and dual/triple agonists) and the l
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3389/fendo.2024.1431292 | Mechanisms of action and therapeutic applications of GLP-1 and dual GI
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.eclinm.2024.102782 | GLP-1 single, dual, and triple receptor agonists for treating type 2 d
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1038/s41598-026-38528-1 | Effects of vitamin D supplementation during autumn and winter on blood
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.21873/invivo.14298 | Exercise Stimulates &lt;i&gt;PINK-1, PARKIN, MFN-1&lt;/i&gt;, and &lt;
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1186/s13102-025-01496-6 | Improvements in competition performance of national-level track and fi
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1080/15502783.2026.2673071 | Post-activation performance enhancement (PAPE) and taurine combination
+- FAIL pdf | C | 10.1016/j.jchf.2024.09.004 | Survodutide for the Treatment of Obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1038/s41366-024-01473-y | What is the pipeline for future medications for obesity?
+- FAIL pdf | C | 10.1016/j.diabres.2023.110779 | Perspectives in weight control in diabetes – Survodutide | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1038/s42255-024-01113-9 | GLP-1 physiology in obesity and development of incretin-based drugs fo
+- FAIL pdf | C | 10.1080/14656566.2024.2356254 | Oral glucagon-like peptide-1 receptor agonists and combinations of entero-pancre | no OA PDF resolved
+- FAIL pdf | C | 10.1590/1414-431x2024e14189 | Self-reported carbohydrate supercompensation and supplementation strategies adop | no OA PDF resolved
+- FAIL pdf | B | 10.1111/dom.70263 | Baseline characteristics in the SYNCHRONIZE ™‐2 randomized phase 3 trial of surv | no OA PDF resolved
+- FAIL pdf | C | 10.1080/13543784.2025.2473062 | The pleiotropic effects of glucagon-like peptide-1 receptor agonists in patients | no OA PDF resolved
+- FAIL pdf | C | 10.1111/dom.15551 | The dual GCGR/GLP‐1R agonist survodutide: Biomarkers and pharmacological profili | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/s0140-6736(25)02105-1 | GLP-1 receptor agonists and next-generation incretin-based medications
+- FAIL pdf | C | 10.2337/dc10-9990 | Exercise and Type 2 Diabetes | no OA PDF resolved
+- FAIL pdf | C | 10.1002/oby.24360 | Efficacy and Safety of GLP ‐1 Receptor Agonists, Dual Agonists, and Retatrutide  | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1080/13543784.2025.2472408 | The promise of glucagon-like peptide 1 receptor agonists (GLP-1RA) for
+- FAIL pdf | C | 10.1080/02640414.2011.610348 | Nutrition for endurance sports: Marathon, triathlon, and road cycling | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1186/1550-2783-4-8 | International Society of Sports Nutrition position stand: protein and
+- FAIL pdf | C | 10.3945/ajcn.116.134403 | Zinc carnosine works with bovine colostrum in truncating heavy exercise–induced  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.peptides.2025.171380 | Multifunctional incretin peptides in therapies for type 2 diabetes, obesity and  | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3803/enm.2024.1942 | The Road towards Triple Agonists: Glucagon-Like Peptide 1, Glucose-Dep
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.cell.2024.06.003 | Transforming obesity: The advancement of multi-receptor drugs
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1124/pharmrev.123.001045 | Emerging pharmacotherapies for obesity: A systematic review
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3390/biomedicines12061320 | New Developments in Pharmacological Treatment of Obesity and Type 2 Di
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1186/s12933-025-02608-9 | Glucagon-like peptide-1 receptor agonists (GLP-1RAs) and cardiometabol
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1111/obr.13663 | Management of type 2 diabetes, obesity, or nonalcoholic steatohepatiti
+- FAIL pdf | B | 10.1002/oby.24184 | Survodutide for treatment of obesity: rationale and design of two randomized pha | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1186/s12933-025-02607-w | The role of glucagon-like peptide-1 receptor (GLP-1R) agonists in enha
+- FAIL pdf | C | 10.3390/nu12092562 | Lactoferrin from Bovine Milk: A Protective Companion for Life | no OA PDF resolved
+- FAIL pdf | B | 10.1016/s2213-8587(23)00356-x | Glucagon and GLP-1 receptor dual agonist survodutide for obesity: a randomised,  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1186/s12970-018-0242-y | ISSN exercise & sports nutrition review update: research & recommendat
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1172/jci106730 | Adaptation of muscle to exercise
+- FAIL pdf | C | 10.14309/01.ajg.0001130444.00553.d1 | S746 Pharmacogenomic Analysis of the GLP-1 Receptor in a Phase 2 Trial of Survod | no OA PDF resolved
+- FAIL pdf | C | 10.1093/infdis/jiu605 | Hyperimmune Bovine Colostrum as a Novel Therapy to Combat Clostridium difficile  | no OA PDF resolved
+- FAIL pdf | B | 10.1093/eurheartj/ehae666.2895 | Survodutide, a glucagon receptor/GLP-1 receptor (GCGR/GLP-1R) dual agonist, impr | no OA PDF resolved
+- FAIL pdf | C | 10.1097/crd.0000000000001062 | Survodutide: A Dual GLP-1/Glucagon Agonist Reshaping Cardiometabolic Care | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1111/j.1753-4887.2008.00038.x | Immunonutrition support for athletes
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1093/af/vfag012 | Implications of leaky gut in cattle
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1038/oby.2004.95 | Exercise‐Induced Reduction in Obesity and Insulin Resistance in Women:
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1016/j.metabol.2008.08.004 | Modulation of insulin resistance in ovariectomized rats by endurance e
+- FAIL pdf | C | 10.1111/dom.16167 | Subgroup analysis by sex and baseline BMI in people with a BMI ≥27 kg/m2 in the  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18111770 | Whey Proteins and Immunity: Mechanisms Underlying Immune System Reinforcement an | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jendso/bvae163.033 | 6926 Subgroup Analysis by Gender and Body Mass Index (BMI) in People Living With | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.orcp.2024.09.090 | Subgroup analysis by gender and body mass index (BMI) in people living with over | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms262110673 | Clinical Applications of Bovine Colostrum in GastrointestinaI Disorders: Mechani | no OA PDF resolved
+- FAIL pdf | C | 10.1111/dom.70861 | Dual Glucagon and GLP‐1 Receptor Agonist Survodutide Improves Biomarkers of Beta | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.orcp.2024.09.114 | Glucagon and GLP-1 receptor dual agonist survodutide improved liver histology in | no OA PDF resolved
+- FAIL pdf | C | 10.2337/db25-1974-lb | 1974-LB: The Molecular Basis of Survodutide (BI456906) Glucagon/GLP-1 Receptor D | no OA PDF resolved
+- FAIL pdf | C | 10.23736/s2724-6507.26.04406-4 | A review of survodutide: a new dual acting agonist | no OA PDF resolved
+- FAIL pdf | C | 10.1002/mnfr.202400384 | Looking Inside of the Intestinal Permeability Regulation by Protein-Derivatives  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu17030443 | The Influence of Dietary Supplements on Exercise-Induced Gut Damage an
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1111/1541-4337.70178 | Macronutrients as Regulators of Intestinal Epithelial Permeability: Wh
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1002/jev2.12466 | Gut-liver axis: Potential mechanisms of action of food-derived extrace
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1016/j.clnu.2018.08.037 | ESPEN guideline on clinical nutrition in the intensive care unit
+- FAIL pdf | C | 10.2337/db26-1220-or | 1220-OR: Survodutide: Differentiated GLP-1R and Glucagon Receptor (GCGR) Pharmac | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu14122512 | A Systematic Review of the Influence of Bovine Colostrum Supplementation on Leak | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fnut.2021.627289 | Is There an Exercise-Intensity Threshold Capable of Avoiding the Leaky
+- FAIL pdf | B | 10.1111/dom.70196 | Survodutide for treatment of obesity: Baseline characteristics of participants i | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circ.152.suppl_3.4365838 | Abstract 4365838: Survodutide for the Treatment of Obesity: Baseline characteris | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu10010037 | Metabolic Responses to Carbohydrate Ingestion during Exercise: Associations betw | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fneur.2021.789784 | Lessons From Heat Stroke for Understanding Myalgic Encephalomyelitis/C
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1016/j.isci.2022.105905 | Diet-induced gut dysbiosis and inflammation: Key drivers of obesity-dr
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1152/ajpheart.00318.2024 | Early pathological mechanisms in a mouse model of heart failure with p
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3390/nu10091140 | Acute and Chronic Effects of Exercise on Appetite, Energy Intake, and
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1016/j.mito.2024.101849 | Altered mitochondrial respiration in peripheral blood mononuclear cell
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ani10101908 | Strategies for Feeding Unweaned Dairy Beef Cattle to Improve Their Hea
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/molecules27113402 | The Role of Microbiome in Brain Development and Neurodegenerative Dise
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.5409/wjcp.v12.i4.171 | Role of gastrointestinal health in managing children with autism spect
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ijms22158161 | The Role of Leaky Gut in Nonalcoholic Fatty Liver Disease: A Novel The
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ani12030348 | Mutual Links between the Endocannabinoidome and the Gut Microbiome, wi
+- FAIL pdf | C | 10.1056/nejmoa2600751 | Survodutide Once Weekly for the Treatment of Adults with Obesity | no OA PDF resolved
+- FAIL pdf | C | 10.2337/db25-1704-p | 1704-P: Survodutide Improves Heart Failure with Preserved Ejection Fraction and  | no OA PDF resolved
+- FAIL pdf | C | 10.3945/ajcn.116.133520 | Dietary intake is independently associated with the maximal capacity for fat oxi | no OA PDF resolved
+- FAIL pdf | C | 10.1080/13543784.2024.2441865 | Survodutide in MASH: bridging the gap between hepatic and systemic metabolic dys | no OA PDF resolved
+- FAIL pdf | C | 10.3390/antiox7110149 | Heat Sepsis Precedes Heat Toxicity in the Pathophysiology of Heat Stroke-A New P | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.2196/36339 | Effect of a Daily Collagen Peptide Supplement on Digestive Symptoms in
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s00774-023-01415-0 | Linking the relation between gut microbiota and glucocorticoid-induced
+- FAIL pdf | C | 10.2337/db24-1635-p | 1635-P: Survodutide Weight Loss Is Associated with Changes in Food Preference an | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3389/fimmu.2026.1831174 | Hidradenitis suppurativa and psoriasis: shared immunological links wit
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.21037/hbsn-2025-732 | The ESSENCE of hope: what semaglutide's Food and Drug Administration a
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1136/bmjgast-2026-002343 | Liver fibrosis in metabolic dysfunction-associated steatotic liver dis
+- FAIL pdf | C | PMC13241674 | How does survodutide work? Plain language review of a potential new medication f | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.7570/jomes25083 | Current Trends and Perspectives on Obesity and Metabolic Dysfunction-A
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.25259/ijmr_2041_2025 | Evolution of incretin-based therapies: From GLP-1 monotherapy to dual
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1186/s13643-025-03011-x | Effects of glucagon-like peptide-1 receptor agonists on patients with
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1007/s11892-026-01621-w | Pharmacologic Treatment of Metabolic Dysfunction-Associated Steatotic
+- FAIL pdf | C | 10.3390/nu13031024 | Effects of Bovine Colostrum with or without Egg on In Vitro Bacterial-Induced In | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu10020253 | Restoration of Muscle Glycogen and Functional Capacity: Role of Post-Exercise Ca | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fnut.2021.627289 | Is There an Exercise-Intensity Threshold Capable of Avoiding the Leaky
+- FAIL pdf | B | 10.1111/dom.70196 | Survodutide for treatment of obesity: Baseline characteristics of participants i | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1111/dom.70662 | Current Trends in the Epidemiology of Obesity and the Association Betw
+- FAIL pdf | C | 10.3390/nu1020224 | Bovine Colostrum Supplementation During Running Training Increases Intestinal Pe | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s40279-020-01348-y | The Effects of Exercise on Indirect Markers of Gut Damage and Permeabi
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu13020423 | Priming for Life: Early Life Nutrition and the Microbiota-Gut-Brain Ax
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1152/japplphysiol.00536.2015 | Intestinal epithelial barrier function and tight junction proteins wit
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu10111793 | Gut Permeability Might be Improved by Dietary Fiber in Individuals wit
+- FAIL pdf | C | 10.1016/j.metop.2026.100463 | Obesity pharmacotherapy reimagined: The era of multi-receptor agonists and next- | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3390/biomedicines14040909 | Current Drug Development Pipeline for MASLD and MASH: Focusing on Card
+- FAIL pdf | C | 10.1016/s0026-0495(96)90169-9 | Effects of carbohydrate (CHO) and fat supplementation on CHO metabolism during p | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.nfs.2021.10.001 | Bovine colostrum: A source of bioactive compounds for prevention and treatment o | no OA PDF resolved
+- FAIL pdf | B | 10.1111/dom.70263 | Baseline characteristics in the SYNCHRONIZE™-2 randomized phase 3 trial of survo | no OA PDF resolved
+- FAIL pdf | C | 10.1080/15502783.2026.2692003 | Dietary interventions interact with the perception of effort and enhance enduran | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu14122512 | A Systematic Review of the Influence of Bovine Colostrum Supplementation on Leak | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/antiox13040484 | Hormetic Nutrition and Redox Regulation in Gut–Brain Axis Disorders
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/biom9060223 | Chronic Inflammation as an Immunological Abnormality and Effectiveness
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1136/openhrt-2018-000993 | The heart-gut axis: new target for atherosclerosis and congestive hear
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1152/ajpgi.00063.2019 | Role for diet in normal gut barrier function: developing guidance with
+- FAIL pdf | A | 10.1002/edm2.70157 | Comparative Analysis of Glucagon Receptor Agonists vs. Resmetirom in MASLD and M | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.14218/jcth.2025.00303 | Nutrient-stimulated Hormone-based Therapies: A New Frontier in the Pre
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3390/biomedicines14040778 | Management of Obese Patients with Cardiovascular Disease with Emerging
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.3389/fendo.2026.1829315 | Updating the MASH pharmacotherapy landscape: a network meta-analysis i
+- FAIL pdf | C | 10.3390/sports14040150 | Energy Availability as a Neurocognitive Regulator of Endurance Performance: Inte | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3934/publichealth.2023049 | Possible relationship between the gut leaky syndrome and musculoskelet
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1002/jev2.12466 | Gut‐liver axis: Potential mechanisms of action of food‐derived extrace
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fimmu.2023.1173956 | Relevance of biomarkers indicating gut damage and microbial translocat
+- FAIL pdf | C | 10.1172/jci186425 | Therapeutic horizons in metabolic dysfunction-associated steatohepatitis | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.17179/excli2026-9462 | Bidirectional relationship between metabolic dysfunction-associated st
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1136/bmjmed-2025-002038 | Metabolic dysfunction associated steatotic liver disease: mechanisms,
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.livres.2025.10.004 | Resmetirom and beyond: A new era in MASLD therapeutics
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1136/bmjgast-2026-002294 | Interplay between MASLD, obesity and type 2 diabetes: epidemiology, sh
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.metop.2025.100424 | Close multilevel links between metabolic dysfunction-associated steato
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1007/s00535-026-02401-9 | Management of MASLD/MASH: challenges, innovations, and the future of p
+- FAIL pdf | C | 10.3390/antiox9050401 | Characterization and Modulation of Systemic Inflammatory Response to Exhaustive  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu15194203 | Dark Chocolate Intake Positively Modulates Gut Permeability in Elite F
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1016/j.neuro.2019.08.010 | The role of the gut microbiome in mediating neurotoxic outcomes to PCB
+- FAIL pdf | A | 10.1097/hep.0000000000001254 | Comparison of pharmacological therapies in metabolic dysfunction–associated stea | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jhep.2024.06.003 | Efficacy, tolerability and pharmacokinetics of survodutide, a glucagon/glucagon- | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.jhepr.2024.101185 | Lipid metabolism in MASLD and MASH: From mechanism to the clinic
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.jhep.2023.07.033 | Incretins (GLP-1 receptor agonists and dual/triple agonists) and the l
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/s2213-8587(24)00318-8 | Metabolic dysfunction-associated steatotic liver disease: heterogeneou
+- FAIL pdf | B | 10.1007/s00421-024-05423-4 | Effects of bovine whey protein on exercise-induced gut permeability in healthy a | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18020239 | The Role of FODMAPs in Sports Nutrition: A Narrative Review and Clinical Implica | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3390/nu18091354 | The Role of Nutrition in Exercise and Sports
+- FAIL pdf | C | 10.3390/nu18060998 | Carnivore and Animal-Based Diets in Sport: A Critical Evaluation of Current Evid | no OA PDF resolved
+- FAIL pdf | C | 10.1172/jci186425 | Therapeutic horizons in metabolic dysfunction–associated steatohepatitis | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.2337/dci24-0094 | Metabolic Dysfunction–Associated Steatotic Liver Disease (MASLD) in Pe
+- FAIL pdf | A | 10.1080/15502783.2026.2669307 | Carbohydrate supplementation for endurance exercise in the heat: a systematic re | no OA PDF resolved
+- FAIL pdf | B | 10.1002/oby.24184 | Survodutide for treatment of obesity: rationale and design of two randomized pha | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.metabol.2024.155835 | Resmetirom, the first approved drug for the management of metabolic dy
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.diabres.2024.111846 | Diabetes as a risk factor for MASH progression
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1007/s12072-024-10774-3 | The Asian Pacific association for the study of the liver clinical prac
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.metabol.2024.155937 | Obesity and MASLD: Is weight loss the (only) key to treat metabolic li
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1136/bmj-2024-083735 | Effect of dapagliflozin on metabolic dysfunction-associated steatohepa
+- FAIL pdf | C | 10.1080/15502783.2026.2630487 | A comprehensive review of the physiology and evidence base to guide the use of e | no OA PDF resolved
+- FAIL pdf | C | 10.1111/apt.70196 | Review Article: GLP ‐1 Receptor Agonists and Glucagon/ GIP / GLP ‐1 Receptor Dua | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1186/s12933-024-02434-5 | Metabolic dysfunction-associated steatotic liver disease and cardiovas
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1111/liv.70256 | Glucagon‐Like Peptide‐1 Receptor Agonists Improve MASH and Liver Fibro
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1161/circulationaha.124.070535 | Cardiovascular-Liver-Metabolic Health: Recommendations in Screening, D
+- FAIL pdf | C | 10.1080/13543784.2025.2473062 | The pleiotropic effects of glucagon-like peptide-1 receptor agonists in patients | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1038/s41591-024-03283-1 | Data-driven cluster analysis identifies distinct types of metabolic dy
+- FAIL pdf | C | 10.1016/j.ajcnut.2026.101268 | Does a low-carbohydrate diet impede endurance sports performance? Yes | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3390/nu18101565 | Exercise and the Gut Microbiome: From Mechanisms to Clinical Applicati
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.diabres.2024.111675 | Incretin-based investigational therapies for the treatment of MASLD/MA
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1016/j.atherosclerosis.2024.119053 | Lipotoxicity-driven metabolic dysfunction-associated steatotic liver d
+- FAIL pdf | C | 10.3390/sports14030109 | Understanding the Behavioural Determinants of Nutrition Practices in Ultra-Endur | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s00774-023-01415-0 | Linking the relation between gut microbiota and glucocorticoid-induced
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu11030696 | The Role of Mineral and Trace Element Supplementation in Exercise and
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1371/journal.pone.0113725 | Influence of Pistachios on Performance and Exercise-Induced Inflammati
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1093/af/vfag012 | Implications of leaky gut in cattle
+- FAIL pdf | B | 10.1016/s0016-5085(24)05018-2 | SURVODUTIDE REDUCES LIVER FAT CONTENT, TRANSAMINASES, AND FIBROSIS MARKERS WITH  | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1038/s44355-024-00004-w | Resmetirom and GLP-1 agonists for MASH: complementary rather than excl
+- OFF-TOPIC | 05_fat_loss_drugs/survodutide | 10.1038/s41392-024-01951-9 | Type 2 diabetes mellitus in adults: pathogenesis, prevention and thera
+- FAIL pdf | C | 10.3390/nu18111687 | Sports Drinks for Rehydration, Amelioration of Fatigue, and Recovery from Exerti | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.tjnut.2026.101442 | From Metabolism to Medals: Contemporary Perspectives and Revisiting Carbohydrate | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3390/life15121812 | Exercise and Diet Reshape Athletes' Gut Microbiota: Countering Health
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1371/journal.pone.0349953 | Lung ultrasonography to assess efficacy of intranasal and parenteral v
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1186/s13567-026-01725-x | Cryptosporidium parvum and bovine coronavirus in naturally and experim
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fvets.2026.1813534 | Associations between subclinical bovine respiratory disease, growth pa
+- FAIL pdf | C | 10.3390/nu17223526 | Hydration Strategies in Ultra-Endurance Running: A Narrative Review of Programme | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.nmni.2025.101681 | Ivermectin's role in malaria control: the simplicity and the complexity | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ani16040639 | Association of Acute-Phase Proteins and IgG with Bovine Respiratory Disease, Ser | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1073/pnas.2600632123 | Temperature and developmental stage govern intestinal susceptibility t
+- FAIL pdf | C | 10.3390/nu17243862 | Consensus Document of the Spanish Nutrition Society (SEÑ) on Nutritional Strateg | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.gore.2025.101803 | Ivermectin and gynecologic cancer: What's the data? | no OA PDF resolved
+- FAIL pdf | C | 10.3390/vetsci13010073 | Temporal Dynamics of T Cell Immunity Induced by TbpB<sup>Y167A</sup> Vaccine in  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1038/s41541-026-01428-6 | Non-propagating RNA virus-vectored HA/NA vaccine prevents shedding of
+- FAIL pdf | C | 10.3390/nu18020328 | Coffee Versus Caffeine as Ergogenic Aids: Biological and Methodological Distinct | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.1111/sms.70258 | The Immune System as a Biosensor of Health and Athletic Performance
+- FAIL pdf | C | 10.3390/tropicalmed10080221 | High Efficacy of Triclabendazole/Ivermectin Combination Compared to Triclabendaz | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/ivermectin_human | 10.3389/fimmu.2026.1760109 | Host-targeted oral avian vaccine virus demonstrates broad antiviral ac
+- FAIL pdf | C | 10.3390/ijms262110673 | Clinical Applications of Bovine Colostrum in GastrointestinaI Disorders: Mechani | no OA PDF resolved
+- FAIL pdf | B | 10.1002/jcph.70137 | Tolerability, Safety, and Pharmacokinetics of Ivermectin After Nasal Application | no OA PDF resolved
+- FAIL pdf | B | 10.1371/journal.pntd.0012851 | Impact of mass drug administration with ivermectin, diethylcarbamazine, and albe | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/ivermectin_human | 10.1371/journal.pntd.0014152 | A systematic review of adverse effects associated with systemic cortic
+- OFF-TOPIC | 01_food_inflammation/endurance_fueling_carbs | 10.3390/nu18060981 | Personalized Nutrition, Lifestyle, and Supplementation Strategies to S
+- FAIL pdf | A | 10.3390/antibiotics14050459 | Repurposing Anthelmintic Drugs for COVID-19 Treatment: A Comprehensive Meta-Anal | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2018-099027 | IOC consensus statement: dietary supplements and the high-performance athlete | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu11061289 | Nutrition and Supplement Update for the Endurance Athlete: Review and Recommenda | no OA PDF resolved
+- FAIL pdf | C | 10.1080/02640414.2011.610348 | Nutrition for endurance sports: Marathon, triathlon, and road cycling | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/ivermectin_human | 10.3390/microorganisms14061250 | Infectious Risks Associated with Biologic Therapies in Autoimmune, Rhe
+- FAIL pdf | B | 10.1371/journal.pntd.0012687 | Efficacy and safety of albendazole alone versus albendazole in combination with  | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fimmu.2026.1822561 | Exercise and tissue-resident memory T cells: from circulating numbers to spatial | no OA PDF resolved
+- FAIL pdf | A | 10.3390/ijms27010508 | Effects of Rapid Weight Loss on the Immune System in Combat Sports Athletes: A S | no OA PDF resolved
+- FAIL pdf | C | 10.1111/sms.70258 | The Immune System as a Biosensor of Health and Athletic Performance | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.idm.2025.06.003 | Wonder drugs and where to use them: a forecast of ivermectin's impact on malaria | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fimmu.2026.1777470 | Forging resilient warriors within: exercise's epic role in training innate immun | no OA PDF resolved
+- FAIL pdf | C | 10.3390/sports13110401 | Training, Immunity, and Health in Elite Kayaking: A Longitudinal Study Monitorin | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ph16111546 | New Perspectives about Drug Candidates Targeting HTLV-1 and Related Diseases | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/ivermectin_human | 10.1007/s15010-024-02443-2 | Diagnosis, management and prevention of loiasis: guideline of the Germ
+- FAIL pdf | C | 10.4269/ajtmh.22-0671 | Clinical Characteristics of Strongyloidiasis during the COVID-19 Pandemic: Syste | no OA PDF resolved
+- FAIL pdf | C | 10.3390/tropicalmed8020127 | Strongyloides and COVID-19: Challenges and Opportunities for Future Research | no OA PDF resolved
+- FAIL pdf | C | 10.1128/jvi.00024-26 | PEDV regulates trans-mammary epithelial migration of T cells in a CCR10/CCL28-de | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.30466/vrf.2025.2044527.4522 | Prevalence of bovine respiratory disease viruses in calves from the ce
+- FAIL pdf | A | 10.3390/nu18101579 | The Effects of Colostrum Bovinum Supplementation on Human Body Fat Content and/o | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1093/jvimsj/aalaf030 | The effect of a single dose of flunixin meglumine on shedding of inocu
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1128/jvi.01975-25 | Impact of maternal antibodies and weaning stress on the replication an
+- FAIL pdf | C | 10.3390/tropicalmed7100310 | <i>Strongyloides stercoralis</i>: A Neglected but Fatal Parasite | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1155/tbed/3247802 | Detection and Genomic Characterization of Novel Respiratory Viruses in
+- FAIL pdf | C | 10.3390/nu18111770 | Whey Proteins and Immunity: Mechanisms Underlying Immune System Reinforcement an | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/vetsci12080778 | A Comprehensive Review: Bovine Respiratory Disease, Current Insights i
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1371/journal.pone.0349348 | Peripheral leukocyte transcriptomic changes in preweaned Holstein heif
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1038/s41467-026-68900-8 | Increased contact transmission of contemporary Human H5N1 compared to
+- FAIL pdf | C | 10.3390/nu16173008 | Is Micronutrient Supplementation Helpful in Supporting the Immune System during  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/v18050575 | USP17L13 Enhances Influenza a Virus Replication by Mediating the Degradation of  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1128/jvi.01940-24 | Influenza infection of the mammary gland
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1016/j.biopha.2026.119111 | Exosome-mediated antiviral testing system and identification of Punica
+- FAIL pdf | C | 10.3390/biology14070825 | Circulating Antimicrobial Peptides as Biomarkers of Inflammation and Airway Dysf | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1051/vetres:2006007 | Innate immunity of the bovine mammary gland
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1051/vetres:2006059 | Bovine herpesvirus 1 infection and infectious bovine rhinotracheitis
+- FAIL pdf | C | 10.3390/nu13010265 | Bovine Colostrum: Its Constituents and Uses | no OA PDF resolved
+- FAIL pdf | C | 10.3390/medicina61061072 | Rapid Tests for Viral Upper Airway Respiratory Infections in the Workplace: A Pi | no OA PDF resolved
+- FAIL pdf | C | 10.1002/cpt.1889 | The Approved Dose of Ivermectin Alone is not the Ideal Dose for the Treatment of | no OA PDF resolved
+- FAIL pdf | A | 10.1093/cid/ciab591 | Ivermectin for the Treatment of Coronavirus Disease 2019: A Systematic Review an | no OA PDF resolved
+- FAIL pdf | C | 10.1093/clinids/23.5.949 | Strongyloidiasis | no OA PDF resolved
+- FAIL pdf | C | 10.1002/14651858.cd007745.pub3 | Ivermectin versus albendazole or thiabendazole for Strongyloides stercoralis inf | no OA PDF resolved
+- FAIL pdf | C | 10.3390/antib13040098 | Salivary Immunoglobulin a Alterations in Health and Disease: A Bibliometric Anal | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.chest.2020.10.009 | Use of Ivermectin Is Associated With Lower Mortality in Hospitalized Patients Wi | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00394-003-0410-x | Concentrated bovine colostrum protein supplementation reduces the incidence of s | no OA PDF resolved
+- FAIL pdf | A | 10.1111/sms.70046 | Immunity, Inflammation and Airway Dysfunction in Elite Cross-Country Skiers and  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.rmcr.2020.101189 | Influences of bovine colostrum on nasal swab microbiome and viral upper respirat | no OA PDF resolved
+- FAIL pdf | C | 10.1002/14651858.cd015017.pub2 | Ivermectin for preventing and treating COVID-19 | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms25105210 | Immunology of Physical Exercise: Is <i>Equus caballus</i> an Appropriate Animal  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/bf01348982 | Immunity to human and bovine respiratory syncytial virus
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fimmu.2021.616713 | Modulatory Effects of Probiotics During Pathogenic Infections With Emp
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1186/bf03549652 | Bovine Respiratory Syncytial Virus (BRSV): A review
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1186/s12917-021-02935-5 | Review on bovine respiratory syncytial virus and bovine parainfluenza
+- FAIL pdf | B | 10.3389/fimmu.2024.1395437 | Exploring the impact of colostrum supplementation on athletes: a comprehensive a | no OA PDF resolved
+- FAIL pdf | C | 10.3168/jds.2020-20114 | Invited review: The importance of colostrum in the newborn dairy calf | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s40279-017-0846-4 | Upper Respiratory Symptoms, Gut Health and Mucosal Immunity in Athlete
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fimmu.2018.00361 | Mother’s Milk: A Purposeful Contribution to the Development of the Inf
+- FAIL pdf | C | 10.1128/cmr.00033-23 | Human strongyloidiasis: complexities and pathways forward | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.clinthera.2021.04.007 | Effects of Ivermectin in Patients With COVID-19: A Multicenter, Double-blind, Ra | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s12275-015-5353-4 | The effect of dietary bovine colostrum on respiratory syncytial virus infection  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fvets.2021.643220 | Bovine Coronavirus and the Associated Diseases
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s12026-014-8549-5 | Porcine reproductive and respiratory syndrome (PRRS): an immune dysreg
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.2460/javma.243.11.1602 | Duration of immunity to experimental infection with bovine respiratory
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1017/s0029665110001795 | Physical activity, immunity and infection
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fimmu.2022.841532 | Ingestion, Immunity, and Infection: Nutrition and Viral Respiratory Tr
+- FAIL pdf | B | 10.1002/fsn3.71521 | The Efficacy of Spirulina on Cognitive Function, Psychological and Clinical Indi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.3390/nu18091334 | Types and Outcomes of Dietary Interventions in IBS: A Scoping Review
+- FAIL pdf | C | 10.3390/nu13113798 | Diverse Immune Effects of Bovine Colostrum and Benefits in Human Health and Dise | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fnut.2026.1845848 | Exercise modulates food reward: neurobiological mechanisms and implications for  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.nfs.2021.10.001 | Bovine colostrum: A source of bioactive compounds for prevention and treatment o | no OA PDF resolved
+- FAIL pdf | C | 10.3390/life15020239 | The Perception of the Diaphragm with Ultrasound: Always There Yet Overlooked? | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu17233778 | Consuming Tree Nuts Daily as Between-Meal Snacks Reduces Food Cravings and Impro | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18101579 | The Effects of Colostrum Bovinum Supplementation on Human Body Fat Content and/o | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/nu18111687 | Sports Drinks for Rehydration, Amelioration of Fatigue, and Recovery f
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ani16040626 | Effect of Supplementing Milk Replacer with &lt;i&gt;Boswellia serrata&
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ani16091350 | Effects of Microalgae-Based Nutraceuticals on Muscle Composition and I
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ani15192821 | Optimizing Sow and Litter Performance via a Comprehensive Service-to-W
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/vetsci13050408 | Impact of Clinoptilolite and Anionic Salts on Calcium Homeostasis, Par
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/life16030416 | Metabolic and Reproductive Responses to Peripartum Feed Supplementatio
+- FAIL pdf | C | 10.1007/s40519-026-01819-7 | Assessing the relationship between body mass index and substance craving among p | no OA PDF resolved
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.18295/squmj.12.2023.093 | 18&lt;sup&gt;th&lt;/sup&gt; Asian Federation of Sports Medicine Congre
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3390/ani16111658 | Effects of Crayfish Shell Meal Processing Methods on Growth Performanc
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1186/s13102-025-01527-2 | Alterations of urinary proteomic profiles are correlated with return t
+- FAIL pdf | C | 10.3390/ijms27083644 | Effects of Daily Saskatoon Berry Supplementation on Cardiometabolic Health, Gut  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ani15213160 | Maternal 25-Hydroxycholecalciferol Supplementation Dynamically Altered Milk Fatt | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18111770 | Whey Proteins and Immunity: Mechanisms Underlying Immune System Reinforcement an | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1007/s40279-025-02292-5 | Evaluating the Impact of Urolithin A Supplementation on Running Perfor
+- FAIL pdf | B | 10.3390/nu18121852 | Increasing Minimally Processed Food Intake in Depression via Commercial Meal Del | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms262110673 | Clinical Applications of Bovine Colostrum in GastrointestinaI Disorders: Mechani | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1093/nutrit/nuae082 | Nutritional Strategies for Optimizing Health, Sports Performance, and
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1002/jev2.70287 | Current Perspective on Human Milk Derived Vesicles and Their Potential
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1126/sciadv.adz1953 | A decline in skeletal muscle NOX4 abrogates exercise-induced adaptive
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1042/bsr20253559 | The effect of the nonselective TNF inhibitor etanercept and of the sel
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1038/s41526-026-00582-4 | Human plasma extracellular vesicles as an exercise mimetic to preserve
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.64898/2026.02.16.706099 | Integrated Single-Fiber Multi-Omics Links an Inflammatory-Associated M
+- FAIL pdf | C | 10.1016/j.jsams.2010.10.642 | The open window of susceptibility to infection after acute exercise in healthy y | no OA PDF resolved
+- FAIL pdf | B | 10.1002/ejsc.12288 | Twelve-Week Colostrum Bovinum Supplementation Supports Aerobic Capacity but has  | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fphys.2025.1551284 | Gastrointestinal function and microbiota in endurance athletes
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.3389/fphys.2026.1843994 | Exercise-induced changes in hemostasis markers in marathon runners: ef
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1155/tsm2/5557511 | Which Protein-Based Dietary Supplements Most Effectively Enhance Fat-F
+- FAIL pdf | B | 10.1186/s40337-025-01522-5 | The MotivATE randomized controlled trial: treating food addiction with adapted m | no OA PDF resolved
+- FAIL pdf | C | 10.1093/ajcn/72.1.5 | Colostrum and milk-derived peptide growth factors for the treatment of gastroint | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.2147/oajsm.s33605 | Role of nutrition in performance enhancement and postexercise recovery
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1186/s40798-017-0076-1 | Total Energy Expenditure, Energy Intake, and Body Composition in Endur
+- OFF-TOPIC | 07_supplements/bovine_colostrum | 10.1186/s12970-018-0242-y | ISSN exercise & sports nutrition review update: research & recommendat
+- FAIL pdf | C | 10.1111/adb.70098 | A Review of Exercise Interventions for Rehabilitation in Drug-Dependent Individu | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.nfs.2021.10.001 | Bovine colostrum: A source of bioactive compounds for prevention and treatment o | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu13061956 | Colostrum Therapy for Human Gastrointestinal Health and Disease | no OA PDF resolved
+- FAIL pdf | C | 10.22029/eir.2020.1730 | Can exercise affect immune function to increase susceptibility to infection? | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsm.34.4.246 | Effects of exercise on lymphocytes and cytokines | no OA PDF resolved
+- FAIL pdf | C | 10.3390/reports8030174 | Combined Naltrexone-Bupropion Therapy for Concurrent Cocaine Use Disorder and Ob | no OA PDF resolved
+- FAIL pdf | C | 10.1038/icb.2015.99 | Exercise, immune function and respiratory infection: An update on the influence  | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1440-1711.2000.t01-12-.x | Infections and exercise in high‐performance athletes | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s12098-008-0192-5 | Role of colostrum in gastrointestinal infections | no OA PDF resolved
+- FAIL pdf | C | 10.1097/md.0000000000047031 | Effectiveness of a nursing model based on traditional Chinese medicine syndrome  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.3390/nu18040699 | Nutritional Management of Irritable Bowel Syndrome
+- FAIL pdf | B | 10.2196/77579 | Inhibitory Control, Attentional Bias, and Palatable Food Consumption in Adolesce | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | PMC13297125 | The Role of Gut Microbiota in the Pathogenesis of Obesity and Food Add
+- FAIL pdf | C | 10.2165/00007256-199519060-00003 | How Physical Exercise Influences the Establishment of Infections | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu8110752 | Probiotic Supplements Beneficially Affect Tryptophan–Kynurenine Metabolism and R | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jn/133.3.835s | Sugar and Fat: Cravings and Aversions | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1002/14651858.cd001872.pub2 | Interventions for treating obesity in children
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1371/journal.pmed.1001362 | The Effectiveness of Mobile-Health Technology-Based Health Behaviour C
+- FAIL pdf | C | 10.1111/j.1753-4887.2008.00038.x | Immunonutrition support for athletes | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jshs.2022.10.003 | Exercise sustains the hallmarks of health | no OA PDF resolved
+- FAIL pdf | C | 10.1515/hukin-2016-0014 | Upper Respiratory Tract Diseases in Athletes in Different Sports Disciplines | no OA PDF resolved
+- FAIL pdf | C | 10.1038/s41574-021-00627-6 | The role of sugar-sweetened beverages in the global epidemics of obesity and chr | no OA PDF resolved
+- FAIL pdf | C | 10.1152/jappl.1997.82.5.1385 | Immune response to heavy exertion | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.appet.2016.02.015 | Functional Imagery Training to reduce snacking: Testing a novel motivational int | no OA PDF resolved
+- FAIL pdf | A | 10.1111/j.1360-0443.2012.04034.x | The acute effects of physical activity on cigarette cravings: systematic review  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biology10050362 | Upper Respiratory Tract Infections in Sport and the Immune System Response. A Re | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu3030341 | Starches, Sugars and Obesity | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1155/2011/651936 | Mindfulness Intervention for Stress Eating to Reduce Cortisol and Abdo
+- FAIL pdf | B | 10.1056/nejmsa1502403 | Randomized Trial of Reduced-Nicotine Standards for Cigarettes | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2018.20579 | Effect of a Low Free Sugar Diet vs Usual Diet on Nonalcoholic Fatty Liver Diseas | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu10091187 | Favorable Effects of a Ketogenic Diet on Physical Function, Perceived Energy, an | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu8110697 | Relationship between Added Sugars Consumption and Chronic Disease Risk Factors:  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1002/oby.21396 | Effects of a mindfulness‐based weight loss intervention in adults with
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1172/jci140065 | Dietary interventions for obesity: clinical and mechanistic findings
+- FAIL pdf | C | 10.3390/nu6115153 | Obesity: Pathophysiology and Intervention | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1371/journal.pone.0222768 | A brief diet intervention can reduce symptoms of depression in young a
+- FAIL pdf | C | 10.1002/hbm.23308 | Oxytocin enhances cognitive control of food craving in women | no OA PDF resolved
+- FAIL pdf | C | 10.1093/abm/kaaa123 | A Brief Motivational Intervention Differentially Reduces Sugar-sweetened Beverag | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu11102270 | The Potential Impact of Probiotics on the Gut Microbiome of Athletes | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph19031888 | A Guide to Different Intensities of Exercise, Vaccination, and Sports Nutrition  | no OA PDF resolved
+- FAIL pdf | C | 10.5114/biolsport.2020.95125 | The COVID-19 pandemic: how to maintain a healthy immune system during the lockdo | no OA PDF resolved
+- FAIL pdf | C | 10.1093/icb/icw045 | Ecological Immunology through the Lens of Exercise Immunology: New Perspective o | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu11071662 | A Dietary Intervention with Reduction of Starch and Sucrose Leads to Reduced Gas | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1136/bmj.k4583 | Effects of a low carbohydrate diet on energy expenditure during weight
+- FAIL pdf | C | 10.1097/md.0000000000048987 | Machine learning identifies a NETs-related four-gene diagnostic signature for ab | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fimmu.2026.1822561 | Exercise and tissue-resident memory T cells: from circulating numbers to spatial | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18122002 | Stevia Rebaudiosides Usage as a Sugar Reduction Tool: A Narrative Review of Thei | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.3390/nu18111767 | Emotional Eating and Abdominal Obesity: A Narrative Review of the Pote
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1038/s44324-026-00116-2 | Ultra-processed foods and cardiometabolic risk: from evidence to polic
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.3390/nu18111751 | Nutrition-First Support for GLP-1 and Dual Incretin Therapy in Obesity
+- FAIL pdf | C | 10.1111/sms.70258 | The Immune System as a Biosensor of Health and Athletic Performance | no OA PDF resolved
+- FAIL pdf | C | 10.3390/medicina62061138 | Synthetic Sweeteners and Human Health: An Overview of Health Risks, Vulnerable P | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fimmu.2026.1777470 | Forging resilient warriors within: exercise's epic role in training innate immun | no OA PDF resolved
+- FAIL pdf | C | 10.21037/tp-2026-1-0031 | Construction and validation of a diagnostic model for Kawasaki disease based on  | no OA PDF resolved
+- FAIL pdf | C | 10.1111/jcmm.71211 | Integration of Transcriptomics With Interpretable Artificial Intelligence for Id | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18101625 | Dietary Carbohydrates and ADHD Symptoms: A Systematic Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1007/s00394-026-03971-3 | Pea protein preload improves postprandial glucose response in healthy
+- FAIL pdf | C | 10.3389/fimmu.2026.1753859 | Clinical and tissue evidence of immune dysregulation in osteosarcoma: altered pe | no OA PDF resolved
+- FAIL pdf | C | 10.21037/tcr-2025-aw-2391 | Identification of immune-related gene signature for predicting prognosis of glio | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fmed.2026.1794234 | A nomogram model for predicting the risk factors of plastic bronchitis in childr | no OA PDF resolved
+- FAIL pdf | C | 10.3892/ol.2026.15665 | Decoding the role of polyamine metabolism in lung adenocarcinoma prognosis: A tr | no OA PDF resolved
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.1007/s00345-026-06538-3 | Predicting SIRS after PCNL using machine learning: the joint impact of
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.3389/fped.2026.1725447 | Development and validation of a predictive nomogram for early detectio
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.3390/ijms27041955 | Methodological and Pathophysiological Considerations in Obesity-Associ
+- FAIL pdf | C | 10.7554/elife.108625 | Two neuropeptides that promote blood feeding in &lt;i&gt;Anopheles stephensi&lt; | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s41065-026-00663-0 | Hub genes of neutrophil extracellular traps in abdominal aortic aneurysm: a bioi | no OA PDF resolved
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.1007/s40279-026-02455-y | Optimizing Athlete Travel for Performance: A Scientific Blueprint for
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | PMC13301554 | Robotic-Assisted Thoracic Surgery in the Immunotherapy Era: Navigating
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.1186/s12876-026-04693-w | The predictive value of platelet-to-lymphocyte ratio and lymphocyte co
+- FAIL pdf | C | 10.1210/jcemcr/luag107 | Semaglutide use for hypothalamic obesity and type 2 diabetes mellitus after supr | no OA PDF resolved
+- FAIL pdf | C | 10.2147/jhc.s529380 | A Novel Predictive Model Based on Glutathione Metabolism Genes RRM2 and G6PD in  | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s40001-025-03342-4 | Shared M0 macrophage infiltration-related gene signatures in osteoarthritis and  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/metabo15120784 | Ultra-Processed Foods and Metabolic Dysfunction: A Narrative Review of Dietary P | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s12876-026-04772-y | Interpretable stacking model integrating intra-/peritumoral CT-radiomics and ser | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71640 | Effect of Miracle Berry on Taste Modification Properties Among Adults Living in  | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fimmu.2026.1773927 | Development and validation of an interpretable prediction model using spatial pa | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71801 | The Role of Gut Microbiome in Obesity and Weight Management: A Review of Current | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.molmet.2026.102395 | IL-6 Activity is Required for Maximal Catecholamine Release During High-Intensit | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s12937-025-01270-x | The effect of a sustainable diet and time-restricted eating and probiotic in hea | no OA PDF resolved
+- FAIL pdf | C | 10.1021/acsomega.5c10700 | Physiological Advantages of a Fiber-Enriched Plant-Based Dessert: Improved Glyce | no OA PDF resolved
+- OFF-TOPIC | 13_vaccines_immunology/exercise_immunity_vaccines | 10.2147/ijgm.s565434 | Influencing Factors of New-Onset Atrial Fibrillation in Sepsis Patient
+- FAIL pdf | C | 10.2196/78391 | Patient Perceptions of Ozempic (Semaglutide) for Weight Loss: Mixed Methods Anal | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.3390/nu18101562 | Leveraging Dietary Interventions to Benefit Patients with Hematologic
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1155/ijm/5597426 | Coevolution of Human Diet and Gut Microbiome: Implications for Nutrige
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.2147/ijnrd.s522424 | Current Insights and Future Directions on the Role of GLP-1 Receptor A
+- FAIL pdf | A | 10.1093/ajcn/84.1.274 | Intake of sugar-sweetened beverages and weight gain: a systematic review1–3 | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmj.e7492 | Dietary sugars and body weight: systematic review and meta-analyses of randomise | no OA PDF resolved
+- FAIL pdf | A | 10.3945/ajcn.113.058362 | Sugar-sweetened beverages and weight gain in children and adults: a systematic r | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1542/peds.2009-2107c | Expert Panel on Integrated Guidelines for Cardiovascular Health and Ri
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1208/s12248-012-9432-8 | Therapeutic Roles of Curcumin: Lessons Learned from Clinical Trials
+- FAIL pdf | C | 10.1126/science.abl5197 | Cross-tissue immune cell analysis reveals tissue-specific features in humans | no OA PDF resolved
+- FAIL pdf | C | 10.22029/eir.2020.1730 | Can exercise affect immune function to increase susceptibility to infection? | no OA PDF resolved
+- FAIL pdf | C | 10.1093/milmed/168.12.1034 | Immune and Hormonal Changes following Intense Military Training | no OA PDF resolved
+- FAIL pdf | C | 10.7205/milmed.172.9.1006 | Effect of a Probiotics Supplementation on Respiratory Infections and Immune and  | no OA PDF resolved
+- FAIL pdf | C | 10.1038/s41574-021-00627-6 | The role of sugar-sweetened beverages in the global epidemics of obesity and chr | no OA PDF resolved
+- FAIL pdf | C | 10.1084/jem.192.5.761 | Lymphocyte Cc Chemokine Receptor 9 and Epithelial Thymus-Expressed Chemokine (Te | no OA PDF resolved
+- FAIL pdf | C | 10.3945/ajcn.2008.27240 | Reduction in consumption of sugar-sweetened beverages is associated with weight  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jshs.2018.09.009 | The compelling link between physical activity and the body's defense system | no OA PDF resolved
+- FAIL pdf | C | 10.3945/ajcn.2008.26792 | Nonnutritive sweetener consumption in humans: effects on appetite and food intak | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.3310/hta2140 | Evaluating patient-based outcome measures for use in clinical trials
+- FAIL pdf | C | 10.3945/jn.115.220301 | Sugar-Sweetened Beverages Are the Main Sources of Added Sugar Intake in the Mexi | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.neubiorev.2016.09.020 | Appetitive Pavlovian-instrumental Transfer: A review | no OA PDF resolved
+- FAIL pdf | C | 10.2165/11594400-000000000-00000 | Antioxidant Supplementation during Exercise Training | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu8110697 | Relationship between Added Sugars Consumption and Chronic Disease Risk Factors:  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu3030341 | Starches, Sugars and Obesity | no OA PDF resolved
+- FAIL pdf | C | 10.3168/jds.2017-14347 | Invited review: Sugar reduction in dairy products | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmj.k4718 | Association between intake of non-sugar sweeteners and health outcomes: systemat | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jand.2016.06.003 | Added Sugars Intake Across the Distribution of US Children and Adult Consumers:  | no OA PDF resolved
+- FAIL pdf | C | 10.1093/ajcn/85.3.651 | Liquid calories, sugar, and body weight | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/sugar_cravings_control | 10.1016/s0140-6736(18)31809-9 | Carbohydrate quality and human health: a series of systematic reviews
+- FAIL pdf | C | 10.5662/wjm.v16.i2.114192 | Obstructive sleep apnea: Proposed scoring system | no OA PDF resolved
+- FAIL pdf | C | 10.3390/clockssleep8020027 | Obstructive Sleep Apnea in Critically Ill Patients: A Structured Narrative Revie | no OA PDF resolved
+- FAIL pdf | C | 10.2196/96770 | The South Texas Oral Health Network Study of Practitioners' Approaches to Oral A | no OA PDF resolved
+- FAIL pdf | C | 10.1002/lio2.70457 | Barriers to Care for Obstructive Sleep Apnea: Primary Care Perspectives at a Saf | no OA PDF resolved
+- FAIL pdf | C | 10.1038/s41533-026-00516-3 | Screening obstructive sleep apnea using clinical questionnaires and the triglyce | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.3389/fnins.2026.1849903 | Editorial: The promise of sleep technology
+- FAIL pdf | C | 10.3390/biomedicines14061304 | Frailty-Driven Prediction of Inpatient Obstructive Sleep Apnea and Related Sleep | no OA PDF resolved
+- FAIL pdf | C | 10.3390/diagnostics16060843 | Current Evidence on the Role of Pediatric Dentists in the Multidisciplinary Mana | no OA PDF resolved
+- FAIL pdf | C | 10.3390/jcm15114179 | Sleep Disorders in Pregnant Women and Their Impact on Maternal and Fetal Outcome | no OA PDF resolved
+- FAIL pdf | C | 10.2196/80384 | Machine Learning-Based Multidimensional Oximetry for Obstructive Sleep Apnea Scr | no OA PDF resolved
+- FAIL pdf | A | 10.3390/ijerph23050614 | Racial and Ethnic Disparities in the Diagnosis and Treatment of Obstructive Slee | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | PMC13291172 | Prevalence of Insomnia in Type 2 Diabetes Mellitus Patients at a Terti
+- FAIL pdf | C | 10.4292/wjgpt.v17.i2.118130 | Metabolic dysfunction-associated steatotic liver disease and obstructive sleep a | no OA PDF resolved
+- FAIL pdf | C | 10.3390/jpm16050273 | Recognition of Obstructive Sleep Apnea: An Exploratory Bayesian Modeling Analysi | no OA PDF resolved
+- FAIL pdf | A | 10.3390/jcm15103720 | Diagnostic Utility of Upper Airway Ultrasonography in Adults with Suspected Obst | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1177/07067437261458523 | Sexsomnia: A Clinical Entity Psychiatrists Should Know About
+- FAIL pdf | C | 10.3389/fphys.2026.1777406 | Electrocardiographic assessment in obstructive sleep apnea: bridging pathophysio | no OA PDF resolved
+- FAIL pdf | C | 10.1056/nejmoa1308659 | Upper-Airway Stimulation for Obstructive Sleep Apnea | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circulationaha.109.901801 | Prospective Study of Obstructive Sleep Apnea and Incident Coronary Heart Disease | no OA PDF resolved
+- FAIL pdf | C | 10.1161/cir.0000000000000988 | Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From  | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1002/hep.29367 | The diagnosis and management of nonalcoholic fatty liver disease: Prac
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1093/eurheartj/ehab368 | 2021 ESC Guidelines for the diagnosis and treatment of acute and chron
+- FAIL pdf | C | 10.1056/nejmoa022479 | Cardiovascular Effects of Continuous Positive Airway Pressure in Patients with H | no OA PDF resolved
+- FAIL pdf | C | 10.1001/jama.2012.3418 | Association Between Treated and Untreated Obstructive Sleep Apnea and Risk of Hy | no OA PDF resolved
+- FAIL pdf | C | 10.1378/chest.08-2776 | Obstructive Sleep Apnea Is Common in Idiopathic Pulmonary Fibrosis | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0735-1097(03)00184-0 | Obstructive sleep apnea and cardiovascular disease | no OA PDF resolved
+- FAIL pdf | C | 10.1503/cmaj.170296 | Diagnosis and treatment of obstructive sleep apnea in adults | no OA PDF resolved
+- FAIL pdf | C | 10.1097/aln.0b013e31816d91b5 | Validation of the Berlin Questionnaire and American Society of Anesthesiologists | no OA PDF resolved
+- FAIL pdf | C | 10.1183/13993003.00385-2015 | Obstructive sleep disordered breathing in 2- to 18-year-old children: diagnosis  | no OA PDF resolved
+- FAIL pdf | C | 10.4065/mcp.2010.0810 | Updates on Definition, Consequences, and Management of Obstructive Sleep Apnea | no OA PDF resolved
+- FAIL pdf | C | 10.1056/nejmoa1306766 | CPAP versus Oxygen in Obstructive Sleep Apnea | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circulationaha.108.189141 | Resistant Hypertension: Diagnosis, Evaluation, and Treatment | no OA PDF resolved
+- FAIL pdf | A | 10.5664/jcsm.7638 | Treatment of Adult Obstructive Sleep Apnea With Positive Airway Pressure: An Ame | no OA PDF resolved
+- FAIL pdf | A | 10.5664/jcsm.4466 | Obstructive Sleep Apnea and Psychiatric Disorders: A Systematic Review | no OA PDF resolved
+- FAIL pdf | C | 10.4081/ni.2011.e15 | Obstructive sleep apnea | no OA PDF resolved
+- FAIL pdf | C | 10.7759/cureus.110570 | Individualizing Injectable Testosterone Replacement Therapy in Primary Care: Pha | no OA PDF resolved
+- FAIL pdf | C | 10.1210/clinem/dgaf635 | The Role of Obstructive Sleep Apnea and CPAP Therapy in the Functional Hypogonad | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ebiom.2026.106157 | Sleep apnea, heart health and testosterone: unravelling the triad of well-being | no OA PDF resolved
+- FAIL pdf | C | 10.1093/sexmed/qfag042 | Association between obstructive sleep apnea and sex hormones in U.S. adult males | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1016/j.hrcr.2025.10.027 | Navigating atrial fibrillation in an endurance athlete: Evaluation, ri
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1097/md.0000000000049299 | Association between weekend catch-up sleep and metabolic syndrome: A c
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1111/andr.70229 | Testosterone Versus Clomiphene Treatment of Hypogonadism: A Retrospect
+- FAIL pdf | C | 10.1007/s44197-026-00552-9 | Rising Mortality from Sleep Apnea and Hypertension in U.S. Adults: A 23-Year Epi | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | PMC13128135 | Testosterone and Cardiovascular Health: Physiology, Pharmacokinetics a
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1016/j.lana.2026.101534 | Persistent behavioral, biological, and physiological sequelae in activ
+- FAIL pdf | C | 10.3390/jcm15072786 | Beyond Glycemic Control: GLP-1RA-Based Therapies and Emerging Targets Beyond the | no OA PDF resolved
+- FAIL pdf | A | 10.3389/fmed.2026.1815694 | The association between obstructive sleep apnea syndrome and sarcopenia: a meta- | no OA PDF resolved
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1177/00368504261451366 | Magnesium depletion score and circadian syndrome: Mediated by body mas
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.3390/oxygen6030016 | Higher Prevalence of Cognitive Impairment in Residents of High-Altitud
+- OFF-TOPIC | 03_sleep_stress/sleep_apnea_breathing | 10.1186/s12954-025-01294-w | Harm reduction measures in a recreational gym user with anabolic andro
+- FAIL pdf | C | 10.3390/ijms27083601 | Molecular Biomarkers of Training Responses: A Systems Framework for Exercise Ada | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.smhs.2025.01.006 | Beyond physical exhaustion: Understanding overtraining syndrome through the lens | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bcr-2025-265066 | Overtraining Syndrome (OTS) in Three Endurance Athletes and Roads to Recovery | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/overtraining_overreaching | 10.3390/biology14040438 | Battle of the Biomarkers of Systemic Inflammation
+- FAIL pdf | A | 10.14814/phy2.70357 | Heart rate variability and overtraining in soccer players: A systematic review | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biology14081069 | Mapping Multi-Modal Fatigue in Elite Soccer Through Sweat-Omics Perspectives: A  | no OA PDF resolved
+- FAIL pdf | C | 10.1002/ejsc.70090 | Sleep Quality Impacts Training Responses and Performance in Elite Swimmers | no OA PDF resolved
+- FAIL pdf | C | 10.3390/medicina60010052 | Overtraining Syndrome as a Risk Factor for Bone Stress Injuries among Paralympic | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/overtraining_overreaching | 10.3390/life15121812 | Exercise and Diet Reshape Athletes' Gut Microbiota: Countering Health
+- FAIL pdf | C | 10.3390/ijms27125495 | Insulin Resistance as a Systemic Metabolic Risk State for Cancer: Mechanisms, Bi | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms25074089 | A Narrative Review on Adipose Tissue and Overtraining: Shedding Light on the Int | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/overtraining_overreaching | 10.3389/fspor.2026.1860120 | Heat intolerance: the challenge of returning to duty post-exertional h
+- FAIL pdf | C | 10.3390/nu15234916 | The Potential Role of Nutrition in Overtraining Syndrome: A Narrative Review | no OA PDF resolved
+- FAIL pdf | C | 10.3390/life15060867 | The 4Rs Framework of Sports Nutrition: An Update with Recommendations to Evaluat | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms26094359 | Extracellular Vesicles in Sport Horses: Potential Biomarkers and Modulators of E | no OA PDF resolved
+- FAIL pdf | C | 10.3390/jfmk11020167 | Research on Monitoring Exercise-Induced Fatigue Through Infrared Thermal Imaging | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18010139 | The Potential Role of Iron Homeostasis and Ferroptosis in Exercise Nutrition and | no OA PDF resolved
+- FAIL pdf | C | 10.3390/life15071023 | Next-Generation Approaches in Sports Medicine: The Role of Genetics, Omics, and  | no OA PDF resolved
+- FAIL pdf | C | 10.1080/17461391.2012.730061 | Prevention, diagnosis and treatment of the overtraining syndrome: Joint consensu | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsm.32.2.107 | Fatigue and underperformance in athletes: the overtraining syndrome | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsm.24.4.231 | Overtraining syndrome | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.pmrj.2010.03.025 | Physiological and Psychological Fatigue in Extreme Conditions: Overtraining and  | no OA PDF resolved
+- FAIL pdf | C | 10.2147/oajsm.s91657 | Diagnosis and prevention of overtraining syndrome: an opinion on education strat | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.redox.2020.101480 | Intramuscular mechanisms of overtraining | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2020/3937819 | Diagnosis of Overtraining Syndrome: Results of the Endocrine and Metabolic Respo | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bmjsem-2019-000542 | Novel insights of overtraining syndrome discovered from the EROS study | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bjsports-2016-096572 | How much is too much? (Part 2) International Olympic Committee consensus stateme | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu15234916 | The Potential Role of Nutrition in Overtraining Syndrome: A Narrative Review | no OA PDF resolved
+- FAIL pdf | C | 10.1590/s1807-59322005000100012 | PHYSICAL ACTIVITY AND MENTAL HEALTH: THE ASSOCIATION BETWEEN EXERCISE AND MOOD | no OA PDF resolved
+- FAIL pdf | C | 10.3390/medicina60010052 | Overtraining Syndrome as a Risk Factor for Bone Stress Injuries among Paralympic | no OA PDF resolved
+- FAIL pdf | C | 10.3390/s26010003 | Monitoring Training Adaptation and Recovery Status in Athletes Using Heart Rate  | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/overtraining_overreaching | 10.14814/phy2.70972 | Testosterone status and bone mineral density in Finnish male endurance
+- FAIL pdf | C | 10.1016/j.smhs.2025.01.006 | Beyond physical exhaustion: Understanding overtraining syndrome through the lens | no OA PDF resolved
+- FAIL pdf | C | 10.31661/jbpe.v0i0.2405-1770 | Bacterial Adaptation to Radiofrequency Electromagnetic Fields Based on Experienc | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s13643-026-03142-9 | Near-field and far-field exposures to radiofrequency electromagnetic fields and  | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bmjopen-2025-107281 | Is occupational exposure to radiofrequency electromagnetic fields associated wit | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.bbrep.2026.102613 | Magnetic fields as biophysical activators of autophagy: A preclinical systematic | no OA PDF resolved
+- FAIL pdf | C | 10.1002/bem.70056 | Exposure to 5G Radiofrequency and Physiological Effects in Healthy Young Adults: | no OA PDF resolved
+- FAIL pdf | C | 10.2196/86479 | Determining the Impact of Nonionizing Electromagnetic Waves on Human Pregnancy a | no OA PDF resolved
+- FAIL pdf | C | 10.31661/jbpe.v0i0.2310-1667 | A Decision Support System for Managing Health Symptoms of Living Near Mobile Pho | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s12940-026-01288-6 | Exposure limits to radiofrequency EMF do not account for cancer risk or reproduc | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms27104582 | The Effect of 2.45 GHz Radiofrequency Electromagnetic Radiation on Components of | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms27094088 | Assessment of the Effects of Electromagnetic Fields on Apoptosis and Stress Prot | no OA PDF resolved
+- FAIL pdf | B | 10.3390/s26123750 | The Effects of Short-Term Post-Exposure to 3.6 GHz 5G Mobile Phone Electromagnet | no OA PDF resolved
+- FAIL pdf | C | 10.21037/gs-2025-440 | Safety and efficacy of radiofrequency ablation of benign thyroid nodules in pati | no OA PDF resolved
+- FAIL pdf | A | 10.3390/neurolint18020028 | Effectiveness of Pulsed Electromagnetic Field Therapy on Neuropathic Pain: A Sys | no OA PDF resolved
+- FAIL pdf | C | 10.3390/cancers18101613 | Non-Temperature-Induced Antitumor Effects of Amplitude-Modulated Radiofrequency: | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms27093813 | Radiofrequency Fields at 2.45 GHz Reprogram Mitochondria-Lysosome Crosstalk and  | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/emf_wireless_bluetooth | 10.1021/acscentsci.6c00004 | Why Fundamental Research Matters: Lessons from Nuclear Magnetic Resona
+- FAIL pdf | C | 10.1002/hsr2.71575 | The Landscape of Radiofrequency Technology for Skin Rejuvenation | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biomedicines14010225 | Emerging Nonpharmacologic Analgesic Technologies in Anesthesia: Mechanisms, Evid | no OA PDF resolved
+- FAIL pdf | A | 10.2471/blt.09.071852 | Systematic review on the health effects of exposure to radiofrequency electromag | no OA PDF resolved
+- FAIL pdf | C | 10.1289/ehp.7306 | Epidemiology of Health Effects of Radiofrequency Exposure | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.envint.2012.10.009 | A review of the ecological effects of radiofrequency electromagnetic fields (RF- | no OA PDF resolved
+- FAIL pdf | C | 10.4062/biomolther.2018.152 | Possible Effects of Radiofrequency Electromagnetic Field Exposure on Central Ner | no OA PDF resolved
+- FAIL pdf | C | 10.3109/02656736.2010.534528 | Health Council of the Netherlands: No need to change from SAR to time-temperatur | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.envint.2020.106300 | Prioritizing health outcomes when assessing the effects of exposure to radiofreq | no OA PDF resolved
+- FAIL pdf | C | 10.1002/1522-2586(200007)12:1<30::aid-jmri4>3.0.co;2-s | Radiofrequency Energy-Induced Heating During MR Procedures: A Review | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms22073772 | Manmade Electromagnetic Fields and Oxidative Stress—Biological Effects and Conse | no OA PDF resolved
+- FAIL pdf | C | 10.1111/jcmm.12088 | Electromagnetic fields act via activation of voltage‐gated calcium channels to p | no OA PDF resolved
+- FAIL pdf | C | 10.1093/neuonc/nou087 | The epidemiology of glioma in adults: a "state of the science" review | no OA PDF resolved
+- FAIL pdf | C | 10.1530/rep-16-0126 | The effects of radiofrequency electromagnetic radiation on sperm function | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms15045366 | Searching for the Perfect Wave: The Effect of Radiofrequency Electromagnetic Fie | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2012/683897 | Electromagnetic Fields, Oxidative Stress, and Neurodegeneration | no OA PDF resolved
+- FAIL pdf | C | 10.1289/ehp.9633 | Workgroup Report: Base Stations and Wireless Networks—Radiofrequency (RF) Exposu | no OA PDF resolved
+- FAIL pdf | C | 10.3390/epidemiologia7030086 | Interpretation of Epidemiological Studies on the Relationship Between Mobile Pho | no OA PDF resolved
+- FAIL pdf | C | 10.1002/ijc.70255 | Personal radio use and risk of cancers among police officers in Great Britain: R | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph22060933 | Trends in Malignant and Benign Brain Tumor Incidence and Mobile Phone Use in the | no OA PDF resolved
+- OFF-TOPIC | 15_health_maintenance/emf_wireless_bluetooth | 10.1038/s41746-025-02325-3 | Impact of nurse navigation and mobile app on brain tumor patients rece
+- FAIL pdf | C | 10.3390/ijms26157425 | Environmental Hazards and Glial Brain Tumors: Association or Causation? | no OA PDF resolved

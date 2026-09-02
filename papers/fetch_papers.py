@@ -70,10 +70,12 @@ def grade_of(pubtypes, title):
         return "C"
     if any(k in pt for k in ("systematic review", "meta-analysis", "meta analysis",
             "guideline", "practice-guideline", "position stand", "cochrane",
-            "network meta")):
+            "network meta", "umbrella review", "consensus statement",
+            "consensus guideline", "pooled analysis")):
         return "A"
     if any(k in pt for k in ("randomized controlled", "randomised controlled",
-            "randomized", "randomised", "clinical trial", "rct")):
+            "randomized", "randomised", "clinical trial", "rct",
+            "controlled clinical trial", "crossover", "cross-over")):
         return "B"
     return "C"
 
@@ -546,7 +548,41 @@ def anchor_ok(folder_rel, rec):
     txt = ((rec.get("title") or "") + " " + (rec.get("abstract") or "")).lower()
     return any(k in txt for k in kws)
 
+def aboost_topic(t):
+    """A-HUNT pass: pull OA systematic reviews / meta-analyses / guidelines / RCTs for a topic
+       and keep ONLY grade A/B (anchor-checked). Run with:  ABOOST=1 python3 fetch_papers.py
+       (optionally ABOOST_N=12 for a bigger top-up). Idempotent — dedup skips what's on disk."""
+    folder = t["folder"]; slug = t["slug"]
+    also = tuple(t.get("also", ())); tc = t.get("cohort", False)
+    os.makedirs(os.path.join(ROOT, folder), exist_ok=True)
+    COUNTS[folder] = max(COUNTS.get(folder, 0), len(glob.glob(os.path.join(ROOT, folder, "*.pdf"))))
+    kws = ANCHORS.get(os.path.basename(folder)) or [slug.replace("-", " ")]
+    core = kws[0]
+    n = int(os.environ.get("ABOOST_N", "8"))
+    cap = COUNTS[folder] + n
+    print("\n== ABOOST %s (have %d, hunting up to +%d A/B) ==" % (folder, COUNTS[folder], n))
+    qs = ["%s systematic review" % core,
+          "%s meta-analysis" % core,
+          "%s clinical practice guideline" % core,
+          "%s randomized controlled trial" % core]
+    if len(kws) > 1:
+        qs.append("%s %s systematic review meta-analysis" % (kws[0], kws[1]))
+    for q in qs:
+        if COUNTS.get(folder, 0) >= cap: break
+        try:
+            recs = epmc_search(q)
+        except Exception as e:
+            log_failed("- ABOOST query err | %s | %s" % (folder, e)); continue
+        for rec in recs:
+            if COUNTS.get(folder, 0) >= cap: break
+            if grade_of(rec.get("pubtypes", []), rec.get("title", "")) in ("A", "B") \
+               and anchor_ok(folder, rec):
+                acquire(rec, folder, slug, also_folders=also, tag_cohort=tc)
+    print("  -> %s now %d PDFs" % (folder, COUNTS.get(folder, 0)))
+
 def run_topic(t):
+    if os.environ.get("ABOOST"):
+        return aboost_topic(t)
     folder = t["folder"]; slug = t["slug"]; qmin = t["min"]; qstretch = t["stretch"]
     also = tuple(t.get("also", ()))        # hardlink every hit into these folders too
     tc   = t.get("cohort", False)          # tag young/older cohort (hormone job)

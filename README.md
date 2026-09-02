@@ -107,8 +107,11 @@ cd ~/GitHub/HealthCoach/rag && source .venv/bin/activate
 nano schedule_inputs.md          # fill INCORPORATE / TO DO / REMEMBER / REC-LEVEL NOTES
 MAXTOK=2200 python3 -u build_schedule.py
 ```
-Output → `logs/schedule_YYYYMMDD_HHMM.md` — a daily + weekly plan that honors your inputs
-and layers evidence-based A/B habits around them, each tagged A/B/C with a why + first step.
+Output → `logs/schedule_YYYYMMDD_HHMM.md`. The daily clock and weekly split are built
+**deterministically in code** from the `## TIMES` and `## WEEKLY SPLIT` fields in
+`schedule_inputs.md` — the model can't move your bedtime, invent work hours, or print bad
+times; it only writes the rationale/how-to for each block. Sleep length and caffeine cut-off
+are computed and sanity-checked, and it flags if you have fewer than 2 lifting days.
 Every technical term (zone 2, RPE, protein g/kg…) is defined with a how-to-find-your-number,
 and it ends with a **"how to find your numbers"** cheat sheet (curated in `SCHEDULE_TIPS.md`).
 
@@ -164,6 +167,38 @@ flowchart TD
 
 ---
 
+## Choosing / swapping the model (Hugging Face)
+
+The generation model is set by `GEN_MODEL` in `coach.py`, overridable per-run:
+`GEN_MODEL=<hf-repo-id> python3 build_playbook.py`. To find a good one on
+[huggingface.co/models](https://huggingface.co/models):
+
+**How to search.** In the model search box, filter/query for the pieces that matter:
+- **`mlx`** or the **`mlx-community`** org — MLX is the Apple-Silicon runtime `mlx_lm` loads. On a
+  Mac, use an MLX build; GGUF (llama.cpp) and safetensors (CUDA) won't load here. Sort by
+  **Trending** or **Most downloads** to find the maintained ones.
+- a **`4bit`** (or `4bit-DWQ`) quant in the name — 4-bit ≈ 0.5–0.6 GB per billion params. DWQ is a
+  higher-quality 4-bit; `8bit` is better quality but ~2× the RAM.
+- **`Instruct`** / `-it` / `Chat` — an instruction-tuned model. A base model (no such tag) won't
+  follow the prompt. Skip **`VL`**/**`Vision`** (multimodal, heavier) unless you need images, and
+  skip **`Coder`** unless it's for code.
+
+**Will it fit 48 GB?** Rule of thumb at 4-bit: model RAM ≈ **params ÷ 2 GB** (a 30B ≈ 15–18 GB,
+a 32B ≈ 18–20 GB, a 70B ≈ ~40 GB — too tight here with the RAG stack loaded). Leave ~10 GB for the
+embedding + reranker + KV cache + macOS. **MoE models** (name has `A3B`/`A22B` = active params) run
+at the speed of their *active* size, so a 30B-A3B reasons big but runs fast — the sweet spot here.
+Parallel `batch_ask`/fetch shards each load a full copy, so bigger model = fewer shards
+(≈ `40 GB ÷ model-GB`): 8B → 3+ shards, 30B → ~2, 32B dense → 1.
+
+**Verify before committing:** open the repo page, confirm it's MLX (an `mlx` tag or `mlx_lm` in the
+snippet), check the file sizes in "Files and versions" against your RAM, and copy the exact repo id
+(`org/name`) — that string is what `GEN_MODEL` takes. First run auto-downloads it once.
+
+Known-good picks for this Mac (Sept 2026):
+- `mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit` — MoE, fast + strong — **current default**
+- `mlx-community/Qwen2.5-14B-Instruct-4bit` — solid, lighter
+- `mlx-community/Llama-3.1-8B-Instruct-4bit` — fastest, allows 3 parallel shards
+
 ## Adding more later
 
 **More questions / new cross-matrix entities** → edit `rag/build_questions.py`:
@@ -171,6 +206,20 @@ flowchart TD
 - auto-crosses: add an entity to `BEHAVIORS`, `SUBS`, or `FOODS` with its outcome ids
   (only where a paper would plausibly find an interaction — else it's empty noise)
 - then rerun Step 1.
+
+**More A-grade sources (systematic reviews / meta-analyses / guidelines)** → run the A-hunt pass:
+```bash
+cd ~/GitHub/HealthCoach/papers
+ABOOST=1 python3 fetch_papers.py                 # +8 OA reviews/MA/guidelines/RCTs per topic
+ABOOST=1 ABOOST_N=12 python3 fetch_papers.py     # bigger top-up
+ABOOST=1 python3 fetch_papers.py --shard 0/3 &   # shard it like a normal fetch
+```
+It queries each topic for `systematic review / meta-analysis / clinical practice guideline / RCT`,
+keeps ONLY anchor-matched **grade A/B**, and is idempotent (dedup skips what's on disk). Re-ingest
+after. Note the ceiling: the best A sources (Cochrane full texts, most society guidelines) are
+paywalled and this fetcher is legal-OA-only — ABOOST harvests the OA A/B that exist (plentiful in
+Frontiers/BMC/PLoS/MDPI/Cochrane-OA). For a specific paywalled review you have legal access to,
+drop the PDF into the right `NN_category/topic/` folder named `A_YEAR_slug_title.pdf` and re-ingest.
 
 **More source topics** → edit `papers/fetch_papers.py`:
 - add an `ANCHORS['slug'] = [keywords]` gate, then a `T("NN_category/slug", "tag", min, stretch, [queries], aa=False)`
@@ -187,7 +236,7 @@ flowchart TD
 
 **`rag/`**
 - `ingest.py` — extract → chunk → embed (bge-base) → index into `lancedb` (full rebuild each run).
-- `coach.py` — models, retrieval, guardrails, system prompt, your `profile.txt`. Single-question CLI.
+- `coach.py` — models, retrieval, guardrails, system prompt, your `profile.txt`. Single-question CLI. Default model is **Qwen3-30B-A3B-Instruct-2507-4bit** (MoE, ~17 GB, 3B active so it's fast *and* strong; auto-downloads ~17 GB on first run). Lighter: `GEN_MODEL=mlx-community/Qwen2.5-14B-Instruct-4bit python3 …`; fastest / allows 3 shards: `GEN_MODEL=mlx-community/Llama-3.1-8B-Instruct-4bit python3 …`. The prompt forces differentiated A/B/C grading and forbids inventing compound names.
 - `batch_ask.py` — runs a question file through the coach → `logs/coach_log_*.md`. Args: `FILE [i/n]`; env `MAXTOK`.
 - `build_questions.py` — the question model → `interactions.txt`, `new_questions_r15.txt`, `personalized_tiers.txt`.
 - `build_schedule.py` + `schedule_inputs.md` — your input-driven schedule builder (with term definitions + how-to-find-your-number).

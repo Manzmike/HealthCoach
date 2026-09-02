@@ -99,21 +99,40 @@ def main():
          "protein intake muscle preservation", "zone 2 aerobic base training",
          "resistance training hypertrophy meta-analysis", "calorie deficit fat loss"])))
 
-    print("[2/5] daily schedule...")
-    chapters.append(("Your daily schedule (workday)", gen(
-        "Build a concrete DAILY schedule for a Mon-Thu workday, wake to sleep, with clock times. Include EVERY "
-        "'incorporate' item at its best evidence-based time, place the 'to do' items, honor EVERY 'remember' "
-        "constraint, and layer in the strongest A/B habits. Tag each item A/B/C and add a one-line why.",
-        ["supplement timing morning versus night", "caffeine timing half-life sleep",
-         "morning light exposure circadian", "evening resistance training sleep", "meal timing protein distribution"])))
+    # Chapters 3 & 4: times/split are FIXED IN CODE (from schedule_inputs.md TIMES) — the model
+    # only adds rationale. This is why the playbook's clock can't drift like the old 8B version.
+    print("[2/5] daily schedule (deterministic clock)...")
+    T = BS.parse_times(os.environ.get("INPUTS", "schedule_inputs.md"))
+    daily_ch = "_(no ## TIMES section in schedule_inputs.md — add WAKE/BED/WORK_START/WORK_END/TRAIN.)_"
+    if T:
+        rows, caf_m, sleep_min, (wake, bed, ws, we, train) = BS.build_timeline(T)
+        sh = sleep_min / 60.0
+        warn = "  ⚠️ under 7 h — adjust BED/WAKE." if sh < 7 else ""
+        tl = "\n".join("| %s | %s |" % (BS.to_hhmm(t), l) for t, l in rows)
+        rationale = gen(
+            "The daily timeline below is FIXED (I set the times). Do NOT restate or change any times. Just add, "
+            "for each block, a 1–2 line note on exactly what to do/eat/take and WHY, tagged A/B/C.\n\nFIXED TIMELINE:\n" + tl,
+            ["supplement timing morning versus night", "caffeine timing half-life sleep",
+             "morning light exposure circadian", "evening resistance training sleep", "meal timing protein distribution"])
+        daily_ch = ("**Fixed anchors:** wake %s · sleep %s → **%.1f h in bed**%s · work %s–%s · training %s · "
+                    "last caffeine %s.\n\n| Time | Block |\n|---|---|\n%s\n\n### Why each block\n\n%s"
+                    % (BS.to_hhmm(wake), BS.to_hhmm(bed), sh, warn, BS.to_hhmm(ws), BS.to_hhmm(we),
+                       BS.to_hhmm(train), BS.to_hhmm(caf_m), tl, rationale))
+    chapters.append(("Your daily schedule (workday)", daily_ch))
 
-    print("[3/5] weekly structure...")
-    chapters.append(("Your weekly structure", gen(
-        "Build a WEEKLY plan (Mon-Thu work, Fri-Sun off, long run Sat): training split, easy vs hard days, the "
-        "long run, recovery/deload, and where each key habit lands. Explain zone 2 vs interval days and how to "
-        "balance lifting with running without the interference effect.",
-        ["weekly training split concurrent endurance strength", "zone 2 volume marathon base",
-         "VO2max interval training", "recovery deload overtraining", "long run progression marathon"])))
+    print("[3/5] weekly structure (deterministic split)...")
+    split = BS.parse_split(os.environ.get("INPUTS", "schedule_inputs.md"))
+    sp_md = "\n".join("| %s | %s |" % (d, split.get(d, "—")) for d in BS.DAYS)
+    n_lift = sum(1 for d in BS.DAYS if __import__("re").search(r'lift|strength|weight', split.get(d, ""), __import__("re").I))
+    lift_warn = "" if n_lift >= 2 else "\n\n> ⚠️ only %d lifting day(s) — 2–3 is better for muscle retention on a cut." % n_lift
+    wk_detail = gen(
+        "The weekly split below is FIXED. Do NOT change it. For each session give the specifics — for runs the "
+        "zone-2 HR method + target, for intervals a sample format, for lifts sets/reps and reps-in-reserve; note "
+        "the long-run fueling point and how to avoid the lifting/running interference effect.\n\nFIXED SPLIT:\n" + sp_md,
+        ["zone 2 heart rate determination", "VO2max interval training", "concurrent training interference",
+         "long run fueling carbohydrate", "recovery deload overtraining"])
+    weekly_ch = "| Day | Session |\n|---|---|\n%s%s\n\n### Session detail\n\n%s" % (sp_md, lift_warn, wk_detail)
+    chapters.append(("Your weekly structure", weekly_ch))
 
     print("[4/5] supplements & compounds (tiered)...")
     chapters.append(("Supplements & compounds — what to add (tiered)", gen(

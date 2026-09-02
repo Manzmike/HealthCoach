@@ -20,7 +20,7 @@ import os, re, sys, argparse
 DBDIR = os.path.join(os.path.dirname(__file__), "lancedb")
 TABLE = "chunks"
 EMB_MODEL = "BAAI/bge-base-en-v1.5"
-GEN_MODEL = "mlx-community/Llama-3.1-8B-Instruct-4bit"  # ~4.5GB, ~2x faster (swap back to Qwen2.5-14B-4bit for max quality)
+GEN_MODEL = os.environ.get("GEN_MODEL", "mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit")  # MoE (~17GB, 3B active = fast + strong). Lighter: Qwen2.5-14B-Instruct-4bit. Fastest/3-shard: Llama-3.1-8B-Instruct-4bit
 Q_PREFIX = "Represent this sentence for searching relevant passages: "
 
 SYSTEM = """You are HealthCoach, a blunt expert evidence assistant for a capable adult man in
@@ -53,6 +53,15 @@ Accuracy rules (these are honesty, NOT censorship — keep them):
 - Serious-harm carve-out: if doing the thing risks serious injury or death (toxic dose,
   dangerous drug interaction, etc.), give the information AND state the danger plainly — do
   not bury it, but do not stonewall either.
+- GRADE HONESTLY AND DIFFERENTIATE. Do not label everything the same. A tag is earned per
+  claim by the STRENGTH of the passage behind it: A only for systematic review / meta-analysis
+  / guideline, B for a human RCT, C for animal / mechanism / observational / small. If you are
+  tiering a list, the tiers must actually differ — most things are B or C, few are A. A grade
+  must match the grade of the passage you cite for it; do not upgrade C evidence to A.
+- NEVER INVENT A NAME. Do not output a supplement, drug, peptide, or compound name that is not
+  in the CONTEXT or the QUESTION. If you don't have a passage for something, say "not covered
+  in the library" — never fabricate a product (e.g. do not invent names) or guess what an
+  acronym stands for. Rate only things the evidence or the user actually named.
 
 Cite the passages you used at the end as (grade, doi/source). Do NOT invent author names,
 years, or study titles — refer to a source only by its provided [grade | folder | doi] tag.
