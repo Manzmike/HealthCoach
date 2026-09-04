@@ -37,6 +37,17 @@ The assessment guides you through nine explained sections: goals, training sched
 stack, safety, supplement research, experimental/peptide research, daily routine, food/home
 ideas, and shopping. Each screen tells you why the question matters.
 
+On `SUPPLEMENTS TO INVESTIGATE`, choose one intake strategy with Space:
+
+- `Whole-food first` uses ordinary foods whenever a meaningful food route exists.
+- `Mixed` compares food and isolated products.
+- `Products allowed` permits product evaluation but does not bypass evidence or safety checks.
+
+The report distinguishes a real whole-food route from a food that merely contains a related
+compound. It also says when no practical whole-food equivalent exists. “No food equivalent”
+never means “automatically buy the supplement.” Creatine remains the user's locked 5 g/day
+exception, even though meat and fish contain creatine.
+
 - Arrow keys move up and down.
 - Space selects or unselects an item.
 - `/` searches longer lists.
@@ -92,6 +103,7 @@ documents are created. The navigator only reads that report; it does not make an
 - Coffee, milk, food, supplement, and medication-interaction reviews.
 - Apartment, house, light, water, faith, and lifestyle options.
 - Supplement and peptide evidence tables.
+- Whole-food routes for supplement-like nutrients, with non-equivalent forms clearly marked.
 - Safety gates and topics the research does not adequately cover.
 - A clickable chapter and logical-page index.
 - The questions, recorded answers, and research references used.

@@ -87,6 +87,21 @@ EXPERIMENTAL_POLICY_OPTIONS = (
     ),
 )
 
+SUPPLEMENT_SOURCE_OPTIONS = (
+    (
+        "whole_food_first",
+        "Whole-food first — use foods whenever the nutrient/compound has a meaningful food route (recommended)",
+    ),
+    (
+        "mixed",
+        "Mixed — compare food and isolated products for evidence fit, tolerance, cost, and convenience",
+    ),
+    (
+        "products_allowed",
+        "Products allowed — still prefer food where equivalent, but evaluate evidence-supported products",
+    ),
+)
+
 SAFETY_OPTIONS = (
     ("none_known", "None known"),
     ("kidney", "Kidney disease or reduced kidney function"),
@@ -196,7 +211,6 @@ PRODUCT_OPTIONS = (
     ("fewest_items", "Fewest total stack items"),
     ("powder", "Powder preferred"),
     ("capsules", "Capsules/tablets preferred"),
-    ("food_first", "Food-first whenever practical"),
     ("avoid_animal", "Avoid animal-derived products"),
 )
 
@@ -997,6 +1011,86 @@ PEPTIDE_CATALOG: tuple[Candidate, ...] = (
       policy="SKIP — CLASS HARM/LEGAL/SPORT-RULE REVIEW; NO CYCLE OR PROTOCOL"),
 )
 
+# These are planning routes, not claims that a food recreates an isolated study product or dose.
+# The distinction is deliberately explicit: "direct" means ordinary foods provide the nutrient
+# or food itself; "partial" means related food constituents exist but are not interchangeable
+# with the isolated/standardized form. Unmapped items fail closed as having no practical food
+# equivalent established by this planner.
+FOOD_DIRECT = "WHOLE-FOOD ROUTE"
+FOOD_PARTIAL = "FOOD EXISTS; NOT FORM/DOSE EQUIVALENT"
+FOOD_LOCKED = "FOOD EXISTS; LOCKED PRODUCT EXCEPTION"
+FOOD_NONE = "NO PRACTICAL WHOLE-FOOD EQUIVALENT MAPPED"
+
+FOOD_SOURCE_ROUTES: dict[str, tuple[str, str]] = {
+    "creatine_monohydrate": (FOOD_LOCKED, "Meat and fish contain creatine, but the user's chosen 5 g/day creatine monohydrate remains the locked product."),
+    "protein_whey": (FOOD_DIRECT, "Milk/yogurt/cottage cheese, eggs, poultry, fish, lean meat, soy foods, beans, and lentils; whey is a dairy-derived convenience food."),
+    "caffeine": (FOOD_DIRECT, "Coffee or tea; keep the locked 11:15 cutoff."),
+    "omega_3_epa_and_dha": (FOOD_DIRECT, "Fatty fish such as salmon, sardines, trout, herring, or mackerel."),
+    "vitamin_d3": (FOOD_DIRECT, "Fatty fish, egg yolk, and fortified pasteurized dairy or fortified alternatives; deficiency treatment remains lab/clinician-gated."),
+    "magnesium": (FOOD_DIRECT, "Pumpkin seeds, nuts, beans/lentils, whole grains, and leafy greens."),
+    "melatonin": (FOOD_PARTIAL, "Some foods contain small amounts, but they are not equivalent to a standardized melatonin product."),
+    "zinc": (FOOD_DIRECT, "Oysters and other shellfish, beef, dairy, beans, and pumpkin seeds."),
+    "beta_alanine": (FOOD_PARTIAL, "Meat, poultry, and fish supply carnosine-related amino acids, not a standardized beta-alanine protocol."),
+    "iron_if_deficient": (FOOD_DIRECT, "Meat, shellfish, beans/lentils, tofu, and iron-fortified foods; a confirmed deficiency remains clinician-gated."),
+    "vitamin_b12_if_deficient": (FOOD_DIRECT, "Fish, shellfish, meat, eggs, dairy, and B12-fortified foods; a confirmed deficiency remains clinician-gated."),
+    "folate_methylfolate_if_deficient": (FOOD_DIRECT, "Leafy greens, beans/lentils, asparagus, avocado, citrus, and fortified grains; methylfolate products are not the same as these foods."),
+    "calcium_with_vitamin_d_if_intake_is_low": (FOOD_DIRECT, "Pasteurized milk/yogurt/cottage cheese, calcium-set tofu, sardines with bones, and fortified alternatives."),
+    "dietary_nitrate_beetroot": (FOOD_DIRECT, "Beets, arugula, spinach, lettuce, and other nitrate-rich vegetables."),
+    "psyllium_viscous_fiber": (FOOD_PARTIAL, "Oats, barley, beans/lentils, chia, flax, fruit, and vegetables provide fiber; psyllium husk is a separate concentrated fiber."),
+    "l_theanine": (FOOD_PARTIAL, "Tea naturally contains L-theanine, but amounts vary and are not equivalent to a standardized extract."),
+    "curcumin_turmeric_extract": (FOOD_PARTIAL, "Turmeric is a culinary spice; a standardized curcumin extract is not equivalent to seasoning food."),
+    "tart_cherry": (FOOD_DIRECT, "Tart cherries, frozen tart cherries, or pasteurized tart-cherry juice."),
+    "glycine": (FOOD_DIRECT, "Protein foods plus gelatin-rich foods such as cooked connective tissue or gelatin; amounts vary."),
+    "probiotics": (FOOD_PARTIAL, "Pasteurized-culture yogurt/kefir and fermented vegetables can provide live cultures, but strains and counts differ from products."),
+    "saffron": (FOOD_PARTIAL, "Saffron is a culinary spice, but food use is not equivalent to a standardized trial extract."),
+    "taurine": (FOOD_DIRECT, "Shellfish, fish, dark poultry meat, and red meat."),
+    "citrulline_citrulline_malate": (FOOD_PARTIAL, "Watermelon contains citrulline, but is not equivalent to a standardized citrulline or citrulline-malate product."),
+    "collagen_peptides_for_joints_and_skin": (FOOD_PARTIAL, "Fish skin, poultry skin, gelatin, and connective-tissue cuts contain collagen-related proteins; hydrolyzed collagen peptides are a processed form."),
+    "vitamin_c_for_cold_duration": (FOOD_DIRECT, "Citrus, kiwi, berries, peppers, broccoli, and potatoes."),
+    "garlic": (FOOD_DIRECT, "Fresh or cooked garlic."),
+    "green_tea_extract_egcg": (FOOD_PARTIAL, "Brewed green tea supplies catechins, but it is not dose-equivalent to concentrated EGCG extract."),
+    "coq10": (FOOD_PARTIAL, "Organ meats, sardines, meat, and some nuts contain CoQ10 in food amounts, not standardized product amounts."),
+    "astaxanthin": (FOOD_DIRECT, "Salmon, trout, shrimp, crab, and other red/orange seafood."),
+    "ginger": (FOOD_DIRECT, "Fresh, frozen, or dried culinary ginger."),
+    "phosphatidylserine": (FOOD_PARTIAL, "Soy foods, egg yolk, fish, and organ meats contain phospholipids; they are not equivalent to a standardized phosphatidylserine product."),
+    "l_tyrosine_when_sleep_deprived_or_stressed": (FOOD_DIRECT, "Protein foods such as dairy, eggs, poultry, fish, meat, soy, beans, and lentils."),
+    "beta_glucans": (FOOD_DIRECT, "Oats, barley, and edible mushrooms; beta-glucan structure differs by source."),
+    "polyphenol_rich_foods_tart_cherry_tracked_separately": (FOOD_DIRECT, "Berries, cherries, grapes, cocoa, tea, herbs, spices, and colorful vegetables."),
+    "potassium_from_food_first": (FOOD_DIRECT, "Potatoes, beans/lentils, yogurt, fruit, leafy greens, squash, and other vegetables."),
+    "lion_s_mane": (FOOD_PARTIAL, "The edible fruiting body can be used as food; extracts are not equivalent."),
+    "cordyceps": (FOOD_PARTIAL, "Whole culinary cordyceps products exist, but species, identity, and extracts are not interchangeable."),
+    "turkey_tail": (FOOD_PARTIAL, "Whole mushroom/tea preparations exist, but are not ordinary food or equivalent to standardized extracts."),
+    "reishi": (FOOD_PARTIAL, "Whole mushroom/tea preparations exist, but are not ordinary food or equivalent to standardized extracts."),
+    "chaga": (FOOD_PARTIAL, "Whole tea preparations exist, but are not ordinary food or equivalent to standardized extracts."),
+    "fenugreek": (FOOD_PARTIAL, "Fenugreek seed is a culinary spice/food; standardized extracts are not equivalent."),
+    "maca": (FOOD_PARTIAL, "Maca root powder is food-like; concentrated extracts are not equivalent."),
+    "apigenin": (FOOD_PARTIAL, "Parsley, celery, and chamomile contain apigenin-related flavonoids in variable food amounts."),
+    "phosphatidylcholine": (FOOD_DIRECT, "Egg yolks, soy foods, meat, fish, and dairy provide phosphatidylcholine/choline."),
+    "boron": (FOOD_DIRECT, "Prunes/raisins, avocado, nuts, beans/lentils, and fruit."),
+    "resveratrol": (FOOD_PARTIAL, "Grapes, berries, and peanuts contain resveratrol in food amounts; alcohol is not required."),
+    "quercetin": (FOOD_DIRECT, "Onions, apples, capers, berries, and leafy vegetables."),
+    "fisetin": (FOOD_PARTIAL, "Strawberries, apples, grapes, and persimmon contain fisetin in variable food amounts."),
+    "spermidine": (FOOD_DIRECT, "Wheat germ, mushrooms, legumes, whole grains, and aged cheese."),
+    "elderberry": (FOOD_PARTIAL, "Commercial cooked elderberry foods exist; they are not equivalent to a standardized extract."),
+    "glucosamine": (FOOD_PARTIAL, "Shellfish shells/cartilage foods and broths are not reliable equivalents to a standardized glucosamine product."),
+    "chondroitin": (FOOD_PARTIAL, "Animal cartilage and connective-tissue foods are not reliable equivalents to a standardized chondroitin product."),
+    "hyaluronic_acid": (FOOD_PARTIAL, "Skin/connective-tissue foods and broths are not reliable equivalents to an oral hyaluronic-acid product."),
+    "copper_bicarbonate": (FOOD_PARTIAL, "Liver, shellfish, nuts, seeds, cocoa, and legumes provide copper; they do not provide a reason to use copper bicarbonate."),
+    "high_dose_vitamin_e": (FOOD_DIRECT, "Nuts, seeds, avocado, and plant oils provide vitamin E; this does not justify a high-dose product."),
+    "high_dose_vitamin_a": (FOOD_DIRECT, "Liver, eggs, and dairy provide preformed vitamin A; carrots, sweet potatoes, and greens provide carotenoids; this does not justify a high-dose product."),
+    "beta_carotene_in_smokers": (FOOD_DIRECT, "Carrots, sweet potatoes, squash, and leafy greens provide food carotenoids; this is not a supplement recommendation."),
+    "bcaas_when_protein_is_already_high": (FOOD_DIRECT, "Complete protein foods such as dairy, eggs, meat, fish, poultry, and soy already provide BCAAs."),
+}
+
+
+def food_source_for(candidate: Candidate) -> tuple[str, str]:
+    if candidate.queue == QUEUE_PEPTIDE:
+        return FOOD_NONE, "Experimental drugs/peptides are not replaced by foods; keep the clinical or skip verdict."
+    return FOOD_SOURCE_ROUTES.get(
+        candidate.key,
+        (FOOD_NONE, "No meaningful ordinary whole-food equivalent is established in this planner; do not invent one."),
+    )
+
 
 def _normal(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
@@ -1140,12 +1234,13 @@ def ask_profile_quick() -> dict:
         ("reaction", "PAST REACTION", REACTION_OPTIONS, ("none_reported",)),
     ))
     run_step(5, "SUPPLEMENTS TO INVESTIGATE",
-             "Choose topics to research. These choices are not evidence grades.", (
+             "Choose one intake route, then topics to research. Food-first applies only where a meaningful whole-food route exists; it never invents a food substitute for a drug or isolated compound.", (
+        ("supplement_source", "SOURCE · ONE", SUPPLEMENT_SOURCE_OPTIONS, ("whole_food_first",)),
         ("review", "RESEARCH", supplement_options, (
             "creatine_monohydrate", "protein_whey", "caffeine",
             "omega_3_epa_and_dha", "vitamin_d3", "magnesium",
         )),
-    ))
+    ), exclusive=("supplement_source",))
     run_step(6, "PEPTIDE / GRAY-MARKET RESEARCH",
              "Choose one research boundary, then optionally select named items. Broad scan means evidence triage—not approval, compatibility, or a dosing plan.", (
         ("experimental", "BOUNDARY · ONE", EXPERIMENTAL_POLICY_OPTIONS, ("approved_only",)),
@@ -1167,7 +1262,7 @@ def ask_profile_quick() -> dict:
     run_step(9, "SHOPPING AND DEADLINE",
              "Choose your stores, buying priorities, and one deadline answer.", (
         ("store", "STORE · MULTI", STORE_OPTIONS, ("costco",)),
-        ("preference", "BUYING RULE", PRODUCT_OPTIONS, ("third_party", "fewest_items", "food_first")),
+        ("preference", "BUYING RULE", PRODUCT_OPTIONS, ("third_party", "fewest_items")),
         ("timeline", "DEADLINE · ONE", TIMELINE_OPTIONS, ("none",)),
         ("detail", "OPTIONAL NOTE", (("add_note", "I need to add one short detail not covered above"),), ()),
     ), exclusive=("timeline",))
@@ -1192,6 +1287,7 @@ def ask_profile_quick() -> dict:
     current_supplement_keys = picked("taking") or ["creatine_monohydrate"]
     result_keys = without_sentinel(picked("result") or ["not_tracked"], "not_tracked")
     interest_keys = picked("review")
+    supplement_source = one("supplement_source", "whole_food_first")
     peptide_keys = picked("peptide")
     experimental_policy = one("experimental", "approved_only")
     medication_keys = picked("medication") or ["tirzepatide"]
@@ -1297,6 +1393,8 @@ def ask_profile_quick() -> dict:
         "supplement_results": "; ".join(labels_for(result_keys, SUPPLEMENT_RESULT_OPTIONS)) or "not tracked",
         "priority_supplement_keys": interest_keys,
         "priority_supplements": [c.name for c in CATALOG if c.key in interest_keys],
+        "supplement_source": supplement_source,
+        "supplement_source_label": dict(SUPPLEMENT_SOURCE_OPTIONS)[supplement_source],
         "selected_peptide_keys": peptide_keys,
         "selected_peptides": [c.name for c in PEPTIDE_CATALOG if c.key in peptide_keys],
         "experimental_policy": experimental_policy,
@@ -1340,6 +1438,7 @@ def ask_profile_quick() -> dict:
     review.add_row("Pain / injury", profile["injuries"])
     review.add_row("Taking now", summary(current_names))
     review.add_row("Supplement research", summary(profile["priority_supplements"]))
+    review.add_row("Supplement source", profile["supplement_source_label"])
     review.add_row("Peptide research", summary(profile["selected_peptides"]))
     review.add_row("Experimental boundary", profile["experimental_policy_label"])
     review.add_row("Medicines / safety", f"{profile['medications']}; {profile['conditions_and_safety_flags']}")
@@ -1460,6 +1559,14 @@ def ask_profile_detailed() -> dict:
         ),
     )
     interest_names = [c.name for c in CATALOG if c.key in interest_keys]
+    supplement_source_values = checkbox_prompt(
+        "How should HealthCoach source nutrients and supplement-like compounds? Choose one.",
+        SUPPLEMENT_SOURCE_OPTIONS,
+        defaults=("whole_food_first",),
+        minimum=1,
+        maximum=1,
+    )
+    supplement_source = supplement_source_values[0]
 
     peptide_choices = [(c.key, c.name) for c in PEPTIDE_CATALOG]
     experimental_policy_values = checkbox_prompt(
@@ -1589,7 +1696,7 @@ def ask_profile_detailed() -> dict:
     preference_keys = checkbox_prompt(
         "Which buying and product constraints matter?",
         PRODUCT_OPTIONS,
-        defaults=("third_party", "fewest_items", "food_first"),
+        defaults=("third_party", "fewest_items"),
     )
     preference_details = Prompt.ask("Additional budget, format, testing, or product constraints", default="none additional")
     preferences = "; ".join(
@@ -1622,6 +1729,8 @@ def ask_profile_detailed() -> dict:
         "supplement_results": supplement_results,
         "priority_supplement_keys": interest_keys,
         "priority_supplements": interest_names,
+        "supplement_source": supplement_source,
+        "supplement_source_label": dict(SUPPLEMENT_SOURCE_OPTIONS)[supplement_source],
         "selected_peptide_keys": peptide_keys,
         "selected_peptides": peptide_names,
         "experimental_policy": experimental_policy,
@@ -1669,6 +1778,9 @@ def default_profile(args: argparse.Namespace) -> dict:
     experimental_policy = (args.experimental_policy or "approved_only").strip().lower()
     if experimental_policy not in dict(EXPERIMENTAL_POLICY_OPTIONS):
         raise SystemExit("--experimental-policy must be approved_only or screen_strong_human")
+    supplement_source = (args.supplement_source or "whole_food_first").strip().lower()
+    if supplement_source not in dict(SUPPLEMENT_SOURCE_OPTIONS):
+        raise SystemExit("--supplement-source must be whole_food_first, mixed, or products_allowed")
     current_text = args.current or "creatine monohydrate 5 g/day"
     current_candidates = [c for c in CATALOG if _matches_entry(c, current_text)]
     food_addition_keys = parse_choice_values(
@@ -1708,6 +1820,8 @@ def default_profile(args: argparse.Namespace) -> dict:
         "supplement_results": args.supplement_results or "no results recorded yet",
         "priority_supplement_keys": [c.key for c in priority],
         "priority_supplements": [c.name for c in priority],
+        "supplement_source": supplement_source,
+        "supplement_source_label": dict(SUPPLEMENT_SOURCE_OPTIONS)[supplement_source],
         "selected_peptide_keys": [c.key for c in peptides],
         "selected_peptides": [c.name for c in peptides],
         "experimental_policy": experimental_policy,
@@ -2006,6 +2120,7 @@ def profile_markdown(profile: dict) -> str:
         f"- Current supplements: {profile['current_supplements']}.",
         f"- Reported supplement results: {profile['supplement_results']}.",
         f"- Priority supplement evidence reviews: {', '.join(profile['priority_supplements']) or 'none selected'}.",
+        f"- Preferred supplement/nutrient source: {profile.get('supplement_source_label', 'Whole-food first')}.",
         f"- Selected peptide/gray evidence reviews: {', '.join(profile['selected_peptides']) or 'none selected'}.",
         f"- Experimental/unapproved research boundary: {profile.get('experimental_policy_label', 'Approved-only default')}.",
         f"- Medications: {profile['medications']}.",
@@ -2043,6 +2158,7 @@ def questionnaire_markdown(profile: dict) -> str:
         ("What supplements are currently used?", profile["current_supplements"]),
         ("What benefits, no-effects, or side effects were reported for current supplements?", profile["supplement_results"]),
         ("Which supplements were selected for priority deep review?", "; ".join(profile["priority_supplements"]) or "none selected"),
+        ("Should supplement-like nutrients come from whole foods, a mixed approach, or products?", profile.get("supplement_source_label", "Whole-food first")),
         ("Which peptides/incretins/gray compounds were selected for evidence review?", "; ".join(profile["selected_peptides"]) or "none selected"),
         ("May HealthCoach broad-scan experimental/unapproved drugs?", profile.get("experimental_policy_label", "Approved-only default")),
         ("What medications or prescriptions are currently used?", profile["medications"]),
@@ -2423,10 +2539,64 @@ def timing_card(model, tok, ev: Evidence, profile: dict, max_tokens: int) -> str
     return "\n".join(lines) + "\n"
 
 
-def inventory_table(candidates: Sequence[Candidate], evidence: dict[str, Evidence], decisions: dict[str, str]) -> str:
+def preferred_source_text(candidate: Candidate, profile: dict) -> str:
+    source_policy = profile.get("supplement_source", "whole_food_first")
+    route, examples = food_source_for(candidate)
+    if route == FOOD_LOCKED:
+        return f"PLANNING / {route}: {examples}"
+    if route == FOOD_NONE:
+        return f"PLANNING / {route}: {examples} A missing food route never makes a product an automatic add."
+    if route == FOOD_PARTIAL:
+        return (
+            f"PLANNING / {route}: {examples} "
+            "Use the food as food; evaluate any isolated product separately against its retrieved form, exposure, safety, and decision."
+        )
+    if source_policy == "whole_food_first":
+        return f"PLANNING / FOOD-FIRST: {examples} Use a product only when the evidence target cannot practically be met from tolerated foods and all gates clear."
+    if source_policy == "mixed":
+        return f"PLANNING / MIXED: food route—{examples} Compare food and product only after evidence, tolerance, cost, and safety gates."
+    return f"PLANNING / PRODUCT-ALLOWED: food route still exists—{examples} Product use still requires item-specific evidence and safety clearance."
+
+
+def food_source_strategy_markdown(
+    candidates: Sequence[Candidate], evidence: dict[str, Evidence], decisions: dict[str, str], profile: dict
+) -> str:
+    selected_keys = (
+        set(profile.get("current_supplement_keys", ()))
+        | set(profile.get("priority_supplement_keys", ()))
+        | set(profile.get("selected_peptide_keys", ()))
+    )
+    focus = [
+        candidate for candidate in candidates
+        if candidate.key in selected_keys or decisions[candidate.key] == "SHORTLIST FOR REVIEW"
+    ]
     lines = [
-        "| Item | Retrieved coverage | Best grade | Unique A/B papers (DOIs) | Fit | Preliminary decision | Specific retrieved references |",
-        "|---|---:|---:|---:|---|---|---|",
+        f"**Selected intake strategy:** {profile.get('supplement_source_label', 'Whole-food first')}.",
+        "",
+        "**PLANNING SOURCE RULE:** food-source examples organize shopping and meals; they do not prove efficacy, reproduce an isolated study dose, or override the evidence and safety verdict. `FOOD EXISTS; NOT FORM/DOSE EQUIVALENT` means the food and product must not be treated as interchangeable. `NO PRACTICAL WHOLE-FOOD EQUIVALENT MAPPED` means abstain unless the separate product evidence and gates justify consideration—it does not mean automatically buy the product.",
+        "",
+        "| Current, priority, or shortlisted item | Food-source classification and route | Evidence coverage | Audit decision |",
+        "|---|---|---:|---|",
+    ]
+    if not focus:
+        lines.append("| _No current, priority, or shortlisted item_ | — | — | — |")
+    for candidate in focus:
+        values = (
+            candidate.name,
+            preferred_source_text(candidate, profile),
+            evidence[candidate.key].coverage,
+            decisions[candidate.key],
+        )
+        lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", "<br>") for value in values) + " |")
+    return "\n".join(lines)
+
+
+def inventory_table(
+    candidates: Sequence[Candidate], evidence: dict[str, Evidence], decisions: dict[str, str], profile: dict
+) -> str:
+    lines = [
+        "| Item | Retrieved coverage | Best grade | Unique A/B papers (DOIs) | Fit | Preferred food/product route | Preliminary decision | Specific retrieved references |",
+        "|---|---:|---:|---:|---|---|---|---|",
     ]
     for c in candidates:
         ev = evidence[c.key]
@@ -2438,9 +2608,10 @@ def inventory_table(candidates: Sequence[Candidate], evidence: dict[str, Evidenc
             if len(refs) == 2:
                 break
         ref_text = "<br>".join(refs) if refs else "COVERAGE GAP"
-        lines.append("| %s | %s | %s | %d (%d) | %s | %s | %s |" % (
+        lines.append("| %s | %s | %s | %d (%d) | %s | %s | %s | %s |" % (
             c.name.replace("|", "/"), ev.coverage, ev.best_grade, ev.unique_papers, ev.unique_dois,
-            ev.fit, decisions[c.key].replace("|", "/"), ref_text.replace("|", "/"),
+            ev.fit, preferred_source_text(c, profile).replace("|", "/"),
+            decisions[c.key].replace("|", "/"), ref_text.replace("|", "/"),
         ))
     return "\n".join(lines)
 
@@ -2719,15 +2890,15 @@ def stack_change_tables(
         if not items:
             return "_None._"
         lines = [
-            "| Item | Reported personal result | Coverage | Goal fit | Recommended change | Retrieved basis |",
-            "|---|---|---:|---|---|---|",
+            "| Item | Reported personal result | Coverage | Goal fit | Preferred intake route | Recommended change | Retrieved basis |",
+            "|---|---|---:|---|---|---|---|",
         ]
         for c in items:
             ev = evidence[c.key]
             result = result_for(c, profile) if current else "Not currently used"
             fit = ", ".join(ISSUES[x] for x in c.issues if x in profile["issues"]) or "No selected goal match"
             action = stack_action(c, ev, decisions[c.key], profile, current)
-            vals = (c.name, result, ev.coverage, fit, action, first_evidence_tag(ev))
+            vals = (c.name, result, ev.coverage, fit, preferred_source_text(c, profile), action, first_evidence_tag(ev))
             lines.append("| " + " | ".join(str(v).replace("|", "/").replace("\n", "<br>") for v in vals) + " |")
         return "\n".join(lines)
 
@@ -2896,9 +3067,9 @@ def write_report(
     for queue in QUEUE_ORDER:
         group = [c for c in candidates if c.queue == queue]
         if group:
-            queues.append(f"### {queue}\n\n{inventory_table(group, evidence, decisions)}")
+            queues.append(f"### {queue}\n\n{inventory_table(group, evidence, decisions, profile)}")
     shortlist = [c for c in candidates if decisions[c.key] == "SHORTLIST FOR REVIEW"]
-    shortlist_md = inventory_table(shortlist, evidence, decisions) if shortlist else "No new item cleared the shortlist rules."
+    shortlist_md = inventory_table(shortlist, evidence, decisions, profile) if shortlist else "No new item cleared the shortlist rules."
     gates = [f"- **{c.name}:** {c.gate}" for c in candidates if c.gate]
     gaps = [f"- {c.name}" for c in candidates if evidence[c.key].coverage == "NONE"]
     now = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -2956,33 +3127,37 @@ For every selected item, the audit asks: What outcomes and effect magnitudes wer
 - “Retrieved studies used” describes research; it is not a personal dose.
 - User-selected weak or sparse topics remain visible, receive priority deep review, and enter the consideration/watchlist; selection does not upgrade coverage or automatically place them in the active stack.
 
-### 4. EXPERIMENTAL / UNAPPROVED HUMAN-EVIDENCE AND COMPATIBILITY SCREEN
+### 4. WHOLE-FOOD VS ISOLATED-PRODUCT INTAKE ROUTES
+
+{food_source_strategy_markdown(candidates, evidence, decisions, profile)}
+
+### 5. EXPERIMENTAL / UNAPPROVED HUMAN-EVIDENCE AND COMPATIBILITY SCREEN
 
 {experimental_screen_markdown(candidates, evidence, decisions, profile)}
 
-### 5. PERSONALIZED SHORTLIST
+### 6. PERSONALIZED SHORTLIST
 
 {shortlist_md}
 
-### 6. DEFICIENCY, MEDICATION, AND SAFETY GATES
+### 7. DEFICIENCY, MEDICATION, AND SAFETY GATES
 
 {chr(10).join(gates) if gates else '- No predeclared gates in the selected catalog.'}
 
-### 7. COMPLETE EVIDENCE INVENTORY
+### 8. COMPLETE EVIDENCE INVENTORY
 
 {chr(10).join(queues)}
 
-### 8. QUESTION-BY-QUESTION DEEP EVIDENCE ANSWERS
+### 9. QUESTION-BY-QUESTION DEEP EVIDENCE ANSWERS
 
 {chr(10).join(deep_cards) if deep_cards else '_Deep generation was disabled; use the evidence inventory and source trail._'}
 
-### 9. COVERAGE GAPS
+### 10. COVERAGE GAPS
 
 The library did not return an on-topic A/B human passage for these selected candidates; this is a reason to abstain, not permission to fill the gap from memory.
 
 {chr(10).join(gaps) if gaps else '- None among the selected candidates.'}
 
-### 10. RETRIEVED SOURCE TRAIL
+### 11. RETRIEVED SOURCE TRAIL
 
 #### Training-timing sources
 
@@ -3055,6 +3230,11 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--notes", help="one catch-all note for a non-interactive assessment")
     ap.add_argument("--items", help="comma-separated subset; all requested candidates are default")
     ap.add_argument("--priority-items", help="comma-separated supplements guaranteed priority in deep-card selection")
+    ap.add_argument(
+        "--supplement-source",
+        choices=dict(SUPPLEMENT_SOURCE_OPTIONS),
+        help="whole_food_first (default), mixed, or products_allowed",
+    )
     ap.add_argument("--peptides", help="comma-separated peptide/gray review items; use 'none' to omit")
     ap.add_argument(
         "--experimental-policy",
