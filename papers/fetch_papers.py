@@ -407,6 +407,15 @@ ANCHORS = {
  'honey_food':['honey'],
  'cinnamon_food':['cinnamon','cinnamomum','cinnamaldehyde'],
  'turmeric_food':['turmeric','curcuma','curcumin'],
+ 'whole_fruits_berries_citrus':['apple','banana','strawberr','raspberr','blackberr','orange','grapefruit','lemon','lime','kiwi','mango','pineapple','papaya','watermelon','grape','cherr','peach','pear','plum','prune','pomegranate','avocado','date fruit','fig'],
+ 'whole_vegetables_leafy_cruciferous':['spinach','kale','broccoli','cauliflower','brussels sprout','cabbage','carrot','sweet potato','potato','tomato','bell pepper','onion','mushroom','asparagus','zucchini','cucumber','celery','lettuce','arugula','watercress','collard','swiss chard','eggplant','butternut','pumpkin','radish'],
+ 'whole_grains_starches':['oat','quinoa','brown rice','barley','millet','buckwheat','farro','popcorn','wild rice','whole grain','resistant starch'],
+ 'legumes_pulses_soy':['lentil','chickpea','garbanzo','black bean','kidney bean','pinto bean','navy bean','edamame','green pea','legume','pulse'],
+ 'nuts_seeds_whole_foods':['almond','walnut','pecan','pistachio','cashew','brazil nut','hazelnut','peanut','chia','flax','linseed','pumpkin seed','sunflower seed','hemp seed','sesame'],
+ 'animal_proteins_organs':['egg','chicken','poultry','turkey','beef','lamb','pork','liver','organ meat','heart meat','bone broth','collagen','gelatin'],
+ 'fish_seafood_whole_foods':['salmon','sardine','mackerel','oyster','fish roe','fish egg','seafood','fatty fish'],
+ 'fermented_dairy_culinary_fats':['yogurt','yoghurt','kefir','sauerkraut','fermented dairy','olive oil','coconut','dark chocolate','cocoa'],
+ 'herbs_spices_cocoa':['parsley','cilantro','coriander leaf','seaweed','nori','iodine'],
  'fermented_veg_sauerkraut_kimchi':['kimchi','sauerkraut','fermented','lacto'],
  'fermented_soy':['natto','tempeh','miso','soy'],
  'fermented_legumes_beans':['ferment','legume','bean'],'fermented_beets':['ferment','beet'],
@@ -570,11 +579,145 @@ ANCHORS = {
  'bovine_colostrum':['colostrum','colostral','lactoferrin','immunoglobulin','igg','growth factor','first milk'],
  'emf_wireless_bluetooth':['electromagnetic','radiofrequency','rf-emf','rf emf','emf','wireless','bluetooth','cell phone','mobile phone','radiation','sar','5g','wi-fi','wifi'],
 }
+
+# Named whole-food library requested for claim-by-claim retrieval. Each food gets its own
+# folder and quota so high-volume apple/oat/fish literature cannot crowd a thinner food out.
+# The queries discover human evidence; they do not pre-accept the user's nutrient/benefit claim.
+WHOLE_FOOD_LIBRARY_KEYS = (
+    'apples','bananas','strawberries','raspberries','blackberries','oranges','grapefruit','lemons','limes','kiwi',
+    'mango','pineapple','papaya','watermelon','grapes','cherries','peaches','pears','plums','pomegranate','avocado','dates','figs',
+    'spinach','kale','broccoli','cauliflower','brussels_sprouts','cabbage','carrots','sweet_potatoes','potatoes','tomatoes',
+    'bell_peppers','onions','mushrooms','cooked_mushrooms','asparagus','zucchini','cucumber','celery','lettuce','arugula',
+    'watercress','collard_greens','swiss_chard','eggplant','butternut_squash','pumpkin','radishes',
+    'oats','quinoa','brown_rice','barley','millet','buckwheat','farro','popcorn','wild_rice',
+    'lentils','chickpeas','black_beans','kidney_beans','pinto_beans','navy_beans','edamame','green_peas',
+    'almonds','walnuts','pecans','pistachios','cashews','brazil_nuts','hazelnuts','peanuts','chia_seeds','flaxseeds',
+    'pumpkin_seeds','sunflower_seeds','hemp_seeds','sesame_seeds',
+    'eggs','chicken','turkey','lean_beef','lamb','pork','beef_liver','beef_heart','gelatin_broth',
+    'salmon','sardines','mackerel','oysters','fish_eggs','plain_yogurt','kefir','sauerkraut','pasteurized_dairy',
+    'extra_virgin_olive_oil','coconut','dark_chocolate','parsley','cilantro','seaweed',
+)
+WHOLE_FOOD_SEARCH_NAMES = {
+    'brussels_sprouts':'Brussels sprouts', 'sweet_potatoes':'sweet potatoes',
+    'bell_peppers':'bell peppers', 'cooked_mushrooms':'cooked culinary mushrooms',
+    'collard_greens':'collard greens', 'swiss_chard':'Swiss chard',
+    'butternut_squash':'butternut squash', 'brown_rice':'brown rice', 'wild_rice':'wild rice',
+    'black_beans':'black beans', 'kidney_beans':'kidney beans', 'pinto_beans':'pinto beans',
+    'navy_beans':'navy beans', 'green_peas':'green peas', 'brazil_nuts':'Brazil nuts',
+    'chia_seeds':'chia seeds', 'flaxseeds':'flaxseed linseed', 'pumpkin_seeds':'pumpkin seeds',
+    'sunflower_seeds':'sunflower seeds', 'hemp_seeds':'hemp seeds', 'sesame_seeds':'sesame seeds',
+    'lean_beef':'lean beef grass-fed beef', 'beef_liver':'beef liver organ meat',
+    'beef_heart':'beef heart organ meat', 'gelatin_broth':'bone broth gelatin collagen food',
+    'fish_eggs':'fish roe fish eggs', 'plain_yogurt':'plain yogurt yoghurt',
+    'pasteurized_dairy':'pasteurized milk dairy', 'extra_virgin_olive_oil':'extra virgin olive oil',
+    'dark_chocolate':'dark chocolate cocoa', 'seaweed':'edible seaweed nori',
+    'dates':'date fruit Phoenix dactylifera', 'figs':'fig fruit Ficus carica',
+    'limes':'lime citrus fruit', 'turkey':'turkey meat poultry',
+}
+WHOLE_FOOD_CLAIM_TERMS = {
+    'apples':'pectin quercetin gut cardiovascular', 'bananas':'potassium resistant starch green banana energy',
+    'strawberries':'vitamin C ellagic acid immune cellular', 'raspberries':'fiber polyphenols glycemic glucose',
+    'blackberries':'polyphenols oxidative stress', 'oranges':'vitamin C flavonoids immune skin',
+    'grapefruit':'naringenin metabolism vascular food drug interaction', 'lemons':'citric acid vitamin C digestion immune',
+    'limes':'citric acid vitamin C hydration', 'kiwi':'vitamin C actinidin digestion constipation',
+    'mango':'carotenoids fiber eye gastrointestinal', 'pineapple':'bromelain inflammation digestion',
+    'papaya':'papain vitamin C digestion', 'watermelon':'lycopene hydration cardiovascular skin',
+    'grapes':'polyphenols resveratrol vascular healthy aging', 'cherries':'anthocyanins inflammation sleep',
+    'peaches':'carotenoids vitamin C fiber', 'pears':'soluble fiber bowel regularity',
+    'plums':'polyphenols sorbitol constipation digestion', 'pomegranate':'punicalagins cardiovascular antioxidants',
+    'avocado':'monounsaturated fat potassium cardiometabolic', 'dates':'minerals fiber glycemic response',
+    'figs':'prebiotic fiber gastrointestinal microbiome', 'spinach':'dietary nitrate folate iron bioavailability',
+    'kale':'vitamin K carotenoids antioxidant biomarkers', 'broccoli':'sulforaphane glucosinolates cellular biomarkers',
+    'cauliflower':'choline glucosinolates cruciferous', 'brussels_sprouts':'kaempferol glucosinolates micronutrients',
+    'cabbage':'glucosinolates cancer risk epidemiology', 'carrots':'beta carotene vision skin',
+    'sweet_potatoes':'beta carotene fiber glycemic', 'potatoes':'potassium cooled resistant starch glycemic',
+    'tomatoes':'cooked lycopene bioavailability cardiovascular', 'bell_peppers':'vitamin C carotenoids',
+    'onions':'quercetin prebiotic fiber cardiometabolic', 'mushrooms':'beta glucan immune UV vitamin D',
+    'cooked_mushrooms':'cooking mushrooms nutrient bioavailability safety', 'asparagus':'folate prebiotic fiber gut',
+    'zucchini':'lutein carotenoids diet', 'cucumber':'hydration skin silica evidence',
+    'celery':'apigenin energy density blood pressure', 'lettuce':'folate hydration dietary intake',
+    'arugula':'dietary nitrate vitamin K vascular', 'watercress':'nutrient density biomarkers',
+    'collard_greens':'calcium vitamin K bone', 'swiss_chard':'magnesium betalains antioxidants',
+    'eggplant':'nasunin anthocyanins cognition', 'butternut_squash':'beta carotene fiber satiety',
+    'pumpkin':'carotenoids fiber pumpkin seeds zinc', 'radishes':'vitamin C glucosinolates detoxification claim',
+    'oats':'beta glucan LDL cholesterol glycemic', 'quinoa':'protein amino acid magnesium glycemic',
+    'brown_rice':'fiber manganese versus white rice cardiometabolic', 'barley':'beta glucan cholesterol glycemic',
+    'millet':'magnesium alkaline diet claim glycemic', 'buckwheat':'rutin vascular gluten free',
+    'farro':'protein fiber cardiometabolic', 'popcorn':'whole grain satiety energy density',
+    'wild_rice':'protein polyphenols versus white rice', 'lentils':'protein iron fiber glycemic',
+    'chickpeas':'protein fiber glycemic satiety', 'black_beans':'anthocyanins resistant starch gut',
+    'kidney_beans':'protein folate lectin cooking safety', 'pinto_beans':'fiber glycemic',
+    'navy_beans':'fiber glycemic gut', 'edamame':'soy complete protein folate',
+    'green_peas':'plant protein vitamin K', 'almonds':'vitamin E magnesium cardiovascular',
+    'walnuts':'ALA omega 3 polyphenols cognition cardiovascular', 'pecans':'polyphenols cardiovascular',
+    'pistachios':'lutein amino acids cardiometabolic', 'cashews':'copper zinc cardiometabolic',
+    'brazil_nuts':'selenium thyroid toxicity upper intake', 'hazelnuts':'vitamin E folate cardiovascular',
+    'peanuts':'protein polyphenols resveratrol cardiovascular', 'chia_seeds':'ALA omega 3 viscous fiber satiety',
+    'flaxseeds':'lignans ALA ground absorption', 'pumpkin_seeds':'zinc magnesium sleep prostate',
+    'sunflower_seeds':'vitamin E selenium', 'hemp_seeds':'protein GLA fatty acids',
+    'sesame_seeds':'calcium lignans cardiometabolic', 'eggs':'choline complete protein cardiometabolic',
+    'chicken':'complete protein B vitamins body composition', 'turkey':'complete protein tryptophan sleep',
+    'lean_beef':'heme iron zinc creatine grass fed comparison', 'lamb':'B12 conjugated linoleic acid grass fed',
+    'pork':'lean unprocessed pork protein cardiometabolic', 'beef_liver':'vitamin A B12 folate toxicity',
+    'beef_heart':'coenzyme Q10 protein nutrient composition human outcomes',
+    'gelatin_broth':'bone broth collagen minerals lead contamination', 'salmon':'EPA DHA cardiovascular cognition',
+    'sardines':'EPA DHA calcium mercury', 'mackerel':'EPA DHA mercury species',
+    'oysters':'zinc iron B12 foodborne raw cooked', 'fish_eggs':'omega 3 choline sodium food safety',
+    'pasteurized_dairy':'protein calcium body composition lactose tolerance',
+    'coconut':'saturated fat lipid cardiovascular coconut oil versus unsaturated fat',
+    'extra_virgin_olive_oil':'polyphenols cardiovascular randomized', 'turmeric_food':'curcumin food black pepper bioavailability',
+    'cinnamon_food':'glycemic cinnamon food coumarin safety', 'parsley':'vitamin K chlorophyll human outcomes',
+    'cilantro':'vitamin K detoxification claim human', 'plain_yogurt':'live cultures gut body composition',
+    'kefir':'probiotic diversity gastrointestinal', 'sauerkraut':'fermented cabbage microbiome sodium',
+    'kimchi':'fermented vegetables microbiome sodium', 'seaweed':'iodine thyroid minerals safety',
+    'dark_chocolate':'cocoa flavanols endothelial vascular processing',
+}
+WHOLE_FOOD_EXTRA_QUERIES = {
+    'grapefruit':'grapefruit food drug interaction systematic review human',
+    'brazil_nuts':'Brazil nut selenium status thyroid randomized trial toxicity',
+    'beef_liver':'liver consumption vitamin A safety adults',
+    'oysters':'oyster consumption foodborne safety cooked raw human',
+    'seaweed':'seaweed iodine intake thyroid safety human',
+    'potatoes':'cooked cooled potato resistant starch glycemic human trial',
+    'bananas':'green banana resistant starch randomized human',
+    'mushrooms':'UV exposed mushrooms vitamin D randomized human',
+}
+for _food_key in WHOLE_FOOD_LIBRARY_KEYS:
+    _food_name = WHOLE_FOOD_SEARCH_NAMES.get(_food_key, _food_key.replace('_', ' '))
+    _food_anchor_stop = {'plain','cooked','culinary','lean','grass','food','organ','meat','bone','extra','virgin','whole'}
+    ANCHORS[_food_key] = list(dict.fromkeys(
+        [part for part in re.split(r'\s+', _food_name.lower()) if len(part) > 3 and part not in _food_anchor_stop]
+        + [_food_name.lower()]
+    ))
+ANCHORS.update({
+    'dates':['date fruit','phoenix dactylifera'],
+    'figs':['fig fruit','ficus carica'],
+    'limes':['lime fruit','citrus aurantiifolia','citrus latifolia'],
+    'turkey':['turkey meat','turkey consumption','turkey poultry'],
+    'beef_heart':['beef heart','bovine heart'],
+    'beef_liver':['beef liver','bovine liver','liver consumption'],
+    'fish_eggs':['fish roe','fish eggs','caviar consumption'],
+    'gelatin_broth':['bone broth','gelatin food','collagen food'],
+})
 def anchor_ok(folder_rel, rec):
     kws = ANCHORS.get(os.path.basename(folder_rel))
     if not kws: return True
     txt = ((rec.get("title") or "") + " " + (rec.get("abstract") or "")).lower()
-    return any(k in txt for k in kws)
+    if not any(k in txt for k in kws):
+        return False
+    if "/whole_food_library/" in ("/" + folder_rel.strip("/") + "/"):
+        # Exact-food folders are especially vulnerable to homonyms (date, fig, turkey,
+        # diagnostic eggs) and agricultural papers. Require an eating/nutrition/safety
+        # context as well as the food anchor. Report-time passage gates remain stricter.
+        dietary_context = (
+            "consum", "intake", "dietary", "nutrition", "nutrient", "meal", "serving",
+            "edible", "culinary", "foodborne", "cooking", "cooked", "unpasteuriz",
+            "pasteuriz", "bioavailability", "glycemic", "cardiometabolic", "satiety",
+            "supplementation", "clinical trial", "randomized", "randomised",
+            "systematic review", "meta-analysis", "toxicity", "food safety",
+        )
+        return any(term in txt for term in dietary_context)
+    return True
 
 def aboost_topic(t):
     """A-HUNT pass: pull OA systematic reviews / meta-analyses / guidelines / RCTs for a topic
@@ -612,6 +755,8 @@ def run_topic(t):
     if os.environ.get("ABOOST"):
         return aboost_topic(t)
     folder = t["folder"]; slug = t["slug"]; qmin = t["min"]; qstretch = t["stretch"]
+    if os.environ.get("MIN_ONLY"):
+        qstretch = qmin
     also = tuple(t.get("also", ()))        # hardlink every hit into these folders too
     tc   = t.get("cohort", False)          # tag young/older cohort (hormone job)
     folder_abs = os.path.join(ROOT, folder)
@@ -659,7 +804,7 @@ def run_topic(t):
                 if acquire(rec, folder, slug, also_folders=also, tag_cohort=tc) and rec.get("pmcid"):
                     queue.append(("PMC", rec["pmcid"]))
         # AA overlay query (capped per topic)
-        if t.get("aa", True) and aa_ct[0] < AA_PER_TOPIC:
+        if t.get("aa", True) and not os.environ.get("NO_AA") and aa_ct[0] < AA_PER_TOPIC:
             for rec in epmc_search(q + " AND " + AA_TERMS):
                 if aa_ct[0] >= AA_PER_TOPIC: break
                 if acquire(rec, "12_population_AA", "aa-"+slug,
@@ -1681,6 +1826,25 @@ TOPICS = [
      "radiofrequency EMF cognition sleep human study",
      "5G radiofrequency exposure health evidence"], aa=False),
 ]
+
+# Two independent on-topic human papers are the minimum needed for STRONG coverage in the
+# report. Thin foods remain explicit coverage gaps; the acquisition engine never substitutes
+# animal chemistry or a neighboring food just to fill a row.
+for _food_key in WHOLE_FOOD_LIBRARY_KEYS:
+    _food_name = WHOLE_FOOD_SEARCH_NAMES.get(_food_key, _food_key.replace('_', ' '))
+    _food_queries = [
+        '"%s" %s systematic review randomized human' % (_food_name, WHOLE_FOOD_CLAIM_TERMS.get(_food_key, 'health outcomes')),
+        '"%s" consumption randomized controlled trial human adults' % _food_name,
+        '"%s" systematic review meta-analysis human health' % _food_name,
+        '"%s" dietary intervention cardiometabolic gastrointestinal performance human' % _food_name,
+    ]
+    if _food_key in WHOLE_FOOD_EXTRA_QUERIES:
+        _food_queries.append(WHOLE_FOOD_EXTRA_QUERIES[_food_key])
+    TOPICS.append(T(
+        "01_food_inflammation/whole_food_library/" + _food_key,
+        "whole-food-" + _food_key.replace('_', '-'),
+        2, 2, _food_queries, aa=False,
+    ))
 
 # --------------------------------------------------------------------------- #
 #  AA overlay-only final pass (population folder)

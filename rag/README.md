@@ -30,12 +30,55 @@ Open Terminal and paste:
 
 ```bash
 cd ~/GitHub/HealthCoach/rag
-caffeinate -i ./hc-supplements
+./hc
 ```
 
-The assessment guides you through nine explained sections: goals, training schedule, current
-stack, safety, supplement research, experimental/peptide research, daily routine, food/home
-ideas, and shopping. Each screen tells you why the question matters.
+That is the only command a normal user needs. `./hc` keeps the Mac awake correctly and opens
+one keyboard dashboard. It does not use the unsupported `caffeinate --help` or `--t` syntax.
+From the dashboard you can start or resume the assessment, edit the calendar, log a completed
+week, share with Bevel, read the report, ask one evidence question, refresh sources, test the
+library, or deliberately start over.
+
+- Arrow keys choose a dashboard action.
+- Space or Enter opens it.
+- `/` filters the dashboard.
+- `?` explains the current workflow.
+- `q` exits without changing saved data.
+
+HealthCoach resumes intake answers embedded inside `HEALTHCOACH_REPORT.md`. `START OVER FROM
+GROUND ZERO` requires typing `RESET`; even then, the existing report is not replaced until the
+new generation actually begins successfully.
+
+`LOG THE COMPLETED WEEK` is a three-page keyboard grid. Tab moves through Training, Recovery,
+and Fuel; arrows choose a day and field; Space cycles fixed answers; Enter edits a number; and
+`s` saves. Blank values remain `UNKNOWN`. Workout HR and device calories are stored with their
+origin for trend review and are never converted into an exact amount of food to “eat back.”
+The next report generation compares up to three stored weeks and adjusts the seven-day food
+rotation only when the weight/execution trend is persistent enough to justify it.
+
+The assessment guides you through ten explained sections: goals, training choices, a visual
+weekly calendar, current stack, safety, supplement research, experimental/peptide research,
+daily routine and meal count, food/home ideas, and shopping. Each screen tells you why the
+question matters. Meals are a one-choice Space selector: 3, 4, or 5. Four is preselected because
+the current 165 g Phase A protein target divides into about 41 g per feeding; the report still
+checks retrieved meal-distribution evidence and clearly labels the arithmetic as planning.
+
+On the calendar screen, every day already shows the session from the operating week and its
+time. Use ↑/↓ to choose a day and Space to cycle its placement:
+
+- `PLAN` keeps the authored time.
+- `AM` requests the main session after morning study.
+- `PM` uses the 17:00 training window.
+- `BOTH` allows easy movement in one window and the single main session in the other; it never
+  creates two hard sessions.
+- `OFF` records that the session cannot happen and applies that day's skip rule without moving
+  it to tomorrow.
+
+Press `1`–`5` to jump directly to a placement, `z` to undo, `r` to reset the week, and `?` for
+an explanation. The board labels work/Anki conflicts before you save. A conflict can remain as
+a user preference for the evidence check, but HealthCoach will not silently move the fixed
+wake, work, Anki, or sleep blocks. The final report stores all seven choices under stable keys,
+and the Bevel handoff includes that calendar context.
 
 On `SUPPLEMENTS TO INVESTIGATE`, choose one intake strategy with Space:
 
@@ -65,10 +108,13 @@ starts. The one report includes a `HARD-DEFINED SELECTION LOCK` table showing ex
 locked, selected, or left unselected. HealthCoach does not guess personal answers that the user
 did not choose.
 
-The food-review page also locks the eleven foods Michael specifically requested: beets,
-oregano, saffron, kimchi, tamarind, blueberries, garlic, ginger, honey, cinnamon, and turmeric.
-Locked here means “must be checked and shown in the report,” not “must be eaten.” The report
-keeps normal culinary food separate from oils, extracts, capsules, or standardized study forms.
+The food-review page locks the complete named whole-food research library: the original beets,
+oregano, saffron, kimchi, tamarind, blueberries, garlic, ginger, honey, cinnamon, and turmeric,
+plus the requested fruits, vegetables, grains, pulses, nuts, seeds, dairy, eggs, poultry, meat,
+organs, fish, culinary fats, herbs, seaweed, and fermented foods. Locked here means “must be
+checked and shown in the evidence ledger,” not “must be eaten.” Food selections separately
+define which items may appear in the adaptive menu. The report keeps normal culinary food
+separate from oils, extracts, capsules, or standardized study forms.
 
 ## Read the result
 
@@ -168,6 +214,9 @@ The same actions are available as direct commands:
 ./hc-bevel --mode setup --print
 ```
 
+After changing the weekly calendar, regenerate the report and run Bevel `setup` once so its
+saved context receives the new schedule. Weekly packages then include the calendar overlay.
+
 `verify` normally reads the Bevel response directly from the clipboard. A file or stdin is also
 accepted when troubleshooting:
 
@@ -251,8 +300,11 @@ The `hc-supplements` launcher activates it automatically afterward.
 
 ## Updating the research
 
-Creating a new report does not require downloading the research again. Update the paper library
-only after you intentionally add or fetch new sources:
+Creating a new report does not require downloading the research again. In the dashboard, choose
+one of the `REFRESH ... SOURCES` actions only when you intentionally want newer or broader papers.
+The updater appends only newly found source paths to the index, then checks retrieval.
+
+For maintainers, the equivalent low-level full-library commands are:
 
 ```bash
 cd ~/GitHub/HealthCoach/papers
@@ -260,31 +312,32 @@ caffeinate -i env ABOOST=1 python3 fetch_papers.py
 
 cd ../rag
 source .venv/bin/activate
-python3 ingest.py
+python3 ingest.py --incremental
 python3 test_retrieval.py
 ```
 
-`ingest.py` rebuilds the search index, so let it finish before generating another report.
+Use plain `python3 ingest.py` for an intentional full rebuild after deleting or replacing PDFs.
+Let either mode finish before generating another report.
 
 Changing assessment choices, locking selections, changing stores, or generating another report
 does **not** require a source pull. Those actions reuse the indexed library already on the Mac.
 
-### One-time refresh for the eleven locked foods
+### Refresh the complete locked food library
 
-The first version of the library already covered beets and kimchi and had some extract-oriented
-coverage for turmeric and cinnamon. Run this focused command once to search for dedicated human
-whole-food evidence for all eleven foods, rebuild the index, and check that each folder is
-retrievable:
+The focused updater searches the eleven original foods plus every requested fruit, vegetable,
+grain, pulse, nut, seed, dairy food, egg, poultry/meat/organ food, fish, culinary fat, herb,
+seaweed, and fermented food. It attempts a dedicated source folder for all 116 entries. Missing
+legal open-access or direct human evidence stays visible as a coverage gap.
 
 ```bash
 cd ~/GitHub/HealthCoach/rag
 caffeinate -i ./hc-refresh-whole-foods
 ```
 
-After that finishes, generate the one report:
+After that finishes, return to the one dashboard and rebuild the report:
 
 ```bash
-caffeinate -i ./hc-supplements
+./hc
 ```
 
 You do not need to refresh again for every report. Repeat it only when intentionally updating
@@ -300,10 +353,10 @@ cd ~/GitHub/HealthCoach/rag
 caffeinate -i ./hc-refresh-nootropics
 ```
 
-Then generate the one canonical report again:
+Then return to the dashboard and rebuild the one canonical report:
 
 ```bash
-caffeinate -i ./hc-supplements
+./hc
 ```
 
 Selection asks HealthCoach to investigate an item; it does not automatically add it to the

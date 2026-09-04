@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import curses
 import datetime as dt
+import json
 import os
 import re
 import sys
@@ -44,6 +45,8 @@ HERE = Path(__file__).resolve().parent
 DEFAULT_OUT = HERE / "HEALTHCOACH_REPORT.md"
 BEVEL_WEEKLY_START = "<!-- HC_BEVEL_WEEKLY_START -->"
 BEVEL_WEEKLY_END = "<!-- HC_BEVEL_WEEKLY_END -->"
+PROFILE_STATE_START = "<!-- HC_PROFILE_STATE_START -->"
+PROFILE_STATE_END = "<!-- HC_PROFILE_STATE_END -->"
 console = Console()
 
 QUEUE_VERY = "Submitted: very researched"
@@ -68,6 +71,18 @@ ISSUES = {
     "skin": "Skin, hair, or connective-tissue goals",
     "deficiency": "Known or suspected nutrient deficiency",
 }
+
+WEIGHT_DIRECTION_OPTIONS = (
+    ("cut", "Lose weight / Phase A cut toward 200 lb (current default)"),
+    ("maintain", "Maintain weight / recomp while performance leads"),
+    ("gain", "Gain weight slowly / muscle-building phase"),
+)
+
+MEAL_FREQUENCY_OPTIONS = (
+    ("3", "3 meals · fewer, larger feedings; hardest fit with low appetite"),
+    ("4", "4 meals · about 41 g protein each (recommended starting layout)"),
+    ("5", "5 smaller meals · about 33 g protein each for lower meal tolerance"),
+)
 
 MEDICATION_OPTIONS = (
     ("tirzepatide", "Tirzepatide"),
@@ -295,6 +310,28 @@ WORKOUT_TIMING_OPTIONS = (
     ("recommend", "Recommend strength-workout timing from evidence and my schedule"),
 )
 
+# The calendar records where each already-defined weekly session can realistically live.
+# It does not create extra training volume or silently move the immutable wake/work/sleep
+# clock.  Stable keys are embedded in the one report so another model cannot reinterpret a
+# visual choice later.
+CALENDAR_DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+CALENDAR_MODE_OPTIONS = (
+    ("plan", "Plan window"),
+    ("morning", "Morning main session"),
+    ("evening", "Evening main session"),
+    ("both", "Both windows; one main session only"),
+    ("unavailable", "Unavailable; use that day's skip rule"),
+)
+CALENDAR_SESSIONS = {
+    "Monday": ("Lift A lower", "17:00–18:15"),
+    "Tuesday": ("Zone 2 run / bike substitute", "17:00–18:15"),
+    "Wednesday": ("Lift B upper", "17:00–18:15"),
+    "Thursday": ("One quality run or bike", "17:00–17:50"),
+    "Friday": ("Lift C lighter", "17:00–18:15"),
+    "Saturday": ("Long easy run", "17:00; length-based"),
+    "Sunday": ("Mobility / meal prep / optional easy bike", "04:50 mobility; 08:30 prep; 17:00 optional"),
+}
+
 # These are interest/review selectors, not endorsements.  The authored whole-life module
 # evaluates every option and the generated report records which ones the user wants to
 # prioritize.  Ambiguous user terms are preserved but explicitly ask for clarification.
@@ -336,6 +373,85 @@ FOOD_ADDITION_OPTIONS = (
     ("dark_chocolate", "Dark chocolate"),
     ("fish_eggs", "Fish eggs / roe and traditional foods"),
     ("carb_200", "A fixed 200 g carbohydrate target"),
+)
+
+# Searchable whole-food library requested by the user. Labels are deliberately neutral:
+# nutrient and health-effect descriptions supplied during intake are hypotheses that must
+# survive retrieval, not claims the selector itself is allowed to establish.
+EXPANDED_WHOLE_FOOD_OPTIONS = (
+    # Fruit
+    ("apples", "FRUIT │ Apples"), ("bananas", "FRUIT │ Bananas"),
+    ("strawberries", "FRUIT │ Strawberries"), ("raspberries", "FRUIT │ Raspberries"),
+    ("blackberries", "FRUIT │ Blackberries"), ("oranges", "FRUIT │ Oranges"),
+    ("grapefruit", "FRUIT │ Grapefruit — medication interaction screen applies"),
+    ("lemons", "FRUIT │ Lemons"), ("limes", "FRUIT │ Limes"), ("kiwi", "FRUIT │ Kiwi"),
+    ("mango", "FRUIT │ Mango"), ("pineapple", "FRUIT │ Pineapple"),
+    ("papaya", "FRUIT │ Papaya"), ("watermelon", "FRUIT │ Watermelon"),
+    ("grapes", "FRUIT │ Grapes"), ("cherries", "FRUIT │ Cherries"),
+    ("peaches", "FRUIT │ Peaches"), ("pears", "FRUIT │ Pears"),
+    ("plums", "FRUIT │ Plums / prunes"), ("pomegranate", "FRUIT │ Pomegranate"),
+    ("avocado", "FRUIT / FAT │ Avocado"), ("dates", "FRUIT │ Dates"),
+    ("figs", "FRUIT │ Figs"),
+    # Vegetables
+    ("spinach", "VEGETABLE │ Spinach"), ("kale", "VEGETABLE │ Kale"),
+    ("broccoli", "VEGETABLE │ Broccoli"), ("cauliflower", "VEGETABLE │ Cauliflower"),
+    ("brussels_sprouts", "VEGETABLE │ Brussels sprouts"), ("cabbage", "VEGETABLE │ Cabbage"),
+    ("sweet_potatoes", "VEGETABLE / STARCH │ Sweet potatoes"),
+    ("potatoes", "VEGETABLE / STARCH │ Potatoes"), ("tomatoes", "VEGETABLE │ Tomatoes"),
+    ("bell_peppers", "VEGETABLE │ Bell peppers"), ("onions", "VEGETABLE │ Onions"),
+    ("mushrooms", "VEGETABLE / FUNGI │ Culinary mushrooms"),
+    ("asparagus", "VEGETABLE │ Asparagus"), ("zucchini", "VEGETABLE │ Zucchini"),
+    ("cucumber", "VEGETABLE │ Cucumber"), ("celery", "VEGETABLE │ Celery"),
+    ("lettuce", "VEGETABLE │ Lettuce"), ("arugula", "VEGETABLE │ Arugula"),
+    ("watercress", "VEGETABLE │ Watercress"), ("collard_greens", "VEGETABLE │ Collard greens"),
+    ("swiss_chard", "VEGETABLE │ Swiss chard"), ("eggplant", "VEGETABLE │ Eggplant"),
+    ("butternut_squash", "VEGETABLE │ Butternut squash"), ("pumpkin", "VEGETABLE │ Pumpkin"),
+    ("radishes", "VEGETABLE │ Radishes"),
+    # Grains and starches
+    ("oats", "GRAIN │ Oats"), ("quinoa", "GRAIN / PSEUDOGRAIN │ Quinoa"),
+    ("brown_rice", "GRAIN │ Brown rice"), ("barley", "GRAIN │ Barley"),
+    ("millet", "GRAIN │ Millet"), ("buckwheat", "GRAIN / PSEUDOGRAIN │ Buckwheat"),
+    ("farro", "GRAIN │ Farro"), ("popcorn", "GRAIN │ Plain popcorn"),
+    ("wild_rice", "GRAIN │ Wild rice"),
+    # Pulses and soy foods
+    ("lentils", "LEGUME │ Lentils"), ("chickpeas", "LEGUME │ Chickpeas"),
+    ("black_beans", "LEGUME │ Black beans"), ("kidney_beans", "LEGUME │ Kidney beans"),
+    ("pinto_beans", "LEGUME │ Pinto beans"), ("navy_beans", "LEGUME │ Navy beans"),
+    ("edamame", "LEGUME / SOY │ Edamame"), ("green_peas", "LEGUME │ Green peas"),
+    # Nuts and seeds
+    ("almonds", "NUT / SEED │ Almonds"), ("walnuts", "NUT / SEED │ Walnuts"),
+    ("pecans", "NUT / SEED │ Pecans"), ("pistachios", "NUT / SEED │ Pistachios"),
+    ("cashews", "NUT / SEED │ Cashews"),
+    ("brazil_nuts", "NUT / SEED │ Brazil nuts — selenium excess screen applies"),
+    ("hazelnuts", "NUT / SEED │ Hazelnuts"), ("peanuts", "LEGUME / NUT USE │ Peanuts"),
+    ("chia_seeds", "NUT / SEED │ Chia seeds"), ("flaxseeds", "NUT / SEED │ Flaxseeds"),
+    ("pumpkin_seeds", "NUT / SEED │ Pumpkin seeds"),
+    ("sunflower_seeds", "NUT / SEED │ Sunflower seeds"),
+    ("hemp_seeds", "NUT / SEED │ Hemp seeds"), ("sesame_seeds", "NUT / SEED │ Sesame seeds"),
+    # Protein foods and fats
+    ("eggs", "ANIMAL PROTEIN │ Eggs"), ("chicken", "ANIMAL PROTEIN │ Chicken"),
+    ("turkey", "ANIMAL PROTEIN │ Turkey"),
+    ("lean_beef", "ANIMAL PROTEIN │ Lean beef; grass-fed is a sourcing preference"),
+    ("lamb", "ANIMAL PROTEIN │ Lamb"), ("pork", "ANIMAL PROTEIN │ Unprocessed pork loin / chop"),
+    ("beef_heart", "ORGAN MEAT │ Beef heart"), ("salmon", "SEAFOOD │ Salmon"),
+    ("sardines", "SEAFOOD │ Sardines"), ("mackerel", "SEAFOOD │ Mackerel"),
+    ("extra_virgin_olive_oil", "CULINARY FAT │ Extra-virgin olive oil"),
+    # Herbs, fermented foods, and cocoa
+    ("parsley", "HERB │ Parsley"), ("cilantro", "HERB │ Cilantro"),
+    ("plain_yogurt", "FERMENTED DAIRY │ Plain pasteurized yogurt"),
+    ("kefir", "FERMENTED DAIRY │ Pasteurized-milk kefir"),
+    ("sauerkraut", "FERMENTED VEGETABLE │ Sauerkraut"),
+    ("seaweed", "SEA VEGETABLE │ Nori and other edible seaweeds"),
+)
+
+FOOD_ADDITION_OPTIONS = FOOD_ADDITION_OPTIONS + EXPANDED_WHOLE_FOOD_OPTIONS
+
+DEFAULT_FOOD_PLAN_KEYS = (
+    "pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food",
+    "eggs", "chicken", "turkey", "lean_beef", "salmon", "sardines", "plain_yogurt",
+    "oats", "potatoes", "brown_rice", "lentils", "bananas", "blueberries", "apples",
+    "spinach", "broccoli", "carrots", "extra_virgin_olive_oil", "chia_seeds",
+    *LOCKED_USER_FOOD_KEYS,
 )
 
 HOME_PRACTICE_OPTIONS = (
@@ -643,6 +759,280 @@ def checkbox_prompt(
         # Very small or unusual terminals still get a usable numeric selector.
         console.print("[yellow]Interactive checkbox mode is unavailable; using numeric selection.[/yellow]")
         return numeric_picker()
+
+
+def calendar_modes_for_timing(cardio_timing: str, workout_timing: str) -> dict[str, str]:
+    """Seed the seven-day board from the two already-confirmed timing answers."""
+    modes = {day: "plan" for day in CALENDAR_DAYS}
+    cardio_mode = cardio_timing if cardio_timing in {"morning", "evening", "both"} else "plan"
+    workout_mode = workout_timing if workout_timing in {"morning", "evening", "both"} else "plan"
+    for day in ("Tuesday", "Thursday", "Saturday"):
+        modes[day] = cardio_mode
+    for day in ("Monday", "Wednesday", "Friday"):
+        modes[day] = workout_mode
+    return modes
+
+
+def calendar_mode_detail(day: str, mode: str) -> tuple[str, str]:
+    """Return a visible placement and a text compatibility state (never color-only)."""
+    session, plan_time = CALENDAR_SESSIONS[day]
+    if mode == "plan":
+        return f"{plan_time} · {session}", "OK · authored plan"
+    if mode == "evening":
+        return f"17:00 · {session}", "OK · evening selected"
+    if mode == "unavailable":
+        return f"No main session · {session} remains the template", "SKIP RULE · do not double later"
+    if mode == "morning":
+        if day in {"Monday", "Tuesday", "Wednesday", "Thursday"}:
+            return f"Morning requested · {session}", "CONFLICT · Anki ends 05:50; work starts 06:00"
+        return f"After Anki, from 06:00 · {session}", "OK · wake stays 04:30"
+    if day in {"Monday", "Tuesday", "Wednesday", "Thursday"}:
+        return f"04:35 light/easy movement + 17:00 main · {session}", "LIMIT · no second hard session"
+    return f"After Anki easy movement + 17:00 main · {session}", "OK · one main session only"
+
+
+def calendar_conflicts(modes: dict[str, str]) -> list[str]:
+    return [
+        day for day in CALENDAR_DAYS
+        if calendar_mode_detail(day, modes.get(day, "plan"))[1].startswith("CONFLICT")
+    ]
+
+
+def parse_calendar_modes(raw: str | None, cardio_timing: str, workout_timing: str) -> dict[str, str]:
+    """Parse optional power-user overrides such as ``mon=morning,tue=unavailable``."""
+    modes = calendar_modes_for_timing(cardio_timing, workout_timing)
+    if not raw:
+        return modes
+    aliases = {day.lower(): day for day in CALENDAR_DAYS}
+    aliases.update({day[:3].lower(): day for day in CALENDAR_DAYS})
+    allowed = dict(CALENDAR_MODE_OPTIONS)
+    for token in (part.strip() for part in raw.split(",") if part.strip()):
+        if "=" not in token:
+            raise SystemExit("--calendar entries must look like mon=plan or thursday=unavailable")
+        raw_day, raw_mode = (part.strip().lower() for part in token.split("=", 1))
+        day = aliases.get(raw_day)
+        if not day or raw_mode not in allowed:
+            raise SystemExit(
+                f"Invalid --calendar entry: {token}. Days are mon–sun; modes are "
+                + ", ".join(allowed)
+            )
+        modes[day] = raw_mode
+    return modes
+
+
+def calendar_prompt(
+    cardio_timing: str,
+    workout_timing: str,
+    *,
+    step_label: str,
+    initial_modes: dict[str, str] | None = None,
+) -> dict[str, str]:
+    """Keyboard-first weekly calendar editor for the guided intake."""
+    initial = calendar_modes_for_timing(cardio_timing, workout_timing)
+    if isinstance(initial_modes, dict):
+        allowed = dict(CALENDAR_MODE_OPTIONS)
+        for day in CALENDAR_DAYS:
+            mode = str(initial_modes.get(day, initial[day]))
+            if mode in allowed:
+                initial[day] = mode
+    if not sys.stdin.isatty() or not sys.stdout.isatty():
+        return initial
+
+    mode_keys = [value for value, _ in CALENDAR_MODE_OPTIONS]
+    mode_short = {
+        "plan": "PLAN",
+        "morning": "AM",
+        "evening": "PM",
+        "both": "BOTH",
+        "unavailable": "OFF",
+    }
+
+    def fallback() -> dict[str, str]:
+        console.print(
+            "[yellow]The visual calendar needs a larger terminal. The confirmed timing answers were kept as the calendar default.[/yellow]"
+        )
+        return initial
+
+    def run(stdscr) -> dict[str, str]:
+        try:
+            curses.curs_set(0)
+        except curses.error:
+            pass
+        stdscr.keypad(True)
+        try:
+            curses.start_color()
+            curses.use_default_colors()
+            curses.init_pair(1, curses.COLOR_GREEN, -1)
+            curses.init_pair(2, curses.COLOR_YELLOW, -1)
+            curses.init_pair(3, curses.COLOR_RED, -1)
+            curses.init_pair(4, curses.COLOR_CYAN, -1)
+        except curses.error:
+            pass
+        modes = dict(initial)
+        cursor = 0
+        history: list[tuple[str, str]] = []
+        notice = ""
+        confirm_conflicts = False
+
+        def put(y: int, x: int, value: str, attr: int = 0) -> None:
+            height, width = stdscr.getmaxyx()
+            if 0 <= y < height and x < width:
+                try:
+                    stdscr.addnstr(y, x, value, max(0, width - x - 1), attr)
+                except curses.error:
+                    pass
+
+        def status_attr(status: str) -> int:
+            if status.startswith("CONFLICT"):
+                return curses.color_pair(3) | curses.A_BOLD
+            if status.startswith(("LIMIT", "SKIP")):
+                return curses.color_pair(2) | curses.A_BOLD
+            return curses.color_pair(1)
+
+        def change_mode(day: str, new_mode: str) -> None:
+            nonlocal notice, confirm_conflicts
+            old = modes[day]
+            if old != new_mode:
+                history.append((day, old))
+                modes[day] = new_mode
+                placement, status = calendar_mode_detail(day, new_mode)
+                notice = f"Saved {day}: {mode_short[new_mode]} · {status}."
+            confirm_conflicts = False
+
+        while True:
+            height, width = stdscr.getmaxyx()
+            if height < 22 or width < 72:
+                raise curses.error("calendar terminal too small")
+            stdscr.erase()
+            put(0, 0, f"HEALTHCOACH WEEKLY CALENDAR · {step_label}", curses.A_BOLD | curses.color_pair(4))
+            put(1, 0, "Place the existing session—this does not add volume or move the locked wake/work/bed clock.", curses.A_DIM)
+            put(2, 0, "↑/↓ day · Space/←/→ placement · 1 PLAN  2 AM  3 PM  4 BOTH  5 OFF · z undo")
+            put(3, 0, "Enter save · r reset · ? help · Esc cancel assessment", curses.A_BOLD)
+            put(5, 0, "DAY  MODE    PLACEMENT / SESSION", curses.A_BOLD)
+
+            for index, day in enumerate(CALENDAR_DAYS):
+                row = 6 + index * 2
+                placement, status = calendar_mode_detail(day, modes[day])
+                pointer = ">" if index == cursor else " "
+                label = f"{pointer} {day[:3].upper():<3}  [{mode_short[modes[day]]:^4}]  {placement}"
+                put(row, 0, label, curses.A_REVERSE if index == cursor else 0)
+                put(row + 1, 13, status, status_attr(status))
+
+            conflict_days = calendar_conflicts(modes)
+            footer_y = height - 2
+            if notice:
+                footer = notice
+            elif conflict_days:
+                footer = "Review needed: " + ", ".join(conflict_days) + " morning placement conflicts with fixed Anki/work."
+            else:
+                footer = "Ready · seven days recorded with stable keys."
+            put(footer_y, 0, footer, curses.A_BOLD)
+            stdscr.refresh()
+            key = stdscr.getch()
+
+            if key in (curses.KEY_UP, ord("k")):
+                cursor = (cursor - 1) % len(CALENDAR_DAYS)
+                confirm_conflicts = False
+            elif key in (curses.KEY_DOWN, ord("j")):
+                cursor = (cursor + 1) % len(CALENDAR_DAYS)
+                confirm_conflicts = False
+            elif key in (ord(" "), curses.KEY_RIGHT, ord("l"), curses.KEY_LEFT, ord("h")):
+                day = CALENDAR_DAYS[cursor]
+                direction = -1 if key in (curses.KEY_LEFT, ord("h")) else 1
+                position = mode_keys.index(modes[day])
+                change_mode(day, mode_keys[(position + direction) % len(mode_keys)])
+            elif key in tuple(ord(str(i)) for i in range(1, 6)):
+                change_mode(CALENDAR_DAYS[cursor], mode_keys[key - ord("1")])
+            elif key == ord("z"):
+                if history:
+                    day, old = history.pop()
+                    modes[day] = old
+                    notice = f"Undid the last change; {day} is {mode_short[old]}."
+                else:
+                    notice = "Nothing to undo."
+                confirm_conflicts = False
+            elif key == ord("r"):
+                for day in CALENDAR_DAYS:
+                    if modes[day] != initial[day]:
+                        history.append((day, modes[day]))
+                modes = dict(initial)
+                notice = "Calendar reset to the confirmed cardio/strength timing answers."
+                confirm_conflicts = False
+            elif key == ord("?"):
+                stdscr.erase()
+                help_lines = (
+                    "CALENDAR HELP",
+                    "",
+                    "PLAN  Keep the authored week's exact placement.",
+                    "AM    Put the day's one main session after the morning study block.",
+                    "PM    Put the day's one main session at the 17:00 window.",
+                    "BOTH  Easy movement may use the other window; never duplicates hard work.",
+                    "OFF   You expect to be unavailable. The day's protein, steps, light, creatine,",
+                    "      hydration, and sleep still execute; the report applies the skip rule.",
+                    "",
+                    "Workday AM conflicts are deliberately visible. You may keep one as a stated",
+                    "preference, but HealthCoach must resolve it without silently deleting Anki or work.",
+                    "",
+                    "Press any key to return. Esc from the board cancels without changing the report.",
+                )
+                for row, line in enumerate(help_lines):
+                    put(row, 0, line, curses.A_BOLD if row == 0 else 0)
+                stdscr.refresh()
+                stdscr.getch()
+                notice = "Returned from help; no calendar choices changed."
+            elif key in (10, 13, curses.KEY_ENTER):
+                conflict_days = calendar_conflicts(modes)
+                if conflict_days and not confirm_conflicts:
+                    confirm_conflicts = True
+                    notice = "Conflicts will be preserved for recommendation—not auto-fixed. Press Enter again to save."
+                else:
+                    return modes
+            elif key in (3, 27, ord("q")):
+                raise KeyboardInterrupt
+
+    try:
+        return curses.wrapper(run)
+    except curses.error:
+        return fallback()
+
+
+def calendar_summary(profile: dict) -> str:
+    modes = profile.get("calendar_modes", {})
+    return "; ".join(
+        f"{day[:3]}={modes.get(day, 'plan')}" for day in CALENDAR_DAYS
+    )
+
+
+def calendar_markdown(profile: dict) -> str:
+    modes = profile.get("calendar_modes", {})
+    lines = [
+        f"**{profile.get('calendar_lock_version', 'HC_CALENDAR_V1')}**",
+        "",
+        f"**Validation:** {profile.get('calendar_validation', 'not run')}",
+        "",
+        "This is the user's recurring-week availability overlay. It places the existing session; it does not authorize extra volume or erase locked daily tasks.",
+        "",
+        "| Day | Stable selection | Placement / session | Compatibility | Fixed commitments |",
+        "|---|---|---|---|---|",
+    ]
+    for day in CALENDAR_DAYS:
+        mode = modes.get(day, "plan")
+        placement, status = calendar_mode_detail(day, mode)
+        fixed = (
+            "04:30 wake; 04:35 light; 04:50–05:50 study; 05:50 breakfast; "
+            "06:00–16:00 work; 19:15 wind-down; 20:15 bed"
+            if day in CALENDAR_DAYS[:4]
+            else "04:30 wake; 04:35 light; 04:50–05:50 study; 05:50 breakfast; 19:15 wind-down; 20:15 bed"
+        )
+        lines.append(f"| {day} | `{mode}` | {placement} | {status} | {fixed} |")
+    conflicts = calendar_conflicts({day: modes.get(day, "plan") for day in CALENDAR_DAYS})
+    if conflicts:
+        lines.extend([
+            "",
+            "**Unresolved calendar conflicts:** " + ", ".join(conflicts)
+            + ". They remain visible for the timing recommendation; HealthCoach may not silently delete Anki, work, or sleep to make them fit.",
+        ])
+    return "\n".join(lines)
 
 
 def labels_for(values: Sequence[str], choices: Sequence[tuple[str, str]]) -> list[str]:
@@ -1101,6 +1491,71 @@ WHOLE_FOOD_CATALOG: tuple[Candidate, ...] = (
               ("turmeric food", "curcuma longa"), policy="FOOD REVIEW; CURCUMIN EXTRACT IS A DIFFERENT FORM"),
 )
 
+EXPANDED_FOOD_GROUP_SPECS: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] = (
+    (
+        "01_food_inflammation/whole_fruits_berries_citrus", ("heart", "gi", "focus", "cut"),
+        ("apples", "bananas", "strawberries", "raspberries", "blackberries", "oranges", "grapefruit",
+         "lemons", "limes", "kiwi", "mango", "pineapple", "papaya", "watermelon", "grapes", "cherries",
+         "peaches", "pears", "plums", "pomegranate", "avocado", "dates", "figs"),
+    ),
+    (
+        "01_food_inflammation/whole_vegetables_leafy_cruciferous", ("heart", "gi", "cut", "deficiency"),
+        ("spinach", "kale", "broccoli", "cauliflower", "brussels_sprouts", "cabbage", "carrots",
+         "sweet_potatoes", "potatoes", "tomatoes", "bell_peppers", "onions", "mushrooms", "cooked_mushrooms",
+         "asparagus", "zucchini", "cucumber", "celery", "lettuce", "arugula", "watercress", "collard_greens",
+         "swiss_chard", "eggplant", "butternut_squash", "pumpkin", "radishes"),
+    ),
+    (
+        "01_food_inflammation/whole_grains_starches", ("endurance", "gi", "heart", "cut"),
+        ("oats", "quinoa", "brown_rice", "barley", "millet", "buckwheat", "farro", "popcorn", "wild_rice"),
+    ),
+    (
+        "01_food_inflammation/legumes_pulses_soy", ("strength", "gi", "heart", "cut"),
+        ("lentils", "chickpeas", "black_beans", "kidney_beans", "pinto_beans", "navy_beans", "edamame", "green_peas"),
+    ),
+    (
+        "01_food_inflammation/nuts_seeds_whole_foods", ("heart", "focus", "cut", "deficiency"),
+        ("almonds", "walnuts", "pecans", "pistachios", "cashews", "brazil_nuts", "hazelnuts", "peanuts",
+         "chia_seeds", "flaxseeds", "pumpkin_seeds", "sunflower_seeds", "hemp_seeds", "sesame_seeds"),
+    ),
+    (
+        "01_food_inflammation/animal_proteins_organs", ("strength", "deficiency", "cut"),
+        ("eggs", "chicken", "turkey", "lean_beef", "lamb", "pork", "beef_liver", "beef_heart", "gelatin_broth"),
+    ),
+    (
+        "01_food_inflammation/fish_seafood_whole_foods", ("heart", "focus", "strength", "deficiency"),
+        ("salmon", "sardines", "mackerel", "oysters", "fish_eggs"),
+    ),
+    (
+        "01_food_inflammation/fermented_dairy_culinary_fats", ("gi", "strength", "heart", "cut"),
+        ("plain_yogurt", "kefir", "sauerkraut", "pasteurized_dairy", "extra_virgin_olive_oil", "coconut", "dark_chocolate"),
+    ),
+    (
+        "01_food_inflammation/herbs_spices_cocoa", ("heart", "gi", "joints"),
+        ("parsley", "cilantro", "seaweed"),
+    ),
+)
+
+
+def expanded_food_candidates() -> tuple[Candidate, ...]:
+    labels = dict(FOOD_ADDITION_OPTIONS)
+    candidates: list[Candidate] = []
+    for _group_folder, issues, keys in EXPANDED_FOOD_GROUP_SPECS:
+        for key in keys:
+            label = labels[key]
+            plain = label.split("│", 1)[-1].strip()
+            aliases = tuple(dict.fromkeys((key.replace("_", " "), plain.lower())))
+            candidates.append(Candidate(
+                key, plain, QUEUE_WHOLE_FOOD,
+                (f"01_food_inflammation/whole_food_library/{key}",), issues, aliases,
+                policy="WHOLE-FOOD REVIEW; USER-SUPPLIED BENEFIT CLAIMS REQUIRE DIRECT HUMAN SUPPORT",
+            ))
+    return tuple(candidates)
+
+
+WHOLE_FOOD_CATALOG = WHOLE_FOOD_CATALOG + expanded_food_candidates()
+REQUIRED_FOOD_RESEARCH_KEYS = tuple(candidate.key for candidate in WHOLE_FOOD_CATALOG)
+
 # These are planning routes, not claims that a food recreates an isolated study product or dose.
 # The distinction is deliberately explicit: "direct" means ordinary foods provide the nutrient
 # or food itself; "partial" means related food constituents exist but are not interchangeable
@@ -1263,20 +1718,80 @@ def parse_issue_codes(raw: str) -> list[str]:
     return out
 
 
-def ask_profile_quick() -> dict:
+def saved_profile_markdown(profile: dict) -> str:
+    """Embed resumable intake state inside the sole report, never in a sidecar file."""
+    safe_profile = dict(profile)
+    safe_profile.pop("weekly_records", None)
+    payload = json.dumps(safe_profile, ensure_ascii=False, indent=2, sort_keys=True)
+    payload = payload.replace(PROFILE_STATE_START, "[profile marker removed]")
+    payload = payload.replace(PROFILE_STATE_END, "[profile marker removed]")
+    return "\n".join((
+        PROFILE_STATE_START,
+        "<details><summary>Machine-readable saved intake state</summary>",
+        "",
+        "```json",
+        payload,
+        "```",
+        "",
+        "</details>",
+        PROFILE_STATE_END,
+    ))
+
+
+def load_saved_profile(path: Path = DEFAULT_OUT) -> dict | None:
+    if not path.exists():
+        return None
+    text = path.read_text(encoding="utf-8", errors="replace")
+    match = re.search(
+        re.escape(PROFILE_STATE_START) + r"\s*(.*?)\s*" + re.escape(PROFILE_STATE_END),
+        text,
+        re.S,
+    )
+    if not match:
+        return None
+    block = match.group(1)
+    json_match = re.search(r"```json\s*(\{.*?\})\s*```", block, re.S)
+    if not json_match:
+        return None
+    try:
+        value = json.loads(json_match.group(1))
+    except json.JSONDecodeError:
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def ask_profile_quick(existing: dict | None = None) -> dict:
     """Default guided assessment: short explained sections and almost no typing."""
-    console.print(Panel.fit(
+    resume_line = (
+        "Saved answers from HEALTHCOACH_REPORT.md are preselected; change only what changed.\n"
+        if existing
+        else "No saved intake was found; the recommended starting answers are preselected.\n"
+    )
+    intro = (
         "[bold]HealthCoach Guided Assessment[/bold]\n\n"
-        "You will see 9 short, explained sections. Checked answers are included in your report.\n"
+        "You will see 10 short, explained sections, including a visual weekly calendar.\n"
+        "Checked answers and calendar placements are included in your one report.\n"
+        f"{resume_line}"
         "Use ↑/↓ to move, Space to change a box, / to search long lists, and Enter to continue.\n"
         "Pressing Enter keeps the checked defaults. Selecting an item asks HealthCoach to evaluate it;\n"
-        "it does not automatically recommend or prescribe it. A final review appears before research starts.",
+        "it does not automatically recommend or prescribe it. A final review appears before research starts."
+    )
+    console.print(Panel.fit(
+        intro,
         border_style="bright_cyan", padding=(1, 3),
     ))
 
     supplement_options = [(c.key, c.name) for c in CATALOG]
     peptide_options = tuple((c.key, c.name) for c in PEPTIDE_CATALOG)
     selected: list[str] = []
+
+    def saved(field: str, fallback: Sequence[str]) -> tuple[str, ...]:
+        if not existing or field not in existing:
+            return tuple(fallback)
+        raw = existing.get(field, ())
+        if isinstance(raw, (list, tuple, set)):
+            return tuple(str(value) for value in raw)
+        return (str(raw),) if raw else tuple(fallback)
 
     def run_step(
         number: int,
@@ -1299,7 +1814,7 @@ def ask_profile_quick() -> dict:
                 if value in group_defaults:
                     defaults.append(qualified)
         selected.extend(checkbox_prompt(
-            f"STEP {number} OF 9 — {title}",
+            f"STEP {number} OF 10 — {title}",
             choices,
             description=description,
             defaults=defaults,
@@ -1308,64 +1823,17 @@ def ask_profile_quick() -> dict:
         ))
 
     run_step(1, "GOALS AND CURRENT ACTIVITY",
-             "Choose your goals and the activities currently in your week.", (
-        ("issue", "GOAL", tuple(ISSUES.items()), ("cut", "strength", "endurance")),
-        ("training", "DOING NOW", TRAINING_OPTIONS, ("lifting", "running", "cycling", "walking")),
-    ))
+             "Choose one weight direction, then your goals and current activities.", (
+        ("direction", "DIRECTION · ONE", WEIGHT_DIRECTION_OPTIONS, saved("weight_direction", ("cut",))),
+        ("issue", "GOAL", tuple(ISSUES.items()), saved("issues", ("cut", "strength", "endurance"))),
+        ("training", "DOING NOW", TRAINING_OPTIONS, saved("training_mode_keys", ("lifting", "running", "cycling", "walking"))),
+    ), exclusive=("direction",))
     run_step(2, "SCHEDULE AND INJURIES",
              "Choose one cardio time, one strength time, and any pain areas.", (
-        ("cardio", "CARDIO · ONE", CARDIO_TIMING_OPTIONS, ("recommend",)),
-        ("workout", "STRENGTH · ONE", WORKOUT_TIMING_OPTIONS, ("recommend",)),
-        ("injury", "PAIN / INJURY", INJURY_OPTIONS, ("none_reported",)),
+        ("cardio", "CARDIO · ONE", CARDIO_TIMING_OPTIONS, saved("cardio_timing", ("recommend",))),
+        ("workout", "STRENGTH · ONE", WORKOUT_TIMING_OPTIONS, saved("workout_timing", ("recommend",))),
+        ("injury", "PAIN / INJURY", INJURY_OPTIONS, saved("injury_keys", ("none_reported",))),
     ), exclusive=("cardio", "workout"))
-    run_step(3, "WHAT YOU TAKE NOW",
-             "Select only supplements you use now. Press / to search by name.", (
-        ("taking", "TAKING NOW", supplement_options, ("creatine_monohydrate",)),
-    ), locked=("taking::creatine_monohydrate",))
-    run_step(4, "MEDICINES AND SAFETY",
-             "Record results, medicines, known risks, confirmed labs, and reactions.", (
-        ("result", "RESULT SO FAR", SUPPLEMENT_RESULT_OPTIONS, ("not_tracked",)),
-        ("medication", "MEDICATION", MEDICATION_OPTIONS, ("tirzepatide",)),
-        ("safety", "HEALTH FLAG", SAFETY_OPTIONS, ("none_known",)),
-        ("deficiency", "CONFIRMED LAB", DEFICIENCY_OPTIONS, ("none_unknown",)),
-        ("reaction", "PAST REACTION", REACTION_OPTIONS, ("none_reported",)),
-    ), locked=("medication::tirzepatide",))
-    run_step(5, "SUPPLEMENTS TO INVESTIGATE",
-             "Choose one intake route, then topics to research. Food-first applies only where a meaningful whole-food route exists; it never invents a food substitute for a drug or isolated compound.", (
-        ("supplement_source", "SOURCE · ONE", SUPPLEMENT_SOURCE_OPTIONS, ("whole_food_first",)),
-        ("review", "RESEARCH", supplement_options, (
-            "creatine_monohydrate", "protein_whey", "caffeine",
-            "omega_3_epa_and_dha", "vitamin_d3", "magnesium",
-        )),
-    ), exclusive=("supplement_source",))
-    run_step(6, "PEPTIDE / GRAY-MARKET RESEARCH",
-             "Choose one research boundary, then optionally select named items. Broad scan means evidence triage—not approval, compatibility, or a dosing plan.", (
-        ("experimental", "BOUNDARY · ONE", EXPERIMENTAL_POLICY_OPTIONS, ("approved_only",)),
-        ("peptide", "RESEARCH", peptide_options, ("tirzepatide_current_prescription",)),
-    ), exclusive=("experimental",), locked=("peptide::tirzepatide_current_prescription",))
-    run_step(7, "FOOD, SLEEP, CAFFEINE, AND SUBSTANCES",
-             "Choose current patterns or symptoms so the plan avoids conflicts.", (
-        ("diet", "FOOD / GI", DIET_GI_OPTIONS, ("none_reported",)),
-        ("sleep", "SLEEP", SLEEP_OPTIONS, ("none_reported",)),
-        ("caffeine", "CAFFEINE", CAFFEINE_OPTIONS, ("coffee",)),
-        ("substance", "OTHER USE", SUBSTANCE_OPTIONS, ("none_reported",)),
-    ))
-    run_step(8, "FOOD, HOME, FAITH, AND OTHER IDEAS",
-             "Choose ideas to evaluate or fit into the plan—not endorse.", (
-        ("food", "FOOD IDEA", FOOD_ADDITION_OPTIONS, (
-            "pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food",
-            *LOCKED_USER_FOOD_KEYS,
-        )),
-        ("home", "HOME / FAITH", HOME_PRACTICE_OPTIONS, ("bible_prayer", "morning_light", "water_quality", "breathwork")),
-        ("alternative", "CLAIM TO CHECK", ALTERNATIVE_ITEM_OPTIONS, ()),
-    ), locked=tuple(f"food::{value}" for value in LOCKED_USER_FOOD_KEYS))
-    run_step(9, "SHOPPING AND DEADLINE",
-             "Choose your stores, buying priorities, and one deadline answer.", (
-        ("store", "STORE · MULTI", STORE_OPTIONS, ("costco",)),
-        ("preference", "BUYING RULE", PRODUCT_OPTIONS, ("third_party", "fewest_items")),
-        ("timeline", "DEADLINE · ONE", TIMELINE_OPTIONS, ("none",)),
-        ("detail", "OPTIONAL NOTE", (("add_note", "I need to add one short detail not covered above"),), ()),
-    ), exclusive=("timeline",))
 
     def picked(prefix: str) -> list[str]:
         marker = f"{prefix}::"
@@ -1379,7 +1847,62 @@ def ask_profile_quick() -> dict:
         non_default = [value for value in values if value != fallback]
         return non_default[-1] if non_default else (values[-1] if values else fallback)
 
+    calendar_modes = calendar_prompt(
+        one("cardio", "recommend"),
+        one("workout", "recommend"),
+        step_label="STEP 3 OF 10",
+        initial_modes=existing.get("calendar_modes") if existing else None,
+    )
+
+    run_step(4, "WHAT YOU TAKE NOW",
+             "Select only supplements you use now. Press / to search by name.", (
+        ("taking", "TAKING NOW", supplement_options, saved("current_supplement_keys", ("creatine_monohydrate",))),
+    ), locked=("taking::creatine_monohydrate",))
+    run_step(5, "MEDICINES AND SAFETY",
+             "Record results, medicines, known risks, confirmed labs, and reactions.", (
+        ("result", "RESULT SO FAR", SUPPLEMENT_RESULT_OPTIONS, saved("supplement_result_keys", ("not_tracked",))),
+        ("medication", "MEDICATION", MEDICATION_OPTIONS, saved("medication_keys", ("tirzepatide",))),
+        ("safety", "HEALTH FLAG", SAFETY_OPTIONS, saved("condition_keys", ("none_known",))),
+        ("deficiency", "CONFIRMED LAB", DEFICIENCY_OPTIONS, saved("deficiency_keys", ("none_unknown",))),
+        ("reaction", "PAST REACTION", REACTION_OPTIONS, saved("reaction_keys", ("none_reported",))),
+    ), locked=("medication::tirzepatide",))
+    run_step(6, "SUPPLEMENTS TO INVESTIGATE",
+             "Choose one intake route, then topics to research. Food-first applies only where a meaningful whole-food route exists; it never invents a food substitute for a drug or isolated compound.", (
+        ("supplement_source", "SOURCE · ONE", SUPPLEMENT_SOURCE_OPTIONS, saved("supplement_source", ("whole_food_first",))),
+        ("review", "RESEARCH", supplement_options, saved("priority_supplement_keys", (
+            "creatine_monohydrate", "protein_whey", "caffeine",
+            "omega_3_epa_and_dha", "vitamin_d3", "magnesium",
+        ))),
+    ), exclusive=("supplement_source",))
+    run_step(7, "PEPTIDE / GRAY-MARKET RESEARCH",
+             "Choose one research boundary, then optionally select named items. Broad scan means evidence triage—not approval, compatibility, or a dosing plan.", (
+        ("experimental", "BOUNDARY · ONE", EXPERIMENTAL_POLICY_OPTIONS, saved("experimental_policy", ("approved_only",))),
+        ("peptide", "RESEARCH", peptide_options, saved("selected_peptide_keys", ("tirzepatide_current_prescription",))),
+    ), exclusive=("experimental",), locked=("peptide::tirzepatide_current_prescription",))
+    run_step(8, "FOOD, SLEEP, CAFFEINE, AND SUBSTANCES",
+             "Choose one daily meal count plus current patterns or symptoms so the plan avoids conflicts.", (
+        ("meals", "MEALS · ONE", MEAL_FREQUENCY_OPTIONS, saved("meal_count", ("4",))),
+        ("diet", "FOOD / GI", DIET_GI_OPTIONS, saved("diet_keys", ("none_reported",))),
+        ("sleep", "SLEEP", SLEEP_OPTIONS, saved("sleep_keys", ("none_reported",))),
+        ("caffeine", "CAFFEINE", CAFFEINE_OPTIONS, saved("caffeine_keys", ("coffee",))),
+        ("substance", "OTHER USE", SUBSTANCE_OPTIONS, saved("substance_keys", ("none_reported",))),
+    ), exclusive=("meals",))
+    run_step(9, "FOOD, HOME, FAITH, AND OTHER IDEAS",
+             "Choose foods you would actually buy/eat plus ideas to evaluate. Press / to find a food; selection is not proof of a benefit.", (
+        ("food", "FOOD IDEA", FOOD_ADDITION_OPTIONS, saved("food_addition_keys", DEFAULT_FOOD_PLAN_KEYS)),
+        ("home", "HOME / FAITH", HOME_PRACTICE_OPTIONS, saved("home_practice_keys", ("bible_prayer", "morning_light", "water_quality", "breathwork"))),
+        ("alternative", "CLAIM TO CHECK", ALTERNATIVE_ITEM_OPTIONS, saved("alternative_item_keys", ())),
+    ), locked=tuple(f"food::{value}" for value in LOCKED_USER_FOOD_KEYS))
+    run_step(10, "SHOPPING AND DEADLINE",
+             "Choose your stores, buying priorities, and one deadline answer.", (
+        ("store", "STORE · MULTI", STORE_OPTIONS, saved("store_keys", ("costco",))),
+        ("preference", "BUYING RULE", PRODUCT_OPTIONS, saved("preference_keys", ("third_party", "fewest_items"))),
+        ("timeline", "DEADLINE · ONE", TIMELINE_OPTIONS, saved("timeline_keys", ("none",))),
+        ("detail", "OPTIONAL NOTE", (("add_note", "I need to add one short detail not covered above"),), ()),
+    ), exclusive=("timeline",))
+
     issues = picked("issue") or ["cut", "strength", "endurance"]
+    weight_direction = one("direction", "cut")
     training_modes = picked("training") or ["lifting", "running", "cycling", "walking"]
     cardio_timing = one("cardio", "recommend")
     workout_timing = one("workout", "recommend")
@@ -1395,6 +1918,7 @@ def ask_profile_quick() -> dict:
     deficiency_keys = without_sentinel(picked("deficiency") or ["none_unknown"], "none_unknown")
     reaction_keys = without_sentinel(picked("reaction") or ["none_reported"], "none_reported")
     diet_keys = without_sentinel(picked("diet") or ["none_reported"], "none_reported")
+    meal_count = int(one("meals", "4"))
     sleep_keys = without_sentinel(picked("sleep") or ["none_reported"], "none_reported")
     caffeine_keys = without_sentinel(picked("caffeine") or ["coffee"], "none")
     substance_keys = without_sentinel(picked("substance") or ["none_reported"], "none_reported")
@@ -1468,32 +1992,55 @@ def ask_profile_quick() -> dict:
         else "use the locked 17:00 training window; no additional timing limit selected"
     )
     issue_labels = [ISSUES[x] for x in issues]
+
+    def preserve_text(field: str, generated: str, key_field: str | None = None, keys: Sequence[str] = ()) -> str:
+        if not existing or not existing.get(field):
+            return generated
+        if key_field is None:
+            return str(existing[field])
+        previous = existing.get(key_field, ())
+        previous_values = set(previous if isinstance(previous, (list, tuple, set)) else (previous,))
+        return str(existing[field]) if previous_values == set(keys) else generated
+
+    generated_current = "; ".join(current_names) or "none selected"
+    current_text = preserve_text(
+        "current_supplements", generated_current, "current_supplement_keys", current_supplement_keys
+    )
+    if "creatine monohydrate" not in current_text.lower():
+        current_text = "Creatine monohydrate 5 g/day; " + current_text
     profile = {
-        "assessment_mode": "Nine-step guided assessment with at most one conditional detail line",
-        "assessment_notes": notes,
-        "name": "Michael",
+        "assessment_mode": "Ten-step guided assessment with visual weekly calendar and at most one conditional detail line",
+        "assessment_notes": notes if detail_needs else preserve_text("assessment_notes", notes),
+        "name": str(existing.get("name", "Michael")) if existing else "Michael",
         "age": 26,
-        "height": "unknown/not entered in guided assessment",
+        "height": str(existing.get("height", "unknown/not entered in guided assessment")) if existing else "unknown/not entered in guided assessment",
         "location": "Dallas, Texas",
         "body_context": "about 230 lb; Phase A goal 200 lb; Phase B goal 190 lb",
+        "weight_direction": weight_direction,
+        "weight_direction_label": dict(WEIGHT_DIRECTION_OPTIONS)[weight_direction],
         "issues": issues,
         "issue_labels": issue_labels,
-        "goals": "; ".join(issue_labels),
-        "priorities": "1) keep muscle/strength, 2) lose fat, 3) improve running; revise in final note if needed",
+        "goals": preserve_text("goals", "; ".join(issue_labels)),
+        "priorities": preserve_text("priorities", "1) keep muscle/strength, 2) lose fat, 3) improve running; revise in final note if needed"),
         "training_mode_keys": training_modes,
-        "training": f"{'; '.join(labels_for(training_modes, TRAINING_OPTIONS))}; locked three-lift hybrid week; detailed mileage not entered",
+        "training": preserve_text(
+            "training",
+            f"{'; '.join(labels_for(training_modes, TRAINING_OPTIONS))}; locked three-lift hybrid week; detailed mileage not entered",
+            "training_mode_keys", training_modes,
+        ),
         "cardio_timing": cardio_timing,
         "cardio_timing_label": dict(CARDIO_TIMING_OPTIONS)[cardio_timing],
-        "cardio_clock_constraints": cardio_clock,
+        "cardio_clock_constraints": preserve_text("cardio_clock_constraints", cardio_clock, "cardio_timing", (cardio_timing,)),
         "workout_timing": workout_timing,
         "workout_timing_label": dict(WORKOUT_TIMING_OPTIONS)[workout_timing],
-        "workout_clock_constraints": workout_clock,
+        "workout_clock_constraints": preserve_text("workout_clock_constraints", workout_clock, "workout_timing", (workout_timing,)),
+        "calendar_modes": calendar_modes,
         "injury_keys": injury_keys,
-        "injuries": "; ".join(labels_for(injury_keys, INJURY_OPTIONS)) or "none reported",
-        "current_supplements": "; ".join(current_names) or "none selected",
+        "injuries": preserve_text("injuries", "; ".join(labels_for(injury_keys, INJURY_OPTIONS)) or "none reported", "injury_keys", injury_keys),
+        "current_supplements": current_text,
         "current_supplement_keys": current_supplement_keys,
         "supplement_result_keys": result_keys,
-        "supplement_results": "; ".join(labels_for(result_keys, SUPPLEMENT_RESULT_OPTIONS)) or "not tracked",
+        "supplement_results": preserve_text("supplement_results", "; ".join(labels_for(result_keys, SUPPLEMENT_RESULT_OPTIONS)) or "not tracked", "supplement_result_keys", result_keys),
         "priority_supplement_keys": interest_keys,
         "priority_supplements": [c.name for c in CATALOG if c.key in interest_keys],
         "supplement_source": supplement_source,
@@ -1503,16 +2050,18 @@ def ask_profile_quick() -> dict:
         "experimental_policy": experimental_policy,
         "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
         "medication_keys": medication_keys,
-        "medications": "; ".join(labels_for(medication_keys, MEDICATION_OPTIONS)) or "none reported",
+        "medications": preserve_text("medications", "; ".join(labels_for(medication_keys, MEDICATION_OPTIONS)) or "none reported", "medication_keys", medication_keys),
         "deficiency_keys": deficiency_keys,
-        "confirmed_deficiencies_or_labs": "; ".join(labels_for(deficiency_keys, DEFICIENCY_OPTIONS)) or "none/unknown",
+        "confirmed_deficiencies_or_labs": preserve_text("confirmed_deficiencies_or_labs", "; ".join(labels_for(deficiency_keys, DEFICIENCY_OPTIONS)) or "none/unknown", "deficiency_keys", deficiency_keys),
         "condition_keys": condition_keys,
-        "conditions_and_safety_flags": "; ".join(labels_for(condition_keys, SAFETY_OPTIONS)) or "none known",
-        "vitals": "unknown/not entered in guided assessment",
+        "conditions_and_safety_flags": preserve_text("conditions_and_safety_flags", "; ".join(labels_for(condition_keys, SAFETY_OPTIONS)) or "none known", "condition_keys", condition_keys),
+        "vitals": preserve_text("vitals", "unknown/not entered in guided assessment"),
         "reaction_keys": reaction_keys,
-        "prior_reactions": "; ".join(labels_for(reaction_keys, REACTION_OPTIONS)) or "none reported",
+        "prior_reactions": preserve_text("prior_reactions", "; ".join(labels_for(reaction_keys, REACTION_OPTIONS)) or "none reported", "reaction_keys", reaction_keys),
         "diet_keys": diet_keys,
-        "diet_and_gi": "; ".join(labels_for(diet_keys, DIET_GI_OPTIONS)) or "none reported",
+        "diet_and_gi": preserve_text("diet_and_gi", "; ".join(labels_for(diet_keys, DIET_GI_OPTIONS)) or "none reported", "diet_keys", diet_keys),
+        "meal_count": meal_count,
+        "meal_count_label": dict(MEAL_FREQUENCY_OPTIONS)[str(meal_count)],
         "food_addition_keys": food_addition_keys,
         "food_additions": labels_for(food_addition_keys, FOOD_ADDITION_OPTIONS),
         "home_practice_keys": home_practice_keys,
@@ -1521,17 +2070,17 @@ def ask_profile_quick() -> dict:
         "alternative_items": labels_for(alternative_item_keys, ALTERNATIVE_ITEM_OPTIONS),
         "store_keys": store_keys,
         "shopping_stores": labels_for(store_keys, STORE_OPTIONS),
-        "whole_life_details": f"apartment now; include house options; Christian Bible/Jesus learning; assessment detail: {notes}",
+        "whole_life_details": preserve_text("whole_life_details", f"apartment now; include house options; Christian Bible/Jesus learning; assessment detail: {notes}"),
         "caffeine_keys": caffeine_keys,
-        "caffeine": f"{'; '.join(labels_for(caffeine_keys, CAFFEINE_OPTIONS)) or 'none'}; amount not entered; none after 11:15",
+        "caffeine": preserve_text("caffeine", f"{'; '.join(labels_for(caffeine_keys, CAFFEINE_OPTIONS)) or 'none'}; amount not entered; none after 11:15", "caffeine_keys", caffeine_keys),
         "sleep_keys": sleep_keys,
-        "sleep": f"{'; '.join(labels_for(sleep_keys, SLEEP_OPTIONS)) or 'none reported'}; locked target 20:15–04:30",
+        "sleep": preserve_text("sleep", f"{'; '.join(labels_for(sleep_keys, SLEEP_OPTIONS)) or 'none reported'}; locked target 20:15–04:30", "sleep_keys", sleep_keys),
         "substance_keys": substance_keys,
-        "substances": "; ".join(labels_for(substance_keys, SUBSTANCE_OPTIONS)) or "none reported",
+        "substances": preserve_text("substances", "; ".join(labels_for(substance_keys, SUBSTANCE_OPTIONS)) or "none reported", "substance_keys", substance_keys),
         "preference_keys": preference_keys,
-        "preferences": "; ".join(labels_for(preference_keys, PRODUCT_OPTIONS)) or "none selected",
+        "preferences": preserve_text("preferences", "; ".join(labels_for(preference_keys, PRODUCT_OPTIONS)) or "none selected", "preference_keys", preference_keys),
         "timeline_keys": timeline_keys,
-        "timeline": "; ".join(labels_for(timeline_keys, TIMELINE_OPTIONS)),
+        "timeline": preserve_text("timeline", "; ".join(labels_for(timeline_keys, TIMELINE_OPTIONS)), "timeline_keys", timeline_keys),
         "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
     }
 
@@ -1546,8 +2095,10 @@ def ask_profile_quick() -> dict:
     review.add_column("Section", style="bold cyan", no_wrap=True)
     review.add_column("Recorded answer", overflow="fold")
     review.add_row("Goals", summary(profile["issue_labels"]))
+    review.add_row("Weight direction", profile["weight_direction_label"])
     review.add_row("Current activity", summary(labels_for(training_modes, TRAINING_OPTIONS)))
     review.add_row("Training time", f"Cardio: {profile['cardio_timing_label']}; strength: {profile['workout_timing_label']}")
+    review.add_row("Weekly calendar", calendar_summary(profile))
     review.add_row("Pain / injury", profile["injuries"])
     review.add_row("Taking now", summary(current_names))
     review.add_row("Supplement research", summary(profile["priority_supplements"]))
@@ -1556,6 +2107,7 @@ def ask_profile_quick() -> dict:
     review.add_row("Experimental boundary", profile["experimental_policy_label"])
     review.add_row("Medicines / safety", f"{profile['medications']}; {profile['conditions_and_safety_flags']}")
     review.add_row("Food / sleep", f"{profile['diet_and_gi']}; {profile['sleep']}")
+    review.add_row("Meals per day", profile["meal_count_label"])
     review.add_row("Stores", summary(profile["shopping_stores"]))
     review.add_row("Extra detail", notes)
     console.print("\n", review)
@@ -1567,7 +2119,7 @@ def ask_profile_quick() -> dict:
         show_choices=True,
     )
     if action == "restart":
-        return ask_profile_quick()
+        return ask_profile_quick(existing)
     if action == "cancel":
         raise SystemExit("Assessment cancelled; the existing report was not changed.")
     return profile
@@ -1584,6 +2136,13 @@ def ask_profile_detailed() -> dict:
     height = Prompt.ask("Height (or 'unknown')", default="unknown")
 
     console.rule("[bold bright_cyan]Goals and training[/bold bright_cyan]")
+    weight_direction = checkbox_prompt(
+        "What is the current weight direction? Choose one.",
+        WEIGHT_DIRECTION_OPTIONS,
+        defaults=("cut",),
+        minimum=1,
+        maximum=1,
+    )[0]
     issues = checkbox_prompt(
         "What do you want help with?",
         list(ISSUES.items()),
@@ -1637,6 +2196,11 @@ def ask_profile_detailed() -> dict:
             "Any strength-workout timing limits beyond 17:00 training and 20:15 bed?",
             default="none additional",
         )
+    calendar_modes = calendar_prompt(
+        cardio_timing,
+        workout_timing,
+        step_label="WEEKLY CALENDAR",
+    )
     training = Prompt.ask(
         "Add weekly frequency, running mileage, longest recent run, experience, and consistency",
         default="3 lifting days; returning to running; current mileage unknown",
@@ -1733,6 +2297,13 @@ def ask_profile_detailed() -> dict:
     reactions = Prompt.ask("Prior supplement side effects, allergies, or products that did not agree with you", default="none reported")
 
     console.rule("[bold bright_cyan]Food, sleep, and lifestyle[/bold bright_cyan]")
+    meal_count = int(checkbox_prompt(
+        "How many meals should the daily food plan use? Choose one.",
+        MEAL_FREQUENCY_OPTIONS,
+        defaults=("4",),
+        minimum=1,
+        maximum=1,
+    )[0])
     diet_keys = checkbox_prompt(
         "Which diet patterns or GI symptoms apply?",
         DIET_GI_OPTIONS,
@@ -1750,7 +2321,7 @@ def ask_profile_detailed() -> dict:
     food_addition_keys = checkbox_prompt(
         "Which food additions should the report evaluate and fit into the plan?",
         FOOD_ADDITION_OPTIONS,
-        defaults=("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food", *LOCKED_USER_FOOD_KEYS),
+        defaults=DEFAULT_FOOD_PLAN_KEYS,
         locked_values=LOCKED_USER_FOOD_KEYS,
     )
     home_practice_keys = checkbox_prompt(
@@ -1829,6 +2400,8 @@ def ask_profile_detailed() -> dict:
         "height": height,
         "location": "Dallas, Texas",
         "body_context": "about 230 lb; Phase A goal 200 lb; Phase B goal 190 lb",
+        "weight_direction": weight_direction,
+        "weight_direction_label": dict(WEIGHT_DIRECTION_OPTIONS)[weight_direction],
         "issues": issues,
         "issue_labels": [ISSUES[x] for x in issues],
         "goals": goals,
@@ -1841,6 +2414,7 @@ def ask_profile_detailed() -> dict:
         "workout_timing": workout_timing,
         "workout_timing_label": dict(WORKOUT_TIMING_OPTIONS)[workout_timing],
         "workout_clock_constraints": workout_clock,
+        "calendar_modes": calendar_modes,
         "injuries": injuries,
         "current_supplements": current,
         "current_supplement_keys": current_supplement_keys,
@@ -1862,6 +2436,8 @@ def ask_profile_detailed() -> dict:
         "prior_reactions": reactions,
         "diet_and_gi": diet,
         "diet_keys": diet_keys,
+        "meal_count": meal_count,
+        "meal_count_label": dict(MEAL_FREQUENCY_OPTIONS)[str(meal_count)],
         "food_addition_keys": food_addition_keys,
         "food_additions": labels_for(food_addition_keys, FOOD_ADDITION_OPTIONS),
         "home_practice_keys": home_practice_keys,
@@ -1886,12 +2462,19 @@ def ask_profile_detailed() -> dict:
 
 def default_profile(args: argparse.Namespace) -> dict:
     issues = parse_issue_codes(args.issues or "cut,strength,endurance")
+    weight_direction = (args.weight_direction or "cut").strip().lower()
+    if weight_direction not in dict(WEIGHT_DIRECTION_OPTIONS):
+        raise SystemExit("--weight-direction must be cut, maintain, or gain")
+    meal_count = int(args.meals or 4)
+    if str(meal_count) not in dict(MEAL_FREQUENCY_OPTIONS):
+        raise SystemExit("--meals must be 3, 4, or 5")
     cardio_timing = (args.cardio_timing or "recommend").strip().lower()
     if cardio_timing not in dict(CARDIO_TIMING_OPTIONS):
         raise SystemExit("--cardio-timing must be morning, evening, both, or recommend")
     workout_timing = (args.workout_timing or "recommend").strip().lower()
     if workout_timing not in dict(WORKOUT_TIMING_OPTIONS):
         raise SystemExit("--workout-timing must be morning, evening, both, or recommend")
+    calendar_modes = parse_calendar_modes(args.calendar, cardio_timing, workout_timing)
     priority = select_from_catalog(
         args.priority_items or "creatine_monohydrate,protein_whey,caffeine,omega_3_epa_and_dha,vitamin_d3,magnesium",
         CATALOG,
@@ -1918,7 +2501,7 @@ def default_profile(args: argparse.Namespace) -> dict:
     food_addition_keys = parse_choice_values(
         args.food_additions,
         FOOD_ADDITION_OPTIONS,
-        defaults=("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food", *LOCKED_USER_FOOD_KEYS),
+        defaults=DEFAULT_FOOD_PLAN_KEYS,
     )
     home_practice_keys = parse_choice_values(
         args.home_practices,
@@ -1935,6 +2518,8 @@ def default_profile(args: argparse.Namespace) -> dict:
         "height": args.height or "unknown",
         "location": "Dallas, Texas",
         "body_context": "about 230 lb; Phase A goal 200 lb; Phase B goal 190 lb",
+        "weight_direction": weight_direction,
+        "weight_direction_label": dict(WEIGHT_DIRECTION_OPTIONS)[weight_direction],
         "issues": issues,
         "issue_labels": [ISSUES[x] for x in issues],
         "goals": args.goals or "preserve muscle while cutting and improve running",
@@ -1946,6 +2531,7 @@ def default_profile(args: argparse.Namespace) -> dict:
         "workout_timing": workout_timing,
         "workout_timing_label": dict(WORKOUT_TIMING_OPTIONS)[workout_timing],
         "workout_clock_constraints": args.workout_clock or "no additional timing constraint reported",
+        "calendar_modes": calendar_modes,
         "injuries": args.injuries or "none reported",
         "current_supplements": current_text,
         "current_supplement_keys": [c.key for c in current_candidates],
@@ -1965,6 +2551,8 @@ def default_profile(args: argparse.Namespace) -> dict:
         "vitals": args.vitals or "unknown",
         "prior_reactions": args.reactions or "none reported",
         "diet_and_gi": args.diet or "none reported",
+        "meal_count": meal_count,
+        "meal_count_label": dict(MEAL_FREQUENCY_OPTIONS)[str(meal_count)],
         "food_addition_keys": food_addition_keys,
         "food_additions": labels_for(food_addition_keys, FOOD_ADDITION_OPTIONS),
         "home_practice_keys": home_practice_keys,
@@ -2024,6 +2612,7 @@ def hard_define_profile(profile: dict) -> dict:
         profile[field] = [value for value, _ in choices if value in wanted]
 
     for field, choices, fallback in (
+        ("weight_direction", WEIGHT_DIRECTION_OPTIONS, "cut"),
         ("cardio_timing", CARDIO_TIMING_OPTIONS, "recommend"),
         ("workout_timing", WORKOUT_TIMING_OPTIONS, "recommend"),
         ("supplement_source", SUPPLEMENT_SOURCE_OPTIONS, "whole_food_first"),
@@ -2033,6 +2622,31 @@ def hard_define_profile(profile: dict) -> dict:
         if value not in dict(choices):
             raise SystemExit(f"Invalid hard-defined selection in {field}: {value}")
         profile[field] = value
+
+    try:
+        meal_count = int(profile.get("meal_count", 4))
+    except (TypeError, ValueError) as exc:
+        raise SystemExit("Invalid hard-defined meal count; choose 3, 4, or 5") from exc
+    if str(meal_count) not in dict(MEAL_FREQUENCY_OPTIONS):
+        raise SystemExit("Invalid hard-defined meal count; choose 3, 4, or 5")
+    profile["meal_count"] = meal_count
+
+    raw_calendar = profile.get("calendar_modes")
+    if raw_calendar is None:
+        raw_calendar = calendar_modes_for_timing(profile["cardio_timing"], profile["workout_timing"])
+    if not isinstance(raw_calendar, dict):
+        raise SystemExit("Invalid hard-defined calendar: expected one placement per weekday")
+    unknown_days = sorted(set(raw_calendar) - set(CALENDAR_DAYS))
+    if unknown_days:
+        raise SystemExit("Invalid hard-defined calendar day(s): " + ", ".join(unknown_days))
+    allowed_calendar_modes = dict(CALENDAR_MODE_OPTIONS)
+    calendar_modes: dict[str, str] = {}
+    for day in CALENDAR_DAYS:
+        mode = str(raw_calendar.get(day, "plan"))
+        if mode not in allowed_calendar_modes:
+            raise SystemExit(f"Invalid hard-defined calendar placement for {day}: {mode}")
+        calendar_modes[day] = mode
+    profile["calendar_modes"] = calendar_modes
 
     # These are immutable facts in this project, not recommendations inferred by the model.
     locked = {
@@ -2053,6 +2667,7 @@ def hard_define_profile(profile: dict) -> dict:
     profile["food_addition_keys"] = [
         value for value, _ in FOOD_ADDITION_OPTIONS if value in selected_foods
     ]
+    profile["food_research_keys"] = list(REQUIRED_FOOD_RESEARCH_KEYS)
 
     if "creatine monohydrate" not in profile.get("current_supplements", "").lower():
         existing = profile.get("current_supplements", "").strip()
@@ -2074,6 +2689,8 @@ def hard_define_profile(profile: dict) -> dict:
     )
     profile["supplement_source_label"] = dict(SUPPLEMENT_SOURCE_OPTIONS)[profile["supplement_source"]]
     profile["experimental_policy_label"] = dict(EXPERIMENTAL_POLICY_OPTIONS)[profile["experimental_policy"]]
+    profile["weight_direction_label"] = dict(WEIGHT_DIRECTION_OPTIONS)[profile["weight_direction"]]
+    profile["meal_count_label"] = dict(MEAL_FREQUENCY_OPTIONS)[str(profile["meal_count"])]
     profile["cardio_timing_label"] = dict(CARDIO_TIMING_OPTIONS)[profile["cardio_timing"]]
     profile["workout_timing_label"] = dict(WORKOUT_TIMING_OPTIONS)[profile["workout_timing"]]
     profile["food_additions"] = labels_for(profile.get("food_addition_keys", ()), FOOD_ADDITION_OPTIONS)
@@ -2081,9 +2698,20 @@ def hard_define_profile(profile: dict) -> dict:
     profile["alternative_items"] = labels_for(profile.get("alternative_item_keys", ()), ALTERNATIVE_ITEM_OPTIONS)
     profile["shopping_stores"] = labels_for(profile.get("store_keys", ()), STORE_OPTIONS)
     profile["selection_lock_version"] = "HC_SELECTION_LOCK_V1"
+    profile["calendar_lock_version"] = "HC_CALENDAR_V1"
+    conflict_days = calendar_conflicts(calendar_modes)
+    profile["calendar_validation"] = (
+        "PASS — all seven days have one valid stable placement; "
+        + (
+            "user-confirmed clock conflict(s) remain visible for recommendation on " + ", ".join(conflict_days) + "."
+            if conflict_days
+            else "no unresolved morning-versus-work clock conflict was recorded."
+        )
+    )
     profile["selection_validation"] = (
         "PASS — every recorded selector key exists in its current catalog; exclusive selectors contain one value; "
-        "sentinel conflicts were normalized; tirzepatide, creatine 5 g/day, and all user-locked whole-food reviews are present."
+        "all seven calendar days contain one valid placement; sentinel conflicts were normalized; tirzepatide, "
+        f"creatine 5 g/day, and all {len(REQUIRED_FOOD_RESEARCH_KEYS)} requested whole-food reviews are present."
     )
     return profile
 
@@ -2094,12 +2722,11 @@ def sql_folder_filter(folders: Sequence[str]) -> str:
 
 
 def hit_is_on_topic(candidate: Candidate, hit: dict) -> bool:
-    folder = hit.get("folder", "")
-    dedicated = any(folder == f and _contains(f.rsplit("/", 1)[-1], (candidate.name, *candidate.aliases)) for f in candidate.folders)
-    if dedicated:
-        return True
-    haystack = " ".join((hit.get("text", "")[:1800], folder, os.path.basename(hit.get("source_pdf", ""))))
-    return _contains(haystack, (candidate.name, *candidate.aliases))
+    # A dedicated folder and generated filename are routing metadata, not evidence that the
+    # retrieved passage is actually about the candidate. Require the food/compound in the
+    # extracted passage itself so incidental or misfiled papers fail closed.
+    haystack = hit.get("text", "")[:4000]
+    return _contains(haystack, (candidate.name, candidate.key.replace("_", " "), *candidate.aliases))
 
 
 def retrieve_candidate(
@@ -2369,6 +2996,7 @@ def profile_markdown(profile: dict) -> str:
         f"- Training history/load: {profile['training']}.",
         f"- Cardio timing selection: {profile['cardio_timing_label']}; clock details: {profile['cardio_clock_constraints']}.",
         f"- Strength-workout timing selection: {profile['workout_timing_label']}; clock details: {profile['workout_clock_constraints']}.",
+        f"- Hard-defined weekly calendar placements: {calendar_summary(profile)}.",
         f"- Pain/injuries: {profile['injuries']}.",
         f"- Current supplements: {profile['current_supplements']}.",
         f"- Reported supplement results: {profile['supplement_results']}.",
@@ -2401,12 +3029,15 @@ def questionnaire_markdown(profile: dict) -> str:
         ("What optional final note was supplied?", profile.get("assessment_notes", "none")),
         ("Who is this report for?", f"{profile['name']}, age {profile['age']}, height {profile['height']}, {profile['location']}"),
         ("What is the current body-composition context?", profile["body_context"]),
+        ("What weight direction is currently selected?", profile.get("weight_direction_label", "Lose weight / Phase A cut")),
+        ("How many meals per day should the food plan use?", profile.get("meal_count_label", "4 meals")),
         ("Which issue areas need help?", "; ".join(profile["issue_labels"])),
         ("What are the top problems or goals in the user's own words?", profile["goals"]),
         ("How are those outcomes ranked?", profile["priorities"]),
         ("What is the current training load, mileage, experience, and recent consistency?", profile["training"]),
         ("Which cardio timing was selected?", f"{profile['cardio_timing_label']}; {profile['cardio_clock_constraints']}"),
         ("Which strength-workout timing was selected?", f"{profile['workout_timing_label']}; {profile['workout_clock_constraints']}"),
+        ("What recurring weekly calendar placements were confirmed?", calendar_summary(profile)),
         ("What pain, injuries, or aggravating movements are present?", profile["injuries"]),
         ("What supplements are currently used?", profile["current_supplements"]),
         ("What benefits, no-effects, or side effects were reported for current supplements?", profile["supplement_results"]),
@@ -2471,11 +3102,14 @@ def selection_lock_markdown(profile: dict) -> str:
         (
             "LOCKED",
             "Required whole-food evidence reviews",
-            ", ".join(LOCKED_USER_FOOD_KEYS),
-            "; ".join(labels_for(LOCKED_USER_FOOD_KEYS, FOOD_ADDITION_OPTIONS)),
+            ", ".join(REQUIRED_FOOD_RESEARCH_KEYS),
+            f"{len(REQUIRED_FOOD_RESEARCH_KEYS)} named foods; selection requests evidence review and does not require eating every item",
         ),
+        ("ONE CHOICE", "Weight direction", profile.get("weight_direction", "cut"), profile.get("weight_direction_label", "Lose weight / Phase A cut")),
+        ("ONE CHOICE", "Meals per day", str(profile.get("meal_count", 4)), profile.get("meal_count_label", "4 meals")),
         ("ONE CHOICE", "Cardio timing", profile["cardio_timing"], profile["cardio_timing_label"]),
         ("ONE CHOICE", "Strength timing", profile["workout_timing"], profile["workout_timing_label"]),
+        ("USER CONFIRMED", "Weekly calendar", calendar_summary(profile), "One placement for every Monday–Sunday session"),
         ("ONE CHOICE", "Supplement intake route", profile["supplement_source"], profile["supplement_source_label"]),
         ("ONE CHOICE", "Experimental research boundary", profile["experimental_policy"], profile["experimental_policy_label"]),
     ]
@@ -2528,6 +3162,255 @@ def preserved_bevel_weekly(out: Path) -> str:
         flags=re.S,
     )
     return match.group(1).strip() if match and match.group(1).strip() else default
+
+
+def stored_weekly_packages(out: Path, limit: int = 12) -> list[dict]:
+    """Read normalized weekly packages already embedded in the one canonical report."""
+    if not out.exists():
+        return []
+    text = out.read_text(encoding="utf-8", errors="replace")
+    packages: list[dict] = []
+    pattern = re.compile(
+        r"<details><summary>Normalized Bevel return package</summary>\s*"
+        r"```json\s*(\{.*?\})\s*```\s*</details>",
+        re.S,
+    )
+    for match in pattern.finditer(text):
+        try:
+            package = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            continue
+        if isinstance(package, dict) and isinstance(package.get("days"), list):
+            packages.append(package)
+    packages.sort(key=lambda value: str(value.get("week_start", "")), reverse=True)
+    return packages[:limit]
+
+
+def _recorded_number(day: dict, key: str) -> float | None:
+    metric = day.get(key, {})
+    if not isinstance(metric, dict):
+        return None
+    if str(metric.get("origin", "UNKNOWN")).upper() not in {"MEASURED", "MANUALLY_LOGGED"}:
+        return None
+    value = metric.get("value")
+    return float(value) if isinstance(value, (int, float)) else None
+
+
+def weekly_trajectory(packages: Sequence[dict]) -> tuple[str, str]:
+    """Summarize measured/manual trajectory without treating device calories as intake."""
+    summaries: list[dict] = []
+    for package in packages[:3]:
+        days = [day for day in package.get("days", []) if isinstance(day, dict)]
+        weights = [value for day in days if (value := _recorded_number(day, "weight_lb")) is not None]
+        steps = [value for day in days if (value := _recorded_number(day, "steps")) is not None]
+        sessions = [
+            session for day in days for session in day.get("sessions", [])
+            if isinstance(session, dict)
+            and str(session.get("origin", "UNKNOWN")).upper() in {"MEASURED", "MANUALLY_LOGGED"}
+        ]
+        durations = [float(s["duration_min"]) for s in sessions if isinstance(s.get("duration_min"), (int, float))]
+        hrs = [float(s["avg_hr_bpm"]) for s in sessions if isinstance(s.get("avg_hr_bpm"), (int, float))]
+        calories = [float(s["calories_burned"]) for s in sessions if isinstance(s.get("calories_burned"), (int, float))]
+        food_days = sum(bool(day.get("foods")) for day in days)
+        summaries.append({
+            "week": package.get("week_start", "unknown"),
+            "weight": sum(weights) / len(weights) if weights else None,
+            "weight_n": len(weights),
+            "steps": sum(steps) / len(steps) if steps else None,
+            "steps_n": len(steps),
+            "minutes": sum(durations) if durations else None,
+            "hr": sum(hrs) / len(hrs) if hrs else None,
+            "calories": sum(calories) if calories else None,
+            "food_days": food_days,
+        })
+    if not summaries:
+        return (
+            "_No completed weekly package is stored yet. The menu below is the baseline; use the dashboard weekly check-in or Bevel import after a complete Monday–Sunday week._",
+            "DATA GAP — no trajectory adjustment. Do not infer a calorie target from workout estimates.",
+        )
+    lines = [
+        "| Week starting | Avg weight | Avg steps | Session minutes | Avg session HR | Device activity kcal | Food-plan days logged |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for value in summaries:
+        cells = (
+            value["week"],
+            f'{value["weight"]:.1f} lb ({value["weight_n"]} readings)' if value["weight"] is not None else "UNKNOWN",
+            f'{value["steps"]:,.0f} ({value["steps_n"]} days)' if value["steps"] is not None else "UNKNOWN",
+            f'{value["minutes"]:.0f}' if value["minutes"] is not None else "UNKNOWN",
+            f'{value["hr"]:.0f} bpm' if value["hr"] is not None else "UNKNOWN",
+            f'{value["calories"]:.0f} estimate' if value["calories"] is not None else "UNKNOWN",
+            str(value["food_days"]),
+        )
+        lines.append("| " + " | ".join(cells) + " |")
+    adjustment = "Only one usable week is stored; hold the baseline menu and collect another complete week."
+    if len(summaries) >= 2 and summaries[0]["weight"] is not None and summaries[1]["weight"] is not None:
+        change = summaries[0]["weight"] - summaries[1]["weight"]
+        adjustment = f"Newest weekly average changed {change:+.1f} lb versus the prior stored week. "
+        if len(summaries) >= 3 and all(value["weight"] is not None for value in summaries[:3]):
+            prior_change = summaries[1]["weight"] - summaries[2]["weight"]
+            adjustment += f"The preceding change was {prior_change:+.1f} lb."
+        else:
+            adjustment += "A second consecutive trend is not yet available, so no automatic food change is made."
+    lines.extend(("", "Device activity calories are shown for workload trend only; they are not eaten back one-for-one."))
+    return "\n".join(lines), adjustment
+
+
+def adaptive_food_plan_markdown(
+    profile: dict,
+    all_evidence: dict[str, Evidence],
+    food_candidates: Sequence[Candidate],
+    food_evidence: dict[str, Evidence],
+    out: Path,
+) -> str:
+    """Build a seven-day planning rotation from selected foods and stored weekly results."""
+    selected = set(profile.get("food_addition_keys", ()))
+    catalog = {candidate.key: candidate for candidate in food_candidates}
+
+    def selected_food(keys: Sequence[str], slot: str) -> str:
+        """Return only a hard-selected food; never smuggle an unchecked fallback into the menu."""
+        for key in keys:
+            candidate = catalog.get(key)
+            if key in selected and candidate:
+                return candidate.name
+        return f"OPEN {slot.upper()} SLOT — no eligible food selected"
+
+    yogurt = selected_food(("plain_yogurt", "pasteurized_dairy", "kefir"), "pasteurized dairy")
+    oats = selected_food(("oats", "barley", "buckwheat"), "grain")
+    banana = selected_food(("bananas", "dates", "mango"), "easy fruit carbohydrate")
+    berries = selected_food(("blueberries", "strawberries", "raspberries", "blackberries"), "berry")
+    apple = selected_food(("apples", "pears", "oranges", "kiwi"), "fruit")
+    chicken = selected_food(("chicken", "turkey", "pork"), "lean animal protein")
+    turkey = selected_food(("turkey", "chicken", "pork"), "lean animal protein")
+    beef = selected_food(("lean_beef", "lamb", "beef_heart", "chicken"), "animal protein")
+    salmon = selected_food(("salmon", "sardines", "mackerel", "fish_eggs"), "fish")
+    sardines = selected_food(("sardines", "mackerel", "salmon", "fish_eggs"), "fish")
+    eggs = selected_food(("eggs", "plain_yogurt", "chicken"), "breakfast protein")
+    rice = selected_food(("brown_rice", "potatoes_rice", "quinoa", "wild_rice"), "starch")
+    potato = selected_food(("potatoes", "potatoes_rice", "sweet_potatoes"), "starch")
+    sweet_potato = selected_food(("sweet_potatoes", "potatoes", "potatoes_rice"), "starch")
+    broccoli = selected_food(("broccoli", "cauliflower", "kale", "cabbage", "spinach"), "vegetable")
+    spinach = selected_food(("spinach", "collard_greens", "kale", "broccoli"), "leafy vegetable")
+    lentils = selected_food(("lentils", "chickpeas", "black_beans", "pinto_beans", "navy_beans"), "legume")
+    oil = selected_food(("extra_virgin_olive_oil", "avocado", "walnuts", "almonds"), "measured fat")
+
+    rows = (
+        ("Monday · heavy lower", f"3 {eggs} + 300 g {yogurt} + 50 g {oats} + {berries}", f"170 g cooked {chicken} + 1–1½ cups {rice} + {broccoli}", f"Whey-as-food shake + {banana}", f"170 g {beef} + 300 g {potato} + {spinach}; measured {oil}"),
+        ("Tuesday · easy aerobic", f"300 g {yogurt} + 60 g {oats} + {banana} + 2 {eggs}", f"170 g {turkey} + 1 cup {rice} + {broccoli}", f"Whey-as-food + {apple}; add a starch portion before a 60+ min session if tolerated", f"170 g {salmon} + 250–300 g {sweet_potato} + {spinach}"),
+        ("Wednesday · upper", f"3 {eggs} + 300 g {yogurt} + {berries}", f"170 g {chicken} + 300 g {potato} + {broccoli}", f"Whey-as-food + {banana}", f"170 g {beef} + 1 cup {rice} + {spinach}"),
+        ("Thursday · quality", f"300 g {yogurt} + 60 g {oats} + {berries} + 2 {eggs}", f"170 g {turkey} + 1–1½ cups {rice} + cooked vegetables", f"Whey-as-food + {banana}; this is the primary pre-session carbohydrate slot", f"170 g {salmon} + 300 g {potato} + {broccoli}"),
+        ("Friday · light lift", f"3 {eggs} + 300 g {yogurt} + {apple}", f"170 g {chicken} + 1 cup {rice} + {broccoli}", f"Whey-as-food + {berries}", f"170 g {beef} + 250 g {potato} + {spinach}; do not turn dinner into a long-run PR refeed"),
+        ("Saturday · long easy run", f"300 g {yogurt} + 60 g {oats} + {banana}; use the run card for individualized during-run fuel", f"170 g {chicken} + 1½ cups {rice} + cooked vegetables", f"Whey-as-food + fruit immediately after the run", f"170 g {salmon} or {sardines} + 300 g {potato} + {broccoli}"),
+        ("Sunday · recovery/prep", f"3 {eggs} + 300 g {yogurt} + {berries}", f"170 g {turkey} + 1 cup {lentils} + cooked vegetables", f"Whey-as-food or cottage cheese + {apple}", f"170 g {sardines} or {chicken} + 250 g {sweet_potato} + {spinach}"),
+    )
+    trajectory_table, trend = weekly_trajectory(stored_weekly_packages(out))
+    direction = profile.get("weight_direction", "cut")
+    if direction == "cut":
+        direction_rule = (
+            "**PLANNING / CUT RULE:** keep the baseline while the weekly average is moving and performance is stable. "
+            "If loss exceeds about 2 lb/week for two consecutive weeks, add 150–200 kcal/day from a measured starch/fat portion. "
+            "If the average is flat for 14 days with the plan and steps actually completed, remove 150–200 kcal/day; do not add punishment cardio."
+        )
+    elif direction == "gain":
+        direction_rule = (
+            "**PLANNING / GAIN RULE:** keep the same protein anchor and add one measured starch/fat portion when two complete weekly averages remain flat or decline while training is completed. "
+            "Do not use device workout calories as an exact surplus prescription."
+        )
+    else:
+        direction_rule = (
+            "**PLANNING / MAINTENANCE RULE:** keep portions stable and judge two or more weekly averages with waist and performance; adjust one measured portion only after a persistent direction appears."
+        )
+
+    evidence_keys = ("eggs", "plain_yogurt", "oats", "bananas", "blueberries", "chicken", "turkey", "lean_beef", "salmon", "sardines", "brown_rice", "potatoes", "sweet_potatoes", "broccoli", "spinach", "lentils", "extra_virgin_olive_oil")
+    tags = []
+    for key in evidence_keys:
+        ev = food_evidence.get(key)
+        qualifying = [] if not ev else [
+            hit for hit in ev.hits
+            if hit.get("grade") in ("A", "B")
+            and hit.get("folder") in catalog[key].folders
+            and whole_food_human_hit(hit)
+        ]
+        if qualifying:
+            hit = qualifying[0]
+            tags.append(
+                f"{catalog[key].name}: "
+                f"[{hit.get('grade', '—')} | {hit.get('folder', 'unknown')} | {hit.get('doi') or 'no-doi'}]"
+            )
+        else:
+            tags.append(f"{catalog[key].name}: COVERAGE GAP")
+    meal_count = int(profile.get("meal_count", 4))
+    if meal_count == 3:
+        headers = (
+            "Day / training demand", "05:50 breakfast (about 45 g)",
+            "11:00 / midday meal (about 45 g)", "Training/dinner window (about 70–75 g total)",
+        )
+        rendered_rows = tuple((day, breakfast, midday, peri + "; " + dinner) for day, breakfast, midday, peri, dinner in rows)
+    elif meal_count == 5:
+        headers = (
+            "Day / training demand", "05:50 breakfast (40–45 g)", "11:00 / midday meal (35–40 g)",
+            "Pre-session mini-meal (about 20 g)", "Post-session mini-meal (about 20 g)", "Dinner (40–45 g)",
+        )
+        rendered_rows = tuple(
+            (
+                day, breakfast, midday,
+                f"20 g protein from a half whey-as-food or {yogurt} serving + the listed fruit/starch as tolerated",
+                "20 g protein from the remaining whey-as-food/dairy serving immediately after training",
+                dinner,
+            )
+            for day, breakfast, midday, _peri, dinner in rows
+        )
+    else:
+        headers = (
+            "Day / training demand", "05:50 breakfast (40–45 g)", "11:00 / midday meal (40–45 g)",
+            "Pre/post training (35–40 g)", "Dinner (40–45 g)",
+        )
+        rendered_rows = rows
+
+    distribution_tag = "COVERAGE GAP — exact meal-count superiority is not claimed"
+    protein_evidence = all_evidence.get("protein_whey")
+    if protein_evidence:
+        for hit in protein_evidence.hits:
+            haystack = str(hit.get("text", "")).lower()
+            if hit.get("grade") in ("A", "B") and any(
+                term in haystack for term in ("distribution", "per meal", "meal dose", "meals", "feeding")
+            ):
+                distribution_tag = "[%s | %s | %s]" % (
+                    hit.get("grade", "—"), hit.get("folder", "unknown"), hit.get("doi") or "no-doi",
+                )
+                break
+
+    lines = [
+        f"**HARD-DEFINED DIRECTION:** {profile.get('weight_direction_label', direction)}.",
+        f"**HARD-DEFINED MEAL COUNT:** {profile.get('meal_count_label', str(meal_count))}.",
+        "",
+        f"**SCIENTIFIC SUGGESTION:** four meals remain the starting recommendation because 165 ÷ 4 ≈ 41 g makes the locked protein total practical without the very large final allocation created by three meals. This arithmetic is planning; the retrieved meal-distribution check is {distribution_tag}.",
+        "",
+        f"**PLANNING DEFAULT:** the selected {meal_count}-meal layout aims at approximately 165 g/day for the current Phase A plan. Portions are starting estimates; package labels and a food log control the arithmetic. Tirzepatide is not adjusted here.",
+        "**SELECTION BOUNDARY:** every named ingredient below came from the saved hard-defined food selection. An OPEN SLOT means the user deliberately left that category empty; HealthCoach will not substitute an unchecked food.",
+        "",
+        "| " + " | ".join(headers) + " |",
+        "|" + "---|" * len(headers),
+    ]
+    for row in rendered_rows:
+        lines.append("| " + " | ".join(value.replace("|", "/") for value in row) + " |")
+    lines.extend((
+        "",
+        "**MIXING RULE:** each main plate is one complete-protein vehicle + one measured starch scaled to the session + one or more selected produce items + a measured fat. Whole-food treats replace, rather than silently add to, another carbohydrate/fat portion.",
+        "",
+        direction_rule,
+        "",
+        "#### PRIOR-WEEK INPUT USED",
+        "",
+        trajectory_table,
+        "",
+        f"**Current trajectory interpretation:** {trend}",
+        "",
+        "#### SOURCE CHECK FOR FOODS USED",
+        "",
+        "The full 116-food coverage ledger appears in Part III. These are the first surviving retrieved tags for menu staples; a tag supports reviewing the food, not every benefit claimed online: " + ("; ".join(tags) if tags else "COVERAGE GAP — no staple-food tags survived yet; keep the menu labeled planning and run the source refresh."),
+    ))
+    return "\n".join(lines)
 
 
 def evidence_context(candidate: Candidate, ev: Evidence) -> tuple[str, set[str]]:
@@ -2781,6 +3664,19 @@ def timing_planning_default(profile: dict) -> str:
             "PLANNING recommendation: keep full strength sessions in the existing 17:00 window unless an explicit "
             "morning window replaces a conflicting block; this is feasibility, not proof of evening superiority."
         )
+    lines.append(
+        "The confirmed recurring-week calendar is authoritative for per-day availability and overrides the generic "
+        "timing preference wherever the two differ: "
+        + calendar_summary(profile)
+        + ". An OFF day invokes that day's skip rule; it never moves the missed work forward."
+    )
+    conflicts = calendar_conflicts(profile.get("calendar_modes", {}))
+    if conflicts:
+        lines.append(
+            "The morning placement recorded for " + ", ".join(conflicts)
+            + " conflicts with the locked 04:50–05:50 Anki and 06:00 work boundary; preserve the preference for review, "
+            "but do not silently move Anki, work, wake, or bed."
+        )
     return " ".join(lines)
 
 
@@ -3021,15 +3917,17 @@ def experimental_human_intervention_hit(hit: dict) -> bool:
 
 
 def whole_food_human_hit(hit: dict) -> bool:
-    """Require an explicit human signal plus language consistent with eating a food."""
+    """Require humans plus dietary exposure; a food word in an unrelated paper is not enough."""
     if not experimental_human_hit(hit):
         return False
-    text = " ".join((hit.get("text", ""), hit.get("source_pdf", ""))).lower()
-    food_signals = (
-        "food", "dietary", "diet ", "consum", "meal", "culinary", "fruit", "vegetable",
-        "spice", "herb", "juice", "fresh", "frozen", "paste", "powder",
+    text = hit.get("text", "").lower()
+    dietary_exposure_signals = (
+        "consum", "dietary intake", "dietary intervention", "dietary pattern", "included in the diet",
+        "ate ", "eating", "ingest", "meal", "serving", "food intervention", "food frequency",
+        "fed ", "beverage", "juice", "culinary", "whole fruit", "whole vegetable",
+        "foodborne", "cooking", "cooked", "unpasteurized", "pasteurized",
     )
-    return any(signal in text for signal in food_signals)
+    return any(signal in text for signal in dietary_exposure_signals)
 
 
 def _unique_human_hits(hits: Sequence[dict], required_terms: Sequence[str] = ()) -> list[dict]:
@@ -3159,7 +4057,7 @@ def first_evidence_tag(ev: Evidence) -> str:
     if not ev.hits:
         return "COVERAGE GAP"
     h = ev.hits[0]
-    return "[%s / %s / %s]" % (h.get("grade", "—"), h.get("folder", "unknown"), h.get("doi") or "no-doi")
+    return "[%s | %s | %s]" % (h.get("grade", "—"), h.get("folder", "unknown"), h.get("doi") or "no-doi")
 
 
 def result_for(candidate: Candidate, profile: dict) -> str:
@@ -3463,13 +4361,19 @@ def write_report(
     nutrition = embedded_module(HERE / "FOOD_COFFEE_MILK_STACK_PLAN.md")
     whole_life = embedded_module(HERE / "WHOLE_LIFE_EVIDENCE_PLAN.md")
     bevel_weekly = preserved_bevel_weekly(out)
-    body = f"""## PART I — CURRENT OPERATING WEEK
+    body = f"""{saved_profile_markdown(profile)}
+
+## PART I — CURRENT OPERATING WEEK
 
 ### PERSONALIZED TIMING OVERLAY — SOURCES CHECKED
 
 {timing_section}
 
 This overlay controls **when** cardio and strength are placed; the base week below controls **what** is performed and preserves its interference/skip rules. A morning or split selection becomes executable only when the recorded clock details resolve the 04:50–05:50 Anki and 06:00 work conflict; otherwise the existing 17:00 window remains the planning default.
+
+#### HARD-DEFINED WEEKLY CALENDAR
+
+{calendar_markdown(profile)}
 
 {week}
 
@@ -3478,6 +4382,10 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 ### SELECTED-STORE SOURCING OVERLAY
 
 {store_sourcing_markdown(profile)}
+
+#### SEVEN-DAY ADAPTIVE FOOD ROTATION
+
+{adaptive_food_plan_markdown(profile, evidence, food_candidates, food_evidence, out)}
 
 {nutrition}
 
@@ -3599,15 +4507,22 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--list", action="store_true", help="list every candidate without loading models")
     ap.add_argument("--non-interactive", action="store_true", help="use flags/defaults instead of the questionnaire")
     ap.add_argument(
+        "--start-over",
+        action="store_true",
+        help="ignore intake state embedded in the current report; the report changes only after generation",
+    )
+    ap.add_argument(
         "--detailed-assessment",
         action="store_true",
-        help="use the typing-heavy assessment; default interactive mode is a nine-step guided checklist",
+        help="use the typing-heavy assessment; default interactive mode is a ten-step guided flow with calendar",
     )
     ap.add_argument("--issues", help="comma-separated issue keys or numbers; use --list-issues")
     ap.add_argument("--list-issues", action="store_true", help="show questionnaire issue keys")
     ap.add_argument("--list-lifestyle", action="store_true", help="show food/home/alternative selector keys")
     ap.add_argument("--name")
     ap.add_argument("--height")
+    ap.add_argument("--weight-direction", choices=dict(WEIGHT_DIRECTION_OPTIONS), help="cut (default), maintain, or gain")
+    ap.add_argument("--meals", type=int, choices=(3, 4, 5), help="daily meal count; default 4")
     ap.add_argument("--goals")
     ap.add_argument("--priorities", help="ranked outcome priorities")
     ap.add_argument("--training", help="weekly training, mileage, experience, and consistency")
@@ -3615,6 +4530,10 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--cardio-clock", help="clock tradeoff or available window for the selected cardio timing")
     ap.add_argument("--workout-timing", choices=dict(WORKOUT_TIMING_OPTIONS), help="morning, evening, both, or recommend")
     ap.add_argument("--workout-clock", help="clock tradeoff or available window for strength-workout timing")
+    ap.add_argument(
+        "--calendar",
+        help="optional recurring-week overrides, e.g. mon=plan,tue=morning,thu=unavailable",
+    )
     ap.add_argument("--injuries", help="pain, injuries, or aggravating movements")
     ap.add_argument("--current", help="current supplements")
     ap.add_argument("--supplement-results", help="observed benefits, no-effects, side effects, and duration")
@@ -3676,10 +4595,12 @@ def main(argv: Sequence[str] | None = None) -> int:
                 console.print(f"[cyan]{key:>22}[/cyan]  {label}")
         return 0
 
+    out = Path(args.output).expanduser().resolve() if args.output else DEFAULT_OUT
     interactive = sys.stdin.isatty() and not args.non_interactive
+    existing_profile = None if args.start_over else load_saved_profile(out)
     try:
         if interactive:
-            profile = ask_profile_detailed() if args.detailed_assessment else ask_profile_quick()
+            profile = ask_profile_detailed() if args.detailed_assessment else ask_profile_quick(existing_profile)
         else:
             profile = default_profile(args)
         profile = hard_define_profile(profile)
@@ -3689,7 +4610,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     console.print(Panel.fit(
         "[bold green]Selection lock verified[/bold green]\n"
         "Every checkbox answer has a validated stable key. Tirzepatide, creatine 5 g/day, and the requested whole-food reviews are locked; "
-        "timing, research-boundary, and supplement-source choices each contain exactly one value.",
+        "timing, research-boundary, and supplement-source choices each contain exactly one value, and all seven calendar days have one placement.",
         border_style="green",
     ))
     supplement_candidates = select_candidates(args.items)
@@ -3704,8 +4625,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         if broad_experimental_scan and c.policy != "KEEP-PRESCRIPTION"
     ]
     candidates = [*supplement_candidates, *peptide_candidates]
-    selected_food_keys = set(profile.get("food_addition_keys", ()))
-    food_candidates = [candidate for candidate in WHOLE_FOOD_CATALOG if candidate.key in selected_food_keys]
+    # The user explicitly requested that the full named whole-food library be evidence-checked.
+    # Dietary selection still controls the meal-planning pool; it does not limit research coverage.
+    food_candidates = list(WHOLE_FOOD_CATALOG)
     explicit_count = len(
         (set(profile.get("priority_supplement_keys", ())) | set(profile.get("selected_peptide_keys", ())))
         & {c.key for c in candidates}
@@ -3715,8 +4637,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     if args.evidence_only:
         deep_limit = 0
-
-    out = Path(args.output).expanduser().resolve() if args.output else DEFAULT_OUT
 
     console.print(Panel(
         f"[bold]{len(candidates)} supplement/gray candidates[/bold] · "

@@ -5,6 +5,8 @@ RAG_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd -- "$RAG_DIR/.." && pwd)"
 PAPERS_DIR="$PROJECT_DIR/papers"
 PYTHON="$RAG_DIR/.venv/bin/python3"
+export MIN_ONLY=1
+export NO_AA=1
 
 if [[ ! -x "$PYTHON" ]]; then
   printf 'HealthCoach environment not found: %s\n' "$PYTHON" >&2
@@ -12,7 +14,7 @@ if [[ ! -x "$PYTHON" ]]; then
   exit 1
 fi
 
-topics=(
+base_topics=(
   beets_dietary_nitrate
   oregano
   saffron_food
@@ -26,21 +28,39 @@ topics=(
   turmeric_food
 )
 
-printf 'Refreshing eleven locked whole-food evidence topics...\n'
-for topic in "${topics[@]}"; do
-  printf '\n[%s] pulling legal open-access sources\n' "$topic"
-  (
-    cd "$PAPERS_DIR"
-    REFETCH="$topic" "$PYTHON" fetch_papers.py --topic "$topic"
-  )
+printf 'Refreshing the locked foods plus the complete named whole-food library...\n'
+base_jobs=${HC_BASE_FOOD_JOBS:-4}
+for ((offset=0; offset<${#base_topics[@]}; offset+=base_jobs)); do
+  pids=()
+  for ((index=offset; index<offset+base_jobs && index<${#base_topics[@]}; index++)); do
+    topic=${base_topics[$index]}
+    printf '\n[%s] pulling legal open-access sources\n' "$topic"
+    (cd "$PAPERS_DIR" && "$PYTHON" fetch_papers.py --topic "$topic") &
+    pids+=("$!")
+  done
+  for pid in "${pids[@]}"; do
+    wait "$pid"
+  done
+done
+
+food_jobs=${HC_FOOD_JOBS:-8}
+printf '\n[whole_food_library] filling per-food folders with %s resumable shards\n' "$food_jobs"
+pids=()
+for ((index=0; index<food_jobs; index++)); do
+  (cd "$PAPERS_DIR" && "$PYTHON" fetch_papers.py --topic whole_food_library --shard "$index/$food_jobs") &
+  pids+=("$!")
+done
+for pid in "${pids[@]}"; do
+  wait "$pid"
 done
 
 printf '\nRebuilding the local search index and checking retrieval...\n'
 (
   cd "$RAG_DIR"
-  "$PYTHON" ingest.py
+  "$PYTHON" ingest.py --incremental
   "$PYTHON" test_retrieval.py
 )
 
-printf '\nWhole-food source refresh complete. Generate the one report with:\n'
-printf '  cd "%s" && caffeinate -i ./hc-supplements\n' "$RAG_DIR"
+printf '\nWhole-food source refresh complete. Return to the one dashboard with:\n'
+printf '  cd "%s" && ./hc\n' "$RAG_DIR"
+printf 'Then choose “START / UPDATE MY PLAN” to rebuild the one report.\n'

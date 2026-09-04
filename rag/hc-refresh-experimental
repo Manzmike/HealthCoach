@@ -53,10 +53,10 @@ fi
 printf '\nRebuilding the local search index and running the retrieval check...\n'
 (
   cd "$RAG_DIR"
-  "$PYTHON" ingest.py
+  "$PYTHON" ingest.py --incremental
   "$PYTHON" test_retrieval.py
 )
 
 printf '\nExperimental-source refresh complete. To use the broad screen, run:\n'
-printf '  cd "%s" && caffeinate -i ./hc-supplements\n' "$RAG_DIR"
-printf 'Then select “Research-only broad scan” under PEPTIDE / GRAY-MARKET RESEARCH.\n'
+printf '  cd "%s" && ./hc\n' "$RAG_DIR"
+printf 'Choose “START / UPDATE MY PLAN,” then select “Research-only broad scan” under PEPTIDE / GRAY-MARKET RESEARCH.\n'

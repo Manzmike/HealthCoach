@@ -81,11 +81,11 @@ MODES = (
 
 
 SETUP_CHAPTERS = (
-    "I.02", "I.03", "I.04", "I.05", "I.06", "I.07", "I.08", "I.09",
-    "II.03", "II.07", "II.16", "II.17", "II.21",
+    "I.01", "I.02", "I.03", "I.04", "I.05", "I.06", "I.07", "I.08", "I.09",
+    "II.01", "II.03", "II.07", "II.16", "II.17", "II.21",
     "III.01", "III.10", "IV.01", "IV.02", "IV.05", "IV.25",
 )
-WEEKLY_CHAPTERS = ("I.03", "I.04", "II.16", "II.17")
+WEEKLY_CHAPTERS = ("I.01", "I.03", "I.04", "II.01", "II.16", "II.17")
 WORKOUT_CHAPTERS = ("I.03", "I.04", "I.05", "I.07", "I.08")
 
 PLAN = {
@@ -150,7 +150,7 @@ def package_contract() -> str:
       "day": "Monday",
       "date": "YYYY-MM-DD",
       "sessions": [
-        {{"name": "recorded workout name", "duration_min": 0, "intensity": "easy/moderate/hard/unknown", "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}}
+        {{"name": "recorded workout name", "duration_min": 0, "avg_hr_bpm": null, "calories_burned": null, "intensity": "easy/moderate/hard/unknown", "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}}
       ],
       "steps": {{"value": null, "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}},
       "sleep_hours": {{"value": null, "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}},
@@ -159,6 +159,9 @@ def package_contract() -> str:
       "weight_lb": {{"value": null, "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}},
       "protein_g": {{"value": null, "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}},
       "creatine_g": {{"value": null, "origin": "MEASURED/MANUALLY_LOGGED/PLANNED/UNKNOWN"}},
+      "foods": [
+        {{"name": "food or meal actually logged", "servings": null, "tolerance": "ok/GI issue/unknown", "origin": "MANUALLY_LOGGED/UNKNOWN"}}
+      ],
       "notes": ["short factual note"]
     }}
   ],
@@ -172,7 +175,7 @@ def package_contract() -> str:
 }}
 {PACKAGE_END}
 
-Repeat the day object for all seven days in Monday-Sunday order. Use null plus UNKNOWN when data are absent. Wearable data may be MEASURED; something I typed may be MANUALLY_LOGGED. Never mark protein, creatine, medication use, symptoms, or food intake MEASURED from a wearable. PLANNED is not completed. Return no more than three recommendations."""
+Repeat the day object for all seven days in Monday-Sunday order. Use null plus UNKNOWN when data are absent. Wearable data may be MEASURED; something I typed may be MANUALLY_LOGGED. Session calories and heart rate must retain the exact device/source provenance and are not a calorie-intake prescription. Never mark protein, creatine, medication use, symptoms, or food intake MEASURED from a wearable. Include foods only when I logged them; do not infer meals from energy expenditure. PLANNED is not completed. Return no more than three recommendations."""
 
 
 def setup_prompt(chapters: Sequence[Chapter]) -> str:
@@ -207,7 +210,7 @@ def weekly_prompt(chapters: Sequence[Chapter]) -> str:
 
 Use the saved File "{BEVEL_FILE_NAME}" and your connected data. Review the most recently completed Monday-Sunday week. If Sunday is not complete, stop and ask whether I want a partial-week package; do not silently mix incomplete and completed weeks.
 
-Compare planned versus recorded sessions, steps, sleep, cardio intensity distribution, resting-heart-rate trend, and weight trend. Include protein, creatine, symptoms, foods, or medication adherence only if I manually logged them. Observations must cite their exact data fields/dates. Limit proposed changes to three and state whether each would alter a locked rule. Do not prescribe or change drugs.
+Compare planned versus recorded sessions, steps, sleep, cardio intensity distribution, session duration/heart rate/calories when available, resting-heart-rate trend, weight trend, and the day-specific food plan. Include protein, creatine, symptoms, foods, or medication adherence only if I manually logged them. Observations must cite their exact data fields/dates. Do not tell me to eat back a wearable calorie number as though it were exact. Limit proposed changes to three and state whether each would alter a locked rule. Do not prescribe or change drugs.
 
 {package_contract()}
 
@@ -344,6 +347,36 @@ def validate_package(package: dict[str, Any]) -> list[str]:
                     not isinstance(duration, (int, float)) or not 0 <= duration <= 1440
                 ):
                     errors.append(f"{day.get('day')} session duration is invalid")
+                avg_hr = session.get("avg_hr_bpm")
+                if avg_hr is not None and (
+                    not isinstance(avg_hr, (int, float)) or not 20 <= avg_hr <= 250
+                ):
+                    errors.append(f"{day.get('day')} session average heart rate is invalid")
+                calories = session.get("calories_burned")
+                if calories is not None and (
+                    not isinstance(calories, (int, float)) or not 0 <= calories <= 10_000
+                ):
+                    errors.append(f"{day.get('day')} session calories burned is invalid")
+        foods = day.get("foods", [])
+        if not isinstance(foods, list):
+            errors.append(f"{day.get('day')}.foods must be a list")
+        elif len(foods) > 50:
+            errors.append(f"{day.get('day')}.foods exceeds the 50-entry limit")
+        else:
+            for food in foods:
+                if not isinstance(food, dict):
+                    errors.append(f"{day.get('day')} food entry must be an object")
+                    continue
+                origin = str(food.get("origin", "UNKNOWN")).upper()
+                if origin not in {"MANUALLY_LOGGED", "UNKNOWN"}:
+                    errors.append(f"{day.get('day')} food origin must be MANUALLY_LOGGED or UNKNOWN")
+                if len(str(food.get("name", ""))) > 200 or len(str(food.get("tolerance", ""))) > 200:
+                    errors.append(f"{day.get('day')} food entry is too long")
+                servings = food.get("servings")
+                if servings is not None and (
+                    not isinstance(servings, (int, float)) or not 0 <= servings <= 100
+                ):
+                    errors.append(f"{day.get('day')} food servings is invalid")
 
     for field in ("observations", "recommendations", "unknowns", "data_sources"):
         if not isinstance(package.get(field, []), list):
@@ -376,10 +409,33 @@ def session_text(day: dict[str, Any]) -> str:
     for session in sessions:
         name = safe_text(session.get("name") or "unnamed")
         duration = session.get("duration_min")
+        avg_hr = session.get("avg_hr_bpm")
+        calories = session.get("calories_burned")
         intensity = session.get("intensity") or "unknown"
         origin = str(session.get("origin", "UNKNOWN")).upper()
-        values.append(f"{name}, {duration if duration is not None else '?'} min, {intensity} ({origin})")
+        detail = [f"{duration if duration is not None else '?'} min", str(intensity)]
+        if avg_hr is not None:
+            detail.append(f"avg HR {avg_hr} bpm")
+        if calories is not None:
+            detail.append(f"{calories} kcal device estimate")
+        values.append(f"{name}, {', '.join(detail)} ({origin})")
     return "; ".join(values)
+
+
+def food_text(day: dict[str, Any]) -> str:
+    foods = day.get("foods", [])
+    if not foods:
+        return "none manually logged"
+    values: list[str] = []
+    for food in foods:
+        if not isinstance(food, dict):
+            continue
+        name = safe_text(food.get("name") or "unnamed food")
+        servings = food.get("servings")
+        tolerance = safe_text(food.get("tolerance") or "unknown")
+        serving_text = f" × {servings}" if servings is not None else ""
+        values.append(f"{name}{serving_text}; {tolerance}")
+    return "; ".join(values) or "none manually logged"
 
 
 def locked_conflicts(package: dict[str, Any]) -> list[str]:
@@ -635,14 +691,14 @@ def exchange_markdown(
         "",
         "##### Planned versus returned data",
         "",
-        "| Day | Locked plan | Returned sessions | Steps | Sleep | Bedtime | RHR | Weight | Protein | Creatine |",
-        "|---|---|---|---:|---:|---|---:|---:|---:|---:|",
+        "| Day | Locked plan | Returned sessions | Foods manually logged | Steps | Sleep | Bedtime | RHR | Weight | Protein | Creatine |",
+        "|---|---|---|---|---:|---:|---|---:|---:|---:|---:|",
     ])
     for day in package.get("days", []):
         name = day.get("day")
         planned, _ = PLAN.get(name, ("unknown", "unknown"))
         values = (
-            name, planned, session_text(day), metric_text(day, "steps"), metric_text(day, "sleep_hours", " h"),
+            name, planned, session_text(day), food_text(day), metric_text(day, "steps"), metric_text(day, "sleep_hours", " h"),
             metric_text(day, "bedtime"), metric_text(day, "resting_hr_bpm", " bpm"),
             metric_text(day, "weight_lb", " lb"), metric_text(day, "protein_g", " g"),
             metric_text(day, "creatine_g", " g"),

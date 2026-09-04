@@ -1,0 +1,8 @@
+#!/bin/zsh
+set -e
+HERE=${0:A:h}
+cd "$HERE"
+if [[ -f .venv/bin/activate ]]; then
+  source .venv/bin/activate
+fi
+exec caffeinate -i python3 healthcoach_dashboard.py "$@"
