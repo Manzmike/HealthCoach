@@ -44,7 +44,7 @@ documents are created.
 
 - A Monday-through-Sunday operating plan.
 - Training, cardio, steps, recovery, and skipped-workout rules.
-- A Costco-first meal and grocery plan.
+- A meal and grocery plan based on all selected stores.
 - Coffee, milk, food, supplement, and medication-interaction reviews.
 - Apartment, house, light, water, faith, and lifestyle options.
 - Supplement and peptide evidence tables.
@@ -63,9 +63,14 @@ DEEP REVIEW
 SAFETY
 FOOD TO REVIEW
 HOME / FAITH
+STORE / MULTI
 ```
 
 Press `r` after selecting an item to return to the full assessment.
+
+`STORE / MULTI` lets you select Costco, Whole Foods, Sam's Club, H-E-B, Walmart, Sprouts,
+Trader Joe's, pharmacies, supplement stores, online stores, and other sourcing options. Choose
+every place you are willing to search; Costco is optional.
 
 ## Optional commands
 
@@ -75,7 +80,7 @@ Use the longer interview when you want to enter exact doses, dates, mileage, or 
 ./hc-supplements --detailed-assessment
 ```
 
-Display the food, home, faith, and alternative-health choice names:
+Display the store, food, home, faith, and alternative-health choice names:
 
 ```bash
 ./hc-supplements --list-lifestyle

@@ -16,7 +16,7 @@ rag/HEALTHCOACH_REPORT.md
 The report contains:
 
 - your weekly training and recovery schedule;
-- a practical food and Costco plan;
+- a practical food plan based on every store you are willing to use;
 - supplement recommendations and items to skip;
 - safety warnings and questions for a clinician;
 - apartment and house options;
@@ -53,6 +53,10 @@ caffeinate -i ./hc-supplements
 Useful choices are already selected. If those choices are correct, you can press Enter
 immediately.
 
+The `STORE / MULTI` section includes Costco, Whole Foods, Sam's Club, H-E-B, Walmart,
+Sprouts, Trader Joe's, pharmacies, supplement shops, online stores, and more. Select as many
+as you are willing to use. The report uses those choices for sourcing; no chain is required.
+
 HealthCoach only asks for a short typed explanation when a choice cannot be understood safely,
 such as an injury, another medication, an abnormal lab result, or a supplement reaction. All
 needed details are collected in one short line rather than a long interview.
@@ -79,7 +83,7 @@ glow -p HEALTHCOACH_REPORT.md
 
 In plain language:
 
-1. You select your goals, current supplements, health concerns, foods, and preferred habits.
+1. You select your goals, current supplements, health concerns, foods, preferred habits, and every store you are willing to search.
 2. HealthCoach searches the research papers stored on your Mac.
 3. It removes duplicate sources and checks how directly each source fits your question.
 4. It labels strong, weak, missing, and indirect evidence instead of pretending every idea is
@@ -105,7 +109,7 @@ Use the longer assessment when exact dates, doses, mileage, and symptom details 
 ./hc-supplements --detailed-assessment
 ```
 
-See the available food, home, faith, and alternative-health choices:
+See the available stores, food, home, faith, and alternative-health choices:
 
 ```bash
 ./hc-supplements --list-lifestyle

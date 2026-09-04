@@ -58,7 +58,7 @@
 
 ## What to drink
 
-- **PLANNING DEFAULT:** Costco whole-bean or ground coffee prepared as black drip or iced coffee. “Costco” and the exact SKU are shopping logistics, not physiology.
+- **PLANNING DEFAULT:** whole-bean or ground coffee from any selected store, prepared as black drip or iced coffee. The retailer and exact SKU are shopping logistics, not physiology.
 - **PLANNING DEFAULT:** an unsweetened bottled cold brew is acceptable when its label fits the morning caffeine plan; product caffeine varies, so the package number—not cup color or size—controls.
 - **PLANNING DEFAULT:** add a small splash of **pasteurized** milk if desired. Tea may replace coffee, but it still counts toward the same 11:15 caffeine cutoff.
 - Coffee is a caffeine vehicle; the retrieved performance papers studied caffeine in capsules or beverages and do not prove black coffee is a superior delivery form. [A \| 04_cognition_learning/caffeine \| 10.3389/fphys.2026.1858094]
@@ -112,7 +112,7 @@
 - Bovine-colostrum evidence concerns exercise-associated gut or immune markers, including a 16-man acute prolonged-cycling trial, not superior body composition or routine recovery. [A \| 07_supplements/bovine_colostrum \| 10.1371/journal.pone.0266379] [B \| 07_supplements/bovine_colostrum \| 10.1007/s00394-026-04016-5]
 - **COLOSTRUM VERDICT: SKIP.** The relevant studies do not establish a benefit for his primary cut goals, and raw colostrum is not recommended. [A \| 07_supplements/bovine_colostrum \| 10.1371/journal.pone.0266379] [B \| 07_supplements/bovine_colostrum \| 10.1007/s00394-026-04016-5]
 
-# 5. COSTCO PANTRY TABLE
+# 5. SELECTED-STORE PANTRY TABLE
 
 All portions and protein values are **PLANNING AMOUNTS / PLANNING ESTIMATES**. The package label controls.
 
@@ -148,7 +148,7 @@ All portions and protein values are **PLANNING AMOUNTS / PLANNING ESTIMATES**. T
 
 # 7. 45-MIN SUNDAY PREP
 
-**PLANNING DEFAULT — one timer, Costco-first, no physiological claims:**
+**PLANNING DEFAULT — one timer, using the selected stores, no physiological claims:**
 
 1. **00:00–00:05:** start rice or potatoes; preheat oven/air fryer; place seven containers and a marker on the counter.
 2. **00:05–00:12:** season a poultry tray or portion plain rotisserie-chicken meat. Use the ready-cooked option when raw-food cook time would exceed the 45-minute cap.
@@ -270,7 +270,7 @@ Tadalafil and finasteride are not named in the injected profile, so no food-inte
 
 # 14. GAPS
 
-- **Coffee chemistry:** no accepted retrieved passage establishes a superior roast, brew method, Costco SKU, cold-brew preparation, or exact caffeine content per cup; use product labels and the locked cutoff.
+- **Coffee chemistry:** no accepted retrieved passage establishes a superior roast, brew method, retailer SKU, cold-brew preparation, or exact caffeine content per cup; use product labels and the locked cutoff.
 - **Coffee and tirzepatide:** no direct trial tested fasted versus fed coffee, nausea, gastric emptying, or absorption during tirzepatide treatment.
 - **Coffee and teeth:** retrieved dental guidance supports limiting added-sugar drinks, but it did not establish a black-coffee enamel or staining protocol.
 - **Milk and the cut:** no controlled adult trial compared skim, whole, lactose-free, or ultrafiltered milk for fat loss and muscle retention with energy and protein matched.

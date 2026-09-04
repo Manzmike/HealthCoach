@@ -123,8 +123,59 @@ SUBSTANCE_OPTIONS = (
     ("other_stimulant", "Other stimulant or recreational substance"),
 )
 
+STORE_OPTIONS = (
+    ("costco", "Costco"),
+    ("sams_club", "Sam's Club"),
+    ("bjs", "BJ's Wholesale Club"),
+    ("whole_foods", "Whole Foods Market"),
+    ("sprouts", "Sprouts Farmers Market"),
+    ("trader_joes", "Trader Joe's"),
+    ("kroger", "Kroger"),
+    ("tom_thumb", "Tom Thumb / Albertsons"),
+    ("heb", "H-E-B"),
+    ("central_market", "Central Market"),
+    ("walmart", "Walmart"),
+    ("target", "Target"),
+    ("aldi", "ALDI"),
+    ("natural_grocers", "Natural Grocers"),
+    ("cvs", "CVS"),
+    ("walgreens", "Walgreens"),
+    ("gnc", "GNC"),
+    ("vitamin_shoppe", "The Vitamin Shoppe"),
+    ("amazon", "Amazon"),
+    ("iherb", "iHerb"),
+    ("thrive_market", "Thrive Market"),
+    ("manufacturer", "Direct from the manufacturer"),
+    ("local_market", "Local grocery, butcher, fish market, or farmers market"),
+)
+
+STORE_ROLES = {
+    "costco": "Bulk protein, pasteurized dairy, frozen produce, oats, rice, and household staples",
+    "sams_club": "Bulk protein, pasteurized dairy, frozen produce, pantry goods, and household staples",
+    "bjs": "Bulk food and household staples where locally available",
+    "whole_foods": "Specialty dietary items, produce, seafood, pasteurized dairy, and smaller package options",
+    "sprouts": "Produce, bulk pantry foods, specialty dietary items, and supplement label comparison",
+    "trader_joes": "Smaller frozen, prepared, pantry, and produce options for low-waste meal assembly",
+    "kroger": "Full-line grocery coverage, weekly staples, and smaller packages",
+    "tom_thumb": "Full-line grocery coverage, weekly staples, pharmacy access, and smaller packages",
+    "heb": "Texas full-line grocery coverage, prepared foods, fresh foods, and weekly staples",
+    "central_market": "Specialty produce, seafood, meat, dairy, and harder-to-find ingredients",
+    "walmart": "Budget comparison, full-line groceries, household goods, and common supplements",
+    "target": "Convenience groceries, household goods, and common packaged staples",
+    "aldi": "Lower-cost core groceries and compact package comparison",
+    "natural_grocers": "Specialty dietary foods and supplement label comparison",
+    "cvs": "Pharmacist access and limited medication or supplement shopping",
+    "walgreens": "Pharmacist access and limited medication or supplement shopping",
+    "gnc": "Supplement comparison only after the evidence verdict and quality check",
+    "vitamin_shoppe": "Supplement comparison only after the evidence verdict and quality check",
+    "amazon": "Online gap-filling only with seller, lot, expiration, and certification verification",
+    "iherb": "Online specialty food or supplement gap-filling with label and quality verification",
+    "thrive_market": "Online pantry and specialty-diet gap-filling after price and package comparison",
+    "manufacturer": "Exact-form supplement purchasing after verifying the official manufacturer storefront",
+    "local_market": "Fresh food, culturally preferred ingredients, and package sizes unavailable at selected chains",
+}
+
 PRODUCT_OPTIONS = (
-    ("costco", "Costco-first purchasing"),
     ("third_party", "Third-party-tested products preferred"),
     ("budget", "Lowest practical cost"),
     ("fewest_items", "Fewest total stack items"),
@@ -573,6 +624,39 @@ def whole_life_selection_markdown(profile: dict) -> str:
     return "\n".join(lines)
 
 
+def store_sourcing_markdown(profile: dict) -> str:
+    """Turn selected retailers into logistics without inventing store-specific health claims."""
+    selected = profile.get("store_keys", ())
+    labels = dict(STORE_OPTIONS)
+    lines = [
+        "**PLANNING / RETAILER LOGISTICS:** store selection changes where the shopping list is searched, not the evidence target or safety verdict. Prices, inventory, formulations, and sellers can change, so verify the current listing and the physical package before purchase.",
+        "",
+        "| Selected store | Best role in this plan | What to verify |",
+        "|---|---|---|",
+    ]
+    if not selected:
+        lines.append(
+            "| No retailer selected | Use the food and product specifications without a chain preference | Current label, package condition, storage needs, price per usable serving, and supplement quality certification where applicable |"
+        )
+    for key in selected:
+        label = labels.get(key, key)
+        role = STORE_ROLES.get(key, "Search for items that match the report specifications")
+        if key in {"cvs", "walgreens"}:
+            verify = "Use the pharmacist for medication questions; verify exact ingredient, amount, lot, expiration, and certification"
+        elif key in {"gnc", "vitamin_shoppe", "amazon", "iherb", "manufacturer"}:
+            verify = "Exact ingredient/form/amount, seller identity, lot, expiration, and current third-party certification; reject proprietary blends when amounts are hidden"
+        elif key == "thrive_market":
+            verify = "Ingredient and nutrition labels, package size, subscription terms, storage space, and delivered cost"
+        else:
+            verify = "Ingredient and nutrition labels, pasteurization where relevant, package condition/date, storage space, and price per usable serving"
+        lines.append(f"| {label} | {role} | {verify} |")
+    lines.extend([
+        "",
+        "**PLANNING DEFAULT:** choose one selected store as the first stop for the core list, then use the other selected stores only for missing items, a safer verified product, a practical package size, or a meaningful price difference. Warehouse quantities are optional; apartment storage and likely food waste outrank bulk pricing.",
+    ])
+    return "\n".join(lines)
+
+
 @dataclass(frozen=True)
 class Candidate:
     key: str
@@ -874,7 +958,7 @@ def ask_profile_quick() -> dict:
         "[bold]HealthCoach One-Screen Assessment[/bold]\n"
         "Everything is in one searchable checklist. Space toggles; Enter submits once.\n"
         "Defaults are already checked. Use / to search a category and r to return to the full list.\n"
-        "Useful searches: GOAL, TAKING NOW, DEEP REVIEW, SAFETY, FOOD TO REVIEW, HOME / FAITH.",
+        "Useful searches: GOAL, TAKING NOW, DEEP REVIEW, SAFETY, FOOD TO REVIEW, STORE / MULTI.",
         border_style="bright_cyan", padding=(1, 3),
     ))
 
@@ -903,7 +987,8 @@ def ask_profile_quick() -> dict:
         ("food", "FOOD TO REVIEW", FOOD_ADDITION_OPTIONS, ("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food")),
         ("home", "HOME / FAITH", HOME_PRACTICE_OPTIONS, ("bible_prayer", "morning_light", "water_quality", "breathwork")),
         ("alternative", "ALTERNATIVE CLAIM", ALTERNATIVE_ITEM_OPTIONS, ()),
-        ("preference", "BUYING", PRODUCT_OPTIONS, ("costco", "third_party", "fewest_items", "food_first")),
+        ("store", "STORE / MULTI", STORE_OPTIONS, ("costco",)),
+        ("preference", "BUYING", PRODUCT_OPTIONS, ("third_party", "fewest_items", "food_first")),
         ("timeline", "TIMELINE / ONE", TIMELINE_OPTIONS, ("none",)),
         ("detail", "OPTIONAL TEXT", (("add_note", "I need to add one short detail not covered by a checkbox"),), ()),
     ]
@@ -958,6 +1043,7 @@ def ask_profile_quick() -> dict:
     food_addition_keys = picked("food")
     home_practice_keys = picked("home")
     alternative_item_keys = picked("alternative")
+    store_keys = picked("store")
     preference_keys = picked("preference")
     timeline_keys = [one("timeline", "none")]
 
@@ -1063,6 +1149,8 @@ def ask_profile_quick() -> dict:
         "home_practices": labels_for(home_practice_keys, HOME_PRACTICE_OPTIONS),
         "alternative_item_keys": alternative_item_keys,
         "alternative_items": labels_for(alternative_item_keys, ALTERNATIVE_ITEM_OPTIONS),
+        "store_keys": store_keys,
+        "shopping_stores": labels_for(store_keys, STORE_OPTIONS),
         "whole_life_details": f"apartment now; include house options; Christian Bible/Jesus learning; assessment detail: {notes}",
         "caffeine": f"{'; '.join(labels_for(caffeine_keys, CAFFEINE_OPTIONS)) or 'none'}; amount not entered; none after 11:15",
         "sleep": f"{'; '.join(labels_for(sleep_keys, SLEEP_OPTIONS)) or 'none reported'}; locked target 20:15–04:30",
@@ -1284,10 +1372,16 @@ def ask_profile_detailed() -> dict:
         + ([substance_details] if substance_details and substance_details != "none additional" else [])
     ) or "none reported"
 
+    store_keys = checkbox_prompt(
+        "Which stores are you willing to search? Select every option that applies.",
+        STORE_OPTIONS,
+        defaults=("costco",),
+        minimum=1,
+    )
     preference_keys = checkbox_prompt(
         "Which buying and product constraints matter?",
         PRODUCT_OPTIONS,
-        defaults=("costco", "third_party", "fewest_items", "food_first"),
+        defaults=("third_party", "fewest_items", "food_first"),
     )
     preference_details = Prompt.ask("Additional budget, format, testing, or product constraints", default="none additional")
     preferences = "; ".join(
@@ -1334,6 +1428,8 @@ def ask_profile_detailed() -> dict:
         "home_practices": labels_for(home_practice_keys, HOME_PRACTICE_OPTIONS),
         "alternative_item_keys": alternative_item_keys,
         "alternative_items": labels_for(alternative_item_keys, ALTERNATIVE_ITEM_OPTIONS),
+        "store_keys": store_keys,
+        "shopping_stores": labels_for(store_keys, STORE_OPTIONS),
         "whole_life_details": whole_life_details,
         "caffeine": caffeine,
         "sleep": sleep,
@@ -1373,6 +1469,7 @@ def default_profile(args: argparse.Namespace) -> dict:
         defaults=("bible_prayer", "morning_light", "water_quality", "breathwork"),
     )
     alternative_item_keys = parse_choice_values(args.alternative_items, ALTERNATIVE_ITEM_OPTIONS)
+    store_keys = parse_choice_values(args.stores, STORE_OPTIONS, defaults=("costco",))
     return {
         "assessment_mode": "Non-interactive flags/defaults",
         "assessment_notes": args.notes or "none",
@@ -1412,11 +1509,13 @@ def default_profile(args: argparse.Namespace) -> dict:
         "home_practices": labels_for(home_practice_keys, HOME_PRACTICE_OPTIONS),
         "alternative_item_keys": alternative_item_keys,
         "alternative_items": labels_for(alternative_item_keys, ALTERNATIVE_ITEM_OPTIONS),
+        "store_keys": store_keys,
+        "shopping_stores": labels_for(store_keys, STORE_OPTIONS),
         "whole_life_details": args.whole_life_details or "apartment now; also show house options; Christian Bible/Jesus learning",
         "caffeine": args.caffeine or "optional morning coffee; none after 11:15",
         "sleep": args.sleep or "none reported",
         "substances": args.substances or "none reported",
-        "preferences": args.preferences or "Costco first; practical value; third-party tested when available",
+        "preferences": args.preferences or "practical value; third-party tested when available; fewest useful items",
         "timeline": args.timeline or "none reported",
         "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
     }
@@ -1686,6 +1785,7 @@ def profile_markdown(profile: dict) -> str:
         f"- Whole-life/housing/faith details: {profile.get('whole_life_details', 'none reported')}.",
         f"- Caffeine: {profile['caffeine']}; sleep: {profile['sleep']}.",
         f"- Alcohol/nicotine/cannabis/energy drinks: {profile['substances']}.",
+        f"- Stores willing to search: {', '.join(profile.get('shopping_stores', ())) or 'none selected'}.",
         f"- Product/budget preferences: {profile['preferences']}.",
         f"- Deadline/race date: {profile['timeline']}.",
     ])
@@ -1722,6 +1822,7 @@ def questionnaire_markdown(profile: dict) -> str:
         ("What is the caffeine pattern?", profile["caffeine"]),
         ("What is the sleep pattern, and are snoring/apnea symptoms present?", profile["sleep"]),
         ("What alcohol, nicotine, cannabis, energy-drink, or other stimulant use applies?", profile["substances"]),
+        ("Which stores is the user willing to search?", "; ".join(profile.get("shopping_stores", ())) or "none selected"),
         ("What budget, format, testing, or product constraints apply?", profile["preferences"]),
         ("What deadline, race date, or time constraint applies?", profile["timeline"]),
     ]
@@ -2373,7 +2474,7 @@ def write_report(
     gaps = [f"- {c.name}" for c in candidates if evidence[c.key].coverage == "NONE"]
     now = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
     week = embedded_module(HERE / "WEEK_OPERATING_PLAN.md")
-    nutrition = embedded_module(HERE / "COSTCO_COFFEE_MILK_STACK_PLAN.md")
+    nutrition = embedded_module(HERE / "FOOD_COFFEE_MILK_STACK_PLAN.md")
     whole_life = embedded_module(HERE / "WHOLE_LIFE_EVIDENCE_PLAN.md")
     body = f"""## PART I — CURRENT OPERATING WEEK
 
@@ -2385,7 +2486,11 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 
 {week}
 
-## PART II — COSTCO, COFFEE, MILK, FOOD, AND LOCKED-STACK PLAN
+## PART II — SELECTED STORES, COFFEE, MILK, FOOD, AND LOCKED-STACK PLAN
+
+### SELECTED-STORE SOURCING OVERLAY
+
+{store_sourcing_markdown(profile)}
 
 {nutrition}
 
@@ -2508,6 +2613,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--home-practices", help="comma-separated apartment/home-practice selector keys, or all/none")
     ap.add_argument("--alternative-items", help="comma-separated alternative-item selector keys, or all/none")
     ap.add_argument("--whole-life-details", help="housing limits, faith tradition, sourcing limits, or ambiguous-item details")
+    ap.add_argument("--stores", help="comma-separated retailer keys willing to be searched, or all/none")
     ap.add_argument("--caffeine", help="caffeine pattern")
     ap.add_argument("--sleep", help="sleep pattern and apnea flags")
     ap.add_argument("--substances", help="alcohol, nicotine, cannabis, energy drinks, or other stimulants")
@@ -2535,6 +2641,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
     if args.list_lifestyle:
         for title, choices in (
+            ("STORES — MULTIPLE MAY BE SELECTED", STORE_OPTIONS),
             ("FOOD ADDITIONS", FOOD_ADDITION_OPTIONS),
             ("APARTMENT / HOME PRACTICES", HOME_PRACTICE_OPTIONS),
             ("ALTERNATIVE / CLINICAL CLAIMS", ALTERNATIVE_ITEM_OPTIONS),

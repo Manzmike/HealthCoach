@@ -48,29 +48,29 @@ Verdicts mean:
 | “Blood-building” foods | Fatigue/anemia cannot be diagnosed from a food concept. Iron, B12, and folate are condition- and lab-specific in the supplement audit. | **TRANSLATE THE GOAL:** if anemia symptoms or risk exists, clinician assessment precedes organ meat or pills. No iron stack by intuition. | Housing type is irrelevant. |
 | Exactly 200 g carbohydrate daily | No retrieved passage makes 200 g universally correct for every day of this hybrid week. | **DO NOT HARD-LOCK YET.** It is a candidate starting value only after total energy and protein are set. Track two weeks: performance, GI tolerance, hunger, and scale trend; move carbohydrates around sessions before adding supplements. | Same number logic in apartment or house; convenience foods do not change the target. |
 
-## Costco-first sourcing card
+## Selected-store sourcing card
 
 Availability and SKU names change, so purchase by specification rather than by a social-media brand list.
 
 | Category | First source | Label/quality check | Apartment quantity | House quantity |
 |---|---|---|---|---|
-| Milk/yogurt/cottage cheese | Costco refrigerated dairy, then a normal grocery store | “Pasteurized,” protein and calories per serving, date, lactose tolerance; no raw-farm substitute | One milk container and one tub at a time | Bulk only if the household finishes it before the date |
-| Juice | Costco or grocery refrigerated/shelf-stable aisle | “100% juice,” pasteurized, no “juice drink” substitution; USDA Organic seal is optional production verification, not a health halo | Smallest container that prevents waste | Multi-pack only after actual weekly use is known |
-| Poultry/fish/lean beef | Costco frozen/fresh, then grocery/butcher | Ingredient list, lean cut, package integrity, safe storage date | Frozen individual portions reduce spoilage | Batch portion and freeze immediately |
+| Milk/yogurt/cottage cheese | Selected warehouse or full-line grocery refrigerated dairy | “Pasteurized,” protein and calories per serving, date, lactose tolerance; no raw-farm substitute | One milk container and one tub at a time | Bulk only if the household finishes it before the date |
+| Juice | Selected grocery refrigerated/shelf-stable aisle | “100% juice,” pasteurized, no “juice drink” substitution; USDA Organic seal is optional production verification, not a health halo | Smallest container that prevents waste | Multi-pack only after actual weekly use is known |
+| Poultry/fish/lean beef | Selected warehouse, grocery, butcher, or fish market | Ingredient list, lean cut, package integrity, safe storage date | Frozen individual portions reduce spoilage | Batch portion and freeze immediately |
 | Oysters | Reputable high-turnover seafood counter or sealed cooked/canned product | Keep cold; reject damaged/open packages; cook according to official guidance; never use smell as a pathogen test | Buy only the amount cooked that day | Same; a grill does not make raw oysters safe |
 | Liver/organ meat | Inspected butcher or sealed frozen grocery product | Species/cut, package date, nutrition data when available; no glandular supplement substitution | Freeze small labeled portions | Same; freezer space is not permission for daily use |
-| Eggs/roe | Costco/grocery refrigerated section | Shell/package integrity, refrigeration, handling/cooking directions, sodium for roe | Small package until use rate is proven | Larger package only with a dated use plan |
-| Potatoes/rice/oats/fruit/vegetables | Costco when freezer/pantry space exists; grocery for perishable variety | Plain ingredient list; frozen produce is acceptable; no detox/organic requirement | Frozen fruit/veg, microwave rice, and smaller fresh-fruit rotation | Bulk sacks/trays only if dry/cool storage prevents waste/pests |
-| Honey/dark chocolate/treat inputs | Normal grocery or Costco | Single-ingredient honey if desired; nutrition label still controls amount; no medicinal purity claim | Pre-portion immediately | Store bulk out of the default eating path |
-| Olive/coconut oil and butter | Grocery/Costco | Named oil, sealed/date, storage directions; avoid proprietary “metabolic fat” blends | One default unsaturated oil; smallest flavor-fat container | Same default; bulk only if turnover protects quality |
-| Bone broth/gelatin/collagen | Grocery/Costco | Protein and sodium per serving, ingredient list, third-party supplement check if sold as a powder | Shelf-stable cartons/single powder | Homemade is optional only when time and food-safety handling are realistic |
+| Eggs/roe | Selected grocery or warehouse refrigerated section | Shell/package integrity, refrigeration, handling/cooking directions, sodium for roe | Small package until use rate is proven | Larger package only with a dated use plan |
+| Potatoes/rice/oats/fruit/vegetables | Selected warehouse when freezer/pantry space exists; grocery for perishable variety | Plain ingredient list; frozen produce is acceptable; no detox/organic requirement | Frozen fruit/veg, microwave rice, and smaller fresh-fruit rotation | Bulk sacks/trays only if dry/cool storage prevents waste/pests |
+| Honey/dark chocolate/treat inputs | Any selected full-line grocery or warehouse | Single-ingredient honey if desired; nutrition label still controls amount; no medicinal purity claim | Pre-portion immediately | Store bulk out of the default eating path |
+| Olive/coconut oil and butter | Any selected full-line grocery or warehouse | Named oil, sealed/date, storage directions; avoid proprietary “metabolic fat” blends | One default unsaturated oil; smallest flavor-fat container | Same default; bulk only if turnover protects quality |
+| Bone broth/gelatin/collagen | Any selected full-line grocery or warehouse | Protein and sodium per serving, ingredient list, third-party supplement check if sold as a powder | Shelf-stable cartons/single powder | Homemade is optional only when time and food-safety handling are realistic |
 | Grass/sod tray | Local garden center plus building-approved waterproof planter/tray | Confirm sod has not been treated with something incompatible with skin contact; verify drainage, weight, insects, and lease rules | Start with one small removable tray | A clean lawn area usually makes a purchased tray unnecessary |
 | Natural-fiber clothing | Any retailer with a real fiber-content/care label | Buy for fit, chafing control, climate, and durability—not “Hz” claims | One tested garment before replacing a wardrobe | Same |
-| Supplements | Costco/pharmacy only after the supplement-audit verdict | Exact ingredient/form/amount, lot, expiration, and live NSF/USP/other reputable certification lookup; avoid proprietary blends | One item trial at a time | Same; house storage is not a reason to stockpile |
+| Supplements | Any selected retailer only after the supplement-audit verdict | Exact ingredient/form/amount, seller, lot, expiration, and live NSF/USP/other reputable certification lookup; avoid proprietary blends | One item trial at a time | Same; house storage is not a reason to stockpile |
 
 # 2. PLANNING DEFAULT — HOW THESE FOODS ENTER THE EXISTING MEAL PLAN
 
-These are substitutions, not an additional diet layered on top of the Costco plan.
+These are substitutions, not an additional diet layered on top of the selected-store food plan.
 
 | Slot | Base choice | Allowed addition/swap | Guardrail |
 |---|---|---|---|
