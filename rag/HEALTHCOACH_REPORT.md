@@ -94,6 +94,8 @@ _Generated 2026-09-03 23:40. This is the sole generated report and is overwritte
 | PART IV | [IV.24](#hc-page-073) | [073](#hc-page-073) | [What does the retrieved evidence show for Ashwagandha (KSM-66 or Sensoril)?](#hc-page-073) |
 | PART IV | [IV.25](#hc-page-074) | [074](#hc-page-074) | [8. COVERAGE GAPS](#hc-page-074) |
 | PART IV | [IV.26](#hc-page-075) | [075](#hc-page-075) | [9. RETRIEVED SOURCE TRAIL](#hc-page-075) |
+| **PART V** | — | — | [**BEVEL WEEKLY EXCHANGE**](#hc-part-v) |
+| PART V | [V.01](#hc-page-076) | [076](#hc-page-076) | [LATEST BEVEL IMPORTS AND HEALTHCOACH VERIFICATION](#hc-page-076) |
 <!-- HC_INDEX_END -->
 
 <div style="page-break-before: always;"></div>
@@ -2221,3 +2223,14 @@ The library did not return an on-topic A/B human passage for these selected cand
 - [C | 05_fat_loss_drugs/tirzepatide_incretins | 10.1007/s40265-024-02029-0] `C_2024_aa-tirzepatide_pharmacotherapy-as-an-augmentation-to-bariatric.pdf`
 - [A | 05_fat_loss_drugs/tirzepatide_incretins | 10.1503/cmaj.250502] `A_2025_tirzepatide_pharmacotherapy-for-obesity-management-in-adults.pdf`
 - [C | 05_fat_loss_drugs/tirzepatide_incretins | 10.1007/s13679-025-00632-0] `C_2025_aa-tirzepatide_what-is-the-role-of-primary.pdf`
+
+<div style="page-break-before: always;"></div>
+<a id="hc-part-v"></a>
+## PART V — BEVEL WEEKLY EXCHANGE
+
+<a id="hc-page-076"></a>
+### CHAPTER V.01 · PAGE 076 — LATEST BEVEL IMPORTS AND HEALTHCOACH VERIFICATION
+
+<!-- HC_BEVEL_WEEKLY_START -->
+_No Bevel weekly package has been imported yet. Run `./hc-bevel`, choose `REQUEST WEEKLY PACKAGE`, paste that prompt into Bevel Intelligence, copy its structured reply, then choose `IMPORT + VERIFY BEVEL REPLY`._
+<!-- HC_BEVEL_WEEKLY_END -->

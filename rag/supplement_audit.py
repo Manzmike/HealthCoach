@@ -42,6 +42,8 @@ except ImportError as exc:  # pragma: no cover - actionable runtime message
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_OUT = HERE / "HEALTHCOACH_REPORT.md"
+BEVEL_WEEKLY_START = "<!-- HC_BEVEL_WEEKLY_START -->"
+BEVEL_WEEKLY_END = "<!-- HC_BEVEL_WEEKLY_END -->"
 console = Console()
 
 QUEUE_VERY = "Submitted: very researched"
@@ -2510,6 +2512,24 @@ def embedded_module(path: Path) -> str:
     return re.sub(r"^(#{1,4})\s+", lambda m: "##" + m.group(1) + " ", text, flags=re.M)
 
 
+def preserved_bevel_weekly(out: Path) -> str:
+    """Carry the one-report Bevel exchange ledger across report regeneration."""
+    default = (
+        "_No Bevel weekly package has been imported yet. Run `./hc-bevel`, choose "
+        "`REQUEST WEEKLY PACKAGE`, paste that prompt into Bevel Intelligence, copy its "
+        "structured reply, then choose `IMPORT + VERIFY BEVEL REPLY`._"
+    )
+    if not out.exists():
+        return default
+    previous = out.read_text(encoding="utf-8", errors="replace")
+    match = re.search(
+        re.escape(BEVEL_WEEKLY_START) + r"\s*(.*?)\s*" + re.escape(BEVEL_WEEKLY_END),
+        previous,
+        flags=re.S,
+    )
+    return match.group(1).strip() if match and match.group(1).strip() else default
+
+
 def evidence_context(candidate: Candidate, ev: Evidence) -> tuple[str, set[str]]:
     blocks = []
     allowed_dois: set[str] = set()
@@ -3442,6 +3462,7 @@ def write_report(
     week = embedded_module(HERE / "WEEK_OPERATING_PLAN.md")
     nutrition = embedded_module(HERE / "FOOD_COFFEE_MILK_STACK_PLAN.md")
     whole_life = embedded_module(HERE / "WHOLE_LIFE_EVIDENCE_PLAN.md")
+    bevel_weekly = preserved_bevel_weekly(out)
     body = f"""## PART I — CURRENT OPERATING WEEK
 
 ### PERSONALIZED TIMING OVERLAY — SOURCES CHECKED
@@ -3544,6 +3565,14 @@ The library did not return an on-topic A/B human passage for these selected cand
 #### Locked whole-food sources
 
 {source_rows(food_candidates, food_evidence)}
+
+## PART V — BEVEL WEEKLY EXCHANGE
+
+### LATEST BEVEL IMPORTS AND HEALTHCOACH VERIFICATION
+
+{BEVEL_WEEKLY_START}
+{bevel_weekly}
+{BEVEL_WEEKLY_END}
 """
     text = indexed_document(body, now)
     out.parent.mkdir(parents=True, exist_ok=True)
