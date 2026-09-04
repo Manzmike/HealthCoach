@@ -107,6 +107,55 @@ glow -p HEALTHCOACH_REPORT.md
 Every run replaces the same report. No timestamped reports, JSON side files, or additional log
 documents are created. The navigator only reads that report; it does not make another copy.
 
+## Share the plan with Bevel Intelligence
+
+HealthCoach can prepare the current plan for Bevel's chat AI without creating another report.
+Run:
+
+```bash
+./hc-bevel
+```
+
+Use the arrow keys, then press Space or Enter:
+
+- `SET UP / REFRESH BEVEL` copies the operating plan and asks Bevel to save or update one File
+  named `HealthCoach Operating Context`. It also asks for a recurring HealthCoach review every
+  Sunday at 18:30.
+- `RUN THIS WEEK'S REVIEW` asks Bevel to compare its connected Monday-through-Sunday data with
+  the locked plan. It tells Bevel to distinguish measured, manually logged, planned, and unknown
+  information.
+- `BUILD BEVEL WORKOUT TEMPLATES` copies the exact three lifting sessions for Bevel's Strength
+  Builder.
+
+The selected handoff is copied to the Mac clipboard. Then open **Bevel → Intelligence → new
+chat**, paste, and send. Universal Clipboard can carry the copied text from a Mac to an iPhone
+when both devices use the same Apple Account and Handoff is enabled.
+
+This is a deliberate clipboard handoff, not an invisible account connection. Bevel has no
+public chat-import API used by this project. HealthCoach uploads nothing by itself, keeps
+`HEALTHCOACH_REPORT.md` as the only generated document, and creates no Bevel export file.
+Completed workouts, steps, sleep, heart rate, and related wearable data should reach Bevel
+through the data source configured inside Bevel, such as Apple Health or Garmin. The text handoff
+supplies the plan and its rules; the connected device supplies what actually happened.
+
+The same actions are available as direct commands:
+
+```bash
+./hc-bevel --mode setup
+./hc-bevel --mode weekly
+./hc-bevel --mode workouts
+./hc-bevel --mode setup --print
+```
+
+Use `setup` the first time and again whenever a new HealthCoach report materially changes the
+plan. Use `weekly` whenever you want an immediate review; the setup prompt separately asks Bevel
+to create the recurring Sunday check-in. Bevel Intelligence and some related features may depend
+on the installed Bevel version or subscription. The workflow follows Bevel's documented support
+for [Files and plans](https://help.bevel.health/en/articles/11586881),
+[recurring check-ins](https://help.bevel.health/en/articles/12308801),
+[written strength-workout creation](https://help.bevel.health/en/articles/11242561), and
+[connected device data](https://help.bevel.health/en/articles/10400449).
+
 ## What is inside the report
 
 - A Monday-through-Sunday operating plan.

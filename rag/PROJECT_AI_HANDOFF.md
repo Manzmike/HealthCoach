@@ -19,6 +19,8 @@ The project has two major halves:
 1. **Research-library acquisition (`papers/`)** searches legal open-access sources, downloads PDFs, assigns a heuristic evidence grade, files papers into topic directories, records provenance in a Markdown manifest, and reuses duplicate papers through hardlinks where possible.
 2. **Retrieval and generation (`rag/`)** extracts text from those PDFs, chunks and embeds it, stores it in LanceDB, retrieves passages with dense plus full-text search, reranks with a cross-encoder, and asks a local MLX language model to generate an answer or larger personal report.
 
+A small downstream bridge, `bevel_share.py` / `hc-bevel`, reads the canonical generated report and produces a transient clipboard prompt for Bevel Intelligence. It has no Bevel API credentials, performs no network upload, and writes no export file. Its setup mode sends a bounded set of execution-relevant logical chapters, asks Bevel to create/update its internal `HealthCoach Operating Context` File, and asks for a Sunday 18:30 weekly Check-in. Weekly mode asks Bevel to compare synced data with the locked plan while labeling measured, manually logged, planned, and unknown fields. Workout mode asks Bevel Strength Builder to parse exactly the three defined lifts. This boundary is intentional: wearable results sync through Bevel-supported data sources; HealthCoach plan context is pasted by the user.
+
 The same core supports:
 
 - one-off CLI answers (`coach.py`);
