@@ -58,6 +58,13 @@ The most common choices are selected already. HealthCoach asks for at most one s
 explanation, and only when a choice needs clarification for safety or accuracy. A final review
 shows what was recorded before research begins; choose `generate`, `restart`, or `cancel`.
 
+Choices marked `LOCKED` are facts already fixed for this HealthCoach profile: tirzepatide is a
+current prescription and creatine monohydrate is 5 g/day. They cannot be cleared accidentally.
+Every other checked choice is saved under a stable internal name and validated before research
+starts. The one report includes a `HARD-DEFINED SELECTION LOCK` table showing exactly what was
+locked, selected, or left unselected. HealthCoach does not guess personal answers that the user
+did not choose.
+
 ## Read the result
 
 When the program finishes, browse it by chapter and logical page:
@@ -176,6 +183,9 @@ python3 test_retrieval.py
 ```
 
 `ingest.py` rebuilds the search index, so let it finish before generating another report.
+
+Changing assessment choices, locking selections, changing stores, or generating another report
+does **not** require a source pull. Those actions reuse the indexed library already on the Mac.
 
 ### Refresh the five focus/nootropic topics
 

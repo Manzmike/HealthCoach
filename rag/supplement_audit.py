@@ -440,10 +440,14 @@ def checkbox_prompt(
     minimum: int = 0,
     maximum: int | None = None,
     exclusive_groups: Sequence[Sequence[str]] = (),
+    locked_values: Sequence[str] = (),
 ) -> list[str]:
     """Scrollable terminal checkbox list: arrows/j/k, Space, Enter, / filter."""
     valid = {value for value, _ in choices}
-    initial = {value for value in defaults if value in valid}
+    locked = {value for value in locked_values if value in valid}
+    initial = {value for value in defaults if value in valid} | locked
+    if maximum is not None and len(locked) > maximum:
+        raise ValueError(f"{title}: locked selections exceed maximum={maximum}")
 
     def numeric_picker() -> list[str]:
         console.print(f"\n[bold]{title}[/bold]")
@@ -451,7 +455,8 @@ def checkbox_prompt(
             console.print(f"[dim]{description}[/dim]")
         for i, (value, label) in enumerate(choices, 1):
             mark = "*" if value in initial else " "
-            console.print(f"  [cyan]{i:>2}[/cyan] [{mark}] {label}")
+            lock = " [yellow]LOCKED[/yellow]" if value in locked else ""
+            console.print(f"  [cyan]{i:>2}[/cyan] [{mark}] {label}{lock}")
         default_numbers = ",".join(str(i) for i, (value, _) in enumerate(choices, 1) if value in initial)
         raw = Prompt.ask("Numbers, comma-separated", default=default_numbers)
         picked = {
@@ -459,8 +464,17 @@ def checkbox_prompt(
             for token in re.findall(r"\d+", raw)
             if 1 <= int(token) <= len(choices)
         }
+        picked.update(locked)
         if len(picked) < minimum:
-            picked = set(list(initial)[:minimum]) or {choices[0][0]}
+            for value, _ in choices:
+                if value in initial or not picked:
+                    picked.add(value)
+                if len(picked) >= minimum:
+                    break
+        picked.update(locked)
+        if maximum is not None and len(picked) > maximum:
+            ordered = [value for value, _ in choices if value in picked and value not in locked]
+            picked = locked | set(ordered[: max(0, maximum - len(locked))])
         return [value for value, _ in choices if value in picked]
 
     if not sys.stdin.isatty() or not sys.stdout.isatty():
@@ -509,9 +523,10 @@ def checkbox_prompt(
             for screen_row, index in enumerate(range(top, min(len(filtered), top + visible)), start=4):
                 value, label = filtered[index]
                 marker = "[x]" if value in selected else "[ ]"
+                lock = "  LOCKED" if value in locked else ""
                 pointer = ">" if index == cursor else " "
                 attr = curses.A_REVERSE if index == cursor else 0
-                put(screen_row, 0, f"{pointer} {marker} {label}", attr)
+                put(screen_row, 0, f"{pointer} {marker} {label}{lock}", attr)
 
             footer_y = min(height - 2, 4 + visible)
             footer = f"Selected: {len(selected)}"
@@ -532,14 +547,16 @@ def checkbox_prompt(
                 cursor = min(len(filtered) - 1, cursor + visible)
             elif key == ord(" ") and filtered:
                 value = filtered[cursor][0]
-                if value in selected:
+                if value in locked:
+                    warning = "That item is fixed by this HealthCoach profile."
+                elif value in selected:
                     selected.remove(value)
                 else:
                     if maximum == 1:
-                        selected.clear()
+                        selected = set(locked)
                     for group in exclusive_sets:
                         if value in group:
-                            selected.difference_update(group)
+                            selected.difference_update(group - locked)
                     if maximum is None or len(selected) < maximum:
                         selected.add(value)
             elif key in (10, 13, curses.KEY_ENTER):
@@ -547,15 +564,18 @@ def checkbox_prompt(
                     return [value for value, _ in choices if value in selected]
                 warning = f"Select at least {minimum} option(s)."
             elif key == ord("n"):
-                selected.clear()
+                selected = set(locked)
             elif key == ord("a"):
                 if maximum == 1 and filtered:
-                    selected = {filtered[cursor][0]}
+                    value = filtered[cursor][0]
+                    selected = set(locked)
+                    if value not in locked and len(selected) < maximum:
+                        selected.add(value)
                 else:
                     for value, _ in filtered:
                         for group in exclusive_sets:
                             if value in group:
-                                selected.difference_update(group)
+                                selected.difference_update(group - locked)
                         selected.add(value)
             elif key == ord("r"):
                 query = ""
@@ -1158,6 +1178,7 @@ def select_candidates(raw: str | None) -> list[Candidate]:
 
 def parse_issue_codes(raw: str) -> list[str]:
     out = []
+    missing = []
     for token in [x.strip().lower() for x in raw.split(",") if x.strip()]:
         if token.isdigit() and 1 <= int(token) <= len(ISSUES):
             key = list(ISSUES)[int(token) - 1]
@@ -1165,6 +1186,10 @@ def parse_issue_codes(raw: str) -> list[str]:
             key = next((k for k, label in ISSUES.items() if token == k or token in label.lower()), "")
         if key and key not in out:
             out.append(key)
+        elif not key:
+            missing.append(token)
+    if missing:
+        raise SystemExit("Unknown --issues value(s): %s. Use --list-issues to see valid keys." % ", ".join(missing))
     return out
 
 
@@ -1190,6 +1215,7 @@ def ask_profile_quick() -> dict:
         groups: Sequence[tuple[str, str, Sequence[tuple[str, str]], Sequence[str]]],
         *,
         exclusive: Sequence[str] = (),
+        locked: Sequence[str] = (),
     ) -> None:
         choices: list[tuple[str, str]] = []
         defaults: list[str] = []
@@ -1208,6 +1234,7 @@ def ask_profile_quick() -> dict:
             description=description,
             defaults=defaults,
             exclusive_groups=tuple(group_values[prefix] for prefix in exclusive),
+            locked_values=locked,
         ))
 
     run_step(1, "GOALS AND CURRENT ACTIVITY",
@@ -1224,7 +1251,7 @@ def ask_profile_quick() -> dict:
     run_step(3, "WHAT YOU TAKE NOW",
              "Select only supplements you use now. Press / to search by name.", (
         ("taking", "TAKING NOW", supplement_options, ("creatine_monohydrate",)),
-    ))
+    ), locked=("taking::creatine_monohydrate",))
     run_step(4, "MEDICINES AND SAFETY",
              "Record results, medicines, known risks, confirmed labs, and reactions.", (
         ("result", "RESULT SO FAR", SUPPLEMENT_RESULT_OPTIONS, ("not_tracked",)),
@@ -1232,7 +1259,7 @@ def ask_profile_quick() -> dict:
         ("safety", "HEALTH FLAG", SAFETY_OPTIONS, ("none_known",)),
         ("deficiency", "CONFIRMED LAB", DEFICIENCY_OPTIONS, ("none_unknown",)),
         ("reaction", "PAST REACTION", REACTION_OPTIONS, ("none_reported",)),
-    ))
+    ), locked=("medication::tirzepatide",))
     run_step(5, "SUPPLEMENTS TO INVESTIGATE",
              "Choose one intake route, then topics to research. Food-first applies only where a meaningful whole-food route exists; it never invents a food substitute for a drug or isolated compound.", (
         ("supplement_source", "SOURCE · ONE", SUPPLEMENT_SOURCE_OPTIONS, ("whole_food_first",)),
@@ -1245,7 +1272,7 @@ def ask_profile_quick() -> dict:
              "Choose one research boundary, then optionally select named items. Broad scan means evidence triage—not approval, compatibility, or a dosing plan.", (
         ("experimental", "BOUNDARY · ONE", EXPERIMENTAL_POLICY_OPTIONS, ("approved_only",)),
         ("peptide", "RESEARCH", peptide_options, ("tirzepatide_current_prescription",)),
-    ), exclusive=("experimental",))
+    ), exclusive=("experimental",), locked=("peptide::tirzepatide_current_prescription",))
     run_step(7, "FOOD, SLEEP, CAFFEINE, AND SUBSTANCES",
              "Choose current patterns or symptoms so the plan avoids conflicts.", (
         ("diet", "FOOD / GI", DIET_GI_OPTIONS, ("none_reported",)),
@@ -1380,6 +1407,7 @@ def ask_profile_quick() -> dict:
         "issue_labels": issue_labels,
         "goals": "; ".join(issue_labels),
         "priorities": "1) keep muscle/strength, 2) lose fat, 3) improve running; revise in final note if needed",
+        "training_mode_keys": training_modes,
         "training": f"{'; '.join(labels_for(training_modes, TRAINING_OPTIONS))}; locked three-lift hybrid week; detailed mileage not entered",
         "cardio_timing": cardio_timing,
         "cardio_timing_label": dict(CARDIO_TIMING_OPTIONS)[cardio_timing],
@@ -1387,9 +1415,11 @@ def ask_profile_quick() -> dict:
         "workout_timing": workout_timing,
         "workout_timing_label": dict(WORKOUT_TIMING_OPTIONS)[workout_timing],
         "workout_clock_constraints": workout_clock,
+        "injury_keys": injury_keys,
         "injuries": "; ".join(labels_for(injury_keys, INJURY_OPTIONS)) or "none reported",
         "current_supplements": "; ".join(current_names) or "none selected",
         "current_supplement_keys": current_supplement_keys,
+        "supplement_result_keys": result_keys,
         "supplement_results": "; ".join(labels_for(result_keys, SUPPLEMENT_RESULT_OPTIONS)) or "not tracked",
         "priority_supplement_keys": interest_keys,
         "priority_supplements": [c.name for c in CATALOG if c.key in interest_keys],
@@ -1399,11 +1429,16 @@ def ask_profile_quick() -> dict:
         "selected_peptides": [c.name for c in PEPTIDE_CATALOG if c.key in peptide_keys],
         "experimental_policy": experimental_policy,
         "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
+        "medication_keys": medication_keys,
         "medications": "; ".join(labels_for(medication_keys, MEDICATION_OPTIONS)) or "none reported",
+        "deficiency_keys": deficiency_keys,
         "confirmed_deficiencies_or_labs": "; ".join(labels_for(deficiency_keys, DEFICIENCY_OPTIONS)) or "none/unknown",
+        "condition_keys": condition_keys,
         "conditions_and_safety_flags": "; ".join(labels_for(condition_keys, SAFETY_OPTIONS)) or "none known",
         "vitals": "unknown/not entered in guided assessment",
+        "reaction_keys": reaction_keys,
         "prior_reactions": "; ".join(labels_for(reaction_keys, REACTION_OPTIONS)) or "none reported",
+        "diet_keys": diet_keys,
         "diet_and_gi": "; ".join(labels_for(diet_keys, DIET_GI_OPTIONS)) or "none reported",
         "food_addition_keys": food_addition_keys,
         "food_additions": labels_for(food_addition_keys, FOOD_ADDITION_OPTIONS),
@@ -1414,10 +1449,15 @@ def ask_profile_quick() -> dict:
         "store_keys": store_keys,
         "shopping_stores": labels_for(store_keys, STORE_OPTIONS),
         "whole_life_details": f"apartment now; include house options; Christian Bible/Jesus learning; assessment detail: {notes}",
+        "caffeine_keys": caffeine_keys,
         "caffeine": f"{'; '.join(labels_for(caffeine_keys, CAFFEINE_OPTIONS)) or 'none'}; amount not entered; none after 11:15",
+        "sleep_keys": sleep_keys,
         "sleep": f"{'; '.join(labels_for(sleep_keys, SLEEP_OPTIONS)) or 'none reported'}; locked target 20:15–04:30",
+        "substance_keys": substance_keys,
         "substances": "; ".join(labels_for(substance_keys, SUBSTANCE_OPTIONS)) or "none reported",
+        "preference_keys": preference_keys,
         "preferences": "; ".join(labels_for(preference_keys, PRODUCT_OPTIONS)) or "none selected",
+        "timeline_keys": timeline_keys,
         "timeline": "; ".join(labels_for(timeline_keys, TIMELINE_OPTIONS)),
         "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
     }
@@ -1538,6 +1578,7 @@ def ask_profile_detailed() -> dict:
         "Which supplements are currently being used?",
         supplement_choices,
         defaults=("creatine_monohydrate",),
+        locked_values=("creatine_monohydrate",),
     )
     current_names = [c.name for c in CATALOG if c.key in current_supplement_keys]
     current_details = Prompt.ask(
@@ -1581,6 +1622,7 @@ def ask_profile_detailed() -> dict:
         "Which peptides, incretins, or gray-market compounds should be reviewed? Selection is research-only.",
         peptide_choices,
         defaults=("tirzepatide_current_prescription",),
+        locked_values=("tirzepatide_current_prescription",),
     )
     peptide_names = [c.name for c in PEPTIDE_CATALOG if c.key in peptide_keys]
 
@@ -1588,6 +1630,7 @@ def ask_profile_detailed() -> dict:
         "Which medications or prescriptions are currently used?",
         MEDICATION_OPTIONS,
         defaults=("tirzepatide",),
+        locked_values=("tirzepatide",),
     )
     medication_names = labels_for(medication_keys, MEDICATION_OPTIONS)
     medication_details = Prompt.ask(
@@ -1716,6 +1759,7 @@ def ask_profile_detailed() -> dict:
         "issue_labels": [ISSUES[x] for x in issues],
         "goals": goals,
         "priorities": priorities,
+        "training_mode_keys": training_modes,
         "training": f"{'; '.join(labels_for(training_modes, TRAINING_OPTIONS))}; {training}",
         "cardio_timing": cardio_timing,
         "cardio_timing_label": dict(CARDIO_TIMING_OPTIONS)[cardio_timing],
@@ -1735,12 +1779,15 @@ def ask_profile_detailed() -> dict:
         "selected_peptides": peptide_names,
         "experimental_policy": experimental_policy,
         "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
+        "medication_keys": medication_keys,
         "medications": medications,
         "confirmed_deficiencies_or_labs": deficiencies,
         "conditions_and_safety_flags": conditions,
+        "condition_keys": condition_keys,
         "vitals": vitals,
         "prior_reactions": reactions,
         "diet_and_gi": diet,
+        "diet_keys": diet_keys,
         "food_addition_keys": food_addition_keys,
         "food_additions": labels_for(food_addition_keys, FOOD_ADDITION_OPTIONS),
         "home_practice_keys": home_practice_keys,
@@ -1750,9 +1797,13 @@ def ask_profile_detailed() -> dict:
         "store_keys": store_keys,
         "shopping_stores": labels_for(store_keys, STORE_OPTIONS),
         "whole_life_details": whole_life_details,
+        "caffeine_keys": caffeine_keys,
         "caffeine": caffeine,
+        "sleep_keys": sleep_keys,
         "sleep": sleep,
+        "substance_keys": substance_keys,
         "substances": substances,
+        "preference_keys": preference_keys,
         "preferences": preferences,
         "timeline": timeline,
         "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
@@ -1783,6 +1834,13 @@ def default_profile(args: argparse.Namespace) -> dict:
         raise SystemExit("--supplement-source must be whole_food_first, mixed, or products_allowed")
     current_text = args.current or "creatine monohydrate 5 g/day"
     current_candidates = [c for c in CATALOG if _matches_entry(c, current_text)]
+    medication_text = args.medications or "tirzepatide"
+    medication_keys = [
+        value for value, label in MEDICATION_OPTIONS
+        if value != "other" and _contains(medication_text, (value, label))
+    ]
+    if medication_text and medication_text.lower() not in {"none", "none reported"} and not medication_keys:
+        medication_keys = ["other"]
     food_addition_keys = parse_choice_values(
         args.food_additions,
         FOOD_ADDITION_OPTIONS,
@@ -1826,7 +1884,8 @@ def default_profile(args: argparse.Namespace) -> dict:
         "selected_peptides": [c.name for c in peptides],
         "experimental_policy": experimental_policy,
         "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
-        "medications": args.medications or "tirzepatide",
+        "medication_keys": medication_keys,
+        "medications": medication_text,
         "confirmed_deficiencies_or_labs": args.deficiencies or "none/unknown",
         "conditions_and_safety_flags": args.conditions or "none",
         "vitals": args.vitals or "unknown",
@@ -1848,6 +1907,106 @@ def default_profile(args: argparse.Namespace) -> dict:
         "timeline": args.timeline or "none reported",
         "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
     }
+
+
+def hard_define_profile(profile: dict) -> dict:
+    """Validate machine keys and enforce the immutable choices before retrieval."""
+    catalogs: tuple[tuple[str, Sequence[tuple[str, str]], str | None], ...] = (
+        ("issues", tuple(ISSUES.items()), None),
+        ("training_mode_keys", TRAINING_OPTIONS, None),
+        ("injury_keys", INJURY_OPTIONS, "none_reported"),
+        ("current_supplement_keys", tuple((c.key, c.name) for c in CATALOG), None),
+        ("supplement_result_keys", SUPPLEMENT_RESULT_OPTIONS, "not_tracked"),
+        ("priority_supplement_keys", tuple((c.key, c.name) for c in CATALOG), None),
+        ("selected_peptide_keys", tuple((c.key, c.name) for c in PEPTIDE_CATALOG), None),
+        ("medication_keys", MEDICATION_OPTIONS, None),
+        ("deficiency_keys", DEFICIENCY_OPTIONS, "none_unknown"),
+        ("condition_keys", SAFETY_OPTIONS, "none_known"),
+        ("reaction_keys", REACTION_OPTIONS, "none_reported"),
+        ("diet_keys", DIET_GI_OPTIONS, "none_reported"),
+        ("food_addition_keys", FOOD_ADDITION_OPTIONS, None),
+        ("home_practice_keys", HOME_PRACTICE_OPTIONS, None),
+        ("alternative_item_keys", ALTERNATIVE_ITEM_OPTIONS, None),
+        ("caffeine_keys", CAFFEINE_OPTIONS, "none"),
+        ("sleep_keys", SLEEP_OPTIONS, "none_reported"),
+        ("substance_keys", SUBSTANCE_OPTIONS, "none_reported"),
+        ("store_keys", STORE_OPTIONS, None),
+        ("preference_keys", PRODUCT_OPTIONS, None),
+        ("timeline_keys", TIMELINE_OPTIONS, None),
+    )
+
+    for field, choices, sentinel in catalogs:
+        if field not in profile:
+            continue
+        raw = profile.get(field, ())
+        values = [str(value) for value in (raw if isinstance(raw, (list, tuple, set)) else (raw,)) if value]
+        allowed = {value for value, _ in choices}
+        unknown = sorted(set(values) - allowed)
+        if unknown:
+            raise SystemExit(f"Invalid hard-defined selection(s) in {field}: {', '.join(unknown)}")
+        if sentinel and sentinel in values and len(set(values)) > 1:
+            values = [value for value in values if value != sentinel]
+        wanted = set(values)
+        profile[field] = [value for value, _ in choices if value in wanted]
+
+    for field, choices, fallback in (
+        ("cardio_timing", CARDIO_TIMING_OPTIONS, "recommend"),
+        ("workout_timing", WORKOUT_TIMING_OPTIONS, "recommend"),
+        ("supplement_source", SUPPLEMENT_SOURCE_OPTIONS, "whole_food_first"),
+        ("experimental_policy", EXPERIMENTAL_POLICY_OPTIONS, "approved_only"),
+    ):
+        value = str(profile.get(field) or fallback)
+        if value not in dict(choices):
+            raise SystemExit(f"Invalid hard-defined selection in {field}: {value}")
+        profile[field] = value
+
+    # These are immutable facts in this project, not recommendations inferred by the model.
+    locked = {
+        "current_supplement_keys": "creatine_monohydrate",
+        "medication_keys": "tirzepatide",
+        "selected_peptide_keys": "tirzepatide_current_prescription",
+    }
+    locked_catalogs = {
+        "current_supplement_keys": tuple((c.key, c.name) for c in CATALOG),
+        "medication_keys": MEDICATION_OPTIONS,
+        "selected_peptide_keys": tuple((c.key, c.name) for c in PEPTIDE_CATALOG),
+    }
+    for field, required in locked.items():
+        values = set(profile.get(field, ())) | {required}
+        profile[field] = [value for value, _ in locked_catalogs[field] if value in values]
+
+    if "creatine monohydrate" not in profile.get("current_supplements", "").lower():
+        existing = profile.get("current_supplements", "").strip()
+        profile["current_supplements"] = "; ".join(
+            value for value in ("Creatine monohydrate 5 g/day", existing if existing.lower() not in {"", "none", "none selected"} else "") if value
+        )
+    if "tirzepatide" not in profile.get("medications", "").lower():
+        existing = profile.get("medications", "").strip()
+        profile["medications"] = "; ".join(
+            value for value in ("Tirzepatide", existing if existing.lower() not in {"", "none", "none reported"} else "") if value
+        )
+
+    profile["issue_labels"] = labels_for(profile.get("issues", ()), tuple(ISSUES.items()))
+    profile["priority_supplements"] = labels_for(
+        profile.get("priority_supplement_keys", ()), tuple((c.key, c.name) for c in CATALOG)
+    )
+    profile["selected_peptides"] = labels_for(
+        profile.get("selected_peptide_keys", ()), tuple((c.key, c.name) for c in PEPTIDE_CATALOG)
+    )
+    profile["supplement_source_label"] = dict(SUPPLEMENT_SOURCE_OPTIONS)[profile["supplement_source"]]
+    profile["experimental_policy_label"] = dict(EXPERIMENTAL_POLICY_OPTIONS)[profile["experimental_policy"]]
+    profile["cardio_timing_label"] = dict(CARDIO_TIMING_OPTIONS)[profile["cardio_timing"]]
+    profile["workout_timing_label"] = dict(WORKOUT_TIMING_OPTIONS)[profile["workout_timing"]]
+    profile["food_additions"] = labels_for(profile.get("food_addition_keys", ()), FOOD_ADDITION_OPTIONS)
+    profile["home_practices"] = labels_for(profile.get("home_practice_keys", ()), HOME_PRACTICE_OPTIONS)
+    profile["alternative_items"] = labels_for(profile.get("alternative_item_keys", ()), ALTERNATIVE_ITEM_OPTIONS)
+    profile["shopping_stores"] = labels_for(profile.get("store_keys", ()), STORE_OPTIONS)
+    profile["selection_lock_version"] = "HC_SELECTION_LOCK_V1"
+    profile["selection_validation"] = (
+        "PASS — every recorded selector key exists in its current catalog; exclusive selectors contain one value; "
+        "sentinel conflicts were normalized; tirzepatide and creatine 5 g/day are present."
+    )
+    return profile
 
 
 def sql_folder_filter(folders: Sequence[str]) -> str:
@@ -2183,6 +2342,65 @@ def questionnaire_markdown(profile: dict) -> str:
         q = str(question).replace("|", "/").replace("\n", " ")
         a = str(answer).replace("|", "/").replace("\n", "<br>")
         lines.append(f"| {q} | {a} |")
+    return "\n".join(lines)
+
+
+def selection_lock_markdown(profile: dict) -> str:
+    """Print stable machine selections so later models cannot reinterpret the intake."""
+    option_rows: tuple[tuple[str, str, Sequence[tuple[str, str]]], ...] = (
+        ("Goals / issues", "issues", tuple(ISSUES.items())),
+        ("Current activity", "training_mode_keys", TRAINING_OPTIONS),
+        ("Pain / injury choices", "injury_keys", INJURY_OPTIONS),
+        ("Current supplements", "current_supplement_keys", tuple((c.key, c.name) for c in CATALOG)),
+        ("Observed supplement results", "supplement_result_keys", SUPPLEMENT_RESULT_OPTIONS),
+        ("Priority supplement reviews", "priority_supplement_keys", tuple((c.key, c.name) for c in CATALOG)),
+        ("Peptide / gray reviews", "selected_peptide_keys", tuple((c.key, c.name) for c in PEPTIDE_CATALOG)),
+        ("Current medicines", "medication_keys", MEDICATION_OPTIONS),
+        ("Safety flags", "condition_keys", SAFETY_OPTIONS),
+        ("Confirmed lab flags", "deficiency_keys", DEFICIENCY_OPTIONS),
+        ("Past reactions", "reaction_keys", REACTION_OPTIONS),
+        ("Food / GI", "diet_keys", DIET_GI_OPTIONS),
+        ("Caffeine", "caffeine_keys", CAFFEINE_OPTIONS),
+        ("Sleep", "sleep_keys", SLEEP_OPTIONS),
+        ("Substances / stimulants", "substance_keys", SUBSTANCE_OPTIONS),
+        ("Food additions", "food_addition_keys", FOOD_ADDITION_OPTIONS),
+        ("Home / faith practices", "home_practice_keys", HOME_PRACTICE_OPTIONS),
+        ("Alternative claims", "alternative_item_keys", ALTERNATIVE_ITEM_OPTIONS),
+        ("Stores", "store_keys", STORE_OPTIONS),
+        ("Buying rules", "preference_keys", PRODUCT_OPTIONS),
+        ("Deadline", "timeline_keys", TIMELINE_OPTIONS),
+    )
+    rows: list[tuple[str, str, str, str]] = [
+        ("LOCKED", "Creatine use", "creatine_monohydrate", "Creatine monohydrate 5 g/day"),
+        ("LOCKED", "Prescription context", "tirzepatide", "Tirzepatide; dose unchanged by HealthCoach"),
+        ("LOCKED", "Required prescription evidence review", "tirzepatide_current_prescription", "Tirzepatide (current prescription)"),
+        ("ONE CHOICE", "Cardio timing", profile["cardio_timing"], profile["cardio_timing_label"]),
+        ("ONE CHOICE", "Strength timing", profile["workout_timing"], profile["workout_timing_label"]),
+        ("ONE CHOICE", "Supplement intake route", profile["supplement_source"], profile["supplement_source_label"]),
+        ("ONE CHOICE", "Experimental research boundary", profile["experimental_policy"], profile["experimental_policy_label"]),
+    ]
+    locked_fields = {"current_supplement_keys", "selected_peptide_keys", "medication_keys"}
+    for label, field, choices in option_rows:
+        if field not in profile:
+            continue
+        keys = list(profile.get(field, ()))
+        values = labels_for(keys, choices)
+        origin = "LOCKED + USER" if field in locked_fields else "USER / DEFAULT CONFIRMED"
+        rows.append((origin, label, ", ".join(keys) or "none", "; ".join(values) or "none selected"))
+
+    lines = [
+        f"**{profile.get('selection_lock_version', 'HC_SELECTION_LOCK_V1')}**",
+        "",
+        f"**Validation:** {profile.get('selection_validation', 'not run')}",
+        "",
+        "These keys are the authoritative intake record. A later model may analyze a selected item, but it may not silently add, remove, rename, or treat an unselected option as user-reported.",
+        "",
+        "| Origin | Selection field | Stable key(s) | Human-readable selection |",
+        "|---|---|---|---|",
+    ]
+    for origin, field, keys, labels in rows:
+        clean = [str(value).replace("|", "/").replace("\n", " ") for value in (origin, field, keys, labels)]
+        lines.append("| " + " | ".join(clean) + " |")
     return "\n".join(lines)
 
 
@@ -3110,6 +3328,10 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 
 {questionnaire_markdown(profile)}
 
+#### HARD-DEFINED SELECTION LOCK
+
+{selection_lock_markdown(profile)}
+
 ### 1. PERSONALIZED STACK CHANGES
 
 {stack_change_tables(candidates, evidence, decisions, profile)}
@@ -3275,9 +3497,16 @@ def main(argv: Sequence[str] | None = None) -> int:
             profile = ask_profile_detailed() if args.detailed_assessment else ask_profile_quick()
         else:
             profile = default_profile(args)
+        profile = hard_define_profile(profile)
     except KeyboardInterrupt:
         console.print("\n[yellow]Assessment cancelled. The existing report was not changed.[/yellow]")
         return 130
+    console.print(Panel.fit(
+        "[bold green]Selection lock verified[/bold green]\n"
+        "Every checkbox answer has a validated stable key. Tirzepatide and creatine 5 g/day are locked; "
+        "timing, research-boundary, and supplement-source choices each contain exactly one value.",
+        border_style="green",
+    ))
     supplement_candidates = select_candidates(args.items)
     manually_selected_peptides = set(profile.get("selected_peptide_keys", ()))
     broad_experimental_scan = profile.get("experimental_policy") == "screen_strong_human"
