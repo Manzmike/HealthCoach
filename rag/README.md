@@ -65,6 +65,11 @@ starts. The one report includes a `HARD-DEFINED SELECTION LOCK` table showing ex
 locked, selected, or left unselected. HealthCoach does not guess personal answers that the user
 did not choose.
 
+The food-review page also locks the eleven foods Michael specifically requested: beets,
+oregano, saffron, kimchi, tamarind, blueberries, garlic, ginger, honey, cinnamon, and turmeric.
+Locked here means “must be checked and shown in the report,” not “must be eaten.” The report
+keeps normal culinary food separate from oils, extracts, capsules, or standardized study forms.
+
 ## Read the result
 
 When the program finishes, browse it by chapter and logical page:
@@ -186,6 +191,27 @@ python3 test_retrieval.py
 
 Changing assessment choices, locking selections, changing stores, or generating another report
 does **not** require a source pull. Those actions reuse the indexed library already on the Mac.
+
+### One-time refresh for the eleven locked foods
+
+The first version of the library already covered beets and kimchi and had some extract-oriented
+coverage for turmeric and cinnamon. Run this focused command once to search for dedicated human
+whole-food evidence for all eleven foods, rebuild the index, and check that each folder is
+retrievable:
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+caffeinate -i ./hc-refresh-whole-foods
+```
+
+After that finishes, generate the one report:
+
+```bash
+caffeinate -i ./hc-supplements
+```
+
+You do not need to refresh again for every report. Repeat it only when intentionally updating
+the research library.
 
 ### Refresh the five focus/nootropic topics
 

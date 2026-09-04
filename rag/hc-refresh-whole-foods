@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+RAG_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd -- "$RAG_DIR/.." && pwd)"
+PAPERS_DIR="$PROJECT_DIR/papers"
+PYTHON="$RAG_DIR/.venv/bin/python3"
+
+if [[ ! -x "$PYTHON" ]]; then
+  printf 'HealthCoach environment not found: %s\n' "$PYTHON" >&2
+  printf 'Run the first-time setup in rag/README.md, then try again.\n' >&2
+  exit 1
+fi
+
+topics=(
+  beets_dietary_nitrate
+  oregano
+  saffron_food
+  fermented_veg_sauerkraut_kimchi
+  tamarind
+  blueberries
+  garlic_food
+  ginger_food
+  honey_food
+  cinnamon_food
+  turmeric_food
+)
+
+printf 'Refreshing eleven locked whole-food evidence topics...\n'
+for topic in "${topics[@]}"; do
+  printf '\n[%s] pulling legal open-access sources\n' "$topic"
+  (
+    cd "$PAPERS_DIR"
+    REFETCH="$topic" "$PYTHON" fetch_papers.py --topic "$topic"
+  )
+done
+
+printf '\nRebuilding the local search index and checking retrieval...\n'
+(
+  cd "$RAG_DIR"
+  "$PYTHON" ingest.py
+  "$PYTHON" test_retrieval.py
+)
+
+printf '\nWhole-food source refresh complete. Generate the one report with:\n'
+printf '  cd "%s" && caffeinate -i ./hc-supplements\n' "$RAG_DIR"

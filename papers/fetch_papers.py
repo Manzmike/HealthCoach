@@ -398,6 +398,15 @@ ANCHORS = {
  'omega3':['omega','epa','dha','fish oil','n-3','polyunsaturat','fatty acid'],
  'curcumin':['curcumin','turmeric'],'copper_foods':['copper'],
  'beets_dietary_nitrate':['nitrate','beet'],
+ 'oregano':['oregano','origanum'],
+ 'saffron_food':['saffron','crocus','crocin','safranal'],
+ 'tamarind':['tamarind','tamarindus'],
+ 'blueberries':['blueberry','blueberries','vaccinium'],
+ 'garlic_food':['garlic','allium'],
+ 'ginger_food':['ginger','zingiber'],
+ 'honey_food':['honey'],
+ 'cinnamon_food':['cinnamon','cinnamomum','cinnamaldehyde'],
+ 'turmeric_food':['turmeric','curcuma','curcumin'],
  'fermented_veg_sauerkraut_kimchi':['kimchi','sauerkraut','fermented','lacto'],
  'fermented_soy':['natto','tempeh','miso','soy'],
  'fermented_legumes_beans':['ferment','legume','bean'],'fermented_beets':['ferment','beet'],
@@ -764,6 +773,50 @@ TOPICS = [
      "curcumin osteoarthritis randomized",
      "curcumin bioavailability meta-analysis",
      "curcumin inflammation CRP meta-analysis"]),
+  # User-selected culinary foods. These folders keep food questions visible and make
+  # extract/form mismatch auditable instead of letting a supplement paper silently stand in
+  # for a normal serving of food.
+  T("01_food_inflammation/oregano", "oregano-food", 5, 10, [
+     "oregano culinary consumption human trial",
+     "Origanum vulgare food human systematic review",
+     "dietary oregano human health"]),
+  T("01_food_inflammation/saffron_food", "saffron-food", 5, 10, [
+     "saffron food consumption human randomized trial",
+     "Crocus sativus human systematic review food",
+     "saffron culinary dietary intake human"],
+     seeds=[("PMC","PMC5747362"),("PMC","PMC13121846")]),
+  T("01_food_inflammation/tamarind", "tamarind-food", 5, 10, [
+     "tamarind fruit consumption human trial",
+     "Tamarindus indica food human systematic review",
+     "tamarind pulp dietary intervention human"], seeds=[("PMC","PMC7050219")]),
+  T("01_food_inflammation/blueberries", "blueberry-food", 7, 12, [
+     "whole blueberry consumption randomized controlled trial humans",
+     "blueberries cardiovascular cognition systematic review human",
+     "fresh frozen blueberry dietary intervention adults"],
+     seeds=[("MED","30669469"),("MED","30999017"),("MED","41974068")]),
+  T("01_food_inflammation/garlic_food", "garlic-food", 7, 12, [
+     "garlic food consumption randomized trial humans",
+     "cooked fresh garlic dietary intervention systematic review",
+     "Allium sativum food blood pressure human trial"],
+     seeds=[("PMC","PMC2442048"),("PMC","PMC8031974")]),
+  T("01_food_inflammation/ginger_food", "ginger-food", 7, 12, [
+     "ginger food consumption randomized trial humans nausea",
+     "culinary ginger dietary intervention systematic review",
+     "Zingiber officinale food human trial"], seeds=[("PMC","PMC7019938")]),
+  T("01_food_inflammation/honey_food", "honey-food", 7, 12, [
+     "honey consumption randomized controlled trial humans",
+     "honey food cardiometabolic systematic review human",
+     "dietary honey exercise recovery human trial"],
+     seeds=[("PMC","PMC10251304"),("PMC","PMC7847356")]),
+  T("01_food_inflammation/cinnamon_food", "cinnamon-food", 7, 12, [
+     "cinnamon food consumption randomized controlled trial humans",
+     "culinary cinnamon dietary intervention systematic review",
+     "Ceylon cinnamon food human trial safety"], seeds=[("PMC","PMC8804376")]),
+  T("01_food_inflammation/turmeric_food", "turmeric-food", 7, 12, [
+     "turmeric food consumption randomized controlled trial humans",
+     "culinary turmeric dietary intervention systematic review",
+     "Curcuma longa food human trial bioavailability"],
+     seeds=[("MED","35623903"),("MED","39478418")]),
   T("01_food_inflammation/copper_foods", "copper", 6, 10, [
      "dietary copper status human",
      "copper deficiency review"], aa=False),

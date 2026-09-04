@@ -48,6 +48,7 @@ QUEUE_VERY = "Submitted: very researched"
 QUEUE_MEDIUM = "Submitted: medium researched"
 QUEUE_LOW = "Submitted: low researched"
 QUEUE_PEPTIDE = "Selected: peptide / gray-market review"
+QUEUE_WHOLE_FOOD = "Selected: whole-food evidence review"
 QUEUE_ORDER = (QUEUE_VERY, QUEUE_MEDIUM, QUEUE_LOW, QUEUE_PEPTIDE)
 GRADE_ORDER = {"A": 0, "B": 1, "C": 2, "D": 3, "—": 9}
 
@@ -295,6 +296,11 @@ WORKOUT_TIMING_OPTIONS = (
 # These are interest/review selectors, not endorsements.  The authored whole-life module
 # evaluates every option and the generated report records which ones the user wants to
 # prioritize.  Ambiguous user terms are preserved but explicitly ask for clarification.
+LOCKED_USER_FOOD_KEYS = (
+    "beets", "oregano", "saffron_food", "kimchi", "tamarind", "blueberries",
+    "garlic_food", "ginger_food", "honey_treats", "cinnamon_food", "turmeric_food",
+)
+
 FOOD_ADDITION_OPTIONS = (
     ("organic_juice", "Organic / 100% juice"),
     ("butter_stick", "Butter stick or butter-based balm — clarify edible vs topical"),
@@ -302,6 +308,16 @@ FOOD_ADDITION_OPTIONS = (
     ("sea_salt", "Sea salt / sodium source"),
     ("oysters", "Oysters — cooked, not raw"),
     ("honey_treats", "Honey and homemade honey ice cream"),
+    ("beets", "Beets / beetroot as food"),
+    ("oregano", "Oregano as a culinary herb"),
+    ("saffron_food", "Saffron as a culinary spice"),
+    ("kimchi", "Kimchi / fermented vegetables"),
+    ("tamarind", "Tamarind fruit or paste"),
+    ("blueberries", "Blueberries, fresh or frozen"),
+    ("garlic_food", "Garlic as food"),
+    ("ginger_food", "Ginger as food"),
+    ("cinnamon_food", "Cinnamon as a culinary spice"),
+    ("turmeric_food", "Turmeric as a culinary spice"),
     ("pasteurized_dairy", "Pasteurized milk, yogurt, or cottage cheese"),
     ("milk_diet", "Milk-heavy or milk-only diet"),
     ("beef_liver", "Beef liver / organ meat"),
@@ -372,6 +388,16 @@ WHOLE_LIFE_VERDICTS = {
     "sea_salt": "FOOD SEASONING — not a trace-mineral supplement; sodium is individualized for heat/sweat.",
     "oysters": "OPTIONAL FOOD — cooked only; raw oysters are not approved by this plan.",
     "honey_treats": "OPTIONAL TREAT — count honey as added sugar and keep the protein/energy plan intact.",
+    "beets": "OPTIONAL WHOLE FOOD — review beetroot-food evidence separately from standardized nitrate products.",
+    "oregano": "CULINARY FOOD — do not convert herb use into an oregano-oil antimicrobial treatment claim.",
+    "saffron_food": "CULINARY FOOD — food use is not automatically equivalent to a standardized saffron extract.",
+    "kimchi": "OPTIONAL FERMENTED FOOD — review the actual food evidence, sodium label, and individual GI tolerance.",
+    "tamarind": "CULINARY FOOD — review fruit/paste evidence and the actual product's added-sugar label.",
+    "blueberries": "WHOLE FRUIT — review blueberry-food evidence without treating a berry serving as a drug.",
+    "garlic_food": "CULINARY FOOD — fresh/cooked garlic and concentrated extracts remain distinct evidence forms.",
+    "ginger_food": "CULINARY FOOD — food use and standardized ginger products remain distinct evidence forms.",
+    "cinnamon_food": "CULINARY FOOD — do not treat seasoning as glucose-lowering therapy.",
+    "turmeric_food": "CULINARY FOOD — turmeric seasoning is not dose-equivalent to a standardized curcumin extract.",
     "pasteurized_dairy": "USEFUL PROTEIN/CALCIUM VEHICLE if tolerated; raw milk stays excluded.",
     "milk_diet": "DO NOT USE AS A SOLE DIET — it displaces food variety and is not a cut strategy.",
     "beef_liver": "OPTIONAL SMALL FOOD — avoid frequent large servings because preformed vitamin A accumulates.",
@@ -813,7 +839,8 @@ CATALOG: tuple[Candidate, ...] = (
     S("Rhodiola rosea", QUEUE_MEDIUM, "07_supplements/rhodiola", ("stress", "endurance", "focus"),
       aliases=("rhodiola", "rhodiola rosea")),
     S("NAC", QUEUE_MEDIUM, "07_supplements/nac", ("immune",), aliases=("n-acetylcysteine", "n-acetyl cysteine", "nac")),
-    S("Saffron", QUEUE_MEDIUM, "", ("stress",), aliases=("saffron", "crocin", "safranal")),
+    S("Saffron", QUEUE_MEDIUM, "01_food_inflammation/saffron_food", ("stress",),
+      aliases=("saffron", "crocin", "safranal")),
     S("Taurine", QUEUE_MEDIUM, "07_supplements/taurine", ("endurance", "heart"), aliases=("taurine",)),
     S("Citrulline / citrulline malate", QUEUE_MEDIUM, "07_supplements/citrulline_arginine", ("strength", "endurance"),
       aliases=("citrulline", "citrulline malate")),
@@ -822,7 +849,8 @@ CATALOG: tuple[Candidate, ...] = (
       aliases=("collagen", "gelatin")),
     S("Vitamin C for cold duration", QUEUE_MEDIUM, "07_supplements/vitamin_c", ("immune",),
       aliases=("vitamin c", "ascorbic acid"), policy="CONDITION-SPECIFIC"),
-    S("Garlic", QUEUE_MEDIUM, "", ("heart",), aliases=("garlic", "allium sativum")),
+    S("Garlic", QUEUE_MEDIUM, "01_food_inflammation/garlic_food", ("heart",),
+      aliases=("garlic", "allium sativum")),
     S("Green tea extract / EGCG", QUEUE_MEDIUM, "07_supplements/egcg_green_tea", ("cut", "heart"),
       aliases=("egcg", "green tea extract", "epigallocatechin"),
       gate="Extract safety differs from brewed tea; liver-risk passages control the verdict.", policy="SAFETY-REVIEW"),
@@ -830,7 +858,8 @@ CATALOG: tuple[Candidate, ...] = (
       aliases=("coq10", "coenzyme q10", "ubiquinol")),
     S("Astaxanthin", QUEUE_MEDIUM, "07_supplements/astaxanthin", ("joints", "skin"), aliases=("astaxanthin",)),
     S("Boswellia", QUEUE_MEDIUM, "07_supplements/boswellia", ("joints",), aliases=("boswellia",)),
-    S("Ginger", QUEUE_MEDIUM, "", ("gi", "joints"), aliases=("ginger", "zingiber officinale")),
+    S("Ginger", QUEUE_MEDIUM, "01_food_inflammation/ginger_food", ("gi", "joints"),
+      aliases=("ginger", "zingiber officinale")),
     S("Phosphatidylserine", QUEUE_MEDIUM, "07_supplements/phosphatidylserine", ("focus", "stress"),
       aliases=("phosphatidylserine",)),
     S("L-tyrosine when sleep-deprived or stressed", QUEUE_MEDIUM, "07_supplements/tyrosine", ("focus", "stress"),
@@ -1029,6 +1058,45 @@ PEPTIDE_CATALOG: tuple[Candidate, ...] = (
       "08_peptides_gray/ped_sarms_aas_harms", ("strength", "heart"),
       aliases=("sarms", "selective androgen receptor modulator", "anabolic androgenic steroids", "aas"),
       policy="SKIP — CLASS HARM/LEGAL/SPORT-RULE REVIEW; NO CYCLE OR PROTOCOL"),
+)
+
+# Foods explicitly selected by this user are retrieved independently from supplements/extracts.
+# Stable keys intentionally match FOOD_ADDITION_OPTIONS so the report can prove that every
+# locked intake selection received an evidence check without turning a food into an OTC add.
+WHOLE_FOOD_CATALOG: tuple[Candidate, ...] = (
+    Candidate("beets", "Beets / beetroot as food", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/beets_dietary_nitrate",), ("endurance", "heart"),
+              ("beets", "beetroot", "beet root", "beet juice"), policy="FOOD REVIEW"),
+    Candidate("oregano", "Oregano as a culinary herb", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/oregano",), ("heart", "gi"),
+              ("origanum vulgare",), policy="FOOD REVIEW; OIL/EXTRACT IS A DIFFERENT FORM"),
+    Candidate("saffron_food", "Saffron as a culinary spice", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/saffron_food",), ("stress",),
+              ("crocus sativus", "saffron food"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+    Candidate("kimchi", "Kimchi / fermented vegetables", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/fermented_veg_sauerkraut_kimchi",), ("gi", "heart"),
+              ("kimchi", "fermented vegetables"), policy="FOOD REVIEW"),
+    Candidate("tamarind", "Tamarind fruit or paste", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/tamarind",), ("heart", "gi"),
+              ("tamarindus indica", "tamarind pulp"), policy="FOOD REVIEW"),
+    Candidate("blueberries", "Blueberries, fresh or frozen", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/blueberries",), ("heart", "focus"),
+              ("blueberries", "blueberry", "vaccinium"), policy="FOOD REVIEW"),
+    Candidate("garlic_food", "Garlic as food", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/garlic_food",), ("heart",),
+              ("garlic food", "allium sativum", "cooked garlic", "fresh garlic"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+    Candidate("ginger_food", "Ginger as food", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/ginger_food",), ("gi", "joints"),
+              ("ginger food", "zingiber officinale", "culinary ginger"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+    Candidate("honey_treats", "Honey as food / treat", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/honey_food",), ("cut", "endurance"),
+              ("honey food", "honey consumption"), policy="FOOD/TREAT REVIEW"),
+    Candidate("cinnamon_food", "Cinnamon as a culinary spice", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/cinnamon_food", "07_supplements/cinnamon_glucose"), ("heart",),
+              ("cinnamon food", "ceylon cinnamon", "cinnamomum"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+    Candidate("turmeric_food", "Turmeric as a culinary spice", QUEUE_WHOLE_FOOD,
+              ("01_food_inflammation/turmeric_food", "01_food_inflammation/curcumin"), ("joints",),
+              ("turmeric food", "curcuma longa"), policy="FOOD REVIEW; CURCUMIN EXTRACT IS A DIFFERENT FORM"),
 )
 
 # These are planning routes, not claims that a food recreates an isolated study product or dose.
@@ -1282,10 +1350,13 @@ def ask_profile_quick() -> dict:
     ))
     run_step(8, "FOOD, HOME, FAITH, AND OTHER IDEAS",
              "Choose ideas to evaluate or fit into the plan—not endorse.", (
-        ("food", "FOOD IDEA", FOOD_ADDITION_OPTIONS, ("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food")),
+        ("food", "FOOD IDEA", FOOD_ADDITION_OPTIONS, (
+            "pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food",
+            *LOCKED_USER_FOOD_KEYS,
+        )),
         ("home", "HOME / FAITH", HOME_PRACTICE_OPTIONS, ("bible_prayer", "morning_light", "water_quality", "breathwork")),
         ("alternative", "CLAIM TO CHECK", ALTERNATIVE_ITEM_OPTIONS, ()),
-    ))
+    ), locked=tuple(f"food::{value}" for value in LOCKED_USER_FOOD_KEYS))
     run_step(9, "SHOPPING AND DEADLINE",
              "Choose your stores, buying priorities, and one deadline answer.", (
         ("store", "STORE · MULTI", STORE_OPTIONS, ("costco",)),
@@ -1677,7 +1748,8 @@ def ask_profile_detailed() -> dict:
     food_addition_keys = checkbox_prompt(
         "Which food additions should the report evaluate and fit into the plan?",
         FOOD_ADDITION_OPTIONS,
-        defaults=("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food"),
+        defaults=("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food", *LOCKED_USER_FOOD_KEYS),
+        locked_values=LOCKED_USER_FOOD_KEYS,
     )
     home_practice_keys = checkbox_prompt(
         "Which apartment/home practices should the report evaluate?",
@@ -1844,7 +1916,7 @@ def default_profile(args: argparse.Namespace) -> dict:
     food_addition_keys = parse_choice_values(
         args.food_additions,
         FOOD_ADDITION_OPTIONS,
-        defaults=("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food"),
+        defaults=("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food", *LOCKED_USER_FOOD_KEYS),
     )
     home_practice_keys = parse_choice_values(
         args.home_practices,
@@ -1975,6 +2047,11 @@ def hard_define_profile(profile: dict) -> dict:
         values = set(profile.get(field, ())) | {required}
         profile[field] = [value for value, _ in locked_catalogs[field] if value in values]
 
+    selected_foods = set(profile.get("food_addition_keys", ())) | set(LOCKED_USER_FOOD_KEYS)
+    profile["food_addition_keys"] = [
+        value for value, _ in FOOD_ADDITION_OPTIONS if value in selected_foods
+    ]
+
     if "creatine monohydrate" not in profile.get("current_supplements", "").lower():
         existing = profile.get("current_supplements", "").strip()
         profile["current_supplements"] = "; ".join(
@@ -2004,7 +2081,7 @@ def hard_define_profile(profile: dict) -> dict:
     profile["selection_lock_version"] = "HC_SELECTION_LOCK_V1"
     profile["selection_validation"] = (
         "PASS — every recorded selector key exists in its current catalog; exclusive selectors contain one value; "
-        "sentinel conflicts were normalized; tirzepatide and creatine 5 g/day are present."
+        "sentinel conflicts were normalized; tirzepatide, creatine 5 g/day, and all user-locked whole-food reviews are present."
     )
     return profile
 
@@ -2027,8 +2104,15 @@ def retrieve_candidate(
     tbl, emb, reranker, candidate: Candidate, issue_labels: Sequence[str], medications: str = ""
 ) -> Evidence:
     issue_text = "; ".join(issue_labels[:4])
-    query = (f"{candidate.name} human supplementation systematic review randomized trial efficacy effect size "
-             f"dose form duration adverse effects interaction with {medications or 'medications'}; goals: {issue_text}")
+    if candidate.queue == QUEUE_WHOLE_FOOD:
+        query = (
+            f"{candidate.name} human dietary consumption food intervention randomized controlled trial systematic review "
+            f"health performance appetite gastrointestinal safety amount duration; distinguish whole food culinary use "
+            f"from extract supplement; goals: {issue_text}"
+        )
+    else:
+        query = (f"{candidate.name} human supplementation systematic review randomized trial efficacy effect size "
+                 f"dose form duration adverse effects interaction with {medications or 'medications'}; goals: {issue_text}")
     qv = emb.encode(HC.Q_PREFIX + query, normalize_embeddings=True).tolist()
     shared_safety_folders = (
         "07_supplements/interactions_stacking",
@@ -2089,6 +2173,12 @@ def retrieve_candidate(
             # make an experimental topic pass the human-evidence gate.
             if h.get("folder") not in candidate.folders or not experimental_human_intervention_hit(h):
                 continue
+        elif candidate.queue == QUEUE_WHOLE_FOOD:
+            # Whole-food rows must come from the food's configured folders and explicitly
+            # describe humans; extract-only, animal, cell, agriculture, and food-chemistry
+            # papers can remain visible as leads but cannot raise food coverage.
+            if h.get("folder") not in candidate.folders or not whole_food_human_hit(h):
+                continue
         source_key = h.get("doi") or h.get("source_pdf") or h.get("text", "")[:120]
         human_sources[source_key] = h
     n_human = len(human_sources)
@@ -2099,6 +2189,8 @@ def retrieve_candidate(
     cohorts = {h.get("cohort", "general") for h in human_sources.values()}
     if candidate.queue == QUEUE_PEPTIDE and human_sources:
         fit = "human intervention retrieved; indication/population fit requires passage-level review"
+    elif candidate.queue == QUEUE_WHOLE_FOOD and human_sources:
+        fit = "human dietary-topic evidence retrieved; culinary serving versus extract/form fit still requires passage review"
     else:
         fit = "direct/general" if "general" in cohorts else "indirect/older-only" if cohorts else "not established"
     return Evidence(coverage, best, n_human, len(dois), fit, hits)
@@ -2374,6 +2466,12 @@ def selection_lock_markdown(profile: dict) -> str:
         ("LOCKED", "Creatine use", "creatine_monohydrate", "Creatine monohydrate 5 g/day"),
         ("LOCKED", "Prescription context", "tirzepatide", "Tirzepatide; dose unchanged by HealthCoach"),
         ("LOCKED", "Required prescription evidence review", "tirzepatide_current_prescription", "Tirzepatide (current prescription)"),
+        (
+            "LOCKED",
+            "Required whole-food evidence reviews",
+            ", ".join(LOCKED_USER_FOOD_KEYS),
+            "; ".join(labels_for(LOCKED_USER_FOOD_KEYS, FOOD_ADDITION_OPTIONS)),
+        ),
         ("ONE CHOICE", "Cardio timing", profile["cardio_timing"], profile["cardio_timing_label"]),
         ("ONE CHOICE", "Strength timing", profile["workout_timing"], profile["workout_timing_label"]),
         ("ONE CHOICE", "Supplement intake route", profile["supplement_source"], profile["supplement_source_label"]),
@@ -2902,6 +3000,18 @@ def experimental_human_intervention_hit(hit: dict) -> bool:
     return any(term in text for term in EXPERIMENTAL_INTERVENTION_TERMS)
 
 
+def whole_food_human_hit(hit: dict) -> bool:
+    """Require an explicit human signal plus language consistent with eating a food."""
+    if not experimental_human_hit(hit):
+        return False
+    text = " ".join((hit.get("text", ""), hit.get("source_pdf", ""))).lower()
+    food_signals = (
+        "food", "dietary", "diet ", "consum", "meal", "culinary", "fruit", "vegetable",
+        "spice", "herb", "juice", "fresh", "frozen", "paste", "powder",
+    )
+    return any(signal in text for signal in food_signals)
+
+
 def _unique_human_hits(hits: Sequence[dict], required_terms: Sequence[str] = ()) -> list[dict]:
     unique: dict[str, dict] = {}
     for hit in hits:
@@ -3146,6 +3256,42 @@ def source_rows(candidates: Sequence[Candidate], evidence: dict[str, Evidence]) 
     return "\n".join(lines) or "- No on-topic sources survived retrieval."
 
 
+def whole_food_evidence_table(candidates: Sequence[Candidate], evidence: dict[str, Evidence]) -> str:
+    """Coverage ledger for selected foods; this is separate from supplement decisions."""
+    lines = [
+        "Every row below is locked because the user explicitly requested the food. `STRONG` means at least two unique on-topic A/B human sources survived; `WEAK` means one; `NONE` means no efficacy claim is made. A food selection is a request for analysis, not a requirement to eat it.",
+        "For each food the compiler asks: Was a normal food/culinary form actually studied in humans, what outcome and amount were reported, is the source independent, does the population fit, and is an extract being mistaken for the food?",
+        "",
+        "| Locked food | Stable key | Coverage | Best grade | Unique human sources / DOIs | Population/form fit | Retrieved basis |",
+        "|---|---|---:|---:|---:|---|---|",
+    ]
+    for candidate in candidates:
+        ev = evidence[candidate.key]
+        seen: set[str] = set()
+        tags: list[str] = []
+        for hit in ev.hits:
+            if (
+                hit.get("grade") not in ("A", "B")
+                or hit.get("folder") not in candidate.folders
+                or not whole_food_human_hit(hit)
+            ):
+                continue
+            source_key = hit.get("doi") or hit.get("source_pdf") or hit.get("text", "")[:120]
+            if source_key in seen:
+                continue
+            seen.add(source_key)
+            tags.append("[%s / %s / %s]" % (
+                hit.get("grade", "—"), hit.get("folder", "unknown"), hit.get("doi") or "no-doi",
+            ))
+            if len(tags) >= 3:
+                break
+        basis = " ".join(tags) if tags else "COVERAGE GAP — run the focused whole-food source refresh; do not fill from memory"
+        count = f"{ev.unique_papers} / {ev.unique_dois}"
+        values = (candidate.name, candidate.key, ev.coverage, ev.best_grade, count, ev.fit, basis)
+        lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", " ") for value in values) + " |")
+    return "\n".join(lines)
+
+
 def timing_source_rows(ev: Evidence) -> str:
     lines: list[str] = []
     seen: set[str] = set()
@@ -3280,6 +3426,8 @@ def write_report(
     deep_cards: Sequence[str],
     timing_section: str,
     timing_evidence: Evidence,
+    food_candidates: Sequence[Candidate],
+    food_evidence: dict[str, Evidence],
 ) -> None:
     queues = []
     for queue in QUEUE_ORDER:
@@ -3317,6 +3465,10 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 ### SELECTED PRIORITIES AND PLAN VERDICTS
 
 {whole_life_selection_markdown(profile)}
+
+### LOCKED WHOLE-FOOD EVIDENCE CHECK
+
+{whole_food_evidence_table(food_candidates, food_evidence)}
 
 {whole_life}
 
@@ -3388,6 +3540,10 @@ The library did not return an on-topic A/B human passage for these selected cand
 #### Supplement and peptide sources
 
 {source_rows(candidates, evidence)}
+
+#### Locked whole-food sources
+
+{source_rows(food_candidates, food_evidence)}
 """
     text = indexed_document(body, now)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -3503,7 +3659,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 130
     console.print(Panel.fit(
         "[bold green]Selection lock verified[/bold green]\n"
-        "Every checkbox answer has a validated stable key. Tirzepatide and creatine 5 g/day are locked; "
+        "Every checkbox answer has a validated stable key. Tirzepatide, creatine 5 g/day, and the requested whole-food reviews are locked; "
         "timing, research-boundary, and supplement-source choices each contain exactly one value.",
         border_style="green",
     ))
@@ -3519,6 +3675,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         if broad_experimental_scan and c.policy != "KEEP-PRESCRIPTION"
     ]
     candidates = [*supplement_candidates, *peptide_candidates]
+    selected_food_keys = set(profile.get("food_addition_keys", ()))
+    food_candidates = [candidate for candidate in WHOLE_FOOD_CATALOG if candidate.key in selected_food_keys]
     explicit_count = len(
         (set(profile.get("priority_supplement_keys", ())) | set(profile.get("selected_peptide_keys", ())))
         & {c.key for c in candidates}
@@ -3532,7 +3690,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     out = Path(args.output).expanduser().resolve() if args.output else DEFAULT_OUT
 
     console.print(Panel(
-        f"[bold]{len(candidates)} candidates[/bold] · deep cards: [bold]{deep_limit}[/bold]\n"
+        f"[bold]{len(candidates)} supplement/gray candidates[/bold] · "
+        f"[bold]{len(food_candidates)} locked foods[/bold] · deep cards: [bold]{deep_limit}[/bold]\n"
         "Loading the embedding model and reranker; evidence is retrieved locally.",
         title="Audit scope", border_style="bright_blue",
     ))
@@ -3543,16 +3702,26 @@ def main(argv: Sequence[str] | None = None) -> int:
     reranker = HC.load_reranker()
 
     evidence: dict[str, Evidence] = {}
+    food_evidence: dict[str, Evidence] = {}
     progress = Progress(
         SpinnerColumn(), TextColumn("[progress.description]{task.description}"),
         BarColumn(), TextColumn("{task.completed}/{task.total}"), TimeElapsedColumn(), console=console,
     )
     with progress:
-        task = progress.add_task("Retrieving and de-duplicating evidence", total=len(candidates) + 1)
+        task = progress.add_task(
+            "Retrieving and de-duplicating evidence",
+            total=len(candidates) + len(food_candidates) + 1,
+        )
         for c in candidates:
             progress.update(task, description=f"Checking {c.name[:38]}")
             evidence[c.key] = retrieve_candidate(
                 tbl, emb, reranker, c, profile["issue_labels"], profile["medications"]
+            )
+            progress.advance(task)
+        for candidate in food_candidates:
+            progress.update(task, description=f"Checking food: {candidate.name[:32]}")
+            food_evidence[candidate.key] = retrieve_candidate(
+                tbl, emb, reranker, candidate, profile["issue_labels"], profile["medications"]
             )
             progress.advance(task)
         progress.update(task, description="Checking cardio and strength timing")
@@ -3575,7 +3744,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     cards: list[str] = []
     timing_section = deterministic_timing_card(timing_evidence, profile)
     # Checkpoint the complete inventory before slow generation starts.
-    write_report(out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence)
+    write_report(
+        out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
+        food_candidates, food_evidence,
+    )
     if deep_candidates:
         console.print("\n[bold]Loading the local generator for deep evidence cards...[/bold]")
         from mlx_lm import load
@@ -3583,23 +3755,35 @@ def main(argv: Sequence[str] | None = None) -> int:
         try:
             console.print("[bold]Synthesizing the source-bound training-timing recommendation...[/bold]")
             timing_section = timing_card(model, tok, timing_evidence, profile, args.max_tokens)
-            write_report(out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence)
+            write_report(
+                out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
+                food_candidates, food_evidence,
+            )
             with progress:
                 task = progress.add_task("Writing bounded deep cards", total=len(deep_candidates))
                 for c in deep_candidates:
                     progress.update(task, description=f"Synthesizing {c.name[:38]}")
                     cards.append(deep_card(model, tok, c, evidence[c.key], decisions[c.key], profile, args.max_tokens))
-                    write_report(out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence)
+                    write_report(
+                        out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
+                        food_candidates, food_evidence,
+                    )
                     progress.advance(task)
         except KeyboardInterrupt:
-            write_report(out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence)
+            write_report(
+                out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
+                food_candidates, food_evidence,
+            )
             console.print(Panel.fit(
                 f"[yellow]Interrupted safely.[/yellow] The full inventory and {len(cards)} completed deep card(s) were saved.\n{out}",
                 border_style="yellow",
             ))
             return 130
 
-    write_report(out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence)
+    write_report(
+        out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
+        food_candidates, food_evidence,
+    )
     render_terminal_summary(candidates, evidence, decisions, out)
     return 0
 
