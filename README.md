@@ -5,6 +5,54 @@ asks a few questions about your goals, and creates one personalized report.
 
 You do not need to understand artificial intelligence, databases, or programming to use it.
 
+## The concept
+
+Most health information arrives as disconnected pieces: one workout from a video, one food
+rule from a podcast, one supplement claim from a store, and a different answer every time an
+AI is asked. Those pieces may ignore the person's schedule, medications, injuries, existing
+stack, recovery, or the other recommendations already in the plan.
+
+HealthCoach turns those scattered decisions into one repeatable process:
+
+```text
+Your selections
+      ↓
+Relevant passages from the local research library
+      ↓
+Duplicate and off-topic checks
+      ↓
+Evidence strength, personal fit, and safety gates
+      ↓
+One practical report with the plan and its references
+```
+
+The user remains in control. Selecting a food, supplement, peptide, training time, store, or
+lifestyle idea means “research and evaluate this,” not “automatically recommend this.” The
+compiler can keep it, make it optional, require clinician review, or explain why it should be
+skipped.
+
+## Why this is a big deal
+
+- **It connects the decisions.** Training, food, sleep, supplements, medications, shopping,
+  schedule, and recovery are evaluated as parts of the same plan instead of separate answers.
+- **It shows its work.** The report keeps the questions, recorded answers, evidence grades,
+  source folders, and available DOI references beside the conclusions.
+- **It admits uncertainty.** Weak, indirect, animal-only, missing, and off-topic evidence is
+  labeled instead of silently being turned into confident advice.
+- **It produces something usable.** Research is converted into a weekly schedule, shopping
+  strategy, meal structure, decision tables, safety gates, and skip rules.
+- **It is personal without hiding the basis.** The user selects goals, constraints, current
+  products, preferred stores, and topics to investigate; the research still controls health
+  claims.
+- **It stays manageable.** Every run replaces one organized report rather than producing a
+  pile of disconnected files.
+- **It runs locally after setup.** The paper search, evidence matching, and report generation
+  happen on the Mac once the required models are available.
+
+HealthCoach is not automatically correct merely because it cites papers. Its quality still
+depends on the papers in the library, retrieval accuracy, source quality, and human review.
+That is why the report exposes gaps and references instead of presenting itself as a doctor.
+
 ## What you receive
 
 HealthCoach creates one file:

@@ -3,6 +3,27 @@
 HealthCoach asks what you want help with, checks research stored on your Mac, and writes one
 personalized document named `HEALTHCOACH_REPORT.md`.
 
+## What the idea means
+
+Health advice is often scattered across videos, product pages, studies, and unrelated AI
+answers. HealthCoach brings the user's schedule, goals, training, food choices, current stack,
+safety concerns, and shopping options into one assessment. It then searches the local paper
+library for each selected topic, removes duplicate or off-topic results, and records how strong
+and personally relevant the remaining evidence is.
+
+```text
+select → retrieve → check → compare → build one report
+```
+
+This matters because selecting something does not make it a recommendation. A supplement,
+peptide, food, or lifestyle claim can be kept, marked optional, sent to clinician review, or
+rejected. The final document shows the answer, the practical plan, the evidence strength, the
+coverage gaps, and the references together. That makes it easier to inspect, update, and hand
+to another person or AI without losing the reasoning behind the plan.
+
+It is still a research and planning tool—not a diagnosis or a guarantee of correctness. The
+library and retrieval results must be good, so missing and weak coverage remain visible.
+
 ## Run HealthCoach
 
 Open Terminal and paste:
