@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+RAG_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(cd -- "$RAG_DIR/.." && pwd)"
+PAPERS_DIR="$PROJECT_DIR/papers"
+PYTHON="$RAG_DIR/.venv/bin/python3"
+JOBS="${HC_EXPERIMENTAL_JOBS:-3}"
+PER_TOPIC="${HC_EXPERIMENTAL_ABOOST_N:-8}"
+
+if [[ ! -x "$PYTHON" ]]; then
+  printf 'HealthCoach environment not found: %s\n' "$PYTHON" >&2
+  printf 'Run the first-time setup in rag/README.md, then try again.\n' >&2
+  exit 1
+fi
+
+if ! [[ "$JOBS" =~ ^[1-9][0-9]*$ ]]; then
+  printf 'HC_EXPERIMENTAL_JOBS must be a positive integer, not %s\n' "$JOBS" >&2
+  exit 2
+fi
+
+printf 'Refreshing A/B source candidates across the experimental/gray research folders.\n'
+printf 'The report applies a separate human-participant + intervention/exposure gate after retrieval.\n'
+printf 'This is a source search, not approval of any compound. Jobs: %s; target top-up/topic: %s.\n' "$JOBS" "$PER_TOPIC"
+
+status=0
+scopes=(
+  08_peptides_gray
+  05_fat_loss_drugs
+)
+for scope in "${scopes[@]}"; do
+  printf '\nScanning source scope: %s\n' "$scope"
+  pids=()
+  for ((index=0; index<JOBS; index++)); do
+    (
+      cd "$PAPERS_DIR"
+      ABOOST=1 ABOOST_N="$PER_TOPIC" "$PYTHON" fetch_papers.py \
+        --topic "$scope" --shard "$index/$JOBS"
+    ) &
+    pids+=("$!")
+  done
+  for pid in "${pids[@]}"; do
+    if ! wait "$pid"; then
+      status=1
+    fi
+  done
+done
+if (( status != 0 )); then
+  printf 'One or more source workers failed. Re-run the same command; fetching is resumable.\n' >&2
+  exit "$status"
+fi
+
+printf '\nRebuilding the local search index and running the retrieval check...\n'
+(
+  cd "$RAG_DIR"
+  "$PYTHON" ingest.py
+  "$PYTHON" test_retrieval.py
+)
+
+printf '\nExperimental-source refresh complete. To use the broad screen, run:\n'
+printf '  cd "%s" && caffeinate -i ./hc-supplements\n' "$RAG_DIR"
+printf 'Then select “Research-only broad scan” under PEPTIDE / GRAY-MARKET RESEARCH.\n'

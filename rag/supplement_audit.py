@@ -11,6 +11,7 @@ Examples:
   ./hc-supplements --issues strength,endurance,sleep --deep-limit 12
   ./hc-supplements --items creatine,caffeine,magnesium --evidence-only
   ./hc-supplements --priority-items creatine,omega-3 --peptides tirzepatide,bpc-157
+  ./hc-supplements --non-interactive --experimental-policy screen_strong_human --evidence-only
   ./hc-supplements --list
 """
 
@@ -70,6 +71,20 @@ MEDICATION_OPTIONS = (
     ("tadalafil", "Tadalafil"),
     ("finasteride", "Finasteride"),
     ("other", "Other prescription or OTC medication"),
+)
+
+# This changes research scope only. It never waives medication safety gates or authorizes
+# personal use of an unapproved product. The broad option exists so a user can ask the RAG
+# library to find unusually strong human evidence without having to know every compound name.
+EXPERIMENTAL_POLICY_OPTIONS = (
+    (
+        "approved_only",
+        "Approved medicines and ordinary supplements only — do not broad-scan experimental drugs (recommended)",
+    ),
+    (
+        "screen_strong_human",
+        "Research-only broad scan — surface topics only when ≥2 unique A/B human intervention sources survive",
+    ),
 )
 
 SAFETY_OPTIONS = (
@@ -864,9 +879,10 @@ CATALOG: tuple[Candidate, ...] = (
       aliases=("bcaa", "branched-chain amino"), policy="SKIP when adequate complete protein is established"),
 )
 
-# Separate from the supplement catalog. These are displayed in a dedicated selector
-# and are added to the audit only when selected. Selection requests an evidence review; it is
-# never interpreted as intent or permission to use a gray-market compound.
+# Separate from the supplement catalog. These are displayed in a dedicated searchable selector.
+# Manual selection requests an evidence review. The optional broad research policy scans every
+# entry, then surfaces only entries that pass the same two-source human-intervention gate. Neither
+# path is interpreted as intent or permission to use a gray-market compound.
 PEPTIDE_CATALOG: tuple[Candidate, ...] = (
     S("Tirzepatide (current prescription)", QUEUE_PEPTIDE, "05_fat_loss_drugs/tirzepatide_incretins",
       ("cut", "gi", "heart"), aliases=("tirzepatide",), policy="KEEP-PRESCRIPTION"),
@@ -874,6 +890,17 @@ PEPTIDE_CATALOG: tuple[Candidate, ...] = (
       ("cut", "gi"), aliases=("semaglutide",), policy="SKIP — DO NOT STACK INCRETINS"),
     S("Retatrutide (do not stack with tirzepatide)", QUEUE_PEPTIDE, "08_peptides_gray/retatrutide",
       ("cut", "gi"), aliases=("retatrutide",), policy="SKIP — DO NOT STACK INCRETINS"),
+    S("Liraglutide (do not stack with tirzepatide)", QUEUE_PEPTIDE, "05_fat_loss_drugs/liraglutide",
+      ("cut", "gi"), aliases=("liraglutide", "saxenda", "victoza"), policy="SKIP — DO NOT STACK INCRETINS"),
+    S("Cagrilintide / CagriSema-style combination", QUEUE_PEPTIDE, "05_fat_loss_drugs/cagrilintide",
+      ("cut", "gi"), aliases=("cagrilintide", "cagrisema", "amylin analog"),
+      policy="SKIP — INVESTIGATIONAL/DO NOT STACK WITH TIRZEPATIDE"),
+    S("Survodutide", QUEUE_PEPTIDE, "05_fat_loss_drugs/survodutide",
+      ("cut", "gi"), aliases=("survodutide",), policy="SKIP — INVESTIGATIONAL/DO NOT STACK INCRETINS"),
+    S("Tesofensine", QUEUE_PEPTIDE, "05_fat_loss_drugs/tesofensine",
+      ("cut", "heart"), aliases=("tesofensine",),
+      gate="Stimulant/catecholamine, blood-pressure, heart-rate, medication, and regulatory review required.",
+      policy="SKIP — UNAPPROVED FAT-LOSS DRUG; NO PERSONAL PROTOCOL"),
     S("MK-677 / ibutamoren", QUEUE_PEPTIDE, "08_peptides_gray/mk677_ibutamoren",
       ("strength", "sleep"), aliases=("mk-677", "mk677", "ibutamoren"), policy="CLINICIAN-ONLY"),
     S("Tesamorelin", QUEUE_PEPTIDE, "08_peptides_gray/tesamorelin",
@@ -895,6 +922,79 @@ PEPTIDE_CATALOG: tuple[Candidate, ...] = (
     S("CJC-1295 / ipamorelin", QUEUE_PEPTIDE,
       ("08_peptides_gray/cjc1295", "08_peptides_gray/ipamorelin"),
       ("strength", "sleep"), aliases=("cjc-1295", "cjc1295", "ipamorelin"), policy="CLINICIAN-ONLY"),
+    S("Agomelatine", QUEUE_PEPTIDE, "08_peptides_gray/agomelatine",
+      ("sleep", "stress"), aliases=("agomelatine",), policy="CLINICIAN-ONLY"),
+    S("AICAR", QUEUE_PEPTIDE, "08_peptides_gray/aicar",
+      ("endurance", "cut"), aliases=("aicar", "acadesine"), policy="SKIP — RESEARCH DRUG; NO PERSONAL PROTOCOL"),
+    S("Aniracetam", QUEUE_PEPTIDE, "08_peptides_gray/aniracetam",
+      ("focus",), aliases=("aniracetam",), policy="SKIP — UNAPPROVED NOOTROPIC; NO PERSONAL PROTOCOL"),
+    S("AOD-9604", QUEUE_PEPTIDE, "08_peptides_gray/aod9604",
+      ("cut",), aliases=("aod-9604", "aod9604"), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("Cerebrolysin", QUEUE_PEPTIDE, "08_peptides_gray/cerebrolysin",
+      ("focus",), aliases=("cerebrolysin",), policy="CLINICIAN-ONLY"),
+    S("Dihexa", QUEUE_PEPTIDE, "08_peptides_gray/dihexa",
+      ("focus",), aliases=("dihexa",), policy="SKIP — RESEARCH COMPOUND; NO PERSONAL PROTOCOL"),
+    S("DSIP", QUEUE_PEPTIDE, "08_peptides_gray/dsip",
+      ("sleep",), aliases=("dsip", "delta sleep inducing peptide"), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("Epitalon", QUEUE_PEPTIDE, "08_peptides_gray/epitalon",
+      ("sleep",), aliases=("epitalon", "epithalon"), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("5-amino-1MQ", QUEUE_PEPTIDE, "08_peptides_gray/five_amino_1mq",
+      ("cut",), aliases=("5-amino-1mq", "5 amino 1mq", "nnmt inhibitor"), policy="SKIP — RESEARCH COMPOUND; NO PERSONAL PROTOCOL"),
+    S("Follistatin / follistatin gene or peptide products", QUEUE_PEPTIDE, "08_peptides_gray/follistatin",
+      ("strength",), aliases=("follistatin",), policy="SKIP — RESEARCH/GROWTH-PATHWAY RISK; NO PERSONAL PROTOCOL"),
+    S("GHK-Cu", QUEUE_PEPTIDE, "08_peptides_gray/ghk_cu",
+      ("skin",), aliases=("ghk-cu", "ghk cu", "copper peptide"), policy="CLINICIAN-ONLY"),
+    S("GHRP-2 / GHRP-6", QUEUE_PEPTIDE, "08_peptides_gray/ghrp2_6",
+      ("strength", "sleep"), aliases=("ghrp-2", "ghrp-6", "ghrp2", "ghrp6"), policy="CLINICIAN-ONLY"),
+    S("Hexarelin", QUEUE_PEPTIDE, "08_peptides_gray/hexarelin",
+      ("strength", "sleep"), aliases=("hexarelin",), policy="CLINICIAN-ONLY"),
+    S("Humanin", QUEUE_PEPTIDE, "08_peptides_gray/humanin",
+      ("heart",), aliases=("humanin",), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("IGF-1 LR3", QUEUE_PEPTIDE, "08_peptides_gray/igf1_lr3",
+      ("strength",), aliases=("igf-1 lr3", "igf1 lr3", "long r3 igf"), policy="SKIP — GROWTH-PATHWAY RESEARCH DRUG; NO PERSONAL PROTOCOL"),
+    S("ISRIB", QUEUE_PEPTIDE, "08_peptides_gray/isrib",
+      ("focus",), aliases=("isrib", "integrated stress response inhibitor"), policy="SKIP — RESEARCH COMPOUND; NO PERSONAL PROTOCOL"),
+    S("KPV", QUEUE_PEPTIDE, "08_peptides_gray/kpv",
+      ("gi", "skin"), aliases=("kpv", "lys-pro-val"), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("LL-37", QUEUE_PEPTIDE, "08_peptides_gray/ll37",
+      ("immune", "skin"), aliases=("ll-37", "ll37", "cathelicidin"), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("Melanotan", QUEUE_PEPTIDE, "08_peptides_gray/melanotan",
+      ("skin",), aliases=("melanotan", "melanotan ii", "melanotan 2"), policy="SKIP — UNAPPROVED PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("Methylene blue", QUEUE_PEPTIDE, "08_peptides_gray/methylene_blue",
+      ("focus",), aliases=("methylene blue", "methylthioninium"),
+      gate="Medication, serotonergic, product-grade, and indication review required.", policy="CLINICIAN-ONLY"),
+    S("MGF / PEG-MGF", QUEUE_PEPTIDE, "08_peptides_gray/mgf_mechano_growth",
+      ("strength",), aliases=("mechano growth factor", "peg-mgf", "mgf"), policy="SKIP — GROWTH-PATHWAY RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("MOTS-c", QUEUE_PEPTIDE, "08_peptides_gray/mots_c",
+      ("endurance", "heart"), aliases=("mots-c", "mots c"), policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("Oxytocin (off-label/experimental optimization)", QUEUE_PEPTIDE, "08_peptides_gray/oxytocin",
+      ("stress",), aliases=("oxytocin",), policy="CLINICIAN-ONLY"),
+    S("Peptide bioregulators / Khavinson products", QUEUE_PEPTIDE,
+      "08_peptides_gray/peptide_bioregulators_khavinson", ("heart", "sleep"),
+      aliases=("khavinson", "peptide bioregulator"), policy="SKIP — RESEARCH/PRODUCT-IDENTITY GAP"),
+    S("Phenibut", QUEUE_PEPTIDE, "08_peptides_gray/phenibut",
+      ("sleep", "stress"), aliases=("phenibut", "beta-phenyl-gaba"),
+      gate="Dependence, withdrawal, sedation, and medication/substance interaction review required.",
+      policy="SKIP — DEPENDENCE/WITHDRAWAL RISK; NO PERSONAL PROTOCOL"),
+    S("PT-141 / bremelanotide", QUEUE_PEPTIDE, "08_peptides_gray/pt141_bremelanotide",
+      ("heart",), aliases=("pt-141", "pt141", "bremelanotide"), policy="CLINICIAN-ONLY"),
+    S("Racetams (class)", QUEUE_PEPTIDE, "08_peptides_gray/racetams",
+      ("focus",), aliases=("racetam", "racetams", "piracetam"), policy="SKIP — UNAPPROVED CLASS; NO PERSONAL PROTOCOL"),
+    S("Sermorelin", QUEUE_PEPTIDE, "08_peptides_gray/sermorelin",
+      ("strength", "sleep"), aliases=("sermorelin",), policy="CLINICIAN-ONLY"),
+    S("SLU-PP-332", QUEUE_PEPTIDE, "08_peptides_gray/slu_pp_332",
+      ("endurance", "cut"), aliases=("slu-pp-332", "slu pp 332"), policy="SKIP — PRECLINICAL RESEARCH COMPOUND"),
+    S("TAK-653", QUEUE_PEPTIDE, "08_peptides_gray/tak_653",
+      ("focus",), aliases=("tak-653", "tak653"), policy="SKIP — INVESTIGATIONAL DRUG; NO PERSONAL PROTOCOL"),
+    S("TB-500 / thymosin beta-4", QUEUE_PEPTIDE, "08_peptides_gray/tb500_thymosin_b4",
+      ("joints",), aliases=("tb-500", "tb500", "thymosin beta-4", "thymosin beta 4"),
+      policy="SKIP — RESEARCH PEPTIDE; NO PERSONAL PROTOCOL"),
+    S("Thymosin alpha-1", QUEUE_PEPTIDE, "08_peptides_gray/thymosin_alpha1",
+      ("immune",), aliases=("thymosin alpha-1", "thymosin alpha 1", "thymalfasin"), policy="CLINICIAN-ONLY"),
+    S("SARMs / non-prescribed anabolic-androgenic drugs (class harm review)", QUEUE_PEPTIDE,
+      "08_peptides_gray/ped_sarms_aas_harms", ("strength", "heart"),
+      aliases=("sarms", "selective androgen receptor modulator", "anabolic androgenic steroids", "aas"),
+      policy="SKIP — CLASS HARM/LEGAL/SPORT-RULE REVIEW; NO CYCLE OR PROTOCOL"),
 )
 
 
@@ -1047,9 +1147,10 @@ def ask_profile_quick() -> dict:
         )),
     ))
     run_step(6, "PEPTIDE / GRAY-MARKET RESEARCH",
-             "Checking an item requests research—not approval or a dosing plan.", (
+             "Choose one research boundary, then optionally select named items. Broad scan means evidence triage—not approval, compatibility, or a dosing plan.", (
+        ("experimental", "BOUNDARY · ONE", EXPERIMENTAL_POLICY_OPTIONS, ("approved_only",)),
         ("peptide", "RESEARCH", peptide_options, ("tirzepatide_current_prescription",)),
-    ))
+    ), exclusive=("experimental",))
     run_step(7, "FOOD, SLEEP, CAFFEINE, AND SUBSTANCES",
              "Choose current patterns or symptoms so the plan avoids conflicts.", (
         ("diet", "FOOD / GI", DIET_GI_OPTIONS, ("none_reported",)),
@@ -1092,6 +1193,7 @@ def ask_profile_quick() -> dict:
     result_keys = without_sentinel(picked("result") or ["not_tracked"], "not_tracked")
     interest_keys = picked("review")
     peptide_keys = picked("peptide")
+    experimental_policy = one("experimental", "approved_only")
     medication_keys = picked("medication") or ["tirzepatide"]
     condition_keys = without_sentinel(picked("safety") or ["none_known"], "none_known")
     deficiency_keys = without_sentinel(picked("deficiency") or ["none_unknown"], "none_unknown")
@@ -1197,6 +1299,8 @@ def ask_profile_quick() -> dict:
         "priority_supplements": [c.name for c in CATALOG if c.key in interest_keys],
         "selected_peptide_keys": peptide_keys,
         "selected_peptides": [c.name for c in PEPTIDE_CATALOG if c.key in peptide_keys],
+        "experimental_policy": experimental_policy,
+        "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
         "medications": "; ".join(labels_for(medication_keys, MEDICATION_OPTIONS)) or "none reported",
         "confirmed_deficiencies_or_labs": "; ".join(labels_for(deficiency_keys, DEFICIENCY_OPTIONS)) or "none/unknown",
         "conditions_and_safety_flags": "; ".join(labels_for(condition_keys, SAFETY_OPTIONS)) or "none known",
@@ -1237,6 +1341,7 @@ def ask_profile_quick() -> dict:
     review.add_row("Taking now", summary(current_names))
     review.add_row("Supplement research", summary(profile["priority_supplements"]))
     review.add_row("Peptide research", summary(profile["selected_peptides"]))
+    review.add_row("Experimental boundary", profile["experimental_policy_label"])
     review.add_row("Medicines / safety", f"{profile['medications']}; {profile['conditions_and_safety_flags']}")
     review.add_row("Food / sleep", f"{profile['diet_and_gi']}; {profile['sleep']}")
     review.add_row("Stores", summary(profile["shopping_stores"]))
@@ -1357,6 +1462,14 @@ def ask_profile_detailed() -> dict:
     interest_names = [c.name for c in CATALOG if c.key in interest_keys]
 
     peptide_choices = [(c.key, c.name) for c in PEPTIDE_CATALOG]
+    experimental_policy_values = checkbox_prompt(
+        "Should HealthCoach broad-scan experimental/unapproved drugs? Choose one. This changes research scope only.",
+        EXPERIMENTAL_POLICY_OPTIONS,
+        defaults=("approved_only",),
+        minimum=1,
+        maximum=1,
+    )
+    experimental_policy = experimental_policy_values[0]
     peptide_keys = checkbox_prompt(
         "Which peptides, incretins, or gray-market compounds should be reviewed? Selection is research-only.",
         peptide_choices,
@@ -1511,6 +1624,8 @@ def ask_profile_detailed() -> dict:
         "priority_supplements": interest_names,
         "selected_peptide_keys": peptide_keys,
         "selected_peptides": peptide_names,
+        "experimental_policy": experimental_policy,
+        "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
         "medications": medications,
         "confirmed_deficiencies_or_labs": deficiencies,
         "conditions_and_safety_flags": conditions,
@@ -1551,6 +1666,9 @@ def default_profile(args: argparse.Namespace) -> dict:
     peptides = select_from_catalog(
         args.peptides or "tirzepatide_current_prescription", PEPTIDE_CATALOG, default_all=False
     )
+    experimental_policy = (args.experimental_policy or "approved_only").strip().lower()
+    if experimental_policy not in dict(EXPERIMENTAL_POLICY_OPTIONS):
+        raise SystemExit("--experimental-policy must be approved_only or screen_strong_human")
     current_text = args.current or "creatine monohydrate 5 g/day"
     current_candidates = [c for c in CATALOG if _matches_entry(c, current_text)]
     food_addition_keys = parse_choice_values(
@@ -1592,6 +1710,8 @@ def default_profile(args: argparse.Namespace) -> dict:
         "priority_supplements": [c.name for c in priority],
         "selected_peptide_keys": [c.key for c in peptides],
         "selected_peptides": [c.name for c in peptides],
+        "experimental_policy": experimental_policy,
+        "experimental_policy_label": dict(EXPERIMENTAL_POLICY_OPTIONS)[experimental_policy],
         "medications": args.medications or "tirzepatide",
         "confirmed_deficiencies_or_labs": args.deficiencies or "none/unknown",
         "conditions_and_safety_flags": args.conditions or "none",
@@ -1641,6 +1761,9 @@ def retrieve_candidate(
         "07_supplements/interactions_stacking",
         "07_supplements/supplement_contamination_testing",
         "05_fat_loss_drugs/tirzepatide_incretins",
+        "08_peptides_gray/uncertified_quality_risk",
+        "08_peptides_gray/research_peptides_reviews",
+        "08_peptides_gray/ped_sarms_aas_harms",
     )
     candidate_where = sql_folder_filter(candidate.folders) if candidate.folders else None
     safety_where = sql_folder_filter(shared_safety_folders)
@@ -1686,6 +1809,13 @@ def retrieve_candidate(
     for h in hits:
         if h.get("grade") not in ("A", "B"):
             continue
+        if candidate.queue == QUEUE_PEPTIDE:
+            # For the experimental catalog, an A/B filename grade is not enough. A paper must
+            # come from the candidate's own folder and contain an explicit human/clinical signal.
+            # Animal and in-vitro papers remain in ev.hits for mechanistic risk flags but cannot
+            # make an experimental topic pass the human-evidence gate.
+            if h.get("folder") not in candidate.folders or not experimental_human_intervention_hit(h):
+                continue
         source_key = h.get("doi") or h.get("source_pdf") or h.get("text", "")[:120]
         human_sources[source_key] = h
     n_human = len(human_sources)
@@ -1694,7 +1824,10 @@ def retrieve_candidate(
     best = min(grades, key=lambda g: GRADE_ORDER.get(g, 8)) if grades else "—"
     dois = {h.get("doi") for h in human_sources.values() if h.get("doi")}
     cohorts = {h.get("cohort", "general") for h in human_sources.values()}
-    fit = "direct/general" if "general" in cohorts else "indirect/older-only" if cohorts else "not established"
+    if candidate.queue == QUEUE_PEPTIDE and human_sources:
+        fit = "human intervention retrieved; indication/population fit requires passage-level review"
+    else:
+        fit = "direct/general" if "general" in cohorts else "indirect/older-only" if cohorts else "not established"
     return Evidence(coverage, best, n_human, len(dois), fit, hits)
 
 
@@ -1837,6 +1970,12 @@ def choose_deep_candidates(
         n = 0
         if c.key in explicitly_selected:
             n += 100
+        if (
+            profile.get("experimental_policy") == "screen_strong_human"
+            and c.queue == QUEUE_PEPTIDE
+            and ev.coverage == "STRONG"
+        ):
+            n += 85
         if c.key in anchor:
             n += 30
         if decisions[c.key] == "SHORTLIST FOR REVIEW":
@@ -1868,6 +2007,7 @@ def profile_markdown(profile: dict) -> str:
         f"- Reported supplement results: {profile['supplement_results']}.",
         f"- Priority supplement evidence reviews: {', '.join(profile['priority_supplements']) or 'none selected'}.",
         f"- Selected peptide/gray evidence reviews: {', '.join(profile['selected_peptides']) or 'none selected'}.",
+        f"- Experimental/unapproved research boundary: {profile.get('experimental_policy_label', 'Approved-only default')}.",
         f"- Medications: {profile['medications']}.",
         f"- Confirmed deficiencies/labs: {profile['confirmed_deficiencies_or_labs']}.",
         f"- Conditions/safety flags: {profile['conditions_and_safety_flags']}.",
@@ -1904,6 +2044,7 @@ def questionnaire_markdown(profile: dict) -> str:
         ("What benefits, no-effects, or side effects were reported for current supplements?", profile["supplement_results"]),
         ("Which supplements were selected for priority deep review?", "; ".join(profile["priority_supplements"]) or "none selected"),
         ("Which peptides/incretins/gray compounds were selected for evidence review?", "; ".join(profile["selected_peptides"]) or "none selected"),
+        ("May HealthCoach broad-scan experimental/unapproved drugs?", profile.get("experimental_policy_label", "Approved-only default")),
         ("What medications or prescriptions are currently used?", profile["medications"]),
         ("Which deficiencies or abnormal labs are clinician-confirmed?", profile["confirmed_deficiencies_or_labs"]),
         ("Which conditions or safety flags apply?", profile["conditions_and_safety_flags"]),
@@ -2304,6 +2445,197 @@ def inventory_table(candidates: Sequence[Candidate], evidence: dict[str, Evidenc
     return "\n".join(lines)
 
 
+EXPERIMENTAL_SAFETY_TERMS = (
+    "adverse", "safety", "tolerability", "toxicity", "toxicology", "withdrawal",
+    "dependence", "contraindicat", "drug interaction", "coadministr", "pharmacokinetic",
+    "hepatic", "renal", "arrhythm", "blood pressure", "edema", "glucose", "mortality",
+)
+
+EXPERIMENTAL_MECHANISM_FLAGS = (
+    ("CYP/transporter or PK", ("cytochrome", "cyp", "transporter", "pharmacokinetic", "metabolism")),
+    ("serotonin/MAO", ("seroton", "monoamine oxidase", " mao ")),
+    ("dopamine/catecholamine", ("dopamin", "catecholamine", "norepinephrine", "noradrenaline")),
+    ("GH/IGF/growth signaling", ("growth hormone", "igf-1", "igf1", "somatotrop")),
+    ("glucose/incretin", ("glucose", "insulin", "incretin", "glp-1", "gip receptor")),
+    ("cardiac/BP", ("blood pressure", "hypertension", "hypotension", "arrhythm", "cardiac", "heart rate")),
+    ("coagulation/platelet", ("coagulation", "anticoagul", "platelet", "bleeding")),
+    ("liver/kidney", ("hepatic", "hepatotox", "renal", "nephro", "kidney", "liver injury")),
+    ("immune/inflammatory", ("immune", "immunomod", "cytokine", "inflamm")),
+)
+
+EXPERIMENTAL_COMBINATION_TERMS = (
+    "coadministr", "concomitant", "combination", "drug interaction", "interaction with",
+    "pharmacokinetic interaction", "combined with",
+)
+
+EXPERIMENTAL_HUMAN_TERMS = (
+    "patients", "participants", "healthy adults", "healthy men", "healthy women",
+    "human volunteers", "human subjects", "subjects were", "individuals with",
+    "randomized controlled trial", "randomised controlled trial", "clinical trial",
+    "clinical study", "phase 1", "phase i", "phase 2", "phase ii", "phase 3", "phase iii",
+)
+
+EXPERIMENTAL_NO_HUMAN_PHRASES = (
+    "no human studies", "no human trials", "lack of human studies", "without human data",
+    "not been tested in humans", "has not been tested in humans", "preclinical only",
+)
+
+EXPERIMENTAL_INTERVENTION_TERMS = (
+    "randomized", "randomised", "placebo", "controlled trial", "clinical trial",
+    "phase 1", "phase i", "phase 2", "phase ii", "phase 3", "phase iii",
+    "intervention", "administered", "received treatment", "treated with", "dose-ranging",
+    "dose ranging", "dosing", "treatment group",
+)
+
+
+def experimental_human_hit(hit: dict) -> bool:
+    """Conservative text gate for experimental human evidence.
+
+    The library's A/B metadata describes study design, not species. This extra check prevents
+    animal RCTs, cell work, and mechanism-only reviews from being called human evidence.
+    """
+    text = " ".join((hit.get("text", ""), hit.get("source_pdf", ""))).lower()
+    if any(phrase in text for phrase in EXPERIMENTAL_NO_HUMAN_PHRASES):
+        # An explicit absence statement can coexist with generic words such as "clinical" in a
+        # discussion section; require direct participant language to override it.
+        return any(term in text for term in (
+            "patients were", "participants were", "participants aged", "human volunteers",
+            "subjects were randomized", "subjects were randomised",
+        ))
+    return any(term in text for term in EXPERIMENTAL_HUMAN_TERMS)
+
+
+def experimental_human_intervention_hit(hit: dict) -> bool:
+    """Require both explicit humans and exposure/intervention language for the broad gate."""
+    if not experimental_human_hit(hit):
+        return False
+    text = " ".join((hit.get("text", ""), hit.get("source_pdf", ""))).lower()
+    return any(term in text for term in EXPERIMENTAL_INTERVENTION_TERMS)
+
+
+def _unique_human_hits(hits: Sequence[dict], required_terms: Sequence[str] = ()) -> list[dict]:
+    unique: dict[str, dict] = {}
+    for hit in hits:
+        if hit.get("grade") not in ("A", "B"):
+            continue
+        if not experimental_human_hit(hit):
+            continue
+        haystack = " ".join((hit.get("text", ""), hit.get("source_pdf", ""))).lower()
+        if required_terms and not any(term in haystack for term in required_terms):
+            continue
+        source_key = hit.get("doi") or hit.get("source_pdf") or hit.get("text", "")[:120]
+        unique[source_key] = hit
+    return list(unique.values())
+
+
+def experimental_mechanism_flags(ev: Evidence) -> list[str]:
+    """Return retrieved pathway flags; these deliberately are not interaction verdicts."""
+    text = " " + _normal(" ".join(
+        " ".join((hit.get("text", ""), hit.get("source_pdf", ""))) for hit in ev.hits
+    )) + " "
+    flags: list[str] = []
+    for label, terms in EXPERIMENTAL_MECHANISM_FLAGS:
+        def present(term: str) -> bool:
+            normalized = _normal(term)
+            return (" " + normalized + " ") in text if len(normalized) <= 3 else normalized in text
+        if any(present(term) for term in terms):
+            flags.append(label)
+    return flags[:4]
+
+
+def current_stack_terms(profile: dict) -> list[str]:
+    terms: list[str] = []
+    medication_text = profile.get("medications", "")
+    for key, label in MEDICATION_OPTIONS:
+        if key != "other" and _contains(medication_text, (key, label)):
+            terms.extend((key, label))
+    current_keys = set(profile.get("current_supplement_keys", ()))
+    for candidate in CATALOG:
+        if candidate.key in current_keys:
+            terms.extend((candidate.name, *candidate.aliases))
+    return list(dict.fromkeys(_normal(term) for term in terms if _normal(term)))
+
+
+def direct_combination_hits(candidate: Candidate, ev: Evidence, profile: dict) -> list[dict]:
+    candidate_terms = {_normal(candidate.name), *(_normal(alias) for alias in candidate.aliases)}
+    stack_terms = [term for term in current_stack_terms(profile) if term not in candidate_terms]
+    if not stack_terms:
+        return []
+    matches: list[dict] = []
+    for hit in ev.hits:
+        text = " " + _normal(" ".join((hit.get("text", ""), hit.get("source_pdf", "")))) + " "
+        if not any((" " + term + " ") in text for term in stack_terms):
+            continue
+        if not any((" " + _normal(term) + " ") in text for term in EXPERIMENTAL_COMBINATION_TERMS):
+            continue
+        matches.append(hit)
+    return _unique_human_hits(matches)
+
+
+def experimental_screen_markdown(
+    candidates: Sequence[Candidate], evidence: dict[str, Evidence], decisions: dict[str, str], profile: dict
+) -> str:
+    policy = profile.get("experimental_policy", "approved_only")
+    if policy != "screen_strong_human":
+        return (
+            "**Broad scan not requested.** The approved/ordinary boundary remains active. Individually selected "
+            "peptide or gray-market topics are still reviewed elsewhere in this report, but HealthCoach did not "
+            "search the full experimental catalog."
+        )
+
+    experimental = [
+        candidate for candidate in candidates
+        if candidate.queue == QUEUE_PEPTIDE and candidate.policy != "KEEP-PRESCRIPTION"
+    ]
+    passed = [candidate for candidate in experimental if evidence[candidate.key].coverage == "STRONG"]
+    weak = sum(evidence[candidate.key].coverage == "WEAK" for candidate in experimental)
+    none = sum(evidence[candidate.key].coverage == "NONE" for candidate in experimental)
+    lines = [
+        "**Research-only boundary:** opting in expands retrieval; it does not authorize buying, combining, or self-administering an experimental drug.",
+        "",
+        f"HealthCoach scanned **{len(experimental)}** experimental/unapproved topics. **{len(passed)}** passed the programmatic gate of at least two unique candidate-folder A/B sources with human-participant and intervention/exposure signals; {weak} were WEAK and {none} had NONE. Passing means relevant human intervention evidence exists—not that the effect is positive, useful for this user, safe, legal, correctly manufactured, or compatible.",
+        "",
+        "| Item passing human-intervention gate | Human coverage | Configured goal relevance | A/B safety-marked sources | Retrieved chemistry/biology flags | Direct combination evidence with recorded stack | Compatibility result | Audit decision |",
+        "|---|---:|---|---:|---|---|---|---|",
+    ]
+    if not passed:
+        lines.append("| _No experimental item passed_ | — | — | — | — | — | Not verified | Do not add |")
+    for candidate in passed:
+        ev = evidence[candidate.key]
+        safety_hits = _unique_human_hits(ev.hits, EXPERIMENTAL_SAFETY_TERMS)
+        combination_hits = direct_combination_hits(candidate, ev, profile)
+        flags = ", ".join(experimental_mechanism_flags(ev)) or "No pathway flag extracted"
+        if combination_hits:
+            direct = "Human combination passage retrieved; clinician interpretation required"
+            combo_tag = first_evidence_tag(Evidence("WEAK", "—", 0, 0, "", combination_hits))
+            direct += f"<br>{combo_tag}"
+        else:
+            direct = "NONE — no direct co-use/interaction passage survived"
+        compatibility = (
+            "DIRECT HUMAN COMBINATION EVIDENCE LOCATED — not automatically compatible; direction, exposure, product, and patient factors require clinician/pharmacist review"
+            if combination_hits else
+            "NOT VERIFIED — mechanistic flags cannot establish safe co-use; direct human interaction and product-specific evidence are required"
+        )
+        vals = (
+            candidate.name, f"{ev.coverage}; {ev.unique_papers} sources",
+            ", ".join(ISSUES[issue] for issue in candidate.issues if issue in profile.get("issues", ())) or "No selected-goal match",
+            len(safety_hits), flags,
+            direct, compatibility, decisions[candidate.key],
+        )
+        lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", "<br>") for value in vals) + " |")
+    lines.extend([
+        "",
+        "#### How compatibility is checked",
+        "",
+        "1. **Human intervention evidence:** at least two independent, candidate-folder A/B sources with explicit human-participant and intervention/exposure language are required before an experimental topic is surfaced here. This is a data-availability gate, not proof the effect is positive or useful.",
+        "2. **Human safety and exposure:** adverse events, tolerability, pharmacokinetics, population, form, and duration are checked separately; efficacy coverage never substitutes for safety coverage.",
+        "3. **Chemistry and biology:** retrieved receptor/pathway, CYP/transporter, cardiac, glucose, growth, coagulation, liver/kidney, and immune signals create **risk flags only**. They cannot prove two products are compatible.",
+        "4. **Direct combination evidence:** a compatible verdict requires product-specific human interaction/co-use evidence plus clinician/pharmacist interpretation. In its absence the answer is **UNKNOWN / NOT VERIFIED**, never “probably safe.”",
+        "5. **Product and regulatory identity:** verify the exact finished product and current status. FDA explains that unapproved drugs have not been reviewed for safety, effectiveness, or quality: [Unapproved Drugs](https://www.fda.gov/drugs/enforcement-activities-fda/unapproved-drugs). FDA's interaction framework uses in-vitro and clinical evidence together during risk assessment: [M12 Drug Interaction Studies](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m12-drug-interaction-studies).",
+    ])
+    return "\n".join(lines)
+
+
 def first_evidence_tag(ev: Evidence) -> str:
     if not ev.hits:
         return "COVERAGE GAP"
@@ -2624,29 +2956,33 @@ For every selected item, the audit asks: What outcomes and effect magnitudes wer
 - “Retrieved studies used” describes research; it is not a personal dose.
 - User-selected weak or sparse topics remain visible, receive priority deep review, and enter the consideration/watchlist; selection does not upgrade coverage or automatically place them in the active stack.
 
-### 4. PERSONALIZED SHORTLIST
+### 4. EXPERIMENTAL / UNAPPROVED HUMAN-EVIDENCE AND COMPATIBILITY SCREEN
+
+{experimental_screen_markdown(candidates, evidence, decisions, profile)}
+
+### 5. PERSONALIZED SHORTLIST
 
 {shortlist_md}
 
-### 5. DEFICIENCY, MEDICATION, AND SAFETY GATES
+### 6. DEFICIENCY, MEDICATION, AND SAFETY GATES
 
 {chr(10).join(gates) if gates else '- No predeclared gates in the selected catalog.'}
 
-### 6. COMPLETE EVIDENCE INVENTORY
+### 7. COMPLETE EVIDENCE INVENTORY
 
 {chr(10).join(queues)}
 
-### 7. QUESTION-BY-QUESTION DEEP EVIDENCE ANSWERS
+### 8. QUESTION-BY-QUESTION DEEP EVIDENCE ANSWERS
 
 {chr(10).join(deep_cards) if deep_cards else '_Deep generation was disabled; use the evidence inventory and source trail._'}
 
-### 8. COVERAGE GAPS
+### 9. COVERAGE GAPS
 
 The library did not return an on-topic A/B human passage for these selected candidates; this is a reason to abstain, not permission to fill the gap from memory.
 
 {chr(10).join(gaps) if gaps else '- None among the selected candidates.'}
 
-### 9. RETRIEVED SOURCE TRAIL
+### 10. RETRIEVED SOURCE TRAIL
 
 #### Training-timing sources
 
@@ -2720,6 +3056,11 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--items", help="comma-separated subset; all requested candidates are default")
     ap.add_argument("--priority-items", help="comma-separated supplements guaranteed priority in deep-card selection")
     ap.add_argument("--peptides", help="comma-separated peptide/gray review items; use 'none' to omit")
+    ap.add_argument(
+        "--experimental-policy",
+        choices=dict(EXPERIMENTAL_POLICY_OPTIONS),
+        help="approved_only (default) or research-only screen_strong_human broad scan",
+    )
     ap.add_argument("--deep-limit", type=int, default=None, help="number of model-written deep cards (default 12)")
     ap.add_argument("--all-deep", action="store_true", help="write deep cards for every selected item; can take a long time")
     ap.add_argument("--evidence-only", action="store_true", help="skip local LLM generation; inventory + source trail only")
@@ -2758,7 +3099,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         console.print("\n[yellow]Assessment cancelled. The existing report was not changed.[/yellow]")
         return 130
     supplement_candidates = select_candidates(args.items)
-    peptide_candidates = [c for c in PEPTIDE_CATALOG if c.key in profile.get("selected_peptide_keys", ())]
+    manually_selected_peptides = set(profile.get("selected_peptide_keys", ()))
+    broad_experimental_scan = profile.get("experimental_policy") == "screen_strong_human"
+    peptide_candidates = [
+        c for c in PEPTIDE_CATALOG
+        if broad_experimental_scan or c.key in manually_selected_peptides
+    ]
+    profile["experimental_scan_keys"] = [
+        c.key for c in peptide_candidates
+        if broad_experimental_scan and c.policy != "KEEP-PRESCRIPTION"
+    ]
     candidates = [*supplement_candidates, *peptide_candidates]
     explicit_count = len(
         (set(profile.get("priority_supplement_keys", ())) | set(profile.get("selected_peptide_keys", ())))
@@ -2799,6 +3149,17 @@ def main(argv: Sequence[str] | None = None) -> int:
         progress.update(task, description="Checking cardio and strength timing")
         timing_evidence = retrieve_timing_evidence(tbl, emb, reranker, profile)
         progress.advance(task)
+
+    if args.deep_limit is None and not args.all_deep and not args.evidence_only and broad_experimental_scan:
+        strong_experimental = sum(
+            c.queue == QUEUE_PEPTIDE
+            and c.policy != "KEEP-PRESCRIPTION"
+            and evidence[c.key].coverage == "STRONG"
+            for c in candidates
+        )
+        # Keep every broad-scan item that passed the human-source gate eligible for a deep
+        # answer in addition to the user's manual priorities. Explicit --deep-limit still wins.
+        deep_limit = max(deep_limit, explicit_count + strong_experimental)
 
     decisions = preliminary_decisions(candidates, evidence, profile)
     deep_candidates = choose_deep_candidates(candidates, evidence, profile, decisions, deep_limit)

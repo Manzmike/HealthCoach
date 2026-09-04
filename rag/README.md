@@ -34,8 +34,8 @@ caffeinate -i ./hc-supplements
 ```
 
 The assessment guides you through nine explained sections: goals, training schedule, current
-stack, safety, supplement research, peptide research, daily routine, food/home ideas, and
-shopping. Each screen tells you why the question matters.
+stack, safety, supplement research, experimental/peptide research, daily routine, food/home
+ideas, and shopping. Each screen tells you why the question matters.
 
 - Arrow keys move up and down.
 - Space selects or unselects an item.
@@ -184,6 +184,43 @@ caffeinate -i ./hc-supplements
 Selection asks HealthCoach to investigate an item; it does not automatically add it to the
 stack. Noopept and bromantane stay in the peptide/gray-market research screen and never receive
 a personal-use protocol.
+
+### Optional experimental-drug evidence screen
+
+The `PEPTIDE / GRAY-MARKET RESEARCH` page now starts with one research-boundary choice:
+
+- Keep `Approved medicines and ordinary supplements only` for the normal conservative report.
+- Choose `Research-only broad scan` only if you want HealthCoach to check every configured
+  experimental/unapproved topic and surface the ones with at least two unique candidate-folder
+  A/B sources containing human-participant and intervention/exposure signals.
+
+The second choice expands **research**, not permission to use a drug. A topic can have promising
+human results and still fail on adverse effects, interactions, product identity, manufacturing
+quality, sport rules, or applicability to this user. Chemistry and biology are used to flag
+receptor, CYP/transporter, cardiac, glucose, growth, liver/kidney, and other possible overlaps.
+They cannot prove two products are safe together. Without direct human interaction/co-use data,
+the report prints `UNKNOWN / NOT VERIFIED` and keeps the item at clinician-only or skip.
+
+The searchable named-item list includes the configured incretins, peptides, research drugs, and
+gray nootropics. Press `/` and type part of a name instead of scrolling through the full list.
+
+To search for additional A/B source candidates across every configured experimental folder,
+rebuild the index, and check retrieval in one resumable command (the report applies the separate
+human/intervention gate afterward):
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+caffeinate -i ./hc-refresh-experimental
+```
+
+This source refresh can take a while. It is not required every time a report is generated.
+Afterward, run `caffeinate -i ./hc-supplements` and choose the broad scan in the assessment.
+
+For an automated non-interactive evidence-only check (no model-written deep cards):
+
+```bash
+./hc-supplements --non-interactive --experimental-policy screen_strong_human --evidence-only
+```
 
 ## Morning Bible and Jesus study
 

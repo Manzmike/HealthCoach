@@ -31,6 +31,18 @@ def main():
          ("08_peptides_gray/noopept", "08_peptides_gray/uncertified_quality_risk")),
         ("bromantane Ladasten human fatigue cognition trial",
          ("08_peptides_gray/bromantane",)),
+        ("retatrutide obesity human randomized clinical trial adverse effects",
+         ("08_peptides_gray/retatrutide",)),
+        ("tesamorelin human clinical trial safety glucose IGF-1",
+         ("08_peptides_gray/tesamorelin",)),
+        ("cerebrolysin human randomized clinical trial safety",
+         ("08_peptides_gray/cerebrolysin",)),
+        ("liraglutide obesity human randomized trial adverse effects",
+         ("05_fat_loss_drugs/liraglutide",)),
+        ("survodutide obesity human clinical trial adverse effects",
+         ("05_fat_loss_drugs/survodutide",)),
+        ("unapproved peptide product identity contamination quality risk",
+         ("08_peptides_gray/uncertified_quality_risk",)),
     ]
     ok = True
     coverage_missing = []
