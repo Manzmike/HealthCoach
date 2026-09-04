@@ -406,6 +406,7 @@ def checkbox_prompt(
     title: str,
     choices: Sequence[tuple[str, str]],
     *,
+    description: str = "",
     defaults: Sequence[str] = (),
     minimum: int = 0,
     maximum: int | None = None,
@@ -417,6 +418,8 @@ def checkbox_prompt(
 
     def numeric_picker() -> list[str]:
         console.print(f"\n[bold]{title}[/bold]")
+        if description:
+            console.print(f"[dim]{description}[/dim]")
         for i, (value, label) in enumerate(choices, 1):
             mark = "*" if value in initial else " "
             console.print(f"  [cyan]{i:>2}[/cyan] [{mark}] {label}")
@@ -458,7 +461,7 @@ def checkbox_prompt(
 
         while True:
             height, width = stdscr.getmaxyx()
-            visible = max(1, height - 6)
+            visible = max(1, height - 7)
             cursor = min(cursor, max(0, len(filtered) - 1))
             if cursor < top:
                 top = cursor
@@ -467,20 +470,21 @@ def checkbox_prompt(
 
             stdscr.erase()
             put(0, 0, title, curses.A_BOLD)
-            put(1, 0, "↑/↓ move  •  Space toggle  •  Enter finish  •  / search  •  r reset search  •  a all shown  •  n clear")
+            put(1, 0, description or "Choose every answer that applies. Checked boxes are included in your report.", curses.A_DIM)
+            put(2, 0, "↑/↓ move • Space select • Enter next • / search • r all • a all • n clear")
             if query:
-                put(2, 0, f"Filter: {query}  ({len(filtered)} matches)", curses.A_DIM)
+                put(3, 0, f"Filter: {query}  ({len(filtered)} matches)", curses.A_DIM)
             else:
-                put(2, 0, f"Showing {len(filtered)} options", curses.A_DIM)
+                put(3, 0, f"Showing {len(filtered)} options", curses.A_DIM)
 
-            for screen_row, index in enumerate(range(top, min(len(filtered), top + visible)), start=3):
+            for screen_row, index in enumerate(range(top, min(len(filtered), top + visible)), start=4):
                 value, label = filtered[index]
                 marker = "[x]" if value in selected else "[ ]"
                 pointer = ">" if index == cursor else " "
                 attr = curses.A_REVERSE if index == cursor else 0
                 put(screen_row, 0, f"{pointer} {marker} {label}", attr)
 
-            footer_y = min(height - 2, 3 + visible)
+            footer_y = min(height - 2, 4 + visible)
             footer = f"Selected: {len(selected)}"
             if warning:
                 footer += f"  •  {warning}"
@@ -953,63 +957,101 @@ def parse_issue_codes(raw: str) -> list[str]:
 
 
 def ask_profile_quick() -> dict:
-    """Default one-screen assessment: one checklist and zero typing."""
+    """Default guided assessment: short explained sections and almost no typing."""
     console.print(Panel.fit(
-        "[bold]HealthCoach One-Screen Assessment[/bold]\n"
-        "Everything is in one searchable checklist. Space toggles; Enter submits once.\n"
-        "Defaults are already checked. Use / to search a category and r to return to the full list.\n"
-        "Useful searches: GOAL, TAKING NOW, DEEP REVIEW, SAFETY, FOOD TO REVIEW, STORE / MULTI.",
+        "[bold]HealthCoach Guided Assessment[/bold]\n\n"
+        "You will see 9 short, explained sections. Checked answers are included in your report.\n"
+        "Use ↑/↓ to move, Space to change a box, / to search long lists, and Enter to continue.\n"
+        "Pressing Enter keeps the checked defaults. Selecting an item asks HealthCoach to evaluate it;\n"
+        "it does not automatically recommend or prescribe it. A final review appears before research starts.",
         border_style="bright_cyan", padding=(1, 3),
     ))
 
-    supplement_options = [(c.key, f"{c.name} · {c.queue.replace('Submitted: ', '')}") for c in CATALOG]
-    groups: list[tuple[str, str, Sequence[tuple[str, str]], Sequence[str]]] = [
+    supplement_options = [(c.key, c.name) for c in CATALOG]
+    peptide_options = tuple((c.key, c.name) for c in PEPTIDE_CATALOG)
+    selected: list[str] = []
+
+    def run_step(
+        number: int,
+        title: str,
+        description: str,
+        groups: Sequence[tuple[str, str, Sequence[tuple[str, str]], Sequence[str]]],
+        *,
+        exclusive: Sequence[str] = (),
+    ) -> None:
+        choices: list[tuple[str, str]] = []
+        defaults: list[str] = []
+        group_values: dict[str, list[str]] = {}
+        for prefix, display, options, group_defaults in groups:
+            group_values[prefix] = []
+            for value, label in options:
+                qualified = f"{prefix}::{value}"
+                choices.append((qualified, f"{display:<18} │ {label}"))
+                group_values[prefix].append(qualified)
+                if value in group_defaults:
+                    defaults.append(qualified)
+        selected.extend(checkbox_prompt(
+            f"STEP {number} OF 9 — {title}",
+            choices,
+            description=description,
+            defaults=defaults,
+            exclusive_groups=tuple(group_values[prefix] for prefix in exclusive),
+        ))
+
+    run_step(1, "GOALS AND CURRENT ACTIVITY",
+             "Choose your goals and the activities currently in your week.", (
         ("issue", "GOAL", tuple(ISSUES.items()), ("cut", "strength", "endurance")),
-        ("training", "TRAINING", TRAINING_OPTIONS, ("lifting", "running", "cycling", "walking")),
-        ("cardio", "CARDIO TIME / ONE", CARDIO_TIMING_OPTIONS, ("recommend",)),
-        ("workout", "STRENGTH TIME / ONE", WORKOUT_TIMING_OPTIONS, ("recommend",)),
-        ("injury", "INJURY", INJURY_OPTIONS, ("none_reported",)),
+        ("training", "DOING NOW", TRAINING_OPTIONS, ("lifting", "running", "cycling", "walking")),
+    ))
+    run_step(2, "SCHEDULE AND INJURIES",
+             "Choose one cardio time, one strength time, and any pain areas.", (
+        ("cardio", "CARDIO · ONE", CARDIO_TIMING_OPTIONS, ("recommend",)),
+        ("workout", "STRENGTH · ONE", WORKOUT_TIMING_OPTIONS, ("recommend",)),
+        ("injury", "PAIN / INJURY", INJURY_OPTIONS, ("none_reported",)),
+    ), exclusive=("cardio", "workout"))
+    run_step(3, "WHAT YOU TAKE NOW",
+             "Select only supplements you use now. Press / to search by name.", (
         ("taking", "TAKING NOW", supplement_options, ("creatine_monohydrate",)),
-        ("result", "CURRENT RESULT", SUPPLEMENT_RESULT_OPTIONS, ("not_tracked",)),
-        ("review", "DEEP REVIEW", supplement_options, (
+    ))
+    run_step(4, "MEDICINES AND SAFETY",
+             "Record results, medicines, known risks, confirmed labs, and reactions.", (
+        ("result", "RESULT SO FAR", SUPPLEMENT_RESULT_OPTIONS, ("not_tracked",)),
+        ("medication", "MEDICATION", MEDICATION_OPTIONS, ("tirzepatide",)),
+        ("safety", "HEALTH FLAG", SAFETY_OPTIONS, ("none_known",)),
+        ("deficiency", "CONFIRMED LAB", DEFICIENCY_OPTIONS, ("none_unknown",)),
+        ("reaction", "PAST REACTION", REACTION_OPTIONS, ("none_reported",)),
+    ))
+    run_step(5, "SUPPLEMENTS TO INVESTIGATE",
+             "Choose topics to research. These choices are not evidence grades.", (
+        ("review", "RESEARCH", supplement_options, (
             "creatine_monohydrate", "protein_whey", "caffeine",
             "omega_3_epa_and_dha", "vitamin_d3", "magnesium",
         )),
-        ("peptide", "PEPTIDE REVIEW", tuple((c.key, c.name) for c in PEPTIDE_CATALOG), ("tirzepatide_current_prescription",)),
-        ("medication", "MEDICATION", MEDICATION_OPTIONS, ("tirzepatide",)),
-        ("safety", "SAFETY", SAFETY_OPTIONS, ("none_known",)),
-        ("deficiency", "CONFIRMED DEFICIENCY", DEFICIENCY_OPTIONS, ("none_unknown",)),
-        ("reaction", "PRIOR REACTION", REACTION_OPTIONS, ("none_reported",)),
-        ("diet", "DIET / GI", DIET_GI_OPTIONS, ("none_reported",)),
+    ))
+    run_step(6, "PEPTIDE / GRAY-MARKET RESEARCH",
+             "Checking an item requests research—not approval or a dosing plan.", (
+        ("peptide", "RESEARCH", peptide_options, ("tirzepatide_current_prescription",)),
+    ))
+    run_step(7, "FOOD, SLEEP, CAFFEINE, AND SUBSTANCES",
+             "Choose current patterns or symptoms so the plan avoids conflicts.", (
+        ("diet", "FOOD / GI", DIET_GI_OPTIONS, ("none_reported",)),
         ("sleep", "SLEEP", SLEEP_OPTIONS, ("none_reported",)),
         ("caffeine", "CAFFEINE", CAFFEINE_OPTIONS, ("coffee",)),
-        ("substance", "SUBSTANCE", SUBSTANCE_OPTIONS, ("none_reported",)),
-        ("food", "FOOD TO REVIEW", FOOD_ADDITION_OPTIONS, ("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food")),
+        ("substance", "OTHER USE", SUBSTANCE_OPTIONS, ("none_reported",)),
+    ))
+    run_step(8, "FOOD, HOME, FAITH, AND OTHER IDEAS",
+             "Choose ideas to evaluate or fit into the plan—not endorse.", (
+        ("food", "FOOD IDEA", FOOD_ADDITION_OPTIONS, ("pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food")),
         ("home", "HOME / FAITH", HOME_PRACTICE_OPTIONS, ("bible_prayer", "morning_light", "water_quality", "breathwork")),
-        ("alternative", "ALTERNATIVE CLAIM", ALTERNATIVE_ITEM_OPTIONS, ()),
-        ("store", "STORE / MULTI", STORE_OPTIONS, ("costco",)),
-        ("preference", "BUYING", PRODUCT_OPTIONS, ("third_party", "fewest_items", "food_first")),
-        ("timeline", "TIMELINE / ONE", TIMELINE_OPTIONS, ("none",)),
-        ("detail", "OPTIONAL TEXT", (("add_note", "I need to add one short detail not covered by a checkbox"),), ()),
-    ]
-    choices: list[tuple[str, str]] = []
-    defaults: list[str] = []
-    group_values: dict[str, list[str]] = {}
-    for prefix, display, options, group_defaults in groups:
-        group_values[prefix] = []
-        for value, label in options:
-            qualified = f"{prefix}::{value}"
-            choices.append((qualified, f"{display:<22} │ {label}"))
-            group_values[prefix].append(qualified)
-            if value in group_defaults:
-                defaults.append(qualified)
-
-    selected = checkbox_prompt(
-        "ONE ASSESSMENT · all categories · Space selects · Enter submits the entire assessment",
-        choices,
-        defaults=defaults,
-        exclusive_groups=(group_values["cardio"], group_values["workout"], group_values["timeline"]),
-    )
+        ("alternative", "CLAIM TO CHECK", ALTERNATIVE_ITEM_OPTIONS, ()),
+    ))
+    run_step(9, "SHOPPING AND DEADLINE",
+             "Choose your stores, buying priorities, and one deadline answer.", (
+        ("store", "STORE · MULTI", STORE_OPTIONS, ("costco",)),
+        ("preference", "BUYING RULE", PRODUCT_OPTIONS, ("third_party", "fewest_items", "food_first")),
+        ("timeline", "DEADLINE · ONE", TIMELINE_OPTIONS, ("none",)),
+        ("detail", "OPTIONAL NOTE", (("add_note", "I need to add one short detail not covered above"),), ()),
+    ), exclusive=("timeline",))
 
     def picked(prefix: str) -> list[str]:
         marker = f"{prefix}::"
@@ -1075,8 +1117,8 @@ def ask_profile_quick() -> dict:
     if picked("detail"):
         detail_needs.append("your extra note")
 
-    # Keep the default path to one checklist.  Only ambiguous or safety-relevant
-    # selections unlock one consolidated text field; never start a chain of prompts.
+    # Only ambiguous or safety-relevant selections unlock one consolidated text
+    # field; the guided path never starts a chain of open-ended questions.
     if detail_needs:
         console.print(Panel(
             "One short line is needed to interpret the selected answers safely:\n- "
@@ -1097,7 +1139,7 @@ def ask_profile_quick() -> dict:
         if c.key == "creatine_monohydrate":
             current_names.append("Creatine monohydrate 5 g/day")
         else:
-            current_names.append(f"{c.name} (amount/form not entered in quick assessment)")
+            current_names.append(f"{c.name} (amount/form not entered in guided assessment)")
 
     cardio_clock = (
         "morning selection must preserve or explicitly resolve the locked 04:50–05:50 Anki block"
@@ -1110,12 +1152,12 @@ def ask_profile_quick() -> dict:
         else "use the locked 17:00 training window; no additional timing limit selected"
     )
     issue_labels = [ISSUES[x] for x in issues]
-    return {
-        "assessment_mode": "One-screen assessment with at most one conditional detail line",
+    profile = {
+        "assessment_mode": "Nine-step guided assessment with at most one conditional detail line",
         "assessment_notes": notes,
         "name": "Michael",
         "age": 26,
-        "height": "unknown/not entered in quick assessment",
+        "height": "unknown/not entered in guided assessment",
         "location": "Dallas, Texas",
         "body_context": "about 230 lb; Phase A goal 200 lb; Phase B goal 190 lb",
         "issues": issues,
@@ -1140,7 +1182,7 @@ def ask_profile_quick() -> dict:
         "medications": "; ".join(labels_for(medication_keys, MEDICATION_OPTIONS)) or "none reported",
         "confirmed_deficiencies_or_labs": "; ".join(labels_for(deficiency_keys, DEFICIENCY_OPTIONS)) or "none/unknown",
         "conditions_and_safety_flags": "; ".join(labels_for(condition_keys, SAFETY_OPTIONS)) or "none known",
-        "vitals": "unknown/not entered in quick assessment",
+        "vitals": "unknown/not entered in guided assessment",
         "prior_reactions": "; ".join(labels_for(reaction_keys, REACTION_OPTIONS)) or "none reported",
         "diet_and_gi": "; ".join(labels_for(diet_keys, DIET_GI_OPTIONS)) or "none reported",
         "food_addition_keys": food_addition_keys,
@@ -1159,6 +1201,41 @@ def ask_profile_quick() -> dict:
         "timeline": "; ".join(labels_for(timeline_keys, TIMELINE_OPTIONS)),
         "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
     }
+
+    def summary(values: Sequence[str], limit: int = 4) -> str:
+        clean = [str(value) for value in values if value]
+        if not clean:
+            return "None selected"
+        suffix = f"; +{len(clean) - limit} more" if len(clean) > limit else ""
+        return "; ".join(clean[:limit]) + suffix
+
+    review = Table(title="Review before HealthCoach starts the research", box=box.ROUNDED, border_style="bright_cyan")
+    review.add_column("Section", style="bold cyan", no_wrap=True)
+    review.add_column("Recorded answer", overflow="fold")
+    review.add_row("Goals", summary(profile["issue_labels"]))
+    review.add_row("Current activity", summary(labels_for(training_modes, TRAINING_OPTIONS)))
+    review.add_row("Training time", f"Cardio: {profile['cardio_timing_label']}; strength: {profile['workout_timing_label']}")
+    review.add_row("Pain / injury", profile["injuries"])
+    review.add_row("Taking now", summary(current_names))
+    review.add_row("Supplement research", summary(profile["priority_supplements"]))
+    review.add_row("Peptide research", summary(profile["selected_peptides"]))
+    review.add_row("Medicines / safety", f"{profile['medications']}; {profile['conditions_and_safety_flags']}")
+    review.add_row("Food / sleep", f"{profile['diet_and_gi']}; {profile['sleep']}")
+    review.add_row("Stores", summary(profile["shopping_stores"]))
+    review.add_row("Extra detail", notes)
+    console.print("\n", review)
+    console.print("[dim]Generate uses these answers. Restart repeats the guided assessment. Cancel exits without changing the report.[/dim]")
+    action = Prompt.ask(
+        "What should HealthCoach do?",
+        choices=("generate", "restart", "cancel"),
+        default="generate",
+        show_choices=True,
+    )
+    if action == "restart":
+        return ask_profile_quick()
+    if action == "cancel":
+        raise SystemExit("Assessment cancelled; the existing report was not changed.")
+    return profile
 
 
 def ask_profile_detailed() -> dict:
@@ -2586,7 +2663,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument(
         "--detailed-assessment",
         action="store_true",
-        help="use the typing-heavy assessment; default interactive mode is one searchable checklist",
+        help="use the typing-heavy assessment; default interactive mode is a nine-step guided checklist",
     )
     ap.add_argument("--issues", help="comma-separated issue keys or numbers; use --list-issues")
     ap.add_argument("--list-issues", action="store_true", help="show questionnaire issue keys")
@@ -2652,10 +2729,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
 
     interactive = sys.stdin.isatty() and not args.non_interactive
-    if interactive:
-        profile = ask_profile_detailed() if args.detailed_assessment else ask_profile_quick()
-    else:
-        profile = default_profile(args)
+    try:
+        if interactive:
+            profile = ask_profile_detailed() if args.detailed_assessment else ask_profile_quick()
+        else:
+            profile = default_profile(args)
+    except KeyboardInterrupt:
+        console.print("\n[yellow]Assessment cancelled. The existing report was not changed.[/yellow]")
+        return 130
     supplement_candidates = select_candidates(args.items)
     peptide_candidates = [c for c in PEPTIDE_CATALOG if c.key in profile.get("selected_peptide_keys", ())]
     candidates = [*supplement_candidates, *peptide_candidates]

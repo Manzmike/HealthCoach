@@ -90,16 +90,29 @@ caffeinate -i ./hc-supplements
 
 `caffeinate` simply keeps the Mac awake while HealthCoach works.
 
-### 3. Complete the one-screen assessment
+### 3. Complete the guided assessment
+
+HealthCoach explains nine short sections one at a time:
+
+1. Goals and current activity.
+2. Training schedule and injuries.
+3. Supplements currently being used and their results.
+4. Medicines, confirmed deficiencies, reactions, and safety concerns.
+5. Supplements to investigate.
+6. Peptides or gray-market items to investigate—not automatically use.
+7. Food, digestion, sleep, caffeine, and substances.
+8. Food, home, faith, and alternative-health ideas to evaluate.
+9. Stores, buying preferences, and deadlines.
 
 - Use the arrow keys to move.
 - Press Space to select or unselect something.
-- Press `/` to search for an item or category.
-- Press `r` to return to the complete list.
-- Press Enter once when finished.
+- Press `/` to search longer lists.
+- Press `r` to return to that section's complete list.
+- Press Enter to continue to the next section.
 
-Useful choices are already selected. If those choices are correct, you can press Enter
-immediately.
+Each screen explains what its answers change. Useful choices are already checked, so pressing
+Enter keeps them. At the end, HealthCoach shows a readable summary and lets you generate the
+report, restart the assessment, or cancel without changing the current report.
 
 The `STORE / MULTI` section includes Costco, Whole Foods, Sam's Club, H-E-B, Walmart,
 Sprouts, Trader Joe's, pharmacies, supplement shops, online stores, and more. Select as many
@@ -144,7 +157,7 @@ research and planning tool, not a doctor, prescription service, or medical diagn
 
 ## Common commands
 
-Run the normal one-screen assessment:
+Run the normal guided assessment:
 
 ```bash
 cd ~/GitHub/HealthCoach/rag

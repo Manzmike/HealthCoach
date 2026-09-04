@@ -33,16 +33,19 @@ cd ~/GitHub/HealthCoach/rag
 caffeinate -i ./hc-supplements
 ```
 
-The assessment appears in one searchable screen:
+The assessment guides you through nine explained sections: goals, training schedule, current
+stack, safety, supplement research, peptide research, daily routine, food/home ideas, and
+shopping. Each screen tells you why the question matters.
 
 - Arrow keys move up and down.
 - Space selects or unselects an item.
-- `/` searches the list.
-- `r` returns to the complete list.
-- Enter submits everything once.
+- `/` searches longer lists.
+- `r` returns to that section's complete list.
+- Enter continues to the next section.
 
 The most common choices are selected already. HealthCoach asks for at most one short written
-explanation, and only when a choice needs clarification for safety or accuracy.
+explanation, and only when a choice needs clarification for safety or accuracy. A final review
+shows what was recorded before research begins; choose `generate`, `restart`, or `cancel`.
 
 ## Read the result
 
@@ -75,19 +78,18 @@ documents are created.
 
 ## Finding choices quickly
 
-Press `/` in the assessment and search for category names such as:
+Press `/` when a longer supplement, peptide, food/home, or store list is open. Search for an
+item name, such as:
 
 ```text
-GOAL
-TAKING NOW
-DEEP REVIEW
-SAFETY
-FOOD TO REVIEW
-HOME / FAITH
-STORE / MULTI
+creatine
+magnesium
+tirzepatide
+morning light
+Whole Foods
 ```
 
-Press `r` after selecting an item to return to the full assessment.
+Press `r` after selecting an item to return to that section's complete list.
 
 `STORE / MULTI` lets you select Costco, Whole Foods, Sam's Club, H-E-B, Walmart, Sprouts,
 Trader Joe's, pharmacies, supplement stores, online stores, and other sourcing options. Choose
