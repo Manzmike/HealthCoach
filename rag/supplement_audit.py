@@ -807,6 +807,14 @@ CATALOG: tuple[Candidate, ...] = (
     S("Apigenin", QUEUE_LOW, "07_supplements/apigenin", ("sleep",), aliases=("apigenin",)),
     S("Alpha-GPC", QUEUE_LOW, "07_supplements/alpha_gpc", ("focus", "strength"), aliases=("alpha-gpc", "alpha gpc")),
     S("Citicoline", QUEUE_LOW, "07_supplements/citicoline_cdp", ("focus",), aliases=("citicoline", "cdp-choline")),
+    S("Acetyl-L-carnitine (ALCAR)", QUEUE_LOW, "07_supplements/l_carnitine_alcar",
+      ("focus", "endurance"), aliases=("acetyl-l-carnitine", "acetyl l carnitine", "alcar"),
+      gate="Healthy-young-adult cognition and performance evidence must be separated from dementia, depression, or liver-disease studies.",
+      policy="LOW-PRIORITY / COVERAGE REQUIRED"),
+    S("Uridine monophosphate", QUEUE_LOW, "07_supplements/uridine", ("focus",),
+      aliases=("uridine", "uridine monophosphate", "ump"),
+      gate="Single-ingredient evidence must be separated from citicoline metabolism and multi-ingredient choline/DHA formulas.",
+      policy="LOW-PRIORITY / COVERAGE REQUIRED"),
     S("Phosphatidylcholine", QUEUE_LOW, "", ("focus",), aliases=("phosphatidylcholine",)),
     S("Shilajit", QUEUE_LOW, "07_supplements/shilajit", ("strength",), aliases=("shilajit",)),
     S("Mucuna pruriens", QUEUE_LOW, "", ("focus",), aliases=("mucuna", "mucuna pruriens", "levodopa"),
@@ -856,7 +864,7 @@ CATALOG: tuple[Candidate, ...] = (
       aliases=("bcaa", "branched-chain amino"), policy="SKIP when adequate complete protein is established"),
 )
 
-# Separate from the 89-item supplement catalog. These are displayed in a dedicated selector
+# Separate from the supplement catalog. These are displayed in a dedicated selector
 # and are added to the audit only when selected. Selection requests an evidence review; it is
 # never interpreted as intent or permission to use a gray-market compound.
 PEPTIDE_CATALOG: tuple[Candidate, ...] = (
@@ -872,6 +880,16 @@ PEPTIDE_CATALOG: tuple[Candidate, ...] = (
       ("cut",), aliases=("tesamorelin",), policy="CLINICIAN-ONLY"),
     S("Semax / Selank", QUEUE_PEPTIDE, "08_peptides_gray/semax_selank",
       ("focus", "stress"), aliases=("semax", "selank"), policy="SKIP — NO PERSONAL PROTOCOL"),
+    S("Noopept / omberacetam", QUEUE_PEPTIDE,
+      ("08_peptides_gray/noopept", "08_peptides_gray/uncertified_quality_risk"),
+      ("focus",), aliases=("noopept", "omberacetam", "gvs-111"),
+      gate="Unapproved-product identity, label accuracy, interactions, and the lack of direct healthy-user evidence control the verdict.",
+      policy="SKIP — GRAY-MARKET NOOTROPIC; NO PERSONAL PROTOCOL"),
+    S("Bromantane / Ladasten", QUEUE_PEPTIDE,
+      ("08_peptides_gray/bromantane", "08_peptides_gray/uncertified_quality_risk"),
+      ("focus", "endurance"), aliases=("bromantane", "bromantan", "ladasten", "actoprotector"),
+      gate="Russian asthenia studies are not evidence of benefit for a healthy athlete; product legality, sport rules, and stimulant risk require review.",
+      policy="SKIP — UNAPPROVED/SPORT-RULE RISK; NO PERSONAL PROTOCOL"),
     S("BPC-157", QUEUE_PEPTIDE, "08_peptides_gray/bpc157",
       ("joints", "gi"), aliases=("bpc-157", "bpc157"), policy="SKIP — NO PERSONAL PROTOCOL"),
     S("CJC-1295 / ipamorelin", QUEUE_PEPTIDE,

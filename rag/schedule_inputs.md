@@ -29,7 +29,7 @@ Sun: Rest / mobility
 - protein target hit every day
 
 ## TO DO   (tasks/sessions to place in the day or week)
-- 60 min study / Anki in the morning before work
+- 60 min morning learning block: Bible/Jesus study 04:50–05:15 when selected, then Anki/technical study 05:15–05:50
 - meal prep on Sunday
 
 ## REMEMBER   (constraints / principles to honor)

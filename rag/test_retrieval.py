@@ -16,14 +16,25 @@ def main():
     emb = SentenceTransformer(C.EMB_MODEL, device="mps")
     rr = C.load_reranker()
 
-    qs = [
-        "protein intake to preserve lean mass in a calorie deficit",
-        "does creatine cause hair loss",
-        "does boron raise free testosterone in men",
-        "how does zinc affect testosterone",
+    checks = [
+        ("protein intake to preserve lean mass in a calorie deficit", ()),
+        ("does creatine cause hair loss", ()),
+        ("does boron raise free testosterone in men", ()),
+        ("how does zinc affect testosterone", ()),
+        ("acetyl-L-carnitine ALCAR cognition or fatigue in healthy adults",
+         ("07_supplements/l_carnitine_alcar",)),
+        ("citicoline CDP-choline attention and memory in healthy adults",
+         ("07_supplements/citicoline_cdp",)),
+        ("uridine monophosphate cognition or attention in human trials",
+         ("07_supplements/uridine",)),
+        ("noopept omberacetam human cognition and product safety",
+         ("08_peptides_gray/noopept", "08_peptides_gray/uncertified_quality_risk")),
+        ("bromantane Ladasten human fatigue cognition trial",
+         ("08_peptides_gray/bromantane",)),
     ]
     ok = True
-    for q in qs:
+    coverage_missing = []
+    for q, expected_folders in checks:
         try:
             hits, weak = C.search(tbl, emb, q, 5, rr)
         except Exception as e:
@@ -33,8 +44,16 @@ def main():
         print("\nQ: %s  ->  %d hits%s" % (q, len(hits), "  (weak/C-only)" if weak else ""))
         for h in hits[:3]:
             print("   [%s | %s] %s" % (h["grade"], h["folder"], (h.get("doi") or "no-doi")[:48]))
-    print("\n%s" % ("ALL QUERIES OK — safe to run batch_ask.py / matrix.py" if ok
-                    else "SOME QUERIES FAILED — do not launch the full run yet"))
+        if expected_folders and not any(h.get("folder") in expected_folders for h in hits):
+            coverage_missing.append(q)
+            print("   MISSING EXPECTED FOLDER: %s" % " or ".join(expected_folders))
+    if not ok:
+        result = "SOME QUERIES FAILED — do not launch the full run yet"
+    elif coverage_missing:
+        result = "PIPELINE OK — %d FOCUSED COVERAGE GAP(S) REMAIN; report them as NONE/WEAK" % len(coverage_missing)
+    else:
+        result = "ALL QUERIES OK — focused folders are retrievable"
+    print("\n%s" % result)
 
 if __name__ == "__main__":
     main()

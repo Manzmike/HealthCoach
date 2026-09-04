@@ -165,6 +165,42 @@ python3 test_retrieval.py
 
 `ingest.py` rebuilds the search index, so let it finish before generating another report.
 
+### Refresh the five focus/nootropic topics
+
+ALCAR, citicoline, uridine, Noopept, and bromantane have a focused updater. It downloads only
+legal open-access material, rebuilds the local search index, and runs the retrieval check:
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+caffeinate -i ./hc-refresh-nootropics
+```
+
+Then generate the one canonical report again:
+
+```bash
+caffeinate -i ./hc-supplements
+```
+
+Selection asks HealthCoach to investigate an item; it does not automatically add it to the
+stack. Noopept and bromantane stay in the peptide/gray-market research screen and never receive
+a personal-use protocol.
+
+## Morning Bible and Jesus study
+
+“Bible study, prayer, and learning about Jesus” is preselected under `HOME / FAITH`. When kept,
+the report divides the existing morning learning hour without changing wake time or work:
+
+```text
+04:50–05:15  Scripture/Jesus study: read, write one observation, pray
+05:15–05:50  Anki or technical study
+05:50        Breakfast
+06:00        Work Monday–Thursday
+```
+
+The report includes an eight-week reading path, official church-document links, early Christian
+texts, and non-Christian historical references. It keeps history, doctrine, and personal faith
+practice labeled separately.
+
 ## Important limits
 
 - HealthCoach is an evidence and planning tool, not a doctor.

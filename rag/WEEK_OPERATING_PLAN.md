@@ -8,6 +8,7 @@ This date-agnostic operating week is for a Black male, age 26, in Dallas, cuttin
 - Bed: wind-down begins **19:15**; lights out is **20:15 every day**.
 - Time in bed: **8.25 hours**; no weekend sleep-in or sleep-restriction block.
 - Work: **Monday–Thursday, 06:00–16:00**; Friday–Sunday are off.
+- Morning study: **04:50–05:50**. When Bible/Jesus learning is selected, use **04:50–05:15** for Scripture/Jesus study and **05:15–05:50** for Anki/technical study; otherwise keep the full hour for the selected study priority.
 - Training: default start **17:00** and default duration **75 minutes**, unless the day card specifies a shorter session.
 - Active cut: **Phase A, about 230 lb → 200 lb**. Phase B is 200 lb → 190 lb only after Phase A is stable for 2–3 weeks and lifts are not crashing.
 - Protein: Phase A goal **200 lb = 90.7 kg**; **90.7 kg × 1.8 g/kg = 163 g**, rounded to **165 g/day**. Use four timed feedings of 40–45 g, with breakfast at least 40 g. Phase A floor is 145 g and heavy-lower/high-mileage cap is 200 g; this week’s printed target remains 165 g.
@@ -40,7 +41,7 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 
 - **04:30:** Wake and begin hydration.
 - **04:35–04:50:** Outdoor light while walking easily; the walk counts toward steps.
-- **04:50–05:50:** Study/Anki.
+- **04:50–05:50:** Selected morning study split: Bible/Jesus 04:50–05:15 and Anki/technical study 05:15–05:50 when faith study is selected.
 - **05:50:** Breakfast and first protein feeding.
 - **06:00–16:00:** Work. Walk for 5 minutes near 08:00, 10:00, 13:00, and 15:00.
 - **11:00:** Mid-work protein meal; any optional caffeine ends by 11:15.
@@ -99,7 +100,7 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 
 - **04:30:** Wake and begin hydration.
 - **04:35–04:50:** Outdoor light and easy walking.
-- **04:50–05:50:** Study/Anki.
+- **04:50–05:50:** Selected morning study split: Bible/Jesus 04:50–05:15 and Anki/technical study 05:15–05:50 when faith study is selected.
 - **05:50:** Breakfast and first protein feeding.
 - **06:00–16:00:** Work, with 5-minute walks near 08:00, 10:00, 13:00, and 15:00.
 - **11:00:** Mid-work protein meal; optional caffeine ends by 11:15.
@@ -157,7 +158,7 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 
 - **04:30:** Wake and begin hydration.
 - **04:35–04:50:** Outdoor light plus easy walking.
-- **04:50–05:50:** Study/Anki.
+- **04:50–05:50:** Selected morning study split: Bible/Jesus 04:50–05:15 and Anki/technical study 05:15–05:50 when faith study is selected.
 - **05:50:** Breakfast and first protein feeding.
 - **06:00–16:00:** Work, with 5-minute walks near 08:00, 10:00, 13:00, and 15:00.
 - **11:00:** Mid-work protein meal; optional caffeine ends by 11:15.
@@ -219,7 +220,7 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 
 - **04:30:** Wake and begin hydration.
 - **04:35–04:50:** Outdoor light and easy walking.
-- **04:50–05:50:** Study/Anki.
+- **04:50–05:50:** Selected morning study split: Bible/Jesus 04:50–05:15 and Anki/technical study 05:15–05:50 when faith study is selected.
 - **05:50:** Breakfast and first protein feeding.
 - **06:00–16:00:** Work, with 5-minute walks near 08:00, 10:00, 13:00, and 15:00.
 - **11:00:** Mid-work protein meal; optional caffeine ends by 11:15.
@@ -278,7 +279,7 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 
 - **04:30:** Wake and begin hydration; no weekend sleep-in.
 - **04:35–04:50:** Outdoor light and easy walking.
-- **04:50–05:50:** Study/Anki.
+- **04:50–05:50:** Selected morning study split: Bible/Jesus 04:50–05:15 and Anki/technical study 05:15–05:50 when faith study is selected.
 - **05:50:** Breakfast and first protein feeding.
 - **06:10–07:00:** Work-free block: 30-minute easy walk, then light household reset.
 - **07:00–10:30:** Personal tasks/errands, changing position or walking briefly each hour.
@@ -339,7 +340,7 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 
 - **04:30:** Wake and begin hydration; no weekend sleep-in.
 - **04:35–04:50:** Outdoor light plus easy walking.
-- **04:50–05:50:** Study/Anki.
+- **04:50–05:50:** Selected morning study split: Bible/Jesus 04:50–05:15 and Anki/technical study 05:15–05:50 when faith study is selected.
 - **05:50:** Breakfast and first protein feeding.
 - **06:10–11:00:** Work-free block: prepare familiar run clothing, route, fluids, and food; complete only light errands.
 - **11:00:** Second protein feeding; optional caffeine ends by 11:15.
@@ -396,7 +397,8 @@ If today is Thursday, run Thursday–Sunday as written. Do not skip Sunday meal 
 - **04:30:** Wake and begin hydration; no weekend sleep-in.
 - **04:35–04:50:** Outdoor light and easy walking.
 - **04:50–05:13:** Mobility swap using the sequence below.
-- **05:13–05:50:** Quiet weekly review/Anki cleanup.
+- **05:13–05:38:** Bible/Jesus curriculum when selected; use the same read, observe, pray pattern.
+- **05:38–05:50:** Quiet weekly review/Anki cleanup.
 - **05:50:** Breakfast and first protein feeding.
 - **06:10–06:30:** Easy walk.
 - **08:30–10:30:** Meal prep, including four daily protein feedings for workdays.

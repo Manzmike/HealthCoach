@@ -185,7 +185,7 @@ They overlap, but historical evidence does not experimentally prove divinity or 
 
 ## Eight-week Jesus curriculum — PLANNING DEFAULT
 
-Use **15 minutes at 19:15** during wind-down, with the phone in focus mode: 10 minutes reading, 3 minutes written observation, 2 minutes prayer. This does not move the 20:15 bed. Sunday may use 30 minutes after meal prep.
+When Bible/Jesus learning is selected, divide the existing morning study hour without moving wake, breakfast, work, training, or bed: **04:50–05:15 Scripture/Jesus study**, then **05:15–05:50 Anki or technical study**. Use the 25-minute faith block as 18 minutes reading, 5 minutes written observation, and 2 minutes prayer. On Sunday, the same 25-minute study may follow the short mobility block. The 19:15 period remains wind-down, with only a brief optional prayer—not another demanding study session.
 
 | Week | Reading | Study question | Verification task |
 |---|---|---|---|
@@ -198,7 +198,7 @@ Use **15 minutes at 19:15** during wind-down, with the phone in focus mode: 10 m
 | 7 | 1 Corinthians, especially ch. 15 | What did Paul say he received and pass on? | Use the USCCB notes; date the letter relative to later sources. |
 | 8 | James + Tacitus 15.44 + Josephus 20.9.1 + *Dei Verbum* 11–19 | What is historical evidence, what is doctrine, and what is practice? | Write one page with three headings: history / theology / discipleship. |
 
-**Daily prayer cue — PLANNING DEFAULT:** morning light: one minute of gratitude and the Lord’s Prayer; 19:15: read, write one sentence (“What does this show about Jesus?”), pray one concrete response; Sunday: worship/community when available. Prayer is not scored as a biohack and does not replace treatment.
+**Daily study and prayer cue — PLANNING DEFAULT:** 04:50: pray briefly, read the assigned passage, and write one sentence answering “What does this show about Jesus?”; 05:15: switch to Anki/technical study; 19:15: one brief prayer or reflection only; Sunday: worship/community when available. Prayer is not scored as a biohack and does not replace treatment.
 
 # 7. SOURCE AND PRODUCT VERIFICATION CHECKLIST
 

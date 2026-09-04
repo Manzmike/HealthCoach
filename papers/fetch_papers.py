@@ -485,6 +485,7 @@ ANCHORS = {
  'lions_mane':["lion's mane",'lions mane','hericium','erinaceus','erinacine','hericenone'],
  'ginkgo_biloba':['ginkgo','ginkgo biloba'],
  'citicoline_cdp':['citicoline','cdp-choline','cytidine','cdp choline'],
+ 'uridine':['uridine','uridylic','triacetyluridine','uridine-5','uridine 5'],
  'phosphatidylserine':['phosphatidylserine'],
  'melatonin':['melatonin'],
  'l_tryptophan_5htp':['tryptophan','5-htp','5-hydroxytryptophan'],
@@ -872,8 +873,10 @@ TOPICS = [
      "nootropic systematic review cognition"], aa=False),
   T("08_peptides_gray/bromantane", "bromantane", 6, 10, [
      "bromantane Ladasten actoprotector",
-     "bromantane asthenia randomized"],
-     seeds=[("PMC","PMC3762282")], aa=False),
+     "bromantane asthenia randomized",
+     "Ladasten neurasthenia placebo clinical trial",
+     "bromantane human safety pharmacology"],
+     seeds=[("PMC","PMC3762282"),("MED","19491814")], aa=False),
   T("08_peptides_gray/tak_653", "tak653", 6, 10, [
      "TAK-653 AMPA receptor potentiator clinical",
      "TAK-653 healthy volunteers"], aa=False),
@@ -1247,7 +1250,10 @@ TOPICS = [
      "lipoic acid mitochondrial mechanism redox"], aa=False),
   T("07_supplements/l_carnitine_alcar", "carnitine", 6, 12, [
      "L-carnitine supplementation fat oxidation exercise", "acetyl-L-carnitine cognition fatigue",
-     "carnitine fatty acid transport mitochondria mechanism"], aa=False),
+     "acetyl-L-carnitine healthy adults cognition randomized",
+     "L-carnitine cognitive enhancement people without cognitive impairment",
+     "carnitine fatty acid transport mitochondria mechanism"],
+     seeds=[("PMC","PMC6464592"),("PMC","PMC6991156")], aa=False),
   T("07_supplements/hmb", "hmb", 6, 12, [
      "HMB beta-hydroxy-beta-methylbutyrate muscle", "HMB resistance training lean mass",
      "HMB leucine metabolite mechanism muscle protein"], aa=False),
@@ -1325,7 +1331,19 @@ TOPICS = [
      "ginkgo flavonoid terpenoid mechanism"], aa=False),
   T("07_supplements/citicoline_cdp", "citicoline", 6, 10, [
      "citicoline CDP-choline cognition attention", "citicoline brain phospholipid",
-     "citicoline acetylcholine membrane mechanism"], aa=False),
+     "citicoline healthy young adults vigilance working memory randomized",
+     "citicoline healthy adults attention placebo trial",
+     "citicoline acetylcholine membrane mechanism"],
+     seeds=[("PMC","PMC8349115"),("PMC","PMC7878037"),("PMC","PMC4517431"),
+            ("MED","10974208")], aa=False),
+  T("07_supplements/uridine", "uridine", 6, 12, [
+     "uridine monophosphate healthy adults cognition randomized",
+     "uridine supplementation human cognitive performance",
+     "uridine choline DHA cognition randomized",
+     "uridine monophosphate brain phospholipid human",
+     "uridine food intake human intervention",
+     "oral uridine human safety pharmacokinetics"],
+     seeds=[("PMC","PMC3020593"),("PMC","PMC9873946"),("MED","28222577")], aa=False),
   T("07_supplements/phosphatidylserine", "ps", 6, 10, [
      "phosphatidylserine cognition cortisol", "phosphatidylserine exercise stress",
      "phosphatidylserine membrane HPA axis mechanism"], aa=False),
@@ -1439,7 +1457,10 @@ TOPICS = [
      "agomelatine efficacy tolerability"], aa=False),
   T("08_peptides_gray/noopept", "noopept", 6, 20, [
      "noopept cognition neuroprotection", "noopept BDNF NGF mechanism",
-     "noopept anxiety clinical"], aa=False),
+     "noopept anxiety clinical", "omberacetam human clinical trial",
+     "noopept supplement label accuracy safety"],
+     seeds=[("MED","19234797"),("PMC","PMC8382366")],
+     also=("08_peptides_gray/uncertified_quality_risk",), aa=False),
   T("08_peptides_gray/phenibut", "phenibut", 6, 20, [
      "phenibut GABA-B anxiety", "phenibut dependence withdrawal safety",
      "phenibut pharmacology cognition"], aa=False),

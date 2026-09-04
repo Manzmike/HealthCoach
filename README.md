@@ -201,6 +201,16 @@ Ask one research question without rebuilding the full report:
 python3 coach.py "Does creatine affect sleep?"
 ```
 
+Refresh the focused evidence folders for ALCAR, citicoline, uridine, Noopept, and bromantane,
+then rebuild and test the search index:
+
+```bash
+caffeinate -i ./hc-refresh-nootropics
+```
+
+When Bible/Jesus study is selected in the assessment, the report assigns 04:50–05:15 to its
+eight-week reading-and-prayer path and keeps 05:15–05:50 for Anki or technical study.
+
 ## First-time installation
 
 Only do this if the `.venv` folder has not already been created:

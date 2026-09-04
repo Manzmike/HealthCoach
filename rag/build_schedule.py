@@ -132,7 +132,7 @@ def build_timeline(T):
     rows = [
         (wake,        "Wake"),
         (wake + 5,    "Morning bright light / sunlight (10–20 min)"),
-        (study_start, "Study / Anki (%d min)" % smin),
+        (study_start, "Morning study: Bible/Jesus + Anki/technical (%d min)" % smin),
         (max(study_end, ws - 25), "Breakfast — front-load protein"),
         (ws,          "Work begins (10-hour day)"),
         (lunch,       "Lunch — protein + veg"),
