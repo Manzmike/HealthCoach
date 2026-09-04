@@ -90,7 +90,12 @@ def main():
 
     chapters = [("How to find your numbers", tips)]
 
-    print("[1/5] foundations...")
+    _pt0 = datetime.datetime.now()
+    def step(msg):
+        el = int((datetime.datetime.now() - _pt0).total_seconds())
+        print("  %s  (elapsed %dm%02ds)" % (msg, el // 60, el % 60), flush=True)
+
+    step("[1/5] foundations...")
     chapters.append(("The foundations that matter most", gen(
         "List the highest-evidence A/B FOUNDATIONS for me across sleep, nutrition, training, recovery, and "
         "stress. For each: what it is, why it matters, how to do it, and its A/B/C level. Rank most-to-least "
@@ -101,7 +106,7 @@ def main():
 
     # Chapters 3 & 4: times/split are FIXED IN CODE (from schedule_inputs.md TIMES) — the model
     # only adds rationale. This is why the playbook's clock can't drift like the old 8B version.
-    print("[2/5] daily schedule (deterministic clock)...")
+    step("[2/5] daily schedule...")
     T = BS.parse_times(os.environ.get("INPUTS", "schedule_inputs.md"))
     daily_ch = "_(no ## TIMES section in schedule_inputs.md — add WAKE/BED/WORK_START/WORK_END/TRAIN.)_"
     if T:
@@ -120,7 +125,7 @@ def main():
                        BS.to_hhmm(train), BS.to_hhmm(caf_m), tl, rationale))
     chapters.append(("Your daily schedule (workday)", daily_ch))
 
-    print("[3/5] weekly structure (deterministic split)...")
+    step("[3/5] weekly structure...")
     split = BS.parse_split(os.environ.get("INPUTS", "schedule_inputs.md"))
     sp_md = "\n".join("| %s | %s |" % (d, split.get(d, "—")) for d in BS.DAYS)
     n_lift = sum(1 for d in BS.DAYS if __import__("re").search(r'lift|strength|weight', split.get(d, ""), __import__("re").I))
@@ -134,7 +139,7 @@ def main():
     weekly_ch = "| Day | Session |\n|---|---|\n%s%s\n\n### Session detail\n\n%s" % (sp_md, lift_warn, wk_detail)
     chapters.append(("Your weekly structure", weekly_ch))
 
-    print("[4/5] supplements & compounds (tiered)...")
+    step("[4/5] supplements tiered...")
     chapters.append(("Supplements & compounds — what to add (tiered)", gen(
         "Give an A/B/C/D tier list of supplements and compounds for me. A = would significantly help, add it; "
         "B = worth adding; C = little change; D = not supported / hype. For each: what it does, its level, and "
@@ -142,7 +147,7 @@ def main():
         ["creatine strength cognition evidence", "caffeine performance", "vitamin D testosterone immune",
          "omega-3 recovery inflammation", "magnesium sleep", "ashwagandha cortisol", "peptide evidence human"])))
 
-    print("[5/5] first four weeks...")
+    step("[5/5] first four weeks...")
     chapters.append(("Putting it together — your first four weeks", gen(
         "Give a phased 4-WEEK adoption plan: which 2-3 changes to add each week (start with A-tier), how to add "
         "ONE thing at a time so I can tell what works, what to measure, and how to know it's working. Keep it "

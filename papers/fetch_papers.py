@@ -35,6 +35,24 @@ SLEEP    = 0.34                                              # be polite to APIs
 SEEN_DOI  = {}        # doi -> primary filepath (for hardlinks)
 SEEN_PMC  = set()
 SUCCESS   = 0         # unique PDFs written
+_T0       = time.time()
+WTAG      = ""        # worker label for parallel shards, e.g. "[W1/3]"
+
+def _hms(s):
+    s = int(s); h, m = s // 3600, (s % 3600) // 60
+    return ("%dh%02dm" % (h, m)) if h else ("%dm%02ds" % (m, s % 60) if m else "%ds" % s)
+
+def progress(done, total, extra=""):
+    """One clean status line: [worker] bar done/total pct  new=N  <extra>  ETA  elapsed."""
+    filled = int(20 * done / total) if total else 0
+    bar = "[" + "#" * filled + "." * (20 - filled) + "]"
+    eta = ""
+    if done and total and done < total:
+        eta = "ETA %s " % _hms((time.time() - _T0) / done * (total - done))
+    pre = (WTAG + " ") if WTAG else ""
+    print("%s%s %d/%d %3.0f%%  new=%d  %s %s(elapsed %s)" % (
+        pre, bar, done, total, (100.0*done/total if total else 0), SUCCESS,
+        extra, eta, _hms(time.time()-_T0)), flush=True)
 COUNTS    = {}        # folder -> count
 
 # --------------------------------------------------------------------------- #
@@ -560,7 +578,7 @@ def aboost_topic(t):
     core = kws[0]
     n = int(os.environ.get("ABOOST_N", "8"))
     cap = COUNTS[folder] + n
-    print("\n== ABOOST %s (have %d, hunting up to +%d A/B) ==" % (folder, COUNTS[folder], n))
+    print("\n%s== ABOOST %s (have %d, hunting up to +%d A/B) ==" % ((WTAG+" ") if WTAG else "", folder, COUNTS[folder], n))
     qs = ["%s systematic review" % core,
           "%s meta-analysis" % core,
           "%s clinical practice guideline" % core,
@@ -591,7 +609,7 @@ def run_topic(t):
     # seed count from PDFs ALREADY on disk (idempotent re-runs)
     on_disk = len(glob.glob(os.path.join(folder_abs, "*.pdf")))
     COUNTS[folder] = max(COUNTS.get(folder, 0), on_disk)
-    print("\n==== TOPIC %s (have %d, min %d) ====" % (folder, COUNTS[folder], qmin))
+    print("\n%s==== TOPIC %s (have %d, min %d) ====" % ((WTAG+" ") if WTAG else "", folder, COUNTS[folder], qmin))
     # REFETCH=<substr,substr> forces matching topics to re-pull through ALL providers
     # (OpenAlex + S2 included), even if already at min — the deep-source top-up.
     _refetch = [x.strip() for x in os.environ.get("REFETCH", "").split(",") if x.strip()]
@@ -1817,6 +1835,23 @@ def main():
                     help="i/n — run every n-th topic only, for parallel processes (e.g. --shard 0/3)")
     a, _ = ap.parse_known_args()
     if a.selftest: return selftest()
+
+    # AUTO-PARALLEL: a plain `ABOOST=1 python3 fetch_papers.py` (no --shard/--topic) fans out
+    # into JOBS parallel worker processes automatically — fast, and each shard is idempotent so
+    # a dropped connection just means re-running resumes. Override count with ABOOST_JOBS.
+    JOBS = int(os.environ.get("ABOOST_JOBS", "3"))
+    if os.environ.get("ABOOST") and not a.shard and not a.topic and JOBS > 1:
+        import subprocess
+        print("ABOOST parallel — launching %d worker shards (idempotent; resumable)..." % JOBS)
+        env = dict(os.environ)
+        procs = [subprocess.Popen([sys.executable, os.path.abspath(__file__),
+                                   "--shard", "%d/%d" % (i, JOBS)], env=env) for i in range(JOBS)]
+        rc = 0
+        for p in procs:
+            rc |= (p.wait() or 0)
+        print("ABOOST parallel done — %d shards finished." % JOBS)
+        return rc
+
     init_logs()
     skipped = load_seen_from_manifest()          # cross-run dedupe
     if skipped: print("preloaded %d already-logged DOIs from MANIFEST (will skip)" % skipped)
@@ -1837,15 +1872,18 @@ def main():
         todo = [t for t in (TOPICS + HORMONE_TOPICS) if a.topic in t["folder"]]
     shard_i = shard_n = None
     if a.shard:
+        global WTAG
         shard_i, shard_n = (int(x) for x in a.shard.split("/"))
         todo = [t for k, t in enumerate(todo) if k % shard_n == shard_i]
-        print("SHARD %d/%d — this process owns %d topics (idempotent; safe to run in parallel)"
-              % (shard_i, shard_n, len(todo)))
-    for t in todo:
+        WTAG = "[W%d/%d]" % (shard_i + 1, shard_n)
+        print("%s SHARD owns %d topics (idempotent; safe in parallel)" % (WTAG, len(todo)))
+    tot = len(todo)
+    for k, t in enumerate(todo, 1):
         try: run_topic(t)
         except KeyboardInterrupt: break
         except Exception as e:
             log_failed("- TOPIC ERROR %s: %s" % (t["folder"], e))
+        progress(k, tot, "done %s" % t["folder"])
     # AA overlay runs once: only when not topic-filtered and (no shard, or the first shard)
     if not a.topic and (shard_i is None or shard_i == 0):
         run_aa_overlay()

@@ -744,6 +744,94 @@ add(*TIER)
 
 _new15 = list(qs[_n15_start:])   # all ROUND-15 sections, headers included
 
+# ============================ ROUND 16: DEEP + real-life applicability ============================
+_n16_start = len(qs)
+
+sec("OFF-DAY TRAINING, ACTIVE RECOVERY, WALKING & NEAT")
+add(
+ "what should I actually do on my off days (Fri–Sun) to recover without losing training adaptations?",
+ "how many daily steps should I target for fat loss and heart health, and does walking eat into my running recovery?",
+ "active recovery vs complete rest — what does the human evidence say is better for a lifter who also runs?",
+ "what is a zone-1 recovery walk, how easy should it be, and how long after a hard session or long run?",
+ "should I take a recovery walk the day after my long run, and exactly how long and how easy?",
+ "does low-intensity cross-training (easy cycling, swimming, elliptical) on off days speed recovery or just add fatigue?",
+ "is a true rest day better fully passive or lightly active for recovery and next-day performance?",
+ "how much does NEAT (non-exercise movement) drop during a calorie deficit, and how do I keep it up?",
+ "does a 10–15 minute walk after meals meaningfully lower blood sugar, and should I build it into my day?",
+ "what off-day mobility or stretching actually improves recovery and running, and what is a waste of time?",
+ "how much easy activity on an off day counts as recovery before it becomes junk fatigue that hurts my next hard day?",
+ "how do I structure a full active-recovery day — sleep, walking, nutrition, sauna, mobility — concretely?",
+ "on a cut with marathon mileage, should off days be complete rest or easy movement to protect energy availability?",
+ "does easy walking count toward my cardio and fat-loss goals, or do I need structured runs for that?",
+ "what are the signs my 'active recovery' is actually too much and blunting adaptation?",
+ "how should I use my two weekend off days differently — one truly off, one active — for a hybrid athlete?",
+)
+
+# DEEP per-substance protocol: exact dose, form, timing, food, loading/cycling, time-to-effect
+sec("EXACT PROTOCOLS — dose · form · timing · duration (per substance)")
+for s,_ in SUBS:
+    add(f"for {s}: the exact evidence-based dose, best form, timing (time of day, with or without food), "
+        f"any loading or cycling, and how long until effects show — from human studies?")
+
+sec("EXACT PROTOCOLS — key foods and levers")
+add(
+ "exact daily protein target in grams for me on a cut, how to split it across meals, and the per-meal leucine threshold?",
+ "exact carbohydrate grams per hour to take in during long runs, and how to build gut tolerance step by step?",
+ "exact caffeine dose and timing before a hard session for performance without wrecking sleep?",
+ "exact creatine protocol — load or not, daily grams, timing, and does it matter with carbs?",
+ "exact fiber target per day and how to ramp it without GI issues?",
+ "exact sodium and fluid intake for my long runs based on sweat rate?",
+ "exact vitamin D dose to correct and maintain, and what blood level to target?",
+ "exact omega-3 EPA/DHA dose for recovery and the omega-3 index to aim for?",
+)
+
+sec("PRACTICAL EXECUTION — real meals, groceries, low-appetite tactics")
+add(
+ "give me concrete high-protein meals I can actually eat when tirzepatide has killed my appetite?",
+ "a realistic weekly grocery list for a high-protein cut at my calorie and protein targets?",
+ "exact tactics to hit ~180–195 g protein a day with very low appetite (shakes, density, timing)?",
+ "what should each meal look like, with portions, on a training day vs a rest day?",
+ "exactly what to eat before, during, and after a long run — foods and amounts?",
+ "a simple repeatable weekly meal-prep template that hits my macros?",
+ "cheapest high-protein foods per gram of protein, ranked?",
+ "what to eat post-lift vs post-run when they fall on different days?",
+ "how to build the ideal plate for a cut — proportions of protein, veg, carbs, fat?",
+ "grab-and-go options that keep me on protein during a busy 10-hour workday?",
+)
+
+sec("DEEP TROUBLESHOOTING — specific scenario → exact fix")
+add(
+ "I hit the wall late in long runs — the exact fueling and pacing changes to fix it?",
+ "my scale weight stalled for two weeks on the cut — the exact diagnostic steps and fix, in order?",
+ "I feel flat and weak lifting on a cut plus GLP-1 — exactly what to adjust?",
+ "poor sleep despite good habits — the exact troubleshooting order to work through?",
+ "afternoon energy crash at work — the exact likely causes and fixes to test?",
+ "low morning energy even after 8 hours of sleep — what to check, in order?",
+ "GI distress on runs — the exact food and timing changes to try first?",
+ "lost motivation to train — the evidence-based exact steps to rebuild it?",
+ "a nagging knee or shin from mileage — exact load management and prehab steps?",
+ "night-time cravings spike — the exact protocol to shut them down?",
+)
+
+sec("EXACT TRAINING NUMBERS — mileage, sets, reps, progression")
+add(
+ "an exact weekly mileage progression for a first marathon while lifting three days a week?",
+ "exact sets, reps, and reps-in-reserve to keep muscle on a cut with three lifting days a week?",
+ "how many hard running days per week is the max before recovery suffers on a deficit?",
+ "an exact marathon taper — what to cut and when across the final two weeks?",
+ "exactly how to lay out 3 runs and 3 lifts across Mon–Sun (long run + easy/interval runs + 3 lifts) to avoid interference?",
+ "exact weekly zone-2 volume to build the aerobic base for a marathon at my level?",
+ "how many total hard sessions (runs + lifts) per week can I recover from on a calorie deficit?",
+ "the exact signs I need a deload and precisely what to reduce when I do?",
+ "how to progress lifts (load vs reps) on a cut when strength is hard to add?",
+ "how to add speed to marathon training without over-reaching — exact session types and frequency?",
+ "with 3 runs and 3 lifts a week (6 training days, 1 rest) on a cut plus a GLP-1, how do I manage recovery so I don't overreach?",
+ "is 6 training days a week (3 run + 3 lift) sustainable on a calorie deficit, or does the evidence say to cut a day?",
+ "how should I order a 3-lift / 3-run week so leg days don't wreck my runs and the long run stays fresh?",
+)
+
+_new16 = list(qs[_n16_start:])   # ROUND-16 deep additions
+
 # dedupe (keep order, keep comments)
 seen,out=set(),[]
 for q in qs:
@@ -791,6 +879,23 @@ dhdr=["# HealthCoach — ROUND 15 delta (NEW questions only): cravings, parasite
 open("new_questions_r15.txt","w").write("\n".join(dhdr+d_out)+"\n")
 dnq=sum(1 for q in d_out if not q.startswith("#"))
 print("wrote new_questions_r15.txt (delta):", dnq, "new questions")
+
+# ROUND 16 delta — the DEEP, real-life additions (run these on their own, no r15 repeat):
+e_seen,e_out=set(),[]
+for q in _new16:
+    if q.startswith("#"): e_out.append(q); continue
+    k=q.lower()
+    if k in e_seen: continue
+    e_seen.add(k); e_out.append(q)
+ehdr=["# HealthCoach — ROUND 16 delta (NEW deep questions only): off-day training / active recovery /",
+      "#   walking & NEAT, exact per-substance protocols (dose·form·timing·duration), exact food/lever",
+      "#   protocols, practical meals & low-appetite tactics, deep troubleshooting, exact training numbers.",
+      "# All are also in interactions.txt. Run just these:",
+      "#   python3 batch_ask.py new_questions_r16.txt   -> logs/coach_log_*.md",
+      ""]
+open("new_questions_r16.txt","w").write("\n".join(ehdr+e_out)+"\n")
+enq=sum(1 for q in e_out if not q.startswith("#"))
+print("wrote new_questions_r16.txt (delta):", enq, "new deep questions")
 
 # standalone PERSONALIZED tier + schedule file -> its own dedicated log when run alone.
 thdr=["# HealthCoach — PERSONALIZED A/B/C/D TIERS + SCHEDULE BUILD (run alone for a clean tier/plan log)",

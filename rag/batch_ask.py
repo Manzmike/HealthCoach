@@ -44,7 +44,21 @@ def main():
         tag = "_shard%dof%d" % (si, sn)
         print("SHARD %d/%d — this process answers %d of the questions" % (si, sn, len(qs)))
     os.makedirs("logs", exist_ok=True)
-    log = os.path.join("logs", "coach_log_" + datetime.datetime.now().strftime("%Y%m%d_%H%M") + tag + ".md")
+    # RESUME: set LOGFILE=<path> to append to a fixed log and SKIP questions already answered in it.
+    # Re-running the exact same command then continues where it left off (great for the full 912 run).
+    log = os.environ.get("LOGFILE") or os.path.join(
+        "logs", "coach_log_" + datetime.datetime.now().strftime("%Y%m%d_%H%M") + tag + ".md")
+    done, resuming = set(), False
+    if os.path.exists(log):
+        txt = open(log, encoding="utf-8", errors="ignore").read()
+        for m in re.findall(r"^##\s*Q\d+\s*—\s*(.+)$", txt, re.M):
+            done.add(m.strip().lower())
+        if done:
+            resuming = True
+            qs = [q for q in qs if q.strip().lower() not in done]
+            print("RESUME — %d already answered in %s; %d left" % (len(done), log, len(qs)))
+    if not qs:
+        print("nothing left to answer — %s is complete." % log); return
 
     print("loading models once (embedding + MLX)...")
     import lancedb
@@ -56,12 +70,23 @@ def main():
     model, tok = load(C.GEN_MODEL)
     chat = bool(getattr(tok, "chat_template", None))
 
-    with open(log, "w") as f:
-        f.write("# HealthCoach coach log\n\nGenerated %s · %d questions · model %s\n"
-                % (datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), len(qs), C.GEN_MODEL))
+    if not resuming:
+        with open(log, "w") as f:
+            f.write("# HealthCoach coach log\n\nGenerated %s · %d questions · model %s\n"
+                    % (datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), len(qs), C.GEN_MODEL))
 
+    def _hms(s):
+        s = int(s); m = s // 60
+        return ("%dm%02ds" % (m, s % 60)) if m else ("%ds" % s)
+    t0 = datetime.datetime.now()
     for i, q in enumerate(qs, 1):
-        print("[%d/%d] %s" % (i, len(qs), q))
+        el = (datetime.datetime.now() - t0).total_seconds()
+        eta = (el / (i - 1) * (len(qs) - i + 1)) if i > 1 else 0
+        fill = int(20 * (i - 1) / len(qs))
+        bar = "[" + "#" * fill + "." * (20 - fill) + "]"
+        print("%s%s %d/%d %3.0f%%  ETA %s  (elapsed %s)\n   Q: %s" % (
+            (tag + " ") if tag else "", bar, i, len(qs), 100.0 * (i - 1) / len(qs),
+            _hms(eta), _hms(el), q[:90]), flush=True)
         hits, weak = C.search(tbl, emb, q, 8, rr)
         if not hits:
             ans, srcs = "(nothing in the library covers this — no answer invented.)", []

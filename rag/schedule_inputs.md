@@ -15,11 +15,11 @@ CAFFEINE_STOP:            # leave blank to auto-set = BED minus 9h
 
 ## WEEKLY SPLIT   (optional — "Day: session". Delete this whole section to use a sensible
 #                  hybrid default with 2 lift days + runs. Keep your long run on its day.)
-Mon: Lift A — upper / push-pull (compound focus)
+Mon: Lift A — lower body (squat/hinge, compound focus)
 Tue: Zone 2 run (easy aerobic)
-Wed: Lift B — lower body (compound focus)
+Wed: Lift B — upper / push-pull (compound focus)
 Thu: Easy run or short intervals
-Fri: Quality run (tempo/intervals) or full rest
+Fri: Lift C — full-body / upper (no heavy legs before the long run)
 Sat: Long run
 Sun: Rest / mobility
 
