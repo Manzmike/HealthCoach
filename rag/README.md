@@ -49,7 +49,27 @@ shows what was recorded before research begins; choose `generate`, `restart`, or
 
 ## Read the result
 
-When the program finishes, open the report:
+When the program finishes, browse it by chapter and logical page:
+
+```bash
+./hc-report
+```
+
+- Arrow keys choose a chapter or page.
+- `/` searches chapter titles and the full paragraph text.
+- Space or Enter opens the highlighted page.
+- Inside a page, Space scrolls to the next screen.
+- `[` and `]` move to the previous or next chapter.
+- `b` returns to the index and `q` quits.
+
+You can also search or print a page without opening the interactive navigator:
+
+```bash
+./hc-report --search "raw milk"
+./hc-report --page 017
+```
+
+To open the complete static report in a Mac application:
 
 ```bash
 open HEALTHCOACH_REPORT.md
@@ -62,7 +82,7 @@ glow -p HEALTHCOACH_REPORT.md
 ```
 
 Every run replaces the same report. No timestamped reports, JSON side files, or additional log
-documents are created.
+documents are created. The navigator only reads that report; it does not make another copy.
 
 ## What is inside the report
 

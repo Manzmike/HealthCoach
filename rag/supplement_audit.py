@@ -2436,7 +2436,9 @@ def render_terminal_summary(candidates: Sequence[Candidate], evidence: dict[str,
     console.print("\n", table)
     console.print(Panel.fit(
         f"[bold green]Audit complete[/bold green]\n[white]{out}[/white]\n\n"
-        f"Open rendered report:\n[cyan]glow -p \"{out}\"[/cyan]",
+        f"Browse chapters and logical pages with the keyboard:\n"
+        f"[cyan]cd \"{HERE}\" && ./hc-report[/cyan]\n\n"
+        f"Or open the complete static report:\n[cyan]glow -p \"{out}\"[/cyan]",
         border_style="green", padding=(1, 2),
     ))
 

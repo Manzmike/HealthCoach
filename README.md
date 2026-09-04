@@ -46,6 +46,8 @@ skipped.
   claims.
 - **It stays manageable.** Every run replaces one organized report rather than producing a
   pile of disconnected files.
+- **It is easy to navigate.** A keyboard index can search titles or paragraph text and open a
+  selected logical page with Space, so a long evidence report does not have to be read linearly.
 - **It runs locally after setup.** The paper search, evidence matching, and report generation
   happen on the Mac once the required models are available.
 
@@ -127,7 +129,24 @@ needed details are collected in one short line rather than a long interview.
 The first run can be slower because the Mac may need to download the local language model.
 Later runs reuse it. Leave Terminal open until HealthCoach says the report is complete.
 
-### 5. Open the report
+### 5. Browse the report
+
+```bash
+./hc-report
+```
+
+Use the arrow keys to choose a chapter. Press Space or Enter to open it. Press Space again to
+move down one screen, `b` to return to the chapter index, `[` or `]` to change chapters, and
+`q` to quit. Press `/` at the index to search both chapter titles and paragraph text.
+
+For a direct lookup without the interactive screen:
+
+```bash
+./hc-report --search "raw milk"
+./hc-report --page 017
+```
+
+To open the complete static file in a Mac application:
 
 ```bash
 open HEALTHCOACH_REPORT.md
