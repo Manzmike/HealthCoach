@@ -35,6 +35,8 @@ lymphatic-detox claims).
 - Does **not** reconcile `profile.txt`/`schedule_inputs.md` with
   `person_state.json` as part of this work — confirmed stale, tracked as a
   follow-up (§10).
+- Does **not** implement the verbose Today GUI in this pass. GUI is a
+  follow-up spec: `docs/superpowers/specs/2026-09-08-healthcoach-today-gui-design.md`.
 
 ## 2. Current-state summary (from architecture investigation)
 
@@ -329,7 +331,10 @@ the Today dashboard output — above, not replacing, the existing stack/meal/
 training week plan. Read-only in this pass (no new keyboard-driven editing
 flow for it — it changes when `plan_this_week.json` is hand-edited or
 regenerated, same as the pack's own model: "Use plan_this_week.json until
-state changes").
+state changes"). This pass only renders that read-only card from
+`plan_this_week.json` at the top of Today. The full chrome described in
+`GUI_PROMPT.md` (deny wall, person-state panel, night bar, coach dock)
+waits for the GUI ticket (§10).
 
 ## 9. Eval gate (`rag/rag_control/eval_run.py`)
 Full end-to-end, per explicit decision: each of `eval_queries.json`'s
@@ -368,6 +373,9 @@ gates the "done" claim for the whole rebuild, not just a nice-to-have.
    stop disagreeing (flagged in §2, not part of this build's scope)
 8. **Follow-up, non-blocking**: review the `lane_map.json` folder→lane table
    for completeness/accuracy once populated (§4.1)
+9. **Follow-up, non-blocking**: implement Today per
+   `docs/superpowers/specs/2026-09-08-healthcoach-today-gui-design.md` after
+   E01–E22 is green. Do not start that ticket in this PR.
 
 ## 11. Testing plan
 - Unit: `classify()` multi-intent behavior (single match, multi-match,
