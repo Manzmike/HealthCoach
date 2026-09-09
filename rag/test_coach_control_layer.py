@@ -71,6 +71,42 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
             )
         self.assertIn("move dinner earlier", result.lower())
 
+    def test_retry_note_is_incorporated_into_the_system_message_not_appended_raw(self):
+        captured_calls = []
+
+        def fake_apply_chat_template(messages, **kwargs):
+            captured_calls.append(messages)
+            return "PROMPT"
+
+        fake_tok = type("FakeTok", (), {
+            "chat_template": "x",
+            "apply_chat_template": staticmethod(fake_apply_chat_template),
+        })()
+
+        # side_effect forces the FIRST draft to be reject-listed content ("Start TRT
+        # now." -- caught by critic.json's reject_if_mentions: "TRT") so critique()
+        # actually rejects it and triggers a second _generate_and_render() call with
+        # the retry note; the SECOND draft is clean so the retry succeeds. This
+        # exercises the real path (critique() rejecting a draft), which is what
+        # actually drives a second apply_chat_template call in production -- a bare
+        # validate_claims exception is caught by _generate_and_render()'s except
+        # clause and returns a withheld-message string that passes critique() with
+        # no flags, so it would never reach the retry branch at all.
+        with patch("coach.SP.urgent_message", return_value=None), \
+             patch("coach.EC.validate_claims",
+                   side_effect=[self._claim_record("Start TRT now."), self._claim_record("Move dinner earlier.")]), \
+             patch("mlx_lm.generate", return_value="output"):
+            coach.answer_from_hits(
+                model=object(), tok=fake_tok, question="q", hits=self._hits(),
+                matched_intents=[], action_count=1, primary_count=1, drowsy=False,
+            )
+
+        self.assertEqual(len(captured_calls), 2)
+        first_system = captured_calls[0][0]["content"]
+        second_system = captured_calls[1][0]["content"]
+        self.assertNotIn("rejected for", first_system)
+        self.assertIn("rejected for", second_system)
+
 
 if __name__ == "__main__":
     unittest.main()

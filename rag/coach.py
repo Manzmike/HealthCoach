@@ -165,17 +165,19 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
     lead = RC.lead_intent(matched_intents)
     lead_note = f"\n\nLead topic for this answer: {lead}. Address it first, then any secondary topic briefly." if lead else ""
     system = SYSTEM + lead_note + "\n\nOUTPUT CONTRACT (overrides prose formatting):\n" + EC.CLAIM_INSTRUCTIONS
-    if getattr(tok, "chat_template", None):
-        prompt = tok.apply_chat_template(
-            [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            add_generation_prompt=True, tokenize=False)
-    else:
-        prompt = system + "\n\n" + user + "\n\nANSWER:"
     from mlx_lm import generate
 
-    def _generate_and_render(extra_instruction: str = "") -> str:
-        prompt_with_note = prompt + extra_instruction
-        output = generate(model, tok, prompt=prompt_with_note, max_tokens=max_tokens, verbose=False)
+    def _build_prompt(extra_system_note: str = "") -> str:
+        sys_text = system + extra_system_note
+        if getattr(tok, "chat_template", None):
+            return tok.apply_chat_template(
+                [{"role": "system", "content": sys_text}, {"role": "user", "content": user}],
+                add_generation_prompt=True, tokenize=False)
+        return sys_text + "\n\n" + user + "\n\nANSWER:"
+
+    def _generate_and_render(extra_system_note: str = "") -> str:
+        prompt = _build_prompt(extra_system_note)
+        output = generate(model, tok, prompt=prompt, max_tokens=max_tokens, verbose=False)
         try:
             claims = EC.validate_claims(output, hits)
         except (ValueError, TypeError):
