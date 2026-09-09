@@ -126,6 +126,16 @@ class CritiqueTests(unittest.TestCase):
         result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
         self.assertNotIn("concludes_vaccine_caused_condition", result["flags"])
 
+    def test_negated_dose_instruction_with_contraction_does_not_fire(self):
+        draft = "Don't increase your tirzepatide dose without talking to your prescriber."
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_reinforced_causation_with_unrelated_negation_word_still_fires(self):
+        draft = "There's no doubt the vaccine caused your sleep apnea, so file a report."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("concludes_vaccine_caused_condition", result["flags"])
+
     def test_must_include_if_drowsy(self):
         result = R.critique("Move dinner earlier.", ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
         self.assertFalse(result["ok"])
