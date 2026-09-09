@@ -91,19 +91,19 @@ def normalized_doi(value: str) -> str:
     return re.sub(r"^(?:https?://(?:dx\.)?doi\.org/|doi:\s*)", "", (value or "").strip(), flags=re.I).lower()
 
 
-def find_duplicate_dois(rows: list[dict]) -> dict[str, str]:
+def find_duplicate_dois(rows: list[dict]) -> dict[tuple[str, str], str]:
     """True accidental duplicates only: same DOI AND same folder. Cross-folder
     same-DOI entries are the intentional HARDLINK cross-filing pattern and
-    must not be flagged."""
+    must not be flagged. Returns {(folder, filename): "DUPLICATE_DOI"}."""
     by_doi_folder = defaultdict(list)
     for row in rows:
         doi = normalized_doi(row.get("doi", ""))
         if not doi:
             continue
-        by_doi_folder[(doi, row["folder"])].append(row["filename"])
+        by_doi_folder[(doi, row["folder"])].append((row["folder"], row["filename"]))
     flags = {}
-    for (_doi, _folder), filenames in by_doi_folder.items():
-        for extra in filenames[1:]:
+    for (_doi, _folder), folder_filenames in by_doi_folder.items():
+        for extra in folder_filenames[1:]:
             flags[extra] = "DUPLICATE_DOI"
     return flags
 
@@ -116,22 +116,24 @@ def scan(tbl, manifest_rows: list[dict]) -> dict[str, str]:
     live_rows = (tbl.search().select(["source_pdf", "folder", "grade", "doi", "allow_c", "text"])
                  .where("personal = false", prefilter=True).limit(1_000_000).to_list())
     by_source_pdf_text = {}
+    by_source_pdf_allow_c = {}
     for r in live_rows:
         by_source_pdf_text.setdefault(r["source_pdf"], []).append(r.get("text", ""))
+        if not by_source_pdf_allow_c.get(r["source_pdf"]):
+            by_source_pdf_allow_c[r["source_pdf"]] = r.get("allow_c", False)
 
     flags: dict[str, str] = {}
     for source_pdf, texts in by_source_pdf_text.items():
         manifest_row = by_key.get(source_pdf)
+        folder = manifest_row.get("folder") if manifest_row else None
         filename = os.path.basename(source_pdf)
-        if filename in dup_flags:
-            flags[source_pdf] = dup_flags[filename]
+        if folder and (folder, filename) in dup_flags:
+            flags[source_pdf] = dup_flags[(folder, filename)]
             continue
         if manifest_row is None:
             continue  # not in MANIFEST.md (e.g. the 61 xlsx lifestyle rows) -- not in scope for this scan
         sample = " ".join(texts)[:4000]
-        reason = classify_paper({**manifest_row, "allow_c": any(
-            r.get("allow_c") for r in live_rows if r["source_pdf"] == source_pdf
-        )}, sample)
+        reason = classify_paper({**manifest_row, "allow_c": by_source_pdf_allow_c.get(source_pdf, False)}, sample)
         if reason:
             flags[source_pdf] = reason
     return flags
@@ -141,7 +143,7 @@ def apply_flags(tbl, flags: dict[str, str]) -> int:
     total = 0
     for source_pdf, reason in flags.items():
         escaped = source_pdf.replace("'", "''")
-        result = tbl.update(where=f"source_pdf = '{escaped}'",
+        result = tbl.update(where=f"source_pdf = '{escaped}' AND personal = false",
                              values={"quarantined": True, "quarantine_reason": reason})
         total += result.rows_updated
     return total

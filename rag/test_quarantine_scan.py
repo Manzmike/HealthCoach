@@ -69,6 +69,10 @@ class ClassifyPaperTests(unittest.TestCase):
         row = self._row()
         self.assertEqual(QS.classify_paper(row, chunk_text_sample="Try a coffee enema to detox the liver."), "DETOX")
 
+    def test_lpi_domain_in_source_url_is_flagged(self):
+        row = self._row(source_url="https://lpi.oregonstate.edu/nutrient/vitamin-c")
+        self.assertEqual(QS.classify_paper(row, chunk_text_sample="ordinary text"), "LPI_AS_ORDER")
+
     def test_name_only_with_no_doi_and_no_url_is_flagged(self):
         row = self._row(doi="", source_url="")
         self.assertEqual(QS.classify_paper(row, chunk_text_sample="Dr. Smith says this works."), "NAME_ONLY")
@@ -85,7 +89,7 @@ class DuplicateDoiTests(unittest.TestCase):
             {"doi": "10.1/x", "folder": "01_a", "filename": "f2.pdf"},
         ]
         flags = QS.find_duplicate_dois(rows)
-        self.assertEqual(flags, {"f2.pdf": "DUPLICATE_DOI"})
+        self.assertEqual(flags, {("01_a", "f2.pdf"): "DUPLICATE_DOI"})
 
     def test_same_doi_different_folder_is_hardlink_not_duplicate(self):
         rows = [
