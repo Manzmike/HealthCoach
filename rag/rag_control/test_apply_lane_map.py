@@ -35,6 +35,24 @@ class ApplyLaneMapTests(unittest.TestCase):
         second_pass_updated = ALM.apply(self.tbl, {"14_hormones_thyroid_heart/lipids_apob_ldl": "lipids"})
         self.assertEqual(second_pass_updated, 2)  # re-running re-asserts the same value, doesn't error
 
+    def test_folder_with_single_quote_is_safely_escaped(self):
+        # Verify SQL injection risk mitigated: folder names with apostrophes are safely escaped
+        tmpdir = tempfile.mkdtemp()
+        try:
+            db = lancedb.connect(tmpdir)
+            tbl = db.create_table("chunks_with_quote", data=[
+                {"text": "quoted", "folder": "01_x/it's_a_test", "source_pdf": "quoted.pdf"},
+            ])
+            SM.add_control_columns(tbl)
+
+            updated = ALM.apply(tbl, {"01_x/it's_a_test": "test-lane"})
+            self.assertEqual(updated, 1)
+
+            rows = {r["source_pdf"]: r["lane"] for r in tbl.search().select(["source_pdf", "lane"]).limit(10).to_list()}
+            self.assertEqual(rows["quoted.pdf"], "test-lane")
+        finally:
+            shutil.rmtree(tmpdir, ignore_errors=True)
+
 
 if __name__ == "__main__":
     unittest.main()
