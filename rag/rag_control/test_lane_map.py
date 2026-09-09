@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-PAPERS = HERE.parent.parent.parent / "papers"
+PAPERS = HERE.parent.parent / "papers"
 
 
 class LaneMapTests(unittest.TestCase):
