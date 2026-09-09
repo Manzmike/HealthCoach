@@ -12,6 +12,7 @@ Use critique() on every generated draft, matched intent or not.
 """
 from __future__ import annotations
 
+import copy
 import json
 import re
 from pathlib import Path
@@ -114,15 +115,31 @@ _VACCINE_CAUSATION_PATTERN = re.compile(
     r"|\b(?:apnea|pauses?|sleep)\b.{0,30}\b(?:was|is)\b.{0,10}\bcaused\b.{0,20}\b(?:vaccine|shot|vax)\b",
     re.IGNORECASE,
 )
+_NEGATION_NEARBY = re.compile(
+    r"\b(?:not|n't|no|never|unlikely|doesn't|didn't|isn't|wasn't|hasn't|haven't|no evidence)\b",
+    re.IGNORECASE,
+)
+
+
+def _unnegated_match(pattern: re.Pattern, text: str, window: int = 20) -> bool:
+    """True only if `pattern` matches somewhere in `text` with no negation
+    cue in the ~20 chars before the match through 5 chars after it. This is
+    what stops the critic from rejecting a SAFE, correct denial ("the
+    vaccine did not cause your apnea") as if it were the violation itself."""
+    for m in pattern.finditer(text):
+        ctx = text[max(0, m.start() - window):m.end() + 5]
+        if not _NEGATION_NEARBY.search(ctx):
+            return True
+    return False
 
 
 def critique(draft: str, matched: list[str], *, action_count: int, primary_count: int, drowsy: bool) -> dict:
     text = draft.lower()
     flags = [term for term in CRITIC["reject_if_mentions"] if term.lower() in text]
 
-    if _DRUG_DOSE_PATTERN.search(draft):
+    if _unnegated_match(_DRUG_DOSE_PATTERN, draft):
         flags.append("doses_or_orders_drug_action")
-    if _VACCINE_CAUSATION_PATTERN.search(draft):
+    if _unnegated_match(_VACCINE_CAUSATION_PATTERN, draft):
         flags.append("concludes_vaccine_caused_condition")
 
     drift_lanes = leftover_forbid_lanes(matched)
@@ -150,7 +167,7 @@ def critique(draft: str, matched: list[str], *, action_count: int, primary_count
     return {
         "ok": ok,
         "flags": flags,
-        "fallback": None if ok else CRITIC["fallback_plan"],
+        "fallback": None if ok else copy.deepcopy(CRITIC["fallback_plan"]),
         "lead_intent": lead_intent(matched),
         "person_as_of": PERSON["as_of"],
     }

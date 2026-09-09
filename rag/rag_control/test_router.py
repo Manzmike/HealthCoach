@@ -106,6 +106,26 @@ class CritiqueTests(unittest.TestCase):
         result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
         self.assertTrue(result["ok"])
 
+    def test_negated_dose_instruction_does_not_fire(self):
+        draft = "Do not increase your tirzepatide dose without talking to your prescriber."
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_negated_dose_change_instruction_does_not_fire(self):
+        draft = "If still on tirzepatide: message the prescriber about fatigue. Do not change the dose yourself."
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_negated_vaccine_causation_denial_does_not_fire(self):
+        draft = "The vaccine did not cause your sleep apnea."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("concludes_vaccine_caused_condition", result["flags"])
+
+    def test_unlikely_vaccine_causation_denial_does_not_fire(self):
+        draft = "It is unlikely the vaccine caused your sleep apnea; witnessed pauses are an airway question."
+        result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("concludes_vaccine_caused_condition", result["flags"])
+
     def test_must_include_if_drowsy(self):
         result = R.critique("Move dinner earlier.", ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
         self.assertFalse(result["ok"])
