@@ -84,18 +84,27 @@ class BoostForTests(unittest.TestCase):
         self.assertAlmostEqual(R.boost_for({"personal": False, "grade": "B"}), 1.0)
 
 
+DOSE_FLAG = "doses_or_orders_drug_action"
+CAUSE_FLAG = "concludes_vaccine_caused_condition"
+
+
 class CritiqueTests(unittest.TestCase):
+    def flags(self, draft, matched):
+        return R.critique(draft, matched, action_count=1, primary_count=1, drowsy=False)["flags"]
+
     def test_universal_reject_fires_regardless_of_intent(self):
         result = R.critique("You should start TRT now.", [], action_count=1, primary_count=1, drowsy=False)
         self.assertFalse(result["ok"])
 
     def test_doses_or_orders_drug_action_fires_even_as_secondary_lane(self):
+        """Acceptance case 6."""
         draft = "Sleep first. Also, take 7.5mg of tirzepatide next week to push through the nausea."
         result = R.critique(draft, ["sleep_eds", "incretin"], action_count=1, primary_count=1, drowsy=False)
         self.assertFalse(result["ok"])
         self.assertIn("doses_or_orders_drug_action", result["flags"])
 
     def test_concludes_vaccine_caused_condition_fires(self):
+        """Acceptance case 12."""
         draft = "The vaccine caused your sleep apnea, so stop worrying about a sleep study."
         result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
         self.assertFalse(result["ok"])
@@ -106,50 +115,93 @@ class CritiqueTests(unittest.TestCase):
         result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
         self.assertTrue(result["ok"])
 
-    def test_negated_dose_instruction_does_not_fire(self):
+    # ----------------------------------------------------------------
+    # Negation awareness. The two universal hard-rejects must fire on a
+    # genuine order/conclusion but stay silent on safe text that DENIES
+    # the same surface pattern. Cases 1-15 below are the acceptance set;
+    # each one is a phrasing an earlier implementation got wrong.
+    #
+    # Cases 6 and 12 keep the brief's original test names above
+    # (test_doses_or_orders_drug_action_fires_even_as_secondary_lane and
+    # test_concludes_vaccine_caused_condition_fires) rather than being
+    # duplicated here.
+    # ----------------------------------------------------------------
+
+    # -- must NOT flag a dose order --
+
+    def test_1_negated_dose_instruction_does_not_fire(self):
         draft = "Do not increase your tirzepatide dose without talking to your prescriber."
-        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
-        self.assertNotIn("doses_or_orders_drug_action", result["flags"])
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
-    def test_negated_dose_change_instruction_does_not_fire(self):
+    def test_2_negation_in_a_later_sentence_of_a_multi_sentence_draft(self):
         draft = "If still on tirzepatide: message the prescriber about fatigue. Do not change the dose yourself."
-        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
-        self.assertNotIn("doses_or_orders_drug_action", result["flags"])
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
-    def test_negated_vaccine_causation_denial_does_not_fire(self):
-        draft = "The vaccine did not cause your sleep apnea."
-        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
-        self.assertNotIn("concludes_vaccine_caused_condition", result["flags"])
-
-    def test_unlikely_vaccine_causation_denial_does_not_fire(self):
-        draft = "It is unlikely the vaccine caused your sleep apnea; witnessed pauses are an airway question."
-        result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
-        self.assertNotIn("concludes_vaccine_caused_condition", result["flags"])
-
-    def test_negated_dose_instruction_with_contraction_does_not_fire(self):
+    def test_3_negated_dose_instruction_with_contraction_does_not_fire(self):
+        """A bare `n't` token can never match real text -- the contraction
+        must be recognised as part of the whole word ("Don't")."""
         draft = "Don't increase your tirzepatide dose without talking to your prescriber."
-        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
-        self.assertNotIn("doses_or_orders_drug_action", result["flags"])
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
-    def test_reinforced_causation_with_unrelated_negation_word_still_fires(self):
-        draft = "There's no doubt the vaccine caused your sleep apnea, so file a report."
-        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
-        self.assertIn("concludes_vaccine_caused_condition", result["flags"])
+    def test_4_negation_several_words_ahead_of_the_verb_still_suppresses(self):
+        """The lookback must be wide enough to span an intervening phrase."""
+        draft = "You should not go ahead and increase your tirzepatide dose this week."
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
-    def test_drug_dose_violation_fires_on_real_instruction(self):
-        draft = "Sleep first. Also, take 7.5mg of tirzepatide next week to push through the nausea."
-        result = R.critique(draft, ["sleep_eds", "incretin"], action_count=1, primary_count=1, drowsy=False)
-        self.assertIn("doses_or_orders_drug_action", result["flags"])
+    def test_5_no_way_phrasing_suppresses(self):
+        """Bare "no" is not a negation cue (see case 13), but "no way" is."""
+        draft = "There is no way you should stop your tirzepatide dose right now."
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
-    def test_negated_clause_does_not_suppress_a_separate_later_violation(self):
+    # -- must flag a dose order --
+
+    def test_7_negated_sentence_does_not_suppress_a_violation_in_the_next(self):
         draft = "Don't skip your metformin dose. Increase your tirzepatide dose to 10mg this week."
-        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
-        self.assertIn("doses_or_orders_drug_action", result["flags"])
+        self.assertIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
-    def test_negation_in_earlier_comma_clause_does_not_suppress_a_later_one(self):
+    def test_8_negated_clause_does_not_suppress_a_later_clause_violation(self):
+        draft = "Don't skip your metformin dose, but increase your tirzepatide dose to 10mg this week."
+        self.assertIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
+
+    def test_9_parenthetical_comma_does_not_hide_a_single_instruction(self):
+        """One instruction interrupted by an aside is still one instruction:
+        the companion-word search must see past ", if you tolerate it well,"."""
+        draft = "Increase, if you tolerate it well, your tirzepatide dose to 10mg this week."
+        self.assertIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
+
+    # -- must NOT flag a vaccine causal conclusion --
+
+    def test_10_vaccine_causation_denial_does_not_fire(self):
+        draft = "The vaccine did not cause your sleep apnea."
+        self.assertNotIn(CAUSE_FLAG, self.flags(draft, ["covid_vax"]))
+
+    def test_11_unlikely_vaccine_causation_denial_does_not_fire(self):
+        draft = "It is unlikely the vaccine caused your sleep apnea; witnessed pauses are an airway question."
+        self.assertNotIn(CAUSE_FLAG, self.flags(draft, ["sleep_eds", "covid_vax"]))
+
+    # -- must flag a vaccine causal conclusion --
+
+    def test_13_reinforcing_no_doubt_is_not_a_negation(self):
+        """"no doubt" strengthens the claim -- suppressing here would let an
+        unsafe assertion pass as safe, which is worse than over-flagging."""
+        draft = "There's no doubt the vaccine caused your sleep apnea, so file a report."
+        self.assertIn(CAUSE_FLAG, self.flags(draft, ["covid_vax"]))
+
+    def test_14_negation_in_earlier_comma_clause_does_not_suppress_a_later_one(self):
         draft = "There's no evidence the flu shot causes fatigue, but the vaccine caused your sleep apnea, so file a report."
-        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
-        self.assertIn("concludes_vaccine_caused_condition", result["flags"])
+        self.assertIn(CAUSE_FLAG, self.flags(draft, ["covid_vax"]))
+
+    def test_15_parenthetical_comma_does_not_hide_a_causal_conclusion(self):
+        draft = "Your sleep apnea, in my opinion, was caused by the vaccine."
+        self.assertIn(CAUSE_FLAG, self.flags(draft, ["covid_vax"]))
+
+    # -- design property: an aside is stepped over, a new clause is not --
+
+    def test_negation_reaches_across_a_parenthetical_aside(self):
+        """Mirror image of case 8: here the comma opens an aside, not a new
+        assertion, so the leading "not" must still reach the verb."""
+        draft = "Do not, under any circumstances, increase your tirzepatide dose."
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
     def test_must_include_if_drowsy(self):
         result = R.critique("Move dinner earlier.", ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
