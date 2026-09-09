@@ -202,6 +202,24 @@ def _strip_asides(fragment: str) -> str:
     return ",".join(kept)
 
 
+def _views(fragment: str) -> tuple[str, ...]:
+    """The fragment as written, plus (when different) the same fragment with
+    asides removed. Companion-word searches test BOTH: stripping is only
+    ever meant to shorten the distance to a companion word, never to hide
+    one that happens to sit inside the stripped segment
+    ("Increase, your tirzepatide dose, next week.")."""
+    stripped = _strip_asides(fragment)
+    return (fragment,) if stripped == fragment else (fragment, stripped)
+
+
+def _found_after(pattern: re.Pattern, fragment: str, span: int) -> bool:
+    return any(pattern.search(v[:span]) for v in _views(fragment))
+
+
+def _found_before(pattern: re.Pattern, fragment: str, span: int) -> bool:
+    return any(pattern.search(v[-span:]) for v in _views(fragment))
+
+
 def _negated(text: str, pos: int) -> bool:
     """Is the trigger at `pos` negated by something before it?
 
@@ -237,15 +255,19 @@ def _drug_dose_violation(draft: str) -> bool:
     for m in _DRUG_VERB.finditer(draft):
         _, sent_end = _sentence_bounds(draft, m.start())
         verb = m.group(1).lower()
-        tail = _strip_asides(draft[m.end():sent_end])
+        tail = draft[m.end():sent_end]
         if verb in ("take", "inject"):
             # "take 7.5mg of tirzepatide" -- an amount, then the drug. These
             # two verbs are common in ordinary prose ("take a walk"), so they
             # need the explicit amount, not just a drug noun.
-            amount = _DOSE_AMOUNT.search(tail[:20])
-            hit = bool(amount and _TIRZEPATIDE.search(tail[amount.end():amount.end() + 20]))
+            hit = False
+            for view in _views(tail):
+                amount = _DOSE_AMOUNT.search(view[:20])
+                if amount and _TIRZEPATIDE.search(view[amount.end():amount.end() + 20]):
+                    hit = True
+                    break
         else:
-            hit = bool(_DRUG_OBJECT.search(tail[:40]))
+            hit = _found_after(_DRUG_OBJECT, tail, 40)
         if hit and not _negated(draft, m.start()):
             return True
     return False
@@ -255,10 +277,10 @@ def _causation_violation(draft: str) -> bool:
     """Does the draft CONCLUDE the vaccine caused the user's condition?"""
     for m in _CAUSE_STEM.finditer(draft):
         sent_start, sent_end = _sentence_bounds(draft, m.start())
-        before = _strip_asides(draft[sent_start:m.start()])[-30:]
-        after = _strip_asides(draft[m.end():sent_end])[:30]
-        forward = bool(_VACCINE_WORD.search(before) and _CONDITION_WORD.search(after))
-        reverse = bool(_CONDITION_WORD.search(before) and _VACCINE_WORD.search(after))
+        before = draft[sent_start:m.start()]
+        after = draft[m.end():sent_end]
+        forward = _found_before(_VACCINE_WORD, before, 30) and _found_after(_CONDITION_WORD, after, 30)
+        reverse = _found_before(_CONDITION_WORD, before, 30) and _found_after(_VACCINE_WORD, after, 30)
         if (forward or reverse) and not _negated(draft, m.start()):
             return True
     return False

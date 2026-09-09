@@ -203,6 +203,17 @@ class CritiqueTests(unittest.TestCase):
         draft = "Do not, under any circumstances, increase your tirzepatide dose."
         self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
 
+    def test_an_aside_never_hides_a_companion_word_inside_it(self):
+        """Stripping asides may only SHORTEN the distance to a companion
+        word, never remove one -- here the drug object is itself the
+        comma-delimited segment."""
+        draft = "Increase, your tirzepatide dose, next week."
+        self.assertIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
+
+    def test_an_aside_never_hides_a_causal_companion_word(self):
+        draft = "Your sleep apnea, was caused, in my view, by the vaccine."
+        self.assertIn(CAUSE_FLAG, self.flags(draft, ["sleep_eds", "covid_vax"]))
+
     def test_must_include_if_drowsy(self):
         result = R.critique("Move dinner earlier.", ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
         self.assertFalse(result["ok"])
