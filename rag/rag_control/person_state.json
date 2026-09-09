@@ -1,0 +1,77 @@
+{
+  "as_of": "2026-09-08",
+  "labs_as_of": "2026-01-first-week",
+  "labs_status": "stale",
+  "identity": {
+    "sex": "male",
+    "age_band": "mid_20s",
+    "ancestry": ["Nigerian", "mixed_Black_African"],
+    "work": "desk_sedentary",
+    "commute_min": 20
+  },
+  "body": {
+    "weight_lb": [230, 240],
+    "weight_vs_january": "same",
+    "goal": "fat_loss_blocked_by_sleep",
+    "training": "stopped",
+    "intended_split": "3_lift_2_easy_run",
+    "steps_recent_snapshot": 4964
+  },
+  "drugs": {
+    "tirzepatide": {
+      "status": "on_considering_stop",
+      "effects": ["fatigue", "nausea", "stomach_pain"],
+      "vomiting": false,
+      "role": "aggravator_not_root"
+    },
+    "other_rx": [],
+    "smoke_vape": "none",
+    "alcohol": {
+      "pattern": "weekend_0_or_3_to_6",
+      "nights_out_per_month": 1,
+      "rule": "off_late_slot"
+    },
+    "caffeine_last": "11:00-12:00",
+    "denied": ["copper", "peptides", "TRT", "extra_D", "home_statin", "nofap_protocol"]
+  },
+  "sleep": {
+    "windows": ["22:00-02:00 + 03:30-07:00", "23:00-02:00 + 04:00-08:00"],
+    "snore": true,
+    "pauses_witnessed": true,
+    "morning_headache": true,
+    "prior_study": "inconclusive",
+    "drowsy_drive_0_10": [4, 8],
+    "post_orgasm_drop": {
+      "night_2_to_4": true,
+      "midday": true,
+      "aware_in_place": true,
+      "vivid_dream": true,
+      "headache": true,
+      "duration_min": [20, 120],
+      "label": "hypnagogic_inertia_not_psychosis"
+    }
+  },
+  "day": {
+    "meals": "skip_breakfast_sometimes_skip_lunch_dinner_around_22:00",
+    "deep_work": "18:00-22:00_or_23:00",
+    "screens": "required_for_deep_work"
+  },
+  "labs_january_2026_hypothesis_only": {
+    "ldl_mg_dl": 191,
+    "non_hdl_mg_dl": 209,
+    "lp_a_nmol_l": 154,
+    "hs_crp_mg_l": 5.6,
+    "total_t_ng_dl": 598,
+    "tsh": 0.97,
+    "vitamin_d_ng_ml": 42,
+    "wbc": 3.7,
+    "creatinine_mg_dl": 1.29
+  },
+  "constraints": {
+    "primary_focus_max": 1,
+    "actions_max": 3,
+    "do_not_drive_if_fighting_sleep": true,
+    "sleep_test_not_replaced_by_rag": true,
+    "tirzepatide_decision_is_prescriber": true
+  }
+}

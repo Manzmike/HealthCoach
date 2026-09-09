@@ -46,5 +46,5 @@
     "grade_C": 0.0,
     "us_rct_tagged": 0.8
   },
-  "default_if_unknown": "sleep_eds"
+  "lead_priority": ["sleep_eds", "covid_vax", "incretin", "lipids", "cut_train", "ancestry_hormones", "lifestyle_night"]
 }

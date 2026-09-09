@@ -1,0 +1,51 @@
+{
+  "week_of": "2026-09-08",
+  "primary_focus": "sleep_continuity_and_safety",
+  "why": "Witnessed pauses + inconclusive study + drowsy drive + split nights predate tirzepatide. Drug is an aggravator.",
+  "actions": [
+    {
+      "id": "A1",
+      "lane": "sleep-drive",
+      "text": "If you are fighting sleep, do not drive.",
+      "done_when": "You did not drive through a 4-8/10 drowsy window."
+    },
+    {
+      "id": "A2",
+      "lane": "meal-sleep",
+      "text": "Move the one meal off 22:00. Put protein in it.",
+      "done_when": "Dinner finished before deep-work end at least 4 nights."
+    },
+    {
+      "id": "A3",
+      "lane": "incretin-context",
+      "text": "If still on tirzepatide: message the prescriber about fatigue, nausea, stomach pain, considering stop. Do not change the dose yourself.",
+      "done_when": "Message sent, or you already stopped and logged it."
+    }
+  ],
+  "not_this": [
+    "cut",
+    "5-day return to lift",
+    "copper",
+    "TRT",
+    "nofap",
+    "extra D",
+    "home statin",
+    "calling the post-orgasm state psychosis"
+  ],
+  "optional_helpers": [
+    "Deep work 18:00-22:00 can stay. Dim/warm display after. No phone in bed.",
+    "Same morning wake. Morning outdoor light.",
+    "Sit-breaks if nausea allows."
+  ],
+  "citations": [
+    "NICE NG202",
+    "NICE CKS OSAS + insomnia",
+    "ICSD-3-TR sleep-related hallucinations",
+    "ICHD-3 4.3",
+    "Ceriello 2026 discontinuation (context only)"
+  ],
+  "safety": {
+    "drowsy_drive": "Do not drive while fighting sleep.",
+    "drug": "Tirzepatide hold/stop/dose is the prescriber."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "version": "2026-09-08",
+  "max_primary_focus": 1,
+  "max_actions": 3,
+  "reject_if_mentions": [
+    "TRT",
+    "testosterone replacement",
+    "enclomiphene",
+    "SERM",
+    "copper bicarbonate",
+    "peptides",
+    "BPC-157",
+    "TB-500",
+    "nofap",
+    "semen retention",
+    "porn addiction protocol",
+    "start a statin tonight",
+    "home statin",
+    "extra vitamin D",
+    "megadose fish oil",
+    "you don't need a sleep study",
+    "skip the clinic",
+    "psychosis",
+    "schizophrenia",
+    "drive through it",
+    "just have another coffee and drive",
+    "detox tea",
+    "lymph cleanse",
+    "spike detox",
+    "parasite flush",
+    "coffee enema",
+    "ionic foot bath",
+    "dry brush to detox"
+  ],
+  "reject_if": [
+    "actions_gt_3",
+    "primary_focus_gt_1",
+    "starts_a_cut_while_sleep_split_and_training_zero",
+    "treats_screens_as_cause_of_witnessed_pauses",
+    "treats_tirzepatide_as_root_of_years_long_nights",
+    "doses_tirzepatide",
+    "labels_narcolepsy_or_POIS",
+    "recommends_detox_cleanse"
+  ],
+  "must_include_if_drowsy": "Do not drive while fighting sleep.",
+  "fallback_plan": {
+    "primary_focus": "sleep_continuity_and_safety",
+    "actions": [
+      "If fighting sleep, do not drive.",
+      "Eat the one meal earlier than 22:00 with protein in it.",
+      "Message the prescriber about tirzepatide fatigue/nausea if still on it."
+    ],
+    "not_this": [
+      "cut",
+      "copper",
+      "TRT",
+      "nofap",
+      "new supplement stack"
+    ]
+  }
+}
