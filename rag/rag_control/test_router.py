@@ -214,6 +214,30 @@ class CritiqueTests(unittest.TestCase):
         draft = "Your sleep apnea, was caused, in my view, by the vaccine."
         self.assertIn(CAUSE_FLAG, self.flags(draft, ["sleep_eds", "covid_vax"]))
 
+    # -- round 5: a trigger sitting right after a bare comma, with nothing
+    # (or a coordinator-led clause) between it and the comma, must not pick
+    # up an earlier clause's negation; and a newline is a hard boundary too.
+
+    def test_comma_into_unrelated_clause_does_not_suppress_a_later_violation(self):
+        draft = "Don't skip your metformin dose, increase your tirzepatide dose to 10mg this week."
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_causal_comma_into_unrelated_clause_does_not_suppress_a_later_violation(self):
+        draft = "It is not a coincidence, the vaccine caused your sleep apnea."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("concludes_vaccine_caused_condition", result["flags"])
+
+    def test_coordinator_clauses_negation_does_not_bleed_into_a_later_clause(self):
+        draft = "Keep metformin steady, but do not skip meals, take 7.5mg of tirzepatide tonight."
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_bulleted_draft_does_not_leak_negation_across_lines(self):
+        draft = "This week:\n- Do not drive while fighting sleep\n- Increase your tirzepatide dose to 10mg"
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("doses_or_orders_drug_action", result["flags"])
+
     def test_must_include_if_drowsy(self):
         result = R.critique("Move dinner earlier.", ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
         self.assertFalse(result["ok"])

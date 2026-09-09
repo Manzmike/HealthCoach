@@ -129,9 +129,11 @@ def boost_for(meta: dict) -> float:
 # several verbs at once and only ever negation-check the first one.
 # --------------------------------------------------------------------------
 
-# A sentence ends at . ! ? ; followed by whitespace or end-of-text. The
-# trailing-whitespace requirement keeps decimals ("7.5mg") from splitting.
-_SENTENCE_END = re.compile(r"[.!?;](?=\s|$)")
+# A sentence ends at . ! ? ; followed by whitespace or end-of-text (the
+# trailing-whitespace requirement keeps decimals like "7.5mg" from
+# splitting), or at a newline -- a line break (e.g. between bullet points
+# in a drafted list) is just as hard a boundary as a period.
+_SENTENCE_END = re.compile(r"[.!?;](?=\s|$)|\n")
 
 # Drug action verbs, and the objects that turn one into a dosing order.
 _DRUG_VERB = re.compile(
@@ -183,11 +185,18 @@ def _sentence_bounds(text: str, pos: int) -> tuple[int, int]:
 
 def _is_aside(segment: str) -> bool:
     """A short comma-delimited segment that interrupts a clause rather than
-    starting a new one ("if you tolerate it well", "in my opinion")."""
+    starting a new one ("if you tolerate it well", "in my opinion").
+
+    An empty/whitespace-only segment is NOT an aside: a genuine aside is a
+    real phrase bounded by commas on both sides. A blank segment usually
+    means the trigger sits immediately after a comma with nothing between
+    ("...dose, increase...") -- that comma is an ordinary clause boundary,
+    not a parenthetical, and must not be crossed.
+    """
     words = segment.split()
-    if len(words) > _PARENTHETICAL_MAX_WORDS:
+    if not words or len(words) > _PARENTHETICAL_MAX_WORDS:
         return False
-    return not words or words[0].strip(".,;:!?'\"").lower() not in _COORDINATORS
+    return words[0].strip(".,;:!?'\"").lower() not in _COORDINATORS
 
 
 def _strip_asides(fragment: str) -> str:
@@ -223,28 +232,41 @@ def _found_before(pattern: re.Pattern, fragment: str, span: int) -> bool:
 def _negated(text: str, pos: int) -> bool:
     """Is the trigger at `pos` negated by something before it?
 
-    Collects up to _NEGATION_LOOKBACK_WORDS words backward from `pos`,
-    starting in the trigger's own comma-delimited clause. It steps back
-    into an earlier clause only when the clause it just consumed is a short
-    PARENTHETICAL -- few words and not opening with a coordinator -- which
-    is what lets "Do not, under any circumstances, increase the dose" stay
-    negated while "Don't skip metformin, but increase the dose" does not.
+    Collects up to _NEGATION_LOOKBACK_WORDS words backward from `pos`.
+    `segments` is the comma-split text from the sentence start up to the
+    trigger; `segments[-1]` -- the words between the nearest comma (or the
+    sentence start) and the trigger itself -- is always part of the
+    trigger's own clause and is included unconditionally, whatever it
+    contains (even nothing: a trigger sitting right after a bare comma has
+    an empty last segment).
+
+    Anything further back is only reachable by crossing INTERIOR segments
+    (bounded by a comma on both sides) that are themselves asides -- a
+    single bare comma (segments has exactly two elements, no interior
+    segment at all) is an ordinary clause boundary, not a parenthetical,
+    and is never crossed. This is what lets "Do not, under any
+    circumstances, increase the dose" (the interior aside "under any
+    circumstances" bridges "Do not" to the trigger) stay negated, while
+    "Don't skip metformin dose, increase the dose" and "..., but increase
+    the dose" (both a single bare comma away from the trigger) do not.
     """
     sent_start, _ = _sentence_bounds(text, pos)
     segments = text[sent_start:pos].split(",")
 
-    words: list[str] = []
-    i = len(segments) - 1
-    while i >= 0 and len(words) < _NEGATION_LOOKBACK_WORDS:
-        seg_words = segments[i].split()
-        words = seg_words + words
-        if i == 0:
-            break
-        # Only keep walking backward through an aside, never through a
-        # clause that starts a new assertion.
-        if not _is_aside(segments[i]):
-            break
-        i -= 1
+    words: list[str] = segments[-1].split()
+
+    if len(segments) >= 3 and len(words) < _NEGATION_LOOKBACK_WORDS:
+        i = len(segments) - 2
+        reached_sentence_start = False
+        while i >= 1 and len(words) < _NEGATION_LOOKBACK_WORDS:
+            if not _is_aside(segments[i]):
+                break
+            words = segments[i].split() + words
+            i -= 1
+        else:
+            reached_sentence_start = i == 0
+        if reached_sentence_start and len(words) < _NEGATION_LOOKBACK_WORDS:
+            words = segments[0].split() + words
 
     window = " ".join(words[-_NEGATION_LOOKBACK_WORDS:])
     return bool(_NEGATION.search(window))
