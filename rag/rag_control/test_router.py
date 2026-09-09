@@ -136,6 +136,21 @@ class CritiqueTests(unittest.TestCase):
         result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
         self.assertIn("concludes_vaccine_caused_condition", result["flags"])
 
+    def test_drug_dose_violation_fires_on_real_instruction(self):
+        draft = "Sleep first. Also, take 7.5mg of tirzepatide next week to push through the nausea."
+        result = R.critique(draft, ["sleep_eds", "incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_negated_clause_does_not_suppress_a_separate_later_violation(self):
+        draft = "Don't skip your metformin dose. Increase your tirzepatide dose to 10mg this week."
+        result = R.critique(draft, ["incretin"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("doses_or_orders_drug_action", result["flags"])
+
+    def test_negation_in_earlier_comma_clause_does_not_suppress_a_later_one(self):
+        draft = "There's no evidence the flu shot causes fatigue, but the vaccine caused your sleep apnea, so file a report."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("concludes_vaccine_caused_condition", result["flags"])
+
     def test_must_include_if_drowsy(self):
         result = R.critique("Move dinner earlier.", ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
         self.assertFalse(result["ok"])

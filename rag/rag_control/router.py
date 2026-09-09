@@ -105,37 +105,70 @@ def boost_for(meta: dict) -> float:
     return score
 
 
+# Base violation patterns: the gap must not cross a sentence or clause
+# boundary (. ! ? ,) -- otherwise a single match can absorb two separate
+# instructions from two different sentences, hiding the second one from
+# per-match negation checking.
 _DRUG_DOSE_PATTERN = re.compile(
-    r"\b(?:start|stop|hold|skip|increase|decrease|change)\b.{0,40}\b(?:the\s+)?(?:pen|dose|tirzepatide|shot)\b"
-    r"|\b(?:take|inject)\b.{0,20}\d+\s*(?:mg|mcg)\b.{0,20}\btirzepatide\b",
+    r"\b(?:start|stop|hold|skip|increase|decrease|change)\b[^.!?,]{0,40}\b(?:the\s+)?(?:pen|dose|tirzepatide|shot)\b"
+    r"|\b(?:take|inject)\b[^.!?,]{0,20}\d+(?:\.\d+)?\s*(?:mg|mcg)\b[^.!?,]{0,20}\btirzepatide\b",
     re.IGNORECASE,
 )
 _VACCINE_CAUSATION_PATTERN = re.compile(
-    r"\b(?:vaccine|shot|vax)\b.{0,30}\bcaused?\b.{0,30}\b(?:apnea|pauses?|sleep)\b"
-    r"|\b(?:apnea|pauses?|sleep)\b.{0,30}\b(?:was|is)\b.{0,10}\bcaused\b.{0,20}\b(?:vaccine|shot|vax)\b",
+    r"\b(?:vaccine|shot|vax)\b[^.!?,]{0,30}\bcaused?\b[^.!?,]{0,30}\b(?:apnea|pauses?|sleep)\b"
+    r"|\b(?:apnea|pauses?|sleep)\b[^.!?,]{0,30}\b(?:was|is)\b[^.!?,]{0,10}\bcaused\b[^.!?,]{0,20}\b(?:vaccine|shot|vax)\b",
     re.IGNORECASE,
 )
-# Negation must sit tightly adjacent to the specific verb/stem it negates
-# (the drug-action verb, or the "caus-" stem) -- NOT anywhere in a window
-# around the whole match. A loose whole-match window lets unrelated words
-# elsewhere in the sentence (e.g. "no doubt" reinforcing a causal claim,
-# not denying it) wrongly suppress a genuine violation.
+
+# Negation: search backward from the verb/stem position to the nearest
+# preceding sentence-or-comma boundary, over only the last 3 words. This is
+# word-based (not character-count-based) so it can never truncate mid-word
+# (the round-2 bug that lost "unlikely" out of a 20-char window), and it is
+# bounded by the nearest clause boundary so a negation in an EARLIER,
+# unrelated clause ("Don't skip metformin, but increase tirzepatide...")
+# cannot suppress a violation in a LATER clause of the same sentence.
 _NEGATION = (
     r"(?:not|don't|doesn't|didn't|isn't|wasn't|hasn't|haven't|won't|"
     r"wouldn't|shouldn't|couldn't|can't|aren't|weren't|unlikely|no\s+evidence)"
 )
 _DRUG_VERB = r"(?:start|stop|hold|skip|increase|decrease|change|take|inject)"
-_DRUG_NEGATED = re.compile(rf"\b{_NEGATION}\b[^.!?]{{0,15}}\b{_DRUG_VERB}\b", re.IGNORECASE)
-_CAUSE_NEGATED = re.compile(rf"\b{_NEGATION}\b[^.!?]{{0,20}}\bcaus", re.IGNORECASE)
+
+
+def _negated_before(text: str, pos: int, num_words: int = 3) -> bool:
+    preceding = text[:pos]
+    boundary = max((preceding.rfind(c) for c in ".!?,"), default=-1)
+    clause = preceding[boundary + 1:]
+    words = clause.split()[-num_words:]
+    return bool(re.search(rf"\b{_NEGATION}\b", " ".join(words), re.IGNORECASE))
+
+
+def _drug_dose_violation(draft: str) -> bool:
+    for m in _DRUG_DOSE_PATTERN.finditer(draft):
+        vm = re.search(rf"\b{_DRUG_VERB}\b", m.group(0), re.IGNORECASE)
+        if vm is None:
+            continue
+        verb_pos = m.start() + vm.start()
+        if not _negated_before(draft, verb_pos):
+            return True
+    return False
+
+
+def _causation_violation(draft: str) -> bool:
+    for m in _VACCINE_CAUSATION_PATTERN.finditer(draft):
+        cm = re.search(r"\bcaus", m.group(0), re.IGNORECASE)
+        cause_pos = m.start() + cm.start()
+        if not _negated_before(draft, cause_pos):
+            return True
+    return False
 
 
 def critique(draft: str, matched: list[str], *, action_count: int, primary_count: int, drowsy: bool) -> dict:
     text = draft.lower()
     flags = [term for term in CRITIC["reject_if_mentions"] if term.lower() in text]
 
-    if _DRUG_DOSE_PATTERN.search(draft) and not _DRUG_NEGATED.search(draft):
+    if _drug_dose_violation(draft):
         flags.append("doses_or_orders_drug_action")
-    if _VACCINE_CAUSATION_PATTERN.search(draft) and not _CAUSE_NEGATED.search(draft):
+    if _causation_violation(draft):
         flags.append("concludes_vaccine_caused_condition")
 
     drift_lanes = leftover_forbid_lanes(matched)
