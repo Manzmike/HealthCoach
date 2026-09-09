@@ -1,0 +1,12 @@
+{
+  "14_hormones_thyroid_heart/lipids_apob_ldl": "lipids",
+  "14_hormones_thyroid_heart/what_not_to_optimize": "hormones-off",
+  "01_food_inflammation/anti_inflammatory_patterns": "inflam",
+  "01_food_inflammation/meal_prep_deficit_athletic": "food-floor",
+  "02_training_desk/overtraining_overreaching": "return-train",
+  "10_recovery_fascia/muscle_skeletal_recovery": "return-train",
+  "02_training_desk/sedentary_software_engineer": "desk-sit",
+  "02_training_desk/heat_acclimatization": "heat",
+  "13_vaccines_immunology/covid19_vaccine_pk_clearance": "covid-infect",
+  "13_vaccines_immunology/exercise_immunity_vaccines": "covid-infect"
+}
