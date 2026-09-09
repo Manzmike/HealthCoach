@@ -56,7 +56,7 @@ def run_one(model, tok, tbl, emb, rr, query: dict) -> dict:
     return {
         "id": query["id"], "query": q, "matched_intents": matched, "passed": passed,
         "missing_musts": missing_musts, "present_must_nots": present_must_nots,
-        "answer": answer,
+        "answer": answer, "diagnostics": diagnostics,
     }
 
 
