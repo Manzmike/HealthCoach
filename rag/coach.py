@@ -8,24 +8,26 @@ HealthCoach RAG — COACH (stage 5: retrieve -> answer). Runs on the MacBook (ML
   python3 coach.py --show "how should I structure a cut while lifting?"   # also print sources
   python3 coach.py --k 8 "..."           # retrieve more chunks
 
-Retrieval rules (the coach's spine):
-  - default: grade in {A,B} AND cohort != older
-  - if the question is about aging/older men: cohort=older is allowed
-  - grade C is retrievable ONLY from refusal/evidence-gap folders (peptides, PP405,
-    JXL069, no_detox, semen_retention, what_not_to_optimize, uncertified_quality_risk)
-The system prompt enforces the hard rules (no dosing, PP405!=JXL069, no vaccine detox,
-don't apply older-cohort data to a late-20s male, cite grade+DOI).
+Retrieval rules:
+  - search design A/B and configured evidence-gap scopes first, then broaden on a gap;
+  - require topic overlap and a finite BGE reranker score at the configured threshold;
+  - cap duplicate paper passages, expose scores, and keep cohort metadata explicit;
+  - no accepted evidence means no generation; emitted claims require valid source IDs
+    and exact quotes. Provenance validation does not establish scientific entailment.
 """
-import os, re, sys, argparse
+import os, re, sys, argparse, json
+import evidence_control as EC
+import safety_policy as SP
+from rag_control import router as RC
 DBDIR = os.path.join(os.path.dirname(__file__), "lancedb")
 TABLE = "chunks"
 EMB_MODEL = "BAAI/bge-base-en-v1.5"
 GEN_MODEL = os.environ.get("GEN_MODEL", "mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit")  # MoE (~17GB, 3B active = fast + strong). Lighter: Qwen2.5-14B-Instruct-4bit. Fastest/3-shard: Llama-3.1-8B-Instruct-4bit
 Q_PREFIX = "Represent this sentence for searching relevant passages: "
 
-SYSTEM = """You are HealthCoach, a blunt expert evidence assistant for a capable adult man in
-his late 20s (software engineer, lifts and runs, often cutting). Answer the question
-DIRECTLY and COMPLETELY. He is an intelligent adult who has already weighed the tradeoffs:
+SYSTEM = """You are HealthCoach, a private evidence assistant. Do not assume the user's age,
+sex, medications, goals, or schedule. Use only explicitly supplied personal context.
+Answer the question DIRECTLY and COMPLETELY. Preserve the user's control over decisions:
 do not moralize, do not add unsolicited "see a professional" boilerplate, do not dodge a
 topic for being edgy. Report what the evidence actually shows — mechanisms, the doses and
 protocols used IN STUDIES, effect sizes, and harms — and let him decide.
@@ -34,8 +36,8 @@ Answer from the CONTEXT passages, each tagged [grade | folder | doi].
 
 Accuracy rules (these are honesty, NOT censorship — keep them):
 - No claim without a passage. If the context doesn't cover it, say so plainly instead of
-  inventing. State the evidence grade: A/B = strong (SR/MA/guideline, human RCT),
-  C = weak/preliminary (animal/mechanism/small).
+  inventing. A/B/C tags are heuristic study-design metadata, NOT certainty or quality ratings.
+  Assess population and outcome fit separately; if not assessable, state that.
 - Distinguish MISSING evidence from MECHANISM. If no human (A/B) data exists for the exact
   question but the CONTEXT has mechanism/pharmacology (grade C: in vitro, animal, receptor/
   enzyme, pharmacokinetics), you MAY reason about what SHOULD happen at the chemical/
@@ -48,8 +50,8 @@ Accuracy rules (these are honesty, NOT censorship — keep them):
   say that, then give what IS known (mRNA and spike protein clear on their own within days to a
   few weeks; no intervention has been shown to speed it).
 - Keep facts straight: PP405 is investigational and NOT the same molecule as JXL069 unless a
-  passage says so. Don't treat older/65+ cohort data as his baseline; flag when it may not
-  transfer to a late-20s man.
+  passage says so. Do not silently transfer results between populations. State the retrieved
+  population and any applicability limits without assuming the user's age.
 - Serious-harm carve-out: if doing the thing risks serious injury or death (toxic dose,
   dangerous drug interaction, etc.), give the information AND state the danger plainly — do
   not bury it, but do not stonewall either.
@@ -71,22 +73,24 @@ location) to that person — but never soften the evidence or the harm/refusal r
 
 # Optional per-person profile, injected into every answer so responses are tailored.
 _pf = os.path.join(os.path.dirname(__file__), "profile.txt")
-PROFILE = ("".join(l for l in open(_pf) if not l.lstrip().startswith("#")).strip()
-           if os.path.exists(_pf) else "")
+PROFILE = ""
+if os.path.exists(_pf):
+    with open(_pf, encoding="utf-8") as _profile_file:
+        PROFILE = "".join(line for line in _profile_file if not line.lstrip().startswith("#")).strip()
 
 # --- Reranker: retrieve a wide candidate set, then re-score by true relevance ---
 RERANK_MODEL = "BAAI/bge-reranker-base"   # cross-encoder; ~1GB, downloads once
 CAND = 24                                 # candidates pulled before reranking
 _RR = None
 def load_reranker():
-    """Return a CrossEncoder, or None if unavailable (falls back to vector order)."""
+    """Return a CrossEncoder, or None (research answers then fail closed)."""
     global _RR
     if _RR is None:
         _RR = False
         try:
             from sentence_transformers import CrossEncoder
         except Exception as e:
-            print("reranker: CrossEncoder import failed (%s) — vector order" % e)
+            print("reranker: CrossEncoder import failed (%s); evidence answers withheld" % e)
             return None
         for dev in ("mps", "cpu"):                 # mps can fail on CrossEncoder; fall back to cpu
             try:
@@ -97,38 +101,105 @@ def load_reranker():
                 print("reranker load failed on %s (%s)" % (dev, e))
                 _RR = False
         if not _RR:
-            print("reranker unavailable — using plain vector order")
+            print("reranker unavailable; evidence answers withheld")
     return _RR or None
 
-def search(tbl, emb, q, k=6, reranker=None):
+def build_where_clause(matched_intents: list[str]) -> str:
+    """The retrieval filter from spec Sec 5.2 / Sec 3: quarantine and
+    deny/deny-detox are always excluded; lane restriction only applies
+    when at least one intent actually matched, and even then an
+    unmapped row (lane IS NULL) always passes through."""
+    base = "(grade IN ('A','B') OR allow_c = true) AND quarantined = false AND lane NOT IN ('deny','deny-detox')"
+    lanes = RC.allowed_lanes(matched_intents)
+    if lanes is None:
+        return base
+    lane_list = ", ".join("'" + lane.replace("'", "''") + "'" for lane in lanes)
+    return base + f" AND (lane IS NULL OR lane IN ({lane_list}))"
+
+
+def search(tbl, emb, q, k=6, reranker=None, *, audit=None, matched_intents: list[str] | None = None):
     """Metadata-filtered hybrid retrieval of CAND candidates, reranked to top-k.
-       Returns (hits, weak). weak=True means only weaker (C/older) evidence matched."""
-    aging = bool(re.search(r'\b(aging|older|elderly|geriatric|65|menopaus|late-onset)\b', q.lower()))
+       Returns (hits, weak). weak=True means only non-A/B design metadata survived."""
+    matched_intents = matched_intents if matched_intents is not None else []
     qv = emb.encode(Q_PREFIX + q, normalize_embeddings=True).tolist()
-    cc = "" if aging else " AND cohort != 'older'"
-    def run(where, lim):
+    where = build_where_clause(matched_intents)
+    def run(where_clause, lim):
         # lancedb >=0.25 hybrid API: set vector() AND text() explicitly. Do NOT also pass
         # the query string positionally to search() — the old API allowed it, 0.25+ rejects
         # it ("provide a string query ... OR set vector() and text() ... But not both").
         try:
-            return (tbl.search(query_type="hybrid")
-                       .vector(qv).text(q)
-                       .where(where, prefilter=True).limit(lim).to_list())
+            rows = (tbl.search(query_type="hybrid")
+                        .vector(qv).text(q)
+                        .where(where_clause, prefilter=True).limit(lim).to_list())
+            return [dict(hit, _retrieval_mode="hybrid") for hit in rows]
         except Exception:
             # pure-vector fallback (no FTS index / older builds)
-            return tbl.search(qv).where(where, prefilter=True).limit(lim).to_list()
-    weak = False
-    cands = run("(grade IN ('A','B') OR allow_c = true)" + cc, CAND)
-    if not cands:
-        cands = run("1=1" + cc, CAND); weak = True
-    if not cands:
-        return [], weak
-    if reranker:
-        scores = reranker.predict([(q, h["text"][:512]) for h in cands])
-        for h, s in zip(cands, scores):
-            h["_rr"] = float(s)
-        cands.sort(key=lambda h: h["_rr"], reverse=True)
-    return cands[:k], weak
+            rows = tbl.search(qv).where(where_clause, prefilter=True).limit(lim).to_list()
+            return [dict(hit, _retrieval_mode="vector_fallback") for hit in rows]
+    cands = run(where, CAND)
+    hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
+    if not hits and reranker is not None:
+        hits = EC.select_evidence(run("1=1 AND quarantined = false AND lane NOT IN ('deny','deny-detox')", CAND),
+                                   q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
+    weak = bool(hits) and all(hit.get("grade") not in ("A", "B") for hit in hits)
+    return hits, weak
+
+
+def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
+                      matched_intents: list[str] | None = None,
+                      action_count: int = 0, primary_count: int = 0, drowsy: bool = False):
+    """Generate research claims only; render nothing that fails the provenance contract
+    or the safety critic."""
+    matched_intents = matched_intents if matched_intents is not None else []
+    warning = SP.urgent_message(question)
+    if warning:
+        return warning
+    if not hits or any(
+        hit.get("retrieval", {}).get("accepted") is not True
+        or hit.get("retrieval", {}).get("topic_passed") is not True
+        for hit in hits
+    ):
+        return EC.NO_EVIDENCE
+    person_state_block = "PERSON STATE (authoritative, this user, this week):\n" + json.dumps(RC.PERSON, indent=2)
+    user = person_state_block + "\n\nCONTEXT:\n" + EC.claim_context(hits) + "\n\nQUESTION: " + question
+    lead = RC.lead_intent(matched_intents)
+    lead_note = f"\n\nLead topic for this answer: {lead}. Address it first, then any secondary topic briefly." if lead else ""
+    system = SYSTEM + lead_note + "\n\nOUTPUT CONTRACT (overrides prose formatting):\n" + EC.CLAIM_INSTRUCTIONS
+    if getattr(tok, "chat_template", None):
+        prompt = tok.apply_chat_template(
+            [{"role": "system", "content": system}, {"role": "user", "content": user}],
+            add_generation_prompt=True, tokenize=False)
+    else:
+        prompt = system + "\n\n" + user + "\n\nANSWER:"
+    from mlx_lm import generate
+
+    def _generate_and_render(extra_instruction: str = "") -> str:
+        prompt_with_note = prompt + extra_instruction
+        output = generate(model, tok, prompt=prompt_with_note, max_tokens=max_tokens, verbose=False)
+        try:
+            claims = EC.validate_claims(output, hits)
+        except (ValueError, TypeError):
+            return ("Research synthesis withheld: the response failed source/quote validation. "
+                    "No plan change was generated. Inspect the retrieved sources instead.")
+        return EC.render_claims(claims)
+
+    rendered = _generate_and_render()
+    verdict = RC.critique(rendered, matched_intents, action_count=action_count,
+                           primary_count=primary_count, drowsy=drowsy)
+    if verdict["ok"]:
+        return rendered
+
+    retry_note = ("\n\nYour previous draft was rejected for: " + ", ".join(verdict["flags"]) +
+                  ". Do not repeat this. Do not dose or order a change to any medication. "
+                  "Do not conclude a vaccine caused a diagnosed condition.")
+    retried = _generate_and_render(retry_note)
+    retry_verdict = RC.critique(retried, matched_intents, action_count=action_count,
+                                 primary_count=primary_count, drowsy=drowsy)
+    if retry_verdict["ok"]:
+        return retried
+
+    return ("Draft rejected twice by the safety critic — showing the fallback plan instead.\n\n"
+            + json.dumps(retry_verdict["fallback"], indent=2))
 
 REFUSAL = ("08_peptides_gray","pp405_suvomipic","jxl069_mpc_chemistry","no_detox_protocol",
            "semen_retention_evidence","what_not_to_optimize","uncertified_quality_risk")
@@ -137,46 +208,39 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="+")
     ap.add_argument("--k", type=int, default=6)
+    ap.add_argument("--max-tokens", type=int, default=1400, help="token budget for source-linked claim records")
     ap.add_argument("--show", action="store_true", help="print retrieved sources")
+    ap.add_argument("--retrieval-audit", action="store_true", help="print accepted/rejected scores and reasons (no writes)")
     a = ap.parse_args()
     q = " ".join(a.question)
+    warning = SP.urgent_message(q)
+    if warning:
+        print(warning)
+        return
     import lancedb
     from sentence_transformers import SentenceTransformer
 
-    aging = bool(re.search(r'\b(aging|older|elderly|geriatric|65|menopaus|late-onset)\b', q.lower()))
     emb = SentenceTransformer(EMB_MODEL, device="mps")
     tbl = lancedb.connect(DBDIR).open_table(TABLE)
     rr = load_reranker()
-    hits, weak = search(tbl, emb, q, a.k, rr)
+    diagnostics = []
+    matched_intents = RC.classify(q)
+    hits, weak = search(tbl, emb, q, a.k, rr, audit=diagnostics, matched_intents=matched_intents)
+    if a.retrieval_audit:
+        print(json.dumps(diagnostics, indent=2, default=str))
     if not hits:
-        print("Nothing in the library touches this — I won't invent an answer. "
-              "Rephrase, or it may genuinely not be covered."); return
+        print(EC.NO_EVIDENCE); return
 
-    banner = ("NOTE: no A/B evidence matched; the passages below are WEAKER (grade C/older). "
-              "Answer, but label the strength honestly.\n\n") if weak else ""
-    ctx = banner + "\n\n".join("[%s | %s | %s]\n%s" % (h["grade"], h["folder"],
-            h.get("doi") or "no-doi", h["text"][:1200]) for h in hits)
-    pfx = ("USER PROFILE (tailor the answer to this person):\n%s\n\n" % PROFILE) if PROFILE else ""
-    uc = pfx + "CONTEXT:\n%s\n\nQUESTION: %s" % (ctx, q)
-    prompt = "%s\n\n%s\n\nANSWER:" % (SYSTEM, uc)
-
-    from mlx_lm import load, generate
+    from mlx_lm import load
     model, tok = load(GEN_MODEL)
-    if hasattr(tok, "apply_chat_template") and tok.chat_template:
-        prompt = tok.apply_chat_template(
-            [{"role": "system", "content": SYSTEM},
-             {"role": "user", "content": uc}],
-            add_generation_prompt=True, tokenize=False)
-    out = generate(model, tok, prompt=prompt, max_tokens=700, verbose=False)
-    print("\n" + out.strip() + "\n")
+    drowsy = any(term in q.lower() for term in ("drive", "driving", "commute"))
+    print("\n" + answer_from_hits(model, tok, q, hits, a.max_tokens,
+                                   matched_intents=matched_intents, action_count=1,
+                                   primary_count=1, drowsy=drowsy) + "\n")
+    print("Sources (study-design metadata, not certainty):")
+    print("\n".join(EC.source_lines(hits)))
     if a.show:
-        print("─ sources ─")
-        seen = set()
-        for h in hits:
-            key = h["source_pdf"]
-            if key in seen: continue
-            seen.add(key)
-            print("  [%s] %s  %s" % (h["grade"], h.get("doi") or "", h["source_pdf"]))
+        print("\nRetrieved passages:\n" + EC.claim_context(hits))
 
 if __name__ == "__main__":
     main()
