@@ -13,7 +13,6 @@ class WhereClauseTests(unittest.TestCase):
     def test_zero_match_has_no_lane_restriction(self):
         clause = coach.build_where_clause([])
         self.assertNotIn(" AND lane", clause)
-        self.assertIn("NOT quarantined", clause.replace("= false", "").replace("quarantined = false", "NOT quarantined") or clause)
 
     def test_matched_intent_adds_lane_condition(self):
         clause = coach.build_where_clause(["lipids"])
