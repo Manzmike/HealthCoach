@@ -134,6 +134,57 @@ class EvidenceControlTests(unittest.TestCase):
         accepted = EC.select_evidence([a, b], "x", reranker, k=2, topic_gate=lambda h: True)
         self.assertEqual(accepted[0]["source_pdf"], "b.pdf")  # unchanged behavior: raw score order
 
+    def test_a_personal_row_far_below_the_best_personal_card_is_dropped(self):
+        """I2. Personal rows were exempt from the relevance floor entirely,
+        so a thin card rode in behind a good one and got cited for claims it
+        does not support -- a vitamin-D question citing "hormones-off ... Old
+        T 598.". They now have their own floor, a fixed margin below the best
+        personal card this query found."""
+        good = hit(text="on topic personal card", source_pdf="good.pdf", doi="", **{"personal": True})
+        thin = hit(text="unrelated personal card", source_pdf="thin.pdf", doi="", **{"personal": True})
+        reranker = Reranker([-1.0, -1.0 - EC.PERSONAL_SCORE_MARGIN - 0.1])
+        accepted = EC.select_evidence([good, thin], "x", reranker, k=6, topic_gate=lambda h: True)
+        self.assertEqual([h["source_pdf"] for h in accepted], ["good.pdf"])
+
+    def test_a_personal_row_is_never_held_to_a_stricter_floor_than_a_general_one(self):
+        """Every personal card can sit below DEFAULT_MIN_SCORE and still be
+        admitted -- that exemption is the point, and the margin only trims
+        the tail relative to the best personal card, never raises the bar."""
+        rows = [hit(text=f"telegraphic card {i}", source_pdf=f"g{i}.pdf", doi="", **{"personal": True})
+                for i in range(3)]
+        accepted = EC.select_evidence(rows, "x", Reranker([-10.2, -10.19, -10.2]), k=6,
+                                       topic_gate=lambda h: True)
+        self.assertEqual(len(accepted), 3)
+        self.assertTrue(all(h["retrieval"]["minimum_score"] < EC.DEFAULT_MIN_SCORE for h in accepted))
+
+    def test_a_high_scoring_personal_card_does_not_raise_the_floor_above_the_general_one(self):
+        """The floor is min(general, best personal) - margin, so one card
+        scoring well above the general threshold cannot pull the floor up
+        and start excluding cards the general threshold itself would not."""
+        strong = hit(text="strong personal card", source_pdf="s.pdf", doi="", **{"personal": True})
+        modest = hit(text="modest personal card", source_pdf="m.pdf", doi="", **{"personal": True})
+        accepted = EC.select_evidence([strong, modest], "x", Reranker([9.0, -0.5]), k=6,
+                                       topic_gate=lambda h: True)
+        self.assertEqual({h["source_pdf"] for h in accepted}, {"s.pdf", "m.pdf"})
+
+    def test_singular_and_plural_stem_identically(self):
+        """I3. An asymmetric stemmer means a singular question can never
+        match a plural passage (or the reverse)."""
+        for singular, plural in (("peptide", "peptides"), ("pause", "pauses"),
+                                  ("dose", "doses"), ("statin", "statins")):
+            with self.subTest(word=singular):
+                self.assertEqual(EC._stem(singular), EC._stem(plural))
+
+    def test_the_statin_entity_lock_matches_the_compound_names_in_the_corpus(self):
+        """I3. "statin" is entity-locked (rightly), but the corpus only ever
+        names the compound, so the lock made the class term unmatchable."""
+        self.assertTrue(EC.topic_matches("should I start a statin",
+                                          hit("Rosuvastatin 10mg lowered LDL-C in adults.")))
+        self.assertTrue(EC.topic_matches("should I start a statin",
+                                          hit("Atorvastatin reduced events in the trial cohort.")))
+        self.assertFalse(EC.topic_matches("should I start a statin",
+                                           hit("Myostatin inhibition increased muscle mass in mice.")))
+
     def test_max_per_subfolder_caps_even_across_different_papers(self):
         rows = [
             hit(text=f"passage {i}", source_pdf=f"p{i}.pdf", doi=f"10.1/{i}", folder="01_x/y")

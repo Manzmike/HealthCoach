@@ -19,6 +19,25 @@ import safety_policy as SP
 
 PASSAGE_CHARS = 1600
 DEFAULT_MIN_SCORE = 0.0  # Raw BGE reranker logit, equivalent to sigmoid(score) >= 0.5.
+# Personal gold-pack rows cannot be held to DEFAULT_MIN_SCORE: they are
+# telegraphic hand-written cards ("hormones-off unlikely sleep-split
+# (certainty: low). Old T 598.") and the BGE cross-encoder scores that
+# register far below prose however on-topic it is -- measured across the
+# 22-query eval battery, all but three accepted personal rows scored below
+# 0.0, several at the reranker's saturation floor near -10. They used to be
+# exempt from ANY floor, which let a thin card ride in behind a good one and
+# get cited for claims it does not support (a vitamin-D question citing
+# "hormones-off ... Old T 598."). They get their own floor now, always this
+# margin below the general one, and this margin below the best personal card
+# THIS query found whenever that card is itself under the general floor:
+#
+#     personal_floor = min(DEFAULT_MIN_SCORE, best_personal) - MARGIN
+#
+# Relative rather than a fixed absolute number because the absolute scale
+# shifts by several logits between queries -- measured over the eval
+# battery, any single absolute floor is either a no-op or it deletes the
+# only evidence some queries have.
+PERSONAL_SCORE_MARGIN = 6.0
 MAX_PER_PAPER = 2
 MAX_PER_SUBFOLDER = 3
 PAPERS = Path(__file__).resolve().parent.parent / "papers"
@@ -138,6 +157,22 @@ _SYN: dict[str, set[str]] = {
     "detox": {"cleanse", "toxin", "toxins"},
     "toxins": {"toxin", "detox", "cleanse"},
     "independent": {"off", "without", "not", "root"},
+    # "statin" is in _ENTITY_LOCK (rightly -- it must not be hallucinated
+    # into an unrelated lipids passage), but the corpus names the compound,
+    # never the class: "Rosuvastatin 10mg lowered LDL-C". Without these the
+    # lock makes "should I start a statin" unmatchable against every passage
+    # that actually answers it. Listed explicitly rather than by an
+    # "-statin" regex, because myostatin/follistatin/somatostatin/cystatin
+    # are all in this corpus and none of them is a statin.
+    "statin": {"atorvastatin", "rosuvastatin", "simvastatin", "pravastatin",
+               "lovastatin", "fluvastatin", "pitavastatin", "statins"},
+    "atorvastatin": {"statin"},
+    "rosuvastatin": {"statin"},
+    "simvastatin": {"statin"},
+    "pravastatin": {"statin"},
+    "lovastatin": {"statin"},
+    "fluvastatin": {"statin"},
+    "pitavastatin": {"statin"},
 }
 
 # Tokens that MUST appear (or an alias) if they are in the question.
@@ -150,15 +185,26 @@ _ENTITY_LOCK = {
 
 
 def _stem(tok: str) -> str:
+    """Crude suffix stripper. The one property it MUST have is symmetry: a
+    question's singular and a passage's plural have to reduce to the same
+    stem, or a "should I start a peptide" question can never match a
+    "peptides" passage. The suffix list alone does not give that -- it takes
+    "peptides" down to "peptid" but leaves "peptide" whole (same for
+    pause/pauses, dose/doses) -- so a silent trailing "e", which is the only
+    thing left between the two after the plural "s" is gone, is dropped from
+    both."""
     if len(tok) <= 3:
         return tok
+    stem = tok
     for suf in ("ation", "tions", "ing", "ers", "ies", "ied", "es", "ed", "s"):
         if tok.endswith(suf) and len(tok) - len(suf) >= 3:
             stem = tok[: -len(suf)]
             if suf == "ies":
                 stem += "y"
-            return stem
-    return tok
+            break
+    if len(stem) > 3 and stem.endswith("e"):
+        stem = stem[:-1]
+    return stem
 
 
 def _tokens(text: str) -> list[str]:
@@ -286,13 +332,18 @@ def select_evidence(
         hit["retrieval"]["reranker_score"] = score
         hit["_boosted"] = score * boost_fn(hit)
     candidates.sort(key=lambda hit: hit["_boosted"], reverse=True)
+    personal_scores = [hit["_rr"] for hit in candidates if hit.get("personal")]
+    personal_floor = (min(threshold, max(personal_scores)) - PERSONAL_SCORE_MARGIN
+                      if personal_scores else threshold)
     accepted, counts, folder_counts, seen_text = [], {}, {}, set()
     for hit in candidates:
         record = hit["retrieval"]
         keys = paper_keys(hit)
         folder = hit.get("folder") or ""
         text_key = " ".join(passage(hit).split())
-        if (not hit.get("personal")) and hit["_rr"] < threshold:
+        floor = personal_floor if hit.get("personal") else threshold
+        record["minimum_score"] = floor
+        if hit["_rr"] < floor:
             record["reason"] = "below_relevance_threshold"
         elif any(counts.get(key, 0) >= MAX_PER_PAPER for key in keys) or text_key in seen_text:
             record["reason"] = "duplicate_paper_or_passage"
