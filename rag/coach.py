@@ -64,19 +64,25 @@ Accuracy rules (these are honesty, NOT censorship — keep them):
   in the CONTEXT or the QUESTION. If you don't have a passage for something, say "not covered
   in the library" — never fabricate a product (e.g. do not invent names) or guess what an
   acronym stands for. Rate only things the evidence or the user actually named.
+- DO NOT RECOMMEND WHAT THE EVIDENCE DOES NOT SUPPORT. Never recommend, initiate, or endorse
+  hormone therapy (testosterone replacement, a SERM), a self-sourced or home-compounded
+  statin, abstinence/"retention" protocols, or a detox/cleanse regimen, and never assert a
+  psychiatric diagnosis. You MAY name any of these in order to rule them out or explain why
+  they are not indicated -- ruling something out is the honest answer, not a banned topic.
+- DO NOT AFFIRM MORE THAN THE EVIDENCE SPECIFIES. If your cited evidence gives a frequency,
+  dose, or duration, do not endorse a larger one the user proposes. State what the evidence
+  and their own stated constraints actually support instead.
+- PERSON STATE IS NOT A SOURCE: it is background context to tailor an answer to, never
+  something to cite. Every source_id in your output must name a header that actually appears
+  in the CONTEXT block below. If CONTEXT has no passage that answers the question, say so
+  (empty claims list) -- never invent a source_id to attach to a PERSON STATE or QUESTION
+  fact instead.
 
 Cite the passages you used at the end as (grade, doi/source). Do NOT invent author names,
 years, or study titles — refer to a source only by its provided [grade | folder | doi] tag.
 Be direct and concise.
-If a USER PROFILE is given, tailor the specifics (schedule, diet, training time, body-fat goal,
-location) to that person — but never soften the evidence or the harm/refusal rules for them."""
-
-# Optional per-person profile, injected into every answer so responses are tailored.
-_pf = os.path.join(os.path.dirname(__file__), "profile.txt")
-PROFILE = ""
-if os.path.exists(_pf):
-    with open(_pf, encoding="utf-8") as _profile_file:
-        PROFILE = "".join(line for line in _profile_file if not line.lstrip().startswith("#")).strip()
+Tailor the specifics (schedule, diet, training time, body-fat goal, location) to the PERSON
+STATE block — but never soften the evidence or the harm/refusal rules for them."""
 
 # --- Reranker: retrieve a wide candidate set, then re-score by true relevance ---
 RERANK_MODEL = "BAAI/bge-reranker-base"   # cross-encoder; ~1GB, downloads once
@@ -136,7 +142,17 @@ def search(tbl, emb, q, k=6, reranker=None, *, audit=None, matched_intents: list
             # pure-vector fallback (no FTS index / older builds)
             rows = tbl.search(qv).where(where_clause, prefilter=True).limit(lim).to_list()
             return [dict(hit, _retrieval_mode="vector_fallback") for hit in rows]
-    cands = run(where, CAND)
+    general = run(where, CAND)
+    # Personal gold-pack rows are few and hand-curated; a hybrid search over
+    # the full ~150k-row corpus can rank them below a wall of near-duplicate
+    # chunks from a single master-corpus paper, so they never reach the
+    # reranker at all even though boost_for() would already prefer them once
+    # they got there. Query them separately (same lane/quarantine filter,
+    # personal=true) and merge, so a real personal card always gets a chance
+    # to compete on reranker score instead of being crowded out upstream.
+    personal = run(f"({where}) AND personal = true", CAND)
+    seen = {hit.get("source_pdf") for hit in general}
+    cands = general + [hit for hit in personal if hit.get("source_pdf") not in seen]
     hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
     if not hits and reranker is not None:
         hits = EC.select_evidence(run("1=1 AND quarantined = false AND lane NOT IN ('deny','deny-detox')", CAND),
@@ -175,15 +191,59 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
                 add_generation_prompt=True, tokenize=False)
         return sys_text + "\n\n" + user + "\n\nANSWER:"
 
-    def _generate_and_render(extra_system_note: str = "") -> str:
+    quote_retry_note = ("\n\nYour previous claims failed quote verification: at least one quote "
+                         "was not an exact, single contiguous span of its cited source's QUOTABLE "
+                         "text. Copy one contiguous span exactly as written -- do not skip a line, "
+                         "do not merge two non-adjacent lines, do not paraphrase.")
+
+    def _generate_claims(extra_system_note: str = "") -> list[dict] | None:
         prompt = _build_prompt(extra_system_note)
         output = generate(model, tok, prompt=prompt, max_tokens=max_tokens, verbose=False)
         try:
-            claims = EC.validate_claims(output, hits)
+            return EC.validate_claims(output, hits)
         except (ValueError, TypeError):
+            return None
+
+    def _augment_required_lines(text: str) -> str:
+        # STANDING SAFETY REQUIREMENTS ONLY. person_state carries two facts
+        # about this specific user that must appear in a sleep_eds or
+        # incretin answer regardless of what the model generated and
+        # regardless of whether the question's own wording happened to
+        # mention driving or a prescriber:
+        #   1. the drowsy-drive line -- spec Sec 7's must_include_if_drowsy,
+        #      which the critic independently rejects a draft for missing;
+        #   2. prescriber ownership of any tirzepatide change -- spec Sec 7's
+        #      "allowed context is not a license to order".
+        # Nothing else belongs here. This must never be used as a wording
+        # backstop to make a specific word appear in the output: an appended
+        # sentence is the SYSTEM's standing rule, not the model's own finding,
+        # and anything that checks the output for a word cannot tell the two
+        # apart. Only ever called on a genuine rendered claims answer -- never
+        # on the withheld/no-evidence messages, where appending a safety line
+        # would be attached to nothing.
+        lower = text.lower()
+        extra = []
+        drowsy_risk = bool(RC.PERSON.get("constraints", {}).get("do_not_drive_if_fighting_sleep"))
+        if drowsy_risk and "sleep_eds" in matched_intents and "do not drive" not in lower:
+            extra.append("Do not drive while fighting sleep.")
+        if RC.lead_intent(matched_intents) == "incretin" and "prescriber" not in lower:
+            extra.append("Any change to the tirzepatide dose or stopping it is a decision "
+                          "for your prescriber, not this tool.")
+        return text + "\n\n" + "\n".join(extra) if extra else text
+
+    def _generate_and_render(extra_system_note: str = "") -> str:
+        # A dedicated retry for quote-validation failures only, separate from the
+        # safety-critic retry below: one bad quote should not cost the whole draft
+        # a second real generation attempt meant for a different kind of rejection.
+        claims = _generate_claims(extra_system_note)
+        if claims is None:
+            claims = _generate_claims(extra_system_note + quote_retry_note)
+        if claims is None:
             return ("Research synthesis withheld: the response failed source/quote validation. "
                     "No plan change was generated. Inspect the retrieved sources instead.")
-        return EC.render_claims(claims)
+        if not claims:
+            return EC.render_claims(claims)
+        return _augment_required_lines(EC.render_claims(claims))
 
     rendered = _generate_and_render()
     verdict = RC.critique(rendered, matched_intents, action_count=action_count,

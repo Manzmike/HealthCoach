@@ -271,27 +271,22 @@ class EvidenceControlTests(unittest.TestCase):
                                              matched_intents=["incretin"])
         self.assertIn("prescriber", answer.lower())
 
-    def test_airway_line_is_appended_when_osa_is_discussed_without_the_word(self):
+    def test_no_vocabulary_backstop_line_is_appended_for_an_unrelated_intent(self):
+        """Only the two standing safety requirements (drowsy-drive,
+        prescriber) may ever be appended. An answer whose intent triggers
+        neither must come back exactly as render_claims() produced it -- no
+        mechanically-appended sentence supplying a word the model itself did
+        not write."""
         row = hit()
-        payload = {"claims": [{"claim": "Witnessed pauses and snoring indicate obstructive sleep apnea (OSA).",
-                                "claim_type": "study_finding",
-                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
-        generate = Mock(return_value=json.dumps(payload))
-        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
-            answer = coach.answer_from_hits(None, None, "People next to me hear me stop breathing.", [row],
-                                             matched_intents=["sleep_eds"])
-        self.assertIn("airway", answer.lower())
-
-    def test_keep_line_is_appended_when_caffeine_status_quo_is_supported(self):
-        row = hit()
-        payload = {"claims": [{"claim": "Adding afternoon caffeine is not recommended; your current cutoff is already fine.",
-                                "claim_type": "study_use",
+        claim = "Adding afternoon caffeine is not recommended; your current cutoff is already fine."
+        payload = {"claims": [{"claim": claim, "claim_type": "study_use",
                                 "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
         generate = Mock(return_value=json.dumps(payload))
         with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
             answer = coach.answer_from_hits(None, None, "Should I add an afternoon coffee.", [row],
                                              matched_intents=["lifestyle_night"])
-        self.assertIn("keep", answer.lower())
+        self.assertTrue(answer.endswith(claim + f" [{EC.source_id(row)}]\n"
+                                        f"  Evidence quote ({EC.source_id(row)}): {row['text']}"))
 
     def test_required_lines_are_not_appended_to_a_withheld_or_no_evidence_answer(self):
         row = hit()
