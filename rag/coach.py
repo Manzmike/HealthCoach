@@ -146,7 +146,8 @@ def build_where_clause(matched_intents: list[str]) -> str:
     return base + f" AND (lane IS NULL OR lane IN ({lane_list}))"
 
 
-def search(tbl, emb, q, k=6, reranker=None, *, audit=None, matched_intents: list[str] | None = None):
+def search(tbl, emb, q, k=6, reranker=None, *, audit=None,
+           matched_intents: list[str] | None = None, related_out: list[dict] | None = None):
     """Metadata-filtered hybrid retrieval of CAND candidates, reranked to top-k.
        Returns (hits, weak). weak=True means only non-A/B design metadata survived."""
     matched_intents = matched_intents if matched_intents is not None else []
@@ -176,17 +177,26 @@ def search(tbl, emb, q, k=6, reranker=None, *, audit=None, matched_intents: list
     personal = run(f"({where}) AND personal = true", CAND)
     seen = {hit.get("source_pdf") for hit in general}
     cands = general + [hit for hit in personal if hit.get("source_pdf") not in seen]
-    hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
+    scored_related: list[dict] = []
+    hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit,
+                              boost_fn=RC.boost_for, related_out=scored_related)
+    if related_out is not None:
+        related_out.extend(scored_related or cands)
     if not hits and reranker is not None:
-        hits = EC.select_evidence(run("1=1 AND quarantined = false AND " + DENY_LANE_EXCLUSION, CAND),
-                                   q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
+        fallback_candidates = run("1=1 AND quarantined = false AND " + DENY_LANE_EXCLUSION, CAND)
+        fallback_related: list[dict] = []
+        hits = EC.select_evidence(fallback_candidates, q, reranker, k=k, audit=audit,
+                                  boost_fn=RC.boost_for, related_out=fallback_related)
+        if related_out is not None:
+            related_out.extend(fallback_related or fallback_candidates)
     weak = bool(hits) and all(hit.get("grade") not in ("A", "B") for hit in hits)
     return hits, weak
 
 
 def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
                       matched_intents: list[str] | None = None,
-                      action_count: int = 0, primary_count: int = 0, drowsy: bool = False):
+                      action_count: int = 0, primary_count: int = 0, drowsy: bool = False,
+                      related_hits: list[dict] | None = None):
     """Generate research claims only; render nothing that fails the provenance contract
     or the safety critic."""
     matched_intents = matched_intents if matched_intents is not None else []
@@ -272,11 +282,11 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
         if claims is None:
             message = ("Research synthesis withheld: the response failed source/quote validation. "
                        "No plan change was generated. Inspect the retrieved sources instead.")
-            related = EC.closest_source_block(hits)
+            related = EC.closest_source_block(related_hits or hits)
             return message + ("\n\n" + related if related else "")
         if not claims:
             message = EC.render_claims(claims, hits)
-            related = EC.closest_source_block(hits)
+            related = EC.closest_source_block(related_hits or hits)
             return message + ("\n\n" + related if related else "")
         return _augment_required_lines(EC.render_claims(claims, hits))
 
@@ -322,18 +332,25 @@ def main():
     rr = load_reranker()
     diagnostics = []
     matched_intents = RC.classify(q)
-    hits, weak = search(tbl, emb, q, a.k, rr, audit=diagnostics, matched_intents=matched_intents)
+    related_hits: list[dict] = []
+    hits, weak = search(tbl, emb, q, a.k, rr, audit=diagnostics,
+                        matched_intents=matched_intents, related_out=related_hits)
     if a.retrieval_audit:
         print(json.dumps(diagnostics, indent=2, default=str))
     if not hits:
-        print(EC.NO_EVIDENCE); return
+        print(EC.NO_EVIDENCE)
+        related = EC.closest_source_block(related_hits)
+        if related:
+            print("\n" + related)
+        return
 
     from mlx_lm import load
     model, tok = load(GEN_MODEL)
     drowsy = any(term in q.lower() for term in ("drive", "driving", "commute"))
     print("\n" + answer_from_hits(model, tok, q, hits, a.max_tokens,
                                    matched_intents=matched_intents, action_count=1,
-                                   primary_count=1, drowsy=drowsy) + "\n")
+                                   primary_count=1, drowsy=drowsy,
+                                   related_hits=related_hits) + "\n")
     print("Sources (study-design metadata, not certainty):")
     print("\n".join(EC.source_lines(hits)))
     if a.show:

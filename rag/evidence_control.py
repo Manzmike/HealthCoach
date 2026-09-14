@@ -282,6 +282,7 @@ def select_evidence(
     rows: Sequence[dict], question: str, reranker, *, k: int = 6,
     topic_gate: Callable[[dict], bool] | None = None, min_score: float | None = None,
     audit: list[dict] | None = None, boost_fn: Callable[[dict], float] | None = None,
+    related_out: list[dict] | None = None,
 ) -> list[dict]:
     """Fail closed on unavailable/invalid scoring; retain admission diagnostics if requested."""
     threshold = float(os.environ.get("HC_MIN_RERANK_SCORE", DEFAULT_MIN_SCORE)) if min_score is None else float(min_score)
@@ -344,6 +345,8 @@ def select_evidence(
         boost = max(0.0, float(boost_fn(hit)))
         hit["_boosted"] = normalized * boost
         hit["retrieval"]["boosted_score"] = hit["_boosted"]
+    if related_out is not None:
+        related_out.extend(candidates)
     candidates.sort(key=lambda hit: hit["_boosted"], reverse=True)
     personal_scores = [hit["_rr"] for hit in candidates if hit.get("personal")]
     personal_floor = (min(threshold, max(personal_scores)) - PERSONAL_SCORE_MARGIN
@@ -527,12 +530,31 @@ def closest_source_block(hits: Sequence[dict], limit: int = 2) -> str:
 
     def raw_score(hit: dict) -> float:
         value = hit.get("_rr", hit.get("retrieval", {}).get("reranker_score"))
+        if value is None:
+            value = hit.get("_relevance_score", hit.get("_score"))
+        if value is None and hit.get("_distance") is not None:
+            try:
+                return -float(hit["_distance"])
+            except (TypeError, ValueError):
+                pass
         try:
             return float(value)
         except (TypeError, ValueError):
             return float("-inf")
 
-    ranked = sorted(hits, key=raw_score, reverse=True)[:limit]
+    # A hybrid search can return several chunks from one document. The fallback
+    # is meant to offer a couple of alternate reading paths, so prefer distinct
+    # documents while retaining the highest-scoring chunk for each one.
+    ranked = []
+    seen_documents = set()
+    for hit in sorted(hits, key=raw_score, reverse=True):
+        document_key = str(hit.get("source_pdf") or normalized_doi(hit.get("doi", "")) or source_id(hit))
+        if document_key in seen_documents:
+            continue
+        seen_documents.add(document_key)
+        ranked.append(hit)
+        if len(ranked) >= limit:
+            break
     lines = ["Closest related sources (not sufficient to support a direct answer):"]
     for hit in ranked:
         sid = source_id(hit)

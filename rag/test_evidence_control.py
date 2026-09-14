@@ -448,6 +448,19 @@ class EvidenceControlTests(unittest.TestCase):
         self.assertTrue(weak)
         self.assertEqual(coach.search(Table([hit()]), emb, "creatine", reranker=None)[0], [])
 
+    def test_search_can_return_related_candidates_without_admitting_them(self):
+        emb = Mock()
+        emb.encode.return_value.tolist.return_value = [0.1]
+        strong = hit("Creatine improved strength in the studied adults.", source_pdf="strong.pdf")
+        weak = hit("Creatine was mentioned but strength was not measured.", source_pdf="weak.pdf")
+        related = []
+        found, _ = coach.search(Table([strong, weak]), emb, "creatine strength",
+                                reranker=Reranker([2.0, -1.0]), related_out=related)
+        self.assertEqual([h["source_pdf"] for h in found], ["strong.pdf"])
+        self.assertEqual({h["source_pdf"] for h in related}, {"strong.pdf", "weak.pdf"})
+        related_weak = next(h for h in related if h["source_pdf"] == "weak.pdf")
+        self.assertFalse(related_weak["retrieval"]["accepted"])
+
     def test_urgent_question_needs_no_model_or_database(self):
         with patch.object(sys, "argv", ["coach.py", "I have chest pain now"]), \
              patch.dict(sys.modules, {"lancedb": None, "mlx_lm": None}), \
