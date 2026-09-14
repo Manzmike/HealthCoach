@@ -330,7 +330,20 @@ def select_evidence(
     for hit, score in zip(candidates, scores):
         hit["_rr"] = score
         hit["retrieval"]["reranker_score"] = score
-        hit["_boosted"] = score * boost_fn(hit)
+        # BGE returns logits, so a relevant passage can legitimately have a
+        # negative raw score. Multiplying that signed value by a boost inverts
+        # the intended ordering: x3 turns -2 into -6 and ranks it below -1.
+        # Map the logit to its monotonic [0, 1] probability first, then apply
+        # the configured positive ranking weight. The admission floor remains
+        # on the raw score above; boosting changes ordering only.
+        if score >= 0:
+            normalized = 1.0 / (1.0 + math.exp(-score))
+        else:
+            exp_score = math.exp(score)
+            normalized = exp_score / (1.0 + exp_score)
+        boost = max(0.0, float(boost_fn(hit)))
+        hit["_boosted"] = normalized * boost
+        hit["retrieval"]["boosted_score"] = hit["_boosted"]
     candidates.sort(key=lambda hit: hit["_boosted"], reverse=True)
     personal_scores = [hit["_rr"] for hit in candidates if hit.get("personal")]
     personal_floor = (min(threshold, max(personal_scores)) - PERSONAL_SCORE_MARGIN

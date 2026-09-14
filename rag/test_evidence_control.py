@@ -127,6 +127,21 @@ class EvidenceControlTests(unittest.TestCase):
         )
         self.assertEqual(accepted[0]["source_pdf"], "gold.pdf")
 
+    def test_boost_fn_cannot_invert_negative_reranker_scores(self):
+        personal = hit(text="Personal sleep card.", source_pdf="personal.pdf",
+                       doi="", **{"personal": True})
+        general = hit(text="General sleep passage.", source_pdf="general.pdf")
+        # Raw BGE logits are often negative. A personal boost must promote
+        # the less-negative relevant card, not push it further down.
+        accepted = EC.select_evidence(
+            [personal, general], "sleep", Reranker([-2.0, 0.5]), k=2,
+            topic_gate=lambda h: True,
+            boost_fn=lambda h: 10.0 if h.get("personal") else 1.0,
+        )
+        self.assertEqual(accepted[0]["source_pdf"], "personal.pdf")
+        self.assertGreater(accepted[0]["retrieval"]["boosted_score"],
+                           accepted[1]["retrieval"]["boosted_score"])
+
     def test_boost_fn_defaults_to_no_op(self):
         a = hit(text="passage one here", source_pdf="a.pdf", doi="10.1/a")
         b = hit(text="passage two here", source_pdf="b.pdf", doi="10.1/b")

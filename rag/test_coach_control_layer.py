@@ -114,6 +114,22 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
         self.assertIn("prescriber", result.lower())  # the fallback_plan mentions the prescriber
         self.assertNotIn("start trt now", result.lower())
 
+    def test_contradictory_schedule_reaches_safe_fallback(self):
+        record = self._claim_record(
+            "You can resume a 5-day lifting schedule this week, starting with 2–3 days."
+        )
+        record[0]["sources"][0]["quote"] = "Nausea week: breaks not a 5-day program."
+        with patch("coach.SP.urgent_message", return_value=None), \
+             patch("coach.EC.validate_claims", return_value=record), \
+             patch("mlx_lm.generate", return_value="output"):
+            result = coach.answer_from_hits(
+                model=object(), tok=object(), question="Get me back on 5 days lifting this week.",
+                hits=self._hits(), matched_intents=["cut_train"], action_count=1,
+                primary_count=1, drowsy=False,
+            )
+        self.assertNotIn("5-day lifting schedule", result.lower())
+        self.assertIn("gut", result.lower())
+
     def test_passing_draft_is_returned_unchanged(self):
         with patch("coach.SP.urgent_message", return_value=None), \
              patch("coach.EC.validate_claims", return_value=self._claim_record("Move dinner earlier.")), \

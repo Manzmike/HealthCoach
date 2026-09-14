@@ -438,6 +438,75 @@ _DIRECT_TERM_NEGATION = re.compile(
     re.IGNORECASE,
 )
 
+# A generated claim can pass quote/provenance validation while still
+# contradicting the source it quotes. Keep this first check deliberately
+# proposition-shaped rather than attempting general NLI: it catches a common
+# high-risk failure mode in this coach, where a claim recommends a training
+# schedule that its own personal card explicitly rules out.
+_POSITIVE_SCHEDULE = re.compile(
+    r"\b(?:can|may|should|resume|return|return\s+to|get\s+back\s+on|follow|start|do|"
+    r"perform|train\s+on|is\s+consistent\s+with)\b[^\n.]{0,100}?"
+    r"\b(\d+)\s*[-–]\s*day\b",
+    re.IGNORECASE,
+)
+_DENIED_SCHEDULE = re.compile(
+    r"\b(?:not|never|avoid|without|breaks?|pause|no)\b[^\n.]{0,55}?"
+    r"\b(\d+)\s*[-–]\s*day\b|"
+    r"\b(\d+)\s*[-–]\s*day\b[^\n.]{0,55}?\b(?:not|never|avoid|without)\b",
+    re.IGNORECASE,
+)
+
+
+def _self_evidence_contradiction(draft: str) -> bool:
+    """Reject a positive numeric schedule claim contradicted by its quote.
+
+    ``render_claims`` emits each claim followed by its evidence quote(s). We
+    compare within that claim block, so unrelated evidence elsewhere cannot
+    trigger the gate. This is intentionally a narrow deterministic guard for
+    an especially consequential contradiction class; it is not a claim-
+    entailment proof.
+    """
+    lines = draft.splitlines()
+    # A model may cite the same source in several claims and quote different
+    # excerpts each time. Build the source-wide quote view first: otherwise a
+    # positive claim can quote a benign excerpt while a later claim exposes
+    # the same source's explicit limitation, as happened in E17.
+    quotes_by_source: dict[str, list[str]] = {}
+    for line in lines:
+        quote_match = re.match(r"\s*Evidence quote \(([^)]+)\):\s*(.*)", line,
+                               re.IGNORECASE)
+        if quote_match:
+            quotes_by_source.setdefault(quote_match.group(1), []).append(quote_match.group(2))
+
+    for index, line in enumerate(lines):
+        if not line.lstrip().startswith("- **"):
+            continue
+        claim_match = _POSITIVE_SCHEDULE.search(line)
+        if not claim_match:
+            continue
+        # Do not treat a claim's own denial ("should not resume a 5-day
+        # schedule") as a positive proposition merely because it contains a
+        # modal verb from _POSITIVE_SCHEDULE.
+        proposition = line[claim_match.start():claim_match.end()]
+        if re.search(r"\b(?:not|never|avoid|without)\b", proposition, re.IGNORECASE):
+            continue
+        schedule = claim_match.group(1)
+        block = []
+        for following in lines[index + 1:]:
+            if following.lstrip().startswith("-"):
+                break
+            if following.strip():
+                block.append(following)
+        source_ids = re.findall(r"\bsource_[A-Za-z0-9_-]+\b", line)
+        evidence = " ".join(block + [
+            quote for source_id in source_ids
+            for quote in quotes_by_source.get(source_id, [])
+        ])
+        for denied in _DENIED_SCHEDULE.finditer(evidence):
+            if schedule in denied.groups():
+                return True
+    return False
+
 
 def term_pattern(term: str) -> re.Pattern:
     """Word-bounded matcher for a watch term, tolerating a plural 's' and
@@ -517,6 +586,8 @@ def critique(draft: str, matched: list[str], *, action_count: int, primary_count
         flags.append("doses_or_orders_drug_action")
     if _causation_violation(draft):
         flags.append("concludes_vaccine_caused_condition")
+    if _self_evidence_contradiction(draft):
+        flags.append("claim_contradicts_own_evidence")
 
     drift_lanes = leftover_forbid_lanes(matched)
     # Lightweight drift-check: only run if the intent actually left something

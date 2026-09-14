@@ -262,6 +262,49 @@ class CritiqueTests(unittest.TestCase):
         result = R.critique("Start TRT.", [], action_count=1, primary_count=1, drowsy=False)
         self.assertEqual(result["fallback"], R.CRITIC["fallback_plan"])
 
+    def test_claim_contradicting_its_own_quote_is_rejected(self):
+        draft = (
+            "- **Study Use:** You can resume a 5-day lifting schedule this week, "
+            "starting with 2–3 resistance training days per week. [source_personal]\n"
+            "  Evidence quote (source_personal): Nausea week: breaks not a 5-day program."
+        )
+        result = R.critique(draft, ["cut_train"], action_count=1,
+                            primary_count=1, drowsy=False)
+        self.assertFalse(result["ok"])
+        self.assertIn("claim_contradicts_own_evidence", result["flags"])
+
+    def test_safe_schedule_denial_is_not_a_self_contradiction(self):
+        draft = (
+            "- **Safety:** The evidence does not support a 5-day lifting schedule this "
+            "week. [source_personal]\n"
+            "  Evidence quote (source_personal): Nausea week: breaks not a 5-day program."
+        )
+        result = R.critique(draft, ["cut_train"], action_count=1,
+                            primary_count=1, drowsy=False)
+        self.assertTrue(result["ok"])
+
+    def test_later_quote_from_same_source_cannot_hide_a_contradiction(self):
+        draft = (
+            "- **Study Use:** You can resume a 5-day lifting schedule this week. [source_personal]\n"
+            "  Evidence quote (source_personal): Resistance training can resume when tolerated.\n"
+            "- **Safety:** Do not begin a 5-day program during nausea. [source_personal]\n"
+            "  Evidence quote (source_personal): Nausea week: breaks not a 5-day program."
+        )
+        result = R.critique(draft, ["cut_train"], action_count=1,
+                            primary_count=1, drowsy=False)
+        self.assertFalse(result["ok"])
+        self.assertIn("claim_contradicts_own_evidence", result["flags"])
+
+    def test_modal_denial_is_not_treated_as_a_positive_schedule(self):
+        draft = (
+            "- **Safety:** You should not resume a 5-day lifting schedule this week. "
+            "[source_personal]\n"
+            "  Evidence quote (source_personal): Nausea week: breaks not a 5-day program."
+        )
+        result = R.critique(draft, ["cut_train"], action_count=1,
+                            primary_count=1, drowsy=False)
+        self.assertTrue(result["ok"])
+
 
 class RecommendationOnlyTermsTests(unittest.TestCase):
     """TRT/psychosis/nofap are the three reject_if_mentions terms a correct,

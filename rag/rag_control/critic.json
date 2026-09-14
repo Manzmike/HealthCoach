@@ -40,7 +40,8 @@
     "treats_tirzepatide_as_root_of_years_long_nights",
     "doses_tirzepatide",
     "labels_narcolepsy_or_POIS",
-    "recommends_detox_cleanse"
+    "recommends_detox_cleanse",
+    "claim_contradicts_own_evidence"
   ],
   "must_include_if_drowsy": "Do not drive while fighting sleep.",
   "fallback_plan": {
@@ -48,7 +49,8 @@
     "actions": [
       "If fighting sleep, do not drive.",
       "Eat the one meal earlier than 22:00 with protein in it.",
-      "Message the prescriber about tirzepatide fatigue/nausea if still on it."
+      "Message the prescriber about tirzepatide fatigue/nausea if still on it.",
+      "Let your gut settle before increasing training volume."
     ],
     "not_this": [
       "cut",
