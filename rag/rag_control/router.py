@@ -155,7 +155,7 @@ _CONDITION_WORD = re.compile(r"\b(?:apnea|pauses?|sleep)\b", re.IGNORECASE)
 # because there is no word boundary before the "n".
 _NEGATION = re.compile(
     r"\b(?:not|never|unlikely|cannot|doubtful|unproven|neither"
-    r"|no\s+(?:evidence|way|need|reason|proof|link|sign|indication))\b"
+    r"|no\s+(?:evidence|way|need|reason|proof|link|sign|indication|mechanism))\b"
     r"|\w+n't\b",
     re.IGNORECASE,
 )
@@ -253,6 +253,19 @@ def _negated(text: str, pos: int) -> bool:
     sent_start, _ = _sentence_bounds(text, pos)
     segments = text[sent_start:pos].split(",")
 
+    if len(segments) == 1:
+        # No comma at all between the sentence start and the trigger: there
+        # is no earlier CLAUSE a negation could wrongly leak in from, so the
+        # fixed lookback window is pure downside here -- widen to the whole
+        # clause. This is what lets "There is no evidence from the provided
+        # context that the COVID vaccine caused sleep apnea" resolve
+        # correctly when "no evidence" sits further back than
+        # _NEGATION_LOOKBACK_WORDS. Any clause with at least one comma keeps
+        # the fixed-window + aside-crossing rules below unchanged, since
+        # those are exactly what stops negation leaking across an unrelated
+        # clause (cases 7, 8, 14 and the round-5 comma tests).
+        return bool(_NEGATION.search(segments[0]))
+
     words: list[str] = segments[-1].split()
 
     if len(segments) >= 3 and len(words) < _NEGATION_LOOKBACK_WORDS:
@@ -295,6 +308,58 @@ def _drug_dose_violation(draft: str) -> bool:
     return False
 
 
+# TRT/psychosis/nofap/"home statin" are reject_if_mentions terms a correct,
+# SAFE answer must still be able to name in order to rule them out ("not
+# psychosis", "no TRT needed", a gold card's own "No home statin" quoted
+# verbatim) -- a plain substring ban rejects the right answer along with
+# the wrong one. These get a negation-aware, shape-anchored check instead:
+# flagged only when the draft RECOMMENDS the thing (a recommend verb just
+# before it: "start TRT", "use a home statin") or ASSERTS it as a diagnosis
+# ("this is psychosis"), or is followed by an immediacy cue with no verb at
+# all ("home statin tonight"), and not when that shape is negated.
+#
+# Audited the rest of reject_if_mentions against the actual gold-pack rows
+# (see handoff): "extra vitamin D" was the other suspected candidate (its
+# person_state.json denial code is "extra_D"), but the real ingested gold
+# row reads "Copper / peptides / DIY statin / extra D / hero cut" -- it
+# never contains the literal substring "extra vitamin D", so there is no
+# refusal quote that would trip it. Left as a raw substring ban. Terms like
+# "start a statin tonight" and "skip the clinic" are already multi-word,
+# verb-led recommendation phrases -- a correct refusal can't accidentally
+# contain them as a substring the way a bare "TRT" or "home statin" can, so
+# they stay on the raw substring path. "coffee enema" / "BPC-157" were not
+# promoted per the same reasoning -- no realistic safe refusal quotes them.
+_RECOMMENDATION_ONLY_TERMS = frozenset({"trt", "psychosis", "nofap", "home statin"})
+_RECOMMEND_VERB = re.compile(r"\b(start|begin|try|consider|recommend|initiate|pursue|use)\b", re.IGNORECASE)
+_DIAGNOSTIC_ASSERT = re.compile(
+    r"\b(?:is|are|sounds like|consistent with|indicates?|suggests?|diagnosed with|have)\b", re.IGNORECASE
+)
+# A bare imperative with no verb at all ("home statin tonight") is still a
+# recommendation shape -- checked in the few words AFTER the term instead.
+_IMMEDIACY_AFTER = re.compile(r"^\s*(?:tonight|today|now|right away|immediately)\b", re.IGNORECASE)
+_WATCH_TERMS = (
+    ("trt", re.compile(r"\btrt\b", re.IGNORECASE)),
+    ("psychosis", re.compile(r"\bpsychosis\b", re.IGNORECASE)),
+    ("nofap", re.compile(r"\bnofap\b", re.IGNORECASE)),
+    ("home_statin", re.compile(r"\bhome\s+statin\b", re.IGNORECASE)),
+)
+
+
+def _recommendation_violation(draft: str) -> list[str]:
+    flags = []
+    for name, pattern in _WATCH_TERMS:
+        for m in pattern.finditer(draft):
+            sent_start, _ = _sentence_bounds(draft, m.start())
+            before = draft[sent_start:m.start()][-40:]
+            after = draft[m.end():m.end() + 20]
+            shape = (_RECOMMEND_VERB.search(before) or _DIAGNOSTIC_ASSERT.search(before)
+                     or _IMMEDIACY_AFTER.match(after))
+            if shape and not _negated(draft, m.start()):
+                flags.append(f"recommends_{name}")
+                break
+    return flags
+
+
 def _causation_violation(draft: str) -> bool:
     """Does the draft CONCLUDE the vaccine caused the user's condition?"""
     for m in _CAUSE_STEM.finditer(draft):
@@ -308,9 +373,62 @@ def _causation_violation(draft: str) -> bool:
     return False
 
 
+def _claim_text_only(draft: str) -> str:
+    """The model's own asserted text, without render_claims()'s mechanical
+    'Evidence quote (...): ...' lines. Those lines are a verbatim echo of
+    the source's own words for provenance display, not something the model
+    itself asserted -- a gold card's own safe warning ("No home statin.")
+    quoted back inside one must not count as the model drifting into a
+    forbidden lane on its own initiative."""
+    return "\n".join(
+        line for line in draft.split("\n") if not line.strip().startswith("Evidence quote (")
+    )
+
+
+def _line_bounds(text: str, pos: int) -> tuple[int, int]:
+    """Start/end offsets of the render_claims() bullet line containing
+    `pos`. Each rendered claim is one line ("- **Type:** claim text
+    [ids]"); a semicolon inside that one claim is a hard _SENTENCE_END
+    boundary (by design, for the dose/causation checks), which would
+    otherwise split "Tirzepatide ...; ... but it is not the root cause"
+    into two "sentences" and hide the second half's negation from the
+    first half's mention -- widening to the whole line avoids that."""
+    start = text.rfind("\n", 0, pos) + 1
+    end = text.find("\n", pos)
+    return start, (end if end != -1 else len(text))
+
+
+def _drift_hits(claim_text: str, drift_lanes, drift_terms: dict[str, tuple[str, ...]]) -> list[str]:
+    """A drift-lane keyword found in the model's own claim text, unless the
+    CLAIM LINE containing it is itself negated somewhere ("Tirzepatide use
+    is NOT a contraindication...", "no evidence it interacts..."). Unlike
+    _negated()'s backward-only lookback (built for verb triggers, where a
+    negation like "do not" precedes the verb), a drift term is usually a
+    plain noun -- its safe reassurance more often follows it ("X is not a
+    problem") than precedes it, sometimes past a semicolon within the same
+    claim -- so this checks the whole line, not just one _SENTENCE_END-
+    bounded clause. This is a lightweight lane-drift heuristic, not a hard
+    safety reject like dose/causation, so the wider net is an acceptable
+    tradeoff for not rejecting a correct reassurance."""
+    flags = []
+    for lane in drift_lanes:
+        for term in drift_terms.get(lane, ()):
+            for m in re.finditer(re.escape(term), claim_text, re.IGNORECASE):
+                line_start, line_end = _line_bounds(claim_text, m.start())
+                if not _NEGATION.search(claim_text[line_start:line_end]):
+                    flags.append(f"drift_into_{lane}")
+                    break
+            else:
+                continue
+            break
+    return flags
+
+
 def critique(draft: str, matched: list[str], *, action_count: int, primary_count: int, drowsy: bool) -> dict:
     text = draft.lower()
-    flags = [term for term in CRITIC["reject_if_mentions"] if term.lower() in text]
+    flags = [term for term in CRITIC["reject_if_mentions"]
+             if term.lower() not in _RECOMMENDATION_ONLY_TERMS and term.lower() in text]
+    flags.extend(_recommendation_violation(draft))
 
     if _drug_dose_violation(draft):
         flags.append("doses_or_orders_drug_action")
@@ -320,16 +438,17 @@ def critique(draft: str, matched: list[str], *, action_count: int, primary_count
     drift_lanes = leftover_forbid_lanes(matched)
     # Lightweight drift-check: only run if the intent actually left something
     # forbidden. This is a keyword heuristic (see spec Sec 7), not a hard
-    # reject -- it reuses the same lane names as topic keywords.
+    # reject -- it reuses the same lane names as topic keywords. Scanned
+    # against claim text only (see _claim_text_only) so a quoted gold card
+    # cannot itself trigger "drift" the model never asserted.
     drift_terms = {
         "incretin-context": ("tirzepatide", "mounjaro", "the shot"),
         "hormones-off": ("testosterone", "trt", "hormone"),
         "peptides": ("peptide", "bpc-157", "tb-500"),
         "food-inflammation": ("anti-inflammatory diet", "food plan"),
     }
-    for lane in drift_lanes:
-        if any(term in text for term in drift_terms.get(lane, ())):
-            flags.append(f"drift_into_{lane}")
+    if drift_lanes:
+        flags.extend(_drift_hits(_claim_text_only(draft), drift_lanes, drift_terms))
 
     if action_count > CRITIC["max_actions"]:
         flags.append("actions_gt_3")

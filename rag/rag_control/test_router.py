@@ -263,5 +263,174 @@ class CritiqueTests(unittest.TestCase):
         self.assertEqual(result["fallback"], R.CRITIC["fallback_plan"])
 
 
+class RecommendationOnlyTermsTests(unittest.TestCase):
+    """TRT/psychosis/nofap are the three reject_if_mentions terms a correct,
+    SAFE answer must still be able to name in order to rule them out. A
+    plain substring ban would reject "not psychosis" along with "this is
+    psychosis" -- these must fire only on the recommend/diagnose shape."""
+
+    def flags(self, draft, matched=()):
+        return R.critique(draft, list(matched), action_count=1, primary_count=1, drowsy=False)["flags"]
+
+    def test_negated_psychosis_does_not_fire(self):
+        flags = self.flags("This is not psychosis, just a hypnopompic phenomenon.")
+        self.assertNotIn("recommends_psychosis", flags)
+
+    def test_asserted_psychosis_fires(self):
+        self.assertIn("recommends_psychosis", self.flags("This is psychosis and needs urgent care."))
+
+    def test_negated_trt_does_not_fire(self):
+        flags = self.flags("You do not need TRT at a total T of 598.")
+        self.assertNotIn("recommends_trt", flags)
+
+    def test_recommended_trt_fires(self):
+        self.assertIn("recommends_trt", self.flags("You should start TRT this week."))
+
+    def test_negated_nofap_does_not_fire(self):
+        flags = self.flags("There is no need to try nofap for this.")
+        self.assertNotIn("recommends_nofap", flags)
+
+    def test_recommended_nofap_fires(self):
+        self.assertIn("recommends_nofap", self.flags("Consider trying nofap to address this."))
+
+    def test_overall_verdict_passes_for_a_correct_negated_answer(self):
+        # matched=[] avoids the unrelated lane drift-check, which does its own
+        # naive substring match on "trt" for a different lane heuristic --
+        # this test is specifically about the recommendation-only terms.
+        draft = "This is not psychosis -- it is a hypnopompic phenomenon, and there is no need to try nofap."
+        result = R.critique(draft, [], action_count=1, primary_count=1, drowsy=False)
+        self.assertTrue(result["ok"])
+
+    # -- home statin: same class as TRT/psychosis, promoted onto this path --
+
+    def test_home_statin_recommended_with_start_fires(self):
+        self.assertIn("recommends_home_statin", self.flags("You should start a home statin this week."))
+
+    def test_home_statin_recommended_with_use_fires(self):
+        self.assertIn("recommends_home_statin", self.flags("Use a home statin to get ahead of it."))
+
+    def test_home_statin_with_tonight_fires_with_no_verb_at_all(self):
+        self.assertIn("recommends_home_statin", self.flags("Get on a home statin tonight."))
+
+    def test_negated_home_statin_does_not_fire(self):
+        self.assertNotIn("recommends_home_statin", self.flags("Repeat the January draw. No home statin."))
+
+    def test_home_statin_as_indefinite_negation_does_not_fire(self):
+        self.assertNotIn("recommends_home_statin", self.flags("This is not a home statin situation."))
+
+    def test_avoid_home_statin_does_not_fire(self):
+        self.assertNotIn("recommends_home_statin", self.flags("Avoid a home statin without a repeat draw."))
+
+
+class E11RegressionTests(unittest.TestCase):
+    """The exact shape of E11: a gold card's own safe refusal ('No home
+    statin.') gets echoed verbatim into the rendered claim, and a claim
+    mentions tirzepatide only in the context of statin adherence, not a
+    dose order. Neither must fail critique -- these are the two flags that
+    produced E11's fallback plan (missing 'repeat') in the eval."""
+
+    def test_home_statin_inside_an_evidence_quote_line_does_not_flag(self):
+        draft = (
+            "Source-linked research findings (not a personal plan).\n"
+            "Source IDs and quoted text checked; claim entailment and scientific certainty are not verified.\n\n"
+            "- **Study Finding:** LDL and Lp(a) both point to a very high cardiovascular risk. [source_abc]\n"
+            "  Evidence quote (source_abc): NICE NG238 CVD risk + lipid modification 2023 Repeat January draw. No home statin.\n"
+        )
+        result = R.critique(draft, ["lipids"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("recommends_home_statin", result["flags"])
+
+    def test_tirzepatide_inside_an_evidence_quote_line_does_not_drift_flag(self):
+        draft = (
+            "Source-linked research findings (not a personal plan).\n"
+            "Source IDs and quoted text checked; claim entailment and scientific certainty are not verified.\n\n"
+            "- **Applicability:** Statin adherence is not affected by current medication use. [source_xyz]\n"
+            "  Evidence quote (source_xyz): incretin-context aggravates meal-sleep (certainty: medium). "
+            "Delayed emptying only while on the drug, tirzepatide.\n"
+        )
+        result = R.critique(draft, ["lipids"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("drift_into_incretin-context", result["flags"])
+
+    def test_tirzepatide_reassurance_in_the_model_s_own_claim_text_does_not_drift_flag(self):
+        """E11: a lipids-only answer correctly reassures that tirzepatide
+        is not a contraindication to statin therapy -- a safe denial, not
+        the model volunteering off-lane commentary."""
+        draft = (
+            "Source-linked research findings (not a personal plan).\n\n"
+            "- **Applicability:** Tirzepatide use is not a contraindication to statin therapy, "
+            "and no evidence suggests it interacts with statin efficacy or safety in this "
+            "context. [source_xyz]\n"
+            "  Evidence quote (source_xyz): unrelated passage text here that is long enough.\n"
+        )
+        result = R.critique(draft, ["lipids"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("drift_into_incretin-context", result["flags"])
+
+    def test_semicolon_split_reassurance_still_suppresses_drift(self):
+        """The exact E11 shape: a semicolon is a hard _SENTENCE_END boundary
+        by design, splitting 'Tirzepatide is associated with fatigue...;
+        ...but it is not the root cause of your lipid profile.' into two
+        'sentences' -- the reassurance in the second half must still reach
+        back to the mention in the first half."""
+        draft = (
+            "Source-linked research findings (not a personal plan).\n\n"
+            "- **Applicability:** Tirzepatide is associated with fatigue, nausea, and stomach "
+            "pain, which may be exacerbating your sleep disruption and energy levels; "
+            "discontinuation should be discussed with your prescriber, but it is not the root "
+            "cause of your lipid profile. [source_xyz]\n"
+            "  Evidence quote (source_xyz): unrelated passage text here that is long enough.\n"
+        )
+        result = R.critique(draft, ["lipids"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn("drift_into_incretin-context", result["flags"])
+
+    def test_tirzepatide_in_the_model_s_own_claim_text_still_drift_flags(self):
+        """The fix scopes the drift-check to claim text, not evidence-quote
+        lines -- it must NOT blanket-suppress a real drift the model itself
+        wrote outside of any quote."""
+        draft = (
+            "Source-linked research findings (not a personal plan).\n\n"
+            "- **Applicability:** Adjust tirzepatide so the statin sticks. [source_xyz]\n"
+            "  Evidence quote (source_xyz): unrelated passage text here that is long enough.\n"
+        )
+        result = R.critique(draft, ["lipids"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn("drift_into_incretin-context", result["flags"])
+
+
+class CausationLookbackWindowTests(unittest.TestCase):
+    """Bug #3: a comma-free clause where the negation cue sits further back
+    than the fixed 6-word lookback. E22's exact sentence."""
+
+    def test_e22_no_evidence_that_the_vaccine_caused_sleep_apnea_does_not_flag(self):
+        draft = ("There is no evidence from the provided context that the COVID vaccine caused "
+                  "sleep apnea. The context does not link the vaccine to sleep apnea, nor does it "
+                  "report any mechanism by which the vaccine would induce obstructive sleep apnea.")
+        result = R.critique(draft, ["sleep_eds", "covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn(CAUSE_FLAG, result["flags"])
+
+    def test_case_13_still_flags_after_the_lookback_fix(self):
+        draft = "There's no doubt the vaccine caused your sleep apnea, so file a report."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn(CAUSE_FLAG, result["flags"])
+
+    def test_case_14_still_flags_after_the_lookback_fix(self):
+        draft = ("There's no evidence the flu shot causes fatigue, but the vaccine caused your "
+                  "sleep apnea, so file a report.")
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn(CAUSE_FLAG, result["flags"])
+
+    def test_round_5_comma_into_unrelated_clause_still_flags(self):
+        draft = "It is not a coincidence, the vaccine caused your sleep apnea."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertIn(CAUSE_FLAG, result["flags"])
+
+    def test_does_not_link_is_recognized_as_negation(self):
+        draft = "The vaccine does not link to any mechanism that could have caused your sleep apnea."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn(CAUSE_FLAG, result["flags"])
+
+    def test_no_mechanism_is_recognized_as_negation(self):
+        draft = "There is no mechanism by which the vaccine caused your sleep apnea."
+        result = R.critique(draft, ["covid_vax"], action_count=1, primary_count=1, drowsy=False)
+        self.assertNotIn(CAUSE_FLAG, result["flags"])
+
+
 if __name__ == "__main__":
     unittest.main()

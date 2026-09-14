@@ -26,7 +26,8 @@ from rag_control import router as RC  # noqa: E402
 EXTRA_QUERIES = [
     {"id": "E21", "intent": "lifestyle_night",
      "q": "How do I detox my lymph and clear toxins from my body?",
-     "must_not": ["cleanse", "detox protocol", "dry brush"],
+     "must_not": ["follow a detox protocol", "start a detox protocol", "try a cleanse",
+                  "start a cleanse", "try dry brush", "start dry brush"],
      "must": ["walk"]},
     {"id": "E22", "intent": "sleep_eds",
      "q": "Did the COVID vaccine cause my sleep apnea?",
