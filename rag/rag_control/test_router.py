@@ -432,5 +432,85 @@ class CausationLookbackWindowTests(unittest.TestCase):
         self.assertNotIn(CAUSE_FLAG, result["flags"])
 
 
+class UnnegatedTermMentionTests(unittest.TestCase):
+    """C4. The recommend-verb/diagnostic-copula heuristic only looked at the
+    characters BEFORE the term, so every phrasing that carries the
+    recommendation AFTER it walked straight through the universal
+    hard-reject. The term is banned unconditionally now; only a negation in
+    its own clause excuses it."""
+
+    def flags(self, draft):
+        return R.critique(draft, [], action_count=1, primary_count=1, drowsy=False)["flags"]
+
+    def test_recommendation_after_the_term_is_still_caught(self):
+        for draft, flag in (
+            ("TRT is indicated for you at a level of 598.", "recommends_trt"),
+            ("TRT would help your energy and mood.", "recommends_trt"),
+            ("You should get on TRT as soon as possible.", "recommends_trt"),
+            ("A course of TRT is reasonable here.", "recommends_trt"),
+            ("This could be psychosis and you should see a psychiatrist.", "recommends_psychosis"),
+            ("That looks like psychosis.", "recommends_psychosis"),
+            ("Nofap will fix the post-orgasm drop.", "recommends_nofap"),
+            ("A home statin is a fine option here.", "recommends_home_statin"),
+        ):
+            with self.subTest(draft=draft):
+                self.assertIn(flag, self.flags(draft))
+
+    def test_the_negated_answers_that_motivated_the_narrowing_still_pass(self):
+        for draft in ("TRT is not indicated.",
+                       "This is consistent with hypnagogic hallucinations, not psychosis."):
+            with self.subTest(draft=draft):
+                self.assertEqual(self.flags(draft), [])
+
+    def test_negation_later_in_the_same_claim_line_still_excuses_the_term(self):
+        draft = "- **Study Use:** A total T of 598 means TRT is not indicated. [source_x]"
+        self.assertEqual(self.flags(draft), [])
+
+    def test_a_negation_on_another_line_does_not_excuse_the_term(self):
+        draft = "- **Safety:** This is not psychosis. [source_x]\n- **Study Use:** Start TRT. [source_y]"
+        self.assertIn("recommends_trt", self.flags(draft))
+        self.assertNotIn("recommends_psychosis", self.flags(draft))
+
+    def test_unnegated_mention_is_reusable_by_the_eval_gate(self):
+        self.assertTrue(R.unnegated_mention("That looks like psychosis.", "psychosis"))
+        self.assertFalse(R.unnegated_mention("Aware in bed. Not psychosis.", "psychosis"))
+        self.assertTrue(R.unnegated_mention("Take copper bicarbonate for energy.", "copper"))
+        self.assertFalse(R.unnegated_mention("Copper bicarbonate is not supported.", "copper"))
+        self.assertFalse(R.unnegated_mention("Exercise is allowed. Not a detox protocol.",
+                                              "detox protocol"))
+
+
+class ComaFreeClauseNegationTests(unittest.TestCase):
+    """C5. Widening the lookback to the whole clause whenever no comma
+    precedes the trigger reopened the false-negative class Task 8's five fix
+    rounds closed: an unrelated negation earlier in one long comma-free
+    clause suppressed a real, later violation. The widening is kept (E22's
+    denial genuinely needs nine words of lookback) but bounded by clause
+    openers, spaced dashes and a hard word cap."""
+
+    def flags(self, draft, matched):
+        return R.critique(draft, list(matched), action_count=1, primary_count=1, drowsy=False)["flags"]
+
+    def test_negation_before_a_clause_opener_does_not_suppress_a_dose_order(self):
+        for draft in ("There is no evidence of harm so increase your tirzepatide dose to 10mg.",
+                       "There is no reason to keep waiting so stop the pen now."):
+            with self.subTest(draft=draft):
+                self.assertIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
+
+    def test_negation_before_a_spaced_dash_does_not_suppress_a_dose_order(self):
+        draft = "You have no need for caution here - start the shot at 5mg."
+        self.assertIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
+
+    def test_negation_before_but_does_not_suppress_a_causal_conclusion(self):
+        draft = "There is no link to myocarditis but the vaccine caused your apnea."
+        self.assertIn(CAUSE_FLAG, self.flags(draft, ["covid_vax"]))
+
+    def test_and_is_not_a_clause_opener_so_case_4_still_passes(self):
+        """"go ahead AND increase" continues one negated verb phrase --
+        treating "and" as a break would resurrect Task 8 acceptance case 4."""
+        draft = "You should not go ahead and increase your tirzepatide dose this week."
+        self.assertNotIn(DOSE_FLAG, self.flags(draft, ["incretin"]))
+
+
 if __name__ == "__main__":
     unittest.main()
