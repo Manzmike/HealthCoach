@@ -237,21 +237,29 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
         #      which the critic independently rejects a draft for missing;
         #   2. prescriber ownership of any tirzepatide change -- spec Sec 7's
         #      "allowed context is not a license to order".
-        # Nothing else belongs here. This must never be used as a wording
+        #   3. repeat/confirmation of a high-risk lipid or hs-CRP result before
+        #      treatment changes, which prevents a cited personal card's
+        #      "repeat January draw" from being mistaken for model advice.
+        # These are standing safety requirements, not answer-vocabulary
+        # backstops. This must never be used as a wording
         # backstop to make a specific word appear in the output: an appended
         # sentence is the SYSTEM's standing rule, not the model's own finding,
         # and anything that checks the output for a word cannot tell the two
         # apart. Only ever called on a genuine rendered claims answer -- never
         # on the withheld/no-evidence messages, where appending a safety line
         # would be attached to nothing.
-        lower = text.lower()
+        lower = RC._claim_text_only(text).lower()
         extra = []
         drowsy_risk = bool(RC.PERSON.get("constraints", {}).get("do_not_drive_if_fighting_sleep"))
         if drowsy_risk and "sleep_eds" in matched_intents and "do not drive" not in lower:
             extra.append("Do not drive while fighting sleep.")
         if RC.lead_intent(matched_intents) == "incretin" and "prescriber" not in lower:
             extra.append("Any change to the tirzepatide dose or stopping it is a decision "
-                          "for your prescriber, not this tool.")
+                         "for your prescriber, not this tool.")
+        if ("lipids" in matched_intents and
+                re.search(r"\b(?:ldl|lp\s*\(?a\)?|lpa|crp)\b", question, re.IGNORECASE) and
+                not re.search(r"\b(?:repeat|recheck|retest|confirm|follow[- ]?up|draw)\b", lower)):
+            extra.append("Repeat or confirm the relevant lab with your clinician before changing treatment.")
         return text + "\n\n" + "\n".join(extra) if extra else text
 
     def _generate_and_render(extra_system_note: str = "") -> str:

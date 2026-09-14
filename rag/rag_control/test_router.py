@@ -248,6 +248,13 @@ class CritiqueTests(unittest.TestCase):
         result = R.critique(draft, ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
         self.assertTrue(result["ok"])
 
+    def test_drowsy_line_in_evidence_quote_does_not_pass_as_claim(self):
+        draft = ("- **Safety:** Sleepiness needs evaluation. [source_x]\n"
+                 "  Evidence quote (source_x): Do not drive while fighting sleep.")
+        result = R.critique(draft, ["sleep_eds"], action_count=1, primary_count=1, drowsy=True)
+        self.assertFalse(result["ok"])
+        self.assertIn("missing_drowsy_drive_line", result["flags"])
+
     def test_actions_over_three_fails(self):
         result = R.critique("fine text", [], action_count=4, primary_count=1, drowsy=False)
         self.assertFalse(result["ok"])

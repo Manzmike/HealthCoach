@@ -352,8 +352,28 @@ class EvidenceControlTests(unittest.TestCase):
         generate = Mock(return_value=json.dumps(payload))
         with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
             answer = coach.answer_from_hits(None, None, "Fix my apnea with the RAG only.", [row],
-                                             matched_intents=["sleep_eds"])
+                                             matched_intents=["sleep_eds"], drowsy=True)
         self.assertIn("do not drive", answer.lower())
+
+    def test_drowsy_drive_line_in_a_quote_does_not_satisfy_the_claim_requirement(self):
+        row = hit("Do not drive while fighting sleep. This is source context only.")
+        payload = {"claims": [{"claim": "Witnessed pauses point to OSA.", "claim_type": "study_finding",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "I fight sleep on the drive home.", [row],
+                                             matched_intents=["sleep_eds"], drowsy=True)
+        self.assertGreaterEqual(answer.lower().count("do not drive while fighting sleep"), 2)
+
+    def test_lipid_safety_line_is_appended_when_claim_omits_repeat(self):
+        row = hit("The lipid result should be interpreted with the clinical context.")
+        payload = {"claims": [{"claim": "The lipid result is clinically important.", "claim_type": "study_finding",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "LDL was 191. What statin do I start?", [row],
+                                             matched_intents=["lipids"])
+        self.assertIn("repeat or confirm the relevant lab", answer.lower())
 
     def test_prescriber_line_is_appended_when_lead_intent_is_incretin(self):
         row = hit()
@@ -366,8 +386,7 @@ class EvidenceControlTests(unittest.TestCase):
         self.assertIn("prescriber", answer.lower())
 
     def test_no_vocabulary_backstop_line_is_appended_for_an_unrelated_intent(self):
-        """Only the two standing safety requirements (drowsy-drive,
-        prescriber) may ever be appended. An answer whose intent triggers
+        """Only standing safety requirements may ever be appended. An answer whose intent triggers
         neither must come back exactly as render_claims() produced it -- no
         mechanically-appended sentence supplying a word the model itself did
         not write."""

@@ -609,7 +609,7 @@ def critique(draft: str, matched: list[str], *, action_count: int, primary_count
         flags.append("actions_gt_3")
     if primary_count > CRITIC["max_primary_focus"]:
         flags.append("primary_focus_gt_1")
-    if drowsy and CRITIC["must_include_if_drowsy"].lower() not in text:
+    if drowsy and CRITIC["must_include_if_drowsy"].lower() not in claim_text.lower():
         flags.append("missing_drowsy_drive_line")
 
     ok = not flags
