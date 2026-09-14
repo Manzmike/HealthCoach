@@ -238,6 +238,34 @@ class EvidenceControlTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 EC.validate_claims(json.dumps(data), [hit()])
 
+    def test_render_claims_shows_a_consistent_human_readable_reference(self):
+        row = hit()
+        data = self.claims(row)
+        sid = EC.source_id(row)
+        # Simulate the model's older bare-hash style in the nested quote link.
+        data["claims"][0]["sources"][0]["source_id"] = sid.removeprefix("source_")
+        records = EC.validate_claims(json.dumps(data), [row])
+        rendered = EC.render_claims(records, [row])
+        self.assertIn(f"[{sid}]", rendered)
+        self.assertIn(
+            f"Reference ({sid}): Grade B · Document: study.pdf · "
+            "Folder: 07_supplements/creatine · DOI: 10.1/study",
+            rendered,
+        )
+        self.assertIn(f"Evidence quote ({sid}): “{row['text']}”", rendered)
+        self.assertNotIn(f"Evidence quote ({sid.removeprefix('source_')}):", rendered)
+
+    def test_closest_source_block_is_ranked_and_labeled_as_context_only(self):
+        first = hit("The closer related passage with enough context to inspect.", source_pdf="first.pdf")
+        second = hit("The second related passage with enough context to inspect.", source_pdf="second.pdf")
+        third = hit("A less related passage with enough context to inspect.", source_pdf="third.pdf")
+        first["_rr"], second["_rr"], third["_rr"] = 1.0, 0.5, 0.1
+        rendered = EC.closest_source_block([third, first, second])
+        self.assertIn("not sufficient to support a direct answer", rendered)
+        self.assertLess(rendered.index("first.pdf"), rendered.index("second.pdf"))
+        self.assertNotIn("third.pdf", rendered)
+        self.assertIn("Closest passage (context only)", rendered)
+
     def test_unsourced_personal_actions_and_partial_json_are_withheld(self):
         for change in ({"sources": []}, {"claim_type": "practical_action"}, {"claim": ""}, {"claim_type": []},
                        {"claim": "You should inject the compound every day."}, {"claim": "Stop your medication."}):
@@ -351,8 +379,13 @@ class EvidenceControlTests(unittest.TestCase):
         with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
             answer = coach.answer_from_hits(None, None, "Should I add an afternoon coffee.", [row],
                                              matched_intents=["lifestyle_night"])
-        self.assertTrue(answer.endswith(claim + f" [{EC.source_id(row)}]\n"
-                                        f"  Evidence quote ({EC.source_id(row)}): {row['text']}"))
+        sid = EC.source_id(row)
+        self.assertTrue(answer.endswith(
+            claim + f" [{sid}]\n"
+            f"  Reference ({sid}): Grade B · Document: study.pdf · "
+            f"Folder: 07_supplements/creatine · DOI: 10.1/study\n"
+            f"  Evidence quote ({sid}): “{row['text']}”"
+        ))
 
     def test_required_lines_are_not_appended_to_a_withheld_or_no_evidence_answer(self):
         row = hit()
@@ -361,8 +394,10 @@ class EvidenceControlTests(unittest.TestCase):
             withheld = coach.answer_from_hits(None, None, "Even off tirzepatide I still wake at 2.", [row],
                                                matched_intents=["sleep_eds", "incretin"])
         self.assertIn("withheld", withheld)
-        self.assertNotIn("do not drive", withheld.lower())
-        self.assertNotIn("prescriber", withheld.lower())
+        headline = withheld.split("Closest related sources", 1)[0].lower()
+        self.assertNotIn("do not drive", headline)
+        self.assertNotIn("prescriber", headline)
+        self.assertIn("Closest related sources (not sufficient to support a direct answer)", withheld)
 
     def test_source_ids_are_stable_and_changed_excerpts_cannot_reuse_citations(self):
         self.assertEqual(EC.source_id(hit()), EC.source_id(copy.deepcopy(hit())))

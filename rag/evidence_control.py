@@ -470,21 +470,87 @@ def validate_claims(text: str, hits: Sequence[dict]) -> list[dict]:
     return records
 
 
-def render_claims(records: Sequence[dict]) -> str:
+def _canonical_reference_id(raw_id: str, hits: Sequence[dict]) -> str:
+    """Return the full stable source ID for a rendered reference.
+
+    Older model outputs sometimes omit the ``source_`` prefix in the nested
+    quote object even though validation has already normalized
+    ``record['source_ids']``. Resolve that presentation mismatch when the hit
+    metadata is available so claims and quotes always display one ID.
+    """
+    known = {source_id(hit): hit for hit in hits}
+    if raw_id in known:
+        return raw_id
+    bare = raw_id.removeprefix("source_")
+    for sid in known:
+        if sid.removeprefix("source_") == bare:
+            return sid
+    return raw_id
+
+
+def _reference_details(hit: dict, sid: str) -> str:
+    grade = hit.get("grade") or "unknown"
+    document = hit.get("source_pdf") or "unknown document"
+    folder = hit.get("folder") or "unknown folder"
+    doi = normalized_doi(hit.get("doi", "")) or "no DOI"
+    return (f"Reference ({sid}): Grade {grade} · Document: {document} · "
+            f"Folder: {folder} · DOI: {doi}")
+
+
+def render_claims(records: Sequence[dict], hits: Sequence[dict] | None = None) -> str:
     if not records:
         return NO_EVIDENCE
+    hits = hits or []
+    hit_by_id = {source_id(hit): hit for hit in hits}
     lines = ["Source-linked research findings (not a personal plan).",
              "Source IDs and quoted text checked; claim entailment and scientific certainty are not verified.", ""]
     for record in records:
         lines.append(f"- **{record['claim_type'].replace('_', ' ').title()}:** {record['claim']} [{', '.join(record['source_ids'])}]")
         for ref in record["sources"]:
-            lines.append(f"  Evidence quote ({ref['source_id']}): {ref['quote']}")
+            sid = _canonical_reference_id(ref["source_id"], hits)
+            hit = hit_by_id.get(sid)
+            if hit is not None:
+                lines.append("  " + _reference_details(hit, sid))
+            lines.append(f"  Evidence quote ({sid}): “{ref['quote']}”")
+    return "\n".join(lines)
+
+
+def closest_source_block(hits: Sequence[dict], limit: int = 2) -> str:
+    """Show the nearest related sources when no answer can be supported.
+
+    These are deliberately labeled as insufficient evidence. They are useful
+    navigation aids for the user, never citations for a claim that failed
+    source/quote validation.
+    """
+    if not hits or limit <= 0:
+        return ""
+
+    def raw_score(hit: dict) -> float:
+        value = hit.get("_rr", hit.get("retrieval", {}).get("reranker_score"))
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return float("-inf")
+
+    ranked = sorted(hits, key=raw_score, reverse=True)[:limit]
+    lines = ["Closest related sources (not sufficient to support a direct answer):"]
+    for hit in ranked:
+        sid = source_id(hit)
+        score = hit.get("_rr", hit.get("retrieval", {}).get("reranker_score"))
+        lines.append(f"- {_reference_details(hit, sid)} · Relevance: {score}")
+        preview = " ".join(quotable(hit).split())
+        if preview:
+            if len(preview) > 280:
+                preview = preview[:277].rstrip() + "..."
+            lines.append(f"  Closest passage (context only): “{preview}”")
     return "\n".join(lines)
 
 
 def source_lines(hits: Sequence[dict]) -> list[str]:
-    return [f"{source_id(hit)} | design metadata {hit.get('grade', 'unknown')} | "
-            f"{hit.get('doi') or 'no-doi'} | {hit.get('source_pdf') or 'unknown source'} | "
+    return [f"{source_id(hit)} | Grade {hit.get('grade', 'unknown')} | "
+            f"Document: {hit.get('source_pdf') or 'unknown source'} | "
+            f"Folder: {hit.get('folder') or 'unknown folder'} | "
+            f"DOI: {normalized_doi(hit.get('doi', '')) or 'no DOI'} | "
             f"reranker={hit.get('retrieval', {}).get('reranker_score')} "
             f"minimum={hit.get('retrieval', {}).get('minimum_score')}"
             for hit in hits]

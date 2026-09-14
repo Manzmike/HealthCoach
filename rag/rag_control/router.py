@@ -369,7 +369,8 @@ def _claim_text_only(draft: str) -> str:
     quoted back inside one must not count as the model drifting into a
     forbidden lane on its own initiative."""
     return "\n".join(
-        line for line in draft.split("\n") if not line.strip().startswith("Evidence quote (")
+        line for line in draft.split("\n")
+        if not line.strip().startswith(("Evidence quote (", "Reference ("))
     )
 
 

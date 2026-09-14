@@ -262,11 +262,15 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
         if claims is None:
             claims = _generate_claims(extra_system_note + quote_retry_note)
         if claims is None:
-            return ("Research synthesis withheld: the response failed source/quote validation. "
-                    "No plan change was generated. Inspect the retrieved sources instead.")
+            message = ("Research synthesis withheld: the response failed source/quote validation. "
+                       "No plan change was generated. Inspect the retrieved sources instead.")
+            related = EC.closest_source_block(hits)
+            return message + ("\n\n" + related if related else "")
         if not claims:
-            return EC.render_claims(claims)
-        return _augment_required_lines(EC.render_claims(claims))
+            message = EC.render_claims(claims, hits)
+            related = EC.closest_source_block(hits)
+            return message + ("\n\n" + related if related else "")
+        return _augment_required_lines(EC.render_claims(claims, hits))
 
     rendered = _generate_and_render()
     verdict = RC.critique(rendered, matched_intents, action_count=action_count,
