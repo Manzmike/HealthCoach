@@ -1,8 +1,10 @@
 # rag/test_coach_control_layer.py
-"""Router/critic/person_state wiring in coach.py. No model, no database --
-pure function tests against build_where_clause and the critique-wrapping
-in answer_from_hits (mocked generation)."""
+"""Router/critic/person_state wiring in coach.py. No model -- pure function
+tests against build_where_clause and the critique-wrapping in
+answer_from_hits (mocked generation), plus one semantic WHERE-clause test
+that runs the real clause through a real throwaway LanceDB fixture."""
 
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -27,6 +29,57 @@ class WhereClauseTests(unittest.TestCase):
     def test_quarantine_always_excluded_matched_or_not(self):
         self.assertIn("quarantined = false", coach.build_where_clause([]))
         self.assertIn("quarantined = false", coach.build_where_clause(["sleep_eds"]))
+
+
+class WhereClauseSemanticsTests(unittest.TestCase):
+    """M4. A substring assertion on the clause TEXT cannot catch a SQL
+    three-valued-logic bug: `NULL NOT IN ('deny','deny-detox')` evaluates to
+    NULL, which the engine treats as not-true, so a bare `lane NOT IN (...)`
+    silently drops every `lane IS NULL` row -- 138,976 of the real corpus's
+    147,631. Run the real clause through the real query engine against a
+    small fixture instead, and assert on which rows actually survive."""
+
+    ROWS = [
+        {"rid": "unmapped", "lane": None, "grade": "A", "quarantined": False, "allow_c": False},
+        {"rid": "deny", "lane": "deny", "grade": "A", "quarantined": False, "allow_c": False},
+        {"rid": "deny_detox", "lane": "deny-detox", "grade": "A", "quarantined": False, "allow_c": False},
+        {"rid": "mapped", "lane": "sleep_eds", "grade": "A", "quarantined": False, "allow_c": False},
+        {"rid": "unmapped_quarantined", "lane": None, "grade": "A", "quarantined": True, "allow_c": False},
+    ]
+
+    def surviving(self, clause):
+        try:
+            import lancedb
+            import pyarrow as pa
+        except ImportError as exc:  # pragma: no cover - environment without the DB stack
+            self.skipTest(f"lancedb/pyarrow unavailable: {exc}")
+        schema = pa.schema([
+            pa.field("rid", pa.string()),
+            pa.field("lane", pa.string(), nullable=True),
+            pa.field("grade", pa.string()),
+            pa.field("quarantined", pa.bool_()),
+            pa.field("allow_c", pa.bool_()),
+        ])
+        with tempfile.TemporaryDirectory() as directory:
+            table = lancedb.connect(directory).create_table(
+                "chunks", data=pa.Table.from_pylist(self.ROWS, schema=schema))
+            rows = table.search().where(clause).limit(len(self.ROWS)).to_list()
+        return {row["rid"] for row in rows}
+
+    def test_lane_is_null_rows_survive_the_unrestricted_clause(self):
+        survivors = self.surviving(coach.build_where_clause([]))
+        self.assertIn("unmapped", survivors)
+        self.assertEqual(survivors, {"unmapped", "mapped"})
+
+    def test_lane_is_null_rows_survive_a_lane_restricted_clause(self):
+        survivors = self.surviving(coach.build_where_clause(["sleep_eds"]))
+        self.assertIn("unmapped", survivors)
+        self.assertNotIn("deny", survivors)
+        self.assertNotIn("unmapped_quarantined", survivors)
+
+    def test_a_lane_restriction_still_excludes_other_mapped_lanes(self):
+        survivors = self.surviving(coach.build_where_clause(["lipids"]))
+        self.assertEqual(survivors, {"unmapped"})
 
 
 class AnswerFromHitsCritiqueTests(unittest.TestCase):

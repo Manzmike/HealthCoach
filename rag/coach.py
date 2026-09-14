@@ -110,12 +110,24 @@ def load_reranker():
             print("reranker unavailable; evidence answers withheld")
     return _RR or None
 
+# Deny lanes are excluded, but an unmapped row (lane IS NULL) is not a deny
+# row -- see build_where_clause's docstring for why the IS NULL arm is load-
+# bearing rather than redundant.
+DENY_LANE_EXCLUSION = "(lane IS NULL OR lane NOT IN ('deny','deny-detox'))"
+
+
 def build_where_clause(matched_intents: list[str]) -> str:
     """The retrieval filter from spec Sec 5.2 / Sec 3: quarantine and
     deny/deny-detox are always excluded; lane restriction only applies
     when at least one intent actually matched, and even then an
-    unmapped row (lane IS NULL) always passes through."""
-    base = "(grade IN ('A','B') OR allow_c = true) AND quarantined = false AND lane NOT IN ('deny','deny-detox')"
+    unmapped row (lane IS NULL) always passes through.
+
+    The deny exclusion MUST be spelled `lane IS NULL OR lane NOT IN (...)`:
+    in SQL's three-valued logic `NULL NOT IN (...)` evaluates to NULL, not
+    true, so a bare `lane NOT IN (...)` silently drops every unmapped row --
+    138,976 of the corpus's 147,631 rows, i.e. the entire master corpus."""
+    base = ("(grade IN ('A','B') OR allow_c = true) AND quarantined = false"
+            " AND " + DENY_LANE_EXCLUSION)
     lanes = RC.allowed_lanes(matched_intents)
     if lanes is None:
         return base
@@ -155,7 +167,7 @@ def search(tbl, emb, q, k=6, reranker=None, *, audit=None, matched_intents: list
     cands = general + [hit for hit in personal if hit.get("source_pdf") not in seen]
     hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
     if not hits and reranker is not None:
-        hits = EC.select_evidence(run("1=1 AND quarantined = false AND lane NOT IN ('deny','deny-detox')", CAND),
+        hits = EC.select_evidence(run("1=1 AND quarantined = false AND " + DENY_LANE_EXCLUSION, CAND),
                                    q, reranker, k=k, audit=audit, boost_fn=RC.boost_for)
     weak = bool(hits) and all(hit.get("grade") not in ("A", "B") for hit in hits)
     return hits, weak
