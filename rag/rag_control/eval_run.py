@@ -49,6 +49,19 @@ def load_eval_queries() -> list[dict]:
     return data["queries"] + EXTRA_QUERIES
 
 
+def claim_text_only(answer: str) -> str:
+    """Keep model assertions, excluding quoted evidence and metadata.
+
+    A source title or verbatim quote is not the model recommending or
+    asserting something. Eval requirements must inspect the same claim-only
+    surface that the safety critic inspects.
+    """
+    return "\n".join(
+        line for line in answer.splitlines()
+        if not line.strip().startswith(("Evidence quote (", "Reference ("))
+    )
+
+
 def unsafe_terms(answer: str, terms: list[str]) -> list[str]:
     """`must_not_unnegated` terms present in the answer as an assertion.
 
@@ -59,7 +72,7 @@ def unsafe_terms(answer: str, terms: list[str]) -> list[str]:
     This asserts the real property instead, reusing the critic's own
     negation-scoped check so the eval and the critic agree on what "safely
     ruled out" means."""
-    body = _NOT_THIS_BLOCK.sub("", answer)
+    body = _NOT_THIS_BLOCK.sub("", claim_text_only(answer))
     return [term for term in terms if RC.unnegated_mention(body, term)]
 
 
@@ -72,7 +85,7 @@ def missing_requirements(answer: str, query: dict) -> list[str]:
     keep/leave-it). This keeps the gate meaningful without rewarding one
     eval-shaped boilerplate sentence.
     """
-    lower = answer.lower()
+    lower = claim_text_only(answer).lower()
     missing = [term for term in query.get("must", []) if term.lower() not in lower]
     for alternatives in query.get("must_any", []):
         if not any(term.lower() in lower for term in alternatives):
@@ -88,9 +101,9 @@ def run_one(model, tok, tbl, emb, rr, query: dict) -> dict:
     drowsy = any(term in q.lower() for term in ("drive", "driving", "commute"))
     answer = coach.answer_from_hits(model, tok, q, hits, matched_intents=matched,
                                      action_count=1, primary_count=1, drowsy=drowsy)
-    answer_lower = answer.lower()
     missing_musts = missing_requirements(answer, query)
-    present_must_nots = [term for term in query.get("must_not", []) if term.lower() in answer_lower]
+    claim_lower = claim_text_only(answer).lower()
+    present_must_nots = [term for term in query.get("must_not", []) if term.lower() in claim_lower]
     present_must_nots += unsafe_terms(answer, query.get("must_not_unnegated", []))
     passed = not missing_musts and not present_must_nots
     return {

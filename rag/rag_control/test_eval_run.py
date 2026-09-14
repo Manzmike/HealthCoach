@@ -6,6 +6,15 @@ from rag_control import eval_run
 
 
 class EvalRequirementTests(unittest.TestCase):
+    def test_claim_checks_ignore_reference_and_quote_metadata(self):
+        answer = (
+            "- **Study Finding:** The evidence does not support this intervention. [source_x]\n"
+            "  Reference (source_x): Grade B · Document: TRT study.pdf · Folder: hormones-off · DOI: no DOI\n"
+            "  Evidence quote (source_x): TRT was studied in adults."
+        )
+        self.assertNotIn("TRT", eval_run.claim_text_only(answer))
+        self.assertFalse(eval_run.unsafe_terms(answer, ["TRT"]))
+
     def test_any_of_accepts_legitimate_synonyms(self):
         query = {"must_any": [["earlier", "within two hours of bedtime", "sleep disruption"]]}
         self.assertEqual(eval_run.missing_requirements(
