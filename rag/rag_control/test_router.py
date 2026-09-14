@@ -463,8 +463,19 @@ class UnnegatedTermMentionTests(unittest.TestCase):
                 self.assertEqual(self.flags(draft), [])
 
     def test_negation_later_in_the_same_claim_line_still_excuses_the_term(self):
-        draft = "- **Study Use:** A total T of 598 means TRT is not indicated. [source_x]"
+        draft = ("- **Study Use:** The absence of symptoms consistent with hypogonadism "
+                  "(e.g. loss of libido, fatigue, mood changes) further supports that TRT "
+                  "is not indicated at a total T of 598. [source_x]")
         self.assertEqual(self.flags(draft), [])
+
+    def test_a_distant_negation_attached_to_something_else_does_not_excuse_the_term(self):
+        """The negation window is bounded: an eval answer whose only "not"
+        is twenty words away, qualifying a different condition entirely, is
+        not a denial of the term."""
+        draft = ("- **Study Use:** A home statin is reasonable here, starting at the lowest "
+                  "dose as per the guideline, provided your liver panel is clean and you are "
+                  "not experiencing muscle pain. [source_x]")
+        self.assertIn("recommends_home_statin", self.flags(draft))
 
     def test_a_negation_on_another_line_does_not_excuse_the_term(self):
         draft = "- **Safety:** This is not psychosis. [source_x]\n- **Study Use:** Start TRT. [source_y]"
