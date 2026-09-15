@@ -33,6 +33,54 @@ DEFAULT_SPLIT = {
 }
 DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
+# ---------------------------------------------------------------- profile / history
+
+def load_profile(path=None):
+    """Read profile.txt, dropping '#'-prefixed comment lines. Own copy of coach.py's
+    former PROFILE loader -- kept local so this tool doesn't depend on coach.py's
+    internal state (coach.py itself no longer loads profile.txt; person_state.json
+    is authoritative for its own answers, but this tool's USER PROFILE section is a
+    separate, still-wanted input)."""
+    path = path or os.path.join(os.path.dirname(__file__), "profile.txt")
+    if not os.path.exists(path):
+        return ""
+    with open(path, encoding="utf-8") as f:
+        return "".join(line for line in f if not line.lstrip().startswith("#")).strip()
+
+
+def load_history(path=None):
+    """Read history.md, dropping the template's own instructional comments and any
+    '- e.g. ...' placeholder bullet left unfilled. The shipped template is entirely
+    '- e.g.' examples (fake stack/labs/injuries/trials) meant to be replaced -- read
+    wholesale, they get folded into the prompt as if they were real history with no
+    way for the model to tell the difference. A section left as pure placeholder
+    drops out entirely rather than appearing empty; a fully unfilled file (or a
+    missing one) returns ''.
+    """
+    path = path or os.environ.get("HISTORY", "history.md")
+    if not os.path.exists(path):
+        return ""
+    kept, header = [], None
+    with open(path, encoding="utf-8") as f:
+        for raw in f:
+            line = raw.rstrip("\n")
+            stripped = line.strip()
+            if stripped.startswith("# "):
+                continue  # top-of-file instructional comment, never real content
+            if stripped.startswith("## "):
+                header = line
+                continue  # held back until a real (non-placeholder) line follows it
+            if re.match(r"^-\s*e\.g\.", stripped, re.I):
+                continue  # unfilled template example
+            if not stripped:
+                continue
+            if header is not None:
+                kept.append(header)
+                header = None
+            kept.append(line)
+    return "\n".join(kept).strip()
+
+
 # ---------------------------------------------------------------- input parsing
 def parse_inputs(path):
     """Return {section: [items]} for the free-text sections. Forgiving."""
@@ -198,9 +246,8 @@ def main():
     ctx = "\n\n".join("[%s | %s | %s]\n%s" % (
             h["grade"], h["folder"], h.get("doi") or "no-doi", h["text"][:1000]) for h in hits)
 
-    profile = getattr(C, "PROFILE", "") or "(no profile on file)"
-    histfile = os.environ.get("HISTORY", "history.md")
-    history = open(histfile).read().strip() if os.path.exists(histfile) else ""
+    profile = load_profile() or "(no profile on file)"
+    history = load_history()
     hist_block = ("MY HISTORY (skip what I already do, respect what failed, account for my labs):\n%s\n\n"
                   % history) if history else ""
 

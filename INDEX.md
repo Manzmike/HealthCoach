@@ -29,7 +29,7 @@ Everything that's pure documentation (not a README living beside its own code) l
 |---|---|
 | [`rag/HEALTHCOACH_REPORT.md`](rag/HEALTHCOACH_REPORT.md) | **The single canonical output.** Every `./hc-supplements` run replaces this same file — no timestamped copies. Browse it with chapters/pages via `./hc-report`, not by opening the raw file. |
 | `rag/WEEK_OPERATING_PLAN.md`, `rag/FOOD_COFFEE_MILK_STACK_PLAN.md`, `rag/WHOLE_LIFE_EVIDENCE_PLAN.md` | **Authored source modules — functionally required.** `supplement_audit.py` reads and embeds these directly into the report. Edit these files to change those sections; don't hand-edit the generated report itself. |
-| `rag/EVIDENCE_NUTRITION_STACK_PLAN.md` | A standalone evidence-map document, not currently wired into the embedded-module pipeline above. Worth a decision: wire it in, or archive it — flag if unsure which. |
+| `rag/EVIDENCE_NUTRITION_STACK_PLAN.archive-2026-09-15.md` | Archived 2026-09-15. Was a standalone evidence-map document, never wired into the pipeline above; its content (25 of 29 evidence rows, by shared DOI/topic-label match) was superseded by the later-written, already-wired `FOOD_COFFEE_MILK_STACK_PLAN.md`. Kept for reference, not read by any code. |
 | `rag/SCHEDULE_TIPS.md`, `rag/INGEST_RULES.md` | Reference notes for maintainers (zone 2/RPE/TDEE tips; ingest-pipeline rules). |
 | `rag/history.md` | Personal training/lab history, feeds `build_schedule.py`/`build_playbook.py`. |
 
