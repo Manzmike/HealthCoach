@@ -1,9 +1,26 @@
 # HealthCoach
 
-HealthCoach is a private program that reads a local library of health and exercise research,
-asks a few questions about your goals, and creates one personalized report.
+📄 **New session, or lost track of a file?** See [`INDEX.md`](INDEX.md) — every doc, log, and
+data file in this repo, what it's for, and whether it's safe to touch.
+
+HealthCoach is a local, private personal health operating system built around an
+evidence-based decision loop: **plan -> execute -> log -> adjust**. The daily experience
+starts with your saved plan and recorded facts; detailed research stays available behind it.
 
 You do not need to understand artificial intelligence, databases, or programming to use it.
+
+**Weekly choices are directly accessible:** `f` Foods, `g` Peptides/Gray Market, `n`
+Nootropics, `s` Supplements, `m` Meals, `t` Training, and `e` Export from the home dashboard.
+Each new choice needs a source-linked hard reason, not just a high grade. See
+[Weekly Workspace](docs/WEEKLY_WORKSPACE.md) for selection, day-by-day editing, and full-report exports.
+
+Launch `rag/hc` for **Today**, then open **Plan**, **Log/Review**, **Research**, or
+**Maintenance** as needed. Supplements, peptides, nootropics, and gray-market topics remain
+in the research catalog with source-linked reviews. Research visibility and reported use
+are not automatic permission to add an item to the active plan.
+
+See [Today And Trust](docs/TODAY_AND_TRUST.md) for the implemented boundaries, commands,
+verification workflow, and remaining limitations. This is decision support, not medical clearance.
 
 ## The concept
 
@@ -44,8 +61,8 @@ skipped.
 - **It is personal without hiding the basis.** The user selects goals, constraints, current
   products, preferred stores, and topics to investigate; the research still controls health
   claims.
-- **It stays manageable.** Every run replaces one organized report rather than producing a
-  pile of disconnected files.
+- **It stays manageable.** Today is a small daily view; the organized report remains the
+  durable reference, with private decisions and daily facts stored separately.
 - **It is easy to navigate.** A keyboard index can search titles or paragraph text and open a
   selected logical page with Space, so a long evidence report does not have to be read linearly.
 - **It runs locally after setup.** The paper search, evidence matching, and report generation
@@ -57,11 +74,16 @@ That is why the report exposes gaps and references instead of presenting itself 
 
 ## What you receive
 
-HealthCoach creates one file:
+HealthCoach keeps its rendered reference report at:
 
 ```text
 rag/HEALTHCOACH_REPORT.md
 ```
+
+Private candidate decisions and explicit daily logs live under `rag/.healthcoach/`.
+Opening Today does not rewrite these files or regenerate the report. Existing report,
+profile, and schedule files may be tracked by Git; local execution alone does not keep
+them out of commits or external shares.
 
 The report contains:
 
@@ -87,12 +109,18 @@ On a Mac, press `Command + Space`, type `Terminal`, and press Enter.
 
 ```bash
 cd ~/GitHub/HealthCoach/rag
-caffeinate -i ./hc-supplements
+./hc
 ```
 
-`caffeinate` simply keeps the Mac awake while HealthCoach works.
+The launcher keeps the Mac awake while HealthCoach works. Use `l` to log today, `w` to
+review the completed week, or Tab / `1`-`5` to switch areas. Research remains available in
+its own area, including experimental-source refreshes.
 
-### 3. Complete the guided assessment
+### 3. Review your plan when needed
+
+Choose **Plan -> Review My Plan** to open the full assessment. It is no longer the first
+screen on every launch. Old plans without a saved session snapshot show only their
+recorded calendar placement until the plan is reviewed and saved again.
 
 HealthCoach explains nine short sections one at a time:
 
@@ -201,6 +229,16 @@ Ask one research question without rebuilding the full report:
 python3 coach.py "Does creatine affect sleep?"
 ```
 
+Use **DEEP INTAKE / RANK / ADD / DECIDE / INSPECT** in `./hc` to confirm ranking context and
+maintain the private candidate ledger. Every ranking run scans the configured supplements,
+foods, peptides, nootropics, and gray-market topics. Selected rows remain visible even when
+coverage is `NONE`; only an explicit `adopt` decision or `use_status=in_use` can put a candidate
+on the generated week overlay.
+
+Recommended order: run **DEEP INTAKE / RANK / ADD / DECIDE / INSPECT** first, choose
+`deep_intake`, then run **START / UPDATE PLAN + RUN FULL RANKING**. The second action scans the
+entire configured catalog and offers up to the saved follow-up cap without auto-adopting rank 1.
+
 Refresh the focused evidence folders for ALCAR, citicoline, uridine, Noopept, and bromantane,
 then rebuild and test the search index:
 
@@ -258,5 +296,5 @@ the newly rebuilt one.
 ## Where to find more detail
 
 - Beginner and troubleshooting notes: [`rag/README.md`](rag/README.md)
-- Full technical explanation for another engineer or AI: [`rag/PROJECT_AI_HANDOFF.md`](rag/PROJECT_AI_HANDOFF.md)
+- Full technical explanation for another engineer or AI: [`docs/PROJECT_AI_HANDOFF.md`](docs/PROJECT_AI_HANDOFF.md)
 - The generated report: [`rag/HEALTHCOACH_REPORT.md`](rag/HEALTHCOACH_REPORT.md)

@@ -1,7 +1,49 @@
 # HealthCoach — Simple Guide
 
-HealthCoach asks what you want help with, checks research stored on your Mac, and writes one
-personalized document named `HEALTHCOACH_REPORT.md`.
+HealthCoach is a local personal health operating system: **plan -> execute -> log -> adjust**.
+Start with **Today** for weekly choices, workouts, steps, and a short daily log.
+The full `HEALTHCOACH_REPORT.md` remains an explanation and research archive, not the daily front door.
+
+## Choose, Plan, And Export
+
+The home dashboard now has direct controls: **`f` Foods, `g` Peptides/Gray Market,
+`n` Nootropics, `s` Supplements, `m` Meals, `t` Training, `c` Changes, `e` Export**.
+Enter opens Your Week, including Other Items and separate **All / You** screening grades.
+
+Selections and plan edits require a concrete purpose, personal reason, review trigger, and
+supporting research/resource. Prior choices marked `[?]` need a weekly justification with
+`j`; unsupported items remain browsable. A grade alone never creates a use protocol.
+
+Choose foods with Space, open Meals, and press `b` to build dated portions. `c` sets meal
+times; `e` moves/resizes a portion. Training supports daily session/time/minute edits and
+an editable 10,000-step starting target. `s` **inside Your Week** saves after a reason and
+`SAVE` confirmation; it is distinct from the home `s` shortcut for Supplements.
+
+Export individual sections or the entire report to unique private Markdown files without
+regenerating the report. See [Weekly Workspace](../docs/WEEKLY_WORKSPACE.md) for the full
+workflow, evidence limits, and commands.
+
+## Today And Trust
+
+- **Today:** read-only, no model loading or automatic plan changes. Only explicitly personal,
+  adopted, reported-current items that pass the shared admission screen appear in the current
+  list. They are not inferred daily doses. Other reported use remains visible under review.
+- **Log today:** completion/skipped/unknown, optional activity minutes, recovery, and a factual
+  note. Blank preserves the previous value; `?` makes it unknown; `s` explicitly saves. The
+  ignored `.healthcoach/daily_log.json` does not overwrite Bevel weekly packages.
+- **Research:** the full supplement, peptide, nootropic, and gray-market catalog stays reachable.
+  Gray-market candidates now use the same bounded, source-linked deep-review path; lack of
+  human coverage does not erase labelled mechanistic research.
+- **Evidence:** topic/relevance gates and paper deduplication run before generation. Generated
+  research claims require known source IDs and matching evidence quotes. Missing or failed
+  scoring withholds the answer instead of falling back to unscored nearest neighbours.
+- **Safety:** one deterministic admission policy gates new adoption, research suggestions,
+  current-week rendering, and symptom recommendations. Existing reported use/doses are not
+  deleted or automatically changed. Explicit severe symptoms take an urgent-warning path.
+
+These checks are not medical clearance or a semantic entailment guarantee. Existing authored
+report modules and saved reports are not retroactively validated. See
+[the implementation contract and limits](../docs/TODAY_AND_TRUST.md).
 
 ## What the idea means
 
@@ -12,7 +54,7 @@ library for each selected topic, removes duplicate or off-topic results, and rec
 and personally relevant the remaining evidence is.
 
 ```text
-select → retrieve → check → compare → build one report
+plan -> execute -> log -> review evidence -> explicitly adjust
 ```
 
 This matters because selecting something does not make it a recommendation. A supplement,
@@ -35,15 +77,16 @@ cd ~/GitHub/HealthCoach/rag
 
 That is the only command a normal user needs. `./hc` keeps the Mac awake correctly and opens
 one keyboard dashboard. It does not use the unsupported `caffeinate --help` or `--t` syntax.
-From the dashboard you can start or resume the assessment, edit the calendar, log a completed
-week, share with Bevel, read the report, ask one evidence question, refresh sources, test the
-library, or deliberately start over.
+The dashboard opens Today. Plan, Log/Review, Research, and Maintenance preserve the existing
+workflows without showing every research and maintenance command on the home screen.
 
 - Arrow keys choose a dashboard action.
 - Space or Enter opens it.
-- `/` filters the dashboard.
+- Tab, Left/Right, or `1`-`5` changes area; `/` searches all actions.
+- `l` logs today; `w` opens weekly review; PgUp/PgDn scrolls Today details.
+- `v` expands reported-use review details; `r` refreshes saved state.
 - `?` explains the current workflow.
-- `q` exits without changing saved data.
+- Esc goes back; `q` exits. Explicitly saved logs and decisions remain saved.
 
 HealthCoach resumes intake answers embedded inside `HEALTHCOACH_REPORT.md`. `START OVER FROM
 GROUND ZERO` requires typing `RESET`; even then, the existing report is not replaced until the
@@ -101,8 +144,9 @@ The most common choices are selected already. HealthCoach asks for at most one s
 explanation, and only when a choice needs clarification for safety or accuracy. A final review
 shows what was recorded before research begins; choose `generate`, `restart`, or `cancel`.
 
-Choices marked `LOCKED` are facts already fixed for this HealthCoach profile: tirzepatide is a
-current prescription and creatine monohydrate is 5 g/day. They cannot be cleared accidentally.
+Current-use facts and doses must come from the user's recorded context, not catalog labels
+such as "current prescription". Historical authored templates may still contain example
+amounts; Today does not infer a dose from them.
 Every other checked choice is saved under a stable internal name and validated before research
 starts. The one report includes a `HARD-DEFINED SELECTION LOCK` table showing exactly what was
 locked, selected, or left unselected. HealthCoach does not guess personal answers that the user
@@ -283,7 +327,16 @@ Ask one question without generating the full report:
 
 ```bash
 python3 coach.py "Does creatine affect sleep?"
+python3 coach.py --show "Does creatine affect sleep?"       # also print source passages/DOIs
+python3 coach.py --max-tokens 1400 "Give me the benefits, negatives, and description of X"
 ```
+
+`--max-tokens` (default 700) is worth raising for multi-part questions — a broad "benefits,
+negatives, and description" question can get cut off mid-sentence at the default length.
+`--k` (default 6) controls how many source chunks get pulled into context; raise it for a
+broader question. The answer only speaks from what's actually retrieved from your indexed
+papers, tags every claim's evidence grade (A/B = strong, C = weak/preliminary), and says so
+plainly instead of guessing when nothing in the library covers a question.
 
 ## First-time setup
 
@@ -297,6 +350,24 @@ pip install -r requirements.txt
 ```
 
 The `hc-supplements` launcher activates it automatically afterward.
+
+### Set up your own personal files
+
+`profile.txt` and `schedule_inputs.md` hold **your** personal information — they are not
+included with the project on purpose. Copy the example templates and fill in your own details:
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+cp profile.example.txt profile.txt
+cp schedule_inputs.example.md schedule_inputs.md
+```
+
+Then open each copy in any text editor and replace the bracketed placeholders with your own
+real information — occupation, location, training, goals, medications, preferences. Both files
+are plain free text; `#` lines are comments and are ignored. Delete anything that doesn't apply
+to you. If this repo is ever shared with someone else or pushed somewhere they can see it, do
+not share your filled-in `profile.txt` or `schedule_inputs.md` — they can contain sensitive
+health information. The `.example` versions are safe to share; your personal copies are not.
 
 ## Updating the research
 
@@ -368,19 +439,100 @@ a personal-use protocol.
 The `PEPTIDE / GRAY-MARKET RESEARCH` page now starts with one research-boundary choice:
 
 - Keep `Approved medicines and ordinary supplements only` for the normal conservative report.
-- Choose `Research-only broad scan` only if you want HealthCoach to check every configured
+- Choose `Research-only broad scan` if you want HealthCoach to check every configured
   experimental/unapproved topic and surface the ones with at least two unique candidate-folder
-  A/B sources containing human-participant and intervention/exposure signals.
+  A/B sources containing human-participant and intervention/exposure signals. This ranks source
+  coverage only; it does not decide use.
 
 The second choice expands **research**, not permission to use a drug. A topic can have promising
 human results and still fail on adverse effects, interactions, product identity, manufacturing
 quality, sport rules, or applicability to this user. Chemistry and biology are used to flag
 receptor, CYP/transporter, cardiac, glucose, growth, liver/kidney, and other possible overlaps.
 They cannot prove two products are safe together. Without direct human interaction/co-use data,
-the report prints `UNKNOWN / NOT VERIFIED` and keeps the item at clinician-only or skip.
+the compatibility field remains `UNKNOWN / NOT VERIFIED`; the selected row still remains visible.
+
+Use **DEEP INTAKE / RANK / ADD / DECIDE / INSPECT** from `./hc` for the private durable ledger.
+The progressive intake confirms old facts instead of trusting them, records ordered goals and
+context flags, captures current items and practical preferences, then asks candidate-specific
+follow-ups after the full-catalog scan. Each selected or typed item keeps separate reasons,
+coverage, direction, applicability, safety, regulatory/sport/sourcing annotations, system
+suggestion, and user decision. `NONE` emits `WATCH` rather than disappearing. Only `adopt` or
+`use_status=in_use` can place an item on the week overlay, and no dose appears unless supplied by
+the user.
+
+Recommended dashboard sequence:
+
+1. Open **DEEP INTAKE / RANK / ADD / DECIDE / INSPECT** and choose `deep_intake`.
+2. Confirm baseline facts, ordered goals, context flags, current items, and sort preferences.
+3. Open **START / UPDATE PLAN + RUN FULL RANKING** to scan the complete configured catalog.
+4. Optionally answer the capped candidate-specific follow-ups produced after retrieval.
+5. Inspect the two full-catalog orders and explicitly decide `watch`, `adopt`, or `reject`.
 
 The searchable named-item list includes the configured incretins, peptides, research drugs, and
 gray nootropics. Press `/` and type part of a name instead of scrolling through the full list.
+
+### candidate_manager.py from the command line
+
+Every action under **DEEP INTAKE / RANK / ADD / DECIDE / INSPECT** also works as a direct
+command, which is faster once you know what you're looking for:
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+source .venv/bin/activate
+
+python3 candidate_manager.py matrix                                # full table
+python3 candidate_manager.py matrix --decision watch                # only items marked "watch"
+python3 candidate_manager.py matrix --decision undecided --class gray_market
+python3 candidate_manager.py decide creatine_monohydrate adopt      # record your decision
+python3 candidate_manager.py inspect creatine_monohydrate           # one item's full evidence
+python3 candidate_manager.py edit creatine_monohydrate --reasons strength,sleep
+```
+
+`--decision` accepts `undecided`, `watch`, `adopt`, or `reject`; `--class` accepts `supplement`,
+`peptide`, `nootropic`, `gray_market`, or `food`.
+
+`review` opens a full-screen checklist for bulk decisions — **Space** toggles a row, **Enter**
+immediately sets every checked row's decision to `adopt` (unchecked rows are left as they were):
+
+```bash
+python3 candidate_manager.py review --class gray_market --all
+```
+
+Be deliberate with Enter — it commits right away for everything currently checked. Leaving off
+`--all` shows only `undecided` rows by default.
+
+### Adding a compound that isn't in the catalog yet
+
+If something you want evaluated isn't in the built-in list, add it as a typed candidate, give
+it a dedicated evidence folder, and pull sources for just that one topic:
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+source .venv/bin/activate
+
+# 1. Add it to the private ledger
+python3 candidate_manager.py add --name "Compound name" --class gray_market --reasons fat_loss
+
+# 2. Point it at a dedicated evidence folder (use the same id add_candidate printed)
+python3 candidate_manager.py edit compound_name --folder 08_peptides_gray/compound_name
+```
+
+Then add a matching topic to `papers/fetch_papers.py`'s `TOPICS` list (a maintainer/code task —
+ask an AI assistant working in this repo to do it, or copy an existing entry near the bottom of
+the file as a template), and pull sources for just that topic:
+
+```bash
+cd ~/GitHub/HealthCoach/papers
+source ../rag/.venv/bin/activate
+python3 fetch_papers.py --topic 08_peptides_gray/compound_name
+
+cd ../rag
+python3 ingest.py --incremental
+python3 candidate_manager.py inspect compound_name
+```
+
+`OA exhausted at N / min M` in the fetch output is a normal outcome, not an error — it means
+there simply isn't more legally-downloadable open-access literature to find for that topic yet.
 
 To search for additional A/B source candidates across every configured experimental folder,
 rebuild the index, and check retrieval in one resumable command (the report applies the separate
@@ -394,11 +546,15 @@ caffeinate -i ./hc-refresh-experimental
 This source refresh can take a while. It is not required every time a report is generated.
 Afterward, run `caffeinate -i ./hc-supplements` and choose the broad scan in the assessment.
 
-For an automated non-interactive evidence-only check (no model-written deep cards):
+For an automated non-interactive evidence-only full-catalog check (no model-written deep cards):
 
 ```bash
 ./hc-supplements --non-interactive --experimental-policy screen_strong_human --evidence-only
 ```
+
+`--evidence-only` skips legacy model-written catalog prose. The structured candidate matrix and
+fixed cards still emit coverage and unknown fields without guessing that a high source count means
+a positive or personally applicable result.
 
 ## Morning Bible and Jesus study
 
@@ -426,4 +582,4 @@ practice labeled separately.
   qualified clinician.
 
 For the complete engineering explanation, read
-[`PROJECT_AI_HANDOFF.md`](PROJECT_AI_HANDOFF.md).
+[`docs/PROJECT_AI_HANDOFF.md`](../docs/PROJECT_AI_HANDOFF.md).

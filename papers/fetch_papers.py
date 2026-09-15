@@ -1216,7 +1216,9 @@ TOPICS = [
      "SARM hepatotoxicity liver injury",
      "prohormone supplement liver injury",
      "anabolic steroid endocrine suppression recovery axis",
-     "image performance enhancing drugs harm reduction"], cohort=True, aa=False),
+     "image performance enhancing drugs harm reduction"], cohort=True, aa=False,
+     seeds=[("MED","36479151"),("PMC","PMC9647117"),("MED","37218811"),("PMC","PMC10204391"),
+            ("MED","39755947"),("MED","38059982"),("MED","29183075")]),
   T("01_food_inflammation/meal_timing_fasting", "meal-timing", 6, 10, [
      "time-restricted eating randomized weight loss",
      "intermittent fasting metabolic health meta-analysis",
@@ -1642,7 +1644,9 @@ TOPICS = [
   # GH axis / muscle
   T("08_peptides_gray/mk677_ibutamoren", "mk677", 8, 26, [
      "MK-677 ibutamoren growth hormone IGF-1", "ibutamoren body composition older adults trial",
-     "MK-677 appetite bone density", "ibutamoren secretagogue safety"], aa=False),
+     "MK-677 appetite bone density", "ibutamoren secretagogue safety"], aa=False,
+     seeds=[("MED","18981485"),("MED","21067829"),("PMC","PMC5632578"),("MED","9329362"),
+            ("MED","9467562"),("MED","29183075"),("MED","40675653")]),
   T("08_peptides_gray/mgf_mechano_growth", "mgf", 6, 20, [
      "mechano growth factor MGF muscle hypertrophy", "MGF IGF-1 splice variant repair",
      "PEG-MGF skeletal muscle mechanism"], aa=False),
@@ -1652,7 +1656,9 @@ TOPICS = [
      "DSIP mechanism neuromodulation"], aa=False),
   T("08_peptides_gray/agomelatine", "agomelatine", 8, 24, [
      "agomelatine melatonergic depression sleep trial", "agomelatine MT1 MT2 5-HT2C circadian",
-     "agomelatine efficacy tolerability"], aa=False),
+     "agomelatine efficacy tolerability"], aa=False,
+     seeds=[("MED","23999482"),("MED","34592623"),("MED","21859514"),("MED","41177901"),
+            ("MED","32702221"),("PMC","PMC11781552")]),
   T("08_peptides_gray/noopept", "noopept", 6, 20, [
      "noopept cognition neuroprotection", "noopept BDNF NGF mechanism",
      "noopept anxiety clinical", "omberacetam human clinical trial",
@@ -1661,7 +1667,9 @@ TOPICS = [
      also=("08_peptides_gray/uncertified_quality_risk",), aa=False),
   T("08_peptides_gray/phenibut", "phenibut", 6, 20, [
      "phenibut GABA-B anxiety", "phenibut dependence withdrawal safety",
-     "phenibut pharmacology cognition"], aa=False),
+     "phenibut pharmacology cognition"], aa=False,
+     seeds=[("MED","38112312"),("MED","38339875"),("MED","32340063"),("PMC","PMC11456982"),
+            ("MED","39197876"),("PMC","PMC11539871"),("MED","37930202"),("MED","35442585")]),
   T("08_peptides_gray/aniracetam", "aniracetam", 6, 18, [
      "aniracetam cognition anxiety", "aniracetam AMPA receptor memory",
      "aniracetam clinical trial"], aa=False),
@@ -1677,12 +1685,18 @@ TOPICS = [
      "humanin aging mechanism"], aa=False),
   T("08_peptides_gray/aicar", "aicar", 6, 18, [
      "AICAR AMPK exercise mimetic", "AICAR endurance skeletal muscle metabolism",
-     "AICAR fatty acid oxidation"], aa=False),
+     "AICAR fatty acid oxidation"], aa=False,
+     seeds=[("MED","34064363"),("PMC","PMC8147799"),("MED","18674809"),("MED","41644729"),
+            ("MED","23585020")]),
   T("08_peptides_gray/slu_pp_332", "slu-pp-332", 5, 16, [
-     "SLU-PP-332 ERR agonist exercise mimetic", "estrogen-related receptor agonist endurance mitochondria"], aa=False),
+     "SLU-PP-332 ERR agonist exercise mimetic", "estrogen-related receptor agonist endurance mitochondria"], aa=False,
+     seeds=[("MED","36988910"),("MED","37739806"),("PMC","PMC10801787"),("PMC","PMC10842599"),
+            ("PMC","PMC10734281"),("MED","40692696"),("PMC","PMC13234766")]),
   T("08_peptides_gray/five_amino_1mq", "5amino1mq", 5, 16, [
      "5-Amino-1MQ NNMT inhibitor fat metabolism", "NNMT inhibition obesity adipocyte",
-     "5-amino-1-methylquinolinium metabolic"], aa=False),
+     "5-amino-1-methylquinolinium metabolic"], aa=False,
+     seeds=[("MED","24717514"),("MED","29155147"),("PMC","PMC5826726"),("MED","39161060"),
+            ("MED","34029690"),("MED","34304009"),("MED","39067875")]),
   T("08_peptides_gray/oxytocin", "oxytocin", 6, 20, [
      "intranasal oxytocin human trial", "oxytocin social behavior appetite",
      "oxytocin metabolism body weight"], aa=False),
@@ -1695,7 +1709,10 @@ TOPICS = [
   T("05_fat_loss_drugs/survodutide", "survodutide", 6, 20, [
      "survodutide GLP-1 glucagon dual agonist obesity", "survodutide MASH liver trial"], aa=False),
   T("05_fat_loss_drugs/tesofensine", "tesofensine", 6, 20, [
-     "tesofensine weight loss randomized trial", "tesofensine monoamine reuptake obesity"], aa=False),
+     "tesofensine weight loss randomized trial", "tesofensine monoamine reuptake obesity"], aa=False,
+     seeds=[("MED","18950853"),("MED","18474731"),("MED","19777399"),("MED","19548858"),
+            ("MED","18356831"),("MED","20479765"),("PMC","PMC9175551"),("MED","42320973"),
+            ("DOI","10.1038/oby.2011.197")]),
   # hormones / fertility / testosterone
   T("09_hormones_sex/enclomiphene", "enclomiphene", 8, 24, [
      "enclomiphene testosterone secondary hypogonadism trial", "enclomiphene citrate LH FSH men",
@@ -1825,6 +1842,76 @@ TOPICS = [
      "specific absorption rate SAR mobile phone limits",
      "radiofrequency EMF cognition sleep human study",
      "5G radiofrequency exposure health evidence"], aa=False),
+
+  # ---------------- ROUND 16 (additional gray-market/off-label compounds) ----------------
+  T("08_peptides_gray/modafinil", "modafinil", 6, 20, [
+     "modafinil cognition wakefulness randomized",
+     "modafinil off-label cognitive enhancement healthy adults",
+     "modafinil safety cardiovascular abuse potential"], aa=False,
+     seeds=[("DOI","10.1111/bcpt.70147"),("MED","40208562"),("MED","39346006"),
+            ("PMC","PMC12994070"),("MED","32709551"),("MED","30097390")]),
+  T("08_peptides_gray/selegiline", "selegiline", 6, 20, [
+     "selegiline deprenyl MAO-B cognition",
+     "selegiline Parkinson's disease clinical trial",
+     "selegiline longevity lifespan animal"], aa=False,
+     seeds=[("MED","37087864"),("MED","37113570"),("PMC","PMC4020145"),("MED","30252350")]),
+  T("08_peptides_gray/cardarine_gw501516", "cardarine", 5, 16, [
+     "GW501516 cardarine PPAR delta exercise mimetic",
+     "GW501516 carcinogenicity animal study",
+     "PPAR delta agonist endurance metabolism"], aa=False,
+     seeds=[("MED","18674809"),("MED","29183075"),("DOI","10.3390/toxics9100251"),
+            ("MED","41555543")]),
+  T("08_peptides_gray/rapamycin", "rapamycin", 6, 20, [
+     "rapamycin mTOR inhibitor lifespan human trial",
+     "rapamycin off-label longevity dosing",
+     "sirolimus immune function aging randomized"], aa=False,
+     seeds=[("MED","19587680"),("MED","38310895"),("MED","40188830"),("PMC","PMC12074816"),
+            ("MED","37191826"),("PMC","PMC12422820"),("PMC","PMC10643772"),("MED","37801202"),
+            ("MED","34089901"),("PMC","PMC12766144")]),
+  T("08_peptides_gray/sr9009", "sr9009", 5, 16, [
+     "SR9009 stenabolic REV-ERB agonist",
+     "REV-ERB alpha agonist metabolism exercise"], aa=False,
+     seeds=[("DOI","10.1038/nature11030"),("MED","31127047"),("DOI","10.1038/s42003-019-0595-z"),
+            ("PMC","PMC8520720"),("MED","39059249"),("MED","36122620"),("MED","29183075"),
+            ("MED","32292508"),("PMC","PMC12277734")]),
+  T("08_peptides_gray/ostarine_mk2866", "ostarine", 6, 20, [
+     "ostarine MK-2866 SARM lean body mass randomized",
+     "selective androgen receptor modulator clinical trial safety",
+     "enobosarm muscle wasting cancer cachexia"], aa=False,
+     seeds=[("MED","22031847"),("MED","37871633"),("MED","34141767"),("PMC","PMC10204391"),
+            ("PMC","PMC9647117"),("MED","38059982"),("MED","29183075")]),
+  T("08_peptides_gray/yohimbine", "yohimbine", 6, 20, [
+     "yohimbine fat loss lipolysis randomized",
+     "yohimbine adrenergic alpha-2 antagonist exercise",
+     "yohimbine anxiety cardiovascular safety"], aa=False,
+     seeds=[("MED","39728757"),("MED","39684567"),("PMC","PMC11641166"),("MED","3795978"),
+            ("MED","20442348")]),
+
+  # ---------------- ROUND 17 (hormone-axis + gray-market gap-fill) ----------------
+  # No curated PMIDs supplied for this batch; query-only until a source pack verifies IDs.
+  T("08_peptides_gray/enclomiphene", "enclomiphene", 6, 20, [
+     "enclomiphene testosterone randomized trial",
+     "enclomiphene hypogonadism LH FSH",
+     "enclomiphene vs clomiphene safety"], aa=False),
+  T("08_peptides_gray/kisspeptin", "kisspeptin", 6, 20, [
+     "kisspeptin hypothalamic-pituitary-gonadal axis human trial",
+     "kisspeptin reproductive hormone diagnostic",
+     "kisspeptin infertility clinical study"], aa=False),
+  T("08_peptides_gray/gonadorelin", "gonadorelin", 6, 20, [
+     "gonadorelin GnRH analog testicular function trial",
+     "gonadorelin fertility preservation TRT",
+     "gonadorelin stimulation test hypogonadism"], aa=False),
+  T("08_peptides_gray/kratom", "kratom", 6, 20, [
+     "kratom mitragynine human safety",
+     "kratom dependence withdrawal case series",
+     "kratom opioid receptor pharmacology"], aa=False),
+  T("08_peptides_gray/tianeptine", "tianeptine", 6, 20, [
+     "tianeptine abuse dependence case series",
+     "tianeptine opioid receptor atypical antidepressant",
+     "tianeptine FDA warning exposure"], aa=False),
+  T("08_peptides_gray/ru58841", "ru58841", 5, 16, [
+     "RU58841 topical antiandrogen hair loss",
+     "RU58841 systemic absorption safety"], aa=False),
 ]
 
 # Two independent on-topic human papers are the minimum needed for STRONG coverage in the

@@ -5,11 +5,11 @@ search + reranker work before you launch the long batch_ask/matrix run.
 
   cd ~/GitHub/HealthCoach/rag && source .venv/bin/activate && python3 test_retrieval.py
 """
-import lancedb
-from sentence_transformers import SentenceTransformer
 import coach as C
 
 def main():
+    import lancedb
+    from sentence_transformers import SentenceTransformer
     print("lancedb", lancedb.__version__)
     tbl = lancedb.connect(C.DBDIR).open_table(C.TABLE)
     print("rows in table:", tbl.count_rows())
@@ -77,10 +77,12 @@ def main():
             continue
         print("\nQ: %s  ->  %d hits%s" % (q, len(hits), "  (weak/C-only)" if weak else ""))
         for h in hits[:3]:
-            print("   [%s | %s] %s" % (h["grade"], h["folder"], (h.get("doi") or "no-doi")[:48]))
-        if expected_folders and not any(h.get("folder") in expected_folders for h in hits):
+            print("   [%s | %s] %s  score=%.3f minimum=%.3f" % (
+                h["grade"], h["folder"], (h.get("doi") or "no-doi")[:48],
+                h["retrieval"]["reranker_score"], h["retrieval"]["minimum_score"]))
+        if not hits or (expected_folders and not any(h.get("folder") in expected_folders for h in hits)):
             coverage_missing.append(q)
-            print("   MISSING EXPECTED FOLDER: %s" % " or ".join(expected_folders))
+            print("   " + ("MISSING EXPECTED FOLDER: " + " or ".join(expected_folders) if hits else C.EC.NO_EVIDENCE))
     if not ok:
         result = "SOME QUERIES FAILED — do not launch the full run yet"
     elif coverage_missing:
@@ -88,6 +90,7 @@ def main():
     else:
         result = "ALL QUERIES OK — focused folders are retrievable"
     print("\n%s" % result)
+    return 0 if ok else 1
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

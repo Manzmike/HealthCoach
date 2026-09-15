@@ -27,3 +27,10 @@ chunks/
 # personal history (health data) — keep local, never push
 history.md
 rag/history.md
+# private HealthCoach user state (candidate ledger and future local-only state)
+rag/.healthcoach/
+
+# API keys / secrets — never commit
+.env
+rag/.env
+*.env

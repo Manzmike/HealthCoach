@@ -177,12 +177,11 @@ def main():
     print("loading models once (embedding + reranker + MLX)...")
     import lancedb
     from sentence_transformers import SentenceTransformer
-    from mlx_lm import load, generate
+    from mlx_lm import load
     emb = SentenceTransformer(C.EMB_MODEL, device="mps")
     tbl = lancedb.connect(C.DBDIR).open_table(C.TABLE)
     rr  = C.load_reranker()
     model, tok = load(C.GEN_MODEL)
-    chat = bool(getattr(tok, "chat_template", None))
 
     themes = ["supplement timing morning night", "caffeine timing half-life sleep",
               "morning light circadian alertness", "evening resistance training sleep",
@@ -192,8 +191,9 @@ def main():
     seen, hits = set(), []
     for q in inp["INCORPORATE"] + inp["REMEMBER"] + themes:
         for h in C.search(tbl, emb, q, 4, rr)[0]:
-            if h["source_pdf"] in seen: continue
-            seen.add(h["source_pdf"]); hits.append(h)
+            keys = C.EC.paper_keys(h)
+            if seen.intersection(keys): continue
+            seen.update(keys); hits.append(h)
     hits = hits[:16]
     ctx = "\n\n".join("[%s | %s | %s]\n%s" % (
             h["grade"], h["folder"], h.get("doi") or "no-doi", h["text"][:1000]) for h in hits)
@@ -224,27 +224,15 @@ def main():
          block("REMEMBER", inp["REMEMBER"]), block("REC-LEVEL NOTES", inp["REC-LEVEL NOTES"]),
          hist_block, timeline_md, split_md, ctx)
 
-    if chat:
-        prompt = tok.apply_chat_template(
-            [{"role": "system", "content": C.SYSTEM}, {"role": "user", "content": user}],
-            add_generation_prompt=True, tokenize=False)
-    else:
-        prompt = "%s\n\n%s\n\nANSWER:" % (C.SYSTEM, user)
     print("filling content around the fixed schedule (max_tokens=%d)..." % MAXTOK)
-    notes = generate(model, tok, prompt=prompt, max_tokens=MAXTOK, verbose=False).strip()
+    notes = C.answer_from_hits(model, tok, user, hits, MAXTOK)
 
     tips = open(TIPS).read() if os.path.exists(TIPS) else "_(SCHEDULE_TIPS.md not found)_"
 
     # ---- assemble ----
     os.makedirs("logs", exist_ok=True)
     out = os.path.join("logs", "schedule_" + datetime.datetime.now().strftime("%Y%m%d_%H%M") + ".md")
-    srcs, ss = [], set()
-    for h in hits:
-        if h["source_pdf"] in ss: continue
-        ss.add(h["source_pdf"]); doi = h.get("doi") or ""
-        ref = "https://doi.org/%s" % doi if doi else "(no DOI)"
-        srcs.append("- [%s] %s (%s) — %s — %s" % (
-            h["grade"], h["folder"], h.get("year") or "n.d.", ref, os.path.basename(h["source_pdf"])))
+    srcs = ["- " + line for line in C.EC.source_lines(hits)]
 
     with open(out, "w") as f:
         f.write("# My schedule\n\n_Generated %s · times fixed in code from your anchors · model %s_\n\n"

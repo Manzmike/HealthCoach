@@ -9,7 +9,7 @@ human evidence. A local MLX model writes deep cards only from the retrieved pass
 Examples:
   ./hc-supplements
   ./hc-supplements --issues strength,endurance,sleep --deep-limit 12
-  ./hc-supplements --items creatine,caffeine,magnesium --evidence-only
+  ./hc-supplements --evidence-only
   ./hc-supplements --priority-items creatine,omega-3 --peptides tirzepatide,bpc-157
   ./hc-supplements --non-interactive --experimental-policy screen_strong_human --evidence-only
   ./hc-supplements --list
@@ -26,9 +26,11 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Sequence
+from typing import Any, Iterable, Mapping, Sequence
 
 import coach as HC
+import candidate_ledger as CL
+import safety_policy as SP
 
 try:
     from rich import box
@@ -56,6 +58,7 @@ QUEUE_PEPTIDE = "Selected: peptide / gray-market review"
 QUEUE_WHOLE_FOOD = "Selected: whole-food evidence review"
 QUEUE_ORDER = (QUEUE_VERY, QUEUE_MEDIUM, QUEUE_LOW, QUEUE_PEPTIDE)
 GRADE_ORDER = {"A": 0, "B": 1, "C": 2, "D": 3, "—": 9}
+REASON_OPTIONS = CL.REASON_OPTIONS
 
 ISSUES = {
     "cut": "Fat loss / appetite / blood sugar",
@@ -101,7 +104,7 @@ EXPERIMENTAL_POLICY_OPTIONS = (
     ),
     (
         "screen_strong_human",
-        "Research-only broad scan — surface topics only when ≥2 unique A/B human intervention sources survive",
+        "Research-only broad scan — rank source coverage after ≥2 unique A/B human intervention sources survive",
     ),
 )
 
@@ -444,7 +447,245 @@ EXPANDED_WHOLE_FOOD_OPTIONS = (
     ("seaweed", "SEA VEGETABLE │ Nori and other edible seaweeds"),
 )
 
-FOOD_ADDITION_OPTIONS = FOOD_ADDITION_OPTIONS + EXPANDED_WHOLE_FOOD_OPTIONS
+
+# Second expansion batch — user-supplied specific varieties/cuts (apple cultivars, beef
+# cuts, poultry parts, etc). Each gets its own catalog entry + evidence folder rather than
+# sharing one with its parent food, since the user explicitly asked for fully separate
+# per-item grading rather than a shared family evidence pool.
+EXPANDED_WHOLE_FOOD_OPTIONS_V2 = (
+    ("gala_apples", "FRUIT │ Gala apples"),
+    ("fuji_apples", "FRUIT │ Fuji apples"),
+    ("honeycrisp_apples", "FRUIT │ Honeycrisp apples"),
+    ("granny_smith_apples", "FRUIT │ Granny Smith apples"),
+    ("red_delicious_apples", "FRUIT │ Red Delicious apples"),
+    ("golden_delicious_apples", "FRUIT │ Golden Delicious apples"),
+    ("pink_lady_apples", "FRUIT │ Pink Lady apples"),
+    ("cosmic_crisp_apples", "FRUIT │ Cosmic Crisp apples"),
+    ("plantains", "FRUIT │ Plantains"),
+    ("cranberries", "FRUIT │ Cranberries"),
+    ("mulberries", "FRUIT │ Mulberries"),
+    ("elderberries", "FRUIT │ Elderberries"),
+    ("goji_berries_unsweetened", "FRUIT │ Goji berries, unsweetened"),
+    ("golden_berries", "FRUIT │ Golden berries"),
+    ("amla_indian_gooseberry", "FRUIT │ Amla / Indian gooseberry"),
+    ("navel_oranges", "FRUIT │ Navel oranges"),
+    ("valencia_oranges", "FRUIT │ Valencia oranges"),
+    ("blood_oranges", "FRUIT │ Blood oranges"),
+    ("mandarins", "FRUIT │ Mandarins"),
+    ("clementines", "FRUIT │ Clementines"),
+    ("cantaloupe", "FRUIT │ Cantaloupe"),
+    ("honeydew_melon", "FRUIT │ Honeydew melon"),
+    ("nectarines", "FRUIT │ Nectarines"),
+    ("apricots", "FRUIT │ Apricots"),
+    ("mangoes", "FRUIT │ Mangoes"),
+    ("guava", "FRUIT │ Guava"),
+    ("lychee", "FRUIT │ Lychee"),
+    ("passion_fruit", "FRUIT │ Passion fruit"),
+    ("dragon_fruit", "FRUIT │ Dragon fruit"),
+    ("star_fruit", "FRUIT │ Star fruit"),
+    ("jackfruit", "FRUIT │ Jackfruit"),
+    ("soursop", "FRUIT │ Soursop"),
+    ("persimmon", "FRUIT │ Persimmon"),
+    ("tamarind_pods", "FRUIT │ Tamarind pods"),
+    ("quince", "FRUIT │ Quince"),
+    ("prickly_pear", "FRUIT │ Prickly pear"),
+    ("red_grapes", "FRUIT │ Red grapes"),
+    ("green_grapes", "FRUIT │ Green grapes"),
+    ("bartlett_pears", "FRUIT │ Bartlett pears"),
+    ("anjou_pears", "FRUIT │ Anjou pears"),
+    ("bosc_pears", "FRUIT │ Bosc pears"),
+    ("hass_avocados", "FRUIT / FAT │ Hass avocados"),
+    ("young_coconut", "FRUIT / FAT │ Young coconut"),
+    ("mature_coconut_meat", "FRUIT / FAT │ Mature coconut meat"),
+    ("roma_tomatoes", "VEGETABLE │ Roma tomatoes"),
+    ("beefsteak_tomatoes", "VEGETABLE │ Beefsteak tomatoes"),
+    ("cherry_tomatoes", "VEGETABLE │ Cherry tomatoes"),
+    ("grape_tomatoes", "VEGETABLE │ Grape tomatoes"),
+    ("heirloom_tomatoes", "VEGETABLE │ Heirloom tomatoes"),
+    ("curly_kale", "VEGETABLE │ Curly kale"),
+    ("lacinato_kale", "VEGETABLE │ Lacinato kale"),
+    ("mustard_greens", "VEGETABLE │ Mustard greens"),
+    ("dandelion_greens", "VEGETABLE │ Dandelion greens"),
+    ("beet_greens", "VEGETABLE │ Beet greens"),
+    ("moringa_leaves", "VEGETABLE │ Moringa leaves"),
+    ("romaine_lettuce", "VEGETABLE │ Romaine lettuce"),
+    ("iceberg_lettuce", "VEGETABLE │ Iceberg lettuce"),
+    ("butter_lettuce", "VEGETABLE │ Butter lettuce"),
+    ("green_leaf_lettuce", "VEGETABLE │ Green leaf lettuce"),
+    ("red_leaf_lettuce", "VEGETABLE │ Red leaf lettuce"),
+    ("bok_choy", "VEGETABLE │ Bok choy"),
+    ("green_cabbage", "VEGETABLE │ Green cabbage"),
+    ("red_cabbage", "VEGETABLE │ Red cabbage"),
+    ("napa_cabbage", "VEGETABLE │ Napa cabbage"),
+    ("savoy_cabbage", "VEGETABLE │ Savoy cabbage"),
+    ("red_beets", "VEGETABLE │ Red beets"),
+    ("golden_beets", "VEGETABLE │ Golden beets"),
+    ("russet_potatoes", "VEGETABLE / STARCH │ Russet potatoes"),
+    ("yukon_gold_potatoes", "VEGETABLE / STARCH │ Yukon gold potatoes"),
+    ("red_potatoes", "VEGETABLE / STARCH │ Red potatoes"),
+    ("fingerling_potatoes", "VEGETABLE / STARCH │ Fingerling potatoes"),
+    ("orange_sweet_potatoes", "VEGETABLE / STARCH │ Orange sweet potatoes"),
+    ("japanese_sweet_potatoes", "VEGETABLE / STARCH │ Japanese sweet potatoes"),
+    ("turnips", "VEGETABLE │ Turnips"),
+    ("daikon_radish", "VEGETABLE │ Daikon radish"),
+    ("parsnips", "VEGETABLE / STARCH │ Parsnips"),
+    ("burdock_root", "VEGETABLE │ Burdock root"),
+    ("yellow_onions", "VEGETABLE │ Yellow onions"),
+    ("red_onions", "VEGETABLE │ Red onions"),
+    ("white_onions", "VEGETABLE │ White onions"),
+    ("sweet_onions", "VEGETABLE │ Sweet onions"),
+    ("green_onions_scallions", "VEGETABLE │ Green onions / scallions"),
+    ("shallots", "VEGETABLE │ Shallots"),
+    ("leeks", "VEGETABLE │ Leeks"),
+    ("yellow_squash", "VEGETABLE │ Yellow squash"),
+    ("acorn_squash", "VEGETABLE / STARCH │ Acorn squash"),
+    ("spaghetti_squash", "VEGETABLE │ Spaghetti squash"),
+    ("green_bell_peppers", "VEGETABLE │ Green bell peppers"),
+    ("red_bell_peppers", "VEGETABLE │ Red bell peppers"),
+    ("yellow_bell_peppers", "VEGETABLE │ Yellow bell peppers"),
+    ("orange_bell_peppers", "VEGETABLE │ Orange bell peppers"),
+    ("jalapenos", "VEGETABLE │ Jalapenos"),
+    ("green_beans", "VEGETABLE │ Green beans"),
+    ("okra", "VEGETABLE │ Okra"),
+    ("bitter_melon", "VEGETABLE │ Bitter melon"),
+    ("jicama", "VEGETABLE │ Jicama"),
+    ("lotus_root", "VEGETABLE / STARCH │ Lotus root"),
+    ("taro", "VEGETABLE / STARCH │ Taro"),
+    ("yuca_cassava", "VEGETABLE / STARCH │ Yuca / cassava"),
+    ("chayote", "VEGETABLE │ Chayote"),
+    ("tomatillo", "VEGETABLE │ Tomatillo"),
+    ("nopales_cactus_pads", "VEGETABLE │ Nopales / cactus pads"),
+    ("radicchio", "VEGETABLE │ Radicchio"),
+    ("endive", "VEGETABLE │ Endive"),
+    ("white_button_mushrooms", "VEGETABLE / FUNGI │ White button mushrooms"),
+    ("cremini_mushrooms", "VEGETABLE / FUNGI │ Cremini mushrooms"),
+    ("portobello_mushrooms", "VEGETABLE / FUNGI │ Portobello mushrooms"),
+    ("shiitake_mushrooms", "VEGETABLE / FUNGI │ Shiitake mushrooms"),
+    ("oyster_mushrooms", "VEGETABLE / FUNGI │ Oyster mushrooms"),
+    ("maitake_mushrooms", "VEGETABLE / FUNGI │ Maitake mushrooms"),
+    ("corn", "VEGETABLE / STARCH │ Corn"),
+    ("artichokes", "VEGETABLE │ Artichokes"),
+    ("fennel", "VEGETABLE │ Fennel"),
+    ("horseradish_root", "HERB │ Horseradish root"),
+    ("jasmine_rice", "GRAIN │ Jasmine rice"),
+    ("basmati_rice", "GRAIN │ Basmati rice"),
+    ("white_quinoa", "GRAIN / PSEUDOGRAIN │ White quinoa"),
+    ("red_quinoa", "GRAIN / PSEUDOGRAIN │ Red quinoa"),
+    ("black_quinoa", "GRAIN / PSEUDOGRAIN │ Black quinoa"),
+    ("rolled_oats", "GRAIN │ Rolled oats"),
+    ("steel_cut_oats", "GRAIN │ Steel-cut oats"),
+    ("oat_groats", "GRAIN │ Oat groats"),
+    ("finger_millet_ragi", "GRAIN │ Finger millet / ragi"),
+    ("pearl_millet", "GRAIN │ Pearl millet"),
+    ("foxtail_millet", "GRAIN │ Foxtail millet"),
+    ("bulgur_wheat", "GRAIN │ Bulgur wheat"),
+    ("popcorn_kernels", "GRAIN │ Popcorn kernels"),
+    ("wheat_berries", "GRAIN │ Wheat berries"),
+    ("sorghum", "GRAIN │ Sorghum"),
+    ("cannellini_beans", "LEGUME │ Cannellini beans"),
+    ("adzuki_beans", "LEGUME │ Adzuki beans"),
+    ("mung_beans", "LEGUME │ Mung beans"),
+    ("brown_lentils", "LEGUME │ Brown lentils"),
+    ("green_lentils", "LEGUME │ Green lentils"),
+    ("red_lentils", "LEGUME │ Red lentils"),
+    ("french_lentils_puy_lentils", "LEGUME │ French lentils / Puy lentils"),
+    ("black_lentils_beluga_lentils", "LEGUME │ Black lentils / beluga lentils"),
+    ("green_split_peas", "LEGUME │ Green split peas"),
+    ("yellow_split_peas", "LEGUME │ Yellow split peas"),
+    ("lima_beans", "LEGUME │ Lima beans"),
+    ("black_eyed_peas", "LEGUME │ Black-eyed peas"),
+    ("tempeh", "LEGUME / FERMENTED SOY │ Tempeh"),
+    ("macadamia_nuts", "NUT / SEED │ Macadamia nuts"),
+    ("cacao_nibs", "NUT / SEED │ Cacao nibs"),
+    ("whole_chicken", "POULTRY │ Whole chicken"),
+    ("chicken_breast_boneless_skinless", "POULTRY │ Chicken breast, boneless skinless"),
+    ("chicken_breast_bone_in", "POULTRY │ Chicken breast, bone-in"),
+    ("chicken_thighs_boneless", "POULTRY │ Chicken thighs, boneless"),
+    ("chicken_thighs_bone_in", "POULTRY │ Chicken thighs, bone-in"),
+    ("chicken_drumsticks", "POULTRY │ Chicken drumsticks"),
+    ("chicken_wings", "POULTRY │ Chicken wings"),
+    ("chicken_tenderloins", "POULTRY │ Chicken tenderloins"),
+    ("chicken_quarters", "POULTRY │ Chicken quarters"),
+    ("ground_chicken", "POULTRY │ Ground chicken"),
+    ("chicken_liver", "ORGAN MEAT │ Chicken liver"),
+    ("chicken_heart", "ORGAN MEAT │ Chicken heart"),
+    ("chicken_gizzards", "ORGAN MEAT │ Chicken gizzards"),
+    ("chicken_feet", "ORGAN MEAT │ Chicken feet"),
+    ("whole_turkey", "POULTRY │ Whole turkey"),
+    ("turkey_breast", "POULTRY │ Turkey breast"),
+    ("turkey_thighs", "POULTRY │ Turkey thighs"),
+    ("turkey_drumsticks", "POULTRY │ Turkey drumsticks"),
+    ("turkey_wings", "POULTRY │ Turkey wings"),
+    ("ground_turkey", "POULTRY │ Ground turkey"),
+    ("duck_whole", "POULTRY │ Duck, whole"),
+    ("duck_breast", "POULTRY │ Duck breast"),
+    ("ground_beef_80_20", "RED MEAT │ Ground beef 80/20"),
+    ("ground_beef_90_10", "RED MEAT │ Ground beef 90/10"),
+    ("ground_chuck", "RED MEAT │ Ground chuck"),
+    ("ribeye_steak", "RED MEAT │ Ribeye steak"),
+    ("new_york_strip_steak", "RED MEAT │ New York strip steak"),
+    ("filet_mignon", "RED MEAT │ Filet mignon"),
+    ("t_bone_steak", "RED MEAT │ T-bone steak"),
+    ("porterhouse_steak", "RED MEAT │ Porterhouse steak"),
+    ("sirloin_steak", "RED MEAT │ Sirloin steak"),
+    ("flat_iron_steak", "RED MEAT │ Flat iron steak"),
+    ("flank_steak", "RED MEAT │ Flank steak"),
+    ("skirt_steak", "RED MEAT │ Skirt steak"),
+    ("hanger_steak", "RED MEAT │ Hanger steak"),
+    ("chuck_roast", "RED MEAT │ Chuck roast"),
+    ("brisket", "RED MEAT │ Brisket"),
+    ("short_ribs", "RED MEAT │ Short ribs"),
+    ("beef_stew_meat", "RED MEAT │ Beef stew meat"),
+    ("top_round", "RED MEAT │ Top round"),
+    ("bottom_round", "RED MEAT │ Bottom round"),
+    ("eye_of_round", "RED MEAT │ Eye of round"),
+    ("tri_tip", "RED MEAT │ Tri-tip"),
+    ("beef_shank", "RED MEAT │ Beef shank"),
+    ("oxtail", "RED MEAT │ Oxtail"),
+    ("beef_kidney", "ORGAN MEAT │ Beef kidney"),
+    ("beef_tongue", "ORGAN MEAT │ Beef tongue"),
+    ("lamb_chops", "RED MEAT │ Lamb chops"),
+    ("rack_of_lamb", "RED MEAT │ Rack of lamb"),
+    ("leg_of_lamb", "RED MEAT │ Leg of lamb"),
+    ("lamb_shoulder", "RED MEAT │ Lamb shoulder"),
+    ("ground_lamb", "RED MEAT │ Ground lamb"),
+    ("pork_chops", "RED MEAT │ Pork chops"),
+    ("pork_loin", "RED MEAT │ Pork loin"),
+    ("pork_tenderloin", "RED MEAT │ Pork tenderloin"),
+    ("pork_shoulder", "RED MEAT │ Pork shoulder"),
+    ("boston_butt", "RED MEAT │ Boston butt"),
+    ("picnic_shoulder", "RED MEAT │ Picnic shoulder"),
+    ("ground_pork", "RED MEAT │ Ground pork"),
+    ("baby_back_ribs", "RED MEAT │ Baby back ribs"),
+    ("spare_ribs", "RED MEAT │ Spare ribs"),
+    ("pork_belly", "RED MEAT │ Pork belly"),
+    ("pork_hocks", "RED MEAT │ Pork hocks"),
+    ("herring", "SEAFOOD │ Herring"),
+    ("anchovies", "SEAFOOD │ Anchovies"),
+    ("trout", "SEAFOOD │ Trout"),
+    ("cod", "SEAFOOD │ Cod"),
+    ("halibut", "SEAFOOD │ Halibut"),
+    ("tilapia", "SEAFOOD │ Tilapia"),
+    ("catfish", "SEAFOOD │ Catfish"),
+    ("tuna", "SEAFOOD │ Tuna"),
+    ("shrimp", "SEAFOOD │ Shrimp"),
+    ("mussels", "SEAFOOD │ Mussels"),
+    ("clams", "SEAFOOD │ Clams"),
+    ("nori", "SEA VEGETABLE │ Nori"),
+    ("wakame", "SEA VEGETABLE │ Wakame"),
+    ("kombu", "SEA VEGETABLE │ Kombu"),
+    ("dulse", "SEA VEGETABLE │ Dulse"),
+    ("kelp", "SEA VEGETABLE │ Kelp"),
+    ("sea_moss", "SEA VEGETABLE │ Sea moss"),
+    ("duck_eggs", "ANIMAL PROTEIN │ Duck eggs"),
+    ("whole_milk", "DAIRY │ Whole milk"),
+    ("cottage_cheese", "DAIRY │ Cottage cheese"),
+    ("plain_greek_yogurt", "FERMENTED DAIRY │ Plain Greek yogurt"),
+    ("butter", "DAIRY / FAT │ Butter"),
+    ("olives", "FAT │ Olives"),
+)
+
+FOOD_ADDITION_OPTIONS = FOOD_ADDITION_OPTIONS + EXPANDED_WHOLE_FOOD_OPTIONS + EXPANDED_WHOLE_FOOD_OPTIONS_V2
 
 DEFAULT_FOOD_PLAN_KEYS = (
     "pasteurized_dairy", "potatoes_rice", "animal_protein", "fruit_carbs", "fiber_food",
@@ -1148,6 +1389,8 @@ class Evidence:
     unique_dois: int
     fit: str
     hits: list[dict]
+    hybrid_fallback: bool = False
+    retrieval_notes: tuple[str, ...] = ()
 
 
 def _key(name: str) -> str:
@@ -1537,10 +1780,54 @@ EXPANDED_FOOD_GROUP_SPECS: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], .
 )
 
 
+EXPANDED_FOOD_GROUP_SPECS_V2: tuple[tuple[str, tuple[str, ...], tuple[str, ...]], ...] = (
+    (
+        "01_food_inflammation/whole_food_library_v2/fruit", ('heart', 'gi', 'focus', 'cut'),
+        ("gala_apples", "fuji_apples", "honeycrisp_apples", "granny_smith_apples", "red_delicious_apples", "golden_delicious_apples", "pink_lady_apples", "cosmic_crisp_apples", "plantains", "cranberries", "mulberries", "elderberries", "goji_berries_unsweetened", "golden_berries", "amla_indian_gooseberry", "navel_oranges", "valencia_oranges", "blood_oranges", "mandarins", "clementines", "cantaloupe", "honeydew_melon", "nectarines", "apricots", "mangoes", "guava", "lychee", "passion_fruit", "dragon_fruit", "star_fruit", "jackfruit", "soursop", "persimmon", "tamarind_pods", "quince", "prickly_pear", "red_grapes", "green_grapes", "bartlett_pears", "anjou_pears", "bosc_pears", "hass_avocados", "young_coconut", "mature_coconut_meat"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/veg", ('heart', 'gi', 'cut', 'deficiency'),
+        ("roma_tomatoes", "beefsteak_tomatoes", "cherry_tomatoes", "grape_tomatoes", "heirloom_tomatoes", "curly_kale", "lacinato_kale", "mustard_greens", "dandelion_greens", "beet_greens", "moringa_leaves", "romaine_lettuce", "iceberg_lettuce", "butter_lettuce", "green_leaf_lettuce", "red_leaf_lettuce", "bok_choy", "green_cabbage", "red_cabbage", "napa_cabbage", "savoy_cabbage", "red_beets", "golden_beets", "russet_potatoes", "yukon_gold_potatoes", "red_potatoes", "fingerling_potatoes", "orange_sweet_potatoes", "japanese_sweet_potatoes", "turnips", "daikon_radish", "parsnips", "burdock_root", "yellow_onions", "red_onions", "white_onions", "sweet_onions", "green_onions_scallions", "shallots", "leeks", "yellow_squash", "acorn_squash", "spaghetti_squash", "green_bell_peppers", "red_bell_peppers", "yellow_bell_peppers", "orange_bell_peppers", "jalapenos", "green_beans", "okra", "bitter_melon", "jicama", "lotus_root", "taro", "yuca_cassava", "chayote", "tomatillo", "nopales_cactus_pads", "radicchio", "endive", "white_button_mushrooms", "cremini_mushrooms", "portobello_mushrooms", "shiitake_mushrooms", "oyster_mushrooms", "maitake_mushrooms", "corn", "artichokes", "fennel"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/herb", ('heart', 'gi', 'joints'),
+        ("horseradish_root",),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/grain", ('endurance', 'gi', 'heart', 'cut'),
+        ("jasmine_rice", "basmati_rice", "white_quinoa", "red_quinoa", "black_quinoa", "rolled_oats", "steel_cut_oats", "oat_groats", "finger_millet_ragi", "pearl_millet", "foxtail_millet", "bulgur_wheat", "popcorn_kernels", "wheat_berries", "sorghum"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/legume", ('strength', 'gi', 'heart', 'cut'),
+        ("cannellini_beans", "adzuki_beans", "mung_beans", "brown_lentils", "green_lentils", "red_lentils", "french_lentils_puy_lentils", "black_lentils_beluga_lentils", "green_split_peas", "yellow_split_peas", "lima_beans", "black_eyed_peas", "tempeh"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/nut", ('heart', 'focus', 'cut', 'deficiency'),
+        ("macadamia_nuts", "cacao_nibs"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/protein", ('strength', 'deficiency', 'cut'),
+        ("whole_chicken", "chicken_breast_boneless_skinless", "chicken_breast_bone_in", "chicken_thighs_boneless", "chicken_thighs_bone_in", "chicken_drumsticks", "chicken_wings", "chicken_tenderloins", "chicken_quarters", "ground_chicken", "chicken_liver", "chicken_heart", "chicken_gizzards", "chicken_feet", "whole_turkey", "turkey_breast", "turkey_thighs", "turkey_drumsticks", "turkey_wings", "ground_turkey", "duck_whole", "duck_breast", "ground_beef_80_20", "ground_beef_90_10", "ground_chuck", "ribeye_steak", "new_york_strip_steak", "filet_mignon", "t_bone_steak", "porterhouse_steak", "sirloin_steak", "flat_iron_steak", "flank_steak", "skirt_steak", "hanger_steak", "chuck_roast", "brisket", "short_ribs", "beef_stew_meat", "top_round", "bottom_round", "eye_of_round", "tri_tip", "beef_shank", "oxtail", "beef_kidney", "beef_tongue", "lamb_chops", "rack_of_lamb", "leg_of_lamb", "lamb_shoulder", "ground_lamb", "pork_chops", "pork_loin", "pork_tenderloin", "pork_shoulder", "boston_butt", "picnic_shoulder", "ground_pork", "baby_back_ribs", "spare_ribs", "pork_belly", "pork_hocks"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/seafood", ('heart', 'focus', 'strength', 'deficiency'),
+        ("herring", "anchovies", "trout", "cod", "halibut", "tilapia", "catfish", "tuna", "shrimp", "mussels", "clams"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/seaveg", ('heart', 'gi', 'deficiency'),
+        ("nori", "wakame", "kombu", "dulse", "kelp", "sea_moss"),
+    ),
+    (
+        "01_food_inflammation/whole_food_library_v2/dairyfat", ('gi', 'strength', 'heart', 'cut'),
+        ("duck_eggs", "whole_milk", "cottage_cheese", "plain_greek_yogurt", "butter", "olives"),
+    ),
+)
+
+
 def expanded_food_candidates() -> tuple[Candidate, ...]:
     labels = dict(FOOD_ADDITION_OPTIONS)
     candidates: list[Candidate] = []
-    for _group_folder, issues, keys in EXPANDED_FOOD_GROUP_SPECS:
+    for _group_folder, issues, keys in EXPANDED_FOOD_GROUP_SPECS + EXPANDED_FOOD_GROUP_SPECS_V2:
         for key in keys:
             label = labels[key]
             plain = label.split("│", 1)[-1].strip()
@@ -1555,6 +1842,167 @@ def expanded_food_candidates() -> tuple[Candidate, ...]:
 
 WHOLE_FOOD_CATALOG = WHOLE_FOOD_CATALOG + expanded_food_candidates()
 REQUIRED_FOOD_RESEARCH_KEYS = tuple(candidate.key for candidate in WHOLE_FOOD_CATALOG)
+
+NOOTROPIC_LEDGER_KEYS = {
+    "semax_selank", "noopept_omberacetam", "bromantane_ladasten", "aniracetam",
+    "cerebrolysin", "dihexa", "isrib", "methylene_blue", "racetams_class", "tak_653",
+}
+PEPTIDE_LEDGER_KEYS = {
+    "tirzepatide_current_prescription", "semaglutide_do_not_stack_with_tirzepatide",
+    "retatrutide_do_not_stack_with_tirzepatide", "liraglutide_do_not_stack_with_tirzepatide",
+    "cagrilintide_cagrisema_style_combination", "survodutide", "tesamorelin", "bpc_157",
+    "cjc_1295_ipamorelin", "aod_9604", "dsip", "epitalon",
+    "follistatin_follistatin_gene_or_peptide_products", "ghk_cu", "ghrp_2_ghrp_6",
+    "hexarelin", "humanin", "igf_1_lr3", "kpv", "ll_37", "melanotan", "mgf_peg_mgf",
+    "mots_c", "oxytocin_off_label_experimental_optimization", "peptide_bioregulators_khavinson_products",
+    "pt_141_bremelanotide", "sermorelin", "tb_500_thymosin_beta_4", "thymosin_alpha_1",
+}
+
+
+def default_ledger_class(candidate: Candidate) -> str:
+    """Classify built-ins for ledger display without using class as a recommendation gate."""
+    if candidate.queue == QUEUE_WHOLE_FOOD:
+        return "food"
+    if candidate.queue != QUEUE_PEPTIDE:
+        return "supplement"
+    if candidate.key in NOOTROPIC_LEDGER_KEYS:
+        return "nootropic"
+    if candidate.key in PEPTIDE_LEDGER_KEYS:
+        return "peptide"
+    return "gray_market"
+
+
+def candidate_from_ledger_row(row: Mapping[str, Any]) -> tuple[Candidate, bool]:
+    """Resolve a ledger row to a built-in candidate or a neutral custom candidate."""
+    built_ins = (*CATALOG, *PEPTIDE_CATALOG, *WHOLE_FOOD_CATALOG)
+    built_in = next((candidate for candidate in built_ins if candidate.key == row.get("id")), None)
+    if built_in is None:
+        identities = {_normal(value) for value in (
+            row.get("display_name", ""), row.get("id", ""), *row.get("aliases", ())
+        ) if value}
+        matches = [candidate for candidate in built_ins if identities.intersection(
+            {_normal(value) for value in (candidate.key, candidate.name, *candidate.aliases)}
+        )]
+        if len(matches) == 1:
+            built_in = matches[0]
+    aliases = tuple(dict.fromkeys(str(value) for value in row.get("aliases", ()) if str(value)))
+    folder = str(row.get("folder") or "").strip()
+    if built_in:
+        folders = tuple(dict.fromkeys(((folder,) if folder else ()) + built_in.folders))
+        merged_aliases = tuple(dict.fromkeys((*built_in.aliases, *aliases)))
+        return Candidate(
+            str(row["id"]), built_in.name, built_in.queue, folders, built_in.issues,
+            merged_aliases, built_in.gate, built_in.policy,
+        ), True
+    item_class = str(row.get("class", "other"))
+    queue = QUEUE_WHOLE_FOOD if item_class == "food" else QUEUE_PEPTIDE if item_class in {
+        "peptide", "nootropic", "gray_market"
+    } else QUEUE_LOW
+    return Candidate(
+        str(row["id"]), str(row["display_name"]), queue, (folder,) if folder else (), (), aliases,
+        "", "",
+    ), False
+
+
+def sync_profile_to_ledger(profile: dict, ledger: Mapping[str, Any]) -> dict[str, Any]:
+    """Persist confirmed assessment selections without inventing reasons or doses."""
+    data = CL.normalize_ledger(ledger)
+    supplements = {candidate.key: candidate for candidate in CATALOG}
+    peptides = {candidate.key: candidate for candidate in PEPTIDE_CATALOG}
+    foods = {candidate.key: candidate for candidate in WHOLE_FOOD_CATALOG}
+
+    def add(candidate: Candidate, use_status: str) -> None:
+        nonlocal data
+        existing = CL.rows_by_id(data).get(candidate.key, {})
+        data, _row, _created = CL.upsert_candidate(
+            data,
+            item_id=candidate.key,
+            display_name=candidate.name,
+            item_class=default_ledger_class(candidate),
+            aliases=candidate.aliases,
+            folder=candidate.folders[0] if candidate.folders else None,
+            consideration_scope=existing.get(
+                "consideration_scope", "personal_candidate" if use_status == "in_use" else "undecided"
+            ),
+            use_status=use_status,
+            intent=existing.get("intent", "keep" if use_status == "in_use" else "undecided"),
+            observed=existing.get("observed", "unknown"),
+            burden=existing.get("burden", "unknown"),
+            blocker=existing.get("blocker", {}),
+            # Category-level reasons are invalid in intake v1. Existing per-row reasons survive
+            # and Screen F may add or change them after the preliminary full-catalog ranking.
+            reasons=existing.get("reasons", ()),
+            outcome_lines=existing.get("outcome_lines", {}),
+            # The assessment's catch-all text is not parsed as a dose. Existing ledger doses survive.
+            user_dose=existing.get("user_dose"),
+            notes=existing.get("notes"),
+        )
+
+    intake_has_been_confirmed = bool(data["intake"].get("updated_at"))
+    existing_rows = CL.rows_by_id(data)
+    current_keys = (
+        {row["id"] for row in data["candidates"] if row["use_status"] == "in_use"}
+        if intake_has_been_confirmed else set(profile.get("current_supplement_keys", ()))
+    )
+    if not intake_has_been_confirmed:
+        for key in current_keys:
+            if key in supplements:
+                add(supplements[key], "in_use")
+    for key in profile.get("priority_supplement_keys", ()):
+        if key in supplements:
+            existing_status = existing_rows.get(key, {}).get("use_status")
+            add(supplements[key], existing_status or ("in_use" if key in current_keys else "not_in_use"))
+    for key in profile.get("selected_peptide_keys", ()):
+        if key in peptides:
+            current = (
+                existing_rows.get(key, {}).get("use_status") == "in_use"
+                if intake_has_been_confirmed else candidate_is_current(peptides[key], profile)
+            )
+            add(peptides[key], "in_use" if current else "not_in_use")
+    for key in profile.get("food_addition_keys", ()):
+        if key in foods:
+            add(foods[key], "not_in_use")
+    return data
+
+
+def apply_ranking_intake_to_profile(
+    profile: Mapping[str, Any],
+    intake: Mapping[str, Any],
+    ledger_rows: Sequence[Mapping[str, Any]] = (),
+) -> dict[str, Any]:
+    """Apply only explicitly confirmed private baseline facts to retrieval context."""
+    updated = dict(profile)
+    normalized = CL.normalize_intake(intake)
+    for key, item in normalized["baseline"].items():
+        status = item["status"]
+        if status in {"still_true", "update"} and item.get("value") is not None:
+            updated[key] = item["value"]
+        elif status == "remove":
+            updated[key] = "not recorded"
+        elif status == "prefer_not":
+            updated[key] = "unknown — user preferred not to answer"
+    if normalized["prefer_not_meds"]:
+        updated["medications"] = "unknown — user preferred not to answer; this does not mean no medications"
+        updated["medication_keys"] = []
+    medication_baseline = normalized["baseline"].get("medications", {})
+    if medication_baseline.get("status") in {"remove", "prefer_not"}:
+        updated["medication_keys"] = []
+    if normalized.get("updated_at"):
+        current_rows = [row for row in ledger_rows if row.get("use_status") == "in_use"]
+        updated["current_supplements"] = "; ".join(
+            row["display_name"] + (f" — {row['user_dose']}" if row.get("user_dose") else " — dose unset")
+            for row in current_rows
+        ) or "none confirmed in private intake"
+        supplement_ids = {candidate.key for candidate in CATALOG}
+        updated["current_supplement_keys"] = [
+            row["id"] for row in current_rows if row["id"] in supplement_ids
+        ]
+    updated["ranking_goal_keys"] = list(normalized["goals"])
+    updated["ranking_goal_labels"] = [
+        dict(CL.REASON_OPTIONS)[key] for key in normalized["goals"]
+    ]
+    updated["ranking_weight_direction"] = normalized["weight_direction"]
+    return updated
 
 # These are planning routes, not claims that a food recreates an isolated study product or dose.
 # The distinction is deliberately explicit: "direct" means ordinary foods provide the nutrient
@@ -1722,6 +2170,14 @@ def saved_profile_markdown(profile: dict) -> str:
     """Embed resumable intake state inside the sole report, never in a sidecar file."""
     safe_profile = dict(profile)
     safe_profile.pop("weekly_records", None)
+    # Snapshot the authored calendar already shown at intake; Today never reinterprets
+    # a saved placement using future clock defaults or a changed template.
+    safe_profile["calendar_snapshot"] = {
+        day: {"mode": mode, "placement": calendar_mode_detail(day, mode)[0],
+              "status": calendar_mode_detail(day, mode)[1], "origin": "AUTHORED_TEMPLATE"}
+        for day, mode in profile.get("calendar_modes", {}).items()
+        if day in CALENDAR_DAYS and mode in dict(CALENDAR_MODE_OPTIONS)
+    }
     payload = json.dumps(safe_profile, ensure_ascii=False, indent=2, sort_keys=True)
     payload = payload.replace(PROFILE_STATE_START, "[profile marker removed]")
     payload = payload.replace(PROFILE_STATE_END, "[profile marker removed]")
@@ -1856,18 +2312,18 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
 
     run_step(4, "WHAT YOU TAKE NOW",
              "Select only supplements you use now. Press / to search by name.", (
-        ("taking", "TAKING NOW", supplement_options, saved("current_supplement_keys", ("creatine_monohydrate",))),
-    ), locked=("taking::creatine_monohydrate",))
+        ("taking", "TAKING NOW", supplement_options, saved("current_supplement_keys", ())),
+    ))
     run_step(5, "MEDICINES AND SAFETY",
              "Record results, medicines, known risks, confirmed labs, and reactions.", (
         ("result", "RESULT SO FAR", SUPPLEMENT_RESULT_OPTIONS, saved("supplement_result_keys", ("not_tracked",))),
-        ("medication", "MEDICATION", MEDICATION_OPTIONS, saved("medication_keys", ("tirzepatide",))),
+        ("medication", "MEDICATION", MEDICATION_OPTIONS, saved("medication_keys", ())),
         ("safety", "HEALTH FLAG", SAFETY_OPTIONS, saved("condition_keys", ("none_known",))),
         ("deficiency", "CONFIRMED LAB", DEFICIENCY_OPTIONS, saved("deficiency_keys", ("none_unknown",))),
         ("reaction", "PAST REACTION", REACTION_OPTIONS, saved("reaction_keys", ("none_reported",))),
-    ), locked=("medication::tirzepatide",))
+    ))
     run_step(6, "SUPPLEMENTS TO INVESTIGATE",
-             "Choose one intake route, then topics to research. Food-first applies only where a meaningful whole-food route exists; it never invents a food substitute for a drug or isolated compound.", (
+             "Choose one intake route and topics to research. Outcome reasons are recorded only on individual candidate rows in the deeper ranking intake.", (
         ("supplement_source", "SOURCE · ONE", SUPPLEMENT_SOURCE_OPTIONS, saved("supplement_source", ("whole_food_first",))),
         ("review", "RESEARCH", supplement_options, saved("priority_supplement_keys", (
             "creatine_monohydrate", "protein_whey", "caffeine",
@@ -1875,10 +2331,10 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
         ))),
     ), exclusive=("supplement_source",))
     run_step(7, "PEPTIDE / GRAY-MARKET RESEARCH",
-             "Choose one research boundary, then optionally select named items. Broad scan means evidence triage—not approval, compatibility, or a dosing plan.", (
+             "Choose one research boundary and named items. Candidate-specific reasons are collected later; selection is not adoption or a dosing plan.", (
         ("experimental", "BOUNDARY · ONE", EXPERIMENTAL_POLICY_OPTIONS, saved("experimental_policy", ("approved_only",))),
-        ("peptide", "RESEARCH", peptide_options, saved("selected_peptide_keys", ("tirzepatide_current_prescription",))),
-    ), exclusive=("experimental",), locked=("peptide::tirzepatide_current_prescription",))
+        ("peptide", "RESEARCH", peptide_options, saved("selected_peptide_keys", ())),
+    ), exclusive=("experimental",))
     run_step(8, "FOOD, SLEEP, CAFFEINE, AND SUBSTANCES",
              "Choose one daily meal count plus current patterns or symptoms so the plan avoids conflicts.", (
         ("meals", "MEALS · ONE", MEAL_FREQUENCY_OPTIONS, saved("meal_count", ("4",))),
@@ -1888,7 +2344,7 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
         ("substance", "OTHER USE", SUBSTANCE_OPTIONS, saved("substance_keys", ("none_reported",))),
     ), exclusive=("meals",))
     run_step(9, "FOOD, HOME, FAITH, AND OTHER IDEAS",
-             "Choose foods you would actually buy/eat plus ideas to evaluate. Press / to find a food; selection is not proof of a benefit.", (
+             "Choose foods you would actually buy/eat and other ideas to evaluate. Candidate-specific reasons are recorded later.", (
         ("food", "FOOD IDEA", FOOD_ADDITION_OPTIONS, saved("food_addition_keys", DEFAULT_FOOD_PLAN_KEYS)),
         ("home", "HOME / FAITH", HOME_PRACTICE_OPTIONS, saved("home_practice_keys", ("bible_prayer", "morning_light", "water_quality", "breathwork"))),
         ("alternative", "CLAIM TO CHECK", ALTERNATIVE_ITEM_OPTIONS, saved("alternative_item_keys", ())),
@@ -1907,13 +2363,13 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
     cardio_timing = one("cardio", "recommend")
     workout_timing = one("workout", "recommend")
     injury_keys = without_sentinel(picked("injury") or ["none_reported"], "none_reported")
-    current_supplement_keys = picked("taking") or ["creatine_monohydrate"]
+    current_supplement_keys = picked("taking")
     result_keys = without_sentinel(picked("result") or ["not_tracked"], "not_tracked")
     interest_keys = picked("review")
     supplement_source = one("supplement_source", "whole_food_first")
     peptide_keys = picked("peptide")
     experimental_policy = one("experimental", "approved_only")
-    medication_keys = picked("medication") or ["tirzepatide"]
+    medication_keys = picked("medication")
     condition_keys = without_sentinel(picked("safety") or ["none_known"], "none_known")
     deficiency_keys = without_sentinel(picked("deficiency") or ["none_unknown"], "none_unknown")
     reaction_keys = without_sentinel(picked("reaction") or ["none_reported"], "none_reported")
@@ -1976,10 +2432,7 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
     for c in CATALOG:
         if c.key not in current_supplement_keys:
             continue
-        if c.key == "creatine_monohydrate":
-            current_names.append("Creatine monohydrate 5 g/day")
-        else:
-            current_names.append(f"{c.name} (amount/form not entered in guided assessment)")
+        current_names.append(f"{c.name} (amount/form not entered in guided assessment)")
 
     cardio_clock = (
         "morning selection must preserve or explicitly resolve the locked 04:50–05:50 Anki block"
@@ -2006,8 +2459,6 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
     current_text = preserve_text(
         "current_supplements", generated_current, "current_supplement_keys", current_supplement_keys
     )
-    if "creatine monohydrate" not in current_text.lower():
-        current_text = "Creatine monohydrate 5 g/day; " + current_text
     profile = {
         "assessment_mode": "Ten-step guided assessment with visual weekly calendar and at most one conditional detail line",
         "assessment_notes": notes if detail_needs else preserve_text("assessment_notes", notes),
@@ -2081,7 +2532,7 @@ def ask_profile_quick(existing: dict | None = None) -> dict:
         "preferences": preserve_text("preferences", "; ".join(labels_for(preference_keys, PRODUCT_OPTIONS)) or "none selected", "preference_keys", preference_keys),
         "timeline_keys": timeline_keys,
         "timeline": preserve_text("timeline", "; ".join(labels_for(timeline_keys, TIMELINE_OPTIONS)), "timeline_keys", timeline_keys),
-        "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
+        "locked_context": "current items require intake confirmation; caffeine cutoff 11:15; no auto-adoption or gray-market protocols",
     }
 
     def summary(values: Sequence[str], limit: int = 4) -> str:
@@ -2214,13 +2665,12 @@ def ask_profile_detailed() -> dict:
     current_supplement_keys = checkbox_prompt(
         "Which supplements are currently being used?",
         supplement_choices,
-        defaults=("creatine_monohydrate",),
-        locked_values=("creatine_monohydrate",),
+        defaults=(),
     )
     current_names = [c.name for c in CATALOG if c.key in current_supplement_keys]
     current_details = Prompt.ask(
         "Amounts/forms/brands for selected supplements, plus anything not listed",
-        default="creatine monohydrate 5 g/day" if current_supplement_keys else "none",
+        default="none",
     )
     current = "; ".join(current_names + ([current_details] if current_details and current_details != "none" else [])) or "none"
     supplement_results = Prompt.ask(
@@ -2258,16 +2708,14 @@ def ask_profile_detailed() -> dict:
     peptide_keys = checkbox_prompt(
         "Which peptides, incretins, or gray-market compounds should be reviewed? Selection is research-only.",
         peptide_choices,
-        defaults=("tirzepatide_current_prescription",),
-        locked_values=("tirzepatide_current_prescription",),
+        defaults=(),
     )
     peptide_names = [c.name for c in PEPTIDE_CATALOG if c.key in peptide_keys]
 
     medication_keys = checkbox_prompt(
         "Which medications or prescriptions are currently used?",
         MEDICATION_OPTIONS,
-        defaults=("tirzepatide",),
-        locked_values=("tirzepatide",),
+        defaults=(),
     )
     medication_names = labels_for(medication_keys, MEDICATION_OPTIONS)
     medication_details = Prompt.ask(
@@ -2456,7 +2904,7 @@ def ask_profile_detailed() -> dict:
         "preference_keys": preference_keys,
         "preferences": preferences,
         "timeline": timeline,
-        "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
+        "locked_context": "current items require intake confirmation; caffeine cutoff 11:15; no auto-adoption or gray-market protocols",
     }
 
 
@@ -2480,18 +2928,16 @@ def default_profile(args: argparse.Namespace) -> dict:
         CATALOG,
         default_all=False,
     )
-    peptides = select_from_catalog(
-        args.peptides or "tirzepatide_current_prescription", PEPTIDE_CATALOG, default_all=False
-    )
+    peptides = select_from_catalog(args.peptides, PEPTIDE_CATALOG, default_all=False)
     experimental_policy = (args.experimental_policy or "approved_only").strip().lower()
     if experimental_policy not in dict(EXPERIMENTAL_POLICY_OPTIONS):
         raise SystemExit("--experimental-policy must be approved_only or screen_strong_human")
     supplement_source = (args.supplement_source or "whole_food_first").strip().lower()
     if supplement_source not in dict(SUPPLEMENT_SOURCE_OPTIONS):
         raise SystemExit("--supplement-source must be whole_food_first, mixed, or products_allowed")
-    current_text = args.current or "creatine monohydrate 5 g/day"
+    current_text = args.current or "none"
     current_candidates = [c for c in CATALOG if _matches_entry(c, current_text)]
-    medication_text = args.medications or "tirzepatide"
+    medication_text = args.medications or "none"
     medication_keys = [
         value for value, label in MEDICATION_OPTIONS
         if value != "other" and _contains(medication_text, (value, label))
@@ -2567,12 +3013,16 @@ def default_profile(args: argparse.Namespace) -> dict:
         "substances": args.substances or "none reported",
         "preferences": args.preferences or "practical value; third-party tested when available; fewest useful items",
         "timeline": args.timeline or "none reported",
-        "locked_context": "tirzepatide unchanged; creatine 5 g/day; caffeine cutoff 11:15; no gray-market protocols",
+        "locked_context": "current items require intake confirmation; caffeine cutoff 11:15; no auto-adoption or gray-market protocols",
     }
 
 
 def hard_define_profile(profile: dict) -> dict:
-    """Validate machine keys and enforce the immutable choices before retrieval."""
+    """Validate machine keys and selector consistency before retrieval."""
+    for obsolete_category_reason_field in (
+        "supplement_reason_keys", "peptide_reason_keys", "food_reason_keys"
+    ):
+        profile.pop(obsolete_category_reason_field, None)
     catalogs: tuple[tuple[str, Sequence[tuple[str, str]], str | None], ...] = (
         ("issues", tuple(ISSUES.items()), None),
         ("training_mode_keys", TRAINING_OPTIONS, None),
@@ -2648,37 +3098,11 @@ def hard_define_profile(profile: dict) -> dict:
         calendar_modes[day] = mode
     profile["calendar_modes"] = calendar_modes
 
-    # These are immutable facts in this project, not recommendations inferred by the model.
-    locked = {
-        "current_supplement_keys": "creatine_monohydrate",
-        "medication_keys": "tirzepatide",
-        "selected_peptide_keys": "tirzepatide_current_prescription",
-    }
-    locked_catalogs = {
-        "current_supplement_keys": tuple((c.key, c.name) for c in CATALOG),
-        "medication_keys": MEDICATION_OPTIONS,
-        "selected_peptide_keys": tuple((c.key, c.name) for c in PEPTIDE_CATALOG),
-    }
-    for field, required in locked.items():
-        values = set(profile.get(field, ())) | {required}
-        profile[field] = [value for value, _ in locked_catalogs[field] if value in values]
-
     selected_foods = set(profile.get("food_addition_keys", ())) | set(LOCKED_USER_FOOD_KEYS)
     profile["food_addition_keys"] = [
         value for value, _ in FOOD_ADDITION_OPTIONS if value in selected_foods
     ]
     profile["food_research_keys"] = list(REQUIRED_FOOD_RESEARCH_KEYS)
-
-    if "creatine monohydrate" not in profile.get("current_supplements", "").lower():
-        existing = profile.get("current_supplements", "").strip()
-        profile["current_supplements"] = "; ".join(
-            value for value in ("Creatine monohydrate 5 g/day", existing if existing.lower() not in {"", "none", "none selected"} else "") if value
-        )
-    if "tirzepatide" not in profile.get("medications", "").lower():
-        existing = profile.get("medications", "").strip()
-        profile["medications"] = "; ".join(
-            value for value in ("Tirzepatide", existing if existing.lower() not in {"", "none", "none reported"} else "") if value
-        )
 
     profile["issue_labels"] = labels_for(profile.get("issues", ()), tuple(ISSUES.items()))
     profile["priority_supplements"] = labels_for(
@@ -2697,7 +3121,7 @@ def hard_define_profile(profile: dict) -> dict:
     profile["home_practices"] = labels_for(profile.get("home_practice_keys", ()), HOME_PRACTICE_OPTIONS)
     profile["alternative_items"] = labels_for(profile.get("alternative_item_keys", ()), ALTERNATIVE_ITEM_OPTIONS)
     profile["shopping_stores"] = labels_for(profile.get("store_keys", ()), STORE_OPTIONS)
-    profile["selection_lock_version"] = "HC_SELECTION_LOCK_V1"
+    profile["selection_lock_version"] = "HC_SELECTION_LOCK_V2"
     profile["calendar_lock_version"] = "HC_CALENDAR_V1"
     conflict_days = calendar_conflicts(calendar_modes)
     profile["calendar_validation"] = (
@@ -2710,8 +3134,8 @@ def hard_define_profile(profile: dict) -> dict:
     )
     profile["selection_validation"] = (
         "PASS — every recorded selector key exists in its current catalog; exclusive selectors contain one value; "
-        "all seven calendar days contain one valid placement; sentinel conflicts were normalized; tirzepatide, "
-        f"creatine 5 g/day, and all {len(REQUIRED_FOOD_RESEARCH_KEYS)} requested whole-food reviews are present."
+        "all seven calendar days contain one valid placement; sentinel conflicts were normalized; current items remain "
+        f"user-confirmed, and all {len(REQUIRED_FOOD_RESEARCH_KEYS)} configured whole-food reviews are present."
     )
     return profile
 
@@ -2730,7 +3154,14 @@ def hit_is_on_topic(candidate: Candidate, hit: dict) -> bool:
 
 
 def retrieve_candidate(
-    tbl, emb, reranker, candidate: Candidate, issue_labels: Sequence[str], medications: str = ""
+    tbl,
+    emb,
+    reranker,
+    candidate: Candidate,
+    issue_labels: Sequence[str],
+    medications: str = "",
+    *,
+    reason_key: str | None = None,
 ) -> Evidence:
     issue_text = "; ".join(issue_labels[:4])
     if candidate.queue == QUEUE_WHOLE_FOOD:
@@ -2754,46 +3185,53 @@ def retrieve_candidate(
     candidate_where = sql_folder_filter(candidate.folders) if candidate.folders else None
     safety_where = sql_folder_filter(shared_safety_folders)
 
-    def run(where_clause: str | None) -> list[dict]:
+    retrieval_notes: list[str] = []
+
+    def run(where_clause: str | None, scope: str) -> list[dict]:
         try:
             s = tbl.search(query_type="hybrid").vector(qv).text(query)
             if where_clause:
                 s = s.where(where_clause, prefilter=True)
-            return s.limit(40).to_list()
-        except Exception:
+            return [dict(h, _retrieval_mode="hybrid") for h in s.limit(40).to_list()]
+        except Exception as exc:
+            retrieval_notes.append(f"{scope}: hybrid failed ({type(exc).__name__}); used vector-only")
             s = tbl.search(qv)
             if where_clause:
                 s = s.where(where_clause, prefilter=True)
-            return s.limit(40).to_list()
+            return [dict(h, _retrieval_mode="vector_fallback") for h in s.limit(40).to_list()]
 
     # Search efficacy and safety scopes independently so generic interaction passages cannot
     # crowd the supplement's own papers out of the top-k result window.
-    rows = run(candidate_where) if candidate_where else []
-    rows += run(safety_where)
+    rows = run(candidate_where, "candidate folders") if candidate_where else []
+    rows += run(safety_where, "shared safety folders")
     rows = [h for h in rows if hit_is_on_topic(candidate, h)]
     if not rows:
-        rows = [h for h in run(None) if hit_is_on_topic(candidate, h)]
-    if reranker and rows:
-        scores = reranker.predict([(query, h.get("text", "")[:700]) for h in rows])
-        for h, score in zip(rows, scores):
-            h["_audit_score"] = float(score)
-        rows.sort(key=lambda h: h["_audit_score"], reverse=True)
-
-    # Keep multiple passages when useful, but never let duplicate hardlinks inflate coverage.
-    hits: list[dict] = []
-    per_source: dict[str, int] = {}
-    for h in rows:
-        source_key = h.get("doi") or h.get("source_pdf") or h.get("text", "")[:120]
-        if per_source.get(source_key, 0) >= 2:
-            continue
-        per_source[source_key] = per_source.get(source_key, 0) + 1
-        hits.append(h)
-        if len(hits) >= 12:
-            break
+        rows = [h for h in run(None, "global fallback") if hit_is_on_topic(candidate, h)]
+    diagnostics: list[dict] = []
+    # Apply reason/topic gates before the context cap, so unrelated passages cannot crowd out
+    # a relevant reason. Scoring uses the same excerpt subsequently shown to the model.
+    hits = HC.EC.select_evidence(
+        rows, query, reranker, k=12, audit=diagnostics,
+        topic_gate=lambda h: hit_is_on_topic(candidate, {**h, "text": HC.EC.passage(h)})
+        and (not reason_key or reason_hit_matches(h, reason_key)),
+    )
+    reasons: dict[str, int] = {}
+    for record in diagnostics:
+        reason = record["retrieval"]["reason"]
+        reasons[reason] = reasons.get(reason, 0) + 1
+    if reasons:
+        retrieval_notes.append("Relevance screen: " + "; ".join(f"{reason}={count}" for reason, count in reasons.items()))
+    if reason_key:
+        # Per-reason direction, safety, applicability, and source trails must use the same
+        # reason-scoped passages as per-reason coverage. A candidate-wide passage may remain
+        # useful elsewhere without silently becoming evidence for a different user reason.
+        hits = [hit for hit in hits if reason_hit_matches(hit, reason_key)]
 
     human_sources: dict[str, dict] = {}
     for h in hits:
         if h.get("grade") not in ("A", "B"):
+            continue
+        if reason_key and not reason_hit_matches(h, reason_key):
             continue
         if candidate.queue == QUEUE_PEPTIDE:
             # For the experimental catalog, an A/B filename grade is not enough. A paper must
@@ -2808,8 +3246,9 @@ def retrieve_candidate(
             # papers can remain visible as leads but cannot raise food coverage.
             if h.get("folder") not in candidate.folders or not whole_food_human_hit(h):
                 continue
-        source_key = h.get("doi") or h.get("source_pdf") or h.get("text", "")[:120]
-        human_sources[source_key] = h
+        keys = HC.EC.paper_keys(h)
+        if not any(set(keys).intersection(HC.EC.paper_keys(other)) for other in human_sources.values()):
+            human_sources[keys[0]] = h
     n_human = len(human_sources)
     coverage = "STRONG" if n_human >= 2 else "WEAK" if n_human == 1 else "NONE"
     grades = [h.get("grade", "—") for h in human_sources.values()]
@@ -2822,7 +3261,955 @@ def retrieve_candidate(
         fit = "human dietary-topic evidence retrieved; culinary serving versus extract/form fit still requires passage review"
     else:
         fit = "direct/general" if "general" in cohorts else "indirect/older-only" if cohorts else "not established"
-    return Evidence(coverage, best, n_human, len(dois), fit, hits)
+    return Evidence(
+        coverage, best, n_human, len(dois), fit, hits,
+        hybrid_fallback=any("hybrid failed" in note for note in retrieval_notes),
+        retrieval_notes=tuple(dict.fromkeys(retrieval_notes)),
+    )
+
+
+REASON_LEGACY_MATCHES: dict[str, tuple[str, ...]] = {
+    "fat_loss": ("cut",),
+    "lean_mass": ("strength", "cut"),
+    "strength": ("strength",),
+    "running": ("endurance",),
+    "recovery": ("strength", "endurance", "joints"),
+    "sleep": ("sleep",),
+    "cognition": ("focus",),
+    "joint_pain": ("joints",),
+    "gi": ("gi",),
+    "lab_driven": ("deficiency",),
+}
+REASON_QUERY_LABELS = dict(REASON_OPTIONS)
+REASON_PASSAGE_TERMS: dict[str, tuple[str, ...]] = {
+    "fat_loss": ("weight loss", "body weight", "fat mass", "adiposity", "appetite"),
+    "lean_mass": ("lean mass", "fat free mass", "muscle mass", "muscle retention", "hypertrophy"),
+    "strength": ("strength", "one repetition maximum", "1rm", "power", "force"),
+    "running": ("running", "endurance", "vo2", "aerobic", "time trial"),
+    "recovery": ("recovery", "soreness", "muscle damage", "return to sport", "healing"),
+    "sleep": ("sleep", "insomnia", "sleep onset", "sleep quality", "wake after"),
+    "cognition": ("cognition", "cognitive", "attention", "memory", "executive function"),
+    "joint_pain": ("joint pain", "tendon", "osteoarthritis", "musculoskeletal pain", "injury"),
+    "gi": ("gastrointestinal", "nausea", "constipation", "diarrhea", "bowel", "gut"),
+    "hormone_context": ("hormone", "testosterone", "estrogen", "thyroid", "endocrine"),
+    "longevity_curiosity": ("longevity", "lifespan", "mortality", "aging", "ageing"),
+    "lab_driven": ("deficiency", "serum", "plasma", "biomarker", "laboratory", "blood level"),
+}
+DIRECTION_FAVOR_TERMS = (
+    "significantly improved", "significant improvement", "significantly reduced",
+    "greater improvement", "beneficial effect", "was effective", "improved performance",
+)
+DIRECTION_NULL_TERMS = (
+    "no significant difference", "not significantly different", "no effect", "did not improve",
+    "failed to improve", "no benefit",
+)
+DIRECTION_HARM_TERMS = (
+    "serious adverse", "increased adverse", "significantly worse", "increased risk",
+    "toxicity", "withdrawal", "dependence",
+)
+SAFETY_TEXT_TERMS = (
+    "adverse", "safety", "tolerability", "toxicity", "contraindicat", "interaction",
+    "withdrawal", "dependence", "hepatic", "renal", "arrhythm", "blood pressure",
+)
+
+
+def reason_hit_matches(hit: Mapping[str, Any], reason: str) -> bool:
+    terms = REASON_PASSAGE_TERMS.get(reason)
+    if not terms:
+        # Workflow reasons such as already_using, replacement, cost, food-first, and other do
+        # not assert an outcome. Their coverage remains the candidate-wide human coverage.
+        return True
+    text = " ".join((str(hit.get("text", "")), str(hit.get("source_pdf", "")))).lower()
+    return any(term in text for term in terms)
+
+
+def reason_goal_match(candidate: Candidate, reason: str) -> str:
+    if reason == "already_using":
+        return "yes"
+    if reason in {"replace_existing", "food_first_alternative", "cost_simpler", "other"}:
+        return "unknown"
+    wanted = set(REASON_LEGACY_MATCHES.get(reason, ()))
+    if not wanted:
+        return "unknown"
+    overlap = wanted.intersection(candidate.issues)
+    if not overlap:
+        return "no" if candidate.issues else "unknown"
+    return "yes" if wanted.issubset(set(candidate.issues)) or len(wanted) == 1 else "partial"
+
+
+def reason_applicability(ev: Evidence, reason: str, intake: Mapping[str, Any]) -> str:
+    """Combine retrieved population/form fit with explicitly user-reported context flags."""
+    flags = CL.normalize_intake(intake)["flags"]
+    related_flag = {
+        "sleep": "sleep_problem",
+        "joint_pain": "training_limit_pain",
+        "recovery": "training_limit_pain",
+        "gi": "gi_consider",
+    }.get(reason)
+    context: list[str] = []
+    if related_flag:
+        context.append(f"USER_REPORTED {related_flag}={flags[related_flag]}")
+    if reason in {"fat_loss", "lean_mass"}:
+        context.append(f"USER_REPORTED weight_direction={CL.normalize_intake(intake)['weight_direction']}")
+    return "; ".join((ev.fit, *context))
+
+
+def evidence_direction(ev: Evidence) -> str:
+    """Conservative lexical direction derived only from retained retrieved text."""
+    text = " ".join(str(hit.get("text", ""))[:3000].lower() for hit in ev.hits if hit.get("grade") in ("A", "B"))
+    favor = any(term in text for term in DIRECTION_FAVOR_TERMS)
+    null = any(term in text for term in DIRECTION_NULL_TERMS)
+    harm = any(term in text for term in DIRECTION_HARM_TERMS)
+    if sum((favor, null, harm)) > 1:
+        return "mixed"
+    if harm:
+        return "harm"
+    if favor:
+        return "favor"
+    if null:
+        return "null"
+    return "unknown"
+
+
+def retrieved_safety(candidate: Candidate, ev: Evidence, limit: int = 2) -> list[str]:
+    """Return short, source-tagged excerpts; never manufacture a named safety claim."""
+    findings: list[str] = []
+    for hit in ev.hits:
+        text = re.sub(r"\s+", " ", str(hit.get("text", ""))).strip()
+        sentences = re.split(r"(?<=[.!?])\s+", text)
+        sentence = next((part for part in sentences if any(term in part.lower() for term in SAFETY_TEXT_TERMS)), "")
+        if not sentence:
+            continue
+        if len(sentence) > 180:
+            sentence = sentence[:177].rstrip() + "…"
+        tag = "[%s / %s / %s]" % (
+            hit.get("grade", "—"), hit.get("folder", "unknown"), hit.get("doi") or "no-doi",
+        )
+        value = f"{sentence} {tag}"
+        if value not in findings:
+            findings.append(value)
+        if len(findings) >= limit:
+            break
+    return findings
+
+
+def _annotation(value: str, source: str, *, present: bool) -> dict[str, Any]:
+    if source not in CL.ANNOTATION_SOURCES:
+        raise ValueError(f"Invalid annotation source: {source}")
+    return {"value": value, "source": source, "present": present}
+
+
+def retrieved_annotation(ev: Evidence | None, terms: Sequence[str]) -> dict[str, Any] | None:
+    """Return one short annotation only when its text was actually retrieved."""
+    if ev is None:
+        return None
+    for hit in ev.hits:
+        text = re.sub(r"\s+", " ", str(hit.get("text", ""))).strip()
+        sentence = next(
+            (
+                part for part in re.split(r"(?<=[.!?])\s+", text)
+                if any(term in part.lower() for term in terms)
+            ),
+            "",
+        )
+        if not sentence:
+            continue
+        if len(sentence) > 180:
+            sentence = sentence[:177].rstrip() + "…"
+        source = f"[{hit.get('grade', '—')} / {hit.get('folder', 'unknown')} / {hit.get('doi') or 'no-doi'}]"
+        return _annotation(f"{sentence} {source}", "RETRIEVED", present=True)
+    return None
+
+
+def candidate_annotations(
+    candidate: Candidate,
+    ev: Evidence | None = None,
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], list[str]]:
+    """Keep retrieved and authored catalog provenance explicit and separate from suggestions."""
+    configured = " ".join((candidate.policy, candidate.gate)).strip()
+    lower = configured.lower()
+    authored_regulatory = (
+        _annotation(configured, "AUTHORED_CATALOG", present=True)
+        if any(term in lower for term in ("unapproved", "investigational", "research drug", "preclinical"))
+        else _annotation("Not established", "AUTHORED_CATALOG", present=False)
+    )
+    authored_sport = (
+        _annotation(configured, "AUTHORED_CATALOG", present=True)
+        if "sport" in lower else _annotation("Not established", "AUTHORED_CATALOG", present=False)
+    )
+    authored_sourcing = (
+        _annotation(configured, "AUTHORED_CATALOG", present=True)
+        if any(term in lower for term in ("product-identity", "product identity", "product-quality", "uncertified", "contamination", "label accuracy"))
+        else _annotation("Not established", "AUTHORED_CATALOG", present=False)
+    )
+    regulatory = retrieved_annotation(
+        ev, ("fda-approved", "fda approved", "not approved", "regulatory status", "unapproved", "investigational", "legal status")
+    ) or authored_regulatory
+    sport = retrieved_annotation(
+        ev, ("world anti-doping", "wada", "prohibited list", "anti-doping", "doping control")
+    ) or authored_sport
+    sourcing = retrieved_annotation(
+        ev, ("contamination", "adulteration", "product identity", "purity", "label accuracy", "third-party testing")
+    ) or authored_sourcing
+    flags = []
+    if candidate.policy:
+        flags.append(f"LEGACY_POLICY={candidate.policy}")
+    if candidate.gate:
+        flags.append(f"LEGACY_GATE={candidate.gate}")
+    return regulatory, sport, sourcing, flags
+
+
+INCRETIN_CANDIDATE_KEYS = {
+    "tirzepatide_current_prescription",
+    "semaglutide_do_not_stack_with_tirzepatide",
+    "retatrutide_do_not_stack_with_tirzepatide",
+    "liraglutide_do_not_stack_with_tirzepatide",
+    "cagrilintide_cagrisema_style_combination",
+    "survodutide",
+}
+
+
+def reason_stack_fit(
+    candidate: Candidate,
+    ledger_rows: Sequence[Mapping[str, Any]] = (),
+) -> str:
+    configured = " ".join((candidate.policy, candidate.gate)).lower()
+    current = [row for row in ledger_rows
+               if row.get("use_status") == "in_use" and row.get("id") != candidate.key]
+    incretin_names = {"tirzepatide", "semaglutide", "retatrutide", "liraglutide", "cagrilintide", "survodutide"}
+    if incretin_names.intersection(candidate.aliases):
+        for row in current:
+            other, _ = candidate_from_ledger_row(row)
+            if incretin_names.intersection(other.aliases):
+                return "conflicts_lock"
+    if "do not stack" in configured:
+        current_ids = {str(row.get("id")) for row in current}
+        current_text = " ".join(
+            f"{row.get('display_name', '')} {' '.join(row.get('aliases', ()))}"
+            for row in current
+        ).lower()
+        tirzepatide_current = (
+            "tirzepatide_current_prescription" in current_ids or "tirzepatide" in current_text
+        )
+        if "tirzepatide" in configured and tirzepatide_current:
+            return "conflicts_lock"
+        if "incretin" in configured and current_ids.intersection(INCRETIN_CANDIDATE_KEYS):
+            return "conflicts_lock"
+        return "unknown"
+    if "interaction" in configured or "medication" in configured:
+        return "interacts"
+    return "unknown"
+
+
+def candidate_plan_gate(
+    row: Mapping[str, Any],
+    ledger_rows: Sequence[Mapping[str, Any]] = (),
+    evaluation: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Fresh admission check for renderers and commands, without updating cached state."""
+    candidate, _ = candidate_from_ledger_row(row)
+    if evaluation is None:
+        evaluation = {"system_suggestion": row.get("last_suggestion"), "direction": "harm" if any(
+            fit.get("direction") == "harm" for fit in row.get("reason_evaluations", {}).values()
+            if isinstance(fit, Mapping)
+        ) else "unknown"}
+    gate = SP.candidate_gate({
+        **row,
+        "stack_fit": reason_stack_fit(candidate, ledger_rows),
+        "direction": evaluation.get("direction", "unknown"),
+    }, candidate)
+    if evaluation.get("system_suggestion") in {"CONDITIONAL", "UNFAVORABLE"}:
+        gate["reasons"].append("EVALUATION_REVIEW_REQUIRED")
+        gate["active_plan_allowed"] = False
+    return gate
+
+
+def appetite_floor(intake: Mapping[str, Any]) -> set[str]:
+    appetite = str(intake.get("preferences", {}).get("evidence_appetite", "balanced"))
+    return {"STRONG"} if appetite == "conservative" else {"WEAK", "STRONG"}
+
+
+def reason_suggestion(
+    row: Mapping[str, Any],
+    fit: Mapping[str, Any],
+    intake: Mapping[str, Any],
+) -> tuple[str, str]:
+    """Apply the user-approved total precedence without changing user_decision."""
+    coverage = fit["coverage"]
+    direction = fit["direction"]
+    in_use = row.get("use_status") == "in_use"
+    observed_harm = row.get("observed") == "harms"
+    intent = row.get("intent", "undecided")
+    blocker = bool(row.get("blocker", {}).get("present"))
+    conflict = fit["stack_fit"] == "conflicts_lock"
+
+    # UNFAVORABLE has highest precedence.
+    if direction == "harm":
+        return "UNFAVORABLE", "retrieved direction is harm"
+    if fit["goal_match"] == "no" and not in_use:
+        return "UNFAVORABLE", "goal match is no and the item is not in use"
+    if observed_harm and intent == "want_replace":
+        return "UNFAVORABLE", "USER_REPORTED harm with intent to replace"
+
+    # CONDITIONAL precedes continuing or considering adoption.
+    if conflict:
+        return "CONDITIONAL", "stack fit conflicts with a recorded lock"
+    if blocker:
+        return "CONDITIONAL", "unresolved USER_REPORTED blocker"
+    if in_use and observed_harm and intent == "keep":
+        return "CONDITIONAL", "in use with USER_REPORTED harm and intent to keep"
+
+    gate = fit.get("safety_gate") or candidate_plan_gate(row, evaluation=fit)
+    if not gate["active_plan_allowed"]:
+        code = "WATCH" if row.get("consideration_scope") == "research_only_topic" or coverage == "NONE" else "CONDITIONAL"
+        return code, "routine plan admission withheld: " + ", ".join(gate["reasons"])
+
+    if in_use and intent == "keep":
+        return "CONTINUE_CURRENT", "in use, intent keep, and no retrieved or user-reported harm"
+
+    if row.get("consideration_scope") == "research_only_topic":
+        return "WATCH", "consideration scope is research_only_topic"
+    if coverage == "NONE":
+        return "WATCH", "coverage is NONE"
+    if fit["goal_match"] == "unknown":
+        return "WATCH", "goal match is unknown"
+    if direction in {"null", "unknown", "mixed"}:
+        return "WATCH", f"retrieved direction is {direction}"
+
+    appetite = str(intake.get("preferences", {}).get("evidence_appetite", "balanced"))
+    burden_ok = row.get("burden") == "acceptable" or (
+        row.get("burden") == "unknown" and appetite in {"balanced", "exploratory"}
+    )
+    if (
+        row.get("consideration_scope") == "personal_candidate"
+        and fit["goal_match"] == "yes"
+        and direction == "favor"
+        and coverage in appetite_floor(intake)
+        and burden_ok
+    ):
+        return "ADOPT_CANDIDATE", "all personal-candidate adoption conditions passed"
+    if row.get("consideration_scope") == "undecided":
+        return "WATCH", "consideration scope is undecided"
+    if coverage not in appetite_floor(intake):
+        return "WATCH", f"coverage is below the {appetite} appetite floor"
+    if not burden_ok:
+        return "WATCH", "burden is unacceptable or unresolved under conservative appetite"
+    return "WATCH", "one or more adoption conditions did not pass"
+
+
+def _aggregate_coverage(values: Sequence[str]) -> str:
+    # The compact matrix is conservative: a reason-level NONE must remain visible rather than
+    # being masked by a different reason with STRONG coverage. The card retains every value.
+    return max(values or ("NONE",), key=lambda value: {"STRONG": 0, "WEAK": 1, "NONE": 2}.get(value, 9))
+
+
+def _aggregate_direction(values: Sequence[str]) -> str:
+    known = {value for value in values if value != "unknown"}
+    return next(iter(known)) if len(known) == 1 else "mixed" if known else "unknown"
+
+
+def _primary_fit(
+    row: Mapping[str, Any],
+    fits: Mapping[str, Mapping[str, Any]],
+    intake: Mapping[str, Any],
+) -> tuple[str, Mapping[str, Any]]:
+    goals = list(intake.get("goals", ()))
+    reasons = list(row.get("reasons", ()))
+    primary = next((goal for goal in goals if goal in fits), reasons[0] if reasons else "_unspecified")
+    return primary, fits[primary]
+
+
+def _aggregate_suggestion(
+    row: Mapping[str, Any],
+    fits: Mapping[str, Mapping[str, Any]],
+    intake: Mapping[str, Any],
+) -> tuple[str, str, str]:
+    if not fits:
+        return "WATCH", "no reason-specific fit was available", "_unspecified"
+    primary_reason, primary = _primary_fit(row, fits, intake)
+    if any(fit["direction"] == "harm" for fit in fits.values()):
+        return "UNFAVORABLE", "retrieved direction is harm for at least one recorded reason", primary_reason
+    if any(fit["stack_fit"] == "conflicts_lock" for fit in fits.values()):
+        return "CONDITIONAL", "stack fit conflicts with a confirmed current-item lock", primary_reason
+    suggestion, why = reason_suggestion(row, primary, intake)
+    return suggestion, f"primary reason `{primary_reason}`: {why}", primary_reason
+
+
+def source_tags(ev: Evidence, limit: int = 4) -> list[str]:
+    tags: list[str] = []
+    for hit in ev.hits:
+        tag = "[%s / %s / %s]" % (
+            hit.get("grade", "—"), hit.get("folder", "unknown"), hit.get("doi") or "no-doi",
+        )
+        if tag not in tags:
+            tags.append(tag)
+        if len(tags) >= limit:
+            break
+    return tags
+
+
+def evaluate_ledger_rows(
+    rows: Sequence[Mapping[str, Any]],
+    candidates_by_id: Mapping[str, Candidate],
+    overall_evidence: Mapping[str, Evidence],
+    reason_evidence: Mapping[tuple[str, str], Evidence],
+    intake: Mapping[str, Any] | None = None,
+    *,
+    ledger_rows: Sequence[Mapping[str, Any]] | None = None,
+) -> dict[str, dict[str, Any]]:
+    intake = CL.normalize_intake(intake)
+    stack_rows = rows if ledger_rows is None else ledger_rows
+    evaluations: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        item_id = str(row["id"])
+        candidate = candidates_by_id[item_id]
+        reasons = list(row.get("reasons", ())) or ["_unspecified"]
+        per_reason: dict[str, dict[str, Any]] = {}
+        regulatory, sport, sourcing, configured_flags = candidate_annotations(
+            candidate, overall_evidence[item_id]
+        )
+        for reason in reasons:
+            ev = reason_evidence.get((item_id, reason), overall_evidence[item_id])
+            fit = {
+                "goal_match": reason_goal_match(candidate, reason),
+                "coverage": ev.coverage,
+                "direction": evidence_direction(ev),
+                "applicability": reason_applicability(ev, reason, intake),
+                "stack_fit": reason_stack_fit(candidate, stack_rows),
+                "burden": row.get("burden", "unknown"),
+                "safety": retrieved_safety(candidate, ev),
+                "regulatory": regulatory,
+                "sport": sport,
+                "sourcing": sourcing,
+                "source_trail": source_tags(ev),
+                "hybrid_fallback": ev.hybrid_fallback,
+                "retrieval_notes": list(ev.retrieval_notes),
+            }
+            fit["safety_gate"] = SP.candidate_gate({
+                **row, "direction": fit["direction"], "stack_fit": fit["stack_fit"],
+            }, candidate)
+            fit["system_suggestion"], fit["suggestion_reason"] = reason_suggestion(row, fit, intake)
+            per_reason[reason] = fit
+        values = list(per_reason.values())
+        flags = list(configured_flags)
+        if regulatory["present"]:
+            flags.append(f"REGULATORY_{regulatory['source']}")
+        if sport["present"]:
+            flags.append(f"SPORT_{sport['source']}")
+        if sourcing["present"]:
+            flags.append(f"SOURCING_{sourcing['source']}")
+        if row.get("blocker", {}).get("present"):
+            flags.append("USER_REPORTED_BLOCKER")
+        if row.get("observed") == "harms":
+            flags.append("USER_REPORTED_HARM")
+        if not row.get("reasons"):
+            flags.append("REASON_UNSPECIFIED")
+        if any(value["hybrid_fallback"] for value in values):
+            flags.append("VECTOR_ONLY_FALLBACK")
+        if any(value["stack_fit"] == "conflicts_lock" for value in values):
+            flags.append("CONFLICTS_LOCK")
+        elif any(value["stack_fit"] == "interacts" for value in values):
+            flags.append("INTERACTION_REVIEW")
+        suggestion, suggestion_reason, primary_reason = _aggregate_suggestion(row, per_reason, intake)
+        evaluations[item_id] = {
+            "coverage": _aggregate_coverage([value["coverage"] for value in values]),
+            "direction": _aggregate_direction([value["direction"] for value in values]),
+            "system_suggestion": suggestion,
+            "suggestion_reason": suggestion_reason,
+            "primary_reason": primary_reason,
+            "intake_fields_used": [
+                "consideration_scope", "use_status", "intent", "observed", "burden", "blocker",
+                "reasons", "goals", "weight_direction", "context_flags", "evidence_appetite",
+                "prefer_not_meds", "sourcing_bar", "legal_sensitivity",
+            ],
+            "flags": flags,
+            "per_reason": per_reason,
+        }
+        gate = candidate_plan_gate(row, stack_rows, evaluations[item_id])
+        evaluations[item_id]["safety_gate"] = gate
+        flags.extend(gate["reasons"])
+    return evaluations
+
+
+def catalog_rankings(
+    candidates: Sequence[Candidate],
+    evidence: Mapping[str, Evidence],
+    ledger_rows: Sequence[Mapping[str, Any]],
+    intake: Mapping[str, Any],
+    ledger_evaluations: Mapping[str, Mapping[str, Any]] | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Return two transparent orderings over the exact same full-catalog visibility set."""
+    intake = CL.normalize_intake(intake)
+    ledger_evaluations = ledger_evaluations or {}
+    row_map = {str(row["id"]): row for row in ledger_rows}
+    primary_goal = next(iter(intake.get("goals", ())), None)
+    appetite = intake["preferences"]["evidence_appetite"]
+    tested_sport = intake["flags"]["tested_sport"] == "yes"
+    sourcing_sensitive = bool(intake["preferences"].get("sourcing_bar"))
+    legal_sensitive = bool(intake["preferences"].get("legal_sensitivity"))
+    food_first = intake["preferences"]["food_first"]
+    entries: list[dict[str, Any]] = []
+
+    for catalog_index, candidate in enumerate(candidates):
+        ev = evidence[candidate.key]
+        row = row_map.get(candidate.key)
+        evaluation = ledger_evaluations.get(candidate.key, {})
+        regulatory, sport, sourcing, configured_flags = candidate_annotations(candidate, ev)
+        goal_match = reason_goal_match(candidate, primary_goal) if primary_goal else "unknown"
+        direction = evidence_direction(ev)
+        stack_fit = reason_stack_fit(candidate, ledger_rows)
+        scope = row.get("consideration_scope", "undecided") if row else "undecided"
+        use_status = row.get("use_status", "not_in_use") if row else "not_in_use"
+        decision = row.get("user_decision", "undecided") if row else "undecided"
+        burden = row.get("burden", "unknown") if row else "unknown"
+        flags = list(configured_flags)
+        if row and row.get("blocker", {}).get("present"):
+            flags.append("USER_REPORTED_BLOCKER")
+        if row and row.get("observed") == "harms":
+            flags.append("USER_REPORTED_HARM")
+        if ev.hybrid_fallback:
+            flags.append("VECTOR_ONLY_FALLBACK")
+        gate = SP.candidate_gate({
+            **(row or {}), "stack_fit": stack_fit, "direction": direction,
+        }, candidate)
+        flags.extend(gate["reasons"])
+        entry = {
+            "id": candidate.key,
+            "name": candidate.name,
+            "class": default_ledger_class(candidate),
+            "selected": row is not None,
+            "scope": scope,
+            "use_status": use_status,
+            "decision": decision,
+            "goal": primary_goal or "unknown",
+            "goal_match": goal_match,
+            "coverage": ev.coverage,
+            "direction": direction,
+            "stack_fit": stack_fit,
+            "burden": burden,
+            "regulatory": regulatory,
+            "sport": sport,
+            "sourcing": sourcing,
+            "flags": flags,
+            "suggestion": evaluation.get("system_suggestion", "WATCH") if gate["active_plan_allowed"] else "WATCH",
+            "safety_gate": gate,
+            "catalog_index": catalog_index,
+        }
+        entries.append(entry)
+
+    def decision_use_pin(entry: Mapping[str, Any]) -> int:
+        if entry["use_status"] == "in_use" or entry["decision"] == "adopt":
+            return 0
+        if entry["selected"] and entry["scope"] == "personal_candidate":
+            return 1
+        if entry["selected"] and entry["decision"] != "reject":
+            return 2
+        if not entry["selected"]:
+            return 3
+        return 4
+
+    goal_order = {"yes": 0, "partial": 1, "unknown": 2, "no": 3}
+    coverage_order = {"STRONG": 0, "WEAK": 1, "NONE": 2}
+    direction_order = {"favor": 0, "mixed": 1, "null": 2, "unknown": 3, "harm": 4}
+    burden_order = {"acceptable": 0, "unknown": 1, "unacceptable": 2}
+
+    def annotation_penalty(entry: Mapping[str, Any]) -> int:
+        return int(tested_sport and entry["sport"]["present"]) + int(
+            sourcing_sensitive and entry["sourcing"]["present"]
+        ) + int(legal_sensitive and entry["regulatory"]["present"])
+
+    def food_preference_penalty(entry: Mapping[str, Any]) -> int:
+        if food_first == "prefer":
+            return int(entry["class"] != "food")
+        if food_first == "off":
+            return int(entry["class"] == "food")
+        return 0
+
+    adopt_consider = sorted(entries, key=lambda entry: (
+        int(not entry["safety_gate"]["active_plan_allowed"]),
+        decision_use_pin(entry),
+        goal_order[entry["goal_match"]],
+        food_preference_penalty(entry),
+        int(entry["stack_fit"] == "conflicts_lock"),
+        annotation_penalty(entry),
+        coverage_order[entry["coverage"]],
+        direction_order[entry["direction"]],
+        burden_order[entry["burden"]],
+        entry["catalog_index"],
+    ))
+    research_coverage_order = (
+        {"WEAK": 0, "NONE": 1, "STRONG": 2}
+        if appetite == "exploratory" else coverage_order
+    )
+    research = sorted(entries, key=lambda entry: (
+        decision_use_pin(entry),
+        goal_order[entry["goal_match"]],
+        food_preference_penalty(entry),
+        research_coverage_order[entry["coverage"]],
+        direction_order[entry["direction"]],
+        annotation_penalty(entry),
+        entry["catalog_index"],
+    ))
+    return {"adopt_consider": adopt_consider, "research": research}
+
+
+def ranking_markdown(rankings: Mapping[str, Sequence[Mapping[str, Any]]]) -> str:
+    sections = [
+        "**FULL CONFIGURED CATALOG:** these are two orderings over the same visibility set. Rank is not adoption, and no row is deleted.",
+    ]
+    for key, heading in (
+        ("adopt_consider", "Adopt-consider ordering"),
+        ("research", "Research ordering"),
+    ):
+        sections.extend((
+            "",
+            f"#### {heading}",
+            "",
+            "| # | Name | Class | Selected | Scope | Goal match | Coverage | Direction | Stack fit | Burden | Suggestion |",
+            "|---:|---|---|---|---|---|---:|---|---|---|---|",
+        ))
+        for index, entry in enumerate(rankings.get(key, ()), 1):
+            values = (
+                index, entry["name"], entry["class"], "yes" if entry["selected"] else "no",
+                entry["scope"], entry["goal_match"], entry["coverage"], entry["direction"],
+                entry["stack_fit"], entry["burden"], entry["suggestion"],
+            )
+            sections.append("| " + " | ".join(
+                str(value).replace("|", "/").replace("\n", " ") for value in values
+            ) + " |")
+    return "\n".join(sections)
+
+
+def intake_markdown(intake: Mapping[str, Any]) -> str:
+    intake = CL.normalize_intake(intake)
+    lines = [
+        "**PRIVATE USER-REPORTED RANKING INTAKE:** unknown and prefer-not answers remain unknown and never mean no medication or no risk.",
+        "",
+        f"- Ordered goals: {', '.join(intake['goals']) or 'not completed'}.",
+        f"- Weight direction: {intake['weight_direction']}.",
+        "- Required flags: " + "; ".join(f"{key}={value}" for key, value in intake["flags"].items()) + ".",
+        f"- Medication detail withheld: {'yes' if intake['prefer_not_meds'] else 'no'}.",
+        "- Sort preferences: " + "; ".join(
+            f"{key}={value if value is not None else 'unset'}" for key, value in intake["preferences"].items()
+        ) + ".",
+    ]
+    for key, item in intake["baseline"].items():
+        rendered = item.get("value") if item.get("value") is not None else "not retained"
+        lines.append(f"- Baseline `{key}`: {item['status']}; {rendered}.")
+    return "\n".join(lines)
+
+
+def _candidate_reason_keys(raw: str) -> list[str]:
+    values = list(dict.fromkeys(value.strip() for value in raw.split(",") if value.strip()))
+    unknown = sorted(set(values) - set(CL.OUTCOME_REASON_KEYS))
+    if unknown:
+        raise CL.LedgerError("Unknown candidate reason key(s): " + ", ".join(unknown))
+    return values
+
+
+def interactive_ranked_followups(
+    ledger: Mapping[str, Any],
+    rankings: Mapping[str, Sequence[Mapping[str, Any]]],
+    candidates_by_id: Mapping[str, Candidate],
+) -> dict[str, Any]:
+    """Screen F after the full scan; skipping it does not reject or remove any row."""
+    data = CL.normalize_ledger(ledger)
+    limit = data["intake"]["followup_top_n"]
+    selected_ids = [row["id"] for row in data["candidates"]]
+    adopt_ids = [entry["id"] for entry in rankings.get("adopt_consider", ())]
+    uncertain_ids = [
+        entry["id"] for entry in rankings.get("research", ())
+        if entry["goal_match"] in {"yes", "partial"}
+        and (entry["coverage"] == "NONE" or entry["direction"] in {"unknown", "mixed"})
+    ]
+    # Ranked matches first so the batch actually reflects what the scan flagged, not
+    # just the first rows of a possibly large ledger (e.g. every catalog item synced in).
+    item_ids = list(dict.fromkeys((*adopt_ids, *uncertain_ids, *selected_ids)))[:limit]
+    if not item_ids:
+        return data
+    console.print(Panel.fit(
+        f"The full catalog scan produced {len(item_ids)} candidate-specific follow-ups. "
+        "Skipping this screen leaves every item visible and undecided.",
+        title="F · CANDIDATE-SPECIFIC FOLLOW-UP",
+        border_style="bright_cyan",
+    ))
+    if not Confirm.ask("Review these candidate matches now?", default=True):
+        return data
+    for item_id in item_ids:
+        candidate = candidates_by_id[item_id]
+        entry = next(
+            value for value in rankings["adopt_consider"] if value["id"] == item_id
+        )
+        console.rule(f"F · {candidate.name}")
+        console.print(
+            f"Preliminary: goal_match={entry['goal_match']} · coverage={entry['coverage']} · "
+            f"direction={entry['direction']} · stack_fit={entry['stack_fit']}"
+        )
+        existing = CL.rows_by_id(data).get(item_id)
+        if existing is None:
+            if not Confirm.ask("Add this match to the private candidate ledger for review?", default=False):
+                continue
+            data, existing, _created = CL.upsert_candidate(
+                data,
+                item_id=candidate.key,
+                display_name=candidate.name,
+                item_class=default_ledger_class(candidate),
+                aliases=candidate.aliases,
+                folder=candidate.folders[0] if candidate.folders else None,
+                consideration_scope="undecided",
+                use_status="not_in_use",
+            )
+        if not Confirm.ask("Review this row now?", default=True):
+            continue
+        scope = Prompt.ask(
+            "Consideration scope", choices=CL.CONSIDERATION_SCOPES,
+            default=existing["consideration_scope"],
+        )
+        console.print("Candidate outcome reason keys: " + ", ".join(CL.OUTCOME_REASON_KEYS))
+        while True:
+            try:
+                reasons = _candidate_reason_keys(Prompt.ask(
+                    "Candidate-specific reasons, comma-separated",
+                    default=",".join(existing.get("reasons", ())),
+                ))
+                break
+            except CL.LedgerError as exc:
+                console.print(f"[red]{exc}[/red]")
+        outcome_lines = dict(existing.get("outcome_lines", {}))
+        for reason in reasons:
+            if reason in {"recovery", "hormone_context", "longevity_curiosity", "other"}:
+                line = Prompt.ask(
+                    f"Exact desired outcome for {reason} (blank leaves unknown)",
+                    default=outcome_lines.get(reason, ""),
+                ).strip()
+                if line:
+                    outcome_lines[reason] = line
+                else:
+                    outcome_lines.pop(reason, None)
+        use_status = Prompt.ask(
+            "Use status", choices=CL.USE_STATUSES, default=existing["use_status"]
+        )
+        user_dose = existing.get("user_dose")
+        if use_status == "in_use":
+            user_dose = Prompt.ask(
+                "Confirm your own dose/schedule (blank leaves unset)", default=user_dose or ""
+            ).strip() or None
+        intent = Prompt.ask("Intent", choices=CL.INTENTS, default=existing["intent"])
+        observed = Prompt.ask("Observed result", choices=CL.OBSERVED_VALUES, default=existing["observed"])
+        burden = Prompt.ask("Practical burden", choices=CL.BURDEN_VALUES, default=existing["burden"])
+        blocker_present = Confirm.ask(
+            "Is there something specific stopping you from using this (cost, access, side effect, interaction)?",
+            default=existing["blocker"]["present"],
+        )
+        blocker_description = None
+        if blocker_present:
+            blocker_description = Prompt.ask(
+                "Describe the blocker", default=existing["blocker"].get("description") or ""
+            ).strip() or None
+            if blocker_description is None:
+                console.print("[yellow]No description entered; recording no blocker instead.[/yellow]")
+                blocker_present = False
+        user_decision = Prompt.ask(
+            "User decision", choices=CL.USER_DECISIONS, default=existing["user_decision"]
+        )
+        if user_decision == "adopt" and existing["user_decision"] != "adopt":
+            gate = candidate_plan_gate({
+                **existing, "consideration_scope": scope, "use_status": use_status,
+                "observed": observed, "user_decision": user_decision,
+                "blocker": {"present": blocker_present},
+            }, data["candidates"])
+            if not gate["active_plan_allowed"]:
+                console.print("Adoption withheld; research and reported use remain available: " + ", ".join(gate["reasons"]))
+                user_decision = existing["user_decision"]
+        data, _row = CL.update_candidate(
+            data,
+            item_id,
+            consideration_scope=scope,
+            use_status=use_status,
+            intent=intent,
+            observed=observed,
+            burden=burden,
+            blocker={
+                "present": blocker_present,
+                "description": blocker_description,
+                "provenance": "USER_REPORTED",
+            },
+            reasons=reasons,
+            outcome_lines=outcome_lines,
+            user_dose=user_dose,
+            user_decision=user_decision,
+        )
+    return data
+
+
+def stack_matrix_markdown(rows: Sequence[Mapping[str, Any]], evaluations: Mapping[str, Mapping[str, Any]]) -> str:
+    lines = [
+        "**PRIVATE LEDGER + RETRIEVED EVALUATION:** selection keeps a row visible; it is not adoption.",
+        "",
+        "| Name | Class | Use / research | Reasons | Coverage | Direction | Flags | Suggestion | Decision |",
+        "|---|---|---|---|---:|---|---|---|---|",
+    ]
+    if not rows:
+        lines.append("| _No ledger candidates yet_ | — | — | — | — | — | — | WATCH | undecided |")
+    for row in rows:
+        evaluation = evaluations.get(row["id"], {})
+        values = (
+            row["display_name"], row["class"], f"{row['use_status']} / {row['consideration_scope']}",
+            ", ".join(row.get("reasons", ())) or "UNSPECIFIED",
+            evaluation.get("coverage", "NONE"), evaluation.get("direction", "unknown"),
+            "; ".join(evaluation.get("flags", ())) or "none",
+            evaluation.get("system_suggestion", "WATCH"), row["user_decision"],
+        )
+        lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", " ") for value in values) + " |")
+    return "\n".join(lines)
+
+
+def regeneration_diff_markdown(diff: Mapping[str, Sequence[str]]) -> str:
+    lines = ["**REGENERATION DIFF — PRIVATE LEDGER VS LAST COMPLETED REPORT**", ""]
+    for key in (
+        "ledger_added", "newly_adopted", "suggestion_changes", "coverage_changes",
+        "selected_but_missing_from_inventory",
+    ):
+        values = list(diff.get(key, ()))
+        rendered = "; ".join(values) if values else "empty"
+        lines.append(f"- **{key}:** {rendered}")
+    return "\n".join(lines)
+
+
+def adopted_week_overlay(rows: Sequence[Mapping[str, Any]], evaluations: Mapping[str, Mapping[str, Any]]) -> str:
+    active = []
+    exposures = []
+    for row in rows:
+        gate = candidate_plan_gate(row, rows, evaluations.get(row["id"]))
+        if gate["active_plan_allowed"]:
+            if row.get("user_decision") == "adopt" or row.get("use_status") == "in_use":
+                active.append(row)
+        elif row.get("use_status") == "in_use":
+            exposures.append((row, gate))
+    lines = [
+        "**PRIVATE LEDGER / USER DECISIONS:** routine plan admission requires the safety gate. "
+        "Adoption is user intent, not actual use or medical approval. A system suggestion never auto-adopts an item.",
+        "",
+        "| Candidate | Basis for week line | Dose | System suggestion | User decision |",
+        "|---|---|---|---|---|",
+    ]
+    if not active:
+        lines.append("| _No adopted or already-used ledger candidate_ | — | — | — | — |")
+    for row in active:
+        basis = "in_use" if row.get("use_status") == "in_use" else "explicit adopt"
+        values = (
+            row["display_name"], basis, row.get("user_dose") or "dose unset",
+            evaluations.get(row["id"], {}).get("system_suggestion", "WATCH"), row["user_decision"],
+        )
+        lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", " ") for value in values) + " |")
+    if exposures:
+        lines.extend((
+            "", "#### Reported exposures requiring review (not active-plan recommendations)", "",
+            "Actual use and user-entered doses are retained for safety review, not endorsed. "
+            "Discuss these with a clinician/pharmacist; no automatic stopping or dose change is prescribed.",
+            "", "| Reported exposure | User-reported dose (not instructions) | Admission withheld |",
+            "|---|---|---|",
+        ))
+        for row, gate in exposures:
+            values = (row["display_name"], row.get("user_dose") or "dose unset", ", ".join(gate["reasons"]))
+            lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", " ") for value in values) + " |")
+    return "\n".join(lines)
+
+
+def candidate_cards_markdown(rows: Sequence[Mapping[str, Any]], evaluations: Mapping[str, Mapping[str, Any]]) -> str:
+    if not rows:
+        return "_No selected candidate cards yet._"
+    cards: list[str] = []
+    for row in rows:
+        evaluation = evaluations[row["id"]]
+        per_reason = evaluation["per_reason"]
+        reason_names = ", ".join(row.get("reasons", ())) or "UNSPECIFIED"
+        cards.extend((
+            f"#### {row['display_name']}",
+            "",
+            "##### Identity",
+            f"- **ID:** `{row['id']}`; **class:** {row['class']}; **use:** {row['use_status']}; **scope:** {row['consideration_scope']}.",
+            f"- **Aliases:** {', '.join(row.get('aliases', ())) or 'none recorded'}; **folder:** {row.get('folder') or 'not configured'}.",
+            "",
+            "##### Reasons",
+            f"- **USER-RECORDED:** {reason_names}.",
+            "",
+            "##### Coverage",
+            f"- **RETRIEVED aggregate:** {evaluation['coverage']}.",
+        ))
+        for reason, fit in per_reason.items():
+            outcome = row.get("outcome_lines", {}).get(reason)
+            suffix = f"; desired outcome: {outcome}" if outcome else ""
+            cards.append(f"- `{reason}`: {fit['coverage']}; goal match {fit['goal_match']}{suffix}.")
+        cards.extend(("", "##### Direction"))
+        for reason, fit in per_reason.items():
+            cards.append(f"- `{reason}`: {fit['direction']} — conservative lexical classification from retained A/B text.")
+        cards.extend(("", "##### Applicability"))
+        for reason, fit in per_reason.items():
+            cards.append(f"- `{reason}`: {fit['applicability']}; stack fit {fit['stack_fit']}; burden {fit['burden']}.")
+        cards.extend(("", "##### Safety"))
+        cards.append(f"- **USER_REPORTED observed:** {row['observed']}.")
+        blocker = row.get("blocker", {})
+        cards.append(
+            "- **USER_REPORTED blocker:** "
+            + (blocker.get("description") or "present; description not supplied" if blocker.get("present") else "none reported")
+            + "."
+        )
+        safety = list(dict.fromkeys(item for fit in per_reason.values() for item in fit["safety"]))
+        cards.extend(f"- **RETRIEVED EXCERPT:** {item}" for item in safety[:3])
+        if not safety:
+            cards.append("- **RETRIEVED:** not established in retained passages; no safety claim is invented.")
+        first = next(iter(per_reason.values()))
+        regulatory = first["regulatory"]
+        sport = first["sport"]
+        sourcing = first["sourcing"]
+        cards.extend((
+            "",
+            "##### Regulatory",
+            f"- **{regulatory['source']}:** {regulatory['value']}.",
+            "",
+            "##### Sport",
+            f"- **{sport['source']}:** {sport['value']}.",
+            "",
+            "##### Sourcing",
+            f"- **{sourcing['source']}:** {sourcing['value']}.",
+            "",
+            "##### Monitoring",
+            "- No measurement, laboratory test, clearance, or stop protocol is inferred. Catalog restrictions and user-reported blockers remain separate from evidence quality.",
+            "",
+            "##### Suggestion",
+            f"- **SYSTEM:** {evaluation['system_suggestion']} — {evaluation['suggestion_reason']}. This does not change the week by itself.",
+            "- **PLAN ADMISSION:** " + ("no deterministic restriction found (not medical clearance)" if
+                candidate_plan_gate(row, rows, evaluation)["active_plan_allowed"] else
+                "withheld: " + ", ".join(candidate_plan_gate(row, rows, evaluation)["reasons"])) + ". Research remains available.",
+            "",
+            "##### Decision",
+            f"- **USER:** {row['user_decision']}; intent {row['intent']}; burden {row['burden']}; dose {row.get('user_dose') or 'unset'}.",
+            "",
+            "##### Source trail",
+        ))
+        tags = list(dict.fromkeys(tag for fit in per_reason.values() for tag in fit["source_trail"]))
+        cards.extend(f"- {tag}" for tag in tags[:6])
+        if not tags:
+            cards.append("- NONE — coverage `NONE` is an emitted result, not a missing section.")
+        cards.append("")
+    return "\n".join(cards).rstrip()
+
+
+def render_ledger_terminal(rows: Sequence[Mapping[str, Any]], evaluations: Mapping[str, Mapping[str, Any]]) -> None:
+    table = Table(title="Candidate stack matrix", box=box.ROUNDED)
+    for heading in ("Name", "Class", "Use", "Reasons", "Coverage", "Direction", "Suggestion", "Decision"):
+        table.add_column(heading, overflow="fold")
+    if not rows:
+        table.add_row("No ledger candidates", "—", "—", "—", "—", "—", "WATCH", "undecided")
+    for row in rows:
+        evaluation = evaluations[row["id"]]
+        table.add_row(
+            row["display_name"], row["class"], f"{row['use_status']} / {row['consideration_scope']}",
+            ", ".join(row.get("reasons", ())) or "UNSPECIFIED",
+            evaluation["coverage"], evaluation["direction"], evaluation["system_suggestion"], row["user_decision"],
+        )
+    console.print(table)
 
 
 TIMING_FOLDERS = (
@@ -2871,20 +4258,15 @@ def retrieve_timing_evidence(tbl, emb, reranker, profile: dict) -> Evidence:
         ))
         return activity and timing and not supplement_only
 
-    rows = [h for h in rows if on_topic(h)]
-    if reranker and rows:
-        scores = reranker.predict([(query, h.get("text", "")[:900]) for h in rows])
-        for h, score in zip(rows, scores):
-            h["_timing_score"] = float(score)
-        rows.sort(key=lambda h: h["_timing_score"], reverse=True)
+    rows = HC.EC.select_evidence(rows, query, reranker, k=28, topic_gate=on_topic)
 
     hits: list[dict] = []
     seen: set[str] = set()
     for h in rows:
-        source_key = h.get("doi") or h.get("source_pdf") or h.get("text", "")[:120]
-        if source_key in seen:
+        source_keys = HC.EC.paper_keys(h)
+        if seen.intersection(source_keys):
             continue
-        seen.add(source_key)
+        seen.update(source_keys)
         hits.append(h)
         if len(hits) >= 14:
             break
@@ -2912,8 +4294,12 @@ def preliminary_decisions(candidates: Sequence[Candidate], evidence: dict[str, E
     for c in candidates:
         ev = evidence[c.key]
         is_current = candidate_is_current(c, profile)
-        if c.policy == "KEEP-PRESCRIPTION":
-            decisions[c.key] = "KEEP-PRESCRIPTION — PRESCRIBER MANAGED; DO NOT CHANGE DOSE"
+        gate = SP.candidate_gate({"use_status": "in_use" if is_current else "not_in_use"}, c)
+        if not gate["active_plan_allowed"]:
+            decisions[c.key] = (
+                "REPORTED CURRENT USE — clinician/pharmacist review; no automatic change"
+                if is_current else "RESEARCH / REVIEW ONLY — no routine active-plan admission"
+            )
         elif c.policy.startswith("SKIP"):
             decisions[c.key] = "REVIEW CURRENT USE" if is_current else "SKIP"
         elif c.policy == "CLINICIAN-ONLY":
@@ -2956,13 +4342,18 @@ def choose_deep_candidates(
     if limit <= 0:
         return []
     anchor = {"creatine_monohydrate", "protein_whey", "caffeine", "omega_3_epa_and_dha", "vitamin_d3", "magnesium"}
-    explicitly_selected = set(profile.get("priority_supplement_keys", ())) | set(profile.get("selected_peptide_keys", ()))
+    priority_supplements = set(profile.get("priority_supplement_keys", ()))
+    selected_peptides = set(profile.get("selected_peptide_keys", ()))
     user_issues = set(profile["issues"])
 
     def score(c: Candidate) -> tuple[int, str]:
         ev = evidence[c.key]
         n = 0
-        if c.key in explicitly_selected:
+        if c.key in selected_peptides and c.policy != "KEEP-PRESCRIPTION":
+            # A gray item the user explicitly requested must not disappear behind the default
+            # ordinary-supplement anchors when an intentionally small --deep-limit is used.
+            n += 220
+        elif c.key in priority_supplements or c.key in selected_peptides:
             n += 100
         if (
             profile.get("experimental_policy") == "screen_strong_human"
@@ -3096,12 +4487,9 @@ def selection_lock_markdown(profile: dict) -> str:
         ("Deadline", "timeline_keys", TIMELINE_OPTIONS),
     )
     rows: list[tuple[str, str, str, str]] = [
-        ("LOCKED", "Creatine use", "creatine_monohydrate", "Creatine monohydrate 5 g/day"),
-        ("LOCKED", "Prescription context", "tirzepatide", "Tirzepatide; dose unchanged by HealthCoach"),
-        ("LOCKED", "Required prescription evidence review", "tirzepatide_current_prescription", "Tirzepatide (current prescription)"),
         (
-            "LOCKED",
-            "Required whole-food evidence reviews",
+            "CONFIGURED CATALOG",
+            "Whole-food evidence reviews",
             ", ".join(REQUIRED_FOOD_RESEARCH_KEYS),
             f"{len(REQUIRED_FOOD_RESEARCH_KEYS)} named foods; selection requests evidence review and does not require eating every item",
         ),
@@ -3113,14 +4501,12 @@ def selection_lock_markdown(profile: dict) -> str:
         ("ONE CHOICE", "Supplement intake route", profile["supplement_source"], profile["supplement_source_label"]),
         ("ONE CHOICE", "Experimental research boundary", profile["experimental_policy"], profile["experimental_policy_label"]),
     ]
-    locked_fields = {"current_supplement_keys", "selected_peptide_keys", "medication_keys"}
     for label, field, choices in option_rows:
         if field not in profile:
             continue
         keys = list(profile.get(field, ()))
         values = labels_for(keys, choices)
-        origin = "LOCKED + USER" if field in locked_fields else "USER / DEFAULT CONFIRMED"
-        rows.append((origin, label, ", ".join(keys) or "none", "; ".join(values) or "none selected"))
+        rows.append(("USER / DEFAULT CONFIRMED", label, ", ".join(keys) or "none", "; ".join(values) or "none selected"))
 
     lines = [
         f"**{profile.get('selection_lock_version', 'HC_SELECTION_LOCK_V1')}**",
@@ -3536,70 +4922,38 @@ def deterministic_deep_fallback(candidate: Candidate, ev: Evidence, decision: st
         lines.append(f"- **Retrieved evidence excerpt:** {snippet}… {tag}")
         if len(seen) >= 4:
             break
-    lines.extend([
-        f"- **Safety/interaction gate:** {candidate.gate or 'not established in retrieved passages.'}",
-        f"- **Bottom line:** {decision}. Model synthesis was withheld because it failed the citation validator; inspect the tagged excerpts and source trail below.",
-    ])
+    lines.append(f"- **Safety/interaction gate:** {candidate.gate or 'not established in retrieved passages.'}")
+    lines.append(
+        f"- **Bottom line:** {decision}. Model synthesis was withheld because it failed the citation validator; "
+        "inspect the tagged excerpts and source trail below."
+    )
     return "\n".join(lines) + "\n"
 
 
 def deep_card(model, tok, candidate: Candidate, ev: Evidence, decision: str, profile: dict, max_tokens: int) -> str:
-    if ev.coverage == "NONE":
+    if not ev.hits:
         return (
             f"### What does the retrieved evidence show for {candidate.name}?\n\n"
-            "- **Coverage:** NONE — no on-topic A/B human passage survived retrieval and DOI/source de-duplication.\n"
+            f"- **Coverage:** NONE. {HC.EC.NO_EVIDENCE}\n"
             f"- **Gate:** {candidate.gate or 'No evidence-based personal use case can be established from this library.'}\n"
             f"- **Decision:** {decision}.\n"
         )
-    ctx, source_tags, allowed_dois = numbered_evidence_context(ev)
-    system = (
-        "You are the evidence compiler inside a local supplement audit. Use ONLY the supplied retrieved passages. "
-        "The submitted queue label is not an evidence grade. Do not use outside memory. Do not invent a dose, form, "
-        "effect size, interaction, population, or citation. Trial amounts may appear only as 'Retrieved studies used'. "
-        "Do not prescribe or change medications. Every evidence claim must end with the exact passage tag "
-        "Do not write citations yourself. Cite claims only with the supplied short source IDs (S1, S2, etc.); the program "
-        "will replace those IDs with exact tags. If the passages do not answer a field, use NOT_ESTABLISHED. Separate "
-        "outcomes from mechanisms and flag indirect populations. Never say there are more studies than the programmatic "
-        "unique-source count."
+    question = (
+        f"What do the retrieved studies show about {candidate.name}: outcomes and magnitude, "
+        "study use, mechanisms, safety, population applicability, and uncertainty? "
+        f"Coverage is {ev.coverage}, with {ev.unique_papers} unique A/B sources. "
+        "NONE human coverage still permits a clearly labelled preclinical/mechanistic review. "
+        "Do not infer human efficacy from nonhuman passages or give personal use instructions."
     )
-    user = (
-        f"ITEM: {candidate.name}\nSUBMITTED QUEUE: {candidate.queue}\nPROGRAMMATIC COVERAGE: {ev.coverage}; "
-        f"best grade {ev.best_grade}; {ev.unique_papers} unique A/B sources; fit {ev.fit}.\n"
-        f"PRELIMINARY DECISION: {decision}\nSAFETY/DEFICIENCY GATE: {candidate.gate or 'none predeclared'}\n\n"
-        f"USER:\n{profile_markdown(profile)}\n\nRETRIEVED PASSAGES:\n{ctx}\n\n"
-        "Return exactly six plain-text lines and nothing else. Each line must be FIELD|SOURCE_IDS|CLAIM. Required fields, "
-        "one each: OUTCOMES, STUDY_USE, MECHANISM, SAFETY, APPLICABILITY, CONVERGENCE. SOURCE_IDS must be comma-separated "
-        "IDs from the supplied passages, or NOT_ESTABLISHED. Keep each CLAIM under 80 words. Do not use Markdown, headings, "
-        "nested lists, DOI strings, or unsupported facts. CONVERGENCE must say whether two independent human papers point "
-        "in the same direction; otherwise use NOT_ESTABLISHED."
+    answer = HC.answer_from_hits(model, tok, question, ev.hits, max_tokens)
+    return (
+        f"### What does the retrieved evidence show for {candidate.name}?\n\n"
+        f"- **Human coverage:** {ev.coverage}; {ev.unique_papers} unique A/B sources. "
+        f"Study-design metadata: {ev.best_grade}; certainty not assessed.\n"
+        f"- **Policy gate:** {candidate.gate or candidate.policy or 'No catalog restriction; not medical clearance.'}\n"
+        f"- **Decision:** {decision}. No initiation, stopping, or dose change is authorized by this card.\n\n"
+        + answer + "\n\n" + "\n".join(HC.EC.source_lines(ev.hits)) + "\n"
     )
-    if getattr(tok, "chat_template", None):
-        prompt = tok.apply_chat_template(
-            [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            add_generation_prompt=True, tokenize=False,
-        )
-    else:
-        prompt = system + "\n\n" + user + "\n\nANSWER:"
-    from mlx_lm import generate
-    out = strip_unretrieved_dois(generate(model, tok, prompt=prompt, max_tokens=max_tokens, verbose=False).strip(), allowed_dois)
-    rows = parse_card_rows(out, set(source_tags))
-    if rows is None:
-        correction = (
-            user + "\n\nYour previous response failed the parser. Return only the six required "
-            "FIELD|SOURCE_IDS|CLAIM lines. Use only valid S-number IDs or NOT_ESTABLISHED."
-        )
-        if getattr(tok, "chat_template", None):
-            retry_prompt = tok.apply_chat_template(
-                [{"role": "system", "content": system}, {"role": "user", "content": correction}],
-                add_generation_prompt=True, tokenize=False,
-            )
-        else:
-            retry_prompt = system + "\n\n" + correction + "\n\nANSWER:"
-        out = strip_unretrieved_dois(
-            generate(model, tok, prompt=retry_prompt, max_tokens=max_tokens, verbose=False).strip(), allowed_dois
-        )
-        rows = parse_card_rows(out, set(source_tags))
-    return render_card_rows(candidate, ev, decision, rows, source_tags) if rows else deterministic_deep_fallback(candidate, ev, decision)
 
 
 TIMING_FIELDS = ("COMPARISON", "CARDIO", "STRENGTH", "INTERFERENCE", "SLEEP_HEAT", "RECOMMENDATION")
@@ -3704,71 +5058,13 @@ def deterministic_timing_card(ev: Evidence, profile: dict) -> str:
 def timing_card(model, tok, ev: Evidence, profile: dict, max_tokens: int) -> str:
     if ev.coverage == "NONE":
         return deterministic_timing_card(ev, profile)
-    ctx, source_tags, allowed_dois = numbered_evidence_context(ev)
-    system = (
-        "You compare exercise timing using ONLY supplied retrieved passages plus explicitly labeled planning constraints. "
-        "Do not invent superiority for morning or evening. Do not invent clock times, effects, or citations. Cite evidence "
-        "only with supplied S-IDs. A recommendation driven by schedule feasibility rather than a comparative human study "
-        "must begin 'PLANNING DEFAULT:'. Blood-pressure timing evidence is not athletic-performance evidence; female, older, "
-        "hypertensive, or elite-volume populations must be flagged as indirect when the passage indicates them. Never add "
-        "training volume or a second hard session."
+    question = (
+        "Compare retrieved morning/evening strength and endurance findings, concurrent-training "
+        "separation, sleep and heat. Describe population limitations, not a new schedule or dose."
     )
-    user = (
-        f"USER PROFILE:\n{profile_markdown(profile)}\n\n"
-        f"PROGRAMMATIC COVERAGE: {ev.coverage}; {ev.unique_papers} unique A/B sources; fit {ev.fit}.\n"
-        f"LOCKED FEASIBILITY NOTE: {timing_planning_default(profile)}\n\nRETRIEVED PASSAGES:\n{ctx}\n\n"
-        "Return exactly six plain-text FIELD|SOURCE_IDS|CLAIM lines: COMPARISON, CARDIO, STRENGTH, INTERFERENCE, "
-        "SLEEP_HEAT, RECOMMENDATION. Use only supplied S-IDs or NOT_ESTABLISHED. Keep each claim under 90 words. "
-        "RECOMMENDATION must distinguish evidence from PLANNING DEFAULT. No Markdown and no DOI strings."
-    )
-    if getattr(tok, "chat_template", None):
-        prompt = tok.apply_chat_template(
-            [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            add_generation_prompt=True, tokenize=False,
-        )
-    else:
-        prompt = system + "\n\n" + user + "\n\nANSWER:"
-    from mlx_lm import generate
-    raw = strip_unretrieved_dois(generate(model, tok, prompt=prompt, max_tokens=max_tokens, verbose=False).strip(), allowed_dois)
-    rows = parse_timing_rows(raw, set(source_tags))
-    if rows is None:
-        correction = (
-            user
-            + "\n\nYour prior answer failed the parser. Return ONLY the six required "
-            "FIELD|SOURCE_IDS|CLAIM lines. Use exact field names, valid S-number IDs, or NOT_ESTABLISHED."
-        )
-        if getattr(tok, "chat_template", None):
-            retry_prompt = tok.apply_chat_template(
-                [{"role": "system", "content": system}, {"role": "user", "content": correction}],
-                add_generation_prompt=True, tokenize=False,
-            )
-        else:
-            retry_prompt = system + "\n\n" + correction + "\n\nANSWER:"
-        raw = strip_unretrieved_dois(
-            generate(model, tok, prompt=retry_prompt, max_tokens=max_tokens, verbose=False).strip(), allowed_dois
-        )
-        rows = parse_timing_rows(raw, set(source_tags))
-    if rows is None:
-        return deterministic_timing_card(ev, profile)
-    labels = {
-        "COMPARISON": "Morning-versus-evening evidence",
-        "CARDIO": "Cardio timing",
-        "STRENGTH": "Strength timing",
-        "INTERFERENCE": "Concurrent-training separation",
-        "SLEEP_HEAT": "Sleep and Dallas-heat tradeoffs",
-        "RECOMMENDATION": "Recommendation and why",
-    }
-    lines = [
-        "#### Evidence-checked cardio and strength timing", "",
-        f"- **Selections:** cardio—{profile['cardio_timing_label']}; strength—{profile['workout_timing_label']}.",
-        f"- **Coverage:** {ev.coverage}; best retrieved grade {ev.best_grade}; "
-        f"{ev.unique_papers} unique A/B human source(s); fit {ev.fit}.",
-    ]
-    for field in TIMING_FIELDS:
-        ids, claim = rows[field]
-        cites = " ".join(dict.fromkeys(source_tags[x] for x in ids))
-        lines.append(f"- **{labels[field]}:** {claim}" + (f" {cites}" if cites else ""))
-    return "\n".join(lines) + "\n"
+    answer = HC.answer_from_hits(model, tok, question, ev.hits, max_tokens)
+    return (deterministic_timing_card(ev, profile) + "\n" + answer + "\n\n"
+            + "\n".join(HC.EC.source_lines(ev.hits)) + "\n")
 
 
 def preferred_source_text(candidate: Candidate, profile: dict) -> str:
@@ -3990,14 +5286,18 @@ def direct_combination_hits(candidate: Candidate, ev: Evidence, profile: dict) -
 
 
 def experimental_screen_markdown(
-    candidates: Sequence[Candidate], evidence: dict[str, Evidence], decisions: dict[str, str], profile: dict
+    candidates: Sequence[Candidate],
+    evidence: dict[str, Evidence],
+    decisions: dict[str, str],
+    profile: dict,
+    deep_cards: Sequence[str] = (),
 ) -> str:
     policy = profile.get("experimental_policy", "approved_only")
     if policy != "screen_strong_human":
         return (
-            "**Broad scan not requested.** The approved/ordinary boundary remains active. Individually selected "
-            "peptide or gray-market topics are still reviewed elsewhere in this report, but HealthCoach did not "
-            "search the full experimental catalog."
+            "**LEGACY CATALOG TRIAGE / BROAD SCAN NOT REQUESTED:** HealthCoach did not search every configured "
+            "experimental topic. Individually selected items remain visible in the private-ledger matrix and fixed "
+            "cards above, including `WEAK` and `NONE`; this section does not issue a second recommendation code."
         )
 
     experimental = [
@@ -4008,15 +5308,15 @@ def experimental_screen_markdown(
     weak = sum(evidence[candidate.key].coverage == "WEAK" for candidate in experimental)
     none = sum(evidence[candidate.key].coverage == "NONE" for candidate in experimental)
     lines = [
-        "**Research-only boundary:** opting in expands retrieval; it does not authorize buying, combining, or self-administering an experimental drug.",
+        "**LEGACY CATALOG TRIAGE / RETRIEVED COVERAGE:** opting in expands the unselected catalog research scope. It does not alter the private-ledger suggestion or user decision, and it does not authorize buying, combining, or self-administering a product.",
         "",
-        f"HealthCoach scanned **{len(experimental)}** experimental/unapproved topics. **{len(passed)}** passed the programmatic gate of at least two unique candidate-folder A/B sources with human-participant and intervention/exposure signals; {weak} were WEAK and {none} had NONE. Passing means relevant human intervention evidence exists—not that the effect is positive, useful for this user, safe, legal, correctly manufactured, or compatible.",
+        f"HealthCoach scanned **{len(experimental)}** experimental/unapproved topics. **{len(passed)}** ranked as STRONG by the programmatic coverage rule; {weak} were WEAK and {none} had NONE. `WEAK` and `NONE` remain emitted results in the ledger matrix when selected. STRONG means source availability, not positive direction, safety, legality, product identity, applicability, adoption, or user approval.",
         "",
-        "| Item passing human-intervention gate | Human coverage | Configured goal relevance | A/B safety-marked sources | Retrieved chemistry/biology flags | Direct combination evidence with recorded stack | Compatibility result | Audit decision |",
+        "| Strong-coverage catalog item | Human coverage | Configured goal relevance | A/B safety-marked sources | Retrieved chemistry/biology flags | Direct combination evidence with recorded stack | Compatibility result | Legacy policy annotation |",
         "|---|---:|---|---:|---|---|---|---|",
     ]
     if not passed:
-        lines.append("| _No experimental item passed_ | — | — | — | — | — | Not verified | Do not add |")
+        lines.append("| _No STRONG catalog item_ | — | — | — | — | — | Not verified | — |")
     for candidate in passed:
         ev = evidence[candidate.key]
         safety_hits = _unique_human_hits(ev.hits, EXPERIMENTAL_SAFETY_TERMS)
@@ -4037,7 +5337,7 @@ def experimental_screen_markdown(
             candidate.name, f"{ev.coverage}; {ev.unique_papers} sources",
             ", ".join(ISSUES[issue] for issue in candidate.issues if issue in profile.get("issues", ())) or "No selected-goal match",
             len(safety_hits), flags,
-            direct, compatibility, decisions[candidate.key],
+            direct, compatibility, candidate.policy or "none",
         )
         lines.append("| " + " | ".join(str(value).replace("|", "/").replace("\n", "<br>") for value in vals) + " |")
     lines.extend([
@@ -4048,7 +5348,7 @@ def experimental_screen_markdown(
         "2. **Human safety and exposure:** adverse events, tolerability, pharmacokinetics, population, form, and duration are checked separately; efficacy coverage never substitutes for safety coverage.",
         "3. **Chemistry and biology:** retrieved receptor/pathway, CYP/transporter, cardiac, glucose, growth, coagulation, liver/kidney, and immune signals create **risk flags only**. They cannot prove two products are compatible.",
         "4. **Direct combination evidence:** a compatible verdict requires product-specific human interaction/co-use evidence plus clinician/pharmacist interpretation. In its absence the answer is **UNKNOWN / NOT VERIFIED**, never “probably safe.”",
-        "5. **Product and regulatory identity:** verify the exact finished product and current status. FDA explains that unapproved drugs have not been reviewed for safety, effectiveness, or quality: [Unapproved Drugs](https://www.fda.gov/drugs/enforcement-activities-fda/unapproved-drugs). FDA's interaction framework uses in-vitro and clinical evidence together during risk assessment: [M12 Drug Interaction Studies](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/m12-drug-interaction-studies).",
+        "5. **Regulatory, sport, and sourcing:** these remain separate annotations in the candidate card and never substitute for coverage, direction, applicability, suggestion, or user decision.",
     ])
     return "\n".join(lines)
 
@@ -4087,17 +5387,21 @@ def stack_action(candidate: Candidate, ev: Evidence, decision: str, profile: dic
     gated = candidate.policy in {
         "DEFICIENCY-GATED", "INTAKE/CLINICIAN-GATED", "CLINICIAN-GATED", "MEDICATION-REVIEW", "SAFETY-REVIEW"
     }
-    if candidate.policy == "KEEP-PRESCRIPTION":
-        return "KEEP-PRESCRIPTION — prescriber managed; no dose change"
+    gate = SP.candidate_gate({"direction": evidence_direction(ev)}, candidate)
+    if not gate["active_plan_allowed"]:
+        return (
+            "REPORTED USE ONLY — review with clinician/pharmacist; no automatic cessation or dose change"
+            if current else "RESEARCH / REVIEW ONLY — not admitted to routine active plan"
+        ) + "; " + ", ".join(gate["reasons"])
     if current:
         if adverse:
-            return "REMOVE/PAUSE OPTIONAL USE AND REVIEW THE RECORDED REACTION WITH A CLINICIAN/PHARMACIST"
+            return "REVIEW REPORTED REACTION WITH A CLINICIAN/PHARMACIST; no automatic cessation or dose change"
         if candidate.policy.startswith("SKIP") or ev.coverage == "NONE":
-            return "REMOVE / DO NOT REBUY unless a clinician supplied a separate indication"
+            return "REVIEW CURRENT USE — coverage gap is not an instruction to stop"
         if no_effect:
             if gated:
-                return "DO NOT REBUY unless a documented deficiency/intake need or clinician direction justifies it"
-            return "REMOVE / DO NOT REBUY unless a measurable target justifies another trial"
+                return "REVIEW CURRENT USE against the documented indication and clinician direction"
+            return "REVIEW CURRENT USE against a measurable target; no automatic change"
         if gated:
             if recorded_lab_mentions(candidate, profile):
                 return "KEEP ONLY AS CLINICIAN-DIRECTED CORRECTION; use dated follow-up results to reassess"
@@ -4105,8 +5409,8 @@ def stack_action(candidate: Candidate, ev: Evidence, decision: str, profile: dic
         if ev.coverage == "STRONG" and set(candidate.issues).intersection(profile["issues"]):
             return "KEEP — relevant and supported; continue tracking a measurable result"
         if ev.coverage == "WEAK":
-            return "OPTIONAL LOW-CONFIDENCE KEEP; remove first if simplifying or benefit is unclear"
-        return "REMOVE IF THERE IS NO SPECIFIC MEASURABLE PURPOSE"
+            return "LOW-CONFIDENCE CURRENT USE — review benefit and uncertainty; no automatic change"
+        return "REVIEW WHETHER THERE IS A SPECIFIC MEASURABLE PURPOSE; no automatic change"
     if decision == "SHORTLIST FOR REVIEW":
         return "ADD-CANDIDATE — clear safety/interaction gates before buying"
     explicitly_selected = candidate.key in (
@@ -4177,7 +5481,7 @@ def source_rows(candidates: Sequence[Candidate], evidence: dict[str, Evidence]) 
 def whole_food_evidence_table(candidates: Sequence[Candidate], evidence: dict[str, Evidence]) -> str:
     """Coverage ledger for selected foods; this is separate from supplement decisions."""
     lines = [
-        "Every row below is locked because the user explicitly requested the food. `STRONG` means at least two unique on-topic A/B human sources survived; `WEAK` means one; `NONE` means no efficacy claim is made. A food selection is a request for analysis, not a requirement to eat it.",
+        "**AUTHORED CATALOG SCOPE + RETRIEVED COVERAGE:** every configured whole-food catalog row is checked here; only rows separately present in the private candidate ledger are user selections. `STRONG` means at least two unique on-topic A/B human sources survived; `WEAK` means one; `NONE` is an emitted coverage result and makes no efficacy claim.",
         "For each food the compiler asks: Was a normal food/culinary form actually studied in humans, what outcome and amount were reported, is the source independent, does the population fit, and is an extract being mistaken for the food?",
         "",
         "| Locked food | Stable key | Coverage | Best grade | Unique human sources / DOIs | Population/form fit | Retrieved basis |",
@@ -4346,7 +5650,21 @@ def write_report(
     timing_evidence: Evidence,
     food_candidates: Sequence[Candidate],
     food_evidence: dict[str, Evidence],
-) -> None:
+    ledger_rows: Sequence[Mapping[str, Any]] = (),
+    ledger_evaluations: Mapping[str, Mapping[str, Any]] | None = None,
+    regeneration_diff: Mapping[str, Sequence[str]] | None = None,
+    rankings: Mapping[str, Sequence[Mapping[str, Any]]] | None = None,
+    ranking_intake: Mapping[str, Any] | None = None,
+    *,
+    dry_run: bool = False,
+) -> str:
+    ledger_evaluations = ledger_evaluations or {}
+    regeneration_diff = regeneration_diff or {
+        "ledger_added": (), "newly_adopted": (), "suggestion_changes": (),
+        "coverage_changes": (), "selected_but_missing_from_inventory": (),
+    }
+    rankings = rankings or {"adopt_consider": (), "research": ()}
+    ranking_intake = CL.normalize_intake(ranking_intake)
     queues = []
     for queue in QUEUE_ORDER:
         group = [c for c in candidates if c.queue == queue]
@@ -4365,6 +5683,10 @@ def write_report(
 
 ## PART I — CURRENT OPERATING WEEK
 
+### CANDIDATE LEDGER — CURRENT AND ADOPTED WEEK LINES
+
+{adopted_week_overlay(ledger_rows, ledger_evaluations)}
+
 ### PERSONALIZED TIMING OVERLAY — SOURCES CHECKED
 
 {timing_section}
@@ -4374,6 +5696,8 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 #### HARD-DEFINED WEEKLY CALENDAR
 
 {calendar_markdown(profile)}
+
+**AUTHORED PLAN MODULE:** the following base week is authored planning text, not a retrieved passage or imported wearable record.
 
 {week}
 
@@ -4387,6 +5711,8 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 
 {adaptive_food_plan_markdown(profile, evidence, food_candidates, food_evidence, out)}
 
+**AUTHORED PLAN MODULE:** the following food/coffee/milk module is authored planning text; retrieved tags remain explicitly labeled inside generated overlays.
+
 {nutrition}
 
 ## PART III — WHOLE-LIFE, HOME, FOOD-ADDITION, AND FAITH EVIDENCE PLAN
@@ -4399,11 +5725,29 @@ This overlay controls **when** cardio and strength are placed; the base week bel
 
 {whole_food_evidence_table(food_candidates, food_evidence)}
 
+**AUTHORED PLAN MODULE:** the following whole-life module is authored text, not automatically RAG-derived.
+
 {whole_life}
 
 ## PART IV — PERSONALIZED SUPPLEMENT EVIDENCE AUDIT
 
 > The “very / medium / low researched” labels are the user's submitted discovery queues, not findings. Coverage is recalculated from unique retrieved A/B human sources. This report does not diagnose a deficiency, change tirzepatide, or provide gray-market protocols.
+
+### DEEP RANKING INTAKE
+
+{intake_markdown(ranking_intake)}
+
+### FULL-CATALOG ADOPT-CONSIDER AND RESEARCH ORDERS
+
+{ranking_markdown(rankings)}
+
+### CANDIDATE REGENERATION DIFF
+
+{regeneration_diff_markdown(regeneration_diff)}
+
+### CANDIDATE STACK MATRIX
+
+{stack_matrix_markdown(ledger_rows, ledger_evaluations)}
 
 ### 0. INTAKE QUESTIONS AND RECORDED ANSWERS
 
@@ -4436,7 +5780,7 @@ For every selected item, the audit asks: What outcomes and effect magnitudes wer
 
 ### 5. EXPERIMENTAL / UNAPPROVED HUMAN-EVIDENCE AND COMPATIBILITY SCREEN
 
-{experimental_screen_markdown(candidates, evidence, decisions, profile)}
+{experimental_screen_markdown(candidates, evidence, decisions, profile, deep_cards)}
 
 ### 6. PERSONALIZED SHORTLIST
 
@@ -4450,7 +5794,11 @@ For every selected item, the audit asks: What outcomes and effect magnitudes wer
 
 {chr(10).join(queues)}
 
-### 9. QUESTION-BY-QUESTION DEEP EVIDENCE ANSWERS
+### 9. SELECTED CANDIDATE CARDS
+
+{candidate_cards_markdown(ledger_rows, ledger_evaluations)}
+
+#### ADDITIONAL LEGACY CATALOG EVIDENCE ANSWERS
 
 {chr(10).join(deep_cards) if deep_cards else '_Deep generation was disabled; use the evidence inventory and source trail._'}
 
@@ -4478,13 +5826,17 @@ The library did not return an on-topic A/B human passage for these selected cand
 
 ### LATEST BEVEL IMPORTS AND HEALTHCOACH VERIFICATION
 
+**IMPORTED WEARABLE:** the ledger below is user-mediated Bevel clipboard data plus HealthCoach validation; it is not authored plan text or a scientific paper.
+
 {BEVEL_WEEKLY_START}
 {bevel_weekly}
 {BEVEL_WEEKLY_END}
 """
     text = indexed_document(body, now)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(text, encoding="utf-8")
+    if not dry_run:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+    return text
 
 
 def show_catalog() -> None:
@@ -4554,7 +5906,10 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--preferences", help="budget, form, testing, and product constraints")
     ap.add_argument("--timeline", help="deadline, race date, or time constraint")
     ap.add_argument("--notes", help="one catch-all note for a non-interactive assessment")
-    ap.add_argument("--items", help="comma-separated subset; all requested candidates are default")
+    ap.add_argument(
+        "--items",
+        help="legacy compatibility input; ranking still scans the entire configured catalog",
+    )
     ap.add_argument("--priority-items", help="comma-separated supplements guaranteed priority in deep-card selection")
     ap.add_argument(
         "--supplement-source",
@@ -4572,6 +5927,11 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--evidence-only", action="store_true", help="skip local LLM generation; inventory + source trail only")
     ap.add_argument("--max-tokens", type=int, default=900, help="maximum tokens per deep card")
     ap.add_argument("--output", help="explicit Markdown output path")
+    ap.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="evaluate and print the ledger diff/matrix without writing a report or updating ledger evaluation history",
+    )
     return ap
 
 
@@ -4609,39 +5969,60 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 130
     console.print(Panel.fit(
         "[bold green]Selection lock verified[/bold green]\n"
-        "Every checkbox answer has a validated stable key. Tirzepatide, creatine 5 g/day, and the requested whole-food reviews are locked; "
+        "Every checkbox answer has a validated stable key. Current items remain user-confirmed; "
         "timing, research-boundary, and supplement-source choices each contain exactly one value, and all seven calendar days have one placement.",
         border_style="green",
     ))
-    supplement_candidates = select_candidates(args.items)
+    ledger = sync_profile_to_ledger(profile, CL.load_ledger())
+    if not args.dry_run:
+        # The assessment has been confirmed at this point. Persist selection independently of
+        # report generation so an interrupted model run cannot erase the candidate funnel.
+        CL.save_ledger(ledger)
+    ledger_rows = ledger["candidates"]
+
+    ranking_intake_state = ledger["intake"]
+    profile = apply_ranking_intake_to_profile(profile, ranking_intake_state, ledger_rows)
+    retrieval_goal_labels = profile.get("ranking_goal_labels") or profile["issue_labels"]
+    # Intake Spec v1 requires every ranking run to scan the entire configured catalog.
+    # --items and the legacy experimental boundary may still affect legacy prose/deep-card
+    # prioritization, but they cannot narrow the evidence/ranking visibility set.
+    supplement_candidates = list(CATALOG)
     manually_selected_peptides = set(profile.get("selected_peptide_keys", ()))
     broad_experimental_scan = profile.get("experimental_policy") == "screen_strong_human"
-    peptide_candidates = [
-        c for c in PEPTIDE_CATALOG
-        if broad_experimental_scan or c.key in manually_selected_peptides
-    ]
-    profile["experimental_scan_keys"] = [
-        c.key for c in peptide_candidates
-        if broad_experimental_scan and c.policy != "KEEP-PRESCRIPTION"
-    ]
-    candidates = [*supplement_candidates, *peptide_candidates]
+    peptide_candidates = list(PEPTIDE_CATALOG)
+    candidate_map = {candidate.key: candidate for candidate in (*supplement_candidates, *peptide_candidates)}
     # The user explicitly requested that the full named whole-food library be evidence-checked.
     # Dietary selection still controls the meal-planning pool; it does not limit research coverage.
-    food_candidates = list(WHOLE_FOOD_CATALOG)
+    food_map = {candidate.key: candidate for candidate in WHOLE_FOOD_CATALOG}
+    for row in ledger_rows:
+        candidate, _built_in = candidate_from_ledger_row(row)
+        if candidate.queue == QUEUE_WHOLE_FOOD:
+            food_map[candidate.key] = candidate
+        else:
+            # Ledger membership extends the full configured catalog with typed private rows.
+            candidate_map[candidate.key] = candidate
+    candidates = list(candidate_map.values())
+    food_candidates = list(food_map.values())
+    all_candidates_by_id = {candidate.key: candidate for candidate in (*candidates, *food_candidates)}
+    profile["experimental_scan_keys"] = [
+        candidate.key for candidate in candidates
+        if broad_experimental_scan and candidate.queue == QUEUE_PEPTIDE and candidate.policy != "KEEP-PRESCRIPTION"
+    ]
     explicit_count = len(
-        (set(profile.get("priority_supplement_keys", ())) | set(profile.get("selected_peptide_keys", ())))
+        (set(profile.get("priority_supplement_keys", ())) | set(profile.get("selected_peptide_keys", ()))
+         | {row["id"] for row in ledger_rows})
         & {c.key for c in candidates}
     )
     deep_limit = len(candidates) if args.all_deep else (
         max(12, explicit_count) if args.deep_limit is None else max(0, args.deep_limit)
     )
-    if args.evidence_only:
+    if args.evidence_only or args.dry_run:
         deep_limit = 0
 
     console.print(Panel(
         f"[bold]{len(candidates)} supplement/gray candidates[/bold] · "
         f"[bold]{len(food_candidates)} locked foods[/bold] · deep cards: [bold]{deep_limit}[/bold]\n"
-        "Loading the embedding model and reranker; evidence is retrieved locally.",
+        "Loading the embedding model and reranker; the full configured catalog is retrieved locally.",
         title="Audit scope", border_style="bright_blue",
     ))
     import lancedb
@@ -4664,18 +6045,74 @@ def main(argv: Sequence[str] | None = None) -> int:
         for c in candidates:
             progress.update(task, description=f"Checking {c.name[:38]}")
             evidence[c.key] = retrieve_candidate(
-                tbl, emb, reranker, c, profile["issue_labels"], profile["medications"]
+                tbl, emb, reranker, c, retrieval_goal_labels, profile["medications"]
             )
             progress.advance(task)
         for candidate in food_candidates:
             progress.update(task, description=f"Checking food: {candidate.name[:32]}")
             food_evidence[candidate.key] = retrieve_candidate(
-                tbl, emb, reranker, candidate, profile["issue_labels"], profile["medications"]
+                tbl, emb, reranker, candidate, retrieval_goal_labels, profile["medications"]
             )
             progress.advance(task)
+        overall_evidence: dict[str, Evidence] = {**evidence, **food_evidence}
         progress.update(task, description="Checking cardio and strength timing")
-        timing_evidence = retrieve_timing_evidence(tbl, emb, reranker, profile)
+        timing_evidence = (
+            Evidence("NONE", "—", 0, 0, "dry-run; timing not evaluated", [])
+            if args.dry_run else retrieve_timing_evidence(tbl, emb, reranker, profile)
+        )
         progress.advance(task)
+
+    ranking_candidates = [*candidates, *food_candidates]
+    preliminary_rankings = catalog_rankings(
+        ranking_candidates, overall_evidence, ledger_rows, ranking_intake_state
+    )
+    if interactive:
+        ledger = interactive_ranked_followups(ledger, preliminary_rankings, all_candidates_by_id)
+        ledger_rows = ledger["candidates"]
+        ranking_intake_state = ledger["intake"]
+        if not args.dry_run:
+            # Persist confirmed Screen F choices before reason-specific retrieval or synthesis.
+            CL.save_ledger(ledger)
+
+    reason_pairs = [
+        (row["id"], reason)
+        for row in ledger_rows
+        for reason in row.get("reasons", ())
+    ]
+    reason_evidence: dict[tuple[str, str], Evidence] = {}
+    if reason_pairs:
+        with progress:
+            task = progress.add_task("Retrieving reason-specific evidence", total=len(reason_pairs))
+            for item_id, reason in reason_pairs:
+                candidate = all_candidates_by_id[item_id]
+                progress.update(task, description=f"Checking {candidate.name[:28]} / {reason[:16]}")
+                reason_evidence[(item_id, reason)] = retrieve_candidate(
+                    tbl, emb, reranker, candidate,
+                    [REASON_QUERY_LABELS.get(reason, reason)], profile["medications"],
+                    reason_key=reason,
+                )
+                progress.advance(task)
+
+    ledger_evaluations = evaluate_ledger_rows(
+        ledger_rows, all_candidates_by_id, overall_evidence, reason_evidence, ranking_intake_state
+    )
+    rankings = catalog_rankings(
+        ranking_candidates, overall_evidence, ledger_rows, ranking_intake_state, ledger_evaluations
+    )
+    rank_positions = {
+        key: {entry["id"]: index for index, entry in enumerate(values, 1)}
+        for key, values in rankings.items()
+    }
+    for item_id, evaluation in ledger_evaluations.items():
+        evaluation["sort_lists"] = {
+            key: rank_positions[key][item_id] for key in ("adopt_consider", "research")
+        }
+    inventory_ids = set(evidence) | set(food_evidence)
+    matrix_ids = set(ledger_evaluations)
+    regen_diff = CL.regeneration_diff(ledger_rows, ledger_evaluations, inventory_ids, matrix_ids)
+    if regen_diff["selected_but_missing_from_inventory"]:
+        console.print(regeneration_diff_markdown(regen_diff))
+        raise SystemExit("BUG: selected candidate missing from inventory or matrix; report was not written")
 
     if args.deep_limit is None and not args.all_deep and not args.evidence_only and broad_experimental_scan:
         strong_experimental = sum(
@@ -4689,13 +6126,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         deep_limit = max(deep_limit, explicit_count + strong_experimental)
 
     decisions = preliminary_decisions(candidates, evidence, profile)
+    # Research depth is independent of routine plan admission, including gray-market items.
     deep_candidates = choose_deep_candidates(candidates, evidence, profile, decisions, deep_limit)
     cards: list[str] = []
     timing_section = deterministic_timing_card(timing_evidence, profile)
     # Checkpoint the complete inventory before slow generation starts.
     write_report(
         out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
-        food_candidates, food_evidence,
+        food_candidates, food_evidence, ledger_rows, ledger_evaluations, regen_diff,
+        rankings, ranking_intake_state,
+        dry_run=args.dry_run,
     )
     if deep_candidates:
         console.print("\n[bold]Loading the local generator for deep evidence cards...[/bold]")
@@ -4706,7 +6146,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             timing_section = timing_card(model, tok, timing_evidence, profile, args.max_tokens)
             write_report(
                 out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
-                food_candidates, food_evidence,
+                food_candidates, food_evidence, ledger_rows, ledger_evaluations, regen_diff,
+                rankings, ranking_intake_state,
+                dry_run=args.dry_run,
             )
             with progress:
                 task = progress.add_task("Writing bounded deep cards", total=len(deep_candidates))
@@ -4715,13 +6157,17 @@ def main(argv: Sequence[str] | None = None) -> int:
                     cards.append(deep_card(model, tok, c, evidence[c.key], decisions[c.key], profile, args.max_tokens))
                     write_report(
                         out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
-                        food_candidates, food_evidence,
+                        food_candidates, food_evidence, ledger_rows, ledger_evaluations, regen_diff,
+                        rankings, ranking_intake_state,
+                        dry_run=args.dry_run,
                     )
                     progress.advance(task)
         except KeyboardInterrupt:
             write_report(
                 out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
-                food_candidates, food_evidence,
+                food_candidates, food_evidence, ledger_rows, ledger_evaluations, regen_diff,
+                rankings, ranking_intake_state,
+                dry_run=args.dry_run,
             )
             console.print(Panel.fit(
                 f"[yellow]Interrupted safely.[/yellow] The full inventory and {len(cards)} completed deep card(s) were saved.\n{out}",
@@ -4731,8 +6177,16 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     write_report(
         out, profile, candidates, evidence, decisions, cards, timing_section, timing_evidence,
-        food_candidates, food_evidence,
+        food_candidates, food_evidence, ledger_rows, ledger_evaluations, regen_diff,
+        rankings, ranking_intake_state,
+        dry_run=args.dry_run,
     )
+    console.print(regeneration_diff_markdown(regen_diff))
+    render_ledger_terminal(ledger_rows, ledger_evaluations)
+    if args.dry_run:
+        console.print("[green]Dry run complete.[/green] The live report and private ledger were not written.")
+        return 0
+    CL.save_ledger(CL.record_reported_state(ledger, ledger_evaluations))
     render_terminal_summary(candidates, evidence, decisions, out)
     return 0
 

@@ -22,11 +22,19 @@ Done and committed to `~/GitHub/HealthCoach` this session:
    rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock
    git add -A && git commit -m "session updates" && git push
    ```
-2. **Refresh + regenerate on the new model** (downloads ~17 GB model first time):
+2. **Refresh + regenerate on the new model** (downloads ~17 GB model first time), then FINALIZE:
    ```bash
    cd ~/GitHub/HealthCoach/papers && ABOOST=1 python3 fetch_papers.py
    cd ../rag && source .venv/bin/activate && python3 -u ingest.py && python3 -u build_playbook.py
+   MAXTOK=1400 python3 -u batch_ask.py personalized_tiers.txt
+   python3 combine_report.py     # ALWAYS end here: organizes logs/ + writes the ordered master report
    ```
+
+## ALWAYS run this after any generation — the finalizer
+`python3 combine_report.py` (in rag/, venv active) does two things every time: sorts everything
+in `logs/` into typed folders (organize_logs), then writes `logs/MASTER_REPORT_*.md` — playbook +
+A/B/C/D tiers + every Q&A answer ordered by topic with a clickable table of contents. Open the
+newest one; older ones auto-file into `logs/reports/`.
 
 ## WORKS OFFLINE (on the plane) — IF the model + library are already local
 Once the Qwen3-30B model is downloaded and `rag/lancedb` exists, generation is 100% local:

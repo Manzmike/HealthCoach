@@ -5,7 +5,7 @@
 **Audience:** another AI or engineer who must operate, debug, or extend the project without rediscovering it first.
 **Important:** this describes both the intended design and the implementation. Where they differ, implemented behavior is stated explicitly.
 
-**Absolute handoff path:** `/Users/michaellindsay/GitHub/HealthCoach/rag/PROJECT_AI_HANDOFF.md`
+**Absolute handoff path:** `/Users/michaellindsay/GitHub/HealthCoach/docs/PROJECT_AI_HANDOFF.md`
 **Current print-ready week:** `/Users/michaellindsay/GitHub/HealthCoach/rag/WEEK_OPERATING_PLAN.md`
 
 ---

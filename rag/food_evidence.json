@@ -1,0 +1,3461 @@
+{
+  "beets": {
+    "display_name": "Beets / beetroot as food",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 8 non-directional) across 8 unique source(s), grade-weighted net +0",
+    "coverage": "STRONG",
+    "sources_retained": 12,
+    "good": [
+      {
+        "text": "Functional\nfood/\nCompound/\npopulation\nStudy type\n(Human/\nAnimal/In\nVitro)\nPopulation/\nModel\nDose & duration Key \ufb01ndings Ref\nEGCG, cyclists Human\n(randomized,\ncrossover)\n8 male cyclists EGCG 270 mg (6-day\nperiod + 1 h pre-trial) vs\nplacebo; caffeine arm 3\nmg/kg\nEGCG produced no meaningful bene \ufb01t on fat oxidation or 60-\nmin + 40-km performance; caffeine improved performance; HR\nand glucose responses noted (eg.",
+        "source": "[C / 01_food_inflammation/beets_dietary_nitrate / 10.3389/fonc.2026.1805804]"
+      },
+      {
+        "text": "While \nsome clinical trials report beneficial effects of dietary nitrate or \nnitrate-rich foods (e.g., beetroot juice, leafy vegetables) on metabolic \nparameters and body composition (13, 14), others have not found \nsignificant alterations (15, 16).",
+        "source": "[A / 01_food_inflammation/beets_dietary_nitrate / 10.3389/fpubh.2026.1798811]"
+      },
+      {
+        "text": "CONCLUSION\nOur systematic review and meta-analysis showed that \nbeetroot juice and inorganic nitrate consumption \nresulted in a significant improvement in endothelial \nfunction measured by FMD.",
+        "source": "[A / 01_food_inflammation/beets_dietary_nitrate / 10.1093/nutrit/nuaf132]"
+      },
+      {
+        "text": "However, two additional \nsupplementation studies, one using BR nitrate acutely ( 28) (70 mL \nBeet-IT) and one that administered sodium nitrite tablets for \n3 months ( 43) reported no significant improvements in walk \ndistances relative to placebo.",
+        "source": "[C / 01_food_inflammation/beets_dietary_nitrate / 10.3389/fnut.2024.1398108]"
+      }
+    ],
+    "bad": []
+  },
+  "oregano": {
+    "display_name": "Oregano as a culinary herb",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 7,
+    "good": [
+      {
+        "text": "When participants engaged in a 25 min long\nbattery of performance-based, standardized, stressor tasks\nduring the postmeal period, this beneficial effect of\nspices was not evident.",
+        "source": "[B / 01_food_inflammation/oregano / 10.1186/s12967-014-0360-5]"
+      },
+      {
+        "text": "Findings indi -\ncated that the ginger extract significantly reduced Th2-type \ncytokine levels, including IL-4, IL-5, and IL-13, effectively \nstabilized mast cells, and exhibited strong antioxidant activ-\nity.",
+        "source": "[C / 01_food_inflammation/oregano / 10.1007/s10787-026-02251-0]"
+      }
+    ],
+    "bad": []
+  },
+  "saffron_food": {
+    "display_name": "Saffron as a culinary spice",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 5,
+    "good": [],
+    "bad": [
+      {
+        "text": "However, \nisolated clinical and case reports have documented \nrare but notable safety concerns: prolonged use has \nbeen associated with hepatic dysfunction, including \ngranulomatous hepatitis in individuals taking the herb \nfor weeks to months, suggesting possible hepatotoxicity \nat higher doses or extended durations [108] and earlier \ncase reports.",
+        "source": "[C / 01_food_inflammation/saffron_food / 10.1007/s13659-026-00621-3]"
+      }
+    ]
+  },
+  "tamarind": {
+    "display_name": "Tamarind fruit or paste",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 5 non-directional) across 5 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 9,
+    "good": [],
+    "bad": [
+      {
+        "text": "ve effects;\nmultitarget bioactivity\n(antidiabetic, antioxidant,\nhepatoprotective)\n[40]\nPreclinical\n(in vivo)\nAdult male Wistar rats;\nmercuric chloride-\ninduced liver toxicity\nAqueous fruit extract\n(250 and 500 mg/kg)\nImproved body weight;\nnormalized liver weight; \u2193\nliver enzymes; mitigated\nhistological damage\nAntioxidant (free radical\nscavenging); membrane\nstabilization; liver enzyme\nnormalization; hepatocyte\nprotection\n[12]\nPreclinical\n(in vivo)\nHypertriglyceridemic\nWistar rats; high-fat\nsucrose diet for 75\ndays\nCombination of\nTamarindus indica\nextract (TIE) and\nMurraya paniculata\nextract (MPE), 400\nmg/kg/day; ratios\n50:350 to 350:50\n350:50 ratio most effective in\nlowering triglycerides; dose-\ndependent \u2193 body weight;\nhepatoprotective effects in all\ncombinations\nAntioxidant activity (\u2191catalase,\n\u2193MDA); enhanced muscle LPL\nactivity; improved lipid\nmetabolism\n[45]\nPreclinical\n(in vivo)\nWistar rat pups;\nprenatal aluminum\nchloride exposure\nEthyl acetate fraction\nof leaves (EFTI, 400\nand 800 mg/kg);\nVitamin E 300 mg/kg\nDose-dependent\nimprovement in liver\nbiomarkers (MDA, caspase-3,\nTNF-\u03b1, ALT, AST, ALP);\nmitigated histopathological\ndamage\nAnti-lipid peroxidative;\nantiapoptotic; anti-\ninflammatory; membrane-\nstabilizing; preserved liver\narchitecture\n[42]\nPreclinical\n(in vivo)\nSprague Dawley rats;\nhepatic damage\ninduced by isoniazid +\nrifampicin\nEthanolic stem bark\nextract (100 and 200\nmg/kg)\nDose-dependent restoration\nof ALT, AST, ALP, LDH,\nbilirubin, cholesterol, total\nprotein, albumin; histology\nconfirmed protection\nMembrane stabilization;\nimproved liver metabolic and\nsynthetic function; antioxidant\nand cytoprotective effects;\npreserved liver architecture\n[41]\nPreclinical\n(in vivo)\nSD rats and\nSpontaneous\nHypertensive Rats\n(SHR); basal diet \u00b1\ntamarind seeds\nTamarind seeds\nincorporated at 2%,\n4%, 8%\n\u2193 Serum cholesterol (SD\nrats); \u2193 glucose (SHR); \u2191 liver\nglycogen storage\nModulation of lipid\nmetabolism; enhanced\nglucose uptake and glycogen\nstorage; insulin-sensitizing\n[48]\nPreclinical\n(in vivo)\nAlbino Wistar rats;\nHFD-induced non-\nalcoholic fatty liver\ndisease\nSeed coat extract\n(ETS, 45, 90, 180\nmg/kg)\nAttenuated hepatomegaly,\nhepatic lipid accumulation\nand lipid peroxides; \u2193ALT,\nfree fatty acids; reduced\nsteatosis; \u2193 body weight;\nimproved insulin resistance\nAntioxidant; anti-obesity;\ninsulin sensitization; reduced\nhepatic lipid peroxidation\n[47]\nPreclinical\n(in vivo)\nAlloxan-induced\ndiabetic rats\nEthanolic fruit pulp\nextract (300 and 500\nmg/kg); Metformin 150\nmg/kg\nDose-dependent \u2193 serum\nglucose; improved lipid\nprofile; 500 mg/kg: complete\nliver regeneration; 300 mg/kg:\npartial improvement\nAntioxidant activity;\nnormalization of liver\nenzymes; hepatocyte\nregeneration\n[46]\nPreclinical\n(in vivo)\nHypercholesterolaemic\nhamsters; high-\ncholesterol diet for 10\nw",
+        "source": "[C / 01_food_inflammation/tamarind / 10.7759/cureus.100029]"
+      },
+      {
+        "text": "Serum AST,\nindicators of hepatotoxicity, were unchanged in hamsters treated\nwith T.",
+        "source": "[C / 01_food_inflammation/tamarind / 10.1371/journal.pone.0070058]"
+      }
+    ]
+  },
+  "blueberries": {
+    "display_name": "Blueberries, fresh or frozen",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 7 non-directional) across 7 unique source(s), grade-weighted net +0",
+    "coverage": "STRONG",
+    "sources_retained": 12,
+    "good": [],
+    "bad": []
+  },
+  "garlic_food": {
+    "display_name": "Garlic as food",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": [
+      {
+        "text": "One possible explanation\nfor all the above-mentioned toxicity reports is that the\nsulfoxides present in garlic extract undergo exchange\nreactions with \u2013SH groups of enzymes and other proteins\nin the body at physiological pH and temperature, so\ninhibiting their activity(129).",
+        "source": "[C / 01_food_inflammation/garlic_food / 10.1017/s0954422410000338]"
+      }
+    ]
+  },
+  "ginger_food": {
+    "display_name": "Ginger as food",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "honey_treats": {
+    "display_name": "Honey as food / treat",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 6,
+    "good": [
+      {
+        "text": "These\nbeneficial effects produced by NH when included in in-\nfant formula are attributable to its effects in enhancing\nthe gastrointestinal function which include the digestion\nprocess.",
+        "source": "[C / 01_food_inflammation/honey_food / 10.1186/1743-7075-9-61]"
+      },
+      {
+        "text": "Bahrami and \ncolleagues showed that honey supplementation in \ntype 2 diabetic pa tients significantly reduced body \nweight [120].",
+        "source": "[C / 01_food_inflammation/honey_food / 10.7150/ijbs.3697]"
+      }
+    ],
+    "bad": []
+  },
+  "cinnamon_food": {
+    "display_name": "Cinnamon as a culinary spice",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 6 non-directional) across 6 unique source(s), grade-weighted net +0",
+    "coverage": "STRONG",
+    "sources_retained": 10,
+    "good": [
+      {
+        "text": "(2024) \nfound that while cinnamon had no significant effect on \nlow-density lipoprotein cholesterol (LDL-C) levels and \ntotal cholesterol (TC), it significantly reduced triglyc -\nerides (TG) at doses below 500 mg/day [11].",
+        "source": "[A / 07_supplements/cinnamon_glucose / 10.1186/s41043-025-00967-3]"
+      },
+      {
+        "text": "In the cinnamon group the impaired fast-\ning glucose levels were significantly reduced (114 \u00b1 2.2\nto 102 \u00b1 4.3) at the end of 12 weeks.",
+        "source": "[B / 07_supplements/cinnamon_glucose / 10.1186/s12937-015-0098-9]"
+      }
+    ],
+    "bad": [
+      {
+        "text": "Our results did not identify any signif-\nicant adverse effects or toxicity of C.",
+        "source": "[B / 07_supplements/cinnamon_glucose / 10.1371/journal.pone.0317904]"
+      }
+    ]
+  },
+  "turmeric_food": {
+    "display_name": "Turmeric as a culinary spice",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 6 non-directional) across 7 unique source(s), grade-weighted net -1",
+    "coverage": "STRONG",
+    "sources_retained": 9,
+    "good": [],
+    "bad": [
+      {
+        "text": "As of June 2023, the TGA \nreceived 18 reports of hepatotoxicity linked to Curcuma \nlonga (turmeric) and/or curcumin products\u00a0(TGA 2023a,\u00a0b).",
+        "source": "[C / 01_food_inflammation/curcumin / 10.1007/s00210-025-04392-5]"
+      },
+      {
+        "text": "At the same time, there is\nrenewed public interest in complementary therapies, naturally\noccurring treatments with minimal toxicity and diets related\nto health and disease.",
+        "source": "[C / 01_food_inflammation/turmeric_food / 10.1017/s0007114509993667]"
+      },
+      {
+        "text": "Research has demonstrated a remedial potential of\ncurcumin in various conditions such as anti-obesity properties [ 8],\nanti-arthritic [ 15], ulcerative colitis [ 16], anti-in \ufb02ammatory [ 17],\nantidepressant [ 18], liver function enhancer [ 19] lipid-lowering\neffect [ 10], anti-cytotoxicity [ 20], and other metabolic diseases\n[21].",
+        "source": "[A / 01_food_inflammation/curcumin / 10.1038/s41387-025-00386-7]"
+      }
+    ]
+  },
+  "apples": {
+    "display_name": "Apples",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 5,
+    "good": [],
+    "bad": []
+  },
+  "bananas": {
+    "display_name": "Bananas",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": []
+  },
+  "strawberries": {
+    "display_name": "Strawberries",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 2 non-directional) across 3 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": [
+      {
+        "text": "Strawberry extract Breast cancer (T47D) cell line Swiss albino mice, \ninjected with breast adenocarcinoma cells \n \n \nStrawberry extract Breast cancer (A17) cell line Swiss albino mice, \ninjected with breast adenocarcinoma cells \n(0.1, 0.2, 0.5 and 1 mg/ml) for 48 and 72 h 2 g/kg \nbody weight for 45 days \n \n \n(0.1, 0.2, 0.5 and 1 mg/ml) for 48 and 72 h 2 g/kg \nbody weight for 45 days \n-\"Cytotoxicity \n-#Cells proliferation \n-\"Apoptosis \n-#Tumor volume \n-\"Cytotoxicity \n-#Cell proliferation \n-\"Apoptosis \n-#Tumor volume \n-#Cellular migration, adhesion and invasion \nSomasagara et al.",
+        "source": "[C / 01_food_inflammation/whole_food_library/strawberries / 10.1080/10408398.2018.1526165]"
+      }
+    ]
+  },
+  "raspberries": {
+    "display_name": "Raspberries",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 1 non-directional) across 2 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "ii \nraspberries \nMCF-7breast cancer cells and Bel-7402 liver \ncancer cells \n0.125\u20132 mg/mL for 48\u201372 -\"Cytotoxicity Zhang et al., 2015 \nSaponin from Rubus parvifolius L.",
+        "source": "[C / 01_food_inflammation/whole_food_library/raspberries / 10.1080/10408398.2018.1526165]"
+      }
+    ]
+  },
+  "blackberries": {
+    "display_name": "Blackberries",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "oranges": {
+    "display_name": "Oranges",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "grapefruit": {
+    "display_name": "Grapefruit \u2014 medication interaction screen applies",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "lemons": {
+    "display_name": "Lemons",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "limes": {
+    "display_name": "Limes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "kiwi": {
+    "display_name": "Kiwi",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "mango": {
+    "display_name": "Mango",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": [
+      {
+        "text": "Mangiferin administration (50 or 100 mg/kg for \n5 weeks) also protects against doxorubicin -induced mortality \nand electrocardiogram abnormality, decreases the expres -\nsion of biochemical cardiac toxicity markers, such as \ndehydrogenase and creatine phosphokinase isoenzyme (81).",
+        "source": "[C / 01_food_inflammation/whole_food_library/mango / 10.3892/mmr.2018.9529]"
+      }
+    ]
+  },
+  "pineapple": {
+    "display_name": "Pineapple",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "papaya": {
+    "display_name": "Papaya",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": []
+  },
+  "watermelon": {
+    "display_name": "Watermelon",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "grapes": {
+    "display_name": "Grapes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "cherries": {
+    "display_name": "Cherries",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "peaches": {
+    "display_name": "Peaches",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "pears": {
+    "display_name": "Pears",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "The beneficial effects of pear consumption in reducing\nT2DM risk have been well established in previous obser-\nvational studies, and the subsequent in vivo and in vitro\ndata have shown a strong positive correlation between\npear consumption and improvement in T2DM parame-\nters.",
+        "source": "[C / 01_food_inflammation/whole_food_library/pears / 10.1186/s12906-021-03392-1]"
+      }
+    ],
+    "bad": []
+  },
+  "plums": {
+    "display_name": "Plums / prunes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "pomegranate": {
+    "display_name": "Pomegranate",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 5,
+    "good": [],
+    "bad": []
+  },
+  "avocado": {
+    "display_name": "Avocado",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "dates": {
+    "display_name": "Dates",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "The results indicate that the extract signi\ufb01cantly reduced liver\nenzyme levels, suggesting its potential in mitigating non-steroidal\nanti-in\ufb02ammatory drug (NSAID)-induced liver toxicity.",
+        "source": "[C / 01_food_inflammation/whole_food_library/dates / 10.3389/fnut.2025.1651121]"
+      }
+    ]
+  },
+  "figs": {
+    "display_name": "Figs",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "spinach": {
+    "display_name": "Spinach",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": []
+  },
+  "kale": {
+    "display_name": "Kale",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "Concerns have been raised regarding transgenic crops,\nparticularly about the potential risks to human health in terms of toxicity and allergenicity,\nand to the environment due to biodiversity loss.",
+        "source": "[C / 01_food_inflammation/whole_food_library/kale / 10.3390/foods14060912]"
+      },
+      {
+        "text": "Characterization at the genome, transcript, protein and metabolite levels has\nillustrated the complexity of the cellular response to a whole series of environmental\nstresses, including nutrient de\ufb01ciency, pathogen attack, heavy metal toxicity, cold\nacclimation, and excessive and sub-optimal irradiation.",
+        "source": "[C / 01_food_inflammation/whole_food_library/kale / 10.3389/fpls.2015.00244]"
+      }
+    ]
+  },
+  "broccoli": {
+    "display_name": "Broccoli",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "Despite the potential of dietary nutrients like vitamin D and \nomega-3 fatty acids for neuroprotection (172), findings from studies \nhave yielded mixed results without consistent beneficial effects (173, \n174).",
+        "source": "[C / 01_food_inflammation/whole_food_library/broccoli / 10.3389/fnut.2024.1448130]"
+      }
+    ],
+    "bad": []
+  },
+  "cauliflower": {
+    "display_name": "Cauliflower",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "brussels_sprouts": {
+    "display_name": "Brussels sprouts",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "cabbage": {
+    "display_name": "Cabbage",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "carrots": {
+    "display_name": "Carrots",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "sweet_potatoes": {
+    "display_name": "Sweet potatoes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "potatoes": {
+    "display_name": "Potatoes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "Conversely, there observational data linking potato cons umption to an increased risk of weight gain and type 2\ndiabetes purportedly due to the potato\u2019s high glycemic index (GI).",
+        "source": "[C / 01_food_inflammation/whole_food_library/potatoes / 10.1007/s12230-018-09705-4]"
+      }
+    ]
+  },
+  "tomatoes": {
+    "display_name": "Tomatoes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 6,
+    "good": [],
+    "bad": []
+  },
+  "bell_peppers": {
+    "display_name": "Bell peppers",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "onions": {
+    "display_name": "Onions",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "mushrooms": {
+    "display_name": "Culinary mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 5,
+    "good": [
+      {
+        "text": "Gastrointestinal health \nConsumption of fresh mushrooms [39] and a mushroom extract [40] both showed beneficial effects \non stool weight, microbiota, bowel strain, faecal odour and halitosis (Table 2).",
+        "source": "[C / 01_food_inflammation/whole_food_library/mushrooms / 10.1016/j.jnutbio.2020.108453]"
+      }
+    ],
+    "bad": [
+      {
+        "text": "Morels are \nrecognized as being capable of causing neurological and \ngastrointestinal symptoms if eaten raw (Goldfrank, 2019) and a \nproposed taxonomy of mushroom toxicity published in \n2019 includes morel neurological syndrome as a distinct category \n(White et al., 2019).",
+        "source": "[C / 07_supplements/supplement_contamination_testing / 10.3389/ftox.2026.1856871]"
+      }
+    ]
+  },
+  "cooked_mushrooms": {
+    "display_name": "Cooked culinary mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [
+      {
+        "text": "Gastrointestinal health \nConsumption of fresh mushrooms [39] and a mushroom extract [40] both showed beneficial effects \non stool weight, microbiota, bowel strain, faecal odour and halitosis (Table 2).",
+        "source": "[C / 01_food_inflammation/whole_food_library/mushrooms / 10.1016/j.jnutbio.2020.108453]"
+      }
+    ],
+    "bad": []
+  },
+  "asparagus": {
+    "display_name": "Asparagus",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "Ovariectomy did not produce any effect on total ash weight \nand percentage, but significantly reduced (p<0.01) 51.67 \u00b1 \n0.64 total calcium content in femoral bone ash.",
+        "source": "[C / 01_food_inflammation/whole_food_library/asparagus / 10.2174/1874848100902010016]"
+      }
+    ],
+    "bad": []
+  },
+  "zucchini": {
+    "display_name": "Zucchini",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 5,
+    "good": [],
+    "bad": [
+      {
+        "text": "indications given in the pyramid are the following:\ndiabetic and hypertensive subjects as they are at greater risk of\ndiabetic retinopathy since both pathologies tend to damage the\nretina; subjects who are hypertensive and smokers as they are\nat increased risk of age-related macular degeneration; subjects\nsu\ufb00ering from other eye diseases such as glaucoma or uveitis,\ndiabetics, and who have undergone prolonged therapies with\ncortisone as they are at greater risk of diabetic retinopathy.",
+        "source": "[A / 01_food_inflammation/whole_food_library/zucchini / 10.3389/fmed.2023.1168560]"
+      }
+    ]
+  },
+  "cucumber": {
+    "display_name": "Cucumber",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "Significant improvements in the WOMAC for the CG were evidenced on day 30 and day 60.",
+        "source": "[B / 01_food_inflammation/whole_food_library/cucumber / 10.7759/cureus.93507]"
+      }
+    ],
+    "bad": []
+  },
+  "celery": {
+    "display_name": "Celery",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 5,
+    "good": [
+      {
+        "text": "It has more re-\ncently received substantial attention for its potential\nbeneficial effects on dyslipidemia, e.g., lowering blood\nLDL-cholesterol and triglycerides [ 78], stimulation of\nbile secretion, prebiotic effects, upregulation of endothe-\nlial NOS expression [ 12], and for its hepato-protective\neffects [ 79].",
+        "source": "[C / 01_food_inflammation/whole_food_library/celery / 10.1186/s12263-020-00667-z]"
+      }
+    ],
+    "bad": [
+      {
+        "text": "However, there is currently a lack of systematic reviews on the\nsources, physicochemical properties, hepatoprotective effects,\ntoxicity, pharmacokinetics, and novel formulations of API.",
+        "source": "[C / 01_food_inflammation/whole_food_library/celery / 10.3389/fphar.2024.1508060]"
+      }
+    ]
+  },
+  "lettuce": {
+    "display_name": "Lettuce",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "arugula": {
+    "display_name": "Arugula",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "watercress": {
+    "display_name": "Watercress",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "collard_greens": {
+    "display_name": "Collard greens",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "19\nPage 12 of 27\nF1000Research 2025, 14:525 Last updated: 24 AUG 2026\nFurthermore, this study did not assess the potential toxicity or adverse effects of the identified compounds.",
+        "source": "[C / 01_food_inflammation/whole_food_library/collard_greens / 10.12688/f1000research.164618.1]"
+      }
+    ]
+  },
+  "swiss_chard": {
+    "display_name": "Swiss chard",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "butternut_squash": {
+    "display_name": "Butternut squash",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "pumpkin": {
+    "display_name": "Pumpkin",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "radishes": {
+    "display_name": "Radishes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "oats": {
+    "display_name": "Oats",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "quinoa": {
+    "display_name": "Quinoa",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "brown_rice": {
+    "display_name": "Brown rice",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "barley": {
+    "display_name": "Barley",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 5,
+    "good": [
+      {
+        "text": "A study on 17 obese women at risk of \ndeveloping insulin resistance showed that consuming breakfast cereals containing 10\u00a0g of beta-glucan in oats \nsignificantly reduced post-prandial blood sugar levels in these people 30.",
+        "source": "[B / 01_food_inflammation/whole_food_library/barley / 10.1038/s41598-025-08576-0]"
+      }
+    ],
+    "bad": []
+  },
+  "millet": {
+    "display_name": "Millet",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [
+      {
+        "text": "Whole pseudo-cereal grains like buckwheat, amaranth, and quinoa are also high in \na variety of compounds like flavonoids, phenolic acids, trace elements, fatty acids, and \nvitamins, all of which have been shown to have beneficial effects on human health, including \nthe prevention and reduction of a variety of degenerative diseases [58\u201360].",
+        "source": "[C / 01_food_inflammation/whole_food_library/millet / 10.33263/briac135.465]"
+      }
+    ],
+    "bad": []
+  },
+  "buckwheat": {
+    "display_name": "Buckwheat",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "Conclusions\nPlant sprouts have been widely investigated, and their relationship to human health\nhas been established, including their roles in reducing risks related to chronic conditions\n(obesity, diabetes, and cytotoxicity), oxidative stress, and microbial safety.",
+        "source": "[C / 01_food_inflammation/whole_food_library/buckwheat / 10.3390/nu13082882]"
+      }
+    ]
+  },
+  "farro": {
+    "display_name": "Farro",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "popcorn": {
+    "display_name": "Plain popcorn",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "wild_rice": {
+    "display_name": "Wild rice",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "lentils": {
+    "display_name": "Lentils",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "chickpeas": {
+    "display_name": "Chickpeas",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "black_beans": {
+    "display_name": "Black beans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "kidney_beans": {
+    "display_name": "Kidney beans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "pinto_beans": {
+    "display_name": "Pinto beans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "STRONG",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "navy_beans": {
+    "display_name": "Navy beans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "edamame": {
+    "display_name": "Edamame",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "green_peas": {
+    "display_name": "Green peas",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "almonds": {
+    "display_name": "Almonds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "walnuts": {
+    "display_name": "Walnuts",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "pecans": {
+    "display_name": "Pecans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "pistachios": {
+    "display_name": "Pistachios",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "cashews": {
+    "display_name": "Cashews",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "brazil_nuts": {
+    "display_name": "Brazil nuts \u2014 selenium excess screen applies",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 3,
+    "good": [
+      {
+        "text": "Discussion\nEffects of polyphenol-rich seed foods on \nblood lipids and inflammatory markers in \npatients with coronary heart disease\nIn this study, it was observed that consumption of polyphenol-\nrich seed foods significantly improved the levels of triglycerides (TG) \nand high-density lipoprotein cholesterol (HDL-C) in patients \ndiagnosed with coronary heart disease.",
+        "source": "[A / 01_food_inflammation/whole_food_library/brazil_nuts / 10.3389/fnut.2024.1493410]"
+      }
+    ],
+    "bad": []
+  },
+  "hazelnuts": {
+    "display_name": "Hazelnuts",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "Interestingly,\na signi\ufb01cant reduction in erythrocyte lipid peroxidation\nwas observed in subjects at increased risk for CVD\nfollowing a diet with 21\u00b74 g walnuts/d for 5 weeks, when\ncompared with a control diet(147), but this effect was modu-\nlated according to each subject\u2019s particular paraoxonase\n(PON1) polymorphism(148).",
+        "source": "[A / 01_food_inflammation/whole_food_library/hazelnuts / 10.1017/s095442241100014x]"
+      }
+    ]
+  },
+  "peanuts": {
+    "display_name": "Peanuts",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "chia_seeds": {
+    "display_name": "Chia seeds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "flaxseeds": {
+    "display_name": "Flaxseeds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": [
+      {
+        "text": "However, the statin regimens may cause side effects, \nincluding liver toxicity [ 37], elevated levels of liver and \nmuscle enzymes, and increased incidence of diabetes \n[16, 38].",
+        "source": "[C / 01_food_inflammation/whole_food_library/flaxseeds / 10.1186/s41043-024-00679-0]"
+      }
+    ]
+  },
+  "pumpkin_seeds": {
+    "display_name": "Pumpkin seeds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "For instance, adzuki bean extract \nsignificantly improved spatial learning and recognition abilities in \nmice exposed to a high-fat diet.",
+        "source": "[C / 01_food_inflammation/whole_food_library/pumpkin_seeds / 10.3389/fnut.2025.1551211]"
+      },
+      {
+        "text": "The\nresults showed significant improvements in insulin sensitivity, total testosterone, and hirsutism scores in\nthe flaxseed group compared to controls.",
+        "source": "[A / 01_food_inflammation/whole_food_library/pumpkin_seeds / 10.7759/cureus.90997]"
+      }
+    ],
+    "bad": []
+  },
+  "sunflower_seeds": {
+    "display_name": "Sunflower seeds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "For example, a study conducted on mice found \nthat pretreatment with sunflower oil significantly reduced brain lipid \nperoxidation, infarct volume, and post-ischemic edema, with an \neffective dose determined to be\u00a03 ml/kg (31).",
+        "source": "[C / 01_food_inflammation/whole_food_library/sunflower_seeds / 10.3389/fnut.2025.1551211]"
+      }
+    ],
+    "bad": []
+  },
+  "hemp_seeds": {
+    "display_name": "Hemp seeds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "sesame_seeds": {
+    "display_name": "Sesame seeds",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "eggs": {
+    "display_name": "Eggs",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 5,
+    "good": [],
+    "bad": [
+      {
+        "text": "Adults with obesity are at an increased risk for nutrient \ndeficiencies [60].",
+        "source": "[C / 05_fat_loss_drugs/tirzepatide_incretins / 10.1007/s11883-026-01426-y]"
+      }
+    ]
+  },
+  "chicken": {
+    "display_name": "Chicken",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "turkey": {
+    "display_name": "Turkey",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "lean_beef": {
+    "display_name": "Lean beef; grass-fed is a sourcing preference",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "lamb": {
+    "display_name": "Lamb",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "STRONG",
+    "sources_retained": 6,
+    "good": [],
+    "bad": [
+      {
+        "text": "The results \nalign with prior research, including Chan et\u00a0al., who reported \nan increased risk of CRC with each 100 g/day increase in red \nmeat intake [44], and other systematic reviews that identified \na 13% increased risk of CC specifically [45].",
+        "source": "[A / 01_food_inflammation/whole_food_library/lamb / 10.1007/s12029-025-01247-3]"
+      }
+    ]
+  },
+  "pork": {
+    "display_name": "Unprocessed pork loin / chop",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "beef_liver": {
+    "display_name": "Beef liver / organ meat",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": [
+      {
+        "text": "For more than 50 years, red meat and processed red meat have \nbeen associated with increased risks of all-cause mortality, cardio -\nvascular disease, and metabolic disease.",
+        "source": "[C / 01_food_inflammation/whole_foods_nutrient_dense / 10.3389/fnut.2026.1839131]"
+      }
+    ]
+  },
+  "beef_heart": {
+    "display_name": "Beef heart",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "gelatin_broth": {
+    "display_name": "Gelatin/collagen foods and bone broth",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "salmon": {
+    "display_name": "Salmon",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "The available data suggest that BEA contamination of\nfeeds has no significant impact on the safety of foods of animal origin, while it might pose\na risk to animal health due to the high mycotoxin toxicity.",
+        "source": "[C / 08_peptides_gray/uncertified_quality_risk / 10.3390/toxins18050209]"
+      }
+    ]
+  },
+  "sardines": {
+    "display_name": "Sardines",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "mackerel": {
+    "display_name": "Mackerel",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "oysters": {
+    "display_name": "Oysters \u2014 cooked, not raw",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "fish_eggs": {
+    "display_name": "Fish eggs / roe and traditional foods",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 0 non-directional) across 1 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": [
+      {
+        "text": "Adults with obesity are at an increased risk for nutrient \ndeficiencies [60].",
+        "source": "[C / 05_fat_loss_drugs/tirzepatide_incretins / 10.1007/s11883-026-01426-y]"
+      }
+    ]
+  },
+  "plain_yogurt": {
+    "display_name": "Plain pasteurized yogurt",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "kefir": {
+    "display_name": "Pasteurized-milk kefir",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "STRONG",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "While some RCTs ( 30, 35, 40) reported \nsignificant improvements in lipid profiles, others (27, 31) found no \nmeasurable effect.",
+        "source": "[A / 01_food_inflammation/whole_food_library/kefir / 10.3389/fnut.2025.1651134]"
+      }
+    ],
+    "bad": []
+  },
+  "sauerkraut": {
+    "display_name": "Sauerkraut",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 4 non-directional) across 5 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 8,
+    "good": [
+      {
+        "text": "The \nstudy of a postbiotic fermented oat gruel found a beneficial effect on \nthe colonic mucosal barrier in IBS patients but not on the symptom \nscoring (22).",
+        "source": "[A / 01_food_inflammation/fermented_veg_sauerkraut_kimchi / 10.3389/fnut.2024.1494118]"
+      }
+    ],
+    "bad": [
+      {
+        "text": "This case -control study found that the highest\nhttps://doi.org/10.1038/s41538-025-00610-9 Review\nnpj Science of Food | (2025) 9:249 9\nquintile of sauerkraut intake, compared to the lowest quintile, was associated\nwith an increased risk of laryngeal cancer 151,152.",
+        "source": "[C / 01_food_inflammation/fermented_veg_sauerkraut_kimchi / 10.1038/s41538-025-00610-9]"
+      }
+    ]
+  },
+  "pasteurized_dairy": {
+    "display_name": "Pasteurized milk, yogurt, or cottage cheese",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "extra_virgin_olive_oil": {
+    "display_name": "Extra-virgin olive oil",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 4 non-directional) across 4 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 7,
+    "good": [
+      {
+        "text": "These \nbeneficial effects are attributed to the synergistic interactions among its \ncomponents, which provide a rich source of bioactive compounds, \nincluding polyphenols, monounsaturated and polyunsaturated fatty \nacids, fiber, vitamins, and minerals (20, 21).",
+        "source": "[C / 01_food_inflammation/whole_food_library/extra_virgin_olive_oil / 10.3389/fnut.2025.1626022]"
+      }
+    ],
+    "bad": []
+  },
+  "coconut": {
+    "display_name": "Coconut and coconut oil",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": []
+  },
+  "dark_chocolate": {
+    "display_name": "Dark chocolate",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "WEAK",
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "32 showed that consuming cocoa flavanols had a beneficial effect on \nprefrontal oxygenation during moderate-intensity exercise in both normoxia and hypoxia.",
+        "source": "[B / 01_food_inflammation/whole_food_library/dark_chocolate / 10.1038/s41598-023-43568-y]"
+      },
+      {
+        "text": "3) suggests there is evidence of a beneficial effect \nof CFs on vasodilator responses, with 12 out of 14 sub -\ngroups showing enhanced vasodilator responses fol -\nlowing CF intervention (85.7% (80.4\u201391.0%), p = 0.013).",
+        "source": "[A / 01_food_inflammation/whole_food_library/dark_chocolate / 10.1186/s12937-025-01121-9]"
+      }
+    ],
+    "bad": []
+  },
+  "parsley": {
+    "display_name": "Parsley",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "cilantro": {
+    "display_name": "Cilantro",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "seaweed": {
+    "display_name": "Nori and other edible seaweeds",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 0 non-directional) across 1 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": [
+      {
+        "text": "Organic nutrient inputs, such as animal manures and seaweed-\nbased biostimulants, have received increasing attention for their\nrole in enhancing soil fertility, nutrient availability, and plant\nnutrient uptake while reducing dependence on synthetic fertilizers\n(Eghball et al., 2002 ; Dordas, 2008 ; Godlewska et al., 2016 ).",
+        "source": "[C / 07_supplements/interactions_stacking / 10.3389/fpls.2026.1773934]"
+      }
+    ]
+  },
+  "gala_apples": {
+    "display_name": "Gala apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "fuji_apples": {
+    "display_name": "Fuji apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "honeycrisp_apples": {
+    "display_name": "Honeycrisp apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "granny_smith_apples": {
+    "display_name": "Granny Smith apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_delicious_apples": {
+    "display_name": "Red Delicious apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "golden_delicious_apples": {
+    "display_name": "Golden Delicious apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pink_lady_apples": {
+    "display_name": "Pink Lady apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "cosmic_crisp_apples": {
+    "display_name": "Cosmic Crisp apples",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "plantains": {
+    "display_name": "Plantains",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "cranberries": {
+    "display_name": "Cranberries",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "mulberries": {
+    "display_name": "Mulberries",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "elderberries": {
+    "display_name": "Elderberries",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "goji_berries_unsweetened": {
+    "display_name": "Goji berries, unsweetened",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "golden_berries": {
+    "display_name": "Golden berries",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "amla_indian_gooseberry": {
+    "display_name": "Amla / Indian gooseberry",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "navel_oranges": {
+    "display_name": "Navel oranges",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "valencia_oranges": {
+    "display_name": "Valencia oranges",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "blood_oranges": {
+    "display_name": "Blood oranges",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "mandarins": {
+    "display_name": "Mandarins",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "clementines": {
+    "display_name": "Clementines",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "cantaloupe": {
+    "display_name": "Cantaloupe",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "honeydew_melon": {
+    "display_name": "Honeydew melon",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "nectarines": {
+    "display_name": "Nectarines",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "apricots": {
+    "display_name": "Apricots",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "mangoes": {
+    "display_name": "Mangoes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "guava": {
+    "display_name": "Guava",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "lychee": {
+    "display_name": "Lychee",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "passion_fruit": {
+    "display_name": "Passion fruit",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 1 non-directional) across 2 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": [
+      {
+        "text": "In acute and sub-acute\ntoxicity experiments, oral administration of ethanol extract from\nunripe passion fruit peel at 550 mg/kg showed no harmful effects\nin rats.",
+        "source": "[C / 12_population_AA / 10.3389/fcvm.2025.1514911]"
+      }
+    ]
+  },
+  "dragon_fruit": {
+    "display_name": "Dragon fruit",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "star_fruit": {
+    "display_name": "Star fruit",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "jackfruit": {
+    "display_name": "Jackfruit",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "soursop": {
+    "display_name": "Soursop",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "persimmon": {
+    "display_name": "Persimmon",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "tamarind_pods": {
+    "display_name": "Tamarind pods",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "quince": {
+    "display_name": "Quince",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "prickly_pear": {
+    "display_name": "Prickly pear",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_grapes": {
+    "display_name": "Red grapes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "green_grapes": {
+    "display_name": "Green grapes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "bartlett_pears": {
+    "display_name": "Bartlett pears",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "anjou_pears": {
+    "display_name": "Anjou pears",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "bosc_pears": {
+    "display_name": "Bosc pears",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [
+      {
+        "text": "The beneficial effects of pear consumption in reducing\nT2DM risk have been well established in previous obser-\nvational studies, and the subsequent in vivo and in vitro\ndata have shown a strong positive correlation between\npear consumption and improvement in T2DM parame-\nters.",
+        "source": "[C / 01_food_inflammation/whole_food_library/pears / 10.1186/s12906-021-03392-1]"
+      }
+    ],
+    "bad": []
+  },
+  "hass_avocados": {
+    "display_name": "Hass avocados",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "young_coconut": {
+    "display_name": "Young coconut",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "mature_coconut_meat": {
+    "display_name": "Mature coconut meat",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "roma_tomatoes": {
+    "display_name": "Roma tomatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "beefsteak_tomatoes": {
+    "display_name": "Beefsteak tomatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "cherry_tomatoes": {
+    "display_name": "Cherry tomatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "grape_tomatoes": {
+    "display_name": "Grape tomatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "heirloom_tomatoes": {
+    "display_name": "Heirloom tomatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "curly_kale": {
+    "display_name": "Curly kale",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "lacinato_kale": {
+    "display_name": "Lacinato kale",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "mustard_greens": {
+    "display_name": "Mustard greens",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "dandelion_greens": {
+    "display_name": "Dandelion greens",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "beet_greens": {
+    "display_name": "Beet greens",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "moringa_leaves": {
+    "display_name": "Moringa leaves",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "romaine_lettuce": {
+    "display_name": "Romaine lettuce",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "iceberg_lettuce": {
+    "display_name": "Iceberg lettuce",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "butter_lettuce": {
+    "display_name": "Butter lettuce",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_leaf_lettuce": {
+    "display_name": "Green leaf lettuce",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_leaf_lettuce": {
+    "display_name": "Red leaf lettuce",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "bok_choy": {
+    "display_name": "Bok choy",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_cabbage": {
+    "display_name": "Green cabbage",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_cabbage": {
+    "display_name": "Red cabbage",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "napa_cabbage": {
+    "display_name": "Napa cabbage",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "savoy_cabbage": {
+    "display_name": "Savoy cabbage",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_beets": {
+    "display_name": "Red beets",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "golden_beets": {
+    "display_name": "Golden beets",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "russet_potatoes": {
+    "display_name": "Russet potatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "yukon_gold_potatoes": {
+    "display_name": "Yukon gold potatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_potatoes": {
+    "display_name": "Red potatoes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": [
+      {
+        "text": "A recent systematic review of the existing observa-\ntional studies identified five which showed a positive associ-\nation between potato consumption and increased risk of type 2\ndiabetes (including the previously mentioned study by Halton\nand colleagues), five showed no association and two actually\nshowed that potatoes were associated with a decreased risk\n(Borch et al.",
+        "source": "[C / 01_food_inflammation/whole_food_library/potatoes / 10.1007/s12230-018-09705-4]"
+      }
+    ]
+  },
+  "fingerling_potatoes": {
+    "display_name": "Fingerling potatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "orange_sweet_potatoes": {
+    "display_name": "Orange sweet potatoes",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "japanese_sweet_potatoes": {
+    "display_name": "Japanese sweet potatoes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "turnips": {
+    "display_name": "Turnips",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "daikon_radish": {
+    "display_name": "Daikon radish",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "parsnips": {
+    "display_name": "Parsnips",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "burdock_root": {
+    "display_name": "Burdock root",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "yellow_onions": {
+    "display_name": "Yellow onions",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_onions": {
+    "display_name": "Red onions",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "white_onions": {
+    "display_name": "White onions",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "sweet_onions": {
+    "display_name": "Sweet onions",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_onions_scallions": {
+    "display_name": "Green onions / scallions",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "shallots": {
+    "display_name": "Shallots",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "leeks": {
+    "display_name": "Leeks",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "yellow_squash": {
+    "display_name": "Yellow squash",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "acorn_squash": {
+    "display_name": "Acorn squash",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "spaghetti_squash": {
+    "display_name": "Spaghetti squash",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_bell_peppers": {
+    "display_name": "Green bell peppers",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_bell_peppers": {
+    "display_name": "Red bell peppers",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "yellow_bell_peppers": {
+    "display_name": "Yellow bell peppers",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "orange_bell_peppers": {
+    "display_name": "Orange bell peppers",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "jalapenos": {
+    "display_name": "Jalapenos",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_beans": {
+    "display_name": "Green beans",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "okra": {
+    "display_name": "Okra",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "bitter_melon": {
+    "display_name": "Bitter melon",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "jicama": {
+    "display_name": "Jicama",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "lotus_root": {
+    "display_name": "Lotus root",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "taro": {
+    "display_name": "Taro",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "yuca_cassava": {
+    "display_name": "Yuca / cassava",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chayote": {
+    "display_name": "Chayote",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "tomatillo": {
+    "display_name": "Tomatillo",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "nopales_cactus_pads": {
+    "display_name": "Nopales / cactus pads",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "radicchio": {
+    "display_name": "Radicchio",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "endive": {
+    "display_name": "Endive",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "white_button_mushrooms": {
+    "display_name": "White button mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "cremini_mushrooms": {
+    "display_name": "Cremini mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "portobello_mushrooms": {
+    "display_name": "Portobello mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [
+      {
+        "text": "Several beneficial effects of A.",
+        "source": "[C / 01_food_inflammation/whole_food_library/mushrooms / 10.1016/j.jnutbio.2020.108453]"
+      }
+    ],
+    "bad": []
+  },
+  "shiitake_mushrooms": {
+    "display_name": "Shiitake mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "oyster_mushrooms": {
+    "display_name": "Oyster mushrooms",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "maitake_mushrooms": {
+    "display_name": "Maitake mushrooms",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "corn": {
+    "display_name": "Corn",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "artichokes": {
+    "display_name": "Artichokes",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "fennel": {
+    "display_name": "Fennel",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "horseradish_root": {
+    "display_name": "Horseradish root",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "jasmine_rice": {
+    "display_name": "Jasmine rice",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "basmati_rice": {
+    "display_name": "Basmati rice",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "white_quinoa": {
+    "display_name": "White quinoa",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_quinoa": {
+    "display_name": "Red quinoa",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "black_quinoa": {
+    "display_name": "Black quinoa",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "rolled_oats": {
+    "display_name": "Rolled oats",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [],
+    "bad": []
+  },
+  "steel_cut_oats": {
+    "display_name": "Steel-cut oats",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "oat_groats": {
+    "display_name": "Oat groats",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "finger_millet_ragi": {
+    "display_name": "Finger millet / ragi",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "pearl_millet": {
+    "display_name": "Pearl millet",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "foxtail_millet": {
+    "display_name": "Foxtail millet",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": []
+  },
+  "bulgur_wheat": {
+    "display_name": "Bulgur wheat",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "popcorn_kernels": {
+    "display_name": "Popcorn kernels",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "wheat_berries": {
+    "display_name": "Wheat berries",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "sorghum": {
+    "display_name": "Sorghum",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "cannellini_beans": {
+    "display_name": "Cannellini beans",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "adzuki_beans": {
+    "display_name": "Adzuki beans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 3,
+    "good": [
+      {
+        "text": "The study found significant improvements in \ncognitive functions.",
+        "source": "[C / 01_food_inflammation/whole_food_library/pumpkin_seeds / 10.3389/fnut.2025.1551211]"
+      }
+    ],
+    "bad": []
+  },
+  "mung_beans": {
+    "display_name": "Mung beans",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "brown_lentils": {
+    "display_name": "Brown lentils",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_lentils": {
+    "display_name": "Green lentils",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "red_lentils": {
+    "display_name": "Red lentils",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "french_lentils_puy_lentils": {
+    "display_name": "French lentils / Puy lentils",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "black_lentils_beluga_lentils": {
+    "display_name": "Black lentils / beluga lentils",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "green_split_peas": {
+    "display_name": "Green split peas",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "yellow_split_peas": {
+    "display_name": "Yellow split peas",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "lima_beans": {
+    "display_name": "Lima beans",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "black_eyed_peas": {
+    "display_name": "Black-eyed peas",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "tempeh": {
+    "display_name": "Tempeh",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 3 non-directional) across 3 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 6,
+    "good": [],
+    "bad": []
+  },
+  "macadamia_nuts": {
+    "display_name": "Macadamia nuts",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 2 non-directional) across 2 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "cacao_nibs": {
+    "display_name": "Cacao nibs",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "whole_chicken": {
+    "display_name": "Whole chicken",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_breast_boneless_skinless": {
+    "display_name": "Chicken breast, boneless skinless",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_breast_bone_in": {
+    "display_name": "Chicken breast, bone-in",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_thighs_boneless": {
+    "display_name": "Chicken thighs, boneless",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_thighs_bone_in": {
+    "display_name": "Chicken thighs, bone-in",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_drumsticks": {
+    "display_name": "Chicken drumsticks",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_wings": {
+    "display_name": "Chicken wings",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_tenderloins": {
+    "display_name": "Chicken tenderloins",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_quarters": {
+    "display_name": "Chicken quarters",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_chicken": {
+    "display_name": "Ground chicken",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_liver": {
+    "display_name": "Chicken liver",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_heart": {
+    "display_name": "Chicken heart",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_gizzards": {
+    "display_name": "Chicken gizzards",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chicken_feet": {
+    "display_name": "Chicken feet",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "whole_turkey": {
+    "display_name": "Whole turkey",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "turkey_breast": {
+    "display_name": "Turkey breast",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "turkey_thighs": {
+    "display_name": "Turkey thighs",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "turkey_drumsticks": {
+    "display_name": "Turkey drumsticks",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "turkey_wings": {
+    "display_name": "Turkey wings",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_turkey": {
+    "display_name": "Ground turkey",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "duck_whole": {
+    "display_name": "Duck, whole",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "duck_breast": {
+    "display_name": "Duck breast",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_beef_80_20": {
+    "display_name": "Ground beef 80/20",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_beef_90_10": {
+    "display_name": "Ground beef 90/10",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_chuck": {
+    "display_name": "Ground chuck",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ribeye_steak": {
+    "display_name": "Ribeye steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "new_york_strip_steak": {
+    "display_name": "New York strip steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "filet_mignon": {
+    "display_name": "Filet mignon",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "t_bone_steak": {
+    "display_name": "T-bone steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "porterhouse_steak": {
+    "display_name": "Porterhouse steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "sirloin_steak": {
+    "display_name": "Sirloin steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "flat_iron_steak": {
+    "display_name": "Flat iron steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "flank_steak": {
+    "display_name": "Flank steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "skirt_steak": {
+    "display_name": "Skirt steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "hanger_steak": {
+    "display_name": "Hanger steak",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "chuck_roast": {
+    "display_name": "Chuck roast",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "brisket": {
+    "display_name": "Brisket",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "short_ribs": {
+    "display_name": "Short ribs",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "beef_stew_meat": {
+    "display_name": "Beef stew meat",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "top_round": {
+    "display_name": "Top round",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "bottom_round": {
+    "display_name": "Bottom round",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "eye_of_round": {
+    "display_name": "Eye of round",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "tri_tip": {
+    "display_name": "Tri-tip",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "beef_shank": {
+    "display_name": "Beef shank",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "oxtail": {
+    "display_name": "Oxtail",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "beef_kidney": {
+    "display_name": "Beef kidney",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "beef_tongue": {
+    "display_name": "Beef tongue",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "lamb_chops": {
+    "display_name": "Lamb chops",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "rack_of_lamb": {
+    "display_name": "Rack of lamb",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "leg_of_lamb": {
+    "display_name": "Leg of lamb",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "lamb_shoulder": {
+    "display_name": "Lamb shoulder",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_lamb": {
+    "display_name": "Ground lamb",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pork_chops": {
+    "display_name": "Pork chops",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pork_loin": {
+    "display_name": "Pork loin",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pork_tenderloin": {
+    "display_name": "Pork tenderloin",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pork_shoulder": {
+    "display_name": "Pork shoulder",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "boston_butt": {
+    "display_name": "Boston butt",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "picnic_shoulder": {
+    "display_name": "Picnic shoulder",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "ground_pork": {
+    "display_name": "Ground pork",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "baby_back_ribs": {
+    "display_name": "Baby back ribs",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "spare_ribs": {
+    "display_name": "Spare ribs",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pork_belly": {
+    "display_name": "Pork belly",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "pork_hocks": {
+    "display_name": "Pork hocks",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "herring": {
+    "display_name": "Herring",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "anchovies": {
+    "display_name": "Anchovies",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "trout": {
+    "display_name": "Trout",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "cod": {
+    "display_name": "Cod",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "halibut": {
+    "display_name": "Halibut",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "tilapia": {
+    "display_name": "Tilapia",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": [
+      {
+        "text": "These findings are consistent with the broader \nnutritional immunomodulation framework articulated by \nAbdul-Kari (2025) and Sharifinia ( 2025), which positions \nchelated and bioavailable mineral forms as tools for enhanc-\ning immune competence, reducing antibiotic dependence, \nand improving disease resistance in aquaculture.",
+        "source": "[C / 07_supplements/interactions_stacking / 10.1007/s11259-026-11207-2]"
+      }
+    ]
+  },
+  "catfish": {
+    "display_name": "Catfish",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": []
+  },
+  "tuna": {
+    "display_name": "Tuna",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "shrimp": {
+    "display_name": "Shrimp",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": [
+      {
+        "text": "( 2021) in \nlargemouth bass, which showed that high Azomite inclusion \nlevels disrupted intestinal microflora balance despite reduc-\ning Aeromonas levels, illustrate the context-dependence of \nmineral effects and suggest that outcomes observed under \noptimal laboratory conditions may not reliably predict those \nin production settings where multiple stressors operate \nsimultaneously.",
+        "source": "[C / 07_supplements/interactions_stacking / 10.1007/s11259-026-11207-2]"
+      }
+    ]
+  },
+  "mussels": {
+    "display_name": "Mussels",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "clams": {
+    "display_name": "Clams",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "nori": {
+    "display_name": "Nori",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "wakame": {
+    "display_name": "Wakame",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "kombu": {
+    "display_name": "Kombu",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "dulse": {
+    "display_name": "Dulse",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "kelp": {
+    "display_name": "Kelp",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 2,
+    "good": [],
+    "bad": [
+      {
+        "text": "Organic nutrient inputs, such as animal manures and seaweed-\nbased biostimulants, have received increasing attention for their\nrole in enhancing soil fertility, nutrient availability, and plant\nnutrient uptake while reducing dependence on synthetic fertilizers\n(Eghball et al., 2002 ; Dordas, 2008 ; Godlewska et al., 2016 ).",
+        "source": "[C / 07_supplements/interactions_stacking / 10.3389/fpls.2026.1773934]"
+      }
+    ]
+  },
+  "sea_moss": {
+    "display_name": "Sea moss",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "duck_eggs": {
+    "display_name": "Duck eggs",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "whole_milk": {
+    "display_name": "Whole milk",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "cottage_cheese": {
+    "display_name": "Cottage cheese",
+    "grade": "C",
+    "grade_why": "0 positive vs 0 negative source(s) (0 null, 1 non-directional) across 1 unique source(s), grade-weighted net +0",
+    "coverage": "NONE",
+    "sources_retained": 1,
+    "good": [],
+    "bad": []
+  },
+  "plain_greek_yogurt": {
+    "display_name": "Plain Greek yogurt",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "butter": {
+    "display_name": "Butter",
+    "grade": "C-",
+    "grade_why": "0 positive vs 1 negative source(s) (0 null, 2 non-directional) across 3 unique source(s), grade-weighted net -1",
+    "coverage": "NONE",
+    "sources_retained": 4,
+    "good": [],
+    "bad": [
+      {
+        "text": "The intake of olive oil may be associated with reduced \nrisk of cancer, whereas the intake of butter may be associated with increased risk of certain cancer types.",
+        "source": "[C / 01_food_inflammation/whole_food_library/coconut / 10.29219/fnr.v68.10487]"
+      }
+    ]
+  },
+  "olives": {
+    "display_name": "Olives",
+    "grade": "C",
+    "grade_why": "no local evidence retrieved either way \u2014 neutral for a whole food, not a red flag",
+    "coverage": "NONE",
+    "sources_retained": 0,
+    "good": [],
+    "bad": []
+  },
+  "kimchi": {
+    "display_name": "Kimchi / fermented vegetables",
+    "grade": "B+",
+    "grade_why": "1 positive vs 0 negative source(s) (0 null, 7 non-directional) across 8 unique source(s), grade-weighted net +2",
+    "coverage": "STRONG",
+    "local_coverage": "WEAK",
+    "curated_ab_sources": 5,
+    "sources_retained": 12,
+    "good": [
+      {
+        "text": "( 64) found that consuming 100 g of \nfermented kimchi daily for 10 weeks significantly improved fecal \nmicrobiota diversity, boosting beneficial genera such as \nBifidobacterium, Faecalibacterium, and Akkermansia.",
+        "source": "[A / 01_food_inflammation/fermented_veg_sauerkraut_kimchi / 10.3389/fnut.2025.1677478]"
+      },
+      {
+        "text": "Estrogen significantly reduced brain MAO-A activity in \novariectomized rats ( 43) and further treatment with genistein \ndecreased the enzymatic activity of recombinant human MAO-A \nobtained from transfected cells (44).",
+        "source": "[C / 01_food_inflammation/fermented_veg_sauerkraut_kimchi / 10.3389/fnut.2026.1707954]"
+      },
+      {
+        "text": "In our subgroup \nanalysis, we\u00a0attempted to distinguish the effect of fermented milk and \nother FFs, and found that only fermented milk had a beneficial effect \non IBS symptom relief.",
+        "source": "[A / 01_food_inflammation/fermented_veg_sauerkraut_kimchi / 10.3389/fnut.2024.1494118]"
+      }
+    ],
+    "bad": [
+      {
+        "text": "The consumption of sugar-sweetened beverages and fruit juice \nproducts has been linked to an increased risk of obesity and mortality in a variety of studies, \nwith some warning that fruit juice may contain as much sugar and calories as sugar-\nsweetened beverages [20-22].",
+        "source": "[C / 01_food_inflammation/fermented_veg_sauerkraut_kimchi / 10.4162/nrp.2025.19.5.786]"
+      }
+    ]
+  },
+  "eggplant": {
+    "display_name": "Eggplant",
+    "grade": "B",
+    "grade_why": "1 positive vs 0 negative source(s) (0 null, 1 non-directional) across 2 unique source(s), grade-weighted net +1",
+    "coverage": "STRONG",
+    "local_coverage": "NONE",
+    "curated_ab_sources": 5,
+    "sources_retained": 4,
+    "good": [
+      {
+        "text": "The authors concluded that eggplant\njuice administered to hypercholesterolemic\nrabbits significantly reduced weight, plasma\ncholesterol levels, aortic cholesterol con-\ntent, and malondialdehyde concentrations in\nnative-oxidized LDL and in the arterial wall\nand increased endothelium-dependent relax-\nation.",
+        "source": "[C / 01_food_inflammation/whole_food_library/eggplant / 10.1590/s0100-879x2000000900006]"
+      }
+    ],
+    "bad": []
+  }
+}

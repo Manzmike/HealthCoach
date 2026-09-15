@@ -1,0 +1,43 @@
+# WHO THIS IS FOR — the coach tailors every answer to this. Edit freely; #lines ignored.
+#
+# HOW TO USE THIS FILE
+#   1. Copy it:  cp profile.example.txt profile.txt
+#   2. Replace every bracketed section below with your own real information.
+#   3. Delete any paragraph that doesn't apply to you — nothing here is required.
+#   4. profile.txt is your personal file. Don't commit it if this repo is ever shared or
+#      pushed somewhere others can see it (add it to .gitignore first).
+#
+# This is free text, not a rigid form — write in full sentences the way you'd explain
+# yourself to a coach. The more specific you are, the more specific the advice will be.
+
+[Sex/gender], [age or age range]. [Occupation and how physically active or sedentary it is —
+e.g. desk-bound software engineer vs. on-your-feet retail vs. manual labor].
+Location: [city/state — matters for sunlight/vitamin D, heat/hydration, altitude].
+Work schedule: [e.g. standard 9-to-5 Mon-Fri, compressed 4x10, rotating shifts, night shift].
+
+Training: [what you currently do — lifting, running, both, neither, sport-specific].
+  Goal: [what you actually want — e.g. general fitness, hybrid strength+endurance,
+  aesthetic physique, marathon time, just move more].
+Training time: [when you actually train, and when you'd prefer to if different — this
+  changes how sleep, caffeine, and meal timing advice gets tailored].
+
+Body composition: [current state and goal, if relevant — e.g. wants to lose fat while
+  keeping muscle, wants to gain weight, not focused on body composition at all].
+  Medications relevant to body composition or metabolism: [e.g. GLP-1 agonist, thyroid
+  medication, none — this matters a lot for supplement/food interaction checks].
+
+Diet: [how you currently eat — whole foods, mostly processed, vegetarian/vegan, allergies,
+  intolerances, religious/cultural restrictions]. [Any specific challenge — e.g. sweet
+  tooth, late-night eating, skipping meals].
+
+Stress pattern: [how stress shows up for you and what you do about it, if anything —
+  e.g. stress-eating, poor sleep under pressure, already have good coping tools].
+
+Cognition goal: [if relevant — e.g. wants better focus for work/study, concerned about
+  caffeine reliance, interested in specific compounds or approaches].
+
+Top priorities: [list the 2-4 things that matter most to you right now, in your own words —
+  this is what the coach should weight most heavily when things trade off against each other].
+Preferences: [how you want information delivered — e.g. blunt and evidence-based, gentle
+  and encouraging, no fluff, cite sources]. [Any hard "no"s — e.g. no TRT, no fasting,
+  no specific drug class].

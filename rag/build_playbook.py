@@ -32,11 +32,6 @@ def slug(t):
 
 def main():
     inp = BS.parse_inputs(os.environ.get("INPUTS", "schedule_inputs.md"))
-    profile = getattr(C, "PROFILE", "") or "(no profile on file)"
-    histfile = os.environ.get("HISTORY", "history.md")
-    history = open(histfile).read().strip() if os.path.exists(histfile) else ""
-    hist_block = ("\n\nMY HISTORY (skip what I already do, respect what I tried that failed, account for my "
-                  "recent labs/metrics — don't re-recommend or contradict it):\n%s" % history) if history else ""
     inputs_block = "%s\n%s\n%s\n%s" % (
         BS.block("INCORPORATE", inp["INCORPORATE"]),
         BS.block("TO DO", inp["TO DO"]),
@@ -46,12 +41,11 @@ def main():
     print("loading models once (embedding + reranker + MLX)...")
     import lancedb
     from sentence_transformers import SentenceTransformer
-    from mlx_lm import load, generate
+    from mlx_lm import load
     emb = SentenceTransformer(C.EMB_MODEL, device="mps")
     tbl = lancedb.connect(C.DBDIR).open_table(C.TABLE)
     rr  = C.load_reranker()
     model, tok = load(C.GEN_MODEL)
-    chat = bool(getattr(tok, "chat_template", None))
 
     all_hits, seen_src = [], set()
 
@@ -60,31 +54,20 @@ def main():
         for q in queries:
             hs, _ = C.search(tbl, emb, q, k, rr)
             for h in hs:
-                if h["source_pdf"] in seen:
+                keys = C.EC.paper_keys(h)
+                if seen.intersection(keys):
                     continue
-                seen.add(h["source_pdf"]); hits.append(h)
+                seen.update(keys); hits.append(h)
         return hits[:cap]
 
     def gen(task, queries):
         hits = retrieve(queries)
-        ctx = "\n\n".join("[%s | %s | %s]\n%s" % (
-                h["grade"], h["folder"], h.get("doi") or "no-doi", h["text"][:1000]) for h in hits)
         for h in hits:
             if h["source_pdf"] not in seen_src:
                 seen_src.add(h["source_pdf"]); all_hits.append(h)
-        rules = ("Write for a smart beginner who does NOT know the jargon: define any technical term in one "
-                 "plain sentence and say how to find the personal number (cheapest method first). Tag claims "
-                 "A/B/C by human-evidence strength. Don't invent supplement/drug doses; label weak evidence. "
-                 "Prefer concrete numbers and ranges. Use short sections and clear headers.")
-        user = ("USER PROFILE:\n%s\n\nMY INPUTS (honor these first):\n%s%s\n\nEVIDENCE CONTEXT:\n%s\n\n%s\n\nTASK: %s"
-                % (profile, inputs_block, hist_block, ctx, rules, task))
-        if chat:
-            prompt = tok.apply_chat_template(
-                [{"role": "system", "content": C.SYSTEM}, {"role": "user", "content": user}],
-                add_generation_prompt=True, tokenize=False)
-        else:
-            prompt = "%s\n\n%s\n\nANSWER:" % (C.SYSTEM, user)
-        return generate(model, tok, prompt=prompt, max_tokens=MAXTOK, verbose=False).strip()
+        return C.answer_from_hits(model, tok,
+            "Explain the research relevant to this planning question, not a personal prescription or adoption decision: " + task,
+            hits, MAXTOK)
 
     tips = open(TIPS).read() if os.path.exists(TIPS) else "_(SCHEDULE_TIPS.md not found)_"
 
@@ -160,14 +143,7 @@ def main():
     out = os.path.join("logs", "playbook_" + datetime.datetime.now().strftime("%Y%m%d_%H%M") + ".md")
     ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     toc = "\n".join("%d. %s" % (i, t) for i, (t, _) in enumerate(chapters, 1))
-    srcs, ss = [], set()
-    for h in all_hits:
-        if h["source_pdf"] in ss:
-            continue
-        ss.add(h["source_pdf"]); doi = h.get("doi") or ""
-        ref = "https://doi.org/%s" % doi if doi else "(no DOI)"
-        srcs.append("- [%s] %s (%s) — %s — %s" % (
-            h["grade"], h["folder"], h.get("year") or "n.d.", ref, os.path.basename(h["source_pdf"])))
+    srcs = ["- " + line for line in C.EC.source_lines(all_hits)]
 
     with open(out, "w") as f:
         f.write("# My Health & Performance Playbook\n\n")

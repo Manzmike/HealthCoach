@@ -55,7 +55,8 @@ def chunker(txt):
     txt = txt.strip()
     i = 0
     while i < len(txt):
-        yield txt[i:i+CHUNK]
+        end = i + CHUNK
+        yield txt[i:end], i, end
         i += CHUNK - OVERLAP
 
 def meta_for(path):
@@ -74,6 +75,14 @@ def main():
     ap.add_argument(
         "--incremental", action="store_true",
         help="append only source paths not already present; use the default full rebuild after deleting or replacing PDFs",
+    )
+    ap.add_argument(
+        "--staging", action="store_true",
+        help="write to a staging table (chunks_staging) instead of production; use with --confirm to promote",
+    )
+    ap.add_argument(
+        "--confirm", action="store_true",
+        help="with --staging: promote staging table to production after verification",
     )
     a = ap.parse_args()
     import lancedb
@@ -106,18 +115,23 @@ def main():
         print("DONE — no new source paths; existing table unchanged")
         return
     model = SentenceTransformer(EMB_MODEL, device="mps")
-
+    import hashlib
     rows = []
     for n, path in enumerate(pdfs, 1):
         grade, year, folder, cohort, rel, fn = meta_for(path)
         text = extract(path)
         if len(text) < 200: continue
-        for ci, ch in enumerate(chunker(text)):
+        for ci, (ch, cstart, cend) in enumerate(chunker(text)):
             if len(ch.strip()) < 120: continue
+            page_hint = max(1, cstart // 3000)
+            content_hash = hashlib.sha256(ch.encode()).hexdigest()[:16]
+            # allow_c only for specific refusal subfolders, not whole-tree 08_peptides_gray prefix
+            allow_c = folder.split(os.sep)[-1] in REFUSAL
             rows.append({"text": ch, "grade": grade, "year": year, "folder": folder,
                          "cohort": cohort, "doi": doi_map.get(fn, ""),
-                         "source_pdf": rel, "allow_c": folder.split(os.sep)[-1] in REFUSAL
-                                                        or folder.split(os.sep)[0] in REFUSAL})
+                         "source_pdf": rel, "allow_c": allow_c,
+                         "chunk_ordinal": ci, "char_start": cstart, "char_end": cend,
+                         "page_hint": page_hint, "content_hash": content_hash})
         if n % 100 == 0: print("  %d/%d pdfs -> %d chunks" % (n, len(pdfs), len(rows)))
     print("total chunks: %d — embedding..." % len(rows))
     if not rows:
@@ -135,6 +149,23 @@ def main():
     if a.incremental and table_exists:
         tbl = db.open_table(TABLE)
         tbl.add(rows)
+    elif a.staging:
+        STAGING_TABLE = "chunks_staging"
+        if STAGING_TABLE in db.list_tables():
+            db.drop_table(STAGING_TABLE)
+        tbl = db.create_table(STAGING_TABLE, data=rows)
+        print(f"STAGING: wrote {len(rows)} chunks to '{STAGING_TABLE}'. Run with --staging --confirm to promote.")
+        return
+    elif a.confirm:
+        STAGING_TABLE = "chunks_staging"
+        if STAGING_TABLE not in db.list_tables():
+            print("ERROR: no staging table found to promote.")
+            return
+        if TABLE in db.list_tables():
+            db.drop_table(TABLE)
+        db.open_table(STAGING_TABLE).rename(TABLE)
+        print(f"PROMOTED: staging table promoted to '{TABLE}'.")
+        return
     else:
         if table_exists: db.drop_table(TABLE)
         tbl = db.create_table(TABLE, data=rows)

@@ -139,16 +139,11 @@ def parse_themes_file(path):
 def gather(tbl, emb, queries, reranker=None, focus="", k=6, cap=16):
     pool = {}
     for q in queries:
-        hits, _ = C.search(tbl, emb, q, k, reranker=None)   # candidate pool per sub-query
+        hits, _ = C.search(tbl, emb, q, k, reranker=reranker)
         for h in hits:
             pool[h["source_pdf"] + h["text"][:40]] = h
     items = list(pool.values())
-    if reranker and focus and items:                        # rerank the whole pool against the theme
-        scores = reranker.predict([(focus, h["text"][:512]) for h in items])
-        for h, s in zip(items, scores):
-            h["_rr"] = float(s)
-        items.sort(key=lambda h: h["_rr"], reverse=True)
-    return items[:cap]
+    return C.EC.select_evidence(items, focus or " ; ".join(queries), reranker, k=cap)
 
 def main():
     picks = [a.lower() for a in sys.argv[1:]]
@@ -163,12 +158,11 @@ def main():
     print("loading models once...")
     import lancedb
     from sentence_transformers import SentenceTransformer
-    from mlx_lm import load, generate
+    from mlx_lm import load
     emb = SentenceTransformer(C.EMB_MODEL, device="mps")
     tbl = lancedb.connect(C.DBDIR).open_table(C.TABLE)
     rr = C.load_reranker()
     model, tok = load(C.GEN_MODEL)
-    chat = bool(getattr(tok, "chat_template", None))
 
     with open(log, "w") as f:
         f.write("# HealthCoach deep-dive briefs\n\nGenerated %s · %d goals · %s\n"
@@ -181,24 +175,8 @@ def main():
             with open(log, "a") as f:
                 f.write("\n\n# %s\n\n(nothing in the library covers this.)\n\n---\n" % t["name"])
             continue
-        ctx = "\n\n".join("[%s | %s | %s]\n%s" % (h["grade"], h["folder"],
-                h.get("doi") or "no-doi", h["text"][:1100]) for h in hits)
-        instr = DEEP.format(focus=t["focus"])
-        pfx = ("USER PROFILE (tailor the plan to this person):\n%s\n\n" % C.PROFILE) if getattr(C, "PROFILE", "") else ""
-        uc = pfx + "CONTEXT:\n%s\n\nTASK: %s" % (ctx, instr)
-        if chat:
-            prompt = tok.apply_chat_template(
-                [{"role": "system", "content": C.SYSTEM},
-                 {"role": "user", "content": uc}],
-                add_generation_prompt=True, tokenize=False)
-        else:
-            prompt = "%s\n\n%s\n\nBRIEF:" % (C.SYSTEM, uc)
-        ans = generate(model, tok, prompt=prompt, max_tokens=1600, verbose=False).strip()
-        seen, srcs = set(), []
-        for h in hits:
-            if h["source_pdf"] in seen: continue
-            seen.add(h["source_pdf"])
-            srcs.append("[%s] %s  %s" % (h["grade"], h.get("doi") or "", h["source_pdf"]))
+        ans = C.answer_from_hits(model, tok, t["focus"], hits, 1600)
+        srcs = C.EC.source_lines(hits)
         with open(log, "a") as f:
             f.write("\n\n# %s\n\n%s\n\n**Sources (%d)**\n%s\n\n---\n"
                     % (t["name"], ans, len(srcs), "\n".join("- " + s for s in srcs)))
