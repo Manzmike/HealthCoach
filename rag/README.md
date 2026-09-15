@@ -390,6 +390,29 @@ python3 test_retrieval.py
 Use plain `python3 ingest.py` for an intentional full rebuild after deleting or replacing PDFs.
 Let either mode finish before generating another report.
 
+> **A full re-ingest destroys the safety-control plane. Re-apply it afterwards.**
+>
+> `python3 ingest.py` without `--incremental` does `drop_table` + `create_table`, and the
+> new table has none of the five control columns (`lane`, `personal`, `quarantined`,
+> `quarantine_reason`, `allow_c`). Every quarantine flag and lane assignment is silently
+> gone, and the coach's retrieval filter then has nothing to filter on. `--incremental`
+> keeps the existing table and is unaffected.
+>
+> After **any** full re-ingest, run these four in order from `rag/`, with the venv active:
+>
+> ```bash
+> python3 -m rag_control.schema_migration                    # re-add the 5 control columns
+> python3 -m rag_control.apply_lane_map                      # re-assign lanes from lane_map.json
+> python3 -m rag_control.ingest_gold_pack --pack-dir <dir>   # re-insert the personal gold-pack rows
+> python3 quarantine_scan.py                                 # re-flag quarantined rows (--dry-run to preview)
+> ```
+>
+> Order matters: `apply_lane_map.py` and `ingest_gold_pack.py` both write columns that
+> `schema_migration` has to have created first, and `quarantine_scan.py` filters on
+> `personal = false`, so the gold-pack rows must already be tagged before it runs or it
+> will quarantine hand-curated personal rows. Re-run
+> `python3 -m rag_control.eval_run` afterwards to confirm the pipeline is still green.
+
 Changing assessment choices, locking selections, changing stores, or generating another report
 does **not** require a source pull. Those actions reuse the indexed library already on the Mac.
 

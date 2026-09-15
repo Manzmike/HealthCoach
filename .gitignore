@@ -5,6 +5,9 @@
 # vector DB, logs, venv
 rag/lancedb/
 rag/logs/
+# regeneratable control-plane outputs (quarantine_scan.py / rag_control/eval_run.py)
+rag/quarantine/
+rag/rag_control/eval_report.json
 rag/.venv/
 .venv/
 # python caches

@@ -1,0 +1,50 @@
+{
+  "version": "2026-09-08",
+  "rule": "Classify intent first. Retrieve only allowed lanes plus deny. Gold personal rows boost. Grade C out of default retrieve.",
+  "intents": {
+    "sleep_eds": {
+      "examples": ["woke at 2", "fighting sleep on the drive", "partner hears me stop breathing", "inconclusive sleep study", "dropped after orgasm", "weird dream in bed"],
+      "lanes": ["sleep-OSA", "sleep-drive", "sleep-EDS", "nocturnal-arousal", "hypnopompic", "hypnagogic", "inertia", "post-orgasm-drop", "headache", "not-this", "deny-sex", "schedule"],
+      "forbid_lanes": ["incretin-context", "hormones-off", "peptides", "food-inflammation"]
+    },
+    "incretin": {
+      "examples": ["stay on tirzepatide", "nauseous on the shot", "thinking about stopping"],
+      "lanes": ["incretin-context", "food-floor", "return-train", "meal-sleep"],
+      "forbid_lanes": ["hormones-off", "deny-sex"]
+    },
+    "lifestyle_night": {
+      "examples": ["code until 11", "dinner at 10", "phone in bed", "weekend drinks"],
+      "lanes": ["screens-circadian", "meal-sleep", "caffeine", "alcohol", "schedule", "desk-sit"],
+      "forbid_lanes": ["hormones-off"]
+    },
+    "lipids": {
+      "examples": ["LDL 191", "Lp(a)", "January labs"],
+      "lanes": ["lipids", "inflam"],
+      "forbid_lanes": ["incretin-context", "deny-sex"]
+    },
+    "cut_train": {
+      "examples": ["how do I cut", "get back in the gym", "steps"],
+      "lanes": ["return-train", "food-floor", "desk-sit", "heat", "incretin-context"],
+      "forbid_lanes": ["hormones-off"]
+    },
+    "ancestry_hormones": {
+      "examples": ["Nigerian", "testosterone", "vitamin D"],
+      "lanes": ["lipids", "hormones-off", "food-floor"],
+      "forbid_lanes": ["deny-sex"]
+    },
+    "covid_vax": {
+      "examples": ["covid vaccine", "myocarditis after the shot", "did the vaccine do this", "mRNA", "long covid"],
+      "lanes": ["covid-vax", "covid-infect", "lipids", "inflam", "deny"],
+      "forbid_lanes": ["deny-sex", "hormones-off"]
+    }
+  },
+  "always_attach": ["deny", "person_state"],
+  "boost": {
+    "personal_pack": 3.0,
+    "grade_A": 1.5,
+    "grade_B": 1.0,
+    "grade_C": 0.0,
+    "us_rct_tagged": 0.8
+  },
+  "lead_priority": ["sleep_eds", "covid_vax", "incretin", "lipids", "cut_train", "ancestry_hormones", "lifestyle_night"]
+}

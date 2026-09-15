@@ -307,6 +307,33 @@ class TodayTests(unittest.TestCase):
             self.assertIsNone(action)
 
 
+class SafetyCardTests(unittest.TestCase):
+    def test_renders_primary_focus_and_actions_from_plan_this_week(self):
+        import tempfile, json as _json
+        plan = {
+            "week_of": "2026-09-08",
+            "primary_focus": "sleep_continuity_and_safety",
+            "why": "Witnessed pauses predate tirzepatide.",
+            "actions": [{"id": "A1", "lane": "sleep-drive", "text": "Do not drive while fighting sleep.",
+                         "done_when": "You did not drive drowsy."}],
+            "not_this": ["cut", "TRT"],
+            "safety": {"drowsy_drive": "Do not drive while fighting sleep."},
+        }
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
+            _json.dump(plan, f)
+            path = f.name
+        import today as T
+        lines = T.safety_card_lines(Path(path))
+        joined = "\n".join(lines)
+        self.assertIn("SLEEP CONTINUITY AND SAFETY", joined.upper())
+        self.assertIn("Do not drive while fighting sleep.", joined)
+        self.assertIn("A1", joined)
+
+    def test_missing_plan_file_renders_nothing_not_an_error(self):
+        import today as T
+        self.assertEqual(T.safety_card_lines(Path("/nonexistent/plan_this_week.json")), [])
+
+
 class FakeScreen:
     """Bounds-check drawing and drive the real curses loop without a terminal."""
 

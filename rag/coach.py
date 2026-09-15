@@ -18,6 +18,7 @@ Retrieval rules:
 import os, re, sys, argparse, json
 import evidence_control as EC
 import safety_policy as SP
+from rag_control import router as RC
 DBDIR = os.path.join(os.path.dirname(__file__), "lancedb")
 TABLE = "chunks"
 EMB_MODEL = "BAAI/bge-base-en-v1.5"
@@ -63,19 +64,36 @@ Accuracy rules (these are honesty, NOT censorship — keep them):
   in the CONTEXT or the QUESTION. If you don't have a passage for something, say "not covered
   in the library" — never fabricate a product (e.g. do not invent names) or guess what an
   acronym stands for. Rate only things the evidence or the user actually named.
+- DO NOT RECOMMEND WHAT THE EVIDENCE DOES NOT SUPPORT. Never recommend, initiate, or endorse
+  hormone therapy (testosterone replacement, a SERM), a self-sourced or home-compounded
+  statin, abstinence/"retention" protocols, or a detox/cleanse regimen, and never assert a
+  psychiatric diagnosis. You MAY name any of these in order to rule them out or explain why
+  they are not indicated -- ruling something out is the honest answer, not a banned topic.
+- DO NOT AFFIRM MORE THAN THE EVIDENCE SPECIFIES, AND NEVER CONTRADICT YOUR OWN QUOTE. The
+  amount in your recommendation must be the amount in the passage you cite for it. When the
+  user asks for more than the evidence supports, the recommendation IS the amount the evidence
+  supports — not the user's amount with the evidence's amount attached as a caveat, and not
+  the user's amount "once tolerated" or "once symptoms improve". Endorsing the user's number
+  and then naming a smaller one is still endorsing the user's number; do not do it. If a
+  passage you cite explicitly rules the user's proposal out, your claim must say so, not the
+  opposite.
+- PERSON STATE IS NOT A SOURCE: it is background context to tailor an answer to, never
+  something to cite. Every source_id in your output must name a header that actually appears
+  in the CONTEXT block below. If CONTEXT has no passage that answers the question, say so
+  (empty claims list) -- never invent a source_id to attach to a PERSON STATE or QUESTION
+  fact instead.
+
+When the user's request exceeds what your evidence supports, lead with the supported amount,
+never with the requested one. Do not open a recommendation by granting the request and then
+substituting a smaller amount inside the same sentence — that reads as approval of the
+request. Say what the evidence supports, then say plainly that the requested amount is not
+what it supports.
 
 Cite the passages you used at the end as (grade, doi/source). Do NOT invent author names,
 years, or study titles — refer to a source only by its provided [grade | folder | doi] tag.
 Be direct and concise.
-If a USER PROFILE is given, tailor the specifics (schedule, diet, training time, body-fat goal,
-location) to that person — but never soften the evidence or the harm/refusal rules for them."""
-
-# Optional per-person profile, injected into every answer so responses are tailored.
-_pf = os.path.join(os.path.dirname(__file__), "profile.txt")
-PROFILE = ""
-if os.path.exists(_pf):
-    with open(_pf, encoding="utf-8") as _profile_file:
-        PROFILE = "".join(line for line in _profile_file if not line.lstrip().startswith("#")).strip()
+Tailor the specifics (schedule, diet, training time, body-fat goal, location) to the PERSON
+STATE block — but never soften the evidence or the harm/refusal rules for them."""
 
 # --- Reranker: retrieve a wide candidate set, then re-score by true relevance ---
 RERANK_MODEL = "BAAI/bge-reranker-base"   # cross-encoder; ~1GB, downloads once
@@ -103,34 +121,85 @@ def load_reranker():
             print("reranker unavailable; evidence answers withheld")
     return _RR or None
 
-def search(tbl, emb, q, k=6, reranker=None, *, audit=None):
+# Deny lanes are excluded, but an unmapped row (lane IS NULL) is not a deny
+# row -- see build_where_clause's docstring for why the IS NULL arm is load-
+# bearing rather than redundant.
+DENY_LANE_EXCLUSION = "(lane IS NULL OR lane NOT IN ('deny','deny-detox'))"
+
+
+def build_where_clause(matched_intents: list[str]) -> str:
+    """The retrieval filter from spec Sec 5.2 / Sec 3: quarantine and
+    deny/deny-detox are always excluded; lane restriction only applies
+    when at least one intent actually matched, and even then an
+    unmapped row (lane IS NULL) always passes through.
+
+    The deny exclusion MUST be spelled `lane IS NULL OR lane NOT IN (...)`:
+    in SQL's three-valued logic `NULL NOT IN (...)` evaluates to NULL, not
+    true, so a bare `lane NOT IN (...)` silently drops every unmapped row --
+    138,976 of the corpus's 147,631 rows, i.e. the entire master corpus."""
+    base = ("(grade IN ('A','B') OR allow_c = true) AND quarantined = false"
+            " AND " + DENY_LANE_EXCLUSION)
+    lanes = RC.allowed_lanes(matched_intents)
+    if lanes is None:
+        return base
+    lane_list = ", ".join("'" + lane.replace("'", "''") + "'" for lane in lanes)
+    return base + f" AND (lane IS NULL OR lane IN ({lane_list}))"
+
+
+def search(tbl, emb, q, k=6, reranker=None, *, audit=None,
+           matched_intents: list[str] | None = None, related_out: list[dict] | None = None):
     """Metadata-filtered hybrid retrieval of CAND candidates, reranked to top-k.
        Returns (hits, weak). weak=True means only non-A/B design metadata survived."""
+    matched_intents = matched_intents if matched_intents is not None else []
     qv = emb.encode(Q_PREFIX + q, normalize_embeddings=True).tolist()
-    cc = ""  # Population is disclosed with the passage; never assume an unrecorded age.
-    def run(where, lim):
+    where = build_where_clause(matched_intents)
+    def run(where_clause, lim):
         # lancedb >=0.25 hybrid API: set vector() AND text() explicitly. Do NOT also pass
         # the query string positionally to search() — the old API allowed it, 0.25+ rejects
         # it ("provide a string query ... OR set vector() and text() ... But not both").
         try:
             rows = (tbl.search(query_type="hybrid")
                         .vector(qv).text(q)
-                        .where(where, prefilter=True).limit(lim).to_list())
+                        .where(where_clause, prefilter=True).limit(lim).to_list())
             return [dict(hit, _retrieval_mode="hybrid") for hit in rows]
         except Exception:
             # pure-vector fallback (no FTS index / older builds)
-            rows = tbl.search(qv).where(where, prefilter=True).limit(lim).to_list()
+            rows = tbl.search(qv).where(where_clause, prefilter=True).limit(lim).to_list()
             return [dict(hit, _retrieval_mode="vector_fallback") for hit in rows]
-    cands = run("(grade IN ('A','B') OR allow_c = true)" + cc, CAND)
-    hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit)
+    general = run(where, CAND)
+    # Personal gold-pack rows are few and hand-curated; a hybrid search over
+    # the full ~150k-row corpus can rank them below a wall of near-duplicate
+    # chunks from a single master-corpus paper, so they never reach the
+    # reranker at all even though boost_for() would already prefer them once
+    # they got there. Query them separately (same lane/quarantine filter,
+    # personal=true) and merge, so a real personal card always gets a chance
+    # to compete on reranker score instead of being crowded out upstream.
+    personal = run(f"({where}) AND personal = true", CAND)
+    seen = {hit.get("source_pdf") for hit in general}
+    cands = general + [hit for hit in personal if hit.get("source_pdf") not in seen]
+    scored_related: list[dict] = []
+    hits = EC.select_evidence(cands, q, reranker, k=k, audit=audit,
+                              boost_fn=RC.boost_for, related_out=scored_related)
+    if related_out is not None:
+        related_out.extend(scored_related or cands)
     if not hits and reranker is not None:
-        hits = EC.select_evidence(run("1=1" + cc, CAND), q, reranker, k=k, audit=audit)
+        fallback_candidates = run("1=1 AND quarantined = false AND " + DENY_LANE_EXCLUSION, CAND)
+        fallback_related: list[dict] = []
+        hits = EC.select_evidence(fallback_candidates, q, reranker, k=k, audit=audit,
+                                  boost_fn=RC.boost_for, related_out=fallback_related)
+        if related_out is not None:
+            related_out.extend(fallback_related or fallback_candidates)
     weak = bool(hits) and all(hit.get("grade") not in ("A", "B") for hit in hits)
     return hits, weak
 
 
-def answer_from_hits(model, tok, question, hits, max_tokens=1400):
-    """Generate research claims only; render nothing that fails the provenance contract."""
+def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
+                      matched_intents: list[str] | None = None,
+                      action_count: int = 0, primary_count: int = 0, drowsy: bool = False,
+                      related_hits: list[dict] | None = None):
+    """Generate research claims only; render nothing that fails the provenance contract
+    or the safety critic."""
+    matched_intents = matched_intents if matched_intents is not None else []
     warning = SP.urgent_message(question)
     if warning:
         return warning
@@ -140,22 +209,104 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400):
         for hit in hits
     ):
         return EC.NO_EVIDENCE
-    user = "CONTEXT:\n" + EC.claim_context(hits) + "\n\nQUESTION: " + question
-    system = SYSTEM + "\n\nOUTPUT CONTRACT (overrides prose formatting):\n" + EC.CLAIM_INSTRUCTIONS
-    if getattr(tok, "chat_template", None):
-        prompt = tok.apply_chat_template(
-            [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            add_generation_prompt=True, tokenize=False)
-    else:
-        prompt = system + "\n\n" + user + "\n\nANSWER:"
+    person_state_block = "PERSON STATE (authoritative, this user, this week):\n" + json.dumps(RC.PERSON, indent=2)
+    user = person_state_block + "\n\nCONTEXT:\n" + EC.claim_context(hits) + "\n\nQUESTION: " + question
+    lead = RC.lead_intent(matched_intents)
+    lead_note = f"\n\nLead topic for this answer: {lead}. Address it first, then any secondary topic briefly." if lead else ""
+    system = SYSTEM + lead_note + "\n\nOUTPUT CONTRACT (overrides prose formatting):\n" + EC.CLAIM_INSTRUCTIONS
     from mlx_lm import generate
-    output = generate(model, tok, prompt=prompt, max_tokens=max_tokens, verbose=False)
-    try:
-        claims = EC.validate_claims(output, hits)
-    except (ValueError, TypeError):
-        return ("Research synthesis withheld: the response failed source/quote validation. "
-                "No plan change was generated. Inspect the retrieved sources instead.")
-    return EC.render_claims(claims)
+
+    def _build_prompt(extra_system_note: str = "") -> str:
+        sys_text = system + extra_system_note
+        if getattr(tok, "chat_template", None):
+            return tok.apply_chat_template(
+                [{"role": "system", "content": sys_text}, {"role": "user", "content": user}],
+                add_generation_prompt=True, tokenize=False)
+        return sys_text + "\n\n" + user + "\n\nANSWER:"
+
+    quote_retry_note = ("\n\nYour previous claims failed quote verification: at least one quote "
+                         "was not an exact, single contiguous span of its cited source's QUOTABLE "
+                         "text. Copy one contiguous span exactly as written -- do not skip a line, "
+                         "do not merge two non-adjacent lines, do not paraphrase.")
+
+    def _generate_claims(extra_system_note: str = "") -> list[dict] | None:
+        prompt = _build_prompt(extra_system_note)
+        output = generate(model, tok, prompt=prompt, max_tokens=max_tokens, verbose=False)
+        try:
+            return EC.validate_claims(output, hits)
+        except (ValueError, TypeError):
+            return None
+
+    def _augment_required_lines(text: str) -> str:
+        # STANDING SAFETY REQUIREMENTS ONLY. person_state carries two facts
+        # about this specific user that must appear in a sleep_eds or
+        # incretin answer regardless of what the model generated and
+        # regardless of whether the question's own wording happened to
+        # mention driving or a prescriber:
+        #   1. the drowsy-drive line -- spec Sec 7's must_include_if_drowsy,
+        #      which the critic independently rejects a draft for missing;
+        #   2. prescriber ownership of any tirzepatide change -- spec Sec 7's
+        #      "allowed context is not a license to order".
+        #   3. repeat/confirmation of a high-risk lipid or hs-CRP result before
+        #      treatment changes, which prevents a cited personal card's
+        #      "repeat January draw" from being mistaken for model advice.
+        # These are standing safety requirements, not answer-vocabulary
+        # backstops. This must never be used as a wording
+        # backstop to make a specific word appear in the output: an appended
+        # sentence is the SYSTEM's standing rule, not the model's own finding,
+        # and anything that checks the output for a word cannot tell the two
+        # apart. Only ever called on a genuine rendered claims answer -- never
+        # on the withheld/no-evidence messages, where appending a safety line
+        # would be attached to nothing.
+        lower = RC._claim_text_only(text).lower()
+        extra = []
+        drowsy_risk = bool(RC.PERSON.get("constraints", {}).get("do_not_drive_if_fighting_sleep"))
+        if drowsy_risk and "sleep_eds" in matched_intents and "do not drive" not in lower:
+            extra.append("Do not drive while fighting sleep.")
+        if RC.lead_intent(matched_intents) == "incretin" and "prescriber" not in lower:
+            extra.append("Any change to the tirzepatide dose or stopping it is a decision "
+                         "for your prescriber, not this tool.")
+        if ("lipids" in matched_intents and
+                re.search(r"\b(?:ldl|lp\s*\(?a\)?|lpa|crp)\b", question, re.IGNORECASE) and
+                not re.search(r"\b(?:repeat|recheck|retest|confirm|follow[- ]?up|draw)\b", lower)):
+            extra.append("Repeat or confirm the relevant lab with your clinician before changing treatment.")
+        return text + "\n\n" + "\n".join(extra) if extra else text
+
+    def _generate_and_render(extra_system_note: str = "") -> str:
+        # A dedicated retry for quote-validation failures only, separate from the
+        # safety-critic retry below: one bad quote should not cost the whole draft
+        # a second real generation attempt meant for a different kind of rejection.
+        claims = _generate_claims(extra_system_note)
+        if claims is None:
+            claims = _generate_claims(extra_system_note + quote_retry_note)
+        if claims is None:
+            message = ("Research synthesis withheld: the response failed source/quote validation. "
+                       "No plan change was generated. Inspect the retrieved sources instead.")
+            related = EC.closest_source_block(related_hits or hits)
+            return message + ("\n\n" + related if related else "")
+        if not claims:
+            message = EC.render_claims(claims, hits)
+            related = EC.closest_source_block(related_hits or hits)
+            return message + ("\n\n" + related if related else "")
+        return _augment_required_lines(EC.render_claims(claims, hits))
+
+    rendered = _generate_and_render()
+    verdict = RC.critique(rendered, matched_intents, action_count=action_count,
+                           primary_count=primary_count, drowsy=drowsy)
+    if verdict["ok"]:
+        return rendered
+
+    retry_note = ("\n\nYour previous draft was rejected for: " + ", ".join(verdict["flags"]) +
+                  ". Do not repeat this. Do not dose or order a change to any medication. "
+                  "Do not conclude a vaccine caused a diagnosed condition.")
+    retried = _generate_and_render(retry_note)
+    retry_verdict = RC.critique(retried, matched_intents, action_count=action_count,
+                                 primary_count=primary_count, drowsy=drowsy)
+    if retry_verdict["ok"]:
+        return retried
+
+    return ("Draft rejected twice by the safety critic — showing the fallback plan instead.\n\n"
+            + json.dumps(retry_verdict["fallback"], indent=2))
 
 REFUSAL = ("08_peptides_gray","pp405_suvomipic","jxl069_mpc_chemistry","no_detox_protocol",
            "semen_retention_evidence","what_not_to_optimize","uncertified_quality_risk")
@@ -180,15 +331,26 @@ def main():
     tbl = lancedb.connect(DBDIR).open_table(TABLE)
     rr = load_reranker()
     diagnostics = []
-    hits, weak = search(tbl, emb, q, a.k, rr, audit=diagnostics)
+    matched_intents = RC.classify(q)
+    related_hits: list[dict] = []
+    hits, weak = search(tbl, emb, q, a.k, rr, audit=diagnostics,
+                        matched_intents=matched_intents, related_out=related_hits)
     if a.retrieval_audit:
         print(json.dumps(diagnostics, indent=2, default=str))
     if not hits:
-        print(EC.NO_EVIDENCE); return
+        print(EC.NO_EVIDENCE)
+        related = EC.closest_source_block(related_hits)
+        if related:
+            print("\n" + related)
+        return
 
     from mlx_lm import load
     model, tok = load(GEN_MODEL)
-    print("\n" + answer_from_hits(model, tok, q, hits, a.max_tokens) + "\n")
+    drowsy = any(term in q.lower() for term in ("drive", "driving", "commute"))
+    print("\n" + answer_from_hits(model, tok, q, hits, a.max_tokens,
+                                   matched_intents=matched_intents, action_count=1,
+                                   primary_count=1, drowsy=drowsy,
+                                   related_hits=related_hits) + "\n")
     print("Sources (study-design metadata, not certainty):")
     print("\n".join(EC.source_lines(hits)))
     if a.show:

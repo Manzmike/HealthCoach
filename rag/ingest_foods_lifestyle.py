@@ -206,17 +206,7 @@ def build_chunks_from_xlsx() -> list[dict]:
     return all_chunks
 
 
-def main():
-    ap = argparse.ArgumentParser(description="Ingest foods_lifestyle_fixes xlsx into LanceDB")
-    ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--incremental", action="store_true",
-                    help="append only source paths not already present")
-    ap.add_argument("--staging", action="store_true",
-                    help="write to staging table (chunks_staging) instead of production")
-    ap.add_argument("--confirm", action="store_true",
-                    help="with --staging: promote staging table to production after verification")
-    args = ap.parse_args()
-
+def run(args) -> None:
     print("Loading xlsx source...")
     chunks = build_chunks_from_xlsx()
     if args.limit:
@@ -235,8 +225,14 @@ def main():
     table_names = getattr(listing, "tables", listing)
     table_exists = TABLE in table_names
 
-    existing_sources = set()
-    if args.incremental and table_exists:
+    # Safety default: with no flags at all, behave like --incremental (append-only).
+    # The old "drop_table then recreate from ONLY this xlsx" behavior silently
+    # destroyed the 5,070-paper corpus once already and now requires an explicit,
+    # unmistakable flag.
+    incremental = args.incremental or not (args.staging or args.confirm or args.force_rebuild)
+
+    existing_sources: set[str] = set()
+    if incremental and table_exists:
         existing = db.open_table(TABLE)
         existing_sources = {
             str(row.get("source_pdf"))
@@ -246,7 +242,7 @@ def main():
         chunks = [c for c in chunks if c["source_pdf"] not in existing_sources]
         print(f"Incremental: {len(existing_sources)} existing | {len(chunks)} new")
     else:
-        print(f"Full rebuild: {len(chunks)} chunks")
+        print(f"Full rebuild (--force-rebuild): {len(chunks)} chunks")
 
     if not chunks:
         print("DONE — no new chunks")
@@ -255,14 +251,14 @@ def main():
     print("Embedding...")
     B = 256
     for i in range(0, len(chunks), B):
-        batch = chunks[i:i+B]
+        batch = chunks[i:i + B]
         vecs = model.encode([r["text"] for r in batch], normalize_embeddings=True,
-                            batch_size=64, show_progress_bar=False)
+                             batch_size=64, show_progress_bar=False)
         for r, v in zip(batch, vecs):
-            r["vector"] = v.tolist()
-        print(f"  embedded {min(i+B, len(chunks))}/{len(chunks)}")
+            r["vector"] = v.tolist() if hasattr(v, 'tolist') else v
+        print(f"  embedded {min(i + B, len(chunks))}/{len(chunks)}")
 
-    if args.incremental and table_exists:
+    if incremental and table_exists:
         tbl = db.open_table(TABLE)
         tbl.add(chunks)
     elif args.staging:
@@ -283,6 +279,8 @@ def main():
         print(f"PROMOTED: staging table promoted to '{TABLE}'.")
         return
     else:
+        # Only reachable with --force-rebuild: the explicit, unmistakable opt-in
+        # to drop and replace the whole table with just this xlsx's content.
         if table_exists:
             db.drop_table(TABLE)
         tbl = db.create_table(TABLE, data=chunks)
@@ -294,6 +292,21 @@ def main():
         print("FTS index skipped:", e)
 
     print(f"DONE — {len(chunks)} chunks in {DBDIR} (table '{TABLE}'; total rows {tbl.count_rows()})")
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Ingest foods_lifestyle_fixes xlsx into LanceDB")
+    ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--incremental", action="store_true",
+                    help="append only source paths not already present (this is also the default with no flags)")
+    ap.add_argument("--staging", action="store_true",
+                    help="write to staging table (chunks_staging) instead of production")
+    ap.add_argument("--confirm", action="store_true",
+                    help="with --staging: promote staging table to production after verification")
+    ap.add_argument("--force-rebuild", action="store_true",
+                    help="REQUIRED to drop and replace the whole 'chunks' table with only this xlsx's rows")
+    args = ap.parse_args()
+    run(args)
 
 
 if __name__ == "__main__":

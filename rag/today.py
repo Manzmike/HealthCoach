@@ -28,6 +28,43 @@ PLACEMENTS = {
     "unavailable": "Unavailable selected; no main-session availability for this day.",
 }
 
+DEFAULT_PLAN_THIS_WEEK = HERE / "rag_control" / "plan_this_week.json"
+
+
+def safety_card_lines(plan_path: Path = DEFAULT_PLAN_THIS_WEEK) -> list[str]:
+    """Read-only render of plan_this_week.json at the top of Today. This is
+    intentionally the ONLY chrome this pass adds -- the full GUI (deny wall,
+    person-state panel, night bar, coach dock) is a separate, later ticket
+    blocked on the eval gate going green."""
+    if not plan_path.exists():
+        return []
+    try:
+        with plan_path.open(encoding="utf-8") as f:
+            plan = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return []
+    lines = ["=" * 60, f"THIS WEEK'S FOCUS ({plan.get('week_of', 'unknown')})",
+             plan.get("primary_focus", "").replace("_", " ").upper()]
+    why = plan.get("why")
+    if why:
+        lines.append(why)
+    lines.append("")
+    for action in plan.get("actions", []):
+        lines.append(f"  [{action.get('id', '?')}] {action.get('text', '')}")
+        done_when = action.get("done_when")
+        if done_when:
+            lines.append(f"       done when: {done_when}")
+    not_this = plan.get("not_this")
+    if not_this:
+        lines.append("")
+        lines.append("NOT THIS WEEK: " + ", ".join(not_this))
+    drowsy = plan.get("safety", {}).get("drowsy_drive")
+    if drowsy:
+        lines.append("")
+        lines.append(drowsy)
+    lines.append("=" * 60)
+    return lines
+
 
 def display_text(value: Any) -> str:
     return "".join(char if char.isprintable() else " " for char in str(value))
@@ -230,7 +267,7 @@ def dashboard_lines(state: dict) -> list[str]:
 
 
 def summary_lines(state: dict[str, Any], *, show_review: bool = False) -> list[str]:
-    lines = [f"TODAY / {state['weekday']} / {state['date']}"]
+    lines = safety_card_lines() + [f"TODAY / {state['weekday']} / {state['date']}"]
     mode = state["placement"]
     snapshot = state.get("calendar_snapshot")
     if snapshot:

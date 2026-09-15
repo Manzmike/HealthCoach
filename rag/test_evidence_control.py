@@ -34,13 +34,14 @@ class Reranker:
 
 
 class Table:
-    def __init__(self, rows, fallback=None):
+    def __init__(self, rows, fallback=None, personal=None):
         self.rows = rows
         self.fallback = fallback if fallback is not None else rows
-        self.broad = False
+        self.personal = personal
+        self.mode = "rows"
 
     def search(self, *args, **kwargs):
-        self.broad = False
+        self.mode = "rows"
         return self
 
     def vector(self, *args):
@@ -50,14 +51,20 @@ class Table:
         return self
 
     def where(self, where, **kwargs):
-        self.broad = where.startswith("1=1")
+        if where.startswith("1=1"):
+            self.mode = "fallback"
+        elif self.personal is not None and "personal = true" in where:
+            self.mode = "personal"
+        else:
+            self.mode = "rows"
         return self
 
     def limit(self, *args):
         return self
 
     def to_list(self):
-        return copy.deepcopy(self.fallback if self.broad else self.rows)
+        source = {"rows": self.rows, "fallback": self.fallback, "personal": self.personal}[self.mode]
+        return copy.deepcopy(source)
 
 
 class EvidenceControlTests(unittest.TestCase):
@@ -107,6 +114,101 @@ class EvidenceControlTests(unittest.TestCase):
             rows = [hit(f"Creatine finding {i} in the same underlying paper.", doi="", source_pdf=str(first if i < 2 else second)) for i in range(3)]
             self.assertEqual(len(EC.select_evidence(rows, "creatine", Reranker([3, 2, 1]))), 2)
 
+    def test_boost_fn_changes_final_ranking_order(self):
+        low_raw_but_boosted = hit(text="Personal note about sleep.", source_pdf="gold.pdf",
+                                   doi="", grade="A", **{"personal": True})
+        high_raw_not_boosted = hit(text="Unrelated high-scoring passage.", source_pdf="other.pdf",
+                                    doi="10.1/other", grade="C", **{"personal": False})
+        reranker = Reranker([1.0, 5.0])  # high_raw_not_boosted would win on raw score alone
+        accepted = EC.select_evidence(
+            [low_raw_but_boosted, high_raw_not_boosted], "sleep", reranker, k=2,
+            topic_gate=lambda h: True,
+            boost_fn=lambda h: 10.0 if h.get("personal") else 1.0,
+        )
+        self.assertEqual(accepted[0]["source_pdf"], "gold.pdf")
+
+    def test_boost_fn_cannot_invert_negative_reranker_scores(self):
+        personal = hit(text="Personal sleep card.", source_pdf="personal.pdf",
+                       doi="", **{"personal": True})
+        general = hit(text="General sleep passage.", source_pdf="general.pdf")
+        # Raw BGE logits are often negative. A personal boost must promote
+        # the less-negative relevant card, not push it further down.
+        accepted = EC.select_evidence(
+            [personal, general], "sleep", Reranker([-2.0, 0.5]), k=2,
+            topic_gate=lambda h: True,
+            boost_fn=lambda h: 10.0 if h.get("personal") else 1.0,
+        )
+        self.assertEqual(accepted[0]["source_pdf"], "personal.pdf")
+        self.assertGreater(accepted[0]["retrieval"]["boosted_score"],
+                           accepted[1]["retrieval"]["boosted_score"])
+
+    def test_boost_fn_defaults_to_no_op(self):
+        a = hit(text="passage one here", source_pdf="a.pdf", doi="10.1/a")
+        b = hit(text="passage two here", source_pdf="b.pdf", doi="10.1/b")
+        reranker = Reranker([1.0, 2.0])
+        accepted = EC.select_evidence([a, b], "x", reranker, k=2, topic_gate=lambda h: True)
+        self.assertEqual(accepted[0]["source_pdf"], "b.pdf")  # unchanged behavior: raw score order
+
+    def test_a_personal_row_far_below_the_best_personal_card_is_dropped(self):
+        """I2. Personal rows were exempt from the relevance floor entirely,
+        so a thin card rode in behind a good one and got cited for claims it
+        does not support -- a vitamin-D question citing "hormones-off ... Old
+        T 598.". They now have their own floor, a fixed margin below the best
+        personal card this query found."""
+        good = hit(text="on topic personal card", source_pdf="good.pdf", doi="", **{"personal": True})
+        thin = hit(text="unrelated personal card", source_pdf="thin.pdf", doi="", **{"personal": True})
+        reranker = Reranker([-1.0, -1.0 - EC.PERSONAL_SCORE_MARGIN - 0.1])
+        accepted = EC.select_evidence([good, thin], "x", reranker, k=6, topic_gate=lambda h: True)
+        self.assertEqual([h["source_pdf"] for h in accepted], ["good.pdf"])
+
+    def test_a_personal_row_is_never_held_to_a_stricter_floor_than_a_general_one(self):
+        """Every personal card can sit below DEFAULT_MIN_SCORE and still be
+        admitted -- that exemption is the point, and the margin only trims
+        the tail relative to the best personal card, never raises the bar."""
+        rows = [hit(text=f"telegraphic card {i}", source_pdf=f"g{i}.pdf", doi="", **{"personal": True})
+                for i in range(3)]
+        accepted = EC.select_evidence(rows, "x", Reranker([-10.2, -10.19, -10.2]), k=6,
+                                       topic_gate=lambda h: True)
+        self.assertEqual(len(accepted), 3)
+        self.assertTrue(all(h["retrieval"]["minimum_score"] < EC.DEFAULT_MIN_SCORE for h in accepted))
+
+    def test_a_high_scoring_personal_card_does_not_raise_the_floor_above_the_general_one(self):
+        """The floor is min(general, best personal) - margin, so one card
+        scoring well above the general threshold cannot pull the floor up
+        and start excluding cards the general threshold itself would not."""
+        strong = hit(text="strong personal card", source_pdf="s.pdf", doi="", **{"personal": True})
+        modest = hit(text="modest personal card", source_pdf="m.pdf", doi="", **{"personal": True})
+        accepted = EC.select_evidence([strong, modest], "x", Reranker([9.0, -0.5]), k=6,
+                                       topic_gate=lambda h: True)
+        self.assertEqual({h["source_pdf"] for h in accepted}, {"s.pdf", "m.pdf"})
+
+    def test_singular_and_plural_stem_identically(self):
+        """I3. An asymmetric stemmer means a singular question can never
+        match a plural passage (or the reverse)."""
+        for singular, plural in (("peptide", "peptides"), ("pause", "pauses"),
+                                  ("dose", "doses"), ("statin", "statins")):
+            with self.subTest(word=singular):
+                self.assertEqual(EC._stem(singular), EC._stem(plural))
+
+    def test_the_statin_entity_lock_matches_the_compound_names_in_the_corpus(self):
+        """I3. "statin" is entity-locked (rightly), but the corpus only ever
+        names the compound, so the lock made the class term unmatchable."""
+        self.assertTrue(EC.topic_matches("should I start a statin",
+                                          hit("Rosuvastatin 10mg lowered LDL-C in adults.")))
+        self.assertTrue(EC.topic_matches("should I start a statin",
+                                          hit("Atorvastatin reduced events in the trial cohort.")))
+        self.assertFalse(EC.topic_matches("should I start a statin",
+                                           hit("Myostatin inhibition increased muscle mass in mice.")))
+
+    def test_max_per_subfolder_caps_even_across_different_papers(self):
+        rows = [
+            hit(text=f"passage {i}", source_pdf=f"p{i}.pdf", doi=f"10.1/{i}", folder="01_x/y")
+            for i in range(5)
+        ]
+        reranker = Reranker([5.0, 4.0, 3.0, 2.0, 1.0])
+        accepted = EC.select_evidence(rows, "x", reranker, k=10, topic_gate=lambda h: True)
+        self.assertLessEqual(len(accepted), EC.MAX_PER_SUBFOLDER)
+
     def test_identifiers_and_scored_passage_match_the_generation_context(self):
         self.assertFalse(EC.topic_matches("PP405 hair research", hit("JXL069 hair research only.")))
         self.assertFalse(EC.topic_matches("uridine monophosphate cognition attention", hit("Cognition and attention improved with another intervention.")))
@@ -136,6 +238,34 @@ class EvidenceControlTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 EC.validate_claims(json.dumps(data), [hit()])
 
+    def test_render_claims_shows_a_consistent_human_readable_reference(self):
+        row = hit()
+        data = self.claims(row)
+        sid = EC.source_id(row)
+        # Simulate the model's older bare-hash style in the nested quote link.
+        data["claims"][0]["sources"][0]["source_id"] = sid.removeprefix("source_")
+        records = EC.validate_claims(json.dumps(data), [row])
+        rendered = EC.render_claims(records, [row])
+        self.assertIn(f"[{sid}]", rendered)
+        self.assertIn(
+            f"Reference ({sid}): Grade B · Document: study.pdf · "
+            "Folder: 07_supplements/creatine · DOI: 10.1/study",
+            rendered,
+        )
+        self.assertIn(f"Evidence quote ({sid}): “{row['text']}”", rendered)
+        self.assertNotIn(f"Evidence quote ({sid.removeprefix('source_')}):", rendered)
+
+    def test_closest_source_block_is_ranked_and_labeled_as_context_only(self):
+        first = hit("The closer related passage with enough context to inspect.", source_pdf="first.pdf")
+        second = hit("The second related passage with enough context to inspect.", source_pdf="second.pdf")
+        third = hit("A less related passage with enough context to inspect.", source_pdf="third.pdf")
+        first["_rr"], second["_rr"], third["_rr"] = 1.0, 0.5, 0.1
+        rendered = EC.closest_source_block([third, first, second])
+        self.assertIn("not sufficient to support a direct answer", rendered)
+        self.assertLess(rendered.index("first.pdf"), rendered.index("second.pdf"))
+        self.assertNotIn("third.pdf", rendered)
+        self.assertIn("Closest passage (context only)", rendered)
+
     def test_unsourced_personal_actions_and_partial_json_are_withheld(self):
         for change in ({"sources": []}, {"claim_type": "practical_action"}, {"claim": ""}, {"claim_type": []},
                        {"claim": "You should inject the compound every day."}, {"claim": "Stop your medication."}):
@@ -148,10 +278,166 @@ class EvidenceControlTests(unittest.TestCase):
                 EC.validate_claims(text, [hit()])
         self.assertEqual(EC.render_claims(EC.validate_claims('{"claims": []}', [hit()])), EC.NO_EVIDENCE)
 
+    def test_spliced_quote_skipping_real_content_is_rejected(self):
+        row = hit("Title clinical line one.\nSource: Some Reference.\nMiddle clinical detail line here.\n"
+                   "Body sentence with enough length to finish the point.")
+        data = self.claims(row)
+        data["claims"][0]["sources"][0]["quote"] = ("Title clinical line one. "
+                                                      "Body sentence with enough length to finish the point.")
+        with self.assertRaises(ValueError):
+            EC.validate_claims(json.dumps(data), [row])
+
+    def test_body_only_quote_passes_once_the_source_locator_line_is_stripped(self):
+        row = hit("Title clinical line one.\nSource: Some Reference.\n"
+                   "Body sentence with enough length to finish the point of the finding.")
+        data = self.claims(row)
+        data["claims"][0]["sources"][0]["quote"] = "Body sentence with enough length to finish the point of the finding."
+        records = EC.validate_claims(json.dumps(data), [row])
+        self.assertEqual(len(records), 1)
+
+    def test_batch_drops_only_the_illegal_spliced_claim(self):
+        row = hit("Title clinical line one.\nSource: Some Reference.\nMiddle clinical detail line here.\n"
+                   "Body sentence with enough length to finish the point.")
+
+        def good(i):
+            return {"claim": f"Finding number {i} restates the body detail.", "claim_type": "study_finding",
+                     "sources": [{"source_id": EC.source_id(row),
+                                  "quote": "Body sentence with enough length to finish the point."}]}
+
+        bad = {"claim": "An illegally spliced finding that should be dropped.", "claim_type": "study_finding",
+               "sources": [{"source_id": EC.source_id(row),
+                            "quote": "Title clinical line one. Body sentence with enough length to finish the point."}]}
+        data = {"claims": [good(i) for i in range(5)] + [bad]}
+        records = EC.validate_claims(json.dumps(data), [row])
+        self.assertEqual(len(records), 5)
+        self.assertTrue(all("illegally spliced" not in r["claim"] for r in records))
+
+    def test_normalize_source_id_recovers_a_bare_hex_id_missing_its_prefix(self):
+        row = hit()
+        real_id = EC.source_id(row)
+        bare_hex = real_id.removeprefix("source_")
+        self.assertEqual(EC.normalize_source_id(bare_hex, {real_id: row}), real_id)
+
+    def test_normalize_source_id_returns_none_for_unknown_hex(self):
+        row = hit()
+        self.assertIsNone(EC.normalize_source_id("0000000000000000", {EC.source_id(row): row}))
+
+    def test_bare_hex_source_id_is_normalized_in_a_full_claim(self):
+        row = hit()
+        real_id = EC.source_id(row)
+        data = self.claims(row)
+        data["claims"][0]["sources"][0]["source_id"] = real_id.removeprefix("source_")
+        records = EC.validate_claims(json.dumps(data), [row])
+        self.assertEqual(records[0]["source_ids"], [real_id])
+
+    def test_bracketed_header_source_id_is_normalized_to_the_bare_id(self):
+        row = hit()
+        data = self.claims(row)
+        data["claims"][0]["sources"][0]["source_id"] = f"[{EC.source_id(row)} | grade=B | doi=no-doi]"
+        records = EC.validate_claims(json.dumps(data), [row])
+        self.assertEqual(records[0]["source_ids"], [EC.source_id(row)])
+
+    def test_ambiguous_bracketed_source_id_naming_two_real_ids_is_rejected(self):
+        row_a = hit()
+        row_b = hit("Creatine also improved endurance in the same cohort.", doi="10.1/other")
+        data = self.claims(row_a)
+        data["claims"][0]["sources"][0]["source_id"] = f"[{EC.source_id(row_a)} | {EC.source_id(row_b)}]"
+        with self.assertRaises(ValueError):
+            EC.validate_claims(json.dumps(data), [row_a, row_b])
+
+    def test_drowsy_drive_line_is_appended_for_sleep_eds_even_without_the_word_drive(self):
+        row = hit()
+        payload = {"claims": [{"claim": "Witnessed pauses point to OSA.", "claim_type": "study_finding",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "Fix my apnea with the RAG only.", [row],
+                                             matched_intents=["sleep_eds"], drowsy=True)
+        self.assertIn("do not drive", answer.lower())
+
+    def test_drowsy_drive_line_in_a_quote_does_not_satisfy_the_claim_requirement(self):
+        row = hit("Do not drive while fighting sleep. This is source context only.")
+        payload = {"claims": [{"claim": "Witnessed pauses point to OSA.", "claim_type": "study_finding",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "I fight sleep on the drive home.", [row],
+                                             matched_intents=["sleep_eds"], drowsy=True)
+        self.assertGreaterEqual(answer.lower().count("do not drive while fighting sleep"), 2)
+
+    def test_lipid_safety_line_is_appended_when_claim_omits_repeat(self):
+        row = hit("The lipid result should be interpreted with the clinical context.")
+        payload = {"claims": [{"claim": "The lipid result is clinically important.", "claim_type": "study_finding",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "LDL was 191. What statin do I start?", [row],
+                                             matched_intents=["lipids"])
+        self.assertIn("repeat or confirm the relevant lab", answer.lower())
+
+    def test_prescriber_line_is_appended_when_lead_intent_is_incretin(self):
+        row = hit()
+        payload = {"claims": [{"claim": "Stopping tirzepatide may cause rebound hunger.", "claim_type": "study_use",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "Tirzepatide makes me nauseous.", [row],
+                                             matched_intents=["incretin"])
+        self.assertIn("prescriber", answer.lower())
+
+    def test_no_vocabulary_backstop_line_is_appended_for_an_unrelated_intent(self):
+        """Only standing safety requirements may ever be appended. An answer whose intent triggers
+        neither must come back exactly as render_claims() produced it -- no
+        mechanically-appended sentence supplying a word the model itself did
+        not write."""
+        row = hit()
+        claim = "Adding afternoon caffeine is not recommended; your current cutoff is already fine."
+        payload = {"claims": [{"claim": claim, "claim_type": "study_use",
+                                "sources": [{"source_id": EC.source_id(row), "quote": row["text"]}]}]}
+        generate = Mock(return_value=json.dumps(payload))
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            answer = coach.answer_from_hits(None, None, "Should I add an afternoon coffee.", [row],
+                                             matched_intents=["lifestyle_night"])
+        sid = EC.source_id(row)
+        self.assertTrue(answer.endswith(
+            claim + f" [{sid}]\n"
+            f"  Reference ({sid}): Grade B · Document: study.pdf · "
+            f"Folder: 07_supplements/creatine · DOI: 10.1/study\n"
+            f"  Evidence quote ({sid}): “{row['text']}”"
+        ))
+
+    def test_required_lines_are_not_appended_to_a_withheld_or_no_evidence_answer(self):
+        row = hit()
+        generate = Mock(return_value="not json")
+        with patch.dict(sys.modules, {"mlx_lm": SimpleNamespace(generate=generate)}):
+            withheld = coach.answer_from_hits(None, None, "Even off tirzepatide I still wake at 2.", [row],
+                                               matched_intents=["sleep_eds", "incretin"])
+        self.assertIn("withheld", withheld)
+        headline = withheld.split("Closest related sources", 1)[0].lower()
+        self.assertNotIn("do not drive", headline)
+        self.assertNotIn("prescriber", headline)
+        self.assertIn("Closest related sources (not sufficient to support a direct answer)", withheld)
+
     def test_source_ids_are_stable_and_changed_excerpts_cannot_reuse_citations(self):
         self.assertEqual(EC.source_id(hit()), EC.source_id(copy.deepcopy(hit())))
         with self.assertRaises(ValueError):
             EC.validate_claims(json.dumps(self.claims()), [hit("Creatine had a different result in this excerpt.")])
+
+    def test_search_pulls_in_a_personal_row_crowded_out_of_the_general_hybrid_pool(self):
+        """A hand-curated personal gold card can rank below a wall of
+        near-duplicate master-corpus chunks in the raw hybrid search and
+        never reach the reranker at all -- boost_for() can't rescue a row
+        that was never a candidate. search() must query personal rows
+        separately and merge them in."""
+        emb = Mock()
+        emb.encode.return_value.tolist.return_value = [0.1]
+        crowding_row = hit("Coding sessions at a desk show reduced circulation in one study.",
+                            source_pdf="crowd.pdf", doi="10.1/crowd")
+        gold_row = hit("Coding late means dim the lights after deep work.", source_pdf="gold.pdf",
+                        doi="", grade="A", **{"personal": True})
+        table = Table([crowding_row], personal=[gold_row])
+        found, weak = coach.search(table, emb, "should I stop coding", reranker=Reranker([1, 5]))
+        self.assertEqual({h["source_pdf"] for h in found}, {"crowd.pdf", "gold.pdf"})
 
     def test_search_falls_back_only_to_evidence_that_passes(self):
         emb = Mock()
@@ -161,6 +447,19 @@ class EvidenceControlTests(unittest.TestCase):
         self.assertEqual(len(found), 1)
         self.assertTrue(weak)
         self.assertEqual(coach.search(Table([hit()]), emb, "creatine", reranker=None)[0], [])
+
+    def test_search_can_return_related_candidates_without_admitting_them(self):
+        emb = Mock()
+        emb.encode.return_value.tolist.return_value = [0.1]
+        strong = hit("Creatine improved strength in the studied adults.", source_pdf="strong.pdf")
+        weak = hit("Creatine was mentioned but strength was not measured.", source_pdf="weak.pdf")
+        related = []
+        found, _ = coach.search(Table([strong, weak]), emb, "creatine strength",
+                                reranker=Reranker([2.0, -1.0]), related_out=related)
+        self.assertEqual([h["source_pdf"] for h in found], ["strong.pdf"])
+        self.assertEqual({h["source_pdf"] for h in related}, {"strong.pdf", "weak.pdf"})
+        related_weak = next(h for h in related if h["source_pdf"] == "weak.pdf")
+        self.assertFalse(related_weak["retrieval"]["accepted"])
 
     def test_urgent_question_needs_no_model_or_database(self):
         with patch.object(sys, "argv", ["coach.py", "I have chest pain now"]), \
