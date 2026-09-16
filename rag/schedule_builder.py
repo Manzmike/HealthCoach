@@ -44,6 +44,39 @@ _DAY_ALIASES = {
 CATEGORIES = ["work", "gym", "drive", "break", "free", "church", "study",
               "walk", "morning_light", "meal", "sleep", "other"]
 
+# A typed category has to match one of these exactly-or-by-alias, or
+# _resolve_category() returns None -- never silently guessed. Covers the
+# obvious synonyms someone would actually type ("workout", "commute",
+# "light") rather than the internal category name.
+_CATEGORY_ALIASES = {
+    "work": {"job", "working"},
+    "gym": {"workout", "training", "train", "lift", "lifting", "exercise", "fitness", "run", "running"},
+    "drive": {"commute", "commuting", "driving"},
+    "break": {"rest", "pause"},
+    "free": {"freetime", "downtime", "off", "relax", "relaxation"},
+    "church": {"service", "worship"},
+    "study": {"studying", "school", "homework", "class", "anki", "learning"},
+    "walk": {"walking"},
+    "morning_light": {"sunrise", "sunlight", "light", "outdoorlight", "morninglight"},
+    "meal": {"food", "eating", "breakfast", "lunch", "dinner"},
+    "sleep": {"bed", "bedtime"},
+}
+
+
+def _resolve_category(text: str) -> str | None:
+    """Exact category name, or a known alias, normalized (lowercased,
+    spaces/hyphens collapsed to match how CATEGORIES itself is spelled).
+    Returns None -- never a guess -- for anything else."""
+    key = text.strip().lower().replace(" ", "_").replace("-", "_")
+    if key in CATEGORIES:
+        return key
+    collapsed = key.replace("_", "")
+    for category, aliases in _CATEGORY_ALIASES.items():
+        if collapsed in aliases:
+            return category
+    return None
+
+
 # --------------------------------------------------------------------------
 # Detecting a construction/update REQUEST (distinct from coach.py's
 # looks_like_schedule_question(), which is for a research QUESTION about
@@ -296,13 +329,107 @@ class _LazyRag:
 
 def _placement_query(schedule: dict, category: str, label: str) -> str:
     """A research question for this block, informed by the schedule so far
-    -- e.g. training placement relative to already-entered work hours or a
-    sleep window, not asked in a vacuum."""
+    (already-entered work hours or a sleep window) and by the intake
+    profile (job, current sleep pattern, caffeine, stress, existing
+    exercise habits, etc.) -- not asked in a vacuum."""
     context_bits = [f"{b['category']} is {b['start']}-{b['end']} on {','.join(b['days'])}"
                      for b in schedule["blocks"] if b["category"] in ("work", "sleep")]
+    profile = schedule.get("profile", {})
+    for key, _prompt, _known_key in _INTAKE_QUESTIONS:  # defined below; same key set, no drift between the two
+        if profile.get(key):
+            context_bits.append(f"{key.replace('_', ' ')}: {profile[key]}")
     context = " Given: " + "; ".join(context_bits) + "." if context_bits else ""
     return (f"What does the evidence say about the best time and way to schedule "
             f"{label or category} ({category}) for overall health?{context}")
+
+
+# --------------------------------------------------------------------------
+# Intake: job/role, work hours, current sleep pattern, and a handful of
+# easy-to-overlook health/daily-life questions, asked once before block-by-
+# block schedule construction starts. Prefills from person_state.json (the
+# RAG safety layer's own authoritative user-state file) where available, so
+# nothing already on file gets re-asked from scratch.
+
+_INTAKE_QUESTIONS = [
+    # (profile key, prompt, person_state.json key to prefill from)
+    ("job_role", "What's your job/role? (e.g. 'software engineer, desk job')", None),
+    ("work_hours", "What are your typical work hours? (e.g. '6am-4pm', or 'varies')", None),
+    ("sleep_pattern", "What does your current sleep pattern actually look like? "
+                       "(bed/wake time, or describe it if it's irregular)", "sleep_window"),
+    ("caffeine", "When's your last caffeine of the day, if any?", "caffeine_last"),
+    ("screens_before_bed", "Do you use screens (phone/laptop/TV) in the hour before bed?", None),
+    ("stress_level", "How would you describe your stress level most days? (low/moderate/high)", None),
+    ("exercise_habits", "What does your current exercise routine actually look like, if any?",
+     "training_status"),
+    ("commute", "How do you get to work, and how long does it take?", "commute_min"),
+    ("alcohol", "Do you drink alcohol? If so, how often and around what time?", "alcohol_pattern"),
+    ("other_obligations", "Any recurring obligations I should know about -- family, caregiving, "
+                           "church, other commitments?", None),
+    ("energy_pattern", "How does your energy/focus actually feel through the day -- fairly steady, "
+                        "or a noticeable dip (e.g. early afternoon)?", None),
+]
+
+
+def load_person_context(path: str | None = None) -> dict:
+    """A best-effort summary of what's already on file in person_state.json
+    (identity/work, sleep windows, caffeine, alcohol, training status), so
+    intake can prefill from it instead of re-asking from scratch. A missing
+    file, or anything unexpected in it, just means an empty dict -- intake
+    still runs fine, it just has nothing to prefill."""
+    path = path or os.path.join(HERE, "rag_control", "person_state.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            state = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
+    known: dict = {}
+    identity = state.get("identity") or {}
+    if identity.get("work"):
+        known["work_type"] = str(identity["work"]).replace("_", " ")
+    if identity.get("commute_min") is not None:
+        known["commute_min"] = f"{identity['commute_min']} min"
+    sleep = state.get("sleep") or {}
+    if sleep.get("windows"):
+        known["sleep_window"] = sleep["windows"][0]
+    drugs = state.get("drugs") or {}
+    if drugs.get("caffeine_last"):
+        known["caffeine_last"] = drugs["caffeine_last"]
+    if (drugs.get("alcohol") or {}).get("pattern"):
+        known["alcohol_pattern"] = drugs["alcohol"]["pattern"]
+    body = state.get("body") or {}
+    if body.get("training"):
+        known["training_status"] = str(body["training"]).replace("_", " ")
+    return known
+
+
+def run_intake(schedule: dict, known: dict | None = None, *, input_fn=input, print_fn=print) -> dict:
+    """Ask the short intake question set once, storing answers in
+    schedule['profile']. Each question shows a prefilled default (an
+    existing answer from a prior intake, else the matching person_state.json
+    value if any) that pressing Enter accepts as-is; typing anything
+    replaces it. A question with neither a default nor a typed answer is
+    left blank -- this never invents an answer."""
+    known = known if known is not None else load_person_context()
+    profile = dict(schedule.get("profile") or {})
+    if known:
+        print_fn("Here's what's already on file for you:")
+        for key, value in known.items():
+            print_fn(f"  {key.replace('_', ' ')}: {value}")
+        print_fn("")
+    print_fn("A few questions about your day-to-day, so scheduling guidance is actually informed "
+              "by your real situation -- press Enter to keep a shown default, or to skip.")
+    for key, prompt, known_key in _INTAKE_QUESTIONS:
+        default = profile.get(key) or (known.get(known_key) if known_key else None)
+        suffix = f" [{default}]" if default else ""
+        answer = input_fn(f"{prompt}{suffix}: ").strip()
+        if answer:
+            profile[key] = answer
+        elif default:
+            profile[key] = str(default)
+    schedule["profile"] = profile
+    return profile
 
 
 def _offer_research_guidance(schedule: dict, category: str, label: str, rag: "_LazyRag",
@@ -335,25 +462,83 @@ def _offer_research_guidance(schedule: dict, category: str, label: str, rag: "_L
 # Interactive Q&A loop. input_fn/print_fn are injectable so this is fully
 # testable without patching builtins.
 
+_CANCEL_WORDS = {"cancel", "skip", "back", "nevermind", "never mind"}
+_CANCELLED = object()
+
+
+def _prompt_until_valid(prompt: str, parse, input_fn, print_fn):
+    """Reprompt with `prompt` until `parse(raw)` returns a truthy value,
+    instead of silently dropping the whole block on the first bad input --
+    that's what made a mistyped category look like the prompt was simply
+    ignoring input. `parse` raises ValueError (with a message to show) to
+    reject and retry. Returns _CANCELLED if the user types 'cancel' (or
+    'skip'/'back'/'nevermind') at this prompt."""
+    while True:
+        raw = input_fn(prompt).strip()
+        if raw.lower() in _CANCEL_WORDS:
+            return _CANCELLED
+        try:
+            value = parse(raw)
+        except ValueError as e:
+            print_fn(f"{e} Try again, or type 'cancel'.")
+            continue
+        if value:
+            return value
+        print_fn("Try again, or type 'cancel'.")
+
+
 def _add_block_interactive(schedule: dict, input_fn, print_fn, rag: "_LazyRag | None" = None) -> None:
-    category = input_fn(f"Category? ({'/'.join(CATEGORIES)}): ").strip().lower().replace(" ", "_")
-    if category not in CATEGORIES:
-        print_fn(f"Unknown category {category!r}; skipping this block.")
+    def parse_category(raw):
+        resolved = _resolve_category(raw)
+        if resolved is None:
+            raise ValueError(f"Not a category I recognize: {raw!r}.\n"
+                              f"  Try one of: {', '.join(CATEGORIES)} (synonyms like 'workout' or 'commute' work too).")
+        return resolved
+
+    category = _prompt_until_valid(f"Category? ({'/'.join(CATEGORIES)}) [or 'cancel']: ",
+                                    parse_category, input_fn, print_fn)
+    if category is _CANCELLED:
+        print_fn("Cancelled -- no block added.")
         return
+
     label = input_fn("Label for this block (e.g. 'Lift A', 'Drive to work'): ").strip()
-    days = parse_days(input_fn("Which days? (e.g. 'mon,wed,fri', 'weekdays', 'every day'): "))
-    if not days:
-        print_fn("Could not parse any days; skipping this block.")
+
+    def parse_day_list(raw):
+        found = parse_days(raw)
+        if not found:
+            raise ValueError(f"Could not parse any days from {raw!r}.\n"
+                              "  Try 'mon,wed,fri', 'weekdays', 'weekends', or 'every day'.")
+        return found
+
+    days = _prompt_until_valid(
+        "Which days? (e.g. 'mon,wed,fri', 'weekdays', 'every day') [or 'cancel']: ",
+        parse_day_list, input_fn, print_fn)
+    if days is _CANCELLED:
+        print_fn("Cancelled -- no block added.")
         return
+
     if rag is not None:
         _offer_research_guidance(schedule, category, label, rag, input_fn, print_fn)
-    try:
-        start = parse_time(input_fn("Start time (e.g. '7am', '19:00'): "))
-        end = parse_time(input_fn("End time: "))
-        block = add_block(schedule, category=category, label=label, start=start, end=end, days=days)
-        print_fn(f"Added: {','.join(block['days'])} {block['start']}-{block['end']} {block['label']}")
-    except ValueError as e:
-        print_fn(f"Skipped: {e}")
+
+    start = _prompt_until_valid("Start time (e.g. '7am', '19:00') [or 'cancel']: ",
+                                 parse_time, input_fn, print_fn)
+    if start is _CANCELLED:
+        print_fn("Cancelled -- no block added.")
+        return
+
+    def parse_end(raw):
+        end = parse_time(raw)
+        if end <= start:
+            raise ValueError(f"End time {end} must be after start time {start}.")
+        return end
+
+    end = _prompt_until_valid("End time [or 'cancel']: ", parse_end, input_fn, print_fn)
+    if end is _CANCELLED:
+        print_fn("Cancelled -- no block added.")
+        return
+
+    block = add_block(schedule, category=category, label=label, start=start, end=end, days=days)
+    print_fn(f"Added: {','.join(block['days'])} {block['start']}-{block['end']} {block['label']}")
 
 
 def _remove_block_interactive(schedule: dict, input_fn, print_fn) -> None:
@@ -371,19 +556,35 @@ def _remove_block_interactive(schedule: dict, input_fn, print_fn) -> None:
 
 
 def run_builder(schedule: dict | None = None, *, input_fn=input, print_fn=print,
-                 offer_research: bool = True) -> dict:
+                 offer_research: bool = True, offer_intake: bool = True) -> dict:
     """Add/remove blocks until the user says they're done ('done', or blank
     input), then return the finished schedule. Saving and exporting are the
     caller's job -- this stays pure and testable.
 
-    offer_research=True (the default) offers research-backed placement
-    guidance for each block, reusing coach.py's real search/critique
-    pipeline and its offer to fetch new sources -- lazily, so a session
-    that never accepts one never pays to load any model at all. Tests pass
-    offer_research=False to stay fully offline."""
+    offer_intake=True (the default) runs the short intake question set
+    (job/role, work hours, current sleep pattern, and a handful of easy-to-
+    overlook health/daily-life questions) once before block-by-block
+    schedule construction starts, on a schedule with no profile yet --
+    every block-placement research query then carries that context, not
+    just the blocks already entered this session. A schedule that already
+    has a profile (from a prior session) is asked whether to update it
+    rather than being silently skipped or silently re-asked.
+
+    offer_research=True offers research-backed placement guidance for each
+    block, reusing coach.py's real search/critique pipeline and its offer
+    to fetch new sources -- lazily, so a session that never accepts one
+    never pays to load any model at all. Tests pass offer_research=False
+    and offer_intake=False to stay fully offline."""
     schedule = schedule if schedule is not None else load()
     rag = _LazyRag() if offer_research else None
-    print_fn("Let's build your schedule. Add each part of your day one at a time -- "
+    if offer_intake:
+        if schedule.get("profile"):
+            if input_fn("\nUpdate your job/sleep/lifestyle info before continuing? [y/N]: "
+                         ).strip().lower() in ("y", "yes"):
+                run_intake(schedule, input_fn=input_fn, print_fn=print_fn)
+        else:
+            run_intake(schedule, input_fn=input_fn, print_fn=print_fn)
+    print_fn("\nLet's build your schedule. Add each part of your day one at a time -- "
               "work, gym, breaks, driving, free time, church, studying, walks, "
               "morning light, evening walk, meals, sleep, or anything else. "
               "I can check the research for the best way to place anything health-related "

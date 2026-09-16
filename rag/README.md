@@ -359,13 +359,27 @@ or run the builder directly:
 python3 schedule_builder.py
 ```
 
-Add each part of your day one at a time — work hours, breaks, driving time, gym sessions,
-free time, obligations like church or studying, walks, morning sunrise light exposure,
-evening walks, meals, sleep, or anything else — as a category, a label, which days it
-applies to, and a start/end time. The running schedule prints after every change; type
-`done` when it's finished. It's saved to `schedule_calendar.json` either way, and you can
-export it to a standard `.ics` file any time after that — Apple Calendar, Google Calendar,
-and Outlook all import the same file (there's no separate per-app export).
+The first time, it asks a short set of questions about your actual day-to-day — job/role,
+work hours, current sleep pattern, caffeine, screens before bed, stress level, exercise
+habits, commute, alcohol, other recurring obligations, and how your energy/focus actually
+feels through the day — prefilled from `rag_control/person_state.json` wherever that
+already has an answer, so nothing already on file gets re-typed from scratch. Press Enter
+to keep a shown default or to skip a question. This only runs once; a later session asks
+whether to update it instead of re-asking everything.
+
+Then add each part of your day one at a time — work hours, breaks, driving time, gym
+sessions, free time, church, studying, walks, morning sunrise light exposure, evening
+walks, meals, sleep, or anything else — as a category (common synonyms like "workout" or
+"commute" work too; a category it doesn't recognize gets a clear reprompt, never a
+silently-dropped block), a label, which days it applies to, and a start/end time (type
+`cancel` at any point to abandon just that one block). For anything health-related, it can
+check the real research for the best way to place it — informed by your intake answers and
+whatever else you've already scheduled (e.g. gym timing factoring in your work hours and
+sleep window) — and search for new sources if nothing's found yet, the same fetch-and-retry
+flow `coach.py` itself uses. The running schedule prints after every change; type `done`
+when it's finished. It's saved to `schedule_calendar.json` either way, and you can export it
+to a standard `.ics` file any time after that — Apple Calendar, Google Calendar, and Outlook
+all import the same file (there's no separate per-app export).
 
 ## First-time setup
 

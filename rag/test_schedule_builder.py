@@ -3,6 +3,7 @@ model, .ics export (RFC 5545), and the interactive Q&A loop (input/print
 injected, no real stdin/stdout). No model, no database, no network."""
 
 import datetime as dt
+import json
 import os
 import tempfile
 import unittest
@@ -76,6 +77,25 @@ class ParseTimeTests(unittest.TestCase):
     def test_out_of_range_minute_raises(self):
         with self.assertRaises(ValueError):
             SB.parse_time("7:75")
+
+
+class ResolveCategoryTests(unittest.TestCase):
+    def test_exact_category_names_match(self):
+        for category in SB.CATEGORIES:
+            self.assertEqual(SB._resolve_category(category), category)
+
+    def test_case_and_spacing_are_forgiving(self):
+        self.assertEqual(SB._resolve_category("  Morning Light  "), "morning_light")
+        self.assertEqual(SB._resolve_category("MORNING-LIGHT"), "morning_light")
+
+    def test_common_synonyms_resolve_to_the_right_category(self):
+        self.assertEqual(SB._resolve_category("workout"), "gym")
+        self.assertEqual(SB._resolve_category("commute"), "drive")
+        self.assertEqual(SB._resolve_category("sunrise"), "morning_light")
+        self.assertEqual(SB._resolve_category("breakfast"), "meal")
+
+    def test_unrecognized_text_returns_none_never_a_guess(self):
+        self.assertIsNone(SB._resolve_category("something else entirely"))
 
 
 class AddBlockTests(unittest.TestCase):
@@ -275,6 +295,83 @@ class LazyRagTests(unittest.TestCase):
         self.assertEqual(printed, [])  # no "Loading..." message; the real import path never ran
 
 
+class LoadPersonContextTests(unittest.TestCase):
+    def test_missing_file_returns_empty(self):
+        self.assertEqual(SB.load_person_context(os.path.join(tempfile.mkdtemp(), "nope.json")), {})
+
+    def test_malformed_json_returns_empty_rather_than_raising(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "person_state.json")
+            with open(path, "w") as f:
+                f.write("{not valid json")
+            self.assertEqual(SB.load_person_context(path), {})
+
+    def test_extracts_the_fields_schedule_building_actually_uses(self):
+        state = {
+            "identity": {"work": "desk_sedentary", "commute_min": 20},
+            "sleep": {"windows": ["22:00-02:00 + 03:30-07:00"]},
+            "drugs": {"caffeine_last": "11:00-12:00", "alcohol": {"pattern": "weekend_0_or_3_to_6"}},
+            "body": {"training": "stopped"},
+        }
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "person_state.json")
+            with open(path, "w") as f:
+                json.dump(state, f)
+            known = SB.load_person_context(path)
+        self.assertEqual(known["work_type"], "desk sedentary")
+        self.assertEqual(known["commute_min"], "20 min")
+        self.assertEqual(known["sleep_window"], "22:00-02:00 + 03:30-07:00")
+        self.assertEqual(known["caffeine_last"], "11:00-12:00")
+        self.assertEqual(known["alcohol_pattern"], "weekend_0_or_3_to_6")
+        self.assertEqual(known["training_status"], "stopped")
+
+    def test_missing_sub_sections_are_tolerated(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "person_state.json")
+            with open(path, "w") as f:
+                json.dump({}, f)
+            self.assertEqual(SB.load_person_context(path), {})
+
+
+class RunIntakeTests(unittest.TestCase):
+    def test_answers_are_stored_in_the_schedule_profile(self):
+        schedule = SB.empty_schedule()
+        answers = ["software engineer, desk job", "6am-4pm", "11pm-6am", "noon", "yes",
+                    "moderate", "none right now", "drive, 20 min", "rarely", "none", "steady"]
+        self.assertEqual(len(answers), len(SB._INTAKE_QUESTIONS))  # keep this test in sync with the real question set
+        responses = iter(answers)
+        SB.run_intake(schedule, known={}, input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        self.assertEqual(schedule["profile"]["job_role"], "software engineer, desk job")
+        self.assertEqual(schedule["profile"]["work_hours"], "6am-4pm")
+        self.assertEqual(schedule["profile"]["sleep_pattern"], "11pm-6am")
+        self.assertEqual(schedule["profile"]["energy_pattern"], "steady")
+
+    def test_blank_answers_fall_back_to_the_known_default(self):
+        schedule = SB.empty_schedule()
+        known = {"sleep_window": "22:00-02:00 + 03:30-07:00", "caffeine_last": "11:00-12:00"}
+        SB.run_intake(schedule, known=known, input_fn=lambda _: "", print_fn=lambda *_: None)
+        self.assertEqual(schedule["profile"]["sleep_pattern"], known["sleep_window"])
+        self.assertEqual(schedule["profile"]["caffeine"], known["caffeine_last"])
+
+    def test_blank_answer_with_no_known_default_leaves_the_field_unset(self):
+        schedule = SB.empty_schedule()
+        SB.run_intake(schedule, known={}, input_fn=lambda _: "", print_fn=lambda *_: None)
+        self.assertNotIn("job_role", schedule["profile"])
+
+    def test_a_typed_answer_overrides_an_existing_profile_value(self):
+        schedule = SB.empty_schedule()
+        schedule["profile"] = {"job_role": "old answer"}
+        responses = iter(["new answer"] + [""] * (len(SB._INTAKE_QUESTIONS) - 1))
+        SB.run_intake(schedule, known={}, input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        self.assertEqual(schedule["profile"]["job_role"], "new answer")
+
+    def test_known_values_are_printed_up_front(self):
+        printed = []
+        SB.run_intake(SB.empty_schedule(), known={"sleep_window": "22:00-06:00"},
+                      input_fn=lambda _: "", print_fn=printed.append)
+        self.assertTrue(any("22:00-06:00" in p for p in printed))
+
+
 class PlacementQueryTests(unittest.TestCase):
     def test_includes_context_from_already_entered_work_and_sleep_blocks(self):
         schedule = SB.empty_schedule()
@@ -284,9 +381,16 @@ class PlacementQueryTests(unittest.TestCase):
         self.assertIn("Lift A", query)
         self.assertIn("gym", query)
 
-    def test_no_context_when_no_work_or_sleep_blocks_exist_yet(self):
+    def test_no_context_when_no_work_or_sleep_blocks_or_profile_exist_yet(self):
         query = SB._placement_query(SB.empty_schedule(), "gym", "Lift A")
         self.assertNotIn("Given:", query)
+
+    def test_includes_relevant_intake_profile_fields(self):
+        schedule = SB.empty_schedule()
+        schedule["profile"] = {"job_role": "software engineer", "stress_level": "high"}
+        query = SB._placement_query(schedule, "gym", "Lift A")
+        self.assertIn("job role: software engineer", query)
+        self.assertIn("stress level: high", query)
 
     def test_a_church_or_drive_block_is_not_used_as_context(self):
         schedule = SB.empty_schedule()
@@ -349,15 +453,56 @@ class OfferResearchGuidanceTests(unittest.TestCase):
 class RunBuilderTests(unittest.TestCase):
     """input_fn/print_fn are injected -- these never touch real stdin/stdout."""
 
+    def test_intake_runs_by_default_on_a_schedule_with_no_profile_yet(self):
+        # 10 blank intake answers, then immediately "done".
+        responses = iter([""] * len(SB._INTAKE_QUESTIONS) + ["done"])
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses),
+                                  print_fn=lambda *_: None, offer_research=False)
+        self.assertIn("profile", schedule)
+
+    def test_intake_is_not_re_run_on_a_schedule_that_already_has_a_profile(self):
+        schedule = SB.empty_schedule()
+        schedule["profile"] = {"job_role": "already answered"}
+        # First input answers "update your info?" with no ("n" -> skip intake), then "done".
+        responses = iter(["n", "done"])
+        SB.run_builder(schedule, input_fn=lambda _: next(responses), print_fn=lambda *_: None,
+                       offer_research=False)
+        self.assertEqual(schedule["profile"]["job_role"], "already answered")
+
     def test_adding_one_block_then_done(self):
         responses = iter(["add", "gym", "Lift A", "mon,wed,fri", "5pm", "6:15pm", "done"])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
         self.assertEqual(len(schedule["blocks"]), 1)
         self.assertEqual(schedule["blocks"][0]["label"], "Lift A")
         self.assertEqual(schedule["blocks"][0]["start"], "17:00")
 
+    def test_bad_category_then_bad_days_then_bad_end_time_all_reprompt_and_still_succeed(self):
+        responses = iter([
+            "add",
+            "nonsense", "gym",                       # category: retry once
+            "Lift A",
+            "whenever", "mon",                        # days: retry once
+            "5pm",
+            "4pm", "6pm",                              # end time: retry once (not after start)
+            "done",
+        ])
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
+        self.assertEqual(len(schedule["blocks"]), 1)
+        self.assertEqual(schedule["blocks"][0]["start"], "17:00")
+        self.assertEqual(schedule["blocks"][0]["end"], "18:00")
+
+    def test_cancel_at_the_days_prompt_aborts_just_that_block(self):
+        responses = iter(["add", "gym", "Lift A", "cancel", "done"])
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
+        self.assertEqual(schedule["blocks"], [])
+
+    def test_cancel_at_the_start_time_prompt_aborts_just_that_block(self):
+        responses = iter(["add", "gym", "Lift A", "mon", "cancel", "done"])
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
+        self.assertEqual(schedule["blocks"], [])
+
     def test_blank_input_immediately_finishes_with_an_empty_schedule(self):
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: "", print_fn=lambda *_: None, offer_research=False)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: "", print_fn=lambda *_: None, offer_research=False, offer_intake=False)
         self.assertEqual(schedule["blocks"], [])
 
     def test_removing_a_block(self):
@@ -366,24 +511,35 @@ class RunBuilderTests(unittest.TestCase):
             "remove", "0",
             "done",
         ])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
         self.assertEqual(schedule["blocks"], [])
 
-    def test_an_invalid_category_skips_the_block_and_continues(self):
-        responses = iter(["add", "nonsense", "done"])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
+    def test_an_invalid_category_reprompts_instead_of_silently_dropping_the_block(self):
+        """The exact bug reported live: typing something not on the fixed
+        category list used to drop the whole block with no clear signal,
+        which looked like the prompt was ignoring input. It must now
+        reprompt for category specifically, not fall through to the
+        top-level add/remove/done menu."""
+        responses = iter(["add", "nonsense", "cancel", "done"])
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
         self.assertEqual(schedule["blocks"], [])
+
+    def test_a_category_synonym_is_accepted_on_the_first_try(self):
+        responses = iter(["add", "workout", "Lift A", "mon", "5pm", "6pm", "done"])
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
+        self.assertEqual(len(schedule["blocks"]), 1)
+        self.assertEqual(schedule["blocks"][0]["category"], "gym")
 
     def test_unrecognized_top_level_action_does_not_crash_and_reprompts(self):
         responses = iter(["blah", "done"])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
         self.assertEqual(schedule["blocks"], [])
 
     def test_pre_existing_schedule_is_preserved_and_added_to(self):
         existing = SB.empty_schedule()
         SB.add_block(existing, category="sleep", label="Sleep", start="22:00", end="23:59", days=["Sun"])
         responses = iter(["done"])
-        schedule = SB.run_builder(existing, input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
+        schedule = SB.run_builder(existing, input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False, offer_intake=False)
         self.assertEqual(len(schedule["blocks"]), 1)
         self.assertEqual(schedule["blocks"][0]["label"], "Sleep")
 
