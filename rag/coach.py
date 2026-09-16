@@ -176,6 +176,18 @@ def split_questions(q: str) -> list[dict]:
     return groups
 
 
+_TOPIC_HEADER_WIDTH = 70
+
+
+def topic_header(topic: str, text: str) -> str:
+    """A full-width dashed divider bracketing each topic group's section, so
+    a multi-part answer's sections are visibly separated instead of running
+    together. Shows the sub-question text too, not just the topic label, so
+    it's clear which part of the original question this section answers."""
+    rule = "-" * _TOPIC_HEADER_WIDTH
+    return f"\n{rule}\n{topic.upper()}: {text}\n{rule}"
+
+
 # --------------------------------------------------------------------------
 # Schedule visual breakdown. A schedule-shaped question gets your real,
 # already-locked WEEK_OPERATING_PLAN.md if you have one saved -- never an
@@ -549,7 +561,7 @@ def main():
     for group in groups:
         topic_text = group["text"]
         if multi:
-            print(f"\n--- {group['topic'].upper()} ---")
+            print(topic_header(group["topic"], topic_text))
         diagnostics = []
         matched_intents = RC.classify(topic_text)
         related_hits: list[dict] = []

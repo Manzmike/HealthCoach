@@ -12,6 +12,17 @@ from unittest.mock import patch
 import coach
 
 
+class TopicHeaderTests(unittest.TestCase):
+    def test_header_is_bracketed_by_a_full_width_dashed_rule(self):
+        header = coach.topic_header("schedule", "What should my gym routine look like?")
+        lines = header.strip("\n").split("\n")
+        self.assertEqual(len(lines), 3)
+        self.assertRegex(lines[0], r"^-{10,}$")
+        self.assertEqual(lines[0], lines[2])
+        self.assertIn("SCHEDULE", lines[1])
+        self.assertIn("What should my gym routine look like?", lines[1])
+
+
 class SplitQuestionsTests(unittest.TestCase):
     def test_single_question_returns_one_group(self):
         groups = coach.split_questions("Does creatine cause hair loss?")
