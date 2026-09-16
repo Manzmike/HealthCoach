@@ -538,7 +538,18 @@ def offer_to_fetch_sources(question: str) -> int:
     -> download path as a normal corpus topic (papers/fetch_papers.py's
     fetch_for_question(), added for this feature), then ingest whatever's
     found. Returns how many new PDFs were added; the caller decides whether
-    to re-run the search."""
+    to re-run the search.
+
+    Skips the offer for a schedule-shaped question ("what should my gym
+    routine look like") -- that's a personal-planning request, not a
+    research topic, and sending it to a literature-search API as-is finds
+    nothing (confirmed live: "What should my daily schedule look like with
+    gym involved?" returns zero EPMC/OpenAlex/S2 results, every time,
+    because no paper is titled that)."""
+    if looks_like_schedule_question(question):
+        print("\n(Not offering a source search -- this looks like a personal-scheduling "
+              "question, not a research topic a literature search can answer.)")
+        return 0
     if not sys.stdin.isatty():
         return 0
     choice = input(

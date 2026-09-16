@@ -237,6 +237,15 @@ class OfferToFetchSourcesTests(unittest.TestCase):
         self.assertEqual(added, 0)
         mock_input.assert_not_called()
 
+    def test_schedule_shaped_question_is_never_offered_a_source_search(self):
+        """Confirmed live: a schedule-shaped question sent to EPMC/OpenAlex/S2
+        as-is returns zero results every time, because it's a personal-
+        planning request, not a research topic any paper is titled after."""
+        with patch("sys.stdin.isatty", return_value=True), patch("builtins.input") as mock_input:
+            added = coach.offer_to_fetch_sources("What should my daily routine look like with gym involved?")
+        self.assertEqual(added, 0)
+        mock_input.assert_not_called()
+
     def test_declining_does_not_fetch(self):
         with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value="n"), \
              patch("subprocess.run") as mock_run:
