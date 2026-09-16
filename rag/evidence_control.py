@@ -501,20 +501,38 @@ def _reference_details(hit: dict, sid: str) -> str:
 
 
 def render_claims(records: Sequence[dict], hits: Sequence[dict] | None = None) -> str:
+    """Render claims with each source's Reference/Evidence-quote block shown
+    once per answer, not once per claim. A gold card is frequently cited by
+    several claims in the same answer; repeating its full Grade/Document/
+    Folder/DOI line and identical quote after every one of them was the
+    single largest source of visual repetition in a rendered answer. A claim
+    reusing an already-shown (source, quote) pair instead gets a short
+    back-reference; a claim reusing the same source with a genuinely
+    different quote still gets that new quote shown, just without repeating
+    the reference metadata."""
     if not records:
         return NO_EVIDENCE
     hits = hits or []
     hit_by_id = {source_id(hit): hit for hit in hits}
     lines = ["Source-linked research findings (not a personal plan).",
              "Source IDs and quoted text checked; claim entailment and scientific certainty are not verified.", ""]
+    shown_reference_for: set[str] = set()
+    shown_quote_for: set[tuple[str, str]] = set()
     for record in records:
         lines.append(f"- **{record['claim_type'].replace('_', ' ').title()}:** {record['claim']} [{', '.join(record['source_ids'])}]")
         for ref in record["sources"]:
             sid = _canonical_reference_id(ref["source_id"], hits)
             hit = hit_by_id.get(sid)
-            if hit is not None:
-                lines.append("  " + _reference_details(hit, sid))
-            lines.append(f"  Evidence quote ({sid}): “{ref['quote']}”")
+            if sid not in shown_reference_for:
+                if hit is not None:
+                    lines.append("  " + _reference_details(hit, sid))
+                shown_reference_for.add(sid)
+            quote_key = (sid, ref["quote"])
+            if quote_key in shown_quote_for:
+                lines.append(f"  Evidence quote ({sid}): see above")
+            else:
+                lines.append(f"  Evidence quote ({sid}): “{ref['quote']}”")
+                shown_quote_for.add(quote_key)
     return "\n".join(lines)
 
 
