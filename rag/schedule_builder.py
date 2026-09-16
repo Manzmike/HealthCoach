@@ -241,10 +241,101 @@ def export_ics(schedule: dict, path: str = DEFAULT_ICS_PATH) -> str:
 
 
 # --------------------------------------------------------------------------
+# Research-backed placement guidance. Reuses coach.py's real search/critique
+# pipeline (and its offer to fetch new sources when nothing's found) rather
+# than inventing separate logic -- any scheduling suggestion still goes
+# through the same safety critic as a normal coach.py answer (no dosing
+# claims, no vaccine-causation claims, etc.), which matters here since
+# scheduling questions can stray into supplement/meal-timing territory.
+
+# Categories where research-backed timing guidance is usually worth having;
+# offered for every category regardless (the user decides per block), but
+# these are named in the prompt so it's clear where it tends to matter.
+_RESEARCH_RELEVANT_CATEGORIES = {"gym", "meal", "sleep", "morning_light", "walk", "study", "break"}
+
+
+class _LazyRag:
+    """Loads the RAG stack (embedding model, reranker, LanceDB table, then
+    the generation model) at most once per builder session, and only if the
+    user actually asks for research-backed guidance on at least one block --
+    most of a schedule-building session (adding a church block, a drive
+    block) needs none of this."""
+
+    def __init__(self):
+        self.coach = None
+        self.tbl = None
+        self.emb = None
+        self.rr = None
+        self.model_tok = None
+
+    def ensure_loaded(self, print_fn) -> None:
+        if self.coach is not None:
+            return
+        print_fn("Loading the research pipeline (first time only this session)...")
+        import coach as C
+        import lancedb
+        from sentence_transformers import SentenceTransformer
+        self.coach = C
+        self.emb = SentenceTransformer(C.EMB_MODEL, device="mps")
+        self.tbl = lancedb.connect(C.DBDIR).open_table(C.TABLE)
+        self.rr = C.load_reranker()
+
+    def reopen_table(self) -> None:
+        """After offer_to_fetch_sources() adds new PDFs and ingests them,
+        the already-open table handle is stale -- reopen it to see them."""
+        import lancedb
+        self.tbl = lancedb.connect(self.coach.DBDIR).open_table(self.coach.TABLE)
+
+    def ensure_model(self, print_fn):
+        if self.model_tok is None:
+            print_fn("Loading the generation model...")
+            from mlx_lm import load
+            self.model_tok = load(self.coach.GEN_MODEL)
+        return self.model_tok
+
+
+def _placement_query(schedule: dict, category: str, label: str) -> str:
+    """A research question for this block, informed by the schedule so far
+    -- e.g. training placement relative to already-entered work hours or a
+    sleep window, not asked in a vacuum."""
+    context_bits = [f"{b['category']} is {b['start']}-{b['end']} on {','.join(b['days'])}"
+                     for b in schedule["blocks"] if b["category"] in ("work", "sleep")]
+    context = " Given: " + "; ".join(context_bits) + "." if context_bits else ""
+    return (f"What does the evidence say about the best time and way to schedule "
+            f"{label or category} ({category}) for overall health?{context}")
+
+
+def _offer_research_guidance(schedule: dict, category: str, label: str, rag: "_LazyRag",
+                              input_fn, print_fn) -> None:
+    hint = " (often worth checking)" if category in _RESEARCH_RELEVANT_CATEGORIES else ""
+    check = input_fn(f"Want research-backed guidance on the best timing for this{hint}? [y/N]: ").strip().lower()
+    if check not in ("y", "yes"):
+        return
+    query = _placement_query(schedule, category, label)
+    print_fn(f"\nChecking the evidence: {query}\n")
+    rag.ensure_loaded(print_fn)
+    C = rag.coach
+    matched_intents = C.RC.classify(query)
+    hits, weak = C.search(rag.tbl, rag.emb, query, 6, rag.rr, matched_intents=matched_intents)
+    if not hits:
+        print_fn("No sources found for this specific scenario.")
+        if C.offer_to_fetch_sources(query):
+            rag.reopen_table()
+            hits, weak = C.search(rag.tbl, rag.emb, query, 6, rag.rr, matched_intents=matched_intents)
+        if not hits:
+            print_fn("Still no evidence for this -- place it by your own judgment.")
+            return
+    model, tok = rag.ensure_model(print_fn)
+    answer = C.answer_from_hits(model, tok, query, hits, matched_intents=matched_intents,
+                                 action_count=1, primary_count=1)
+    print_fn(C._for_terminal(answer))
+
+
+# --------------------------------------------------------------------------
 # Interactive Q&A loop. input_fn/print_fn are injectable so this is fully
 # testable without patching builtins.
 
-def _add_block_interactive(schedule: dict, input_fn, print_fn) -> None:
+def _add_block_interactive(schedule: dict, input_fn, print_fn, rag: "_LazyRag | None" = None) -> None:
     category = input_fn(f"Category? ({'/'.join(CATEGORIES)}): ").strip().lower().replace(" ", "_")
     if category not in CATEGORIES:
         print_fn(f"Unknown category {category!r}; skipping this block.")
@@ -254,6 +345,8 @@ def _add_block_interactive(schedule: dict, input_fn, print_fn) -> None:
     if not days:
         print_fn("Could not parse any days; skipping this block.")
         return
+    if rag is not None:
+        _offer_research_guidance(schedule, category, label, rag, input_fn, print_fn)
     try:
         start = parse_time(input_fn("Start time (e.g. '7am', '19:00'): "))
         end = parse_time(input_fn("End time: "))
@@ -277,14 +370,24 @@ def _remove_block_interactive(schedule: dict, input_fn, print_fn) -> None:
         print_fn("Not understood; nothing removed.")
 
 
-def run_builder(schedule: dict | None = None, *, input_fn=input, print_fn=print) -> dict:
+def run_builder(schedule: dict | None = None, *, input_fn=input, print_fn=print,
+                 offer_research: bool = True) -> dict:
     """Add/remove blocks until the user says they're done ('done', or blank
     input), then return the finished schedule. Saving and exporting are the
-    caller's job -- this stays pure and testable."""
+    caller's job -- this stays pure and testable.
+
+    offer_research=True (the default) offers research-backed placement
+    guidance for each block, reusing coach.py's real search/critique
+    pipeline and its offer to fetch new sources -- lazily, so a session
+    that never accepts one never pays to load any model at all. Tests pass
+    offer_research=False to stay fully offline."""
     schedule = schedule if schedule is not None else load()
+    rag = _LazyRag() if offer_research else None
     print_fn("Let's build your schedule. Add each part of your day one at a time -- "
               "work, gym, breaks, driving, free time, church, studying, walks, "
-              "morning light, evening walk, meals, sleep, or anything else.")
+              "morning light, evening walk, meals, sleep, or anything else. "
+              "I can check the research for the best way to place anything health-related "
+              "as you go, and search for new sources if nothing's found yet.")
     while True:
         print_fn("\nCurrent schedule:")
         for line in summary_lines(schedule):
@@ -295,7 +398,7 @@ def run_builder(schedule: dict | None = None, *, input_fn=input, print_fn=print)
         if action in ("remove", "r"):
             _remove_block_interactive(schedule, input_fn, print_fn)
         elif action in ("add", "a"):
-            _add_block_interactive(schedule, input_fn, print_fn)
+            _add_block_interactive(schedule, input_fn, print_fn, rag)
         else:
             print_fn(f"Not understood: {action!r}")
     return schedule

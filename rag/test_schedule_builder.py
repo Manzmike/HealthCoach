@@ -6,6 +6,7 @@ import datetime as dt
 import os
 import tempfile
 import unittest
+from unittest.mock import MagicMock
 
 import schedule_builder as SB
 
@@ -232,18 +233,131 @@ class ExportIcsTests(unittest.TestCase):
         self.assertIn("BEGIN:VCALENDAR", content)
 
 
+class _FakeCoach:
+    """A minimal stand-in for the coach module, implementing only what
+    _offer_research_guidance() actually calls -- no real model, database,
+    or network in any of these tests."""
+
+    def __init__(self, hits=None, offer_to_fetch_sources_return=0, answer_text="evidence-based answer"):
+        self.RC = MagicMock()
+        self.RC.classify.return_value = []
+        self._hits = [] if hits is None else hits
+        self.search_calls = []
+        self.offer_to_fetch_sources = MagicMock(return_value=offer_to_fetch_sources_return)
+        self.answer_from_hits = MagicMock(return_value=answer_text)
+        self._for_terminal = lambda text: text
+        self.DBDIR = "unused"
+        self.TABLE = "unused"
+        self.GEN_MODEL = "unused"
+
+    def search(self, tbl, emb, q, k, rr, matched_intents=None):
+        self.search_calls.append(q)
+        return self._hits, False
+
+
+def _rag_with(coach) -> SB._LazyRag:
+    rag = SB._LazyRag()
+    rag.coach = coach
+    rag.tbl = MagicMock()
+    rag.emb = MagicMock()
+    rag.rr = MagicMock()
+    rag.model_tok = (MagicMock(), MagicMock())  # pre-set so ensure_model skips the real mlx_lm import
+    rag.reopen_table = MagicMock()  # real reopen_table does a real lancedb.connect(); not under test here
+    return rag
+
+
+class LazyRagTests(unittest.TestCase):
+    def test_ensure_loaded_is_a_noop_once_coach_is_already_set(self):
+        rag = SB._LazyRag()
+        rag.coach = "already set"
+        printed = []
+        rag.ensure_loaded(printed.append)
+        self.assertEqual(printed, [])  # no "Loading..." message; the real import path never ran
+
+
+class PlacementQueryTests(unittest.TestCase):
+    def test_includes_context_from_already_entered_work_and_sleep_blocks(self):
+        schedule = SB.empty_schedule()
+        SB.add_block(schedule, category="work", label="Job", start="06:00", end="16:00", days=["Mon"])
+        query = SB._placement_query(schedule, "gym", "Lift A")
+        self.assertIn("work is 06:00-16:00 on Mon", query)
+        self.assertIn("Lift A", query)
+        self.assertIn("gym", query)
+
+    def test_no_context_when_no_work_or_sleep_blocks_exist_yet(self):
+        query = SB._placement_query(SB.empty_schedule(), "gym", "Lift A")
+        self.assertNotIn("Given:", query)
+
+    def test_a_church_or_drive_block_is_not_used_as_context(self):
+        schedule = SB.empty_schedule()
+        SB.add_block(schedule, category="church", label="Service", start="09:00", end="10:00", days=["Sun"])
+        query = SB._placement_query(schedule, "gym", "Lift A")
+        self.assertNotIn("church", query)
+
+
+class OfferResearchGuidanceTests(unittest.TestCase):
+    def test_declining_skips_the_lookup_entirely(self):
+        coach = _FakeCoach()
+        rag = _rag_with(coach)
+        SB._offer_research_guidance(SB.empty_schedule(), "gym", "Lift A", rag,
+                                     input_fn=lambda _: "n", print_fn=lambda *_: None)
+        self.assertEqual(coach.search_calls, [])
+        coach.answer_from_hits.assert_not_called()
+
+    def test_empty_input_defaults_to_declining(self):
+        coach = _FakeCoach()
+        rag = _rag_with(coach)
+        SB._offer_research_guidance(SB.empty_schedule(), "gym", "Lift A", rag,
+                                     input_fn=lambda _: "", print_fn=lambda *_: None)
+        self.assertEqual(coach.search_calls, [])
+
+    def test_accepting_with_hits_prints_an_evidence_based_answer(self):
+        coach = _FakeCoach(hits=[{"id": "1"}], answer_text="train in the evening, per the evidence")
+        rag = _rag_with(coach)
+        printed = []
+        SB._offer_research_guidance(SB.empty_schedule(), "gym", "Lift A", rag,
+                                     input_fn=lambda _: "y", print_fn=printed.append)
+        self.assertEqual(len(coach.search_calls), 1)
+        coach.answer_from_hits.assert_called_once()
+        self.assertIn("train in the evening, per the evidence", printed)
+
+    def test_no_hits_offers_to_fetch_then_retries_and_finds_something(self):
+        coach = _FakeCoach(hits=[], offer_to_fetch_sources_return=2)
+        call_count = {"n": 0}
+
+        def search(tbl, emb, q, k, rr, matched_intents=None):
+            call_count["n"] += 1
+            return ([{"id": "1"}] if call_count["n"] > 1 else []), False
+        coach.search = search
+        rag = _rag_with(coach)
+        SB._offer_research_guidance(SB.empty_schedule(), "meal", "Dinner", rag,
+                                     input_fn=lambda _: "y", print_fn=lambda *_: None)
+        coach.offer_to_fetch_sources.assert_called_once()
+        self.assertEqual(call_count["n"], 2)  # original search + one retry after the fetch
+        coach.answer_from_hits.assert_called_once()
+
+    def test_no_hits_and_fetch_finds_nothing_tells_user_to_use_own_judgment(self):
+        coach = _FakeCoach(hits=[], offer_to_fetch_sources_return=0)
+        rag = _rag_with(coach)
+        printed = []
+        SB._offer_research_guidance(SB.empty_schedule(), "church", "Service", rag,
+                                     input_fn=lambda _: "y", print_fn=printed.append)
+        coach.answer_from_hits.assert_not_called()
+        self.assertTrue(any("own judgment" in p for p in printed))
+
+
 class RunBuilderTests(unittest.TestCase):
     """input_fn/print_fn are injected -- these never touch real stdin/stdout."""
 
     def test_adding_one_block_then_done(self):
         responses = iter(["add", "gym", "Lift A", "mon,wed,fri", "5pm", "6:15pm", "done"])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
         self.assertEqual(len(schedule["blocks"]), 1)
         self.assertEqual(schedule["blocks"][0]["label"], "Lift A")
         self.assertEqual(schedule["blocks"][0]["start"], "17:00")
 
     def test_blank_input_immediately_finishes_with_an_empty_schedule(self):
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: "", print_fn=lambda *_: None)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: "", print_fn=lambda *_: None, offer_research=False)
         self.assertEqual(schedule["blocks"], [])
 
     def test_removing_a_block(self):
@@ -252,24 +366,24 @@ class RunBuilderTests(unittest.TestCase):
             "remove", "0",
             "done",
         ])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
         self.assertEqual(schedule["blocks"], [])
 
     def test_an_invalid_category_skips_the_block_and_continues(self):
         responses = iter(["add", "nonsense", "done"])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
         self.assertEqual(schedule["blocks"], [])
 
     def test_unrecognized_top_level_action_does_not_crash_and_reprompts(self):
         responses = iter(["blah", "done"])
-        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        schedule = SB.run_builder(SB.empty_schedule(), input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
         self.assertEqual(schedule["blocks"], [])
 
     def test_pre_existing_schedule_is_preserved_and_added_to(self):
         existing = SB.empty_schedule()
         SB.add_block(existing, category="sleep", label="Sleep", start="22:00", end="23:59", days=["Sun"])
         responses = iter(["done"])
-        schedule = SB.run_builder(existing, input_fn=lambda _: next(responses), print_fn=lambda *_: None)
+        schedule = SB.run_builder(existing, input_fn=lambda _: next(responses), print_fn=lambda *_: None, offer_research=False)
         self.assertEqual(len(schedule["blocks"]), 1)
         self.assertEqual(schedule["blocks"][0]["label"], "Sleep")
 
