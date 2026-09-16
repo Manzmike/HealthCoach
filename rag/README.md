@@ -338,6 +338,35 @@ broader question. The answer only speaks from what's actually retrieved from you
 papers, tags every claim's evidence grade (A/B = strong, C = weak/preliminary), and says so
 plainly instead of guessing when nothing in the library covers a question.
 
+A multi-part question ("...? and what about...? and...?") gets one full search pass per
+distinct topic (schedule / food / general) instead of one blended pass, each printed under
+its own dashed divider. A question with no accepted evidence offers to run a real literature
+search for it and add whatever's found to the library before re-answering — never for a
+schedule-shaped question (there's no paper titled "what should my gym routine look like";
+use the schedule builder below for that instead).
+
+### Build a schedule and export it to your calendar
+
+Ask in plain language, e.g.:
+
+```bash
+python3 coach.py "I'd like to make updates to my schedule"
+```
+
+or run the builder directly:
+
+```bash
+python3 schedule_builder.py
+```
+
+Add each part of your day one at a time — work hours, breaks, driving time, gym sessions,
+free time, obligations like church or studying, walks, morning sunrise light exposure,
+evening walks, meals, sleep, or anything else — as a category, a label, which days it
+applies to, and a start/end time. The running schedule prints after every change; type
+`done` when it's finished. It's saved to `schedule_calendar.json` either way, and you can
+export it to a standard `.ics` file any time after that — Apple Calendar, Google Calendar,
+and Outlook all import the same file (there's no separate per-app export).
+
 ## First-time setup
 
 Only run this if HealthCoach says the Python environment is missing:

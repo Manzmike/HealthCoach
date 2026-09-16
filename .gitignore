@@ -32,6 +32,9 @@ history.md
 rag/history.md
 # private HealthCoach user state (candidate ledger and future local-only state)
 rag/.healthcoach/
+# personal calendar schedule and its exported .ics
+rag/schedule_calendar.json
+rag/schedule_export.ics
 
 # API keys / secrets — never commit
 .env

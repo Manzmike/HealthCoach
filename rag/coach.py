@@ -588,6 +588,22 @@ def main():
     if warning:
         print(warning)
         return
+    import schedule_builder as SB
+    if SB.looks_like_schedule_update_request(q):
+        # A construction/edit REQUEST ("update my schedule"), not a research
+        # QUESTION about scheduling (looks_like_schedule_question() above,
+        # which still goes through normal RAG retrieval) -- no evidence
+        # retrieval applies here at all, so skip straight to the builder
+        # without loading any RAG models.
+        schedule = SB.run_builder(SB.load())
+        SB.save(schedule)
+        print(f"\nSaved to {SB.DEFAULT_PATH}")
+        if schedule["blocks"] and input("Export to .ics now? [Y/n]: ").strip().lower() in ("", "y", "yes"):
+            path = SB.export_ics(schedule)
+            print(f"Exported to {path}")
+            print("Import it: Apple Calendar (File > Import...), Google Calendar "
+                  "(Settings > Import & export), or Outlook (File > Open & Export > Import/Export).")
+        return
     import lancedb
     from sentence_transformers import SentenceTransformer
 
