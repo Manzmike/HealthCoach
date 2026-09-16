@@ -2148,6 +2148,48 @@ def cohort_summary():
         print("  %-52s young=%d older=%d unknown=%d" %
               (k, c["young"], c["older"], c["unknown"]))
 
+
+AD_HOC_FOLDER = "99_ad_hoc"
+
+
+def fetch_for_question(question: str, max_results: int = 6, folder: str = AD_HOC_FOLDER) -> int:
+    """Ad-hoc live search for one question the coach found no evidence for,
+    outside the curated topic taxonomy above (TOPICS/HORMONE_TOPICS never
+    reference this folder, and a normal `python3 fetch_papers.py` run never
+    calls this). Reuses the same search -> grade -> download -> dedup path
+    as a real topic (epmc_search first, extra_search widening into OpenAlex
+    + Semantic Scholar, acquire() for grading/filing) so a fetched paper is
+    graded and anchor-gated exactly like the rest of the corpus -- it is
+    NOT auto-trusted: retrieval's existing (grade IN ('A','B') OR allow_c)
+    filter still applies, and a paper acquired here that lands as grade C
+    is invisible to default retrieval like any other grade-C paper.
+
+    Requires network access. Returns how many new unique PDFs were added.
+    The caller decides whether/when this runs -- this function never runs
+    on its own."""
+    init_logs()
+    load_seen_from_manifest()
+    folder_abs = os.path.join(ROOT, folder)
+    os.makedirs(folder_abs, exist_ok=True)
+    before = len(glob.glob(os.path.join(folder_abs, "*.pdf")))
+    COUNTS[folder] = max(COUNTS.get(folder, 0), before)
+    target = COUNTS[folder] + max_results
+    slug = slugify(question, 8)
+    have = lambda: COUNTS.get(folder, 0)
+    try:
+        epmc_recs = epmc_search(question)
+    except Exception as e:
+        print("fetch_for_question: epmc_search failed: %s" % e)
+        epmc_recs = []
+    for rec in epmc_recs:
+        if have() >= target: break
+        acquire(rec, folder, slug)
+    if have() < target:
+        for rec in extra_search(question):
+            if have() >= target: break
+            acquire(rec, folder, slug)
+    return have() - before
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--phase", type=int)

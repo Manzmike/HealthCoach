@@ -5,6 +5,7 @@ helpers. None of this touches search()/answer_from_hits(), so the eval
 battery and every other caller of those functions is unaffected."""
 
 import os
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -212,6 +213,66 @@ class ScheduleOverridePromptTests(unittest.TestCase):
         with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value="delete everything"), \
              patch("subprocess.run") as mock_run:
             coach.prompt_schedule_override()
+        mock_run.assert_not_called()
+
+
+class OfferToFetchSourcesTests(unittest.TestCase):
+    """offer_to_fetch_sources() never runs on a non-interactive stream (so
+    the eval battery, which never calls it at all, is doubly unaffected),
+    never treats a declined or empty prompt as consent, and only shells out
+    to ingest.py when fetch_for_question() actually found something."""
+
+    @classmethod
+    def setUpClass(cls):
+        # offer_to_fetch_sources() adds this to sys.path itself, but only
+        # after the "y" choice check inside the function -- these tests
+        # patch fetch_papers.fetch_for_question, which unittest.mock needs
+        # to import (and therefore find on sys.path) before the function
+        # body ever runs.
+        sys.path.insert(0, os.path.abspath(coach.PAPERS_DIR))
+
+    def test_non_interactive_stream_never_prompts_or_fetches(self):
+        with patch("sys.stdin.isatty", return_value=False), patch("builtins.input") as mock_input:
+            added = coach.offer_to_fetch_sources("some question")
+        self.assertEqual(added, 0)
+        mock_input.assert_not_called()
+
+    def test_declining_does_not_fetch(self):
+        with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value="n"), \
+             patch("subprocess.run") as mock_run:
+            added = coach.offer_to_fetch_sources("some question")
+        self.assertEqual(added, 0)
+        mock_run.assert_not_called()
+
+    def test_empty_input_defaults_to_declining(self):
+        with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value=""):
+            self.assertEqual(coach.offer_to_fetch_sources("some question"), 0)
+
+    def test_accepting_calls_fetch_for_question_and_ingests_on_success(self):
+        with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value="y"), \
+             patch("fetch_papers.fetch_for_question", return_value=3) as mock_fetch, \
+             patch("subprocess.run") as mock_run:
+            added = coach.offer_to_fetch_sources("does X help with Y")
+        self.assertEqual(added, 3)
+        mock_fetch.assert_called_once_with("does X help with Y")
+        mock_run.assert_called_once()
+        self.assertIn("ingest.py", mock_run.call_args[0][0])
+        self.assertIn("--incremental", mock_run.call_args[0][0])
+
+    def test_accepting_with_nothing_found_does_not_run_ingest(self):
+        with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value="yes"), \
+             patch("fetch_papers.fetch_for_question", return_value=0), \
+             patch("subprocess.run") as mock_run:
+            added = coach.offer_to_fetch_sources("an unanswerable question")
+        self.assertEqual(added, 0)
+        mock_run.assert_not_called()
+
+    def test_a_fetch_exception_is_reported_not_raised(self):
+        with patch("sys.stdin.isatty", return_value=True), patch("builtins.input", return_value="y"), \
+             patch("fetch_papers.fetch_for_question", side_effect=RuntimeError("network down")), \
+             patch("subprocess.run") as mock_run:
+            added = coach.offer_to_fetch_sources("some question")
+        self.assertEqual(added, 0)
         mock_run.assert_not_called()
 
 

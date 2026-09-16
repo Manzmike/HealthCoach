@@ -527,6 +527,42 @@ def _for_terminal(text: str) -> str:
         return _MARKDOWN_BOLD.sub("\033[1m\\1\033[0m", text)
     return _MARKDOWN_BOLD.sub("\\1", text)
 
+
+PAPERS_DIR = os.path.join(os.path.dirname(__file__), "..", "papers")
+
+
+def offer_to_fetch_sources(question: str) -> int:
+    """A question with no accepted evidence gets an offer (interactive only
+    -- never on a piped stream, and eval_run.py never calls this at all) to
+    run a real, live literature search for it, via the same search -> grade
+    -> download path as a normal corpus topic (papers/fetch_papers.py's
+    fetch_for_question(), added for this feature), then ingest whatever's
+    found. Returns how many new PDFs were added; the caller decides whether
+    to re-run the search."""
+    if not sys.stdin.isatty():
+        return 0
+    choice = input(
+        "\nNo sources found for this question. Search for new sources now? "
+        "This makes live network requests and can take a minute or two. [y/N]: "
+    ).strip().lower()
+    if choice not in ("y", "yes"):
+        return 0
+    sys.path.insert(0, os.path.abspath(PAPERS_DIR))
+    import fetch_papers as FP
+    print("Searching Europe PMC / OpenAlex / Semantic Scholar for new sources...")
+    try:
+        added = FP.fetch_for_question(question)
+    except Exception as e:
+        print(f"Source search failed: {e}")
+        return 0
+    print(f"Added {added} new source(s)." if added else "No new sources found for this question.")
+    if added:
+        print("Adding new sources to the library (this can take a few minutes)...")
+        import subprocess
+        subprocess.run([sys.executable, "ingest.py", "--incremental"],
+                        cwd=os.path.dirname(__file__))
+    return added
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="+")
@@ -575,7 +611,20 @@ def main():
             related = EC.closest_source_block(related_hits)
             if related:
                 print("\n" + related)
-            continue
+            if offer_to_fetch_sources(topic_text):
+                tbl = lancedb.connect(DBDIR).open_table(TABLE)  # reopen to see the new rows
+                diagnostics = []
+                related_hits = []
+                hits, weak = search(tbl, emb, topic_text, a.k, rr, audit=diagnostics,
+                                    matched_intents=matched_intents, related_out=related_hits)
+                if a.retrieval_audit:
+                    print(json.dumps(diagnostics, indent=2, default=str))
+                if not hits:
+                    print("\nStill no sufficiently relevant evidence after searching for new sources.")
+                    continue
+                print("\nFound new evidence:\n")
+            else:
+                continue
 
         if model_tok is None:
             from mlx_lm import load
