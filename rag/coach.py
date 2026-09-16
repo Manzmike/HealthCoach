@@ -15,7 +15,7 @@ Retrieval rules:
   - no accepted evidence means no generation; emitted claims require valid source IDs
     and exact quotes. Provenance validation does not establish scientific entailment.
 """
-import os, re, sys, argparse, json
+import os, re, sys, argparse, json, datetime as dt
 import evidence_control as EC
 import safety_policy as SP
 from rag_control import router as RC
@@ -125,6 +125,196 @@ def load_reranker():
 # row -- see build_where_clause's docstring for why the IS NULL arm is load-
 # bearing rather than redundant.
 DENY_LANE_EXCLUSION = "(lane IS NULL OR lane NOT IN ('deny','deny-detox'))"
+
+# --------------------------------------------------------------------------
+# Multi-part question splitting (CLI only -- eval_run.py and every other
+# caller of search()/answer_from_hits() pass one question at a time and are
+# unaffected by any of this).
+
+_TOPIC_KEYWORDS = {
+    # Order matters: a segment is tagged with the first bucket it matches.
+    "schedule": ("schedule", "routine", "gym", "workout", "training", "day look",
+                 "daily plan"),
+    "food": ("meal", "meals", "food", "foods", "eat ", "eating", "diet", "nutrition",
+             "breakfast", "lunch", "dinner"),
+}
+
+
+def _topic_for_segment(text: str) -> str:
+    lower = text.lower()
+    for topic, keywords in _TOPIC_KEYWORDS.items():
+        if any(keyword in lower for keyword in keywords):
+            return topic
+    return "general"
+
+
+def split_questions(q: str) -> list[dict]:
+    """Split a multi-part question into topic groups, merging adjacent
+    segments that share a topic (stackable, e.g. "what should my 3 meals
+    look like? what foods should I eat?" are one food question) and keeping
+    a genuine topic change (schedule vs. food vs. general) as its own group,
+    each to get its own full search+critique pass. A single-topic question
+    still returns exactly one group, so single-question behavior (and the
+    eval battery, which never goes through this function) is unaffected.
+
+    This is a keyword heuristic, not a classifier: it groups by the coarse,
+    common topics this coach actually gets asked about (schedule, food,
+    everything else), not by the router's clinical safety intents, which
+    exist for a different purpose (lane restriction and the critic) and
+    still apply per-group via RC.classify() downstream."""
+    segments = [s.strip() for s in re.split(r"(?<=[?.!])\s+", q.strip()) if s.strip()]
+    segments = [s for s in segments if s not in ("?", ".", "!")]
+    if not segments:
+        return [{"topic": "general", "text": q.strip()}]
+    groups: list[dict] = []
+    for segment in segments:
+        topic = _topic_for_segment(segment)
+        if groups and groups[-1]["topic"] == topic:
+            groups[-1]["text"] += " " + segment
+        else:
+            groups.append({"topic": topic, "text": segment})
+    return groups
+
+
+# --------------------------------------------------------------------------
+# Schedule visual breakdown. A schedule-shaped question gets your real,
+# already-locked WEEK_OPERATING_PLAN.md if you have one saved -- never an
+# LLM-invented one, for the same reason build_schedule.py computes times in
+# code rather than asking the model. Only when no saved schedule exists does
+# it fall back to organizing the model's own claims into a generic table.
+
+WEEK_OPERATING_PLAN = os.path.join(os.path.dirname(__file__), "WEEK_OPERATING_PLAN.md")
+
+
+def has_saved_schedule(path: str = WEEK_OPERATING_PLAN) -> bool:
+    if not os.path.exists(path):
+        return False
+    with open(path, encoding="utf-8") as f:
+        return len(f.read().strip()) > 200
+
+
+def real_schedule_block(path: str = WEEK_OPERATING_PLAN) -> str:
+    """The WEEK AT A GLANCE table -- already a complete visual breakdown of
+    the real, locked week, no extraction of "today" required."""
+    if not os.path.exists(path):
+        return ""
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+    match = re.search(r"^# WEEK AT A GLANCE\s*\n(.*?)(?=\n# |\Z)", text, re.S | re.M)
+    if not match:
+        return ""
+    return ("YOUR SAVED SCHEDULE (from WEEK_OPERATING_PLAN.md):\n\n"
+            + match.group(1).strip())
+
+
+def _backup_schedule(path: str = WEEK_OPERATING_PLAN) -> str | None:
+    if not os.path.exists(path):
+        return None
+    import shutil
+    backup = f"{path}.bak-{dt.datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    shutil.copy2(path, backup)
+    return backup
+
+
+def prompt_schedule_override(path: str = WEEK_OPERATING_PLAN) -> None:
+    """After showing the real saved schedule, ask whether to keep it,
+    override it entirely, or edit one part -- never on a non-interactive
+    stream (piped output, tests, the eval battery never call this at all).
+
+    Neither "override" nor "edit" has this tool auto-generate replacement
+    schedule text: WEEK_OPERATING_PLAN.md's LOCKED NUMBERS cross-reference
+    each other throughout its ~500-line DAILY CARDS section (a wake-time
+    change alone touches the light-exposure window, every day's clock, and
+    the derived protein/step targets) -- exactly the kind of multi-place,
+    load-bearing consistency this project has elsewhere insisted on
+    computing in code rather than trusting a model to get right by rewriting
+    prose. Both choices back up the current file, then hand you your real
+    editor at the right place, rather than risk producing an internally
+    inconsistent plan."""
+    if not sys.stdin.isatty():
+        return
+    choice = input(
+        "\nKeep this schedule, override it entirely, or edit one part? [keep/override/edit]: "
+    ).strip().lower()
+    if choice not in ("override", "o", "edit", "e"):
+        print("Keeping current schedule.")
+        return
+    backup = _backup_schedule(path)
+    if backup:
+        print(f"Backed up current schedule to {backup}")
+    if choice in ("edit", "e"):
+        field = input("Which part are you changing (e.g. 'wake time', 'training days')? ").strip()
+        print(f"Opening {path} -- find the LOCKED NUMBERS line for '{field}' and update it, "
+              "then check the DAILY CARDS section below it for anything derived from that value.")
+    else:
+        print(f"Opening {path} for a full rewrite.")
+    import subprocess
+    subprocess.run([os.environ.get("EDITOR", "nano"), path])
+
+
+_TIME_OF_DAY_KEYWORDS = (
+    ("Morning", ("morning", "wake", "waking", "breakfast")),
+    ("Midday", ("midday", "lunch", "noon", "afternoon")),
+    ("Evening", ("evening", "dinner", "training", "workout", "gym", "exercise")),
+    ("Night", ("night", "bed", "bedtime", "sleep onset", "before sleep", "wind-down", "wind down")),
+)
+
+
+def _time_of_day_for(text: str) -> str:
+    lower = text.lower()
+    for period, keywords in _TIME_OF_DAY_KEYWORDS:
+        if any(keyword in lower for keyword in keywords):
+            return period
+    return "General"
+
+
+def _extract_claim_lines(rendered_answer: str) -> list[str]:
+    """The claim bullet lines from render_claims()'s output, stripped of
+    their leading "- **Type:**" markdown so a table cell holds only the
+    finding itself."""
+    lines = []
+    for line in rendered_answer.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("- **"):
+            lines.append(re.sub(r"^- \*\*[^*]+:\*\*\s*", "", stripped))
+    return lines
+
+
+def generic_schedule_table(rendered_answer: str) -> str:
+    """Group the answer's own claims by a generic time-of-day label (never
+    an invented clock time) into a table -- the fallback for a schedule-
+    shaped question when no real WEEK_OPERATING_PLAN.md is saved."""
+    claim_lines = _extract_claim_lines(rendered_answer)
+    if not claim_lines:
+        return ""
+    order = ["Morning", "Midday", "Evening", "Night", "General"]
+    buckets: dict[str, list[str]] = {period: [] for period in order}
+    for line in claim_lines:
+        buckets[_time_of_day_for(line)].append(line)
+    rows = [(period, line) for period in order for line in buckets[period]]
+    lines = ["SCHEDULE BREAKDOWN (organized from the research above, not a locked plan):",
+             "", "| When | What the evidence says |", "|---|---|"]
+    for period, text in rows:
+        lines.append(f"| {period} | {text} |")
+    return "\n".join(lines)
+
+
+_SCHEDULE_QUESTION_KEYWORDS = _TOPIC_KEYWORDS["schedule"]
+
+
+def looks_like_schedule_question(text: str) -> bool:
+    lower = text.lower()
+    return any(keyword in lower for keyword in _SCHEDULE_QUESTION_KEYWORDS)
+
+
+def schedule_breakdown_for(question_text: str, rendered_answer: str) -> str:
+    """The visual breakdown to show for a schedule-shaped question, or ""
+    for a non-schedule one."""
+    if not looks_like_schedule_question(question_text):
+        return ""
+    if has_saved_schedule():
+        return real_schedule_block()
+    return generic_schedule_table(rendered_answer)
 
 
 def build_where_clause(matched_intents: list[str]) -> str:
@@ -345,33 +535,56 @@ def main():
     emb = SentenceTransformer(EMB_MODEL, device="mps")
     tbl = lancedb.connect(DBDIR).open_table(TABLE)
     rr = load_reranker()
-    diagnostics = []
-    matched_intents = RC.classify(q)
-    related_hits: list[dict] = []
-    hits, weak = search(tbl, emb, q, a.k, rr, audit=diagnostics,
-                        matched_intents=matched_intents, related_out=related_hits)
-    if a.retrieval_audit:
-        print(json.dumps(diagnostics, indent=2, default=str))
-    if not hits:
-        print("ANSWER:")
-        print(EC.NO_EVIDENCE)
-        related = EC.closest_source_block(related_hits)
-        if related:
-            print("\n" + related)
-        return
+    # A multi-part question ("...? and what about...? and...?") gets one
+    # full search+critique pass PER distinct topic instead of one blended
+    # pass over the whole thing -- a single blended retrieval tends to
+    # surface thin, tangentially-related evidence for every sub-question at
+    # once and answer none of them well. Adjacent parts about the same
+    # topic (e.g. two food questions in a row) still run together as one
+    # pass. A single-topic question is one group, so this loop runs once
+    # and behaves exactly as before.
+    groups = split_questions(q)
+    multi = len(groups) > 1
+    model_tok = None
+    for group in groups:
+        topic_text = group["text"]
+        if multi:
+            print(f"\n--- {group['topic'].upper()} ---")
+        diagnostics = []
+        matched_intents = RC.classify(topic_text)
+        related_hits: list[dict] = []
+        hits, weak = search(tbl, emb, topic_text, a.k, rr, audit=diagnostics,
+                            matched_intents=matched_intents, related_out=related_hits)
+        if a.retrieval_audit:
+            print(json.dumps(diagnostics, indent=2, default=str))
+        if not hits:
+            print("ANSWER:")
+            print(EC.NO_EVIDENCE)
+            related = EC.closest_source_block(related_hits)
+            if related:
+                print("\n" + related)
+            continue
 
-    from mlx_lm import load
-    model, tok = load(GEN_MODEL)
-    drowsy = any(term in q.lower() for term in ("drive", "driving", "commute"))
-    print("ANSWER:")
-    print(_for_terminal(answer_from_hits(model, tok, q, hits, a.max_tokens,
-                                          matched_intents=matched_intents, action_count=1,
-                                          primary_count=1, drowsy=drowsy,
-                                          related_hits=related_hits)))
-    if a.show:
-        print("\nSources (study-design metadata, not certainty):")
-        print("\n".join(EC.source_lines(hits)))
-        print("\nRetrieved passages:\n" + EC.claim_context(hits))
+        if model_tok is None:
+            from mlx_lm import load
+            model_tok = load(GEN_MODEL)
+        model, tok = model_tok
+        drowsy = any(term in topic_text.lower() for term in ("drive", "driving", "commute"))
+        answer = answer_from_hits(model, tok, topic_text, hits, a.max_tokens,
+                                   matched_intents=matched_intents, action_count=1,
+                                   primary_count=1, drowsy=drowsy,
+                                   related_hits=related_hits)
+        schedule_block = schedule_breakdown_for(topic_text, answer)
+        print("ANSWER:")
+        print(_for_terminal(answer))
+        if schedule_block:
+            print("\n" + schedule_block)
+            if has_saved_schedule():
+                prompt_schedule_override()
+        if a.show:
+            print("\nSources (study-design metadata, not certainty):")
+            print("\n".join(EC.source_lines(hits)))
+            print("\nRetrieved passages:\n" + EC.claim_context(hits))
 
 if __name__ == "__main__":
     main()
