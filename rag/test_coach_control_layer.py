@@ -177,5 +177,29 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
         self.assertIn("rejected for", second_system)
 
 
+class ForTerminalTests(unittest.TestCase):
+    """render_claims() emits **bold** because its output is also embedded
+    verbatim into generated Markdown reports, where that syntax is correct.
+    _for_terminal() is coach.py CLI's own presentation step, applied only to
+    what gets printed to a human's terminal -- report generation never calls
+    it, so Markdown files keep the real asterisks they need."""
+
+    def test_interactive_terminal_gets_real_ansi_bold(self):
+        with patch("sys.stdout.isatty", return_value=True):
+            rendered = coach._for_terminal("- **Uncertainty:** no evidence found.")
+        self.assertEqual(rendered, "- \033[1mUncertainty:\033[0m no evidence found.")
+
+    def test_piped_output_gets_plain_text_not_raw_asterisks_or_escape_codes(self):
+        with patch("sys.stdout.isatty", return_value=False):
+            rendered = coach._for_terminal("- **Uncertainty:** no evidence found.")
+        self.assertEqual(rendered, "- Uncertainty: no evidence found.")
+        self.assertNotIn("*", rendered)
+        self.assertNotIn("\033", rendered)
+
+    def test_text_with_no_bold_markup_is_unchanged(self):
+        with patch("sys.stdout.isatty", return_value=True):
+            self.assertEqual(coach._for_terminal("plain text"), "plain text")
+
+
 if __name__ == "__main__":
     unittest.main()

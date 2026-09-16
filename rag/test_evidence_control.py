@@ -257,10 +257,12 @@ class EvidenceControlTests(unittest.TestCase):
 
     def test_a_source_cited_by_several_claims_shows_its_reference_once(self):
         """A gold card frequently supports more than one claim in the same
-        answer. Repeating its full Grade/Document/Folder/DOI line and an
-        identical quote after every claim was the main source of visual
-        repetition users found confusing -- show the reference once, and
-        collapse a repeated identical quote to a short back-reference."""
+        answer. The old layout repeated its full Grade/Document/Folder/DOI
+        line and an identical quote inline after every one of those claims --
+        the main source of visual repetition users found confusing. Claims
+        and citations are now in separate sections: the claims list stays
+        terse (just the [source_id] bracket), and a REFERENCES section lists
+        each source once, however many claims cited it."""
         row = hit()
         sid = EC.source_id(row)
         records = [
@@ -274,9 +276,13 @@ class EvidenceControlTests(unittest.TestCase):
         rendered = EC.render_claims(records, [row])
         self.assertEqual(rendered.count(f"Reference ({sid}):"), 1)
         self.assertEqual(rendered.count(f"Evidence quote ({sid}): “{row['text']}”"), 1)
-        self.assertIn(f"Evidence quote ({sid}): see above", rendered)
+        self.assertIn("REFERENCES:", rendered)
         self.assertIn("First claim.", rendered)
         self.assertIn("Second claim, same source and quote.", rendered)
+        # Claims list comes before REFERENCES, and neither claim line carries
+        # inline citation plumbing anymore.
+        self.assertLess(rendered.index("Second claim, same source and quote."), rendered.index("REFERENCES:"))
+        self.assertNotIn(f"Second claim, same source and quote. [{sid}]\n  Reference", rendered)
 
     def test_a_source_cited_with_a_genuinely_different_quote_still_shows_it(self):
         row = hit("First sentence with enough length to quote here.\nSecond distinct sentence with enough length too.")
@@ -293,7 +299,6 @@ class EvidenceControlTests(unittest.TestCase):
         self.assertEqual(rendered.count(f"Reference ({sid}):"), 1)
         self.assertIn("First sentence with enough length to quote here.", rendered)
         self.assertIn("Second distinct sentence with enough length too.", rendered)
-        self.assertNotIn("see above", rendered)
 
     def test_closest_source_block_is_ranked_and_labeled_as_context_only(self):
         first = hit("The closer related passage with enough context to inspect.", source_pdf="first.pdf")
@@ -440,7 +445,8 @@ class EvidenceControlTests(unittest.TestCase):
                                              matched_intents=["lifestyle_night"])
         sid = EC.source_id(row)
         self.assertTrue(answer.endswith(
-            claim + f" [{sid}]\n"
+            claim + f" [{sid}]\n\n"
+            "REFERENCES:\n"
             f"  Reference ({sid}): Grade B · Document: study.pdf · "
             f"Folder: 07_supplements/creatine · DOI: 10.1/study\n"
             f"  Evidence quote ({sid}): “{row['text']}”"

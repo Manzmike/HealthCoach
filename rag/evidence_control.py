@@ -501,38 +501,38 @@ def _reference_details(hit: dict, sid: str) -> str:
 
 
 def render_claims(records: Sequence[dict], hits: Sequence[dict] | None = None) -> str:
-    """Render claims with each source's Reference/Evidence-quote block shown
-    once per answer, not once per claim. A gold card is frequently cited by
-    several claims in the same answer; repeating its full Grade/Document/
-    Folder/DOI line and identical quote after every one of them was the
-    single largest source of visual repetition in a rendered answer. A claim
-    reusing an already-shown (source, quote) pair instead gets a short
-    back-reference; a claim reusing the same source with a genuinely
-    different quote still gets that new quote shown, just without repeating
-    the reference metadata."""
+    """Render the claims list, followed by one REFERENCES section listing
+    each cited source once -- not once per claim. A gold card is frequently
+    cited by several claims in the same answer; repeating its full Grade/
+    Document/Folder/DOI line and quote after every one of them (the previous
+    layout) was the single largest source of visual repetition in a rendered
+    answer, and interleaving citation plumbing between claims made the
+    claims themselves harder to read in sequence. Each claim keeps its
+    inline [source_id, ...] bracket; the reference details and quote(s) for
+    that source live once in REFERENCES, in first-cited order. A source
+    quoted with more than one genuinely distinct excerpt across claims shows
+    every distinct quote under its one reference line."""
     if not records:
         return NO_EVIDENCE
     hits = hits or []
     hit_by_id = {source_id(hit): hit for hit in hits}
     lines = ["Source-linked research findings (not a personal plan).",
              "Source IDs and quoted text checked; claim entailment and scientific certainty are not verified.", ""]
-    shown_reference_for: set[str] = set()
-    shown_quote_for: set[tuple[str, str]] = set()
+    quotes_by_source: dict[str, list[str]] = {}
     for record in records:
         lines.append(f"- **{record['claim_type'].replace('_', ' ').title()}:** {record['claim']} [{', '.join(record['source_ids'])}]")
         for ref in record["sources"]:
             sid = _canonical_reference_id(ref["source_id"], hits)
-            hit = hit_by_id.get(sid)
-            if sid not in shown_reference_for:
-                if hit is not None:
-                    lines.append("  " + _reference_details(hit, sid))
-                shown_reference_for.add(sid)
-            quote_key = (sid, ref["quote"])
-            if quote_key in shown_quote_for:
-                lines.append(f"  Evidence quote ({sid}): see above")
-            else:
-                lines.append(f"  Evidence quote ({sid}): “{ref['quote']}”")
-                shown_quote_for.add(quote_key)
+            quotes = quotes_by_source.setdefault(sid, [])
+            if ref["quote"] not in quotes:
+                quotes.append(ref["quote"])
+    lines += ["", "REFERENCES:"]
+    for sid, quotes in quotes_by_source.items():
+        hit = hit_by_id.get(sid)
+        if hit is not None:
+            lines.append("  " + _reference_details(hit, sid))
+        for quote in quotes:
+            lines.append(f"  Evidence quote ({sid}): “{quote}”")
     return "\n".join(lines)
 
 

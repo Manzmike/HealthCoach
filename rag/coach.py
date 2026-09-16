@@ -311,6 +311,20 @@ def answer_from_hits(model, tok, question, hits, max_tokens=1400, *,
 REFUSAL = ("08_peptides_gray","pp405_suvomipic","jxl069_mpc_chemistry","no_detox_protocol",
            "semen_retention_evidence","what_not_to_optimize","uncertified_quality_risk")
 
+_MARKDOWN_BOLD = re.compile(r"\*\*(.+?)\*\*")
+
+def _for_terminal(text: str) -> str:
+    """render_claims() emits **bold** markdown because its output is also
+    embedded verbatim into generated Markdown reports (supplement_audit.py),
+    where that syntax is correct and expected. A terminal has no Markdown
+    renderer, so those asterisks just show up as literal clutter. Convert to
+    real ANSI bold on an interactive terminal; otherwise drop the asterisks
+    and keep the plain label, rather than showing raw escape codes or
+    literal ** in a piped/redirected output."""
+    if sys.stdout.isatty():
+        return _MARKDOWN_BOLD.sub("\033[1m\\1\033[0m", text)
+    return _MARKDOWN_BOLD.sub("\\1", text)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("question", nargs="+")
@@ -320,6 +334,7 @@ def main():
     ap.add_argument("--retrieval-audit", action="store_true", help="print accepted/rejected scores and reasons (no writes)")
     a = ap.parse_args()
     q = " ".join(a.question)
+    print(f"QUESTION: {q}\n\n")
     warning = SP.urgent_message(q)
     if warning:
         print(warning)
@@ -338,6 +353,7 @@ def main():
     if a.retrieval_audit:
         print(json.dumps(diagnostics, indent=2, default=str))
     if not hits:
+        print("ANSWER:")
         print(EC.NO_EVIDENCE)
         related = EC.closest_source_block(related_hits)
         if related:
@@ -347,13 +363,14 @@ def main():
     from mlx_lm import load
     model, tok = load(GEN_MODEL)
     drowsy = any(term in q.lower() for term in ("drive", "driving", "commute"))
-    print("\n" + answer_from_hits(model, tok, q, hits, a.max_tokens,
-                                   matched_intents=matched_intents, action_count=1,
-                                   primary_count=1, drowsy=drowsy,
-                                   related_hits=related_hits) + "\n")
-    print("Sources (study-design metadata, not certainty):")
-    print("\n".join(EC.source_lines(hits)))
+    print("ANSWER:")
+    print(_for_terminal(answer_from_hits(model, tok, q, hits, a.max_tokens,
+                                          matched_intents=matched_intents, action_count=1,
+                                          primary_count=1, drowsy=drowsy,
+                                          related_hits=related_hits)))
     if a.show:
+        print("\nSources (study-design metadata, not certainty):")
+        print("\n".join(EC.source_lines(hits)))
         print("\nRetrieved passages:\n" + EC.claim_context(hits))
 
 if __name__ == "__main__":
