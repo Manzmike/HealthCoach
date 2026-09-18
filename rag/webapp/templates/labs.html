@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block title %}Labs — HealthCoach{% endblock %}
 {% block content %}
-<h1>Labs</h1>
-<p class="lede">Private, stored only on this machine (rag/.healthcoach/labs.json).</p>
+<header class="page-header">
+  <div><p class="eyebrow">Personal context</p><h1>Labs</h1>
+  <p class="lede">Private values stored only on this machine. Review saved results here; add or import values from Settings when needed.</p></div>
+</header>
 
-{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
 
+<div class="table-wrap">
 <table>
-  <tr><th>Marker</th><th class="num">Value</th><th>Reference range</th><th>Status</th><th>Date</th><th>Source</th></tr>
+  <thead><tr><th scope="col">Marker</th><th scope="col" class="num">Value</th><th scope="col">Reference range</th><th scope="col">Status</th><th scope="col">Date</th><th scope="col">Source</th></tr></thead>
+  <tbody>
   {% for row in rows %}
     <tr>
       <td>{{ row.name }}</td>
@@ -20,7 +24,9 @@
   {% else %}
     <tr><td colspan="6" class="muted">No labs recorded yet.</td></tr>
   {% endfor %}
+  </tbody>
 </table>
+</div>
 
 {% if edit_mode %}
 <div class="panel">

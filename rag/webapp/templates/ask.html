@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 {% block title %}Ask — HealthCoach{% endblock %}
 {% block content %}
-<h1>Ask a question</h1>
-<p class="lede">Retrieved from your local evidence library only. No claim without a cited passage.</p>
+<header class="page-header">
+  <div><p class="eyebrow">Evidence library</p><h1>Ask a question</h1>
+  <p class="lede">Retrieved from your local evidence library only. No claim without a cited passage.</p></div>
+</header>
 
 <form method="post" action="{{ url_for('ask') }}" class="panel">
   <div class="field">
     <label for="question">Your question</label>
     <textarea id="question" name="question" required>{{ question }}</textarea>
   </div>
-  <button type="submit">Ask</button>
+  <button type="submit">Ask the evidence library</button>
 </form>
 
 {% if sections is not none %}

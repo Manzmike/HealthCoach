@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Evidence for {{ label }} — HealthCoach{% endblock %}
 {% block content %}
-<h1>What the evidence says about placing "{{ label }}"</h1>
-<p class="lede">Category: {{ category }}</p>
+<header class="page-header">
+  <div><p class="eyebrow">Schedule research</p><h1>What the evidence says about placing “{{ label }}”</h1>
+  <p class="lede">Category: {{ category }}</p></div>
+</header>
 
 {% for section in sections %}
   <div class="reading">

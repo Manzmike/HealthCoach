@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Food — HealthCoach{% endblock %}
 {% block content %}
-<h1>Food catalog</h1>
-<p class="lede">Week of {{ start }}. Selecting an item requires a source-linked reason; nothing is saved to
-  history until you save the week. Meals, training, and other catalog areas stay in <code>./hc</code> for now.</p>
+<header class="page-header">
+  <div><p class="eyebrow">This week’s food plan</p><h1>Food catalog</h1>
+  <p class="lede">Week of {{ start }}. Select foods, attach a source-linked reason, save the week, then review the evidence.</p></div>
+  <a class="button quiet" href="{{ url_for('settings') }}">Open Settings</a>
+</header>
 
-{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
 
 <div class="panel">
   <h2>Diet gate</h2>
@@ -31,11 +33,13 @@
 
 <div class="field" style="max-width: 320px;">
   <label for="filterBox">Type to filter</label>
-  <input type="text" id="filterBox" placeholder="e.g. salmon, oats" autocomplete="off">
+  <input type="text" id="filterBox" placeholder="e.g. salmon, oats…" autocomplete="off" aria-label="Filter foods">
 </div>
 
+<div class="table-wrap">
 <table id="foodTable">
-  <tr><th>Food</th><th>Overall</th><th>For you</th><th>Coverage</th><th></th></tr>
+  <thead><tr><th scope="col">Food</th><th scope="col">Overall</th><th scope="col">For you</th><th scope="col">Coverage</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead>
+  <tbody>
   {% for e in entries %}
     <tr data-name="{{ e.name|lower }}">
       <td>{{ e.name }}</td>
@@ -57,7 +61,9 @@
   {% else %}
     <tr><td colspan="5" class="muted">No foods in the catalog yet.</td></tr>
   {% endfor %}
+  </tbody>
 </table>
+</div>
 
 <div class="panel">
   {% if dirty %}

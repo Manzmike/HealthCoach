@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Schedule — HealthCoach{% endblock %}
 {% block content %}
-<h1>Schedule</h1>
+<header class="page-header">
+  <div><p class="eyebrow">Weekly template</p><h1>Schedule</h1>
 <p class="lede">One weekly template. Editing here or in the terminal builder edits the same file.
   {% if edit_mode %}Drag on the grid to sketch a block's time, or use the form below.{% else %}This view is read-only until you choose to edit it.{% endif %}</p>
+  </div>
+  {% if not edit_mode %}<a class="button quiet" href="{{ url_for('settings') }}">Edit in Settings</a>{% endif %}
+</header>
 
-{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
 
 <div class="week-grid-scroll">
   <div class="hour-gutter">
@@ -58,7 +62,7 @@
     </div>
     <div class="field" style="max-width: 260px;">
       <label for="label">Label</label>
-      <input type="text" id="label" name="label" placeholder="Evening lift">
+      <input type="text" id="label" name="label" placeholder="e.g. evening lift…">
     </div>
     <div style="display:flex; gap:1rem; flex-wrap:wrap;">
       <div class="field" style="max-width: 160px;">

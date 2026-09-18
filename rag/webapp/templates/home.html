@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block title %}HealthCoach{% endblock %}
 {% block content %}
-<h1>HealthCoach</h1>
-<p class="lede">A local, private front door to your evidence, schedule, symptoms, and labs. Nothing here leaves this machine.</p>
+<header class="page-header home-header">
+  <div><p class="eyebrow">Private local workspace</p><h1>HealthCoach</h1>
+  <p class="lede">A local front door to your evidence, schedule, symptoms, and labs. Nothing here leaves this machine.</p></div>
+</header>
+
+<h2 class="section-title">Your workspace</h2>
 
 <div class="tile-row">
   <a class="tile" href="{{ url_for('ask') }}">

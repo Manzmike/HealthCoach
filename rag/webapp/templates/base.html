@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edeae0">
   <title>{% block title %}HealthCoach{% endblock %}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +13,12 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="app-shell">
-    <nav class="tabindex">
-      <a href="{{ url_for('home') }}" class="brand">HealthCoach</a>
-      <a href="{{ url_for('ask') }}" class="tab{% if request.endpoint == 'ask' %} current{% endif %}">Ask</a>
-      <a href="{{ url_for('food') }}" class="tab{% if request.endpoint and request.endpoint.startswith('food') %} current{% endif %}">Food</a>
-      <a href="{{ url_for('settings') }}" class="tab{% if request.endpoint in ('settings', 'setup') %} current{% endif %}">Settings</a>
-      <a href="{{ url_for('more') }}" class="tab{% if request.endpoint == 'more' %} current{% endif %}">More</a>
+    <nav class="tabindex" aria-label="Primary navigation">
+      <a href="{{ url_for('home') }}" class="brand" translate="no">HealthCoach</a>
+      <a href="{{ url_for('ask') }}" class="tab{% if request.endpoint == 'ask' %} current{% endif %}"{% if request.endpoint == 'ask' %} aria-current="page"{% endif %}>Ask</a>
+      <a href="{{ url_for('food') }}" class="tab{% if request.endpoint and request.endpoint.startswith('food') %} current{% endif %}"{% if request.endpoint and request.endpoint.startswith('food') %} aria-current="page"{% endif %}>Food</a>
+      <a href="{{ url_for('settings') }}" class="tab{% if request.endpoint in ('settings', 'setup') %} current{% endif %}"{% if request.endpoint in ('settings', 'setup') %} aria-current="page"{% endif %}>Settings</a>
+      <a href="{{ url_for('more') }}" class="tab{% if request.endpoint == 'more' %} current{% endif %}"{% if request.endpoint == 'more' %} aria-current="page"{% endif %}>More</a>
     </nav>
     <main class="content" id="main-content">
       {% block content %}{% endblock %}

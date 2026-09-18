@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Diet gate — HealthCoach{% endblock %}
 {% block content %}
-<h1>Diet first</h1>
-<p class="lede">Choose the foods that fit your stated diet before selecting specific foods. This is a
-  transparent eligibility gate, not a claim that one diet is medically best for you.</p>
+<header class="page-header">
+  <div><p class="eyebrow">Food setup</p><h1>Diet first</h1>
+  <p class="lede">Choose the foods that fit your stated diet before selecting specific foods. This is a transparent eligibility gate, not a claim that one diet is medically best for you.</p></div>
+</header>
 
-{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
 
 <form method="post" action="{{ url_for('food_diet') }}" class="panel">
   <input type="hidden" name="from" value="{{ source }}">

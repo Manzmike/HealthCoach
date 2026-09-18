@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Health goals — HealthCoach{% endblock %}
 {% block content %}
-<h1>Health goals</h1>
-<p class="lede">Up to three, in priority order. These drive the "For you" grade on the food catalog and
-  everything else that reads your recorded goals.</p>
+<header class="page-header">
+  <div><p class="eyebrow">Food setup</p><h1>Health goals</h1>
+  <p class="lede">Choose up to 3 priorities in order. They drive the “For you” grade on the food catalog and other views that read your recorded goals.</p></div>
+</header>
 
-{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
 
 <form method="post" action="{{ url_for('food_goals') }}" class="panel">
   <input type="hidden" name="from" value="{{ source }}">

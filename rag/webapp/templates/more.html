@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block title %}More — HealthCoach{% endblock %}
 {% block content %}
-<h1>More actions</h1>
-<p class="lede">Everything else is still reachable from the terminal dashboard (<code>./hc</code>) or directly.
-  This web app doesn't reimplement these yet.</p>
+<header class="page-header">
+  <div><p class="eyebrow">Terminal bridge</p><h1>More actions</h1>
+  <p class="lede">These workflows remain in the terminal dashboard (<code>./hc</code>). Each card shows the exact command to run.</p></div>
+</header>
 
 {% for action in actions %}
   <div class="panel">

@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Set up HealthCoach{% endblock %}
 {% block content %}
-<h1>Set up HealthCoach</h1>
-<p class="lede">Complete these two short steps once. After that, HealthCoach opens on your results and keeps data-entry forms inside Settings.</p>
+<header class="page-header">
+  <div><p class="eyebrow">First visit</p><h1>Set up HealthCoach</h1>
+  <p class="lede">Complete these two short steps once. After that, HealthCoach opens on your results and keeps data-entry forms inside Settings.</p></div>
+</header>
 
 <div class="setup-steps" aria-label="Setup progress">
   <div class="setup-step{% if setup.steps.diet %} complete{% endif %}">

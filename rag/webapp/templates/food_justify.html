@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Select {{ row.display_name }} — HealthCoach{% endblock %}
 {% block content %}
-<h1>Select "{{ row.display_name }}"</h1>
-<p class="lede">A hard reason ties this selection to an actual resource — not a diagnosis or medical clearance.</p>
+<header class="page-header">
+  <div><p class="eyebrow">Food selection</p><h1>Select “{{ row.display_name }}”</h1>
+  <p class="lede">Attach a source and a review reason. This records a cautious food choice, not a diagnosis or medical clearance.</p></div>
+</header>
 
-{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
 
 <form method="post" action="{{ url_for('food_select', item_id=row.id) }}" class="panel">
   <div class="field">

@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Confirm lab values — HealthCoach{% endblock %}
 {% block content %}
-<h1>Confirm values found in {{ filename }}</h1>
-<p class="lede">Nothing is saved automatically. Uncheck anything wrong, fix a value, then save.</p>
+<header class="page-header">
+  <div><p class="eyebrow">Lab import</p><h1>Confirm values found in {{ filename }}</h1>
+  <p class="lede">Nothing is saved automatically. Uncheck anything wrong, fix a value, then save.</p></div>
+</header>
 
 <form method="post" action="{{ url_for('labs_import_confirm') }}">
   <input type="hidden" name="filename" value="{{ filename }}">
@@ -10,8 +12,10 @@
     <label for="date">Date of this lab</label>
     <input type="date" id="date" name="date">
   </div>
+  <div class="table-wrap">
   <table>
-    <tr><th>Save?</th><th>Marker</th><th class="num">Value</th><th>Unit</th><th>Context found in PDF</th></tr>
+    <thead><tr><th scope="col">Save?</th><th scope="col">Marker</th><th scope="col" class="num">Value</th><th scope="col">Unit</th><th scope="col">Context found in PDF</th></tr></thead>
+    <tbody>
     {% for c in candidates %}
       <tr>
         <td><input type="checkbox" name="save" value="{{ c.key }}" checked style="width:auto;"></td>
@@ -21,7 +25,9 @@
         <td class="muted">…{{ c.snippet }}…</td>
       </tr>
     {% endfor %}
+    </tbody>
   </table>
+  </div>
   <button type="submit">Save checked values</button>
 </form>
 <p><a href="{{ url_for('labs_page') }}">Cancel, back to labs</a></p>
