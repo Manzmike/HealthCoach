@@ -12,19 +12,20 @@ from unittest.mock import patch
 
 import labs as L
 import schedule_builder as SB
+from webapp import schedule_analysis as SA
 from webapp.app import app
 
 
 class _IsolatedState(unittest.TestCase):
     """Every test gets its own schedule_calendar.json, schedule_export.ics,
-    and labs.json so real personal data on this machine is never touched or
-    read. webapp/app.py's routes read SB.DEFAULT_PATH/SB.DEFAULT_ICS_PATH at
-    call time (see app._load_schedule()'s docstring for why that matters:
-    SB.load()/save()/export_ics()'s own `path=` defaults are bound once, at
-    definition time, so patching the attribute alone does NOT redirect a
-    call that relies on that default -- confirmed live the hard way, when
-    an earlier version of these tests silently wrote real Job/Breakfast/
-    Lift blocks into this machine's actual rag/schedule_calendar.json and
+    schedule_analysis.json, and labs.json so real personal data on this
+    machine is never touched or read. webapp/app.py's routes read
+    SB.DEFAULT_PATH/SB.DEFAULT_ICS_PATH/SA.DEFAULT_PATH at call time (see
+    app._load_schedule()'s docstring for why that matters: a `path=`
+    default bound at function-definition time does NOT pick up a later
+    patch.object() on the attribute -- confirmed live the hard way, when an
+    earlier version of these tests silently wrote real Job/Breakfast/Lift
+    blocks into this machine's actual rag/schedule_calendar.json and
     schedule_export.ics)."""
 
     def setUp(self):
@@ -32,9 +33,11 @@ class _IsolatedState(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.sched_path = str(Path(self.tmp.name) / "schedule_calendar.json")
         self.ics_path = str(Path(self.tmp.name) / "schedule_export.ics")
+        self.analysis_path = Path(self.tmp.name) / "schedule_analysis.json"
         self.labs_path = Path(self.tmp.name) / "labs.json"
         for patcher in (patch.object(SB, "DEFAULT_PATH", self.sched_path),
                         patch.object(SB, "DEFAULT_ICS_PATH", self.ics_path),
+                        patch.object(SA, "DEFAULT_PATH", self.analysis_path),
                         patch.object(L, "LABS_PATH", self.labs_path)):
             patcher.start()
             self.addCleanup(patcher.stop)
@@ -97,14 +100,58 @@ class ScheduleRoutesTests(_IsolatedState):
         self.assertEqual(r.status_code, 200)
         self.assertIn(b"Add at least one block", r.data)
 
-    def test_export_ics_downloads_a_real_calendar_file(self):
+    def test_export_before_analyzing_is_refused_with_an_explanation(self):
         sched = SB.empty_schedule()
         SB.add_block(sched, category="gym", label="Lift", start="17:00", end="18:00", days=["Mon"])
         SB.save(sched, self.sched_path)
+        r = self.client.get("/schedule/export.ics", follow_redirects=True)
+        self.assertEqual(r.status_code, 200)
+        self.assertIn(b"Analyze the schedule first", r.data)
+
+    def test_export_ics_downloads_a_real_calendar_file_once_analyzed(self):
+        sched = SB.empty_schedule()
+        SB.add_block(sched, category="gym", label="Lift", start="17:00", end="18:00", days=["Mon"])
+        SB.save(sched, self.sched_path)
+        with patch("coach.answer_question", return_value=[]):
+            self.client.post("/schedule/analyze")
         r = self.client.get("/schedule/export.ics")
         self.assertEqual(r.status_code, 200)
         self.assertIn(b"BEGIN:VCALENDAR", r.data)
         self.assertIn(b"Lift", r.data)
+
+    def test_editing_the_schedule_after_analyzing_re_locks_the_download(self):
+        sched = SB.empty_schedule()
+        SB.add_block(sched, category="gym", label="Lift", start="17:00", end="18:00", days=["Mon"])
+        SB.save(sched, self.sched_path)
+        with patch("coach.answer_question", return_value=[]):
+            self.client.post("/schedule/analyze")
+        self.client.post("/schedule/add", data={
+            "category": "church", "label": "Service", "days": "sun", "start": "9am", "end": "10am",
+        })
+        r = self.client.get("/schedule/export.ics", follow_redirects=True)
+        self.assertIn(b"Analyze the schedule first", r.data)
+
+    def test_analyze_runs_one_evidence_lookup_per_research_relevant_category(self):
+        sched = SB.empty_schedule()
+        SB.add_block(sched, category="gym", label="Lift", start="17:00", end="18:00", days=["Mon"])
+        SB.add_block(sched, category="church", label="Service", start="09:00", end="10:00", days=["Sun"])
+        SB.save(sched, self.sched_path)
+        with patch("coach.answer_question", return_value=[
+            {"topic": "general", "text": "q", "no_evidence": False, "answer": "**Evidence:** train earlier.",
+             "related": "", "schedule_block": "", "weak": False},
+        ]) as mock_answer:
+            r = self.client.post("/schedule/analyze", follow_redirects=True)
+        mock_answer.assert_called_once()  # only "gym" is research-relevant; "church" is skipped
+        self.assertEqual(r.status_code, 200)
+        self.assertIn(b"train earlier", r.data)
+
+    def test_analyze_with_no_research_relevant_blocks_still_unlocks_download(self):
+        sched = SB.empty_schedule()
+        SB.add_block(sched, category="church", label="Service", start="09:00", end="10:00", days=["Sun"])
+        SB.save(sched, self.sched_path)
+        self.client.post("/schedule/analyze")
+        r = self.client.get("/schedule/export.ics")
+        self.assertEqual(r.status_code, 200)
 
 
 class SymptomsRouteTests(_IsolatedState):

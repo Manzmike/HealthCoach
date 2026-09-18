@@ -36,6 +36,7 @@ import symptom_checkin as SC  # noqa: E402
 import today as T  # noqa: E402
 from healthcoach_dashboard import ACTIONS  # noqa: E402
 from webapp import render as R  # noqa: E402
+from webapp import schedule_analysis as SA  # noqa: E402
 from webapp import schedule_view as SV  # noqa: E402
 
 app = Flask(__name__)
@@ -171,14 +172,25 @@ def _save_schedule(sched: dict) -> None:
     SB.save(sched, SB.DEFAULT_PATH)
 
 
+def _schedule_context(sched: dict, *, error: str | None = None) -> dict:
+    analysis = SA.load(SA.DEFAULT_PATH)
+    return {
+        "days": SV.grouped_by_day(sched),
+        "hour_labels": SV.HOUR_LABELS,
+        "categories": SB.CATEGORIES,
+        "research_categories": sorted(SB._RESEARCH_RELEVANT_CATEGORIES),
+        "error": error,
+        "is_analyzed": SA.is_current(sched, analysis),
+        "analysis_results": analysis.get("results") if analysis.get("snapshot") else None,
+        "analyzed_at": analysis.get("analyzed_at"),
+        "has_blocks": bool(sched["blocks"]),
+    }
+
+
 @app.route("/schedule")
 def schedule():
     sched = _load_schedule()
-    return render_template(
-        "schedule.html", days=SV.grouped_by_day(sched), categories=SB.CATEGORIES,
-        research_categories=sorted(SB._RESEARCH_RELEVANT_CATEGORIES),
-        error=request.args.get("error"),
-    )
+    return render_template("schedule.html", **_schedule_context(sched, error=request.args.get("error")))
 
 
 @app.route("/schedule/add", methods=["POST"])
@@ -204,10 +216,7 @@ def schedule_add():
     except ValueError as exc:
         error = str(exc)
     if error:
-        return render_template(
-            "schedule.html", days=SV.grouped_by_day(_load_schedule()), categories=SB.CATEGORIES,
-            research_categories=sorted(SB._RESEARCH_RELEVANT_CATEGORIES), error=error,
-        )
+        return render_template("schedule.html", **_schedule_context(_load_schedule(), error=error))
     added_category = SB._resolve_category(category_input)
     if added_category in SB._RESEARCH_RELEVANT_CATEGORIES:
         return redirect(url_for("schedule_research", category=added_category, label=label))
@@ -235,11 +244,36 @@ def schedule_research():
     return render_template("schedule_research.html", category=category, label=label, sections=sections)
 
 
+@app.route("/schedule/analyze", methods=["POST"])
+def schedule_analyze():
+    """Advisory only -- this NEVER moves, resizes, or removes a block on
+    its own. It runs the same evidence-lookup pipeline schedule_research()
+    already uses for one new block, once per research-relevant category
+    present across the WHOLE current schedule, and persists the result as
+    the gate .ics download checks (see schedule_analysis.is_current):
+    editing a block after this invalidates the gate until analyzed again."""
+    sched = _load_schedule()
+    targets = SV.analysis_targets(sched)
+    results = []
+    for category, label in targets:
+        query = SB._placement_query(sched, category, label)
+        answered = coach.answer_question(query, get_stack=_get_stack, load_model=_load_model)
+        sections = _sections_from_results(answered)
+        results.append({"category": category, "label": label, "sections": sections})
+    import datetime as dt
+    SA.save(sched["blocks"], results, analyzed_at=dt.datetime.now().isoformat(timespec="seconds"),
+            path=SA.DEFAULT_PATH)
+    return redirect(url_for("schedule"))
+
+
 @app.route("/schedule/export.ics")
 def schedule_export():
     sched = _load_schedule()
     if not sched["blocks"]:
         return redirect(url_for("schedule", error="Add at least one block before exporting."))
+    if not SA.is_current(sched, SA.load(SA.DEFAULT_PATH)):
+        return redirect(url_for("schedule", error="Analyze the schedule first -- download unlocks once "
+                                                    "Analyze has run against your current blocks."))
     # Same call-time-vs-definition-time issue as SB.load()/SB.save() above:
     # SB.export_ics()'s `path` default is bound to SB.DEFAULT_ICS_PATH at
     # definition time too.

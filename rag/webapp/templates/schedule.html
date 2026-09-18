@@ -2,31 +2,40 @@
 {% block title %}Schedule — HealthCoach{% endblock %}
 {% block content %}
 <h1>Schedule</h1>
-<p class="lede">One weekly template. Editing here or in the terminal builder edits the same file.</p>
+<p class="lede">One weekly template. Editing here or in the terminal builder edits the same file.
+  Drag on the grid to sketch a block's time, or use the form below.</p>
 
 {% if error %}<div class="notice">{{ error }}</div>{% endif %}
 
-<div class="week-spread">
+<div class="week-grid-scroll">
+  <div class="hour-gutter">
+    <div class="hour-gutter-header"></div>
+    {% for label in hour_labels %}<div class="hour-row">{{ label }}</div>{% endfor %}
+  </div>
   {% for day, blocks in days %}
-    <div class="day-column">
-      <h3>{{ day }}</h3>
-      {% for block in blocks %}
-        <div class="block-card" data-category="{{ block.category }}">
-          <span class="time">{{ block.start }}–{{ block.end }}</span>
-          <span class="cat-dot" data-category="{{ block.category }}"></span>{{ block.label }}
-          <form method="post" action="{{ url_for('schedule_remove') }}">
-            <input type="hidden" name="index" value="{{ block.index }}">
-            <button type="submit" class="remove">remove</button>
-          </form>
-        </div>
-      {% endfor %}
+    <div class="day-track" data-day="{{ day }}">
+      <div class="day-track-header">{{ day }}</div>
+      <div class="day-track-body">
+        {% for _ in hour_labels %}<div class="hour-gridline"></div>{% endfor %}
+        {% for block in blocks %}
+          <div class="block-card" data-category="{{ block.category }}"
+               style="top: {{ block.top_pct }}%; height: {{ block.height_pct }}%;">
+            <span class="time">{{ block.start }}–{{ block.end }}</span>
+            <span class="cat-dot" data-category="{{ block.category }}"></span>{{ block.label }}
+            <form method="post" action="{{ url_for('schedule_remove') }}">
+              <input type="hidden" name="index" value="{{ block.index }}">
+              <button type="submit" class="remove">remove</button>
+            </form>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   {% endfor %}
 </div>
 
-<div class="panel">
+<div class="panel" id="addBlockPanel">
   <h2>Add a block</h2>
-  <form method="post" action="{{ url_for('schedule_add') }}">
+  <form method="post" action="{{ url_for('schedule_add') }}" id="addBlockForm">
     <div class="field">
       <label>Category</label>
       <input type="hidden" name="category" id="categoryValue" required>
@@ -62,13 +71,42 @@
     </div>
     <button type="submit">Add block</button>
   </form>
-  <p class="muted">Research-relevant categories ({{ research_categories|join(", ") }}) offer evidence-backed
-    placement guidance right after you add the block.</p>
+  <p class="muted">Research-relevant categories ({{ research_categories|join(", ") }}) get looked at by
+    "Analyze schedule" below.</p>
 </div>
 
-<a href="{{ url_for('schedule_export') }}"><button>Export .ics</button></a>
-<p class="muted">Import into Apple Calendar (File &gt; Import...), Google Calendar (Settings &gt; Import &amp;
-  export), or Outlook (File &gt; Open &amp; Export &gt; Import/Export).</p>
+<h2>Analyze &amp; export</h2>
+<div class="panel">
+  <form method="post" action="{{ url_for('schedule_analyze') }}">
+    <button type="submit"{% if not has_blocks %} disabled{% endif %}>Analyze schedule</button>
+  </form>
+  {% if not has_blocks %}
+    <p class="muted">Add at least one block first.</p>
+  {% elif is_analyzed %}
+    <p class="muted">Matches your current schedule (analyzed {{ analyzed_at }}).</p>
+    <a href="{{ url_for('schedule_export') }}"><button class="quiet">Download .ics</button></a>
+    <p class="muted">Import into Apple Calendar (File &gt; Import...), Google Calendar (Settings &gt; Import
+      &amp; export), or Outlook (File &gt; Open &amp; Export &gt; Import/Export).</p>
+  {% else %}
+    <p class="muted">{{ "Schedule changed since the last analysis — analyze again to unlock download." if analyzed_at else "Analyze to unlock the .ics download." }}</p>
+  {% endif %}
+</div>
+
+{% if analysis_results %}
+  <div class="reading">
+    {% for entry in analysis_results %}
+      <h3>{{ entry.category.replace("_", " ")|capitalize }} — {{ entry.label }}</h3>
+      {% for section in entry.sections %}
+        {% if section.no_evidence %}
+          <p class="muted">No sufficiently relevant evidence found for this.</p>
+          {% if section.related_html %}<div class="marginalia">{{ section.related_html|safe }}</div>{% endif %}
+        {% else %}
+          {{ section.answer_html|safe }}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+{% endif %}
 
 <script>
 (function () {
@@ -81,14 +119,75 @@
       hidden.value = chip.dataset.value;
     });
   });
+
+  var dayChips = {};
   document.querySelectorAll("#dayChips .chip").forEach(function (chip) {
-    // <label> already toggles its nested checkbox natively on any click
-    // inside it -- listen for that instead of also toggling it ourselves,
-    // which would double-toggle (net no-op) on every click but the tiny
-    // checkbox square itself.
     var box = chip.querySelector("input[type=checkbox]");
+    dayChips[chip.dataset.day] = box;
     box.addEventListener("change", function () {
       chip.classList.toggle("active", box.checked);
+    });
+  });
+
+  function minutesToHHMM(m) {
+    var h = Math.floor(m / 60), mm = m % 60;
+    return String(h).padStart(2, "0") + ":" + String(mm).padStart(2, "0");
+  }
+
+  // Drag-to-create, Apple-Calendar style: drag on a day's track sketches a
+  // time range, which pre-fills the (always keyboard-usable) form below --
+  // this is a shortcut on top of that form, not a replacement for it, so
+  // dragging is never required to add a block.
+  document.querySelectorAll(".day-track-body").forEach(function (track) {
+    var day = track.closest(".day-track").dataset.day;
+    var dragging = null;
+
+    function yToMinutes(clientY) {
+      var rect = track.getBoundingClientRect();
+      var pct = Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+      return Math.max(0, Math.min(1439, Math.round((pct * 1440) / 15) * 15));
+    }
+
+    function renderGhost() {
+      var lo = Math.min(dragging.startMin, dragging.endMin);
+      var hi = Math.max(lo + 15, Math.max(dragging.startMin, dragging.endMin));
+      dragging.ghost.style.top = (lo / 1440 * 100) + "%";
+      dragging.ghost.style.height = ((hi - lo) / 1440 * 100) + "%";
+    }
+
+    track.addEventListener("mousedown", function (e) {
+      if (e.target.closest(".block-card")) return;
+      var ghost = document.createElement("div");
+      ghost.className = "drag-ghost";
+      track.appendChild(ghost);
+      var startMin = yToMinutes(e.clientY);
+      dragging = { startMin: startMin, endMin: startMin, ghost: ghost };
+      renderGhost();
+      e.preventDefault();
+    });
+
+    document.addEventListener("mousemove", function (e) {
+      if (!dragging) return;
+      dragging.endMin = yToMinutes(e.clientY);
+      renderGhost();
+    });
+
+    document.addEventListener("mouseup", function () {
+      if (!dragging) return;
+      var lo = Math.min(dragging.startMin, dragging.endMin);
+      var hi = Math.max(lo + 15, Math.max(dragging.startMin, dragging.endMin));
+      dragging.ghost.remove();
+      dragging = null;
+
+      document.getElementById("start").value = minutesToHHMM(lo);
+      document.getElementById("end").value = minutesToHHMM(hi);
+      Object.keys(dayChips).forEach(function (d) {
+        var box = dayChips[d];
+        box.checked = (d === day);
+        box.dispatchEvent(new Event("change"));
+      });
+      document.getElementById("addBlockPanel").scrollIntoView({ behavior: "smooth", block: "center" });
+      document.getElementById("label").focus();
     });
   });
 })();

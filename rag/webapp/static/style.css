@@ -298,46 +298,78 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .chip input { position: absolute; opacity: 0; pointer-events: none; }
 
-/* --- Weekly spread (schedule) ------------------------------------------- */
+/* --- Hour grid (schedule) — drag on a day-track-body to sketch a block --- */
 
-.week-spread {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(100px, 1fr));
-  gap: 0;
+:root { --hour-row: 30px; }
+
+.week-grid-scroll {
+  display: flex;
   border: 1px solid var(--line);
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.day-column {
-  border-right: 1px solid var(--line);
-  padding: 0.6rem 0.55rem;
-  min-height: 4.5rem;
-}
+.hour-gutter { flex: 0 0 52px; border-right: 1px solid var(--line); }
 
-.day-column:last-child { border-right: none; }
-
-.day-column h3 {
-  font-size: 0.95rem;
-  margin-bottom: 0.55rem;
-  padding-bottom: 0.35rem;
+.hour-gutter-header, .day-track-header {
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
+
+.day-track-header { padding-left: 0.5rem; }
+
+.hour-row {
+  height: var(--hour-row);
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  text-align: right;
+  padding-right: 0.4rem;
+  transform: translateY(-0.5em);
+}
+
+.hour-row:first-child { visibility: hidden; }
+
+.day-track { flex: 1 1 0; min-width: 92px; border-right: 1px solid var(--line); }
+.day-track:last-child { border-right: none; }
+
+.day-track-body {
+  position: relative;
+  cursor: crosshair;
+  user-select: none;
+}
+
+.hour-gridline { height: var(--hour-row); border-bottom: 1px dashed var(--line); }
 
 .block-card {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  overflow: hidden;
   border: 1px solid var(--line);
-  padding: 0.4rem 0.55rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.82rem;
-  position: relative;
+  background: var(--panel);
+  padding: 0.15rem 0.4rem;
+  font-size: 0.74rem;
+  line-height: 1.3;
 }
 
-.block-card .time { display: block; color: var(--ink-soft); font-size: 0.74rem; margin-bottom: 0.1rem; }
-.block-card .cat { color: var(--ink-soft); }
-.block-card form { margin: 0.25rem 0 0; }
+.block-card .time { display: block; color: var(--ink-soft); font-size: 0.68rem; }
+.block-card form { margin: 0; }
 .block-card button.remove {
   background: none; border: none; color: var(--high); cursor: pointer;
-  padding: 0; font-size: 0.74rem;
+  padding: 0; font-size: 0.68rem; opacity: 0.8;
+}
+
+.drag-ghost {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent);
+  pointer-events: none;
 }
 
 /* The category dot is the actual information device (which of the 12
