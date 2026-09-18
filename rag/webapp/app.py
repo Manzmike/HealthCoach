@@ -18,6 +18,7 @@ network.
 
 from __future__ import annotations
 
+import datetime as dt
 import os
 import sys
 import tempfile
@@ -29,12 +30,18 @@ HERE = Path(__file__).resolve().parent
 RAG_DIR = HERE.parent
 sys.path.insert(0, str(RAG_DIR))
 
+import candidate_ledger as CL  # noqa: E402
 import coach  # noqa: E402
 import labs as L  # noqa: E402
 import schedule_builder as SB  # noqa: E402
+import supplement_audit as audit  # noqa: E402
 import symptom_checkin as SC  # noqa: E402
 import today as T  # noqa: E402
+import week_plan as WP  # noqa: E402
+import week_planner as WPL  # noqa: E402
+import weekly_food_plan as food_plan  # noqa: E402
 from healthcoach_dashboard import ACTIONS  # noqa: E402
+from webapp import food_draft as FDraft  # noqa: E402
 from webapp import render as R  # noqa: E402
 from webapp import schedule_analysis as SA  # noqa: E402
 from webapp import schedule_view as SV  # noqa: E402
@@ -43,7 +50,7 @@ app = Flask(__name__)
 
 REPORT = RAG_DIR / "HEALTHCOACH_REPORT.md"
 
-_COVERED_ACTION_KEYS = {"question", "symptoms"}  # schedule/labs have no direct dashboard action
+_COVERED_ACTION_KEYS = {"question", "symptoms", "food-review"}  # schedule/labs have no direct dashboard action
 
 # --------------------------------------------------------------------------
 # Lazy RAG-stack cache: loaded at most once per server process, only when
@@ -260,7 +267,6 @@ def schedule_analyze():
         answered = coach.answer_question(query, get_stack=_get_stack, load_model=_load_model)
         sections = _sections_from_results(answered)
         results.append({"category": category, "label": label, "sections": sections})
-    import datetime as dt
     SA.save(sched["blocks"], results, analyzed_at=dt.datetime.now().isoformat(timespec="seconds"),
             path=SA.DEFAULT_PATH)
     return redirect(url_for("schedule"))
@@ -351,7 +357,6 @@ def labs_import():
 def labs_import_confirm():
     filename = request.form.get("filename", "upload.pdf")
     date = request.form.get("date") or None
-    import datetime as dt
     date = date or dt.date.today().isoformat()
     saved = 0
     for key in request.form.getlist("save"):
@@ -365,6 +370,113 @@ def labs_import_confirm():
         L.save_confirmed_value(key, value, date, f"pdf:{filename}")
         saved += 1
     return redirect(url_for("labs_page"))
+
+
+# --------------------------------------------------------------------------
+# /food -- browse the evidence-graded food catalog and select items for the
+# current week with a required source-linked reason, then save with one
+# overall reason (or discard). Meals/training/other categories/history/
+# export stay CLI-only for now (./hc -> week_planner.py --view ...); see
+# docs/superpowers/specs for why this first slice is scoped this narrowly.
+
+def _food_state() -> dict:
+    """Loads everything week_planner.py's curses session would hold in
+    memory for the whole session -- resolved fresh on every request instead,
+    since HTTP has no equivalent long-lived session here. `week` is the
+    current in-progress draft if one exists (see webapp/food_draft.py),
+    else the already-saved week if there is one, else a fresh seed."""
+    ledger = CL.load_ledger()
+    profile = audit.load_saved_profile(REPORT) or {}
+    rows = WPL.catalog_rows(ledger)
+    food_records = food_plan._load_food_evidence()
+    data = WP.load(WP.DEFAULT_PATH)
+    research = data["research"]
+    start = WP.monday(dt.date.today())
+    previous = data["weeks"].get(start)
+    baseline = previous if previous is not None else WP.seed_week(start, rows, profile)
+    draft = FDraft.load_draft(start, FDraft.DEFAULT_PATH)
+    week = draft if draft is not None else baseline
+    # Compared by VALUE against the real baseline, not "does a draft file
+    # happen to exist" -- selecting then unselecting the same item leaves a
+    # draft file on disk (harmless) whose content is now identical to
+    # baseline again, and that must read back as clean, not still dirty.
+    dirty = week != baseline
+    return {"ledger": ledger, "profile": profile, "rows": rows, "food_records": food_records,
+            "research": research, "start": start, "previous": previous, "week": week, "dirty": dirty}
+
+
+def _food_entries(state: dict) -> list[dict]:
+    entries = [row for row in state["rows"] if "food" in row.get("browse_categories", [WP.category(row)])]
+    scored = {row["id"]: WP.grades(row, state["ledger"]["intake"], state["food_records"].get(row["id"]),
+                                    state["research"].get(row["id"])) for row in entries}
+    return [{"id": row["id"], "name": row["display_name"], "overall": scored[row["id"]]["overall"],
+              "personal": scored[row["id"]]["personal"], "coverage": scored[row["id"]]["coverage"],
+              "selected": row["id"] in state["week"]["selected"]} for row in entries]
+
+
+@app.route("/food")
+def food():
+    state = _food_state()
+    return render_template("food.html", entries=_food_entries(state), start=state["start"],
+                            dirty=state["dirty"], error=request.args.get("error"))
+
+
+@app.route("/food/select/<item_id>", methods=["GET", "POST"])
+def food_select(item_id):
+    state = _food_state()
+    row = next((r for r in state["rows"] if r["id"] == item_id), None)
+    if row is None:
+        return redirect(url_for("food", error="Item not found in the current catalog."))
+    grade = WP.grades(row, state["ledger"]["intake"], state["food_records"].get(item_id),
+                       state["research"].get(item_id))
+    sources = WPL.resources_for(row, grade)
+    if not sources:
+        return redirect(url_for(
+            "food", error=f"{row['display_name']}: no usable source/resource on file for this item yet."))
+    if request.method == "GET":
+        return render_template("food_justify.html", row=row, sources=sources, error=None)
+    try:
+        source_index = int(request.form.get("source_index", "-1"))
+        if not 0 <= source_index < len(sources):
+            raise ValueError("Choose one of the listed supporting sources.")
+        basis = WP.rationale(request.form.get("goal", ""), request.form.get("personal_reason", ""),
+                              request.form.get("review_trigger", ""), sources[source_index], sources)
+    except ValueError as exc:
+        return render_template("food_justify.html", row=row, sources=sources, error=str(exc))
+    week = state["week"]
+    week["selected"][item_id] = {**WP.selection(row), "rationale": basis}
+    FDraft.save_draft(state["start"], week, FDraft.DEFAULT_PATH)
+    return redirect(url_for("food"))
+
+
+@app.route("/food/unselect/<item_id>", methods=["POST"])
+def food_unselect(item_id):
+    state = _food_state()
+    # Only write a draft when something actually changed -- unselecting an
+    # item that was never selected (e.g. a stale page, a double click) is a
+    # no-op and must not manufacture "unsaved changes" out of nothing.
+    if item_id in state["week"]["selected"]:
+        del state["week"]["selected"][item_id]
+        FDraft.save_draft(state["start"], state["week"], FDraft.DEFAULT_PATH)
+    return redirect(url_for("food"))
+
+
+@app.route("/food/save", methods=["POST"])
+def food_save():
+    state = _food_state()
+    try:
+        WP.save(state["start"], state["week"], state["previous"], request.form.get("reason", ""), WP.DEFAULT_PATH)
+    except ValueError as exc:
+        return redirect(url_for("food", error=str(exc)))
+    FDraft.clear_draft(state["start"], FDraft.DEFAULT_PATH)
+    return redirect(url_for("food"))
+
+
+@app.route("/food/discard", methods=["POST"])
+def food_discard():
+    state = _food_state()
+    FDraft.clear_draft(state["start"], FDraft.DEFAULT_PATH)
+    return redirect(url_for("food"))
 
 
 # --------------------------------------------------------------------------

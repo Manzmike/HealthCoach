@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Food — HealthCoach{% endblock %}
+{% block content %}
+<h1>Food catalog</h1>
+<p class="lede">Week of {{ start }}. Selecting an item requires a source-linked reason; nothing is saved to
+  history until you save the week. Meals, training, and other catalog areas stay in <code>./hc</code> for now.</p>
+
+{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+
+<div class="field" style="max-width: 320px;">
+  <label for="filterBox">Type to filter</label>
+  <input type="text" id="filterBox" placeholder="e.g. salmon, oats" autocomplete="off">
+</div>
+
+<table id="foodTable">
+  <tr><th>Food</th><th>Overall</th><th>For you</th><th>Coverage</th><th></th></tr>
+  {% for e in entries %}
+    <tr data-name="{{ e.name|lower }}">
+      <td>{{ e.name }}</td>
+      <td>{{ e.overall }}</td>
+      <td>{{ e.personal }}</td>
+      <td class="muted">{{ e.coverage }}</td>
+      <td>
+        {% if e.selected %}
+          <form method="post" action="{{ url_for('food_unselect', item_id=e.id) }}">
+            <button type="submit" class="quiet">Unselect</button>
+          </form>
+        {% else %}
+          <a href="{{ url_for('food_select', item_id=e.id) }}"><button type="button">Select</button></a>
+        {% endif %}
+      </td>
+    </tr>
+  {% else %}
+    <tr><td colspan="5" class="muted">No foods in the catalog yet.</td></tr>
+  {% endfor %}
+</table>
+
+<div class="panel">
+  {% if dirty %}
+    <p>You have unsaved selection changes for this week.</p>
+    <form method="post" action="{{ url_for('food_save') }}" class="inline">
+      <div class="field" style="flex: 1 1 320px;">
+        <label for="reason">Why are you saving these changes?</label>
+        <input type="text" id="reason" name="reason" required minlength="1">
+      </div>
+      <button type="submit">Save this week</button>
+    </form>
+    <form method="post" action="{{ url_for('food_discard') }}" style="margin-top: 0.5rem;">
+      <button type="submit" class="quiet">Discard unsaved changes</button>
+    </form>
+  {% else %}
+    <p class="muted">No unsaved changes.</p>
+  {% endif %}
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById("filterBox");
+  var rows = document.querySelectorAll("#foodTable tr[data-name]");
+  box.addEventListener("input", function () {
+    var q = box.value.trim().toLowerCase();
+    rows.forEach(function (row) {
+      row.style.display = !q || row.dataset.name.indexOf(q) !== -1 ? "" : "none";
+    });
+  });
+})();
+</script>
+{% endblock %}

@@ -15,6 +15,7 @@
       <a href="{{ url_for('home') }}" class="brand">HealthCoach</a>
       <a href="{{ url_for('ask') }}" class="tab{% if request.endpoint == 'ask' %} current{% endif %}">Ask</a>
       <a href="{{ url_for('symptoms') }}" class="tab{% if request.endpoint == 'symptoms' %} current{% endif %}">Symptoms</a>
+      <a href="{{ url_for('food') }}" class="tab{% if request.endpoint and request.endpoint.startswith('food') %} current{% endif %}">Food</a>
       <a href="{{ url_for('schedule') }}" class="tab{% if request.endpoint and request.endpoint.startswith('schedule') %} current{% endif %}">Schedule</a>
       <a href="{{ url_for('labs_page') }}" class="tab{% if request.endpoint and request.endpoint.startswith('labs') %} current{% endif %}">Labs</a>
       <a href="{{ url_for('more') }}" class="tab{% if request.endpoint == 'more' %} current{% endif %}">More</a>
