@@ -238,10 +238,14 @@ a:hover { color: var(--ink); }
 .model-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; padding: 0.25rem 0.3rem 0; }
 .model-card-header h2 { margin: 0; font-size: 1.15rem; }
 .model-state { border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); font-size: 0.72rem; padding: 0.2rem 0.55rem; white-space: nowrap; }
-.model-stage { display: grid; place-items: center; min-height: 300px; margin: 0.25rem auto; background: var(--paper); border-radius: 6px; overflow: hidden; }
+.model-stage { position: relative; display: grid; place-items: center; min-height: 300px; margin: 0.25rem auto; background: var(--paper); border-radius: 6px; overflow: hidden; }
 .body-model { display: block; width: min(100%, 360px); height: auto; max-height: 430px; outline: none; }
 .model-stage:focus-within { box-shadow: inset 0 0 0 3px var(--focus); }
 .model-caption { color: var(--ink-soft); font-size: 0.78rem; margin: 0.5rem 0.3rem 0.1rem; }
+.model-overlay { position: absolute; left: 0.75rem; right: 0.75rem; top: 0.75rem; max-width: 29ch; border: 1px solid var(--line); background: var(--panel); padding: 0.5rem 0.65rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+.model-overlay strong, .model-overlay span { display: block; }
+.model-overlay strong { font-family: var(--serif); font-size: 0.9rem; }
+.model-overlay span { color: var(--ink-soft); font-size: 0.72rem; line-height: 1.35; margin-top: 0.15rem; }
 .confirmed-data { border-top: 1px solid var(--line); margin: 0.75rem 0.3rem 0; padding-top: 0.65rem; }
 .confirmed-data .eyebrow { margin-bottom: 0.2rem; }
 .confirmed-data strong, .confirmed-data span { display: block; }

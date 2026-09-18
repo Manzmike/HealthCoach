@@ -4,12 +4,21 @@
       <p class="eyebrow">Body overview</p>
       <h2 id="body-model-title">Generic model</h2>
     </div>
-    <span class="model-state">Front view</span>
+    <span class="model-state">{{ "Rotating examples" if not (confirmed_intake is defined and confirmed_intake.updated_at) else "Confirmed approximation" }}</span>
   </div>
   <div class="model-stage">
     <canvas id="bodyModel" class="body-model" width="640" height="720"
             tabindex="0" role="img"
-            aria-label="Generic front-facing 3D body model. Use the left and right arrow keys or drag to rotate."></canvas>
+            aria-label="Rotating generic 3D body model. Use the left and right arrow keys or drag to rotate."
+            data-personalized="{{ "true" if confirmed_intake is defined and confirmed_intake.updated_at else "false" }}"
+            data-sex="{{ confirmed_intake.sex if confirmed_intake is defined and confirmed_intake.updated_at else "" }}"
+            data-weight="{{ confirmed_intake.bodyweight_kg if confirmed_intake is defined and confirmed_intake.updated_at else "" }}"
+            data-height="{{ confirmed_intake.height_cm if confirmed_intake is defined and confirmed_intake.updated_at else "" }}"
+            data-body-fat="{{ confirmed_intake.dexa.body_fat_pct if confirmed_intake is defined and confirmed_intake.updated_at else "" }}"></canvas>
+    <div class="model-overlay" aria-hidden="true">
+      <strong id="modelOverlayTitle">{{ "Your confirmed approximation" if confirmed_intake is defined and confirmed_intake.updated_at else "Add your data to see your metrics" }}</strong>
+      <span id="modelOverlayText">{{ "Uses confirmed measurements as a visual guide — not a scan." if confirmed_intake is defined and confirmed_intake.updated_at else "Previewing example women’s and men’s sizes, heights, weights, and arm proportions." }}</span>
+    </div>
   </div>
   <p class="model-caption">Visual guide only. Personal measurements and DEXA values appear only after you confirm them.</p>
   {% if confirmed_intake and confirmed_intake.updated_at %}
