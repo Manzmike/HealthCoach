@@ -7,7 +7,7 @@
     <h1 id="setup-title">Set up HealthCoach once</h1>
     <p class="lede">HealthCoach first looks for the local data you already have, asks only for what is missing, and shows the complete picture to be reviewed before it is saved.</p>
     <div class="hero-actions">
-      <a class="button hero-button" href="{{ url_for('food_diet', **{'from': 'setup'}) }}">Begin setup</a>
+      <a class="button hero-button" href="{{ url_for('setup_intake') }}">Begin setup</a>
       <a class="button quiet" href="{{ url_for('settings') }}">See all settings</a>
     </div>
     <ul class="trust-list" aria-label="Setup promises">
@@ -31,8 +31,8 @@
 </section>
 
 <header class="page-header">
-  <div><p class="eyebrow">Required inputs</p><h2>Finish the guided setup</h2>
-  <p class="lede">These existing steps remain available while the full intake pathway is being completed.</p></div>
+  <div><p class="eyebrow">Focused shortcuts</p><h2>Or edit one area directly</h2>
+  <p class="lede">The full intake above is the recommended first visit. These focused forms remain available when you only need to change one area.</p></div>
 </header>
 
 <div class="setup-steps" aria-label="Setup progress">
@@ -48,7 +48,7 @@
   </div>
   <div class="setup-step">
     <span class="step-number">3</span>
-    <div><strong>Add optional context</strong><p>Schedule, symptoms, and labs are available later from Settings.</p></div>
+    <div><strong>Use focused updates later</strong><p>After setup, schedule, symptoms, and labs open from Settings only when you choose them.</p></div>
     <a class="button quiet" href="{{ url_for('settings') }}">Open Settings</a>
   </div>
 </div>

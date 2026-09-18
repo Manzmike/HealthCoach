@@ -13,6 +13,7 @@ class LandingSurfaceTests(unittest.TestCase):
             response = app.test_client().get("/")
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"Begin setup", response.data)
+        self.assertIn(b"/setup/intake", response.data)
         self.assertIn(b'id="bodyModel"', response.data)
         self.assertIn(b"Generic model", response.data)
         self.assertIn(b"/static/body_model.js", response.data)

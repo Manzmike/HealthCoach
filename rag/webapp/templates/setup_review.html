@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Review intake — HealthCoach{% endblock %}
+{% block content %}
+<header class="page-header">
+  <div><p class="eyebrow">Review before saving</p><h1>Review your HealthCoach intake</h1>
+  <p class="lede">This is the final checkpoint. Go back to update answers, clear a section that should not be kept, or confirm the complete intake.</p></div>
+</header>
+
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
+
+<section class="panel imported-panel" aria-labelledby="review-import-title">
+  <p class="eyebrow">Existing local records</p><h2 id="review-import-title">Pulled before you answered</h2>
+  <div class="imported-grid">{% for item in imported %}<div><span>{{ item.label }}</span><strong>{{ item.value }}</strong></div>{% endfor %}</div>
+</section>
+
+<div class="review-grid">
+  <section class="panel review-card"><p class="eyebrow">Priorities</p><h2>Diet and goals</h2><dl><dt>Diet</dt><dd>{{ draft.diet }}</dd><dt>Health goals</dt><dd>{{ draft.health_goals|join(', ') or 'None recorded' }}</dd><dt>Body goals</dt><dd>{{ draft.body_goals }}</dd><dt>Lifestyle goals</dt><dd>{{ draft.lifestyle_goals }}</dd></dl><form method="post"><button class="quiet" name="action" value="clear_goals" type="submit">Clear goal text</button></form></section>
+  <section class="panel review-card"><p class="eyebrow">Measurements</p><h2>Body information</h2><dl><dt>Weight / height</dt><dd>{{ draft.bodyweight_kg }} kg / {{ draft.height_cm }} cm</dd><dt>Age / sex</dt><dd>{{ draft.age_years }} / {{ draft.sex }}</dd></dl></section>
+  <section class="panel review-card"><p class="eyebrow">Context</p><h2>Life and symptoms</h2><dl><dt>Lifestyle</dt><dd>{{ draft.current_lifestyle }}</dd><dt>Sport</dt><dd>{{ draft.current_sport }}</dd><dt>Schedule</dt><dd>{{ draft.schedule_notes }}</dd><dt>Symptoms</dt><dd>{{ draft.symptoms }}</dd></dl><form method="post"><button class="quiet" name="action" value="clear_symptoms" type="submit">Clear symptoms</button></form></section>
+  <section class="panel review-card"><p class="eyebrow">Measured data</p><h2>DEXA</h2><dl>{% for key, value in draft.dexa.items() if value %}<dt>{{ key.replace('_', ' ')|title }}</dt><dd>{{ value }}</dd>{% else %}<dd>No DEXA values entered.</dd>{% endfor %}</dl><form method="post"><button class="quiet" name="action" value="clear_dexa" type="submit">Clear DEXA data</button></form></section>
+</div>
+
+<form method="post" class="review-actions"><button class="button quiet" name="action" value="back" type="submit">Go back and update</button><button class="hero-button" name="action" value="confirm" type="submit">Confirm and open HealthCoach</button></form>
+{% endblock %}

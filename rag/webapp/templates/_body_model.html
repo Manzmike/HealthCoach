@@ -12,5 +12,12 @@
             aria-label="Generic front-facing 3D body model. Use the left and right arrow keys or drag to rotate."></canvas>
   </div>
   <p class="model-caption">Visual guide only. Personal measurements and DEXA values appear only after you confirm them.</p>
+  {% if confirmed_intake and confirmed_intake.updated_at %}
+  <div class="confirmed-data" aria-label="Confirmed body data">
+    <p class="eyebrow">Confirmed separately</p>
+    <strong>{{ confirmed_intake.bodyweight_kg }} kg · {{ confirmed_intake.height_cm }} cm</strong>
+    {% if confirmed_intake.dexa.body_fat_pct or confirmed_intake.dexa.lean_mass_kg %}<span>DEXA: {% if confirmed_intake.dexa.body_fat_pct %}{{ confirmed_intake.dexa.body_fat_pct }}% body fat{% endif %}{% if confirmed_intake.dexa.body_fat_pct and confirmed_intake.dexa.lean_mass_kg %} · {% endif %}{% if confirmed_intake.dexa.lean_mass_kg %}{{ confirmed_intake.dexa.lean_mass_kg }} kg lean mass{% endif %}</span>{% else %}<span>No DEXA values confirmed</span>{% endif %}
+  </div>
+  {% endif %}
 </section>
 <script src="{{ url_for('static', filename='body_model.js') }}" defer></script>

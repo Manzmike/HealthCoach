@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Full intake — HealthCoach{% endblock %}
+{% block content %}
+<header class="page-header">
+  <div><p class="eyebrow">One-time first visit</p><h1>Tell HealthCoach what is current</h1>
+  <p class="lede">Existing local records are shown beside this form. Answer every section, use “none” where needed, and review everything before it is saved.</p></div>
+</header>
+
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}
+
+<section class="panel imported-panel" aria-labelledby="imported-title">
+  <div class="section-heading-row"><div><p class="eyebrow">Pulled from this computer</p><h2 id="imported-title">What HealthCoach found</h2></div><span class="model-state">Read-only until review</span></div>
+  <div class="imported-grid">
+    {% for item in imported %}<div><span>{{ item.label }}</span><strong>{{ item.value }}</strong></div>{% endfor %}
+  </div>
+</section>
+
+<form method="post" action="{{ url_for('setup_intake') }}" class="intake-form">
+  <section class="panel" aria-labelledby="goals-title">
+    <p class="eyebrow">1 / priorities</p><h2 id="goals-title">Diet and goals</h2>
+    <div class="form-grid">
+      <div class="field"><label for="diet">Diet pattern</label><select id="diet" name="diet" required>{% for key, option in diet_options.items() %}<option value="{{ key }}"{% if draft.diet == key %} selected{% endif %}>{{ option.label }}</option>{% endfor %}</select></div>
+      <div class="field"><label for="weight_direction">Weight direction</label><select id="weight_direction" name="weight_direction" required>{% for value in ("lose", "maintain", "gain", "unknown") %}<option value="{{ value }}"{% if draft.weight_direction == value %} selected{% endif %}>{{ value|capitalize }}</option>{% endfor %}</select></div>
+    </div>
+    <fieldset class="field"><legend>Health goals — choose up to three in priority order</legend><div class="form-grid form-grid-3">{% for n in (0, 1, 2) %}<div><label for="health_goal{{ n }}">Priority {{ n + 1 }}{% if n > 0 %} (optional){% endif %}</label><select id="health_goal{{ n }}" name="health_goal"><option value="">— none —</option>{% for key, label in goal_options %}<option value="{{ key }}"{% if draft.health_goals|length > n and draft.health_goals[n] == key %} selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>{% endfor %}</div></fieldset>
+    <fieldset class="field"><legend>Diet exclusions</legend>{% for key, option in toggle_options.items() %}<label class="check-row"><input type="checkbox" name="toggle" value="{{ key }}"{% if key in draft.toggles %} checked{% endif %}> {{ option.label }}</label>{% endfor %}</fieldset>
+    <div class="form-grid"><div class="field"><label for="body_goals">Body goals</label><textarea id="body_goals" name="body_goals" required>{{ draft.body_goals }}</textarea></div><div class="field"><label for="lifestyle_goals">Lifestyle goals</label><textarea id="lifestyle_goals" name="lifestyle_goals" required>{{ draft.lifestyle_goals }}</textarea></div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="body-title">
+    <p class="eyebrow">2 / measurements</p><h2 id="body-title">Current body information</h2>
+    <div class="form-grid form-grid-4">
+      <div class="field"><label for="bodyweight_kg">Current body weight (kg)</label><input id="bodyweight_kg" name="bodyweight_kg" type="number" min="25" max="400" step="0.1" value="{{ draft.bodyweight_kg }}" required></div>
+      <div class="field"><label for="height_cm">Height (cm)</label><input id="height_cm" name="height_cm" type="number" min="100" max="250" step="0.1" value="{{ draft.height_cm }}" required></div>
+      <div class="field"><label for="age_years">Age (years)</label><input id="age_years" name="age_years" type="number" min="13" max="100" step="1" value="{{ draft.age_years }}" required></div>
+      <div class="field"><label for="sex">Sex used for reference ranges</label><select id="sex" name="sex" required>{% for value in sex_options %}<option value="{{ value }}"{% if draft.sex == value %} selected{% endif %}>{{ value|capitalize }}</option>{% endfor %}</select></div>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="life-title">
+    <p class="eyebrow">3 / context</p><h2 id="life-title">Lifestyle, sport, schedule, and symptoms</h2>
+    <div class="form-grid"><div class="field"><label for="current_lifestyle">Current lifestyle</label><textarea id="current_lifestyle" name="current_lifestyle" required>{{ draft.current_lifestyle }}</textarea></div><div class="field"><label for="current_sport">Current sport or training</label><textarea id="current_sport" name="current_sport" required>{{ draft.current_sport }}</textarea></div><div class="field"><label for="schedule_notes">Schedule and obligations</label><textarea id="schedule_notes" name="schedule_notes" required>{{ draft.schedule_notes }}</textarea></div><div class="field"><label for="symptoms">Current symptoms</label><textarea id="symptoms" name="symptoms" required>{{ draft.symptoms }}</textarea></div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="dexa-title">
+    <p class="eyebrow">4 / optional measured data</p><h2 id="dexa-title">DEXA snapshot</h2>
+    <p class="muted">Leave these blank if you do not have a DEXA report. HealthCoach will never invent these values.</p>
+    <div class="form-grid form-grid-3"><div class="field"><label for="dexa_scan_date">Scan date</label><input id="dexa_scan_date" name="dexa_scan_date" type="date" value="{{ draft.dexa.scan_date }}"></div><div class="field"><label for="dexa_body_fat_pct">Body fat (%)</label><input id="dexa_body_fat_pct" name="dexa_body_fat_pct" type="number" min="0" max="100" step="0.1" value="{{ draft.dexa.body_fat_pct }}"></div><div class="field"><label for="dexa_lean_mass_kg">Lean mass (kg)</label><input id="dexa_lean_mass_kg" name="dexa_lean_mass_kg" type="number" min="0" step="0.1" value="{{ draft.dexa.lean_mass_kg }}"></div><div class="field"><label for="dexa_fat_mass_kg">Fat mass (kg)</label><input id="dexa_fat_mass_kg" name="dexa_fat_mass_kg" type="number" min="0" step="0.1" value="{{ draft.dexa.fat_mass_kg }}"></div><div class="field"><label for="dexa_visceral_fat">Visceral fat rating</label><input id="dexa_visceral_fat" name="dexa_visceral_fat" type="number" min="0" step="0.1" value="{{ draft.dexa.visceral_fat }}"></div><div class="field"><label for="dexa_bmc_kg">Bone mineral content (kg)</label><input id="dexa_bmc_kg" name="dexa_bmc_kg" type="number" min="0" step="0.01" value="{{ draft.dexa.bmc_kg }}"></div></div>
+    <div class="field"><label for="dexa_notes">DEXA notes or source</label><textarea id="dexa_notes" name="dexa_notes">{{ draft.dexa.notes }}</textarea></div>
+  </section>
+
+  <div class="hero-actions"><button class="hero-button" type="submit">Review answers</button><a class="button quiet" href="{{ url_for('setup') }}">Save nothing and go back</a></div>
+</form>
+{% endblock %}

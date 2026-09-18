@@ -10,6 +10,7 @@
   <h2>Setup</h2>
   <p>{{ "Setup is complete." if setup.complete else "Setup is not complete yet." }}</p>
   <p><a class="button" href="{{ url_for('setup') }}">{{ "Review setup" if setup.complete else "Continue setup" }}</a></p>
+  <p><a class="button quiet" href="{{ url_for('setup_intake') }}">Run full intake again</a></p>
   {% if setup.complete %}
     <form method="post" action="{{ url_for('setup_reset') }}">
       <button type="submit" class="quiet">Reset setup walkthrough</button>

@@ -45,6 +45,7 @@ from healthcoach_dashboard import ACTIONS  # noqa: E402
 from webapp import food_analysis as FoodA  # noqa: E402
 from webapp import food_draft as FDraft  # noqa: E402
 from webapp import food_preferences as FoodP  # noqa: E402
+from webapp import intake as Intake  # noqa: E402
 from webapp import render as R  # noqa: E402
 from webapp import schedule_analysis as SA  # noqa: E402
 from webapp import schedule_view as SV  # noqa: E402
@@ -96,12 +97,114 @@ def home():
         profile_saved=state["profile_saved"],
         has_schedule=bool(schedule["blocks"]),
         has_labs=bool(L.load_labs().get("entries")),
+        confirmed_intake=Intake.load(),
     )
 
 
 @app.route("/setup")
 def setup():
     return render_template("setup.html", setup=Setup.load())
+
+
+def _intake_sources() -> dict:
+    ledger = CL.load_ledger()
+    food_preferences = FoodP.load(FoodP.DEFAULT_PATH)
+    schedule = _load_schedule()
+    labs = L.load_labs()
+    return {
+        "ledger": ledger,
+        "food_preferences": food_preferences,
+        "schedule_count": len(schedule.get("blocks", [])),
+        "lab_count": len(labs.get("entries", {})),
+    }
+
+
+def _intake_context(draft: dict, sources: dict, *, error: str | None = None) -> dict:
+    return {
+        "draft": draft,
+        "error": error,
+        "imported": Intake.imported_snapshot(**sources),
+        "diet_options": DR.DIET_PRESETS,
+        "toggle_options": DR.EXCLUSION_TOGGLES,
+        "goal_options": [(key, label) for key, label in CL.REASON_OPTIONS
+                         if key in CL.OUTCOME_REASON_KEYS],
+        "sex_options": CL.SEX_VALUES,
+    }
+
+
+@app.route("/setup/intake", methods=["GET", "POST"])
+def setup_intake():
+    sources = _intake_sources()
+    if request.method == "GET":
+        draft = Intake.from_existing(**sources)
+        return render_template("setup_intake.html", **_intake_context(draft, sources))
+    try:
+        draft = Intake.normalize({
+            "diet": request.form.get("diet"),
+            "toggles": request.form.getlist("toggle"),
+            "health_goals": request.form.getlist("health_goal"),
+            "weight_direction": request.form.get("weight_direction"),
+            "body_goals": request.form.get("body_goals"),
+            "lifestyle_goals": request.form.get("lifestyle_goals"),
+            "bodyweight_kg": request.form.get("bodyweight_kg"),
+            "height_cm": request.form.get("height_cm"),
+            "age_years": request.form.get("age_years"),
+            "sex": request.form.get("sex"),
+            "current_lifestyle": request.form.get("current_lifestyle"),
+            "current_sport": request.form.get("current_sport"),
+            "schedule_notes": request.form.get("schedule_notes"),
+            "symptoms": request.form.get("symptoms"),
+            "dexa": {
+                key: request.form.get(f"dexa_{key}")
+                for key in Intake.empty_dexa()
+            },
+        })
+    except (ValueError, CL.LedgerError) as exc:
+        draft = Intake.from_existing(**sources)
+        draft.update(request.form.to_dict(flat=True))
+        draft["toggles"] = request.form.getlist("toggle")
+        draft["health_goals"] = request.form.getlist("health_goal")
+        draft["dexa"] = {key: request.form.get(f"dexa_{key}", "") for key in Intake.empty_dexa()}
+        return render_template("setup_intake.html", **_intake_context(draft, sources, error=str(exc)))
+    Intake.save(draft)
+    return redirect(url_for("setup_review"))
+
+
+@app.route("/setup/review", methods=["GET", "POST"])
+def setup_review():
+    draft = Intake.load()
+    if not draft["updated_at"]:
+        return redirect(url_for("setup_intake"))
+    sources = _intake_sources()
+    if request.method == "POST":
+        action = request.form.get("action", "")
+        if action == "back":
+            return redirect(url_for("setup_intake"))
+        if action == "clear_dexa":
+            draft["dexa"] = Intake.empty_dexa()
+            Intake.save(draft)
+            return render_template("setup_review.html", draft=draft, imported=Intake.imported_snapshot(**sources), error=None)
+        if action == "clear_symptoms":
+            draft["symptoms"] = "none"
+            Intake.save(draft)
+            return render_template("setup_review.html", draft=draft, imported=Intake.imported_snapshot(**sources), error=None)
+        if action == "clear_goals":
+            draft["body_goals"] = "none"
+            draft["lifestyle_goals"] = "none"
+            Intake.save(draft)
+            return render_template("setup_review.html", draft=draft, imported=Intake.imported_snapshot(**sources), error=None)
+        if action == "confirm":
+            try:
+                Intake.commit(draft)
+                Setup.mark_step("diet")
+                Setup.mark_step("goals")
+                Setup.mark_complete()
+            except (ValueError, CL.LedgerError) as exc:
+                return render_template("setup_review.html", draft=draft,
+                                       imported=Intake.imported_snapshot(**sources), error=str(exc))
+            return redirect(url_for("home"))
+    return render_template("setup_review.html", draft=draft,
+                           imported=Intake.imported_snapshot(**sources), error=None)
 
 
 @app.route("/setup/complete", methods=["POST"])

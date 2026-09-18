@@ -242,6 +242,11 @@ a:hover { color: var(--ink); }
 .body-model { display: block; width: min(100%, 360px); height: auto; max-height: 430px; outline: none; }
 .model-stage:focus-within { box-shadow: inset 0 0 0 3px var(--focus); }
 .model-caption { color: var(--ink-soft); font-size: 0.78rem; margin: 0.5rem 0.3rem 0.1rem; }
+.confirmed-data { border-top: 1px solid var(--line); margin: 0.75rem 0.3rem 0; padding-top: 0.65rem; }
+.confirmed-data .eyebrow { margin-bottom: 0.2rem; }
+.confirmed-data strong, .confirmed-data span { display: block; }
+.confirmed-data strong { font-family: var(--serif); font-size: 0.95rem; }
+.confirmed-data span { color: var(--ink-soft); font-size: 0.76rem; margin-top: 0.15rem; }
 .landing-pathway { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-bottom: 2.5rem; }
 .landing-pathway h2 { margin-top: 0; }
 .pathway-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
@@ -260,10 +265,34 @@ a:hover { color: var(--ink); }
 .status-card strong { font-family: var(--serif); font-size: 1.08rem; margin: 0.15rem 0; }
 .status-card span:last-child { color: var(--ink-soft); font-size: 0.76rem; }
 
+/* --- Comprehensive first-run intake ------------------------------------- */
+
+.imported-panel { border-left: 3px solid var(--accent); }
+.imported-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.65rem; }
+.imported-grid > div { min-width: 0; border-top: 1px solid var(--line); padding-top: 0.5rem; }
+.imported-grid span, .imported-grid strong { display: block; }
+.imported-grid span { color: var(--ink-soft); font-size: 0.76rem; }
+.imported-grid strong { font-family: var(--serif); font-size: 0.95rem; overflow-wrap: anywhere; }
+.intake-form .panel { margin-bottom: 1rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+.form-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.form-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.goal-checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.35rem 1rem; }
+.goal-checks label, .check-row { color: var(--ink); font-size: 0.88rem; }
+.review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; }
+.review-card { margin-bottom: 0; }
+.review-card h2 { margin-top: 0; }
+.review-card dl { display: grid; grid-template-columns: minmax(90px, 0.55fr) 1fr; gap: 0.35rem 0.8rem; margin: 0 0 0.9rem; }
+.review-card dt { color: var(--ink-soft); font-size: 0.78rem; }
+.review-card dd { margin: 0; overflow-wrap: anywhere; }
+.review-actions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+
 @media (max-width: 820px) {
   .landing-hero { grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr); gap: 1.4rem; }
   .pathway-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .status-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .imported-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 600px) {
@@ -271,6 +300,8 @@ a:hover { color: var(--ink); }
   .landing-copy h1 { max-width: 16ch; }
   .landing-hero .model-card { order: 2; }
   .trust-list, .pathway-grid, .status-strip { grid-template-columns: 1fr; }
+  .form-grid, .form-grid-3, .form-grid-4, .goal-checks, .review-grid { grid-template-columns: 1fr; }
+  .imported-grid { grid-template-columns: 1fr; }
   .model-stage { min-height: 260px; }
   .body-model { max-height: 360px; }
   .section-heading-row { display: block; }

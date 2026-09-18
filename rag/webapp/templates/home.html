@@ -24,6 +24,7 @@
     <div class="status-card"><span class="status-card-label">Profile</span><strong>{{ "Saved" if profile_saved else "Not saved" }}</strong><span>Used to keep answers personal</span></div>
     <div class="status-card"><span class="status-card-label">Schedule</span><strong>{{ "Saved" if has_schedule else "Not added" }}</strong><span>Weekly context</span></div>
     <div class="status-card"><span class="status-card-label">Labs</span><strong>{{ "Available" if has_labs else "Not added" }}</strong><span>Values you choose to share</span></div>
+    <div class="status-card"><span class="status-card-label">Body + DEXA</span><strong>{{ "Confirmed" if confirmed_intake.updated_at else "Not confirmed" }}</strong><span>{{ "Shown separately from the model" if confirmed_intake.updated_at else "Add during full intake" }}</span></div>
   </div>
 </section>
 
