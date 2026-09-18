@@ -148,22 +148,37 @@ def resolve_marker(name_or_key: str) -> str:
     )
 
 
-def add_lab(args: argparse.Namespace) -> int:
-    key = resolve_marker(args.marker)
+def save_lab_value(marker: str, value: float, *, unit: str | None = None,
+                    date: str | None = None, confirm_unit: bool = False) -> dict[str, Any]:
+    """Core of `add`, without the CLI's argparse.Namespace coupling -- the web
+    GUI's /labs route calls this directly. Raises ValueError on an
+    unconfirmed unit mismatch so both callers can show it as a plain
+    message instead of a stack trace."""
+    key = resolve_marker(marker)
     spec = MARKERS[key]
-    unit = args.unit or spec["unit"]
-    if unit != spec["unit"]:
-        if not getattr(args, "confirm_unit", False):
-            console.print(f"[red]Unit mismatch: expected {spec['unit']}, got {unit}. Re-run with --confirm-unit to override.[/red]")
-            return 1
-    date = args.date or dt.date.today().isoformat()
+    unit = unit or spec["unit"]
+    if unit != spec["unit"] and not confirm_unit:
+        raise ValueError(f"Unit mismatch: expected {spec['unit']}, got {unit}. Confirm to override.")
+    date = date or dt.date.today().isoformat()
     data = load_labs()
-    data["entries"][key] = {"value": args.value, "unit": unit, "date": date, "source": "manual"}
+    data["entries"][key] = {"value": value, "unit": unit, "date": date, "source": "manual"}
     save_labs(data)
-    status = marker_status(key, args.value)
-    color = {"LOW": "yellow", "HIGH": "red", "NORMAL": "green"}.get(status, "white")
-    console.print(f"Saved {spec['name']} = {args.value} {unit} on {date} — [{color}]{status}[/{color}] "
-                  f"(reference {spec['low']}-{spec['high']} {spec['unit']})")
+    return {"key": key, "name": spec["name"], "value": value, "unit": unit, "date": date,
+            "status": marker_status(key, value), "low": spec["low"], "high": spec["high"],
+            "ref_unit": spec["unit"]}
+
+
+def add_lab(args: argparse.Namespace) -> int:
+    try:
+        result = save_lab_value(args.marker, args.value, unit=args.unit, date=args.date,
+                                 confirm_unit=getattr(args, "confirm_unit", False))
+    except ValueError as exc:
+        console.print(f"[red]{exc}[/red]")
+        return 1
+    color = {"LOW": "yellow", "HIGH": "red", "NORMAL": "green"}.get(result["status"], "white")
+    console.print(f"Saved {result['name']} = {result['value']} {result['unit']} on {result['date']} — "
+                  f"[{color}]{result['status']}[/{color}] "
+                  f"(reference {result['low']}-{result['high']} {result['ref_unit']})")
     return 0
 
 
@@ -220,32 +235,54 @@ def _find_candidates_in_text(text: str) -> list[dict[str, Any]]:
     return found
 
 
-def import_pdf(args: argparse.Namespace) -> int:
+def extract_pdf_candidates(pdf_path: str) -> tuple[list[dict[str, Any]], str]:
+    """Returns (candidates, filename) with no side effects and no prompts --
+    the CLI's interactive confirm/edit/skip loop and the web GUI's upload
+    form both build on this. Raises FileNotFoundError for a missing path;
+    an unreadable/scanned PDF or one with no recognized markers both just
+    come back as an empty candidate list, since there's nothing to confirm
+    either way."""
     from pypdf import PdfReader
 
-    path = Path(args.pdf_path).expanduser()
+    path = Path(pdf_path).expanduser()
     if not path.exists():
-        console.print(f"[red]File not found: {path}[/red]")
-        return 2
+        raise FileNotFoundError(str(path))
     reader = PdfReader(str(path))
     text = "\n".join((page.extract_text() or "") for page in reader.pages)
     if not text.strip():
-        console.print("[yellow]No extractable text in this PDF — it may be a scanned image. "
-                       "Use `labs.py add` to enter values manually instead.[/yellow]")
-        return 0
+        return [], path.name
+    return _find_candidates_in_text(text), path.name
 
-    candidates = _find_candidates_in_text(text)
+
+def save_confirmed_value(key: str, value: float, date: str, source: str) -> dict[str, Any]:
+    """Persist one already-confirmed candidate (from PDF import). No unit
+    override here -- an imported value always uses the marker's own unit,
+    same as it always has."""
+    spec = MARKERS[key]
+    data = load_labs()
+    data["entries"][key] = {"value": value, "unit": spec["unit"], "date": date, "source": source}
+    save_labs(data)
+    return {"key": key, "name": spec["name"], "value": value, "unit": spec["unit"], "date": date,
+            "status": marker_status(key, value)}
+
+
+def import_pdf(args: argparse.Namespace) -> int:
+    try:
+        candidates, filename = extract_pdf_candidates(args.pdf_path)
+    except FileNotFoundError as exc:
+        console.print(f"[red]File not found: {exc}[/red]")
+        return 2
     if not candidates:
-        console.print("[yellow]No recognized marker names found in this PDF. "
-                       "Known markers: " + ", ".join(sorted(MARKERS)) + "[/yellow]")
+        console.print("[yellow]No extractable text or no recognized marker names found in this PDF "
+                       "(it may be a scanned image). Known markers: "
+                       + ", ".join(sorted(MARKERS)) + ". Use `labs.py add` to enter values manually instead.[/yellow]")
         return 0
 
     console.print(Panel.fit(
-        f"Found {len(candidates)} possible value(s) in {path.name}. "
+        f"Found {len(candidates)} possible value(s) in {filename}. "
         "Nothing is saved automatically — confirm, edit, or skip each one.",
         border_style="cyan",
     ))
-    data = load_labs()
     saved = 0
     for match in candidates:
         spec = MARKERS[match["key"]]
@@ -267,11 +304,8 @@ def import_pdf(args: argparse.Namespace) -> int:
                 console.print("[red]Not a number; skipping this one.[/red]")
                 continue
         date = Prompt.ask("Date of this lab (YYYY-MM-DD)", default=dt.date.today().isoformat())
-        data["entries"][match["key"]] = {
-            "value": value, "unit": spec["unit"], "date": date, "source": f"pdf:{path.name}",
-        }
+        save_confirmed_value(match["key"], value, date, f"pdf:{filename}")
         saved += 1
-    save_labs(data)
     console.print(f"[green]Saved {saved} of {len(candidates)} parsed value(s).[/green]")
     return 0
 

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}More — HealthCoach{% endblock %}
+{% block content %}
+<h1>More actions</h1>
+<p class="muted">Everything else is still reachable from the terminal dashboard (<code>./hc</code>) or directly.
+  This web app doesn't reimplement these yet.</p>
+
+{% for action in actions %}
+  <div class="card">
+    <h3>{{ action.title }}</h3>
+    <p>{{ action.detail }}</p>
+    <p class="muted"><code>{{ action.command|join(" ") }}</code></p>
+  </div>
+{% endfor %}
+{% endblock %}

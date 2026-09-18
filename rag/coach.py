@@ -531,6 +531,29 @@ def _for_terminal(text: str) -> str:
 PAPERS_DIR = os.path.join(os.path.dirname(__file__), "..", "papers")
 
 
+def fetch_new_sources(question: str, *, print_fn=print) -> int:
+    """The actual live-search-then-ingest work, with no interactivity and no
+    schedule-question check -- both offer_to_fetch_sources() (CLI, behind a
+    y/N prompt) and the web GUI's /ask route (behind a button) call this
+    directly once THEY have decided a search should run. Returns how many
+    new PDFs were added."""
+    sys.path.insert(0, os.path.abspath(PAPERS_DIR))
+    import fetch_papers as FP
+    print_fn("Searching Europe PMC / OpenAlex / Semantic Scholar for new sources...")
+    try:
+        added = FP.fetch_for_question(question)
+    except Exception as e:
+        print_fn(f"Source search failed: {e}")
+        return 0
+    print_fn(f"Added {added} new source(s)." if added else "No new sources found for this question.")
+    if added:
+        print_fn("Adding new sources to the library (this can take a few minutes)...")
+        import subprocess
+        subprocess.run([sys.executable, "ingest.py", "--incremental"],
+                        cwd=os.path.dirname(__file__))
+    return added
+
+
 def offer_to_fetch_sources(question: str) -> int:
     """A question with no accepted evidence gets an offer (interactive only
     -- never on a piped stream, and eval_run.py never calls this at all) to
@@ -558,21 +581,79 @@ def offer_to_fetch_sources(question: str) -> int:
     ).strip().lower()
     if choice not in ("y", "yes"):
         return 0
-    sys.path.insert(0, os.path.abspath(PAPERS_DIR))
-    import fetch_papers as FP
-    print("Searching Europe PMC / OpenAlex / Semantic Scholar for new sources...")
-    try:
-        added = FP.fetch_for_question(question)
-    except Exception as e:
-        print(f"Source search failed: {e}")
-        return 0
-    print(f"Added {added} new source(s)." if added else "No new sources found for this question.")
-    if added:
-        print("Adding new sources to the library (this can take a few minutes)...")
-        import subprocess
-        subprocess.run([sys.executable, "ingest.py", "--incremental"],
-                        cwd=os.path.dirname(__file__))
-    return added
+    return fetch_new_sources(question)
+
+def load_rag_stack():
+    """(tbl, emb, rr) for search(). Split out of main() so a caller that
+    already knows it needs the stack (the web GUI's /ask route, main()
+    itself) can load it once and reuse it across a whole session/request,
+    instead of every call re-opening the table and re-loading the embedder."""
+    import lancedb
+    from sentence_transformers import SentenceTransformer
+    emb = SentenceTransformer(EMB_MODEL, device="mps")
+    tbl = lancedb.connect(DBDIR).open_table(TABLE)
+    rr = load_reranker()
+    return tbl, emb, rr
+
+
+def _load_gen_model():
+    from mlx_lm import load
+    return load(GEN_MODEL)
+
+
+def answer_question(q: str, *, k: int = 6, max_tokens: int = 1400,
+                     get_stack=load_rag_stack, load_model=_load_gen_model) -> list[dict]:
+    """CLI-independent core of main()'s per-topic-group retrieve/answer loop:
+    same split_questions() -> search() -> answer_from_hits() pipeline, but
+    returns structured results instead of printing, so the web GUI's /ask
+    route can render them as HTML using the exact same retrieval and safety
+    path as the terminal, rather than a second implementation of it.
+
+    `get_stack` is a zero-arg callable returning (tbl, emb, rr); it's called
+    at most once, lazily, only if some group actually needs it (never for a
+    question whose split_questions() somehow needed no evidence -- that
+    doesn't currently happen, but keeps this symmetric with main()'s and
+    schedule_builder.py's established lazy-load pattern). The reranker and
+    embedder are cached across groups within one call; the generation model
+    is loaded at most once, and only if at least one group has evidence.
+
+    Each result dict: topic, text, weak (bool), no_evidence (bool),
+    answer (raw markdown, "" when no_evidence), related (closest-source
+    block or ""), schedule_block (str, "" if not schedule-shaped)."""
+    groups = split_questions(q)
+    tbl = emb = rr = None
+    model_tok = None
+    results = []
+    for group in groups:
+        topic_text = group["text"]
+        matched_intents = RC.classify(topic_text)
+        related_hits: list[dict] = []
+        if tbl is None:
+            tbl, emb, rr = get_stack()
+        hits, weak = search(tbl, emb, topic_text, k, rr, matched_intents=matched_intents,
+                            related_out=related_hits)
+        result = {"topic": group["topic"], "text": topic_text, "weak": weak}
+        if not hits:
+            result["no_evidence"] = True
+            result["answer"] = EC.NO_EVIDENCE
+            result["related"] = EC.closest_source_block(related_hits)
+            result["schedule_block"] = ""
+            results.append(result)
+            continue
+        if model_tok is None:
+            model_tok = load_model()
+        model, tok = model_tok
+        drowsy = any(term in topic_text.lower() for term in ("drive", "driving", "commute"))
+        answer = answer_from_hits(model, tok, topic_text, hits, max_tokens,
+                                   matched_intents=matched_intents, action_count=1,
+                                   primary_count=1, drowsy=drowsy, related_hits=related_hits)
+        result["no_evidence"] = False
+        result["answer"] = answer
+        result["related"] = ""
+        result["schedule_block"] = schedule_breakdown_for(topic_text, answer)
+        results.append(result)
+    return results
+
 
 def main():
     ap = argparse.ArgumentParser()

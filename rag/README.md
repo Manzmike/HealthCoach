@@ -92,6 +92,22 @@ HealthCoach resumes intake answers embedded inside `HEALTHCOACH_REPORT.md`. `STA
 GROUND ZERO` requires typing `RESET`; even then, the existing report is not replaced until the
 new generation actually begins successfully.
 
+### A browser GUI for the four most-used flows
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+./hc-web
+```
+
+Opens a local web page (`http://127.0.0.1:5231`, your browser only -- nothing leaves this
+machine, and it never binds to anything but loopback) with real checkboxes, a visual weekly
+calendar, and forms in place of the terminal for: asking a question, the symptom check-in, the
+schedule builder (with a one-click `.ics` export), and labs. It reads and writes the exact same
+files `./hc` and `coach.py` already use, so editing your schedule in the browser and asking
+`coach.py` about it in the terminal see the same file -- no separate state, no sync step.
+Everything else (peptide/nootropic/food catalogs, weekly check-in, Bevel sharing, source
+refreshes) is still `./hc` only; the web app's "More" page lists the terminal command for each.
+
 `LOG THE COMPLETED WEEK` is a three-page keyboard grid. Tab moves through Training, Recovery,
 and Fuel; arrows choose a day and field; Space cycles fixed answers; Enter edits a number; and
 `s` saves. Blank values remain `UNKNOWN`. Workout HR and device calories are stored with their

@@ -6,9 +6,10 @@ that runs the real clause through a real throwaway LanceDB fixture."""
 
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 import coach
+import evidence_control as EC
 
 
 class WhereClauseTests(unittest.TestCase):
@@ -199,6 +200,69 @@ class ForTerminalTests(unittest.TestCase):
     def test_text_with_no_bold_markup_is_unchanged(self):
         with patch("sys.stdout.isatty", return_value=True):
             self.assertEqual(coach._for_terminal("plain text"), "plain text")
+
+
+class AnswerQuestionTests(unittest.TestCase):
+    """answer_question() is the CLI-independent core of main()'s retrieve/
+    answer loop -- the web GUI's /ask route calls it directly. No real
+    model, database, or network: get_stack/load_model are injected fakes,
+    and search()/answer_from_hits()/RC.classify() are mocked."""
+
+    def _stack(self):
+        return object(), object(), object()
+
+    def test_single_topic_question_with_evidence_returns_one_result(self):
+        hit = {"retrieval": {"accepted": True, "topic_passed": True}, "grade": "A"}
+        with patch.object(coach, "search", return_value=([hit], False)) as mock_search, \
+             patch.object(coach, "answer_from_hits", return_value="**Answer:** do X.") as mock_answer, \
+             patch.object(coach.RC, "classify", return_value=["cut_train"]):
+            results = coach.answer_question(
+                "Does creatine cause hair loss?", get_stack=self._stack,
+                load_model=lambda: (object(), object()),
+            )
+        self.assertEqual(len(results), 1)
+        self.assertFalse(results[0]["no_evidence"])
+        self.assertEqual(results[0]["answer"], "**Answer:** do X.")
+        mock_search.assert_called_once()
+        mock_answer.assert_called_once()
+
+    def test_no_evidence_returns_no_evidence_result_and_never_loads_the_model(self):
+        load_model = MagicMock()
+        with patch.object(coach, "search", return_value=([], False)), \
+             patch.object(coach.RC, "classify", return_value=[]):
+            results = coach.answer_question(
+                "an unanswerable question", get_stack=self._stack, load_model=load_model,
+            )
+        self.assertTrue(results[0]["no_evidence"])
+        self.assertEqual(results[0]["answer"], EC.NO_EVIDENCE)
+        load_model.assert_not_called()
+
+    def test_multi_topic_question_gets_one_result_per_group_and_stack_loaded_once(self):
+        hit = {"retrieval": {"accepted": True, "topic_passed": True}, "grade": "A"}
+        get_stack = MagicMock(side_effect=self._stack)
+        with patch.object(coach, "search", return_value=([hit], False)), \
+             patch.object(coach, "answer_from_hits", return_value="answer"), \
+             patch.object(coach.RC, "classify", return_value=[]):
+            results = coach.answer_question(
+                "What should my gym routine look like? What foods should I eat?",
+                get_stack=get_stack, load_model=lambda: (object(), object()),
+            )
+        self.assertEqual(len(results), 2)
+        self.assertEqual({r["topic"] for r in results}, {"schedule", "food"})
+        get_stack.assert_called_once()
+
+    def test_schedule_shaped_answer_includes_a_schedule_block_when_a_schedule_is_saved(self):
+        hit = {"retrieval": {"accepted": True, "topic_passed": True}, "grade": "A"}
+        with patch.object(coach, "has_saved_schedule", return_value=True), \
+             patch.object(coach, "real_schedule_block", return_value="YOUR SAVED SCHEDULE:\n\nreal table"), \
+             patch.object(coach, "search", return_value=([hit], False)), \
+             patch.object(coach, "answer_from_hits", return_value="- **X:** y [z]"), \
+             patch.object(coach.RC, "classify", return_value=[]):
+            results = coach.answer_question(
+                "What should my gym routine look like?", get_stack=self._stack,
+                load_model=lambda: (object(), object()),
+            )
+        self.assertIn("real table", results[0]["schedule_block"])
 
 
 if __name__ == "__main__":

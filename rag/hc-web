@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+RAG_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+cd "$RAG_DIR"
+if [[ -f .venv/bin/activate ]]; then
+  source .venv/bin/activate
+fi
+
+HOST=127.0.0.1
+PORT=5231
+URL="http://${HOST}:${PORT}/"
+
+python3 -c "
+import time, urllib.request, webbrowser
+for _ in range(50):
+    try:
+        urllib.request.urlopen('$URL', timeout=0.5)
+        break
+    except Exception:
+        time.sleep(0.2)
+webbrowser.open('$URL')
+" &
+
+exec python3 -m webapp.app

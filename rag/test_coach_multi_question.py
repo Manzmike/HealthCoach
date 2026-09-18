@@ -285,5 +285,53 @@ class OfferToFetchSourcesTests(unittest.TestCase):
         mock_run.assert_not_called()
 
 
+class FetchNewSourcesTests(unittest.TestCase):
+    """fetch_new_sources() is the non-interactive core offer_to_fetch_sources()
+    (CLI, behind a y/N prompt) and the web GUI's /ask route (behind a button,
+    no isatty/schedule-question check of its own -- the caller decides) both
+    call once THEY have decided a search should run."""
+
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, os.path.abspath(coach.PAPERS_DIR))
+
+    def test_success_ingests_and_reports_via_print_fn(self):
+        printed = []
+        with patch("fetch_papers.fetch_for_question", return_value=2) as mock_fetch, \
+             patch("subprocess.run") as mock_run:
+            added = coach.fetch_new_sources("does X help with Y", print_fn=printed.append)
+        self.assertEqual(added, 2)
+        mock_fetch.assert_called_once_with("does X help with Y")
+        mock_run.assert_called_once()
+        self.assertTrue(any("Added 2" in line for line in printed))
+
+    def test_nothing_found_does_not_run_ingest(self):
+        with patch("fetch_papers.fetch_for_question", return_value=0), \
+             patch("subprocess.run") as mock_run:
+            added = coach.fetch_new_sources("an unanswerable question")
+        self.assertEqual(added, 0)
+        mock_run.assert_not_called()
+
+    def test_exception_is_reported_not_raised(self):
+        printed = []
+        with patch("fetch_papers.fetch_for_question", side_effect=RuntimeError("network down")), \
+             patch("subprocess.run") as mock_run:
+            added = coach.fetch_new_sources("some question", print_fn=printed.append)
+        self.assertEqual(added, 0)
+        mock_run.assert_not_called()
+        self.assertTrue(any("network down" in line for line in printed))
+
+    def test_no_isatty_or_schedule_question_check_it_always_runs(self):
+        """Unlike offer_to_fetch_sources(), this has no interactivity gate --
+        a schedule-shaped question or a non-tty stream is the CALLER's
+        decision to make before calling this at all."""
+        with patch("sys.stdin.isatty", return_value=False), \
+             patch("fetch_papers.fetch_for_question", return_value=1) as mock_fetch, \
+             patch("subprocess.run"):
+            added = coach.fetch_new_sources("What should my gym routine look like?")
+        self.assertEqual(added, 1)
+        mock_fetch.assert_called_once()
+
+
 if __name__ == "__main__":
     unittest.main()

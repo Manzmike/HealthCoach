@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Schedule — HealthCoach{% endblock %}
+{% block content %}
+<h1>Schedule</h1>
+<p class="muted">One weekly template. Editing here or in the terminal builder edits the same file.</p>
+
+{% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+<div class="week-grid">
+  {% for day, blocks in days %}
+    <div class="day-column">
+      <h3>{{ day }}</h3>
+      {% for block in blocks %}
+        <div class="block-chip">
+          <span class="time">{{ block.start }}–{{ block.end }}</span>
+          {{ block.label }} <span class="muted">({{ block.category }})</span>
+          <form method="post" action="{{ url_for('schedule_remove') }}">
+            <input type="hidden" name="index" value="{{ block.index }}">
+            <button type="submit" class="remove">remove</button>
+          </form>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+<div class="card">
+  <h2>Add a block</h2>
+  <form method="post" action="{{ url_for('schedule_add') }}" class="inline">
+    <div class="field">
+      <label for="category">Category</label>
+      <input type="text" id="category" name="category" list="categoryList" placeholder="gym, work, meal..." required>
+      <datalist id="categoryList">
+        {% for c in categories %}<option value="{{ c }}">{% endfor %}
+      </datalist>
+    </div>
+    <div class="field">
+      <label for="label">Label</label>
+      <input type="text" id="label" name="label" placeholder="Evening lift">
+    </div>
+    <div class="field">
+      <label for="days">Days</label>
+      <input type="text" id="days" name="days" placeholder="mon/wed/fri, weekdays, every day" required>
+    </div>
+    <div class="field">
+      <label for="start">Start</label>
+      <input type="text" id="start" name="start" placeholder="7am" required>
+    </div>
+    <div class="field">
+      <label for="end">End</label>
+      <input type="text" id="end" name="end" placeholder="8:15am" required>
+    </div>
+    <button type="submit">Add block</button>
+  </form>
+  <p class="muted">Research-relevant categories ({{ research_categories|join(", ") }}) offer evidence-backed
+    placement guidance right after you add the block.</p>
+</div>
+
+<a href="{{ url_for('schedule_export') }}"><button>Export .ics</button></a>
+<p class="muted">Import into Apple Calendar (File &gt; Import...), Google Calendar (Settings &gt; Import &amp;
+  export), or Outlook (File &gt; Open &amp; Export &gt; Import/Export).</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Evidence for {{ label }} — HealthCoach{% endblock %}
+{% block content %}
+<h1>What the evidence says about placing "{{ label }}"</h1>
+<p class="muted">Category: {{ category }}</p>
+
+{% for section in sections %}
+  <div class="card">
+    {% if section.no_evidence %}
+      <p>No sufficiently relevant evidence was found for this.</p>
+      {% if section.related_html %}{{ section.related_html|safe }}{% endif %}
+    {% else %}
+      {{ section.answer_html|safe }}
+    {% endif %}
+  </div>
+{% endfor %}
+
+<p><a href="{{ url_for('schedule') }}">&larr; Back to schedule</a></p>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Confirm lab values — HealthCoach{% endblock %}
+{% block content %}
+<h1>Confirm values found in {{ filename }}</h1>
+<p class="muted">Nothing is saved automatically. Uncheck anything wrong, fix a value, then save.</p>
+
+<form method="post" action="{{ url_for('labs_import_confirm') }}">
+  <input type="hidden" name="filename" value="{{ filename }}">
+  <div class="field" style="max-width: 220px;">
+    <label for="date">Date of this lab</label>
+    <input type="date" id="date" name="date">
+  </div>
+  <table>
+    <tr><th>Save?</th><th>Marker</th><th>Value</th><th>Unit</th><th>Context found in PDF</th></tr>
+    {% for c in candidates %}
+      <tr>
+        <td><input type="checkbox" name="save" value="{{ c.key }}" checked></td>
+        <td>{{ c.name }}</td>
+        <td><input type="number" step="any" name="value_{{ c.key }}" value="{{ c.value }}"></td>
+        <td>{{ c.unit }}</td>
+        <td class="muted">...{{ c.snippet }}...</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <button type="submit">Save checked values</button>
+</form>
+<p><a href="{{ url_for('labs_page') }}">Cancel, back to labs</a></p>
+{% endblock %}

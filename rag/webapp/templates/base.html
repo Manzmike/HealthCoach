@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}HealthCoach{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <nav class="topnav">
+    <a href="{{ url_for('home') }}" class="brand">HealthCoach</a>
+    <a href="{{ url_for('ask') }}">Ask</a>
+    <a href="{{ url_for('symptoms') }}">Symptoms</a>
+    <a href="{{ url_for('schedule') }}">Schedule</a>
+    <a href="{{ url_for('labs_page') }}">Labs</a>
+    <a href="{{ url_for('more') }}">More</a>
+  </nav>
+  <main class="content">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
