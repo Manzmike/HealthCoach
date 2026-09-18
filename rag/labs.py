@@ -50,6 +50,8 @@ MARKERS: dict[str, dict[str, Any]] = {
         aliases=("tsh", "thyroid stimulating hormone"), candidates=()),
     "free_t4": dict(name="Free T4", unit="ng/dL", low=0.8, high=1.8,
         aliases=("free t4", "ft4"), candidates=()),
+    "free_t3": dict(name="Free T3", unit="pg/mL", low=2.3, high=4.2,
+        aliases=("free t3", "ft3"), candidates=()),
     "testosterone_total": dict(name="Testosterone, Total", unit="ng/dL", low=264, high=916,
         aliases=("testosterone, total", "total testosterone"), candidates=()),
     "testosterone_free": dict(name="Testosterone, Free", unit="pg/mL", low=8.7, high=25.1,
@@ -284,8 +286,33 @@ def labs_for_candidate(item_id: str) -> list[tuple[str, dict[str, Any]]]:
     ]
 
 
+PROVIDERS_HELP = """\
+Three ways to get lab values into this tool -- use whichever fits what you
+actually have:
+
+1. Ask Claude directly, once a live connector is authenticated.
+   Function Health and HealthEx are both available as Claude Code
+   connectors, but authentication happens in Claude Code itself, not in
+   this script (this script has no network access by design -- see the
+   module docstring): run `/mcp` and select the provider to connect it.
+   Once connected, just ask Claude to pull your labs; it reads the values
+   through that connection and records them here the same way `add` does
+   -- shown to you before anything is saved, same as PDF import.
+
+2. python3 labs.py import-pdf <path>
+   Any downloaded lab-report PDF -- Function Health, Quest, LabCorp, a
+   hospital portal export, whatever you actually have. Never auto-saves;
+   every match found is shown with its surrounding text for you to
+   confirm, edit, or skip.
+
+3. python3 labs.py add <marker> <value> [--unit ...] [--date YYYY-MM-DD]
+   Manual entry for a single value, e.g. from a printed report or a
+   result read over the phone.
+"""
+
+
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Manage private lab values: manual entry or assisted PDF import")
+    parser = argparse.ArgumentParser(description="Manage private lab values: manual entry, assisted PDF import, or a live Claude Code connector")
     sub = parser.add_subparsers(dest="command")
 
     add = sub.add_parser("add", help="record one lab value")
@@ -299,6 +326,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     imp = sub.add_parser("import-pdf", help="scan a lab-report PDF; confirm each value before saving")
     imp.add_argument("pdf_path")
+
+    sub.add_parser("providers", help="show every way to get lab values in, including live connectors")
     return parser
 
 
@@ -310,6 +339,9 @@ def main(argv: list[str] | None = None) -> int:
         return list_labs(args)
     if args.command == "import-pdf":
         return import_pdf(args)
+    if args.command == "providers":
+        console.print(PROVIDERS_HELP)
+        return 0
     build_parser().print_help()
     return 2
 
