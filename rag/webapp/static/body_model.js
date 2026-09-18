@@ -15,6 +15,10 @@
   const overlayText = document.getElementById("modelOverlayText");
   const personalized = canvas.dataset.personalized === "true";
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Leave a deliberate breathing margin so the head and feet stay visible in
+  // the 430px desktop stage and the shorter mobile stage.
+  const MODEL_SCALE = 4.0;
+  const VIEW_DISTANCE = 5.2;
   const MATRIX_DIMENSIONS = {
     sex: [
       { label: "woman", value: "female", hip: 1.08, chest: 1.02 },
@@ -95,13 +99,13 @@
   function render(now) {
     if (!mesh || !currentVertices) return;
     resizeCanvas(); gl.viewport(0, 0, canvas.width, canvas.height); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-    const projection = perspective(Math.PI / 4.3, canvas.width / canvas.height, 0.1, 100), view = lookAt([0, 0.02, 4.5], [0, 0, 0], [0, 1, 0]);
+    const projection = perspective(Math.PI / 4.3, canvas.width / canvas.height, 0.1, 100), view = lookAt([0, 0.02, VIEW_DISTANCE], [0, 0, 0], [0, 1, 0]);
     gl.uniformMatrix4fv(locations.view, false, view); gl.uniformMatrix4fv(locations.projection, false, projection); gl.uniform3f(locations.light, -2.5, 4.0, 5.5);
     const vertices = transitionVertices(now); if (vertices !== uploadedVertices) uploadVertices(vertices);
     // The reference mesh stores body height on its source z axis. Rotate it
     // upright before applying the user's horizontal viewing rotation so the
     // person faces the viewer instead of presenting a sideways/top-down view.
-    const upright = multiply(rotateX(-Math.PI / 2), scale(5.65, 5.65, 5.65));
+    const upright = multiply(rotateX(-Math.PI / 2), scale(MODEL_SCALE, MODEL_SCALE, MODEL_SCALE));
     gl.uniformMatrix4fv(locations.model, false, multiply(rotateY(rotation), upright)); gl.uniform3f(locations.color, 0.34, 0.49, 0.42);
     gl.bindBuffer(gl.ARRAY_BUFFER, mesh.positionBuffer); gl.enableVertexAttribArray(locations.position); gl.vertexAttribPointer(locations.position, 3, gl.FLOAT, false, 0, 0);
     gl.bindBuffer(gl.ARRAY_BUFFER, mesh.normalBuffer); gl.enableVertexAttribArray(locations.normal); gl.vertexAttribPointer(locations.normal, 3, gl.FLOAT, false, 0, 0);

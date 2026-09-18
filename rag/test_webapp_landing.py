@@ -71,6 +71,8 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn(b"measurementBases", response.data)
         self.assertIn(b"rotateX(-Math.PI / 2)", response.data)
         self.assertIn(b"upright", response.data)
+        self.assertIn(b"MODEL_SCALE", response.data)
+        self.assertIn(b"VIEW_DISTANCE", response.data)
         self.assertNotIn(b"https://", response.data)
 
     def test_reference_mesh_asset_and_notice_are_present(self):
