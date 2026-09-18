@@ -110,7 +110,7 @@ class FoodSelectTests(_IsolatedFoodState):
         self._select_salmon()
         r = self.client.post("/food/unselect/salmon", follow_redirects=True)
         self.assertIn(b"No unsaved changes", r.data)
-        self.assertIn(b"Select</button>", r.data)
+        self.assertIn(b">Select</a>", r.data)
 
     def test_selecting_then_unselecting_the_same_item_returns_to_clean(self):
         """A second real bug: "dirty" was defined as "a draft file exists
@@ -162,7 +162,7 @@ class FoodSaveDiscardTests(_IsolatedFoodState):
         self._select_salmon()
         r = self.client.post("/food/discard", follow_redirects=True)
         self.assertIn(b"No unsaved changes", r.data)
-        self.assertIn(b"Select</button>", r.data)
+        self.assertIn(b">Select</a>", r.data)
         self.assertFalse(self.week_plan_path.exists())
 
 

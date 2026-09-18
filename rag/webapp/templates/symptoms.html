@@ -4,6 +4,7 @@
 <h1>Symptom check-in</h1>
 <p class="lede">Issue-tag matches and cached evidence are not a diagnosis or medical clearance.</p>
 
+{% if show_form %}
 <form method="post" action="{{ url_for('symptoms') }}" class="panel">
   <div class="field" style="max-width: 320px;">
     <label for="filterBox">Type to filter</label>
@@ -23,6 +24,13 @@
   </div>
   <button type="submit">Get flags for selected symptoms</button>
 </form>
+{% else %}
+<div class="panel">
+  <h2>No check-in running</h2>
+  <p class="muted">Start a check-in only when you want to enter symptoms. Your selections are used to generate a report and are not a diagnosis.</p>
+  <p><a class="button" href="{{ url_for('symptoms', edit=1) }}">Start a symptom check-in</a></p>
+</div>
+{% endif %}
 
 {% if report_html %}
   <div class="panel reading">
@@ -39,6 +47,7 @@
 (function () {
   var box = document.getElementById("filterBox");
   var grid = document.getElementById("symptomGrid");
+  if (!box || !grid) return;
   box.addEventListener("input", function () {
     var q = box.value.trim().toLowerCase();
     var groupHeadings = grid.querySelectorAll("[data-group-heading]");

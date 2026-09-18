@@ -108,6 +108,11 @@ state; food preferences, drafts, analysis, and weekly selections stay local unde
 Peptide/nootropic catalogs, weekly check-in, Bevel sharing, and source refreshes remain `./hc`
 only; the web app's "More" page lists the terminal command for each.
 
+The browser opens with a two-step setup walkthrough for the diet gate and health priorities.
+After setup, Home shows result pages by default; symptom, schedule, and lab entry controls stay
+hidden until opened from Settings. Settings is also where you edit food inputs or reset the
+walkthrough. Resetting the walkthrough never deletes saved health data.
+
 `LOG THE COMPLETED WEEK` is a three-page keyboard grid. Tab moves through Training, Recovery,
 and Fuel; arrows choose a day and field; Space cycles fixed answers; Enter edits a number; and
 `s` saves. Blank values remain `UNKNOWN`. Workout HR and device calories are stored with their

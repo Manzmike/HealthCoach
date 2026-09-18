@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Set up HealthCoach{% endblock %}
+{% block content %}
+<h1>Set up HealthCoach</h1>
+<p class="lede">Complete these two short steps once. After that, HealthCoach opens on your results and keeps data-entry forms inside Settings.</p>
+
+<div class="setup-steps" aria-label="Setup progress">
+  <div class="setup-step{% if setup.steps.diet %} complete{% endif %}">
+    <span class="step-number">1</span>
+    <div><strong>{{ "Diet gate set" if setup.steps.diet else "Start with your diet" }}</strong><p>{{ "Complete" if setup.steps.diet else "Controls which foods can be selected." }}</p></div>
+    <a class="button quiet" href="{{ url_for('food_diet', **{'from': 'setup'}) }}">{{ "Review" if setup.steps.diet else "Start" }}</a>
+  </div>
+  <div class="setup-step{% if setup.steps.goals %} complete{% endif %}">
+    <span class="step-number">2</span>
+    <div><strong>Set your health priorities</strong><p>{{ "Complete" if setup.steps.goals else "Personalizes the food and evidence views." }}</p></div>
+    <a class="button quiet" href="{{ url_for('food_goals', **{'from': 'setup'}) }}">{{ "Review" if setup.steps.goals else "Start" }}</a>
+  </div>
+  <div class="setup-step">
+    <span class="step-number">3</span>
+    <div><strong>Add optional context</strong><p>Schedule, symptoms, and labs are available later from Settings.</p></div>
+    <a class="button quiet" href="{{ url_for('settings') }}">Open Settings</a>
+  </div>
+</div>
+
+{% if request.args.get('error') %}<div class="notice" role="alert">{{ request.args.get('error') }}</div>{% endif %}
+
+<div class="panel">
+  <h2>Finish setup</h2>
+  {% if setup.steps.diet and setup.steps.goals %}
+    <p>Your required setup is complete. You can now use the result pages and edit inputs later from Settings.</p>
+    <form method="post" action="{{ url_for('setup_complete') }}">
+      <button type="submit">Finish and open HealthCoach</button>
+    </form>
+  {% else %}
+    <p class="muted">Complete Steps 1 and 2 to unlock the main HealthCoach home page.</p>
+  {% endif %}
+</div>
+
+<p><a href="{{ url_for('settings') }}">Go to Settings</a></p>
+{% endblock %}

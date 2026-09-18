@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Settings — HealthCoach{% endblock %}
+{% block content %}
+<h1>Settings</h1>
+<p class="lede">Change or reset personal inputs here. The main pages show your current results without putting every form in your way.</p>
+
+<div class="panel">
+  <h2>Setup</h2>
+  <p>{{ "Setup is complete." if setup.complete else "Setup is not complete yet." }}</p>
+  <p><a class="button" href="{{ url_for('setup') }}">{{ "Review setup" if setup.complete else "Continue setup" }}</a></p>
+  {% if setup.complete %}
+    <form method="post" action="{{ url_for('setup_reset') }}">
+      <button type="submit" class="quiet">Reset setup walkthrough</button>
+    </form>
+    <p class="muted">Resetting only reopens the walkthrough; it does not delete your saved health data.</p>
+  {% endif %}
+</div>
+
+<div class="settings-grid">
+  <section class="panel">
+    <h2>Food inputs</h2>
+    <p class="muted">Diet eligibility and priorities control your food grades.</p>
+    <p><a class="button quiet" href="{{ url_for('food_diet', **{'from': 'settings'}) }}">Edit diet gate</a></p>
+    <p><a class="button quiet" href="{{ url_for('food_goals', **{'from': 'settings'}) }}">Edit health goals</a></p>
+  </section>
+  <section class="panel">
+    <h2>Schedule inputs</h2>
+    <p class="muted">The schedule page is read-only until you choose to edit it.</p>
+    <p><a class="button quiet" href="{{ url_for('schedule', edit=1) }}">Edit schedule</a></p>
+  </section>
+  <section class="panel">
+    <h2>Symptom inputs</h2>
+    <p class="muted">Open a fresh check-in only when you want to enter symptoms.</p>
+    <p><a class="button quiet" href="{{ url_for('symptoms', edit=1) }}">Start symptom check-in</a></p>
+  </section>
+  <section class="panel">
+    <h2>Lab inputs</h2>
+    <p class="muted">Add a value or import a PDF only when you choose to edit labs.</p>
+    <p><a class="button quiet" href="{{ url_for('labs_page', edit=1) }}">Edit labs</a></p>
+  </section>
+</div>
+{% endblock %}

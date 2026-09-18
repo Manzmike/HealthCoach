@@ -48,6 +48,7 @@ from webapp import food_preferences as FoodP  # noqa: E402
 from webapp import render as R  # noqa: E402
 from webapp import schedule_analysis as SA  # noqa: E402
 from webapp import schedule_view as SV  # noqa: E402
+from webapp import setup_state as Setup  # noqa: E402
 
 app = Flask(__name__)
 
@@ -84,6 +85,9 @@ def _load_model():
 
 @app.route("/")
 def home():
+    setup = Setup.load()
+    if not setup["complete"]:
+        return render_template("setup.html", setup=setup)
     state = T.load_today(report=REPORT)
     schedule = _load_schedule()
     return render_template(
@@ -93,6 +97,32 @@ def home():
         has_schedule=bool(schedule["blocks"]),
         has_labs=bool(L.load_labs().get("entries")),
     )
+
+
+@app.route("/setup")
+def setup():
+    return render_template("setup.html", setup=Setup.load())
+
+
+@app.route("/setup/complete", methods=["POST"])
+def setup_complete():
+    try:
+        Setup.mark_complete()
+    except ValueError as exc:
+        return redirect(url_for("setup", error=str(exc)))
+    return redirect(url_for("home"))
+
+
+@app.route("/setup/reset", methods=["POST"])
+def setup_reset():
+    # This resets only the walkthrough checkpoint. It never deletes health data.
+    Setup.reset()
+    return redirect(url_for("setup"))
+
+
+@app.route("/settings")
+def settings():
+    return render_template("settings.html", setup=Setup.load())
 
 
 # --------------------------------------------------------------------------
@@ -152,15 +182,16 @@ def symptoms():
     # need a round trip; filter_labels()/grouped_rows() are the same
     # functions the curses picker uses, just rendered as checkboxes here.
     rows = SC.grouped_rows(SC.filter_labels(""))
+    show_form = request.method == "POST" or request.args.get("edit") == "1"
     if request.method == "GET":
         return render_template("symptoms.html", rows=rows, selected=set(),
-                                report_html=None, deep_html=None)
+                                report_html=None, deep_html=None, show_form=show_form)
     selected = request.form.getlist("symptom")
     report = SC.build_report(selected)
     report_html = R.lines_to_html(SC.render_short(report))
     deep_html = R.lines_to_html(SC.render_deep(report))
     return render_template("symptoms.html", rows=rows, selected=set(selected),
-                            report_html=report_html, deep_html=deep_html)
+                            report_html=report_html, deep_html=deep_html, show_form=show_form)
 
 
 # --------------------------------------------------------------------------
@@ -194,13 +225,16 @@ def _schedule_context(sched: dict, *, error: str | None = None) -> dict:
         "analysis_results": analysis.get("results") if analysis.get("snapshot") else None,
         "analyzed_at": analysis.get("analyzed_at"),
         "has_blocks": bool(sched["blocks"]),
+        "edit_mode": False,
     }
 
 
 @app.route("/schedule")
 def schedule():
     sched = _load_schedule()
-    return render_template("schedule.html", **_schedule_context(sched, error=request.args.get("error")))
+    context = _schedule_context(sched, error=request.args.get("error"))
+    context["edit_mode"] = request.args.get("edit") == "1"
+    return render_template("schedule.html", **context)
 
 
 @app.route("/schedule/add", methods=["POST"])
@@ -226,7 +260,9 @@ def schedule_add():
     except ValueError as exc:
         error = str(exc)
     if error:
-        return render_template("schedule.html", **_schedule_context(_load_schedule(), error=error))
+        context = _schedule_context(_load_schedule(), error=error)
+        context["edit_mode"] = True
+        return render_template("schedule.html", **context)
     added_category = SB._resolve_category(category_input)
     if added_category in SB._RESEARCH_RELEVANT_CATEGORIES:
         return redirect(url_for("schedule_research", category=added_category, label=label))
@@ -311,7 +347,8 @@ def _lab_rows() -> list[dict]:
 
 @app.route("/labs")
 def labs_page():
-    return render_template("labs.html", rows=_lab_rows(), markers=sorted(L.MARKERS), error=None, candidates=None)
+    return render_template("labs.html", rows=_lab_rows(), markers=sorted(L.MARKERS), error=None,
+                           candidates=None, edit_mode=request.args.get("edit") == "1")
 
 
 @app.route("/labs/add", methods=["POST"])
@@ -326,7 +363,8 @@ def labs_add():
     except (ValueError, SystemExit) as exc:
         error = str(exc)
     if error:
-        return render_template("labs.html", rows=_lab_rows(), markers=sorted(L.MARKERS), error=error, candidates=None)
+        return render_template("labs.html", rows=_lab_rows(), markers=sorted(L.MARKERS), error=error,
+                               candidates=None, edit_mode=True)
     return redirect(url_for("labs_page"))
 
 
@@ -513,6 +551,7 @@ def food_diet():
     """
     current = FoodP.load(FoodP.DEFAULT_PATH)
     error = None
+    source = request.args.get("from", "") or request.form.get("from", "")
     if request.method == "POST":
         try:
             proposed = FoodP.normalize({
@@ -529,13 +568,19 @@ def food_diet():
                 names = [state["week"]["selected"][item_id]["name"] for item_id in sorted(blocked)]
                 raise ValueError("Remove or replace selected foods first: " + ", ".join(names) + ".")
             FoodP.save(proposed, FoodP.DEFAULT_PATH)
+            if source == "setup":
+                Setup.mark_step("diet")
         except ValueError as exc:
             error = str(exc)
             current = locals().get("proposed", current)
         else:
+            if source == "setup":
+                return redirect(url_for("setup"))
+            if source == "settings":
+                return redirect(url_for("settings"))
             return redirect(url_for("food"))
     return render_template("food_diet.html", diet_options=DR.DIET_PRESETS,
-                           toggle_options=DR.EXCLUSION_TOGGLES, current=current, error=error)
+                           toggle_options=DR.EXCLUSION_TOGGLES, current=current, error=error, source=source)
 
 
 @app.route("/food/goals", methods=["GET", "POST"])
@@ -547,6 +592,7 @@ def food_goals():
     separately by diet_rules.py and /food/diet."""
     ledger = CL.load_ledger()
     options = [(key, label) for key, label in CL.REASON_OPTIONS if key in CL.OUTCOME_REASON_KEYS]
+    source = request.args.get("from", "") or request.form.get("from", "")
     if request.method == "POST":
         goals = [g for g in request.form.getlist("goal") if g][:3]
         ledger["intake"]["goals"] = goals
@@ -557,11 +603,17 @@ def food_goals():
             return render_template("food_goals.html", options=options, weight_directions=CL.WEIGHT_DIRECTIONS,
                                     current_goals=goals,
                                     current_weight_direction=ledger["intake"]["weight_direction"], error=str(exc))
+        if source == "setup":
+            Setup.mark_step("goals")
+            return redirect(url_for("setup"))
+        if source == "settings":
+            return redirect(url_for("settings"))
         return redirect(url_for("food"))
     intake = CL.normalize_intake(ledger.get("intake"))
     return render_template("food_goals.html", options=options, weight_directions=CL.WEIGHT_DIRECTIONS,
                             current_goals=intake.get("goals", []),
-                            current_weight_direction=intake.get("weight_direction", "unknown"), error=None)
+                            current_weight_direction=intake.get("weight_direction", "unknown"),
+                            error=None, source=source)
 
 
 @app.route("/food/analyze", methods=["POST"])

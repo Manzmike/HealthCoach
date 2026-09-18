@@ -8,6 +8,7 @@
 {% if error %}<div class="notice">{{ error }}</div>{% endif %}
 
 <form method="post" action="{{ url_for('food_diet') }}" class="panel">
+  <input type="hidden" name="from" value="{{ source }}">
   <div class="field" style="max-width: 420px;">
     <label for="diet">Diet pattern</label>
     <select id="diet" name="diet" required>
@@ -29,5 +30,5 @@
   <button type="submit">Save diet gate</button>
 </form>
 
-<p><a href="{{ url_for('food') }}">Back to food catalog</a></p>
+<p><a href="{{ url_for('setup' if source == 'setup' else 'settings' if source == 'settings' else 'food') }}">{{ "Back to setup" if source == "setup" else "Back to Settings" if source == "settings" else "Back to food catalog" }}</a></p>
 {% endblock %}

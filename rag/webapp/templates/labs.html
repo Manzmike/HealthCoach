@@ -22,6 +22,7 @@
   {% endfor %}
 </table>
 
+{% if edit_mode %}
 <div class="panel">
   <h2>Add a value manually</h2>
   <form method="post" action="{{ url_for('labs_add') }}" class="inline">
@@ -63,6 +64,13 @@
     <button type="submit">Scan PDF</button>
   </form>
 </div>
+{% else %}
+<div class="panel">
+  <h2>Lab actions</h2>
+  <p class="muted">Your saved values are shown above. Open Settings only when you want to add or import results.</p>
+  <p><a class="button" href="{{ url_for('labs_page', edit=1) }}">Edit labs</a></p>
+</div>
+{% endif %}
 
 <div class="panel">
   <h2>Live connector</h2>

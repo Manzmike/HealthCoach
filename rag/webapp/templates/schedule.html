@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Schedule</h1>
 <p class="lede">One weekly template. Editing here or in the terminal builder edits the same file.
-  Drag on the grid to sketch a block's time, or use the form below.</p>
+  {% if edit_mode %}Drag on the grid to sketch a block's time, or use the form below.{% else %}This view is read-only until you choose to edit it.{% endif %}</p>
 
 {% if error %}<div class="notice">{{ error }}</div>{% endif %}
 
@@ -33,6 +33,7 @@
   {% endfor %}
 </div>
 
+{% if edit_mode %}
 <div class="panel" id="addBlockPanel">
   <h2>Add a block</h2>
   <form method="post" action="{{ url_for('schedule_add') }}" id="addBlockForm">
@@ -74,6 +75,13 @@
   <p class="muted">Research-relevant categories ({{ research_categories|join(", ") }}) get looked at by
     "Analyze schedule" below.</p>
 </div>
+{% else %}
+<div class="panel">
+  <h2>Schedule actions</h2>
+  <p class="muted">Your saved week is shown above. Open Settings only when you want to add or remove blocks.</p>
+  <p><a class="button" href="{{ url_for('schedule', edit=1) }}">Edit schedule</a></p>
+</div>
+{% endif %}
 
 <h2>Analyze &amp; export</h2>
 <div class="panel">
@@ -84,7 +92,7 @@
     <p class="muted">Add at least one block first.</p>
   {% elif is_analyzed %}
     <p class="muted">Matches your current schedule (analyzed {{ analyzed_at }}).</p>
-    <a href="{{ url_for('schedule_export') }}"><button class="quiet">Download .ics</button></a>
+    <a class="button quiet" href="{{ url_for('schedule_export') }}">Download .ics</a>
     <p class="muted">Import into Apple Calendar (File &gt; Import...), Google Calendar (Settings &gt; Import
       &amp; export), or Outlook (File &gt; Open &amp; Export &gt; Import/Export).</p>
   {% else %}
