@@ -16,7 +16,7 @@
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // The preview is a matrix, not a set of body ideals: 2 sexes × 3 heights ×
-  // 3 waists × 3 arm scales × 3 leg scales = 162 illustrative combinations.
+  // 3 waists × 3 weights × 3 arm scales × 3 leg scales = 486 combinations.
   const MATRIX_DIMENSIONS = {
     sex: [
       { label: "woman", shoulder: 0.96, hip: 1.04 },
@@ -31,6 +31,11 @@
       { label: "smallest waist", cm: 60, value: 0.78 },
       { label: "middle waist", cm: 80, value: 1.0 },
       { label: "largest waist", cm: 110, value: 1.22 }
+    ],
+    weight: [
+      { label: "lightest example", kg: 55, value: 0.86 },
+      { label: "middle example", kg: 80, value: 1.0 },
+      { label: "heaviest example", kg: 110, value: 1.18 }
     ],
     armScale: [
       { label: "smallest arms", value: 0.78 },
@@ -122,22 +127,25 @@
   function setPersonalOverlay() { if (overlayTitle) overlayTitle.textContent = "Your confirmed approximation"; if (overlayText) overlayText.textContent = "Uses confirmed measurements as a visual guide — not a scan."; canvas.setAttribute("aria-label", "Rotating 3D approximation based on confirmed measurements. Use arrow keys or drag to rotate."); }
   function personalizedPreset() {
     const height = number(canvas.dataset.height, 175), weight = number(canvas.dataset.weight, 75), bodyFat = number(canvas.dataset.bodyFat, 18), bmi = weight / Math.pow(height / 100, 2), width = clamp(0.86 + (bmi - 21) * 0.018 + (bodyFat - 18) * 0.004, 0.78, 1.24), isWoman = canvas.dataset.sex === "female";
-    return { label: "Your confirmed approximation", detail: "confirmed height, weight, and optional body-fat data", height: clamp(height / 175, 0.82, 1.18), width: width, waist: width, depth: width, shoulder: isWoman ? 0.96 : 1.08, arm: clamp(width, 0.84, 1.16), armScale: clamp(width, 0.84, 1.16), leg: clamp(height / 175, 0.86, 1.16), legScale: clamp(height / 175, 0.86, 1.16), hip: isWoman ? 1.04 : 0.96 };
+    const mass = clamp(Math.sqrt(weight / 75), 0.86, 1.2);
+    return { label: "Your confirmed approximation", detail: "confirmed height, weight, and optional body-fat data", height: clamp(height / 175, 0.82, 1.18), width: width, waist: width, depth: mass, weightKg: weight, mass: mass, shoulder: isWoman ? 0.96 : 1.08, arm: clamp(width, 0.84, 1.16), armScale: clamp(width, 0.84, 1.16), leg: clamp(height / 175, 0.86, 1.16), legScale: clamp(height / 175, 0.86, 1.16), hip: isWoman ? 1.04 : 0.96 };
   }
   function buildMatrix() {
     const profiles = [];
     MATRIX_DIMENSIONS.sex.forEach(function (sex) {
       MATRIX_DIMENSIONS.height.forEach(function (height) {
         MATRIX_DIMENSIONS.waist.forEach(function (waist) {
-          MATRIX_DIMENSIONS.armScale.forEach(function (armScale) {
-            MATRIX_DIMENSIONS.legScale.forEach(function (legScale) {
+          MATRIX_DIMENSIONS.weight.forEach(function (weight) {
+            MATRIX_DIMENSIONS.armScale.forEach(function (armScale) {
+              MATRIX_DIMENSIONS.legScale.forEach(function (legScale) {
               const position = profiles.length + 1;
               profiles.push({
                 label: "Example · " + sex.label,
-                detail: height.label + " (" + height.cm + " cm) · " + waist.label + " (" + waist.cm + " cm) · " + armScale.label + " · " + legScale.label + " · matrix " + position + "/162",
-                height: height.value, width: waist.value, waist: waist.value, depth: waist.value,
+                detail: height.label + " (" + height.cm + " cm) · " + waist.label + " (" + waist.cm + " cm) · " + weight.label + " (" + weight.kg + " kg) · " + armScale.label + " · " + legScale.label + " · matrix " + position + "/486",
+                height: height.value, width: waist.value, waist: waist.value, depth: weight.value, weightKg: weight.kg, mass: weight.value,
                 shoulder: sex.shoulder, arm: armScale.value, armScale: armScale.value,
                 leg: legScale.value, legScale: legScale.value, hip: sex.hip
+              });
               });
             });
           });
@@ -148,7 +156,7 @@
   }
   function partDimensions(part, profile) {
     const xFrame = part.group === "arm" ? profile.shoulder : profile.width;
-    const xSize = part.group === "arm" ? profile.armScale : part.group === "torso" && part.key === "abdomen" ? profile.waist : profile.width;
+    const xSize = part.group === "arm" ? profile.armScale : part.group === "torso" && part.key === "abdomen" ? profile.waist : part.group === "torso" ? profile.width * profile.mass : profile.width;
     const ySize = part.group === "arm" ? profile.armScale : part.group === "leg" ? profile.legScale : profile.height;
     return { x: part.x * xFrame, y: part.y * profile.height, sx: part.sx * xSize * (part.group === "hip" ? profile.hip : 1), sy: part.sy * ySize, sz: part.sz * profile.depth };
   }

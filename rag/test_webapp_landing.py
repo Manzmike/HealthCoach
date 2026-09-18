@@ -61,6 +61,7 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn(b"waist", response.data)
         self.assertIn(b"armScale", response.data)
         self.assertIn(b"legScale", response.data)
+        self.assertIn(b"weightKg", response.data)
         self.assertNotIn(b"https://", response.data)
 
 
