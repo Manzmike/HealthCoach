@@ -332,3 +332,649 @@ it is not read by any script.
 - FAIL pdf | B | 10.1186/s12958-025-01370-7 | Comparison of outcomes between pulsatile gonadotropin releasing hormone and comb | no OA PDF resolved
 - FAIL pdf | B | 10.1111/avj.13196 | Comparison of the initial ovarian response, the synchrony of oestrus and ovulati | no OA PDF resolved
 - FAIL pdf | A | 10.21037/tp-24-439 | Efficacy and safety of different doses of gonadotropin-releasing hormone analogu | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jtbi.2004.11.024 | On the importance of fatty acid composition of membranes for aging | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jn/132.6.1583s | Living fast, dying when? The link between aging and energetics | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0891-5849(98)00195-6 | Modulation of cardiac mitochondrial membrane fluidity by age and calorie intake | no OA PDF resolved
+- FAIL pdf | C | 10.1073/pnas.79.13.4239 | Action of food restriction in delaying the aging process | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.mad.2007.07.005 | Effect of long-term caloric restriction on oxygen consumption and body temperatu | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000213509 | Modulation of membrane phospholipid fatty acid composition by age and food restr | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.cbpa.2006.05.014 | The links between membrane composition, metabolic rate and lifespan | no OA PDF resolved
+- FAIL pdf | C | 10.1016/0006-291x(87)91562-2 | Anti-lipoperoxidation action of food restriction | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.freeradbiomed.2014.05.015 | Caloric restriction and the aging process: a critique | no OA PDF resolved
+- FAIL pdf | C | 10.1086/649964 | Plasticity of oxidative metabolism in variable climates: molecular mechanisms | no OA PDF resolved
+- FAIL pdf | C | 10.1096/fj.05-5568com | Methionine restriction decreases mitochondrial oxygen radical generation and lea | no OA PDF resolved
+- FAIL pdf | A | 10.1001/jama.279.17.1383 | Effects of sodium restriction on blood pressure, renin, aldosterone, catecholami | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.steroids.2005.02.004 | Nongenomic effects of mineralocorticoid receptor activation in the cardiovascula | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.numecd.2005.09.001 | High- or low-salt diet from weaning to adulthood: effect on body weight, food in | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00239-003-0635-6 | Endothelial cell swelling by aldosterone | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.amjmed.2005.10.042 | Sodium intake and mortality in the NHANES II follow-up study | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC302575 | cited by https://www.jayfeldmanwellness.com/are-you-still-restricting-salt/
+- FAIL pdf | C | 10.1016/s1043-2760(99)00188-5 | Stress Hormones, Th1/Th2 patterns, Pro/Anti-inflammatory Cytokines and Susceptib | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jn/132.8.2174 | Plasma glucagon and insulin responses depend on the rate of appearance of amino  | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s11906-013-0383-y | Current insights and new perspectives on the roles of hyperglucagonemia in non-i | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC1557370 | cited by https://www.jayfeldmanwellness.com/blood-sugar-stress-and-feeling-hangry/
+- FAIL pdf | C | 10.1152/ajpendo.1991.260.1.e67 | Hierarchy of glycemic thresholds for counterregulatory hormone secretion, sympto | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC2980962 | cited by https://www.jayfeldmanwellness.com/blood-sugar-stress-and-feeling-hangry/
+- FAIL pdf | C | 10.1056/nejm197007162830301 | Abnormal alpha-cell function in diabetes. Response to carbohydrate and protein i | no OA PDF resolved
+- FAIL pdf | C | 10.2337/dc13-0194 | Acute hypoglycemia impairs executive cognitive function in adults with and witho | no OA PDF resolved
+- FAIL pdf | C | 10.1038/sj.ijo.0801278 | The role of stress and the hypothalamic-pituitary-adrenal axis in the pathogenes | no OA PDF resolved
+- FAIL pdf | C | 10.1177/1088868307303030 | The physiology of willpower: linking blood glucose to self-control | no OA PDF resolved
+- FAIL pdf | C | 10.1038/jcbfm.2013.128 | Why does brain metabolism not favor burning of fatty acids to provide energy? Re | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0167-5699(00)01593-0 | Bioenergetics of immune functions: fundamental and therapeutic aspects | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0083-6729(04)69001-7 | Reinterpretation of basal glucocorticoid feedback: implications to behavioral an | no OA PDF resolved
+- FAIL pdf | C | 10.1046/j.1365-2826.2001.00706.x | A new perspective on glucocorticoid feedback: relation to stress, carbohydrate f | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1464-5491.2006.01998.x | Cortisol--cause and cure for metabolic syndrome? | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1748-1716.1979.tb06438.x | The effect of different diets and of insulin on the hormonal response to prolong | no OA PDF resolved
+- FAIL pdf | C | 10.1097/00005768-200209000-00016 | Long-term fat diet adaptation effects on performance, training capacity, and fat | no OA PDF resolved
+- FAIL pdf | C | 10.1089/thy.2007.0253 | Fasting-induced changes in the hypothalamus-pituitary-thyroid axis | no OA PDF resolved
+- FAIL pdf | C | 10.2165/00007256-200030050-00003 | Adaptation to a fat-rich diet: effects on endurance performance in humans | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1748-1716.1982.tb06969.x | Diet induced changes in sympatho-adrenal activity during submaximal exercise in  | no OA PDF resolved
+- FAIL pdf | C | 10.1093/ajcn/57.5.759s | Food quotient, respiratory quotient, and energy balance | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4963347 | cited by https://www.jayfeldmanwellness.com/ep-27-what-we-eat-in-a-day-diet-freedom-and-variety-and-the-nad-nadh-ratio-q-a/
+- FAIL pdf | C | 10.1152/ajpendo.00093.2009 | The Randle cycle revisited: a new head for an old hat | no OA PDF resolved
+- FAIL pdf | B | 10.1097/00003246-199109000-00005 | Lactic acid kinetics in respiratory alkalosis | no OA PDF resolved
+- FAIL pdf | C | 10.1046/j.1600-0412.2003.00187.x | The relationship between carbohydrate intake and glucose tolerance in pregnant w | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4487780 | cited by https://www.jayfeldmanwellness.com/ep-27-what-we-eat-in-a-day-diet-freedom-and-variety-and-the-nad-nadh-ratio-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC3955408 | cited by https://www.jayfeldmanwellness.com/carbs-vs-fats-which-is-the-better-fuel/
+- REFERENCE UNRESOLVED | PMC:PMC4603544 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | PMC:PMC5508210 | cited by https://www.jayfeldmanwellness.com/ep-27-what-we-eat-in-a-day-diet-freedom-and-variety-and-the-nad-nadh-ratio-q-a/
+- FAIL pdf | C | 10.1136/emj.2009.084103 | Elevated lactate during psychogenic hyperventilation | no OA PDF resolved
+- FAIL pdf | C | 10.1002/bies.201000097 | Oxygen radicals shaping evolution: why fatty acid catabolism leads to peroxisome | no OA PDF resolved
+- FAIL pdf | C | 10.1113/expphysiol.2006.033506 | Oxygen sensing by mitochondria at complex III: the paradox of increased reactive | no OA PDF resolved
+- FAIL pdf | C | 10.1002/mnfr.201900088 | Low-Protein Diets with Fixed Carbohydrate Content Promote Hyperphagia and Sympat | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.3389/fphys.2019.00419/full | cited by https://www.jayfeldmanwellness.com/eb-133-the-sugar-diet-honey-diet-and-fgf21-the-research/
+- REFERENCE UNRESOLVED | DOI:10.3389/fendo.2022.909621/full | cited by https://www.jayfeldmanwellness.com/eb-133-the-sugar-diet-honey-diet-and-fgf21-the-research/
+- REFERENCE UNRESOLVED | DOI:10.1096/fasebj.25.1_supplement.528.2 | cited by https://www.jayfeldmanwellness.com/eb-133-the-sugar-diet-honey-diet-and-fgf21-the-research/
+- REFERENCE UNRESOLVED | DOI:10.1007/s10989-019-09820-8 | cited by https://www.jayfeldmanwellness.com/eb-133-the-sugar-diet-honey-diet-and-fgf21-the-research/
+- REFERENCE UNRESOLVED | DOI:10.1007/978-1-4612-6366-1_43 | cited by https://www.jayfeldmanwellness.com/ep-114-fat-burning-drives-insulin-resistance-and-eating-carbohydrates-improves-insulin-sensitivity/
+- FAIL pdf | B | 10.1056/nejm197808312990901 | Hyperglucagonemia and its suppression. Importance in the metabolic control of di | no OA PDF resolved
+- FAIL pdf | C | 10.1002/j.1550-8528.1996.tb00242.x | Weight loss during 12 week's ad libitum carbohydrate-rich diet in overweight and | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4342530 | cited by https://www.jayfeldmanwellness.com/eb-134-the-sugar-diet-lose-fat-and-increase-your-metabolism-without-losing-muscle-mass/
+- REFERENCE UNRESOLVED | PMC:PMC6312800 | cited by https://www.jayfeldmanwellness.com/ep-114-fat-burning-drives-insulin-resistance-and-eating-carbohydrates-improves-insulin-sensitivity/
+- FAIL pdf | C | 10.1097/ju.0000000000000482 | The Association between Popular Diets and Serum Testosterone among Men in the Un | no OA PDF resolved
+- FAIL pdf | C | 10.1056/nejm197007162830301 | Abnormal alpha-cell function in diabetes. Response to carbohydrate and protein i | no OA PDF resolved
+- FAIL pdf | C | 10.1056/nejm197103112841004 | Improved glucose tolerance with high carbohydrate feeding in mild diabetes | no OA PDF resolved
+- FAIL pdf | C | 10.1080/00325481.1958.11692236 | Effect of rice diet on diabetes mellitus associated with vascular disease | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC1394223 | cited by https://www.jayfeldmanwellness.com/eb-139-the-truth-about-the-randle-cycle-why-you-can-eat-carbs-and-fats-together/
+- REFERENCE UNRESOLVED | PMC:PMC6922028 | cited by https://www.jayfeldmanwellness.com/eb-138-low-carb-diets-increase-glycation-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | DOI:10.1007/s001250100009%22%20/t%20%22_blank | cited by https://www.jayfeldmanwellness.com/eb-138-low-carb-diets-increase-glycation-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | PMC:PMC6165066 | cited by https://www.jayfeldmanwellness.com/eb-139-the-truth-about-the-randle-cycle-why-you-can-eat-carbs-and-fats-together/
+- FAIL pdf | C | 10.1111/j.1471-4159.1975.tb04428.x | The metabolism of ketone bodies in developing human brain: development of ketone | no OA PDF resolved
+- FAIL pdf | C | 10.1038/jcbfm.1982.45 | Substrate utilization and brain development | no OA PDF resolved
+- FAIL pdf | C | 10.1126/science.12192669 | Reaction of monosaccharides with proteins: possible evolutionary significance | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4950712 | cited by https://www.jayfeldmanwellness.com/eb-138-low-carb-diets-increase-glycation-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | PMC:PMC3475163 | cited by https://www.jayfeldmanwellness.com/eb-138-low-carb-diets-increase-glycation-and-what-to-do-instead/
+- FAIL pdf | C | 10.1196/annals.1333.025 | Ketosis leads to increased methylglyoxal production on the Atkins diet | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.metabol.2006.01.003 | Insulin decreases intracellular oxidative stress in patients with type 2 diabete | no OA PDF resolved
+- FAIL pdf | C | 10.1179/1476830515y.0000000036 | Ketogenic diet in epileptic children: impact on lipoproteins and oxidative stres | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC5247474 | cited by https://www.jayfeldmanwellness.com/eb-138-low-carb-diets-increase-glycation-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | PMC:PMC1087172 | cited by https://www.jayfeldmanwellness.com/ep-114-fat-burning-drives-insulin-resistance-and-eating-carbohydrates-improves-insulin-sensitivity/
+- REFERENCE UNRESOLVED | PMC:PMC1565763 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- FAIL pdf | C | 10.1111/vox.12888 | Inactivation of three emerging viruses - severe acute respiratory syndrome coron | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC6265973 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3672526 | cited by https://www.jayfeldmanwellness.com/ep-58-altitude-panic-attacks-swelling-heart-failure-and-more-oxygenation-swelling-and-ph-balance-part-3/
+- REFERENCE UNRESOLVED | DOI:10.3389/fmicb.2018.02419/full | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | DOI:10.1101/2020.04.01.20047381v1 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC2820120 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC6165773 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC1280232 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC4728398 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC1872042 | cited by https://www.jayfeldmanwellness.com/ep-58-altitude-panic-attacks-swelling-heart-failure-and-more-oxygenation-swelling-and-ph-balance-part-3/
+- REFERENCE UNRESOLVED | PMC:PMC2854541 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC4483315 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3756814 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3449675 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3806217 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC5865875 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- FAIL pdf | C | 10.1056/nejm198310133091504 | Divalent cations in essential hypertension. Relations between serum ionized calc | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC2941910 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC5856457 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC7096066 | cited by https://www.jayfeldmanwellness.com/ep-58-altitude-panic-attacks-swelling-heart-failure-and-more-oxygenation-swelling-and-ph-balance-part-3/
+- FAIL pdf | C | 10.1007/s13239-017-0298-x | Elevated Serotonin Interacts with Angiotensin-II to Result in Altered Valve Inte | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1101/2020.02.29.20029520v1 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC4661187 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- FAIL pdf | C | 10.1161/01.hyp.0000244543.91937.79 | Circulating activities of angiotensin-converting enzyme, its homolog, angiotensi | no OA PDF resolved
+- FAIL pdf | C | 10.1002/jmv.21476 | Antiviral effect of nicotinamide on enterovirus-infected human islets in vitro:  | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1101/2020.03.17.20037572v1 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC6180524 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC5100179 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3604610 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3659258 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | DOI:10.1164/rccm.201908-1543LE | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3308600 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC6548996 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC3302904 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | DOI:10.1186/s13054-018-2217-4 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | DOI:10.1111/irv.12421 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | PMC:PMC4288282 | cited by https://www.jayfeldmanwellness.com/ep-0-protecting-yourself-from-covid-19-and-how-to-support-your-immune-system/
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJM199503093321009 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | DOI:10.1096/fasebj.24.1_supplement.220.6 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | MED:8942407 | cited by https://www.jayfeldmanwellness.com/ep-50-increasing-testosterone-with-saturated-fats-and-decreasing-estrogen-mens-hormonal-health-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC3400812 | cited by https://www.jayfeldmanwellness.com/ep-100-building-a-bioenergetic-diet-macros-calories-and-meal-timing/
+- REFERENCE UNRESOLVED | DOI:10.1007/s001250100009 | cited by https://www.jayfeldmanwellness.com/ep-11-weight-loss-part-2-the-true-cause-of-weight-gain/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpendo.2001.280.4.e576 | cited by https://www.jayfeldmanwellness.com/ep-7-carbs-vs-fats-and-general-macronutrient-guidelines/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpgi.1998.275.6.g1246 | cited by https://www.jayfeldmanwellness.com/ep-100-building-a-bioenergetic-diet-macros-calories-and-meal-timing/
+- REFERENCE UNRESOLVED | PMC:PMC4041092 | cited by https://www.jayfeldmanwellness.com/ep-101-building-a-bioenergetic-diet-optimal-carb-fat-and-protein-sources/
+- REFERENCE UNRESOLVED | DOI:10.1515/reveh-2013-0010/html | cited by https://www.jayfeldmanwellness.com/ep-101-building-a-bioenergetic-diet-optimal-carb-fat-and-protein-sources/
+- REFERENCE UNRESOLVED | PMC:PMC4321736 | cited by https://www.jayfeldmanwellness.com/ep-101-building-a-bioenergetic-diet-optimal-carb-fat-and-protein-sources/
+- REFERENCE UNRESOLVED | PMC:PMC6201684 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC6034629 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | MED:11223421 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | PMC:PMC4091836 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC5563382 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC3698844 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC3076650 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC3179448 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC3593234 | cited by https://www.jayfeldmanwellness.com/ep-105-challenging-the-idea-that-increased-omega-3-consumption-lowers-mortality/
+- REFERENCE UNRESOLVED | PMC:PMC5952932 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | PMC:PMC5767854 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:2676659 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:17012979 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:22591898 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | DOI:10.1002/14651858.CD010015.pub3/abstract | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:7570953 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | PMC:PMC3404348 | cited by https://www.jayfeldmanwellness.com/ep-34-macros-for-insulin-resistance-diabetes-and-melatonin-gaba-for-sleep-q-a/
+- REFERENCE UNRESOLVED | MED:18615261 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:1833105 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:1432259 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:2123344 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | PMC:PMC4170890 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:21116022 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:22710344 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | PMC:PMC6517311 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:2394967 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:12654171 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:27063583 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | DOI:10.1101/2022.06.26.22276840v1.full | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:6538617 | cited by https://www.jayfeldmanwellness.com/ep-50-increasing-testosterone-with-saturated-fats-and-decreasing-estrogen-mens-hormonal-health-part-2/
+- REFERENCE UNRESOLVED | MED:9168460 | cited by https://www.jayfeldmanwellness.com/ep-106-omega-3s-increase-inflammation-and-oxidative-stress/
+- REFERENCE UNRESOLVED | MED:7615205 | cited by https://www.jayfeldmanwellness.com/ep-107-omega-3s-decrease-lifespan-and-increase-disease/
+- REFERENCE UNRESOLVED | MED:29144994 | cited by https://www.jayfeldmanwellness.com/ep-107-omega-3s-decrease-lifespan-and-increase-disease/
+- REFERENCE UNRESOLVED | PMC:PMC3263907 | cited by https://www.jayfeldmanwellness.com/ep-34-macros-for-insulin-resistance-diabetes-and-melatonin-gaba-for-sleep-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1016/j.freeradbiomed.2015.05.006 | cited by https://www.jayfeldmanwellness.com/ep-107-omega-3s-decrease-lifespan-and-increase-disease/
+- REFERENCE UNRESOLVED | PMC:PMC4803033 | cited by https://www.jayfeldmanwellness.com/ep-108-herman-pontzers-burn-ted-naimans-pe-diet-and-increasing-calorie-intake-to-raise-metabolism-qa/
+- REFERENCE UNRESOLVED | PMC:PMC296882 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | DOI:10.1038/oby.2006.152 | cited by https://www.jayfeldmanwellness.com/ep-91-cod-liver-oil-dangers-the-croissant-diet-and-insulin-resistant-fat-cells-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC2903931 | cited by https://www.jayfeldmanwellness.com/ep-11-weight-loss-part-2-the-true-cause-of-weight-gain/
+- REFERENCE UNRESOLVED | DOI:10.3389/fphys.2018.01053/full | cited by https://www.jayfeldmanwellness.com/ep-91-cod-liver-oil-dangers-the-croissant-diet-and-insulin-resistant-fat-cells-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1007/BF02523831 | cited by https://www.jayfeldmanwellness.com/ep-9-polyunsaturated-fats-pufa-and-energy-balance/
+- REFERENCE UNRESOLVED | PMC:PMC4782696 | cited by https://www.jayfeldmanwellness.com/ep-111-stevia-vs-sugar-ketogenic-diets-for-epilepsy-and-spore-based-vs-standard-probiotics-qa/
+- REFERENCE UNRESOLVED | PMC:PMC7584803 | cited by https://www.jayfeldmanwellness.com/ep-111-stevia-vs-sugar-ketogenic-diets-for-epilepsy-and-spore-based-vs-standard-probiotics-qa/
+- REFERENCE UNRESOLVED | PMC:PMC1604580 | cited by https://www.jayfeldmanwellness.com/ep-113-carbohydrates-dont-cause-insulin-resistance-or-diabetes-evidence-for-the-bioenergetic-view/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpendo.2001.280.4.E576 | cited by https://www.jayfeldmanwellness.com/ep-114-fat-burning-drives-insulin-resistance-and-eating-carbohydrates-improves-insulin-sensitivity/
+- REFERENCE UNRESOLVED | PMC:PMC3484465 | cited by https://www.jayfeldmanwellness.com/ep-114-fat-burning-drives-insulin-resistance-and-eating-carbohydrates-improves-insulin-sensitivity/
+- REFERENCE UNRESOLVED | PMC:PMC3031255 | cited by https://www.jayfeldmanwellness.com/ep-114-fat-burning-drives-insulin-resistance-and-eating-carbohydrates-improves-insulin-sensitivity/
+- REFERENCE UNRESOLVED | PMC:PMC9147253 | cited by https://www.jayfeldmanwellness.com/ep-115-lmhr-and-the-lipid-energy-model-implications-for-metabolism-and-hormones/
+- REFERENCE UNRESOLVED | PMC:PMC9048595 | cited by https://www.jayfeldmanwellness.com/ep-116-the-truth-about-ldl-and-heart-disease-lmhr-and-the-lipid-energy-model/
+- REFERENCE UNRESOLVED | DOI:10.3389/fendo.2023.1326768/full | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- REFERENCE UNRESOLVED | DOI:10.1002/ccr3.8485 | cited by https://www.jayfeldmanwellness.com/ep-116-the-truth-about-ldl-and-heart-disease-lmhr-and-the-lipid-energy-model/
+- REFERENCE UNRESOLVED | PMC:PMC3484320 | cited by https://www.jayfeldmanwellness.com/ep-117-fructose-malabsorption-protecting-against-alcohol-and-brain-injuries-and-inflammation-q-and-a/
+- REFERENCE UNRESOLVED | DOI:10.3389/fneur.2019.01133/full | cited by https://www.jayfeldmanwellness.com/ep-117-fructose-malabsorption-protecting-against-alcohol-and-brain-injuries-and-inflammation-q-and-a/
+- REFERENCE UNRESOLVED | DOI:10.1186/s40035-020-00197-z | cited by https://www.jayfeldmanwellness.com/ep-117-fructose-malabsorption-protecting-against-alcohol-and-brain-injuries-and-inflammation-q-and-a/
+- REFERENCE UNRESOLVED | DOI:10.3892/mmr.2015.4551 | cited by https://www.jayfeldmanwellness.com/ep-117-fructose-malabsorption-protecting-against-alcohol-and-brain-injuries-and-inflammation-q-and-a/
+- REFERENCE UNRESOLVED | DOI:10.1186/s12974-015-0457-7 | cited by https://www.jayfeldmanwellness.com/ep-41-benefits-of-progesterone-and-how-to-restore-hormonal-health-womens-hormonal-health-part-2/
+- REFERENCE UNRESOLVED | MED:847286 | cited by https://www.jayfeldmanwellness.com/ep-117-fructose-malabsorption-protecting-against-alcohol-and-brain-injuries-and-inflammation-q-and-a/
+- REFERENCE UNRESOLVED | PMC:PMC3696514 | cited by https://www.jayfeldmanwellness.com/ep-118-the-truth-about-serotonin-and-ssris-why-serotonin-is-not-the-happy-hormone/
+- REFERENCE UNRESOLVED | PMC:PMC1277931 | cited by https://www.jayfeldmanwellness.com/ep-118-the-truth-about-serotonin-and-ssris-why-serotonin-is-not-the-happy-hormone/
+- REFERENCE UNRESOLVED | PMC:PMC222881 | cited by https://www.jayfeldmanwellness.com/ep-119-vitamin-a-toxicity-examining-the-evidence-for-vitamin-a-deficiency/
+- REFERENCE UNRESOLVED | DOI:10.1258/002367771781006492 | cited by https://www.jayfeldmanwellness.com/ep-119-vitamin-a-toxicity-examining-the-evidence-for-vitamin-a-deficiency/
+- REFERENCE UNRESOLVED | MED:19346988 | cited by https://www.jayfeldmanwellness.com/ep-51-optimizing-exercise-and-sleep-to-build-muscle-mens-hormonal-health-part-3/
+- REFERENCE UNRESOLVED | MED:20592272 | cited by https://www.jayfeldmanwellness.com/ep-12-weight-loss-part-3-exercise-nutrition-and-more/
+- REFERENCE UNRESOLVED | MED:23461028 | cited by https://www.jayfeldmanwellness.com/ep-51-optimizing-exercise-and-sleep-to-build-muscle-mens-hormonal-health-part-3/
+- REFERENCE UNRESOLVED | MED:21785350 | cited by https://www.jayfeldmanwellness.com/ep-51-optimizing-exercise-and-sleep-to-build-muscle-mens-hormonal-health-part-3/
+- REFERENCE UNRESOLVED | PMC:PMC4695328 | cited by https://www.jayfeldmanwellness.com/ep-20-intuitive-eating-5000-calories-per-day-and-whether-to-go-all-in/
+- REFERENCE UNRESOLVED | DOI:10.1017/S0007114512000128 | cited by https://www.jayfeldmanwellness.com/ep-120-vitamin-a-toxicity-retinoic-acid-toxicity-accutane-and-whether-hypervitaminosis-a-exists/
+- REFERENCE UNRESOLVED | PMC:PMC1258540 | cited by https://www.jayfeldmanwellness.com/ep-120-vitamin-a-toxicity-retinoic-acid-toxicity-accutane-and-whether-hypervitaminosis-a-exists/
+- REFERENCE UNRESOLVED | DOI:10.1186/s10020-020-0136-8 | cited by https://www.jayfeldmanwellness.com/ep-122-weight-loss-with-berberine-and-urolithin-a-blood-sugar-spikes-and-pairing-protein-with-carbs-qa/
+- REFERENCE UNRESOLVED | DOI:10.1021/jf0527403 | cited by https://www.jayfeldmanwellness.com/ep-122-weight-loss-with-berberine-and-urolithin-a-blood-sugar-spikes-and-pairing-protein-with-carbs-qa/
+- REFERENCE UNRESOLVED | PMC:PMC8347929 | cited by https://www.jayfeldmanwellness.com/ep-122-weight-loss-with-berberine-and-urolithin-a-blood-sugar-spikes-and-pairing-protein-with-carbs-qa/
+- REFERENCE UNRESOLVED | PMC:PMC4241770 | cited by https://www.jayfeldmanwellness.com/ep-124-forget-about-cico-a-smarter-approach-to-fat-loss/
+- REFERENCE UNRESOLVED | DOI:10.1186/1550-2783-1-2-21 | cited by https://www.jayfeldmanwellness.com/ep-124-forget-about-cico-a-smarter-approach-to-fat-loss/
+- REFERENCE UNRESOLVED | PMC:PMC3127503 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | MED:23076670 | cited by https://www.jayfeldmanwellness.com/ep-124-forget-about-cico-a-smarter-approach-to-fat-loss/
+- REFERENCE UNRESOLVED | PMC:PMC2897733 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | DOI:10.1111/j.1464-410X.2005.05579.x | cited by https://www.jayfeldmanwellness.com/ep-128-are-oxalates-the-problem-or-is-it-your-gut/
+- REFERENCE UNRESOLVED | DOI:10.3389/fphys.2020.566506/full | cited by https://www.jayfeldmanwellness.com/ep-130-low-carb-diets-oxalates-the-surprising-connection/
+- REFERENCE UNRESOLVED | DOI:10.1016/S0022-5347%2817%2940786-5 | cited by https://www.jayfeldmanwellness.com/ep-128-are-oxalates-the-problem-or-is-it-your-gut/
+- REFERENCE UNRESOLVED | DOI:10.1080/10256010410001671609 | cited by https://www.jayfeldmanwellness.com/ep-128-are-oxalates-the-problem-or-is-it-your-gut/
+- REFERENCE UNRESOLVED | DOI:10.1007/s00240-001-0228-z | cited by https://www.jayfeldmanwellness.com/ep-128-are-oxalates-the-problem-or-is-it-your-gut/
+- REFERENCE UNRESOLVED | DOI:10.1155/2014/685204 | cited by https://www.jayfeldmanwellness.com/ep-129-the-forgotten-source-of-oxalates-your-bodys-own-production/
+- REFERENCE UNRESOLVED | DOI:10.1155/2012/819202 | cited by https://www.jayfeldmanwellness.com/ep-129-the-forgotten-source-of-oxalates-your-bodys-own-production/
+- REFERENCE UNRESOLVED | DOI:10.1007/978-1-4615-2556-1_36 | cited by https://www.jayfeldmanwellness.com/ep-129-the-forgotten-source-of-oxalates-your-bodys-own-production/
+- REFERENCE UNRESOLVED | DOI:10.1016/S0022-5347%2805%2963992-4 | cited by https://www.jayfeldmanwellness.com/ep-129-the-forgotten-source-of-oxalates-your-bodys-own-production/
+- REFERENCE UNRESOLVED | DOI:10.1080/17512433.2018.1519391 | cited by https://www.jayfeldmanwellness.com/ep-13-lowering-cholesterol-and-the-role-of-carbs-in-ancestral-diets-q-a/
+- REFERENCE UNRESOLVED | MED:12618275 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | MED:22037012 | cited by https://www.jayfeldmanwellness.com/ep-9-polyunsaturated-fats-pufa-and-energy-balance/
+- REFERENCE UNRESOLVED | MED:11355856 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | DOI:10.1098/rstb.1991.0111 | cited by https://www.jayfeldmanwellness.com/ep-87-robb-wolf-on-ray-peat-and-the-bioenergetic-view-energy-obesity-evolution-and-paul-saladino/
+- REFERENCE UNRESOLVED | DOI:10.1177/147470490900700409 | cited by https://www.jayfeldmanwellness.com/ep-48-a-critique-of-the-scd1-theory-of-obesity-the-croissant-diet-part-2/
+- REFERENCE UNRESOLVED | DOI:10.1186/1476-511X-11-139 | cited by https://www.jayfeldmanwellness.com/ep-43-restoring-cellular-bioenergetics-and-repairing-the-gut-autoimmunity-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC6196963 | cited by https://www.jayfeldmanwellness.com/ep-9-polyunsaturated-fats-pufa-and-energy-balance/
+- REFERENCE UNRESOLVED | PMC:PMC4513492 | cited by https://www.jayfeldmanwellness.com/ep-30-cholesterol-part-2-how-to-lower-your-cholesterol-and-heart-healthy-fats/
+- REFERENCE UNRESOLVED | MED:9409317 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | MED:9430080 | cited by https://www.jayfeldmanwellness.com/ep-50-increasing-testosterone-with-saturated-fats-and-decreasing-estrogen-mens-hormonal-health-part-2/
+- REFERENCE UNRESOLVED | MED:7934543 | cited by https://www.jayfeldmanwellness.com/ep-38-the-physiology-of-fat-loss-without-a-caloric-deficit/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpendo.1995.269.3.E568 | cited by https://www.jayfeldmanwellness.com/ep-130-low-carb-diets-oxalates-the-surprising-connection/
+- REFERENCE UNRESOLVED | DOI:10.1021/jf048128d | cited by https://www.jayfeldmanwellness.com/ep-131-whether-to-avoid-high-oxalate-foods-and-how-to-fix-oxalate-issues/
+- REFERENCE UNRESOLVED | DOI:10.1002/hep.20283 | cited by https://www.jayfeldmanwellness.com/ep-132-youve-been-lied-to-about-fructose/
+- REFERENCE UNRESOLVED | DOI:10.1002/hep.26299 | cited by https://www.jayfeldmanwellness.com/ep-132-youve-been-lied-to-about-fructose/
+- REFERENCE UNRESOLVED | PMC:PMC3169796 | cited by https://www.jayfeldmanwellness.com/ep-73-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-1/
+- REFERENCE UNRESOLVED | DOI:10.1113/expphysiol.2006.033399 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- REFERENCE UNRESOLVED | MED:3993620 | cited by https://www.jayfeldmanwellness.com/ep-132-youve-been-lied-to-about-fructose/
+- REFERENCE UNRESOLVED | PMC:PMC3533803 | cited by https://www.jayfeldmanwellness.com/ep-132-youve-been-lied-to-about-fructose/
+- REFERENCE UNRESOLVED | DOI:10.3109/00365517409114190 | cited by https://www.jayfeldmanwellness.com/ep-5-blood-sugar-part-2-cravings-anti-fructose-misconceptions-and-the-best-starch-sources/
+- REFERENCE UNRESOLVED | DOI:10.1098/rsos.140216 | cited by https://www.jayfeldmanwellness.com/ep-15-the-failures-of-modern-medicine-part-1-industry-influence-and-historical-mishaps/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pmed.0020138 | cited by https://www.jayfeldmanwellness.com/ep-15-the-failures-of-modern-medicine-part-1-industry-influence-and-historical-mishaps/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pmed.1002049 | cited by https://www.jayfeldmanwellness.com/ep-15-the-failures-of-modern-medicine-part-1-industry-influence-and-historical-mishaps/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pmed.0020124 | cited by https://www.jayfeldmanwellness.com/ep-15-the-failures-of-modern-medicine-part-1-industry-influence-and-historical-mishaps/
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJMoa0810696 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJMoa0810084 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | PMC:PMC5864110 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | PMC:PMC4769928 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | PMC:PMC153831 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJMoa1305189 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | DOI:10.1148/radiol.2019190341 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJMoa070829 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJMoa1600249 | cited by https://www.jayfeldmanwellness.com/ep-16-the-failures-of-modern-medicine-part-2-dangerous-treatments-and-medical-error/
+- REFERENCE UNRESOLVED | PMC:PMC2917728 | cited by https://www.jayfeldmanwellness.com/ep-17-how-to-fix-your-sleep-part-1-circadian-rhythm-and-light/
+- REFERENCE UNRESOLVED | PMC:PMC3246291 | cited by https://www.jayfeldmanwellness.com/ep-17-how-to-fix-your-sleep-part-1-circadian-rhythm-and-light/
+- REFERENCE UNRESOLVED | PMC:PMC2718885 | cited by https://www.jayfeldmanwellness.com/ep-17-how-to-fix-your-sleep-part-1-circadian-rhythm-and-light/
+- REFERENCE UNRESOLVED | DOI:10.1111/jsr.12283 | cited by https://www.jayfeldmanwellness.com/ep-18-how-to-fix-your-sleep-part-2-nutrition-supplements-and-routines/
+- REFERENCE UNRESOLVED | DOI:10.1086/204350 | cited by https://www.jayfeldmanwellness.com/ep-91-cod-liver-oil-dangers-the-croissant-diet-and-insulin-resistant-fat-cells-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC2377015 | cited by https://www.jayfeldmanwellness.com/ep-2-gut-and-digestion-part-1-our-gut-and-energy-balance/
+- REFERENCE UNRESOLVED | PMC:PMC4056127 | cited by https://www.jayfeldmanwellness.com/ep-28-restoring-gut-health-why-not-to-use-probiotics-and-ray-peats-carrot-salad/
+- REFERENCE UNRESOLVED | MED:11889292 | cited by https://www.jayfeldmanwellness.com/ep-34-macros-for-insulin-resistance-diabetes-and-melatonin-gaba-for-sleep-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC3562736 | cited by https://www.jayfeldmanwellness.com/ep-67-endotoxin-and-pufa-as-primary-causes-of-fatty-liver-disease-nafld-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC2954178 | cited by https://www.jayfeldmanwellness.com/ep-2-gut-and-digestion-part-1-our-gut-and-energy-balance/
+- REFERENCE UNRESOLVED | DOI:10.1146/annurev.nutr.27.061406.093659 | cited by https://www.jayfeldmanwellness.com/ep-50-increasing-testosterone-with-saturated-fats-and-decreasing-estrogen-mens-hormonal-health-part-2/
+- REFERENCE UNRESOLVED | MED:20519895 | cited by https://www.jayfeldmanwellness.com/ep-2-gut-and-digestion-part-1-our-gut-and-energy-balance/
+- REFERENCE UNRESOLVED | MED:14671205 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pone.0040503 | cited by https://www.jayfeldmanwellness.com/ep-5-blood-sugar-part-2-cravings-anti-fructose-misconceptions-and-the-best-starch-sources/
+- REFERENCE UNRESOLVED | MED:10662747 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | DOI:10.1111/jfbc.12629 | cited by https://www.jayfeldmanwellness.com/ep-71-weight-gain-from-replenishing-glycogen-calcium-sources-other-than-dairy-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC2908954 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | DOI:10.1152/physrev.00047.2006 | cited by https://www.jayfeldmanwellness.com/fats-weve-got-it-all-wrong/
+- REFERENCE UNRESOLVED | PMC:PMC2821041 | cited by https://www.jayfeldmanwellness.com/ep-23-how-to-slow-aging-part-1-increasing-your-metabolism-and-competing-theories/
+- REFERENCE UNRESOLVED | DOI:10.1177/0963721419829719 | cited by https://www.jayfeldmanwellness.com/ep-23-how-to-slow-aging-part-1-increasing-your-metabolism-and-competing-theories/
+- REFERENCE UNRESOLVED | PMC:PMC3295247 | cited by https://www.jayfeldmanwellness.com/ep-23-how-to-slow-aging-part-1-increasing-your-metabolism-and-competing-theories/
+- REFERENCE UNRESOLVED | MED:14715435 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:18325775 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:9593698 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | PMC:PMC3835913 | cited by https://www.jayfeldmanwellness.com/ep-24-how-to-slow-aging-part-2-problems-with-caloric-restriction-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | MED:12392766 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | PMC:PMC4111977 | cited by https://www.jayfeldmanwellness.com/ep-24-how-to-slow-aging-part-2-problems-with-caloric-restriction-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | PMC:PMC4042144 | cited by https://www.jayfeldmanwellness.com/ep-24-how-to-slow-aging-part-2-problems-with-caloric-restriction-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | DOI:10.3181/00379727-70-16916 | cited by https://www.jayfeldmanwellness.com/ep-66-the-role-of-cortisol-and-the-harmful-effects-of-fasting-in-fatty-liver-nafld-part-4/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpendo.1985.248.4.e488 | cited by https://www.jayfeldmanwellness.com/ep-24-how-to-slow-aging-part-2-problems-with-caloric-restriction-and-what-to-do-instead/
+- REFERENCE UNRESOLVED | DOI:10.1080/04419057.2007.9674499 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | PMC:PMC3747763 | cited by https://www.jayfeldmanwellness.com/ep-26-natural-antibiotics-mental-health-and-optimizing-carb-metabolism-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC4566442 | cited by https://www.jayfeldmanwellness.com/ep-26-natural-antibiotics-mental-health-and-optimizing-carb-metabolism-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1080/10942912.2012.712077 | cited by https://www.jayfeldmanwellness.com/ep-71-weight-gain-from-replenishing-glycogen-calcium-sources-other-than-dairy-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1080/1028415X.2000.11747303 | cited by https://www.jayfeldmanwellness.com/ep-26-natural-antibiotics-mental-health-and-optimizing-carb-metabolism-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC4566449 | cited by https://www.jayfeldmanwellness.com/ep-26-natural-antibiotics-mental-health-and-optimizing-carb-metabolism-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC3683958 | cited by https://www.jayfeldmanwellness.com/ep-27-what-we-eat-in-a-day-diet-freedom-and-variety-and-the-nad-nadh-ratio-q-a/
+- REFERENCE UNRESOLVED | DOI:10.3389/fimmu.2019.02981/full | cited by https://www.jayfeldmanwellness.com/ep-54-sugar-candida-overgrowths-whether-a-calorie-surplus-is-required-to-build-muscle-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1111/nbu.12296 | cited by https://www.jayfeldmanwellness.com/ep-54-sugar-candida-overgrowths-whether-a-calorie-surplus-is-required-to-build-muscle-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1111/j.1365-2133.1968.tb11918.x | cited by https://www.jayfeldmanwellness.com/ep-28-restoring-gut-health-why-not-to-use-probiotics-and-ray-peats-carrot-salad/
+- REFERENCE UNRESOLVED | PMC:PMC4772042 | cited by https://www.jayfeldmanwellness.com/ep-54-sugar-candida-overgrowths-whether-a-calorie-surplus-is-required-to-build-muscle-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1186/s12967-017-1175-y | cited by https://www.jayfeldmanwellness.com/ep-54-sugar-candida-overgrowths-whether-a-calorie-surplus-is-required-to-build-muscle-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC6006167 | cited by https://www.jayfeldmanwellness.com/ep-28-restoring-gut-health-why-not-to-use-probiotics-and-ray-peats-carrot-salad/
+- REFERENCE UNRESOLVED | DOI:10.1007/s11101-018-9591-z | cited by https://www.jayfeldmanwellness.com/ep-54-sugar-candida-overgrowths-whether-a-calorie-surplus-is-required-to-build-muscle-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC3080423 | cited by https://www.jayfeldmanwellness.com/ep-53-supplements-to-boost-testosterone-and-increase-metabolism-mens-hormonal-health-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC2365486 | cited by https://www.jayfeldmanwellness.com/ep-29-cholesterol-part-1-statin-dangers-and-whether-cholesterol-causes-heart-disease/
+- REFERENCE UNRESOLVED | DOI:10.1161/ATVBAHA.107.155606 | cited by https://www.jayfeldmanwellness.com/ep-43-restoring-cellular-bioenergetics-and-repairing-the-gut-autoimmunity-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC4447369 | cited by https://www.jayfeldmanwellness.com/ep-81-whether-intense-exercise-and-endurance-training-should-be-avoided-fitness-vs-health-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC4744367 | cited by https://www.jayfeldmanwellness.com/ep-81-whether-intense-exercise-and-endurance-training-should-be-avoided-fitness-vs-health-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC313866 | cited by https://www.jayfeldmanwellness.com/ep-34-macros-for-insulin-resistance-diabetes-and-melatonin-gaba-for-sleep-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC2956535 | cited by https://www.jayfeldmanwellness.com/ep-29-cholesterol-part-1-statin-dangers-and-whether-cholesterol-causes-heart-disease/
+- REFERENCE UNRESOLVED | PMC:PMC3471321 | cited by https://www.jayfeldmanwellness.com/ep-3-gut-and-digestion-part-2-ideal-foods-for-our-gut/
+- REFERENCE UNRESOLVED | DOI:10.1007/978-1-61779-803-0_17 | cited by https://www.jayfeldmanwellness.com/ep-3-gut-and-digestion-part-2-ideal-foods-for-our-gut/
+- FAIL pdf | C | 10.1146/annurev-nutr-071816-064634 | Metabolic Effects of Intermittent Fasting | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0022-2275(20)35375-x | Cholesterol metabolism in hypothyroidism and hyperthyroidism in man | no OA PDF resolved
+- FAIL pdf | A | 10.7326/m13-1788 | Association of dietary, circulating, and supplement fatty acids with coronary ri | no OA PDF resolved
+- FAIL pdf | C | 10.1001/archinte.168.8.855 | Thyrotropin levels and risk of fatal coronary heart disease: the HUNT study | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1056/NEJM193012252032601 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | PMC:PMC1804688 | cited by https://www.jayfeldmanwellness.com/ep-32-the-causes-of-hypertension-and-nutrition-as-a-solution-blood-pressure-part-2/
+- FAIL pdf | B | 10.1161/hypertensionaha.115.05342 | Endotoxin and β-1,3-d-Glucan in Concentrated Ambient Particles Induce Rapid Incr | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC1855314 | cited by https://www.jayfeldmanwellness.com/ep-34-macros-for-insulin-resistance-diabetes-and-melatonin-gaba-for-sleep-q-a/
+- FAIL pdf | A | 10.1038/ijo.2014.184 | Predicting adult weight change in the real world: a systematic review and meta-a | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3766957 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC3047616 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC370671 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC3776116 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- FAIL pdf | C | 10.15252/embj.201696151 | Cancer cell metabolism: the essential role of the nonessential amino acid, gluta | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00011-010-0176-6 | Caffeine protects against alcoholic liver injury by attenuating inflammatory res | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00213-004-1876-9 | 4-Caffeoyl-1,5-quinide in roasted coffee inhibits [3H]naloxone binding and rever | no OA PDF resolved
+- FAIL pdf | C | 10.1021/acs.jafc.6b03568 | Effect of Coffee in Lipopolysaccharide-Induced Indoleamine 2,3-Dioxygenase Activ | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3970220 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- FAIL pdf | C | 10.1002/hep.1840040107 | Caffeine: a model compound for measuring liver function | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3698477 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC5696634 | cited by https://www.jayfeldmanwellness.com/ep-37-maximizing-the-benefits-of-coffee-and-whether-fasting-protects-against-cancer-q-a/
+- FAIL pdf | C | 10.3109/00365527109180725 | Caffeine-stimulated acid and pepsin secretion: dose-response studies | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC6952947 | cited by https://www.jayfeldmanwellness.com/ep-39-nutrition-for-a-compromised-gut-food-additives-skincare-products-q-a/
+- REFERENCE UNRESOLVED | DOI:10.1007/BF02678802 | cited by https://www.jayfeldmanwellness.com/ep-7-carbs-vs-fats-and-general-macronutrient-guidelines/
+- REFERENCE UNRESOLVED | PMC:PMC2899523 | cited by https://www.jayfeldmanwellness.com/ep-74-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-2/
+- REFERENCE UNRESOLVED | DOI:10.1007/s40806-016-0074-4 | cited by https://www.jayfeldmanwellness.com/ep-40-why-estrogen-and-birth-control-are-not-the-solution-womens-hormonal-health-part-1/
+- REFERENCE UNRESOLVED | DOI:10.1007/s40806-018-00186-6 | cited by https://www.jayfeldmanwellness.com/ep-40-why-estrogen-and-birth-control-are-not-the-solution-womens-hormonal-health-part-1/
+- FAIL pdf | C | 10.1056/nejmoa1700732 | Contemporary Hormonal Contraception and the Risk of Breast Cancer | no OA PDF resolved
+- FAIL pdf | C | 10.1177/0956797614532295 | Partner choice, relationship satisfaction, and oral contraception: the congruenc | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC2951843 | cited by https://www.jayfeldmanwellness.com/ep-40-why-estrogen-and-birth-control-are-not-the-solution-womens-hormonal-health-part-1/
+- FAIL pdf | C | 10.1098/rspb.2008.0825 | MHC-correlated odour preferences in humans and the use of oral contraceptives | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC1005500 | cited by https://www.jayfeldmanwellness.com/ep-40-why-estrogen-and-birth-control-are-not-the-solution-womens-hormonal-health-part-1/
+- FAIL pdf | C | 10.1111/j.1471-4159.2012.07753.x | Progesterone prevents mitochondrial dysfunction in the spinal cord of wobbler mi | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC2781356 | cited by https://www.jayfeldmanwellness.com/ep-41-benefits-of-progesterone-and-how-to-restore-hormonal-health-womens-hormonal-health-part-2/
+- FAIL pdf | C | 10.1177/0271678x15610338 | Progesterone reduces brain mitochondrial dysfunction after transient focal ische | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s10863-014-9585-5 | Progesterone protects mitochondrial function in a rat model of pediatric traumat | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1177/0271678X15610338nlm.nih.gov/20377753/ | cited by https://www.jayfeldmanwellness.com/ep-41-benefits-of-progesterone-and-how-to-restore-hormonal-health-womens-hormonal-health-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC1548449 | cited by https://www.jayfeldmanwellness.com/ep-42-alternative-views-of-the-immune-system-and-autoimmunity-autoimmunity-part-1/
+- FAIL pdf | C | 10.3109/03009748909099921 | Sex hormones and autoimmune rheumatic disorders | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1111/j.1469-8749.2005.tb01079.x | cited by https://www.jayfeldmanwellness.com/ep-42-alternative-views-of-the-immune-system-and-autoimmunity-autoimmunity-part-1/
+- FAIL pdf | C | 10.1111/j.1749-6632.2002.tb04229.x | Stress hormones, proinflammatory and antiinflammatory cytokines, and autoimmunit | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC6487495 | cited by https://www.jayfeldmanwellness.com/ep-43-restoring-cellular-bioenergetics-and-repairing-the-gut-autoimmunity-part-2/
+- FAIL pdf | C | 10.1111/nyas.12398 | Aromatase and regulation of the estrogen-to-androgen ratio in synovial tissue in | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.3389/fneur.2014.00212/full | cited by https://www.jayfeldmanwellness.com/ep-43-restoring-cellular-bioenergetics-and-repairing-the-gut-autoimmunity-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC2680195 | cited by https://www.jayfeldmanwellness.com/ep-43-restoring-cellular-bioenergetics-and-repairing-the-gut-autoimmunity-part-2/
+- REFERENCE UNRESOLVED | DOI:10.3389/fnins.2018.00464/full | cited by https://www.jayfeldmanwellness.com/ep-43-restoring-cellular-bioenergetics-and-repairing-the-gut-autoimmunity-part-2/
+- FAIL pdf | C | 10.1194/jlr.m077792 | Deposition and hydrolysis of serine dipeptide lipids of Bacteroidetes bacteria i | no OA PDF resolved
+- FAIL pdf | C | 10.1080/08830185.2017.1365146 | Damage-associated molecular patterns and their role as initiators of inflammator | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s00204-009-0455-6 | Aluminium neurotoxicity: neurobehavioural and oxidative aspects | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4694087 | cited by https://www.jayfeldmanwellness.com/ep-46-herbs-spices-supplements-vs-food-and-appetite-as-a-metabolic-indicator-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC4813228 | cited by https://www.jayfeldmanwellness.com/ep-46-herbs-spices-supplements-vs-food-and-appetite-as-a-metabolic-indicator-q-a/
+- FAIL pdf | C | 10.1111/jcmm.13342 | Metformin protects against intestinal barrier dysfunction via AMPKα1-dependent i | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3297642 | cited by https://www.jayfeldmanwellness.com/ep-48-a-critique-of-the-scd1-theory-of-obesity-the-croissant-diet-part-2/
+- FAIL pdf | C | 10.1056/nejm198307073090102 | Postprandial glucose and insulin responses to meals containing different carbohy | no OA PDF resolved
+- FAIL pdf | C | 10.1161/atvbaha.108.181628 | Nitric oxide, cytochrome C oxidase, and the cellular response to hypoxia | no OA PDF resolved
+- FAIL pdf | C | 10.1152/jappl.1997.82.2.571 | Effect of running intensity on intestinal permeability | no OA PDF resolved
+- FAIL pdf | C | 10.1113/jphysiol.2008.164285 | Carbohydrate sensing in the human mouth: effects on exercise performance and bra | no OA PDF resolved
+- FAIL pdf | A | 10.1111/apt.14157 | Systematic review: exercise-induced gastrointestinal syndrome-implications for h | no OA PDF resolved
+- FAIL pdf | C | 10.1161/circresaha.109.198911 | The ligand binding battle at cytochrome c oxidase: how NO regulates oxygen gradi | no OA PDF resolved
+- FAIL pdf | C | 10.1007/bf02373021 | Glucose influence on germ tube production in Candida albicans | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC415254 | cited by https://www.jayfeldmanwellness.com/ep-54-sugar-candida-overgrowths-whether-a-calorie-surplus-is-required-to-build-muscle-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC5359535 | cited by https://www.jayfeldmanwellness.com/ep-56-carbon-dioxide-as-a-key-to-raising-metabolism-oxygenation-swelling-and-ph-balance-part-1/
+- FAIL pdf | C | 10.1161/01.cir.48.3.455 | Cell swelling. A factor in ischemic tissue injury | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC1413652 | cited by https://www.jayfeldmanwellness.com/ep-56-carbon-dioxide-as-a-key-to-raising-metabolism-oxygenation-swelling-and-ph-balance-part-1/
+- FAIL pdf | C | 10.1176/jnp.13.1.22 | The lactic acid response to alkalosis in panic disorder : an integrative review | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3678789 | cited by https://www.jayfeldmanwellness.com/ep-58-altitude-panic-attacks-swelling-heart-failure-and-more-oxygenation-swelling-and-ph-balance-part-3/
+- REFERENCE UNRESOLVED | PMC:PMC103751 | cited by https://www.jayfeldmanwellness.com/ep-6-blood-sugar-part-3-the-best-sugar-sources/
+- FAIL pdf | C | 10.1046/j.1365-2826.2001.00706.x | A new perspective on glucocorticoid feedback: relation to stress, carbohydrate f | no OA PDF resolved
+- FAIL pdf | C | 10.1021/jf034885k | Effect of fermentation on Sweetpotato (Ipomoea batatas) toxicity in mice | no OA PDF resolved
+- FAIL pdf | C | 10.2105/ajph.2020.306014 | Neurotoxicity of Ortho-Phthalates: Recommendations for Critical Policy Reforms t | no OA PDF resolved
+- FAIL pdf | C | 10.1002/etc.3087 | The effects of antidepressants appear to be rapid and at environmentally relevan | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC6132564 | cited by https://www.jayfeldmanwellness.com/ep-75-hormesis-as-an-anti-scientific-defense-for-industrial-pollution-and-chemical-exposure-hormesis-part-1/
+- FAIL pdf | C | 10.1093/ajcn/24.3.290 | Effect of body composition and other parameters in obese young men of carbohydra | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.cmet.2015.07.021 | Calorie for Calorie, Dietary Fat Restriction Results in More Body Fat Loss than  | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajplegacy.1957.188.2.332 | Factors influencing survival of rats in fasting; metabolic rate and body weight  | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC5064803 | cited by https://www.jayfeldmanwellness.com/ep-76-why-caloric-restriction-is-not-responsible-for-lifespan-extension-hormesis-part-2/
+- FAIL pdf | C | 10.1002/path.1711520107 | Endotoxin induced hepatic necrosis in rats on an alcohol diet | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.alcohol.2004.06.008 | Role of fatty liver, dietary fatty acid supplements, and obesity in the progress | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3059122 | cited by https://www.jayfeldmanwellness.com/ep-67-endotoxin-and-pufa-as-primary-causes-of-fatty-liver-disease-nafld-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC3684271 | cited by https://www.jayfeldmanwellness.com/ep-67-endotoxin-and-pufa-as-primary-causes-of-fatty-liver-disease-nafld-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC329642 | cited by https://www.jayfeldmanwellness.com/ep-67-endotoxin-and-pufa-as-primary-causes-of-fatty-liver-disease-nafld-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC4578804 | cited by https://www.jayfeldmanwellness.com/ep-68-oxidative-stress-choline-deficiency-and-exporting-liver-fat-nafld-part-6/
+- REFERENCE UNRESOLVED | PMC:PMC2873499 | cited by https://www.jayfeldmanwellness.com/ep-67-endotoxin-and-pufa-as-primary-causes-of-fatty-liver-disease-nafld-part-5/
+- FAIL pdf | C | 10.3181/00379727-205-43703 | Lactobacillus feeding reduces endotoxemia and severity of experimental alcoholic | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpgi.00296.2007 | A new model for nonalcoholic steatohepatitis in the rat utilizing total enteral  | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC7002352 | cited by https://www.jayfeldmanwellness.com/ep-67-endotoxin-and-pufa-as-primary-causes-of-fatty-liver-disease-nafld-part-5/
+- FAIL pdf | C | 10.1007/s00726-018-2605-8 | Taurine attenuates the development of hepatic steatosis through the inhibition o | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4044302 | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- REFERENCE UNRESOLVED | PMC:PMC2921576 | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- FAIL pdf | C | 10.1177/0748233711408381 | Effects of vitamin E on reproductive hormones and testis structure in chronic di | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC5297843 | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- REFERENCE UNRESOLVED | PMC:PMC5899218 | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- REFERENCE UNRESOLVED | DOI:10.1186/s12906-017-1961-3.pdf | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- REFERENCE UNRESOLVED | DOI:10.3389/fendo.2018.00382/full | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- FAIL pdf | C | 10.1080/00325481.1964.11694984 | MEDICAL MANAGEMENT OF CIRRHOSIS OF THE LIVER | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC5773980 | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- FAIL pdf | C | 10.1002/mnfr.202100253 | Daily Dose of Bovine Lactoferrin Prevents Ethanol-Induced Liver Injury and Death | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4918028 | cited by https://www.jayfeldmanwellness.com/ep-70-pro-metabolic-supplements-for-fatty-liver-disease-nafld-part-8/
+- REFERENCE UNRESOLVED | PMC:PMC6108875 | cited by https://www.jayfeldmanwellness.com/ep-72-dental-health-on-a-high-sugar-diet-how-to-determine-whats-blocking-energy-production-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC4270814 | cited by https://www.jayfeldmanwellness.com/ep-72-dental-health-on-a-high-sugar-diet-how-to-determine-whats-blocking-energy-production-q-a/
+- FAIL pdf | C | 10.1111/prd.12315 | Periodontal therapeutics: Current host-modulation agents and future directions | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3900881 | cited by https://www.jayfeldmanwellness.com/ep-73-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC2596919 | cited by https://www.jayfeldmanwellness.com/ep-73-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC2391033 | cited by https://www.jayfeldmanwellness.com/ep-74-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-2/
+- FAIL pdf | C | 10.1152/ajpendo.00442.2004 | Dehydroepiandrosterone inhibits the amplification of glucocorticoid action in ad | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC7664638 | cited by https://www.jayfeldmanwellness.com/ep-74-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC3520819 | cited by https://www.jayfeldmanwellness.com/ep-97-how-to-properly-test-for-thyroid-function-hypothyroidism-part-3/
+- REFERENCE UNRESOLVED | PMC:PMC3758667 | cited by https://www.jayfeldmanwellness.com/ep-74-refuting-nutrition-with-judys-thoughts-on-the-ray-peat-diet-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC4555094 | cited by https://www.jayfeldmanwellness.com/ep-76-why-caloric-restriction-is-not-responsible-for-lifespan-extension-hormesis-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC1281265 | cited by https://www.jayfeldmanwellness.com/ep-75-hormesis-as-an-anti-scientific-defense-for-industrial-pollution-and-chemical-exposure-hormesis-part-1/
+- FAIL pdf | C | 10.1126/science.302.5644.376 | Hormesis. Sipping from a poisoned chalice | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC1665404 | cited by https://www.jayfeldmanwellness.com/ep-75-hormesis-as-an-anti-scientific-defense-for-industrial-pollution-and-chemical-exposure-hormesis-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC5914347 | cited by https://www.jayfeldmanwellness.com/ep-75-hormesis-as-an-anti-scientific-defense-for-industrial-pollution-and-chemical-exposure-hormesis-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC6223323 | cited by https://www.jayfeldmanwellness.com/ep-76-why-caloric-restriction-is-not-responsible-for-lifespan-extension-hormesis-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC3835092 | cited by https://www.jayfeldmanwellness.com/ep-77-why-you-dont-want-to-force-autophagy-mitochondrial-biogenesis-uncoupling-hormesis-part-3/
+- REFERENCE UNRESOLVED | DOI:10.1101/462523v2.full.pdf | cited by https://www.jayfeldmanwellness.com/ep-77-why-you-dont-want-to-force-autophagy-mitochondrial-biogenesis-uncoupling-hormesis-part-3/
+- REFERENCE UNRESOLVED | PMC:PMC3822436 | cited by https://www.jayfeldmanwellness.com/ep-77-why-you-dont-want-to-force-autophagy-mitochondrial-biogenesis-uncoupling-hormesis-part-3/
+- FAIL pdf | B | 10.1152/ajpregu.00875.2007 | Effect of interval versus continuous training on cardiorespiratory and mitochond | no OA PDF resolved
+- FAIL pdf | B | 10.1161/circulationaha.106.675041 | Superior cardiovascular effect of aerobic interval training versus moderate cont | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC6097542 | cited by https://www.jayfeldmanwellness.com/ep-79-hyperthyroidism-collagen-alternatives-and-forcing-mitochondrial-respiration-q-a/
+- REFERENCE UNRESOLVED | PMC:PMC4177591 | cited by https://www.jayfeldmanwellness.com/ep-8-q-a-fixing-leaky-gut-the-best-types-of-milk-and-picking-the-right-diet/
+- REFERENCE UNRESOLVED | PMC:PMC7260126 | cited by https://www.jayfeldmanwellness.com/ep-83-how-nutrient-partitioning-affects-eating-behavior-and-fat-loss/
+- REFERENCE UNRESOLVED | PMC:PMC1885190 | cited by https://www.jayfeldmanwellness.com/ep-84-fructose-and-uric-acid-are-david-perlmutter-and-rick-johnson-wrong-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC4078442 | cited by https://www.jayfeldmanwellness.com/ep-84-fructose-and-uric-acid-are-david-perlmutter-and-rick-johnson-wrong-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC3406258 | cited by https://www.jayfeldmanwellness.com/ep-84-fructose-and-uric-acid-are-david-perlmutter-and-rick-johnson-wrong-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC3327749 | cited by https://www.jayfeldmanwellness.com/ep-84-fructose-and-uric-acid-are-david-perlmutter-and-rick-johnson-wrong-part-1/
+- REFERENCE UNRESOLVED | PMC:PMC7450825 | cited by https://www.jayfeldmanwellness.com/ep-85-fructose-and-uric-acid-are-david-perlmutter-and-rick-johnson-wrong-part-2/
+- FAIL pdf | C | 10.1111/jfbc.13911 | A review on the fruit components affecting uric acid level and their underlying  | no OA PDF resolved
+- FAIL pdf | C | 10.1073/pnas.1505071112 | Body composition in Pan paniscus compared with Homo sapiens has implications for | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC6170270 | cited by https://www.jayfeldmanwellness.com/ep-85-fructose-and-uric-acid-are-david-perlmutter-and-rick-johnson-wrong-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC3281544 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- REFERENCE UNRESOLVED | DOI:10.1096/fasebj.31.1_supplement.1036.3 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- FAIL pdf | C | 10.1002/oby.22468 | Glucose and Lipid Homeostasis and Inflammation in Humans Following an Isocaloric | no OA PDF resolved
+- FAIL pdf | C | 10.1086/303399 | Adaptive Evolution of Seed Oils in Plants: Accounting for the Biogeographic Dist | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1007/BF02582182 | cited by https://www.jayfeldmanwellness.com/ep-9-polyunsaturated-fats-pufa-and-energy-balance/
+- REFERENCE UNRESOLVED | PMC:PMC3641109 | cited by https://www.jayfeldmanwellness.com/ep-9-polyunsaturated-fats-pufa-and-energy-balance/
+- FAIL pdf | C | 10.1152/ajpregu.1996.271.6.r1550 | Allometry of mitochondrial proton leak: influence of membrane surface area and f | no OA PDF resolved
+- FAIL pdf | C | 10.1042/bj20030984 | Proton conductance and fatty acyl composition of liver mitochondria correlates w | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC2808215 | cited by https://www.jayfeldmanwellness.com/ep-9-polyunsaturated-fats-pufa-and-energy-balance/
+- FAIL pdf | C | 10.1021/jf301444x | Oxidation of cod liver oil during gastrointestinal in vitro digestion | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC8780033 | cited by https://www.jayfeldmanwellness.com/ep-91-cod-liver-oil-dangers-the-croissant-diet-and-insulin-resistant-fat-cells-q-a/
+- FAIL pdf | C | 10.1152/ajpcell.00415.2007 | Effect of thyroid hormone on mitochondrial properties and oxidative stress in ce | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1016/S0014-5793%2803%2900320-X | cited by https://www.jayfeldmanwellness.com/ep-95-hypothyroidism-in-context-thyroid-hormone-basics-hypothyroidism-part-1/
+- FAIL pdf | C | 10.1152/physrev.00009.2005 | Thermogenic mechanisms and their hormonal regulation | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.2001.280.5.e761 | T(3) increases mitochondrial ATP production in oxidative muscle despite increase | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4267409 | cited by https://www.jayfeldmanwellness.com/ep-95-hypothyroidism-in-context-thyroid-hormone-basics-hypothyroidism-part-1/
+- FAIL pdf | C | 10.1089/105072502761016494 | The impact of iron and selenium deficiencies on iodine and thyroid metabolism: b | no OA PDF resolved
+- FAIL pdf | C | 10.1080/00365519009091076 | Different short-term effect of protein and carbohydrate intake on TSH, growth ho | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC371281 | cited by https://www.jayfeldmanwellness.com/ep-96-avoid-low-carb-diets-fasting-and-caloric-restriction-if-you-have-hypothyroidism-hypothyroidism-part-2/
+- REFERENCE UNRESOLVED | DOI:10.3389/fnut.2022.824193/full | cited by https://www.jayfeldmanwellness.com/ep-96-avoid-low-carb-diets-fasting-and-caloric-restriction-if-you-have-hypothyroidism-hypothyroidism-part-2/
+- FAIL pdf | C | 10.1111/j.1365-2362.1980.tb00019.x | In vivo and in vitro effects of adrenaline on conversion of thyroxine to triiodo | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1002/cphy.cp070416 | cited by https://www.jayfeldmanwellness.com/ep-96-avoid-low-carb-diets-fasting-and-caloric-restriction-if-you-have-hypothyroidism-hypothyroidism-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC5040049 | cited by https://www.jayfeldmanwellness.com/ep-97-how-to-properly-test-for-thyroid-function-hypothyroidism-part-3/
+- FAIL pdf | B | 10.1152/ajpregu.1999.276.2.r357 | Neutralization of TNF does not influence endotoxininduced changes in thyroid hor | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC8465820 | cited by https://www.jayfeldmanwellness.com/ep-97-how-to-properly-test-for-thyroid-function-hypothyroidism-part-3/
+- REFERENCE UNRESOLVED | PMC:PMC2784889 | cited by https://www.jayfeldmanwellness.com/ep-96-avoid-low-carb-diets-fasting-and-caloric-restriction-if-you-have-hypothyroidism-hypothyroidism-part-2/
+- FAIL pdf | C | 10.1089/thy.2007.0252 | Thyroid-adrenergic interactions: physiological and clinical implications | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC8018287 | cited by https://www.jayfeldmanwellness.com/ep-96-avoid-low-carb-diets-fasting-and-caloric-restriction-if-you-have-hypothyroidism-hypothyroidism-part-2/
+- REFERENCE UNRESOLVED | DOI:10.1007/978-1-4020-7852-1_10 | cited by https://www.jayfeldmanwellness.com/ep-96-avoid-low-carb-diets-fasting-and-caloric-restriction-if-you-have-hypothyroidism-hypothyroidism-part-2/
+- FAIL pdf | C | 10.1161/circulationaha.106.678326 | Thyroid disease and the heart | no OA PDF resolved
+- FAIL pdf | C | 10.1080/01485010390204968 | Thyroid hormones: their role in testicular steroidogenesis | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC3205882 | cited by https://www.jayfeldmanwellness.com/ep-99-medications-supplements-for-hypothyroidism-and-the-problems-with-t4-medications-hypothyroidism-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC4980994 | cited by https://www.jayfeldmanwellness.com/ep-99-medications-supplements-for-hypothyroidism-and-the-problems-with-t4-medications-hypothyroidism-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC4319436 | cited by https://www.jayfeldmanwellness.com/ep-99-medications-supplements-for-hypothyroidism-and-the-problems-with-t4-medications-hypothyroidism-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC3092723 | cited by https://www.jayfeldmanwellness.com/ep-99-medications-supplements-for-hypothyroidism-and-the-problems-with-t4-medications-hypothyroidism-part-5/
+- REFERENCE UNRESOLVED | PMC:PMC6794355 | cited by https://www.jayfeldmanwellness.com/ep-99-medications-supplements-for-hypothyroidism-and-the-problems-with-t4-medications-hypothyroidism-part-5/
+- REFERENCE UNRESOLVED | DOI:10.3389/fendo.2019.00446/full | cited by https://www.jayfeldmanwellness.com/ep-99-medications-supplements-for-hypothyroidism-and-the-problems-with-t4-medications-hypothyroidism-part-5/
+- FAIL pdf | C | 10.1046/j.1528-1157.2003.57002.x | The ketogenic diet: adolescents can do it, too | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2018/5157645 | Nutritional Ketosis and Mitohormesis: Potential Implications for Mitochondrial F | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC5852826 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- REFERENCE UNRESOLVED | PMC:PMC3322307 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- REFERENCE UNRESOLVED | PMC:PMC3564212 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- FAIL pdf | B | 10.3945/ajcn.116.133561 | Energy expenditure and body composition changes after an isocaloric ketogenic di | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC7341377 | cited by https://www.jayfeldmanwellness.com/eric-westman-debate-follow-up-the-research-on-low-carb-vs-high-carb-diets/
+- FAIL pdf | C | 10.1111/j.1471-4159.2006.04371.x | Modulation of inflammation in brain: a matter of fat | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4511588 | cited by https://www.jayfeldmanwellness.com/fats-weve-got-it-all-wrong/
+- FAIL pdf | C | 10.1016/j.nut.2003.10.012 | Diets rich in saturated and polyunsaturated fatty acids: metabolic shifting and  | no OA PDF resolved
+- FAIL pdf | C | 10.1007/bf02537272 | Medium chain triglycerides and structured lipids as unique nonglucose energy sou | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000446704 | Medicines and Vegetable Oils as Hidden Causes of Cardiovascular Disease and Diab | no OA PDF resolved
+- FAIL pdf | C | 10.1002/jnr.490200407 | Role of arachidonic acid and other free fatty acids in mitochondrial dysfunction | no OA PDF resolved
+- FAIL pdf | B | 10.1097/00007890-197710000-00005 | Immunosuppression with polyunsaturated fatty acids in renal transplantation | no OA PDF resolved
+- FAIL pdf | C | 10.1081/erc-120016804 | Oxidized products of linoleic acid stimulate adrenal steroidogenesis | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpregu.00753.2002 | An oxidized metabolite of linoleic acid stimulates corticosterone production by  | no OA PDF resolved
+- FAIL pdf | C | 10.1017/s1464793104006578 | Dietary fats and membrane function: implications for metabolism and disease | no OA PDF resolved
+- FAIL pdf | C | 10.1007/978-1-4615-4793-8_69 | Toxicity of linoleic acid metabolites | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000233621 | The effect of concanavalin A and wheat germ agglutinin on the ultrastructure and | no OA PDF resolved
+- FAIL pdf | C | 10.1080/10408399409527649 | Implications of antinutritional components in soybean foods | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4253991 | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- FAIL pdf | C | 10.1139/m88-177 | Bacterial overgrowth by indigenous microflora in the phytohemagglutinin-fed rat | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu5030771 | The dietary intake of wheat and other cereal grains and their role in inflammati | no OA PDF resolved
+- FAIL pdf | C | 10.1080/10408398909527508 | Nutritional improvement of cereals by sprouting | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.1146/annurev.py.28.090190.002233 | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- REFERENCE UNRESOLVED | DOI:10.1111/j.1365-2621.1984.tb12456.x | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- FAIL pdf | B | 10.1093/ajcn/79.3.418 | Phytic acid added to white-wheat bread inhibits fractional apparent magnesium ab | no OA PDF resolved
+- REFERENCE UNRESOLVED | MED:4018443 | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- REFERENCE UNRESOLVED | MED:3676181 | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- REFERENCE UNRESOLVED | MED:15302522 | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- REFERENCE UNRESOLVED | DOI:10.1021/jf00112a049 | cited by https://www.jayfeldmanwellness.com/grains-and-legumes-and-antinutrients-oh-my/
+- REFERENCE UNRESOLVED | MED:16885926 | cited by https://www.jayfeldmanwellness.com/hormesis-part-1-does-stress-make-you-stronger/
+- REFERENCE UNRESOLVED | PMC:PMC2836150 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC2253665 | cited by https://www.jayfeldmanwellness.com/hormesis-part-1-does-stress-make-you-stronger/
+- REFERENCE UNRESOLVED | MED:26059364 | cited by https://www.jayfeldmanwellness.com/hormesis-part-1-does-stress-make-you-stronger/
+- REFERENCE UNRESOLVED | PMC:PMC2248601 | cited by https://www.jayfeldmanwellness.com/hormesis-part-1-does-stress-make-you-stronger/
+- REFERENCE UNRESOLVED | MED:17964227 | cited by https://www.jayfeldmanwellness.com/hormesis-part-1-does-stress-make-you-stronger/
+- REFERENCE UNRESOLVED | DOI:10.1179/oeh.2004.10.3.335 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1007/s10522-012-9374-7 | cited by https://www.jayfeldmanwellness.com/hormesis-part-1-does-stress-make-you-stronger/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pcbi.1000619 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1111/j.1474-9728.2003.00079.x | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:17063030 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC6123605 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC2990190 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC556267 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:19188683 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC45108 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC5479440 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1098/rsbl.2017.0540 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpcell.00139.2004 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:15541710 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:16814104 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | DOI:10.1007/s00774-015-0656-4 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1007/s00424-012-1156-1 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:22685621 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC5828461 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:24043759 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1002/ana.20899 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:12728191 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC4528520 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1021/bi9020378 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC3024591 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:15015004 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC2739696 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:12208364 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:11713647 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:15153176 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1101/462523v2 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC3790936 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1161/CIRCRESAHA.110.223545 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:22399429 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC3296814 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC4625011 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:15048898 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1113/jphysiol.2004.080564 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC2696814 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC3591607 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:1590373 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.3109/07853890.2011.645498 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:11579427 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC4335496 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:10517531 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC5789323 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajplung.00281.2001 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | MED:18765295 | cited by https://www.jayfeldmanwellness.com/hormesis-part-2-flawed-research-and-harmful-misapplications-including-ketogenic-diets-intermittent-fasting-calorie-restriction-and-more/
+- REFERENCE UNRESOLVED | PMC:PMC3355885 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- REFERENCE UNRESOLVED | PMC:PMC3922316 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- REFERENCE UNRESOLVED | MED:3803308 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- REFERENCE UNRESOLVED | MED:20351569 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- REFERENCE UNRESOLVED | MED:6690269 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- REFERENCE UNRESOLVED | PMC:PMC1201775 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- FAIL pdf | C | 10.1196/annals.1314.001 | Protection and damage from acute and chronic stress: allostasis and allostatic o | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jc.2002-020048 | Abnormal cortisol metabolism and tissue sensitivity to cortisol in patients with | no OA PDF resolved
+- REFERENCE UNRESOLVED | DOI:10.3389/fnagi.2017.00406/full | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- REFERENCE UNRESOLVED | PMC:PMC1553041 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- FAIL pdf | C | 10.1152/physrev.2001.81.3.1097 | Physiological and molecular basis of thyroid hormone action | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.1995.268.3.e501 | Effect of cortisol on energy expenditure and amino acid metabolism in humans | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC208820 | cited by https://www.jayfeldmanwellness.com/hormones-dont-shoot-the-messengers/
+- FAIL pdf | C | 10.1016/j.mehy.2017.09.022 | Are the estrogenic hormonal effects of environmental toxins affecting small inte | no OA PDF resolved
+- FAIL pdf | C | 10.1515/hmbci.2011.132 | Androgen deficiency and mitochondrial dysfunction: implications for fatigue, mus | no OA PDF resolved
+- FAIL pdf | C | 10.3109/15622970109026799 | Stress hormone-related psychopathology: pathophysiological and treatment implica | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0899-9007(97)00191-3 | Body fat distribution, insulin resistance, and metabolic diseases | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jcem-41-5-911 | Opposite effects of dexamethasone on serum concentrations of 3,3',5'-triiodothyr | no OA PDF resolved
+- FAIL pdf | C | 10.1196/annals.1296.026 | Stress is associated with inhibition of type I iodothyronine 5'-deiodinase activ | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.cct.2006.10.012 | Clinical trials and the response rate illusion | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC5997778 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- FAIL pdf | C | 10.1007/s10865-006-9056-5 | Social support and health: a review of physiological processes potentially under | no OA PDF resolved
+- REFERENCE UNRESOLVED | PMC:PMC4172306 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | PMC:PMC2989833 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- FAIL pdf | C | 10.1093/humrep/des383 | The risks of selective serotonin reuptake inhibitor use in infertile women: a re | no OA PDF resolved
+- FAIL pdf | C | 10.2174/1570159x14666160229114755 | Mitochondrial Dysfunction in Depression | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fpsyg.2012.00117 | Primum non nocere: an evolutionary analysis of whether antidepressants do more h | no OA PDF resolved
+- REFERENCE UNRESOLVED | MED:19751761 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pmed.0050045 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | DOI:10.1111/j.1600-0447.1992.tb03218.x | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | PMC:PMC4592647 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pmed.0020392 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:15877308 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:19016570 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:20616621 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:12008858 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:14974002 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:19440080 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | DOI:10.1371/journal.pmed.1000316 | cited by https://www.jayfeldmanwellness.com/is-depression-really-caused-by-a-chemical-imbalance/
+- REFERENCE UNRESOLVED | MED:27009267 | cited by https://www.jayfeldmanwellness.com/it-all-comes-down-to-energy-post/
+- REFERENCE UNRESOLVED | MED:7475893 | cited by https://www.jayfeldmanwellness.com/it-all-comes-down-to-energy-post/
+- REFERENCE UNRESOLVED | MED:10961426 | cited by https://www.jayfeldmanwellness.com/it-all-comes-down-to-energy-post/
+- REFERENCE UNRESOLVED | MED:9216960 | cited by https://www.jayfeldmanwellness.com/the-true-cause-of-type-2-diabetes-and-insulin-resistance/
+- REFERENCE UNRESOLVED | MED:9397995 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:8640909 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | PMC:PMC2839050 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | PMC:PMC3914521 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:25064579 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:22968891 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:9589432 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:23843441 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:9699661 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:21518693 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:15495044 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | PMC:PMC5032683 | cited by https://www.jayfeldmanwellness.com/omega-3s-are-not-the-healthy-fats/
+- REFERENCE UNRESOLVED | MED:8675642 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-1/
+- REFERENCE UNRESOLVED | MED:8839937 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-2/
+- REFERENCE UNRESOLVED | MED:19591975 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-2/
+- REFERENCE UNRESOLVED | MED:28353649 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-2/
+- REFERENCE UNRESOLVED | MED:20086073 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC185982 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-2/
+- REFERENCE UNRESOLVED | MED:10839812 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-inflammation-part-2/
+- REFERENCE UNRESOLVED | PMC:PMC3810031 | cited by https://www.jayfeldmanwellness.com/vegetables-sugar-deficiencies-testosterone-and-hormesis-2/
+- REFERENCE UNRESOLVED | MED:15983333 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | DOI:10.1152/ajpendo.00093.2003 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | MED:12663565 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | PMC:PMC3540680 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | MED:15959424 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | MED:1315120 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | MED:15920058 | cited by https://www.jayfeldmanwellness.com/sugar-does-not-cause-insulin-resistance-or-diabetes/
+- REFERENCE UNRESOLVED | MED:12397569 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | MED:15673620 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | MED:20377753 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | MED:7490692 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | MED:9245545 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | PMC:PMC3247776 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | MED:19166320 | cited by https://www.jayfeldmanwellness.com/the-cholesterol-nonsense-continues/
+- REFERENCE UNRESOLVED | PMC:PMC2838532 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- REFERENCE UNRESOLVED | DOI:10.1186/1475-2891-3-9 | cited by https://www.jayfeldmanwellness.com/the-mythical-calorie-equation/
+- REFERENCE UNRESOLVED | MED:20595050 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- REFERENCE UNRESOLVED | MED:28074888 | cited by https://www.jayfeldmanwellness.com/the-mythical-calorie-equation/
+- REFERENCE UNRESOLVED | PMC:PMC3771367 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- REFERENCE UNRESOLVED | MED:26278052 | cited by https://www.jayfeldmanwellness.com/the-mythical-calorie-equation/
+- REFERENCE UNRESOLVED | MED:11431133 | cited by https://www.jayfeldmanwellness.com/the-true-cause-of-type-2-diabetes-and-insulin-resistance/
+- REFERENCE UNRESOLVED | PMC:PMC3898429 | cited by https://www.jayfeldmanwellness.com/vegetables-sugar-deficiencies-testosterone-and-hormesis-2/
+- REFERENCE UNRESOLVED | MED:7895538 | cited by https://www.jayfeldmanwellness.com/vegetables-sugar-deficiencies-testosterone-and-hormesis-2/
+- REFERENCE UNRESOLVED | MED:25344790 | cited by https://www.jayfeldmanwellness.com/vegetables-sugar-deficiencies-testosterone-and-hormesis-2/
+- REFERENCE UNRESOLVED | MED:14681719 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | MED:7510737 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | MED:18589036 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | MED:12376390 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | MED:17228036 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | DOI:10.1161/circ.48.3.455 | cited by https://www.jayfeldmanwellness.com/water-more-is-not-better/
+- REFERENCE UNRESOLVED | MED:27143556 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- REFERENCE UNRESOLVED | MED:14559057 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- REFERENCE UNRESOLVED | MED:16595757 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- REFERENCE UNRESOLVED | MED:17469900 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/

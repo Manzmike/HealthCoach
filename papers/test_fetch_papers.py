@@ -10,6 +10,36 @@ from unittest.mock import patch
 import fetch_papers as FP
 
 
+class HydrateTests(unittest.TestCase):
+    """hydrate() previously built its existence-check URL with a literal,
+    unencoded space in "EXT_ID:x AND SRC:y" -- urllib.request rejects any
+    raw space in a URL outright, so this silently returned None on every
+    call. Confirmed live against the real EPMC API before this fix (a known
+    real PMID resolved via direct curl but not via hydrate())."""
+
+    def test_the_existence_check_url_has_no_raw_space(self):
+        captured_urls = []
+
+        def fake_json(url):
+            captured_urls.append(url)
+            return {"resultList": {"result": [{"id": "1"}]}}
+
+        with patch.object(FP, "_json", side_effect=fake_json), \
+             patch.object(FP, "epmc_search", return_value=[{"id": "1"}]):
+            FP.hydrate("MED", "12345")
+        self.assertEqual(len(captured_urls), 1)
+        self.assertNotIn(" ", captured_urls[0])
+        self.assertIn("EXT_ID%3A12345%20AND%20SRC%3AMED", captured_urls[0])
+
+    def test_no_result_from_the_existence_check_returns_none(self):
+        with patch.object(FP, "_json", return_value={"resultList": {"result": []}}):
+            self.assertIsNone(FP.hydrate("MED", "0"))
+
+    def test_the_error_shaped_response_urllib_gave_for_the_old_bug_returns_none(self):
+        with patch.object(FP, "_json", return_value={"_error": "URL can't contain control characters"}):
+            self.assertIsNone(FP.hydrate("MED", "12345"))
+
+
 class FetchForQuestionTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

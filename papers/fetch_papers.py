@@ -211,11 +211,17 @@ def epmc_related(source, ext_id, kind):
     return res
 
 def hydrate(source, ext_id):
-    url = "%s/search?query=EXT_ID:%s AND SRC:%s&format=json&resultType=core&pageSize=1" % (
-          EPMC, ext_id, source)
+    # The literal " AND " here must be percent-encoded: urllib.request rejects
+    # any raw space in a URL outright ("URL can't contain control characters"),
+    # so this existence check silently failed on every call before this fix --
+    # hydrate() always returned None, and so did every seed/citation-chaining
+    # caller in run_topic() that depends on it.
+    query = "EXT_ID:%s AND SRC:%s" % (ext_id, source)
+    url = "%s/search?query=%s&format=json&resultType=core&pageSize=1" % (
+          EPMC, urllib.parse.quote(query))
     r = (_json(url).get("resultList") or {}).get("result", [])
     if not r: return None
-    return epmc_search("EXT_ID:%s AND SRC:%s" % (ext_id, source), oa_only=False, page_size=1)[:1]
+    return epmc_search(query, oa_only=False, page_size=1)[:1]
 
 # --------------------------------------------------------------------------- #
 #  Extra OA providers: OpenAlex + Semantic Scholar (widen the net past EPMC).

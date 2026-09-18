@@ -69,6 +69,32 @@ def meta_for(path):
     cohort = "older" if "_older-cohort_" in fn else "general"
     return grade, year, folder, cohort, rel, fn
 
+# The 5 control-layer columns rag_control.schema_migration adds after this
+# module's original schema was already live -- kept in sync with that
+# module's own NEW_COLUMNS defaults (None here plays the role of its
+# CAST(NULL AS STRING), since these are plain dicts headed for tbl.add(),
+# not a raw SQL column-add).
+CONTROL_COLUMN_DEFAULTS = {"lane": None, "personal": False, "quarantined": False,
+                           "quarantine_reason": None, "geography": None}
+
+
+def backfill_control_columns(rows: list[dict], existing_columns: set[str]) -> None:
+    """Mutates `rows` in place, adding whichever control columns are
+    present in `existing_columns` (the live table's actual schema) but
+    missing from a freshly-built row. Appending to an already-migrated
+    table without this fails outright ("Append with different schema");
+    an unmigrated table's `existing_columns` won't contain them, so rows
+    are left untouched -- schema_migration is still the one place that
+    adds them to a table for the first time."""
+    applicable = {name: default for name, default in CONTROL_COLUMN_DEFAULTS.items()
+                  if name in existing_columns}
+    if not applicable:
+        return
+    for row in rows:
+        for name, default in applicable.items():
+            row.setdefault(name, default)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
@@ -148,6 +174,7 @@ def main():
 
     if a.incremental and table_exists:
         tbl = db.open_table(TABLE)
+        backfill_control_columns(rows, {f.name for f in tbl.schema})
         tbl.add(rows)
     elif a.staging:
         STAGING_TABLE = "chunks_staging"
