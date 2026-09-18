@@ -94,8 +94,11 @@
   };
   const mesh = sphereMesh(gl, 16, 10);
   const personal = personalizedPreset();
-  let current = personalized ? personal : PRESETS[0];
-  let target = current, presetIndex = 0, transitionStart = 0, nextSwitch = 0;
+  let matrixOrder = personalized ? [] : shuffledOrder(PRESETS.length);
+  let orderCursor = 0;
+  let presetIndex = personalized ? 0 : matrixOrder[orderCursor];
+  let current = personalized ? personal : PRESETS[presetIndex];
+  let target = current, transitionStart = 0, nextSwitch = 0;
   let rotation = 0, dragging = false, previousX = 0, previousTime = 0;
 
   function render(now) {
@@ -122,8 +125,12 @@
     if (progress >= 1) { current = target; transitionStart = 0; nextSwitch = now + 600; return current; }
     return blend(current, target, eased);
   }
-  function beginTransition(now) { presetIndex = (presetIndex + 1) % PRESETS.length; target = PRESETS[presetIndex]; transitionStart = now; setExampleOverlay(target); }
-  function setExampleOverlay(profile) { if (overlayTitle) overlayTitle.textContent = "Add your data to see your metrics"; if (overlayText) overlayText.textContent = profile.label + " · " + profile.detail + " · example only."; canvas.setAttribute("aria-label", "Rotating example 3D body model: " + profile.label + ". Use arrow keys or drag to rotate."); }
+  function beginTransition(now) {
+    orderCursor += 1;
+    if (orderCursor >= matrixOrder.length) { matrixOrder = shuffledOrder(PRESETS.length); orderCursor = 0; }
+    presetIndex = matrixOrder[orderCursor]; target = PRESETS[presetIndex]; transitionStart = now; setExampleOverlay(target);
+  }
+  function setExampleOverlay(profile) { if (overlayTitle) overlayTitle.textContent = "Add your data to see your metrics"; if (overlayText) overlayText.textContent = profile.label + " · " + profile.detail + " · randomized pass item " + (orderCursor + 1) + "/" + PRESETS.length + " · example only."; canvas.setAttribute("aria-label", "Rotating randomized example 3D body model: " + profile.label + ". Use arrow keys or drag to rotate."); }
   function setPersonalOverlay() { if (overlayTitle) overlayTitle.textContent = "Your confirmed approximation"; if (overlayText) overlayText.textContent = "Uses confirmed measurements as a visual guide — not a scan."; canvas.setAttribute("aria-label", "Rotating 3D approximation based on confirmed measurements. Use arrow keys or drag to rotate."); }
   function personalizedPreset() {
     const height = number(canvas.dataset.height, 175), weight = number(canvas.dataset.weight, 75), bodyFat = number(canvas.dataset.bodyFat, 18), bmi = weight / Math.pow(height / 100, 2), width = clamp(0.86 + (bmi - 21) * 0.018 + (bodyFat - 18) * 0.004, 0.78, 1.24), isWoman = canvas.dataset.sex === "female";
@@ -167,7 +174,7 @@
   canvas.addEventListener("pointermove", function (event) { if (!dragging) return; rotation += (event.clientX - previousX) * 0.01; previousX = event.clientX; render(performance.now()); });
   canvas.addEventListener("pointerup", function () { dragging = false; }); canvas.addEventListener("pointercancel", function () { dragging = false; });
   window.addEventListener("resize", function () { render(performance.now()); }, { passive: true });
-  if (personalized) setPersonalOverlay(); else setExampleOverlay(PRESETS[0]);
+  if (personalized) setPersonalOverlay(); else setExampleOverlay(current);
   nextSwitch = performance.now() + 1800; render(performance.now()); if (!reducedMotion) window.requestAnimationFrame(animationFrame);
 
   function makeProgram(context, vertex, fragment) { const vs = compile(context, context.VERTEX_SHADER, vertex), fs = compile(context, context.FRAGMENT_SHADER, fragment); if (!vs || !fs) return null; const result = context.createProgram(); context.attachShader(result, vs); context.attachShader(result, fs); context.linkProgram(result); return context.getProgramParameter(result, context.LINK_STATUS) ? result : null; }
@@ -185,5 +192,20 @@
   function dot(a, b) { return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]; }
   function clamp(value, low, high) { return Math.max(low, Math.min(high, value)); }
   function number(value, fallback) { const result = Number.parseFloat(value); return Number.isFinite(result) ? result : fallback; }
+  function shuffledOrder(length) {
+    const order = Array.from({ length: length }, function (_, index) { return index; });
+    for (let index = order.length - 1; index > 0; index -= 1) {
+      const swap = randomInt(index + 1), value = order[index];
+      order[index] = order[swap]; order[swap] = value;
+    }
+    return order;
+  }
+  function randomInt(max) {
+    if (window.crypto && window.crypto.getRandomValues) {
+      const values = new Uint32Array(1); window.crypto.getRandomValues(values);
+      return values[0] % max;
+    }
+    return Math.floor(Math.random() * max);
+  }
   function drawFallback(target) { const context = target.getContext("2d"); if (!context) return; context.clearRect(0, 0, target.width, target.height); context.fillStyle = "#3c6e55"; context.beginPath(); context.ellipse(320, 105, 45, 52, 0, 0, Math.PI * 2); context.fill(); context.fillRect(278, 160, 84, 245); context.fillRect(205, 175, 54, 220); context.fillRect(381, 175, 54, 220); context.fillRect(270, 390, 45, 260); context.fillRect(325, 390, 45, 260); context.fillRect(252, 635, 65, 34); context.fillRect(323, 635, 65, 34); }
 }());
