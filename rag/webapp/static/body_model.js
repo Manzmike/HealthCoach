@@ -98,7 +98,11 @@
     const projection = perspective(Math.PI / 4.3, canvas.width / canvas.height, 0.1, 100), view = lookAt([0, 0.02, 4.5], [0, 0, 0], [0, 1, 0]);
     gl.uniformMatrix4fv(locations.view, false, view); gl.uniformMatrix4fv(locations.projection, false, projection); gl.uniform3f(locations.light, -2.5, 4.0, 5.5);
     const vertices = transitionVertices(now); if (vertices !== uploadedVertices) uploadVertices(vertices);
-    gl.uniformMatrix4fv(locations.model, false, multiply(rotateY(rotation), scale(5.65, 5.65, 5.65))); gl.uniform3f(locations.color, 0.34, 0.49, 0.42);
+    // The reference mesh stores body height on its source z axis. Rotate it
+    // upright before applying the user's horizontal viewing rotation so the
+    // person faces the viewer instead of presenting a sideways/top-down view.
+    const upright = multiply(rotateX(-Math.PI / 2), scale(5.65, 5.65, 5.65));
+    gl.uniformMatrix4fv(locations.model, false, multiply(rotateY(rotation), upright)); gl.uniform3f(locations.color, 0.34, 0.49, 0.42);
     gl.bindBuffer(gl.ARRAY_BUFFER, mesh.positionBuffer); gl.enableVertexAttribArray(locations.position); gl.vertexAttribPointer(locations.position, 3, gl.FLOAT, false, 0, 0);
     gl.bindBuffer(gl.ARRAY_BUFFER, mesh.normalBuffer); gl.enableVertexAttribArray(locations.normal); gl.vertexAttribPointer(locations.normal, 3, gl.FLOAT, false, 0, 0);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, mesh.indexBuffer); gl.drawElements(gl.TRIANGLES, mesh.count, gl.UNSIGNED_SHORT, 0);
@@ -173,6 +177,7 @@
   function identity() { return [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]; }
   function multiply(a, b) { const out = Array(16).fill(0); for (let row = 0; row < 4; row += 1) for (let col = 0; col < 4; col += 1) for (let k = 0; k < 4; k += 1) out[col * 4 + row] += a[k * 4 + row] * b[col * 4 + k]; return out; }
   function scale(x, y, z) { const matrix = identity(); matrix[0] = x; matrix[5] = y; matrix[10] = z; return matrix; }
+  function rotateX(angle) { const matrix = identity(); matrix[5] = Math.cos(angle); matrix[6] = Math.sin(angle); matrix[9] = -Math.sin(angle); matrix[10] = Math.cos(angle); return matrix; }
   function rotateY(angle) { const matrix = identity(); matrix[0] = Math.cos(angle); matrix[2] = -Math.sin(angle); matrix[8] = Math.sin(angle); matrix[10] = Math.cos(angle); return matrix; }
   function perspective(fov, aspect, near, far) { const f = 1 / Math.tan(fov / 2), nf = 1 / (near - far); return [f / aspect, 0, 0, 0, 0, f, 0, 0, 0, 0, (far + near) * nf, -1, 0, 0, 2 * far * near * nf, 0]; }
   function lookAt(eye, center, up) { const z = normalize([eye[0] - center[0], eye[1] - center[1], eye[2] - center[2]]), x = normalize(cross(up, z)), y = cross(z, x); return [x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0, -dot(x, eye), -dot(y, eye), -dot(z, eye), 1]; }
