@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Health goals — HealthCoach{% endblock %}
+{% block content %}
+<h1>Health goals</h1>
+<p class="lede">Up to three, in priority order. These drive the "For you" grade on the food catalog and
+  everything else that reads your recorded goals.</p>
+
+{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+
+<form method="post" action="{{ url_for('food_goals') }}" class="panel">
+  {% for n in (0, 1, 2) %}
+    <div class="field" style="max-width: 320px;">
+      <label for="goal{{ n }}">Priority {{ n + 1 }}{{ "" if n == 0 else " (optional)" }}</label>
+      <select id="goal{{ n }}" name="goal">
+        <option value="">— none —</option>
+        {% for key, label in options %}
+          <option value="{{ key }}"{% if current_goals|length > n and current_goals[n] == key %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  {% endfor %}
+  <div class="field" style="max-width: 220px;">
+    <label for="weight_direction">Weight direction</label>
+    <select id="weight_direction" name="weight_direction">
+      {% for value in weight_directions %}
+        <option value="{{ value }}"{% if value == current_weight_direction %} selected{% endif %}>{{ value|capitalize }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <button type="submit">Save goals</button>
+</form>
+<p><a href="{{ url_for('food') }}">Back to food catalog</a></p>
+{% endblock %}

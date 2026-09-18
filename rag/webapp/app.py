@@ -32,6 +32,7 @@ sys.path.insert(0, str(RAG_DIR))
 
 import candidate_ledger as CL  # noqa: E402
 import coach  # noqa: E402
+import diet_rules as DR  # noqa: E402
 import labs as L  # noqa: E402
 import schedule_builder as SB  # noqa: E402
 import supplement_audit as audit  # noqa: E402
@@ -41,7 +42,9 @@ import week_plan as WP  # noqa: E402
 import week_planner as WPL  # noqa: E402
 import weekly_food_plan as food_plan  # noqa: E402
 from healthcoach_dashboard import ACTIONS  # noqa: E402
+from webapp import food_analysis as FoodA  # noqa: E402
 from webapp import food_draft as FDraft  # noqa: E402
+from webapp import food_preferences as FoodP  # noqa: E402
 from webapp import render as R  # noqa: E402
 from webapp import schedule_analysis as SA  # noqa: E402
 from webapp import schedule_view as SV  # noqa: E402
@@ -375,8 +378,8 @@ def labs_import_confirm():
 # --------------------------------------------------------------------------
 # /food -- browse the evidence-graded food catalog and select items for the
 # current week with a required source-linked reason, then save with one
-# overall reason (or discard). Meals/training/other categories/history/
-# export stay CLI-only for now (./hc -> week_planner.py --view ...); see
+# overall reason (or discard). Meals/training/other categories/history stay
+# CLI-only for now (./hc -> week_planner.py --view ...); see
 # docs/superpowers/specs for why this first slice is scoped this narrowly.
 
 def _food_state() -> dict:
@@ -386,6 +389,7 @@ def _food_state() -> dict:
     current in-progress draft if one exists (see webapp/food_draft.py),
     else the already-saved week if there is one, else a fresh seed."""
     ledger = CL.load_ledger()
+    food_preferences = FoodP.load(FoodP.DEFAULT_PATH)
     profile = audit.load_saved_profile(REPORT) or {}
     rows = WPL.catalog_rows(ledger)
     food_records = food_plan._load_food_evidence()
@@ -402,23 +406,40 @@ def _food_state() -> dict:
     # baseline again, and that must read back as clean, not still dirty.
     dirty = week != baseline
     return {"ledger": ledger, "profile": profile, "rows": rows, "food_records": food_records,
-            "research": research, "start": start, "previous": previous, "week": week, "dirty": dirty}
+            "research": research, "food_preferences": food_preferences, "start": start,
+            "previous": previous, "week": week, "dirty": dirty}
 
 
 def _food_entries(state: dict) -> list[dict]:
     entries = [row for row in state["rows"] if "food" in row.get("browse_categories", [WP.category(row)])]
     scored = {row["id"]: WP.grades(row, state["ledger"]["intake"], state["food_records"].get(row["id"]),
                                     state["research"].get(row["id"])) for row in entries}
+    preferences = state.get("food_preferences", FoodP.default())
+    allowed = DR.allowed_food_ids(preferences["diet"], set(preferences["toggles"]))
+    diet_label = DR.DIET_PRESETS[preferences["diet"]]["label"]
     return [{"id": row["id"], "name": row["display_name"], "overall": scored[row["id"]]["overall"],
               "personal": scored[row["id"]]["personal"], "coverage": scored[row["id"]]["coverage"],
-              "selected": row["id"] in state["week"]["selected"]} for row in entries]
+              "selected": row["id"] in state["week"]["selected"],
+              "allowed": row["id"] in allowed,
+              "restriction": "Does not fit " + diet_label if row["id"] not in allowed else ""}
+             for row in entries]
 
 
 @app.route("/food")
 def food():
     state = _food_state()
-    return render_template("food.html", entries=_food_entries(state), start=state["start"],
-                            dirty=state["dirty"], error=request.args.get("error"))
+    analysis = FoodA.load(FoodA.DEFAULT_PATH)
+    selected_foods = sorted(s["name"] for s in state["week"]["selected"].values() if s["category"] == "food")
+    return render_template(
+        "food.html", entries=_food_entries(state), start=state["start"], dirty=state["dirty"],
+        error=request.args.get("error"), current_goals=state["ledger"]["intake"].get("goals", []),
+        goal_labels=dict(CL.REASON_OPTIONS),
+        food_preferences=state["food_preferences"],
+        diet_label=DR.DIET_PRESETS[state["food_preferences"]["diet"]]["label"],
+        toggle_labels={key: value["label"] for key, value in DR.EXCLUSION_TOGGLES.items()},
+        has_selected_foods=bool(selected_foods),
+        analysis=analysis if analysis.get("foods") == selected_foods else None,
+    )
 
 
 @app.route("/food/select/<item_id>", methods=["GET", "POST"])
@@ -427,6 +448,9 @@ def food_select(item_id):
     row = next((r for r in state["rows"] if r["id"] == item_id), None)
     if row is None:
         return redirect(url_for("food", error="Item not found in the current catalog."))
+    preferences = state["food_preferences"]
+    if item_id not in DR.allowed_food_ids(preferences["diet"], set(preferences["toggles"])):
+        return redirect(url_for("food", error=f"{row['display_name']} does not fit the selected diet."))
     grade = WP.grades(row, state["ledger"]["intake"], state["food_records"].get(item_id),
                        state["research"].get(item_id))
     sources = WPL.resources_for(row, grade)
@@ -477,6 +501,125 @@ def food_discard():
     state = _food_state()
     FDraft.clear_draft(state["start"], FDraft.DEFAULT_PATH)
     return redirect(url_for("food"))
+
+
+@app.route("/food/diet", methods=["GET", "POST"])
+def food_diet():
+    """Choose the diet gate before choosing foods.
+
+    Changing the gate cannot silently strand a current selection: the user
+    must remove excluded items first, so the saved weekly plan and the active
+    diet never disagree by accident.
+    """
+    current = FoodP.load(FoodP.DEFAULT_PATH)
+    error = None
+    if request.method == "POST":
+        try:
+            proposed = FoodP.normalize({
+                "diet": request.form.get("diet"),
+                "toggles": request.form.getlist("toggle"),
+            })
+            state = _food_state()
+            selected_ids = {
+                item_id for item_id, selection in state["week"]["selected"].items()
+                if selection.get("category") == "food"
+            }
+            blocked = selected_ids - DR.allowed_food_ids(proposed["diet"], set(proposed["toggles"]))
+            if blocked:
+                names = [state["week"]["selected"][item_id]["name"] for item_id in sorted(blocked)]
+                raise ValueError("Remove or replace selected foods first: " + ", ".join(names) + ".")
+            FoodP.save(proposed, FoodP.DEFAULT_PATH)
+        except ValueError as exc:
+            error = str(exc)
+            current = locals().get("proposed", current)
+        else:
+            return redirect(url_for("food"))
+    return render_template("food_diet.html", diet_options=DR.DIET_PRESETS,
+                           toggle_options=DR.EXCLUSION_TOGGLES, current=current, error=error)
+
+
+@app.route("/food/goals", methods=["GET", "POST"])
+def food_goals():
+    """Sets the SAME intake.goals/weight_direction candidate_manager.py's
+    CLI intake wizard writes -- week_plan.grades() already reads these for
+    /food's "For you" column, so this doesn't add a parallel concept, just
+    a web way to set the one that already exists. Diet eligibility is handled
+    separately by diet_rules.py and /food/diet."""
+    ledger = CL.load_ledger()
+    options = [(key, label) for key, label in CL.REASON_OPTIONS if key in CL.OUTCOME_REASON_KEYS]
+    if request.method == "POST":
+        goals = [g for g in request.form.getlist("goal") if g][:3]
+        ledger["intake"]["goals"] = goals
+        ledger["intake"]["weight_direction"] = request.form.get("weight_direction", "unknown")
+        try:
+            CL.save_ledger(ledger)
+        except CL.LedgerError as exc:
+            return render_template("food_goals.html", options=options, weight_directions=CL.WEIGHT_DIRECTIONS,
+                                    current_goals=goals,
+                                    current_weight_direction=ledger["intake"]["weight_direction"], error=str(exc))
+        return redirect(url_for("food"))
+    intake = CL.normalize_intake(ledger.get("intake"))
+    return render_template("food_goals.html", options=options, weight_directions=CL.WEIGHT_DIRECTIONS,
+                            current_goals=intake.get("goals", []),
+                            current_weight_direction=intake.get("weight_direction", "unknown"), error=None)
+
+
+@app.route("/food/analyze", methods=["POST"])
+def food_analyze():
+    """Advisory only, exactly like /schedule/analyze -- never changes a
+    selection on its own. One consolidated evidence question covering all
+    currently-selected foods and the recorded goals, not one query per
+    food, so this stays fast and doesn't spam near-duplicate lookups."""
+    state = _food_state()
+    selected_names = [s["name"] for s in state["week"]["selected"].values() if s["category"] == "food"]
+    if not selected_names:
+        return redirect(url_for("food", error="Select at least one food first."))
+    goals = state["ledger"]["intake"].get("goals", [])
+    preferences = state.get("food_preferences", FoodP.default())
+    diet_label = DR.DIET_PRESETS[preferences["diet"]]["label"]
+    toggles = [DR.EXCLUSION_TOGGLES[name]["label"] for name in preferences["toggles"]]
+    diet_text = f" Diet gate: {diet_label}." + (f" Exclusions: {', '.join(toggles)}." if toggles else "")
+    goal_text = f" Recorded goals, in priority order: {', '.join(goals)}." if goals else ""
+    query = (f"What does the evidence say about these foods for overall health: "
+             f"{', '.join(selected_names)}?{diet_text}{goal_text}")
+    results = coach.answer_question(query, get_stack=_get_stack, load_model=_load_model)
+    sections = _sections_from_results(results)
+    FoodA.save(sorted(selected_names), sections, analyzed_at=dt.datetime.now().isoformat(timespec="seconds"),
+               path=FoodA.DEFAULT_PATH)
+    return redirect(url_for("food"))
+
+
+@app.route("/food/export")
+def food_export():
+    """A plain-text summary of this week's selected foods, their grades,
+    and your recorded reason for each -- the same underlying data
+    plan_export.py's fuller report includes, just food-scoped and
+    generated on demand rather than requiring the CLI export flow."""
+    state = _food_state()
+    entries = _food_entries(state)
+    by_id = {e["id"]: e for e in entries}
+    preferences = state.get("food_preferences", FoodP.default())
+    lines = [f"HealthCoach food selections -- week of {state['start']}",
+             f"Diet gate: {DR.DIET_PRESETS[preferences['diet']]['label']}", ""]
+    for item_id, selection in state["week"]["selected"].items():
+        if selection["category"] != "food":
+            continue
+        entry = by_id.get(item_id)
+        lines.append(f"## {selection['name']}")
+        if entry:
+            lines.append(f"Overall evidence: {entry['overall']} | For you: {entry['personal']} "
+                          f"| Coverage: {entry['coverage']}")
+        rationale = selection.get("rationale") or {}
+        if rationale:
+            lines.append(f"Purpose: {rationale.get('goal', '')}")
+            lines.append(f"Why it fits: {rationale.get('personal_reason', '')}")
+            lines.append(f"Review when: {rationale.get('review_trigger', '')}")
+            source = rationale.get("source") or {}
+            if source:
+                lines.append(f"Source: [{source.get('kind', '')}] {source.get('text', '')}")
+        lines.append("")
+    body = "\n".join(lines) if len(lines) > 2 else "No foods selected for this week yet.\n"
+    return app.response_class(body, mimetype="text/plain")
 
 
 # --------------------------------------------------------------------------

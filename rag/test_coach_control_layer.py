@@ -5,6 +5,8 @@ answer_from_hits (mocked generation), plus one semantic WHERE-clause test
 that runs the real clause through a real throwaway LanceDB fixture."""
 
 import tempfile
+import sys
+from types import SimpleNamespace
 import unittest
 from unittest.mock import MagicMock, patch
 
@@ -84,6 +86,18 @@ class WhereClauseSemanticsTests(unittest.TestCase):
 
 
 class AnswerFromHitsCritiqueTests(unittest.TestCase):
+    def mlx_generate(self, return_value):
+        """Inject the model boundary instead of importing real MLX.
+
+        The tests exercise coach.py's generation/critique wiring, not Metal
+        device availability. Importing mlx_lm just to patch generate makes the
+        suite fail in headless CI and can abort the interpreter during a
+        second native-module import.
+        """
+        return patch.dict(sys.modules, {
+            "mlx_lm": SimpleNamespace(generate=MagicMock(return_value=return_value)),
+        })
+
     def _hits(self):
         return [{
             "text": "Do not drive while fighting sleep. Move dinner earlier.",
@@ -107,7 +121,7 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
         produce reject-listed content, or critique() has nothing to catch."""
         with patch("coach.SP.urgent_message", return_value=None), \
              patch("coach.EC.validate_claims", return_value=self._claim_record("Start TRT now.")), \
-             patch("mlx_lm.generate", return_value='{"claims": []}'):
+             self.mlx_generate('{"claims": []}'):
             result = coach.answer_from_hits(
                 model=object(), tok=object(), question="q", hits=self._hits(),
                 matched_intents=[], action_count=1, primary_count=1, drowsy=False,
@@ -122,7 +136,7 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
         record[0]["sources"][0]["quote"] = "Nausea week: breaks not a 5-day program."
         with patch("coach.SP.urgent_message", return_value=None), \
              patch("coach.EC.validate_claims", return_value=record), \
-             patch("mlx_lm.generate", return_value="output"):
+             self.mlx_generate("output"):
             result = coach.answer_from_hits(
                 model=object(), tok=object(), question="Get me back on 5 days lifting this week.",
                 hits=self._hits(), matched_intents=["cut_train"], action_count=1,
@@ -134,7 +148,7 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
     def test_passing_draft_is_returned_unchanged(self):
         with patch("coach.SP.urgent_message", return_value=None), \
              patch("coach.EC.validate_claims", return_value=self._claim_record("Move dinner earlier.")), \
-             patch("mlx_lm.generate", return_value='{"claims": []}'):
+             self.mlx_generate('{"claims": []}'):
             result = coach.answer_from_hits(
                 model=object(), tok=object(), question="q", hits=self._hits(),
                 matched_intents=[], action_count=1, primary_count=1, drowsy=False,
@@ -165,7 +179,7 @@ class AnswerFromHitsCritiqueTests(unittest.TestCase):
         with patch("coach.SP.urgent_message", return_value=None), \
              patch("coach.EC.validate_claims",
                    side_effect=[self._claim_record("Start TRT now."), self._claim_record("Move dinner earlier.")]), \
-             patch("mlx_lm.generate", return_value="output"):
+             self.mlx_generate("output"):
             coach.answer_from_hits(
                 model=object(), tok=fake_tok, question="q", hits=self._hits(),
                 matched_intents=[], action_count=1, primary_count=1, drowsy=False,

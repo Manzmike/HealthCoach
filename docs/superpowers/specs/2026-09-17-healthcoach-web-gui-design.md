@@ -1,19 +1,19 @@
 # HealthCoach local web GUI — design
 
 ## Motivation
-HealthCoach today is CLI-only: `coach.py` for questions, a curses picker for
+HealthCoach today is mostly CLI-first: `coach.py` for questions, a curses picker for
 symptom check-in, a curses schedule builder, and `./hc` (`healthcoach_dashboard.py`)
 as a keyboard-first front door to ~24 actions. Curses works but is unforgiving
 for freeform text, checkbox-style selection, and anything visual like a weekly
-calendar grid. This adds a local, browser-based GUI for the four flows a real
+calendar grid. This adds a local, browser-based GUI for the five flows a real
 GUI helps most, without touching or replacing the terminal tools.
 
 ## Scope (v1)
-In scope: `/ask`, `/symptoms`, `/schedule`, `/labs`, plus a `/` home page and a
-`/more` reference page.
+In scope: `/ask`, `/symptoms`, `/food`, `/schedule`, `/labs`, plus a `/` home page
+and a `/more` reference page.
 
-Out of scope: peptide/nootropic/food catalog browsing, weekly check-in, Bevel
-sharing, source refreshes, week planning — everything else currently reachable
+Out of scope: peptide/nootropic catalog browsing, weekly check-in, Bevel sharing,
+source refreshes, and full meal/training week planning — everything else currently reachable
 through `./hc`. `./hc` is unchanged and keeps working exactly as it does today;
 `/more` just lists the terminal command for each of those actions so the web
 app remains a complete front door without reimplementing two dozen curses
@@ -43,6 +43,9 @@ storage or a new schema. It reads and writes the exact same files the CLI
 tools already use:
 - `schedule_calendar.json` via `schedule_builder.load`/`save`/`export_ics`
 - `.healthcoach/labs.json` via `labs.load_labs`/`save_labs`/`import_pdf`
+- `.healthcoach/food_preferences.json`, `food_draft.json`, and `food_analysis.json` for the
+  browser's private diet gate, current selection draft, and last advisory review; weekly food
+  selections still commit through `week_plan.py`
 - `rag_control/person_state.json` (read-only, via `schedule_builder.load_person_context`)
 - the LanceDB `chunks` table (read-only, via `coach.py`'s search pipeline)
 
@@ -54,7 +57,7 @@ only one file.
 
 ### `/` — home
 Today's saved-schedule presence, whether a report/profile exists (reuse
-`today.py`'s `load_today`), and links to the four flows plus `/more`.
+`today.py`'s `load_today`), and links to the five flows plus `/more`.
 
 ### `/ask` (GET form, POST results)
 Reuses `coach.py`'s existing pure pipeline unchanged: `split_questions`,
@@ -98,8 +101,19 @@ change, just removing the argparse coupling). The page states plainly that a
 live Function Health/HealthEx connector still requires running `/mcp` inside
 Claude Code itself; the web page cannot broker that.
 
+### `/food` and `/food/diet` (diet-gated catalog + goals)
+
+`/food/diet` is the first step: it stores one `diet_rules.py` preset plus optional
+exclusion toggles and refuses to change the gate while the current selection contains
+foods it would exclude. `/food` then shows every catalog item with its existing overall,
+personal-fit, and coverage grades; excluded foods remain visible but cannot be selected.
+Selection still requires a source-linked hard reason and saves through the existing weekly
+plan machinery. `/food/goals` writes the existing candidate-ledger outcome goals used by
+the personal-fit grade. `/food/analyze` performs one advisory RAG lookup for the current
+foods, diet gate, and goals; `/food/export` produces a readable text summary.
+
 ### `/more`
-Static list built from `healthcoach_dashboard.ACTIONS` minus the four covered
+Static list built from `healthcoach_dashboard.ACTIONS` minus the five covered
 keys, showing each action's title, detail, and exact terminal command.
 
 ## Testing
@@ -108,11 +122,12 @@ tests: right template, right status code, form-validation errors surfaced,
 correct pure function called with correct arguments (mocked where a test
 already exists for that pure function elsewhere, to avoid duplicating
 coverage). The business logic under every route is already the well-tested
-pure functions in `coach.py`/`schedule_builder.py`/`symptom_checkin.py`/`labs.py`;
+pure functions in `coach.py`/`schedule_builder.py`/`symptom_checkin.py`/`labs.py`/`diet_rules.py`;
 these tests check wiring, not re-derive existing coverage.
 
 ## Explicitly not doing
-- No new persistent storage, schema, or config format.
+- No new shared schema or config format; the food browser's private local JSON sidecars are
+  deliberately separate from the existing candidate ledger and weekly plan files.
 - No authentication (loopback-only instead).
 - No JS build step / SPA framework.
 - No reimplementation of the ~20 non-focused dashboard actions.

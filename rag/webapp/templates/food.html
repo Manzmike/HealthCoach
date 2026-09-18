@@ -7,6 +7,28 @@
 
 {% if error %}<div class="notice">{{ error }}</div>{% endif %}
 
+<div class="panel">
+  <h2>Diet gate</h2>
+  <p><strong>{{ diet_label }}</strong></p>
+  {% if food_preferences.toggles %}
+    <p class="muted">Additional exclusions: {% for toggle in food_preferences.toggles %}{{ toggle_labels.get(toggle, toggle) }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+  {% endif %}
+  <a href="{{ url_for('food_diet') }}">Change diet</a>
+</div>
+
+<div class="panel">
+  <h2>Your priorities</h2>
+  {% if current_goals %}
+    <ul>
+      {% for goal in current_goals %}<li>{{ goal_labels.get(goal, goal) }}</li>{% endfor %}
+    </ul>
+    <p class="muted">These priorities shape the “For you” grade below.</p>
+  {% else %}
+    <p class="muted">Set a few health priorities to personalize the “For you” grade.</p>
+  {% endif %}
+  <a href="{{ url_for('food_goals') }}">{{ "Edit health goals" if current_goals else "Set health goals" }}</a>
+</div>
+
 <div class="field" style="max-width: 320px;">
   <label for="filterBox">Type to filter</label>
   <input type="text" id="filterBox" placeholder="e.g. salmon, oats" autocomplete="off">
@@ -25,6 +47,8 @@
           <form method="post" action="{{ url_for('food_unselect', item_id=e.id) }}">
             <button type="submit" class="quiet">Unselect</button>
           </form>
+        {% elif not e.allowed %}
+          <span class="muted" title="{{ e.restriction }}">Not available for this diet</span>
         {% else %}
           <a href="{{ url_for('food_select', item_id=e.id) }}"><button type="button">Select</button></a>
         {% endif %}
@@ -50,6 +74,33 @@
     </form>
   {% else %}
     <p class="muted">No unsaved changes.</p>
+  {% endif %}
+</div>
+
+<h2>Evidence review</h2>
+<div class="panel">
+  <form method="post" action="{{ url_for('food_analyze') }}">
+    <button type="submit"{% if not has_selected_foods %} disabled{% endif %}>Analyze selected foods</button>
+  </form>
+  {% if not has_selected_foods %}
+    <p class="muted">Select at least one food first.</p>
+  {% elif analysis %}
+    <p class="muted">Last analyzed {{ analysis.analyzed_at }} for the current selection.</p>
+    {% for section in analysis.sections %}
+      <h3>{{ section.topic }}</h3>
+      {% if section.no_evidence %}
+        <p class="muted">No sufficiently relevant evidence was found for this question.</p>
+        {% if section.related_html %}<div class="marginalia">{{ section.related_html|safe }}</div>{% endif %}
+      {% else %}
+        {{ section.answer_html|safe }}
+        {% if section.related_html %}<div class="marginalia">{{ section.related_html|safe }}</div>{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p class="muted">Analyze the current selection to get one consolidated, advisory evidence review.</p>
+  {% endif %}
+  {% if has_selected_foods %}
+    <p><a href="{{ url_for('food_export') }}">Download plain-text selection summary</a></p>
   {% endif %}
 </div>
 

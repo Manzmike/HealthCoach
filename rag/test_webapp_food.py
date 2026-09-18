@@ -18,7 +18,12 @@ import week_plan as WP
 import weekly_food_plan as food_plan
 import week_planner as WPL
 from webapp import food_draft as FDraft
+from webapp import food_analysis as FoodA
+from webapp import food_preferences as FoodP
 from webapp.app import app
+import importlib
+
+webapp_module = importlib.import_module("webapp.app")
 
 _LEDGER = {"intake": {"goals": []}, "candidates": []}
 
@@ -37,9 +42,11 @@ class _IsolatedFoodState(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.week_plan_path = Path(self.tmp.name) / "week_plan.json"
         self.draft_path = Path(self.tmp.name) / "food_draft.json"
+        self.food_preferences_path = Path(self.tmp.name) / "food_preferences.json"
         for patcher in (
             patch.object(WP, "DEFAULT_PATH", self.week_plan_path),
             patch.object(FDraft, "DEFAULT_PATH", self.draft_path),
+            patch.object(FoodP, "DEFAULT_PATH", self.food_preferences_path),
             patch.object(CL, "load_ledger", return_value=dict(_LEDGER)),
             patch.object(audit, "load_saved_profile", return_value={}),
             patch.object(food_plan, "_load_food_evidence", return_value={}),
@@ -157,6 +164,167 @@ class FoodSaveDiscardTests(_IsolatedFoodState):
         self.assertIn(b"No unsaved changes", r.data)
         self.assertIn(b"Select</button>", r.data)
         self.assertFalse(self.week_plan_path.exists())
+
+
+class FoodGoalsTests(_IsolatedFoodState):
+    def test_food_page_links_to_goals_and_shows_current_goal(self):
+        with patch.object(CL, "load_ledger", return_value={
+            "intake": {"goals": ["recovery"], "weight_direction": "maintain"},
+            "candidates": [],
+        }):
+            r = self.client.get("/food")
+        self.assertEqual(r.status_code, 200)
+        self.assertIn(b"Edit health goals", r.data)
+        self.assertIn(b"Recovery", r.data)
+
+    def test_get_goals_page_renders_saved_values(self):
+        with patch.object(CL, "load_ledger", return_value={
+            "intake": {"goals": ["recovery", "sleep"], "weight_direction": "lose"},
+            "candidates": [],
+        }):
+            r = self.client.get("/food/goals")
+        self.assertEqual(r.status_code, 200)
+        self.assertIn(b"Health goals", r.data)
+        self.assertIn(b'value="recovery" selected', r.data)
+        self.assertIn(b'value="lose" selected', r.data)
+
+    def test_post_goals_saves_the_same_intake_fields_used_by_food_grading(self):
+        saved = {}
+        with patch.object(CL, "save_ledger", side_effect=lambda value: saved.setdefault("value", value)):
+            r = self.client.post("/food/goals", data={
+                "goal": ["recovery", "sleep"],
+                "weight_direction": "maintain",
+            })
+        self.assertEqual(r.status_code, 302)
+        self.assertEqual(saved["value"]["intake"]["goals"], ["recovery", "sleep"])
+        self.assertEqual(saved["value"]["intake"]["weight_direction"], "maintain")
+
+
+class FoodAnalysisTests(_IsolatedFoodState):
+    def _selected_state(self):
+        return {
+            "start": "2026-09-14",
+            "week": {"selected": {
+                "salmon": {"name": "Salmon", "category": "food"},
+                "oats": {"name": "Oats", "category": "food"},
+            }},
+            "ledger": {"intake": {"goals": ["recovery"]}},
+            "food_preferences": {"diet": "keto", "toggles": ["no_dairy"]},
+        }
+
+    def test_analyze_queries_selected_foods_and_goals_then_persists_sections(self):
+        results = [{"topic": "food", "text": "Salmon and oats", "no_evidence": False,
+                    "answer": "**Use:** Evidence summary", "related": ""}]
+        sections = [{"topic": "food", "answer_html": "<p>Evidence summary</p>",
+                     "no_evidence": False, "related_html": "", "text": "Salmon and oats",
+                     "offer_fetch": False}]
+        with patch.object(webapp_module, "_food_state", return_value=self._selected_state()), \
+             patch.object(webapp_module.coach, "answer_question", return_value=results) as answer, \
+             patch.object(webapp_module, "_sections_from_results", return_value=sections), \
+             patch.object(FoodA, "save") as save:
+            r = self.client.post("/food/analyze")
+        self.assertEqual(r.status_code, 302)
+        query = answer.call_args.args[0]
+        self.assertIn("Salmon, Oats", query)
+        self.assertIn("Keto / very low-carb", query)
+        self.assertIn("No dairy", query)
+        self.assertIn("recovery", query)
+        save.assert_called_once()
+        self.assertEqual(save.call_args.args[0], ["Oats", "Salmon"])
+        self.assertEqual(save.call_args.args[1], sections)
+
+    def test_analyze_without_foods_is_refused_without_querying_the_model(self):
+        state = self._selected_state()
+        state["week"]["selected"] = {}
+        with patch.object(webapp_module, "_food_state", return_value=state), \
+             patch.object(webapp_module.coach, "answer_question") as answer:
+            r = self.client.post("/food/analyze")
+        self.assertEqual(r.status_code, 302)
+        self.assertIn("Select+at+least+one+food", r.headers["Location"])
+        answer.assert_not_called()
+
+    def test_food_page_renders_only_analysis_for_the_current_selection(self):
+        self.client.post("/food/select/salmon", data={
+            "source_index": "0",
+            "goal": "Support recovery after evening training sessions.",
+            "personal_reason": "High protein and omega-3s fit my current cut goal.",
+            "review_trigger": "Review if a lipid panel or GI symptoms change.",
+        })
+        analysis = {"foods": ["Salmon"], "analyzed_at": "2026-09-18T06:00:00",
+                    "sections": [{"no_evidence": False, "answer_html": "<p>Use salmon.</p>",
+                                   "related_html": "", "text": "Salmon", "topic": "food"}]}
+        with patch.object(FoodA, "load", return_value=analysis):
+            r = self.client.get("/food")
+        self.assertIn(b"Evidence review", r.data)
+        self.assertIn(b"Use salmon.", r.data)
+
+    def test_export_contains_selected_food_reason_and_source(self):
+        self.client.post("/food/select/salmon", data={
+            "source_index": "0",
+            "goal": "Support recovery after evening training sessions.",
+            "personal_reason": "High protein and omega-3s fit my current cut goal.",
+            "review_trigger": "Review if a lipid panel or GI symptoms change.",
+        })
+        r = self.client.get("/food/export")
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.mimetype, "text/plain")
+        self.assertIn(b"## Salmon", r.data)
+        self.assertIn(b"Why it fits: High protein and omega-3s fit my current cut goal.", r.data)
+        self.assertIn(b"[nutrition] USDA nutrition composition entry.", r.data)
+
+
+class FoodDietTests(_IsolatedFoodState):
+    def test_get_diet_page_renders_saved_preset_and_toggles(self):
+        with patch.object(FoodP, "load", return_value={"diet": "keto", "toggles": ["no_dairy"]}):
+            r = self.client.get("/food/diet")
+        self.assertEqual(r.status_code, 200)
+        self.assertIn(b"Diet first", r.data)
+        self.assertIn(b'value="keto" selected', r.data)
+        self.assertIn(b'value="no_dairy" checked', r.data)
+
+    def test_post_diet_saves_normalized_preferences(self):
+        saved = {}
+        with patch.object(FoodP, "save", side_effect=lambda value, path: saved.setdefault("value", value)):
+            r = self.client.post("/food/diet", data={
+                "diet": "vegetarian",
+                "toggle": ["no_dairy", "no_dairy"],
+            })
+        self.assertEqual(r.status_code, 302)
+        self.assertEqual(saved["value"], {"diet": "vegetarian", "toggles": ["no_dairy"]})
+
+    def test_food_page_shows_diet_and_link_to_change_it(self):
+        with patch.object(FoodP, "load", return_value={"diet": "vegetarian", "toggles": []}):
+            r = self.client.get("/food")
+        self.assertIn(b"Vegetarian", r.data)
+        self.assertIn(b"Change diet", r.data)
+
+    def test_server_refuses_selecting_food_excluded_by_diet(self):
+        yogurt = {"id": "plain_yogurt", "display_name": "Plain yogurt", "browse_categories": ["food"],
+                  "class": "food", "resources": [WP.resource("USDA yogurt entry.", "nutrition")]}
+        with patch.object(WPL, "catalog_rows", return_value=[dict(_SALMON), yogurt]), \
+             patch.object(FoodP, "load", return_value={"diet": "vegan", "toggles": []}):
+            r = self.client.get("/food/select/plain_yogurt", follow_redirects=True)
+        self.assertIn(b"does not fit the selected diet", r.data)
+
+    def test_food_page_marks_excluded_rows_instead_of_offering_select(self):
+        yogurt = {"id": "plain_yogurt", "display_name": "Plain yogurt", "browse_categories": ["food"],
+                  "class": "food", "resources": [WP.resource("USDA yogurt entry.", "nutrition")]}
+        with patch.object(WPL, "catalog_rows", return_value=[dict(_SALMON), yogurt]), \
+             patch.object(FoodP, "load", return_value={"diet": "vegan", "toggles": []}):
+            r = self.client.get("/food")
+        self.assertIn(b"Not available for this diet", r.data)
+        self.assertNotIn(b'href="/food/select/plain_yogurt"', r.data)
+
+    def test_changing_diet_cannot_strand_a_selected_food(self):
+        state = {"start": "2026-09-14", "week": {"selected": {
+            "salmon": {"name": "Salmon", "category": "food"},
+        }}}
+        with patch.object(webapp_module, "_food_state", return_value={
+            **state, "food_preferences": {"diet": "whole_food", "toggles": []},
+        }), patch.object(FoodP, "save") as save:
+            r = self.client.post("/food/diet", data={"diet": "vegan"}, follow_redirects=True)
+        self.assertIn(b"Remove or replace selected foods first", r.data)
+        save.assert_not_called()
 
 
 if __name__ == "__main__":

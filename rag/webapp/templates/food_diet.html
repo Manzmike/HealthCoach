@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Diet gate — HealthCoach{% endblock %}
+{% block content %}
+<h1>Diet first</h1>
+<p class="lede">Choose the foods that fit your stated diet before selecting specific foods. This is a
+  transparent eligibility gate, not a claim that one diet is medically best for you.</p>
+
+{% if error %}<div class="notice">{{ error }}</div>{% endif %}
+
+<form method="post" action="{{ url_for('food_diet') }}" class="panel">
+  <div class="field" style="max-width: 420px;">
+    <label for="diet">Diet pattern</label>
+    <select id="diet" name="diet" required>
+      {% for key, option in diet_options.items() %}
+        <option value="{{ key }}"{% if current.diet == key %} selected{% endif %}>{{ option.label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <fieldset class="field">
+    <legend>Additional exclusions (optional)</legend>
+    {% for key, option in toggle_options.items() %}
+      <label class="check-row">
+        <input type="checkbox" name="toggle" value="{{ key }}"{% if key in current.toggles %} checked{% endif %}>
+        {{ option.label }}
+      </label>
+    {% endfor %}
+  </fieldset>
+  <button type="submit">Save diet gate</button>
+</form>
+
+<p><a href="{{ url_for('food') }}">Back to food catalog</a></p>
+{% endblock %}

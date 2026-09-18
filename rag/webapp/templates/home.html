@@ -13,6 +13,10 @@
     <span class="tile-label">Symptom check-in</span>
     <span class="tile-value">Pick what you're feeling</span>
   </a>
+  <a class="tile" href="{{ url_for('food') }}">
+    <span class="tile-label">Food</span>
+    <span class="tile-value">Diet gate and evidence-graded foods</span>
+  </a>
   <a class="tile" href="{{ url_for('schedule') }}">
     <span class="tile-label">Schedule</span>
     <span class="tile-value">{{ "Saved" if has_schedule else "Not built yet" }}</span>
@@ -26,7 +30,7 @@
 <div class="panel">
   <p><strong>Report:</strong> {{ "available" if report_available else "not created yet" }}
      &nbsp;&nbsp; <strong>Profile:</strong> {{ "saved" if profile_saved else "not saved yet" }}</p>
-  <p class="muted">Peptide/nootropic/food catalogs, weekly check-in, and Bevel sharing aren't part of this
-     web app yet — see <a href="{{ url_for('more') }}">More</a> for the terminal command for each.</p>
+  <p class="muted">Peptide/nootropic catalogs, weekly check-in, and Bevel sharing remain terminal-only — see
+     <a href="{{ url_for('more') }}">More</a> for the command for each.</p>
 </div>
 {% endblock %}
