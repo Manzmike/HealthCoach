@@ -1,6 +1,7 @@
 """Regression tests for the redesigned first-open and home surfaces."""
 
 import unittest
+import os
 from unittest.mock import patch
 
 from webapp import setup_state as Setup
@@ -65,7 +66,21 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn(b"armScale", response.data)
         self.assertIn(b"legScale", response.data)
         self.assertIn(b"weightKg", response.data)
+        self.assertIn(b"body_model_mesh.bin", response.data)
+        self.assertIn(b"fetch(", response.data)
+        self.assertIn(b"measurementBases", response.data)
         self.assertNotIn(b"https://", response.data)
+
+    def test_reference_mesh_asset_and_notice_are_present(self):
+        root = os.path.join(os.path.dirname(__file__), "webapp", "static")
+        asset = os.path.join(root, "body_model_mesh.bin")
+        notice = os.path.join(root, "THIRD_PARTY_NOTICES.md")
+        self.assertTrue(os.path.exists(asset))
+        self.assertGreater(os.path.getsize(asset), 100_000)
+        with open(notice, encoding="utf-8") as handle:
+            text = handle.read()
+        self.assertIn("3D-Human-Body-Shape", text)
+        self.assertIn("MIT", text)
 
 
 if __name__ == "__main__":

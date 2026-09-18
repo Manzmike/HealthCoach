@@ -21,6 +21,9 @@ index/
 chunks/
 *.safetensors
 *.bin
+# The compact browser body mesh is intentionally shipped as a local static
+# asset; it is derived from the attributed anthropometric reference model.
+!rag/webapp/static/body_model_mesh.bin
 *.gguf
 *.pt
 *.npz
