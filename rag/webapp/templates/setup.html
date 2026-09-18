@@ -1,9 +1,38 @@
 {% extends "base.html" %}
 {% block title %}Set up HealthCoach{% endblock %}
 {% block content %}
+<section class="landing-hero" aria-labelledby="setup-title">
+  <div class="landing-copy">
+    <p class="eyebrow">Private first visit</p>
+    <h1 id="setup-title">Set up HealthCoach once</h1>
+    <p class="lede">HealthCoach first looks for the local data you already have, asks only for what is missing, and shows the complete picture to be reviewed before it is saved.</p>
+    <div class="hero-actions">
+      <a class="button hero-button" href="{{ url_for('food_diet', **{'from': 'setup'}) }}">Begin setup</a>
+      <a class="button quiet" href="{{ url_for('settings') }}">See all settings</a>
+    </div>
+    <ul class="trust-list" aria-label="Setup promises">
+      <li class="trust-item"><strong>Local only</strong><span>Your information stays in this HealthCoach folder.</span></li>
+      <li class="trust-item"><strong>No silent inference</strong><span>Missing details are asked, not guessed.</span></li>
+      <li class="trust-item"><strong>Review before saving</strong><span>You can update, clear, or keep each section.</span></li>
+    </ul>
+  </div>
+  {% include "_body_model.html" %}
+</section>
+
+<section class="landing-pathway" aria-labelledby="pathway-title">
+  <p class="eyebrow">Your first visit</p>
+  <h2 id="pathway-title">One clear path from intake to answers</h2>
+  <div class="pathway-grid">
+    <div class="pathway-step"><span class="step-number">1</span><div><strong>Pull what is already here</strong><p>Schedule, symptoms, goals, body metrics, lifestyle, sport, labs, and DEXA records are checked first.</p></div></div>
+    <div class="pathway-step"><span class="step-number">2</span><div><strong>Answer the missing context</strong><p>Complete your diet, health goals, body goals, lifestyle goals, and current measurements.</p></div></div>
+    <div class="pathway-step"><span class="step-number">3</span><div><strong>Review every change</strong><p>See what will be added, updated, cleared, or left alone before confirming.</p></div></div>
+    <div class="pathway-step"><span class="step-number">4</span><div><strong>Open your current-data home</strong><p>After setup, the home page prioritizes your data, questions, and symptom updates.</p></div></div>
+  </div>
+</section>
+
 <header class="page-header">
-  <div><p class="eyebrow">First visit</p><h1>Set up HealthCoach</h1>
-  <p class="lede">Complete these two short steps once. After that, HealthCoach opens on your results and keeps data-entry forms inside Settings.</p></div>
+  <div><p class="eyebrow">Required inputs</p><h2>Finish the guided setup</h2>
+  <p class="lede">These existing steps remain available while the full intake pathway is being completed.</p></div>
 </header>
 
 <div class="setup-steps" aria-label="Setup progress">

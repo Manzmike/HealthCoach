@@ -1,0 +1,16 @@
+<section class="model-card" aria-labelledby="body-model-title">
+  <div class="model-card-header">
+    <div>
+      <p class="eyebrow">Body overview</p>
+      <h2 id="body-model-title">Generic model</h2>
+    </div>
+    <span class="model-state">Front view</span>
+  </div>
+  <div class="model-stage">
+    <canvas id="bodyModel" class="body-model" width="640" height="720"
+            tabindex="0" role="img"
+            aria-label="Generic front-facing 3D body model. Use the left and right arrow keys or drag to rotate."></canvas>
+  </div>
+  <p class="model-caption">Visual guide only. Personal measurements and DEXA values appear only after you confirm them.</p>
+</section>
+<script src="{{ url_for('static', filename='body_model.js') }}" defer></script>

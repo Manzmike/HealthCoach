@@ -1,10 +1,31 @@
 {% extends "base.html" %}
 {% block title %}HealthCoach{% endblock %}
 {% block content %}
-<header class="page-header home-header">
-  <div><p class="eyebrow">Private local workspace</p><h1>HealthCoach</h1>
-  <p class="lede">A local front door to your evidence, schedule, symptoms, and labs. Nothing here leaves this machine.</p></div>
-</header>
+<section class="landing-hero home-hero" aria-labelledby="home-title">
+  <div class="landing-copy">
+    <p class="eyebrow">Current data</p>
+    <h1 id="home-title">Your HealthCoach workspace</h1>
+    <p class="lede">Review what is current, ask a question, or update only what changed. HealthCoach does not put intake forms in your way after setup.</p>
+    <div class="hero-actions">
+      <a class="button hero-button" href="{{ url_for('ask') }}">Ask a question</a>
+      <a class="button quiet" href="{{ url_for('settings') }}">Open Settings</a>
+    </div>
+  </div>
+  {% include "_body_model.html" %}
+</section>
+
+<section aria-labelledby="current-data-title">
+  <div class="section-heading-row">
+    <div><p class="eyebrow">At a glance</p><h2 id="current-data-title">Your current data</h2></div>
+    <a href="{{ url_for('settings') }}">Update data</a>
+  </div>
+  <div class="status-strip">
+    <div class="status-card"><span class="status-card-label">Evidence report</span><strong>{{ "Available" if report_available else "Not created" }}</strong><span>{{ "Ready to review" if report_available else "Can be generated from the terminal" }}</span></div>
+    <div class="status-card"><span class="status-card-label">Profile</span><strong>{{ "Saved" if profile_saved else "Not saved" }}</strong><span>Used to keep answers personal</span></div>
+    <div class="status-card"><span class="status-card-label">Schedule</span><strong>{{ "Saved" if has_schedule else "Not added" }}</strong><span>Weekly context</span></div>
+    <div class="status-card"><span class="status-card-label">Labs</span><strong>{{ "Available" if has_labs else "Not added" }}</strong><span>Values you choose to share</span></div>
+  </div>
+</section>
 
 <h2 class="section-title">Your workspace</h2>
 
