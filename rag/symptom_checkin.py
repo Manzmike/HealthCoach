@@ -17,6 +17,10 @@ grade you'd see in `rank` — this module doesn't invent a new severity scale.
 
   cd ~/GitHub/HealthCoach/rag && source .venv/bin/activate
   python3 symptom_checkin.py
+
+Or in plain language through coach.py: "I have some symptoms I want to check",
+"symptom check", "what's wrong with me" -- looks_like_symptom_checkin_request()
+recognizes these so this never has to be typed as a separate command name.
 """
 from __future__ import annotations
 
@@ -28,6 +32,22 @@ from typing import Any
 import candidate_ledger as CL
 import supplement_audit as audit
 import safety_policy as SP
+
+# --------------------------------------------------------------------------
+# Detecting a plain-language request for this tool, so coach.py's CLI can
+# launch it without the user needing to know a separate script name exists
+# -- same pattern as schedule_builder.looks_like_schedule_update_request().
+
+_CHECKIN_REQUEST_PHRASES = (
+    "symptom check", "symptom checkin", "symptom check-in", "check my symptoms",
+    "check-in my symptoms", "i have some symptoms", "i have symptoms",
+    "what's wrong with me", "whats wrong with me", "help me figure out my symptoms",
+)
+
+
+def looks_like_symptom_checkin_request(text: str) -> bool:
+    lower = text.lower()
+    return any(phrase in lower for phrase in _CHECKIN_REQUEST_PHRASES)
 
 HERE = Path(__file__).resolve().parent
 FOOD_EVIDENCE_PATH = HERE / "food_evidence.json"
@@ -132,8 +152,10 @@ SYMPTOMS: dict[str, tuple[str, tuple[str, ...]]] = {
     "High blood pressure": ("Heart & Metabolic", ("heart",)),
     "High cholesterol / lipids": ("Heart & Metabolic", ("heart",)),
     "Elevated resting heart rate": ("Heart & Metabolic", ("heart", "sleep")),
+    "Slow / low resting heart rate (bradycardia)": ("Heart & Metabolic", ("heart",)),
     "Poor circulation (cold hands/feet)": ("Heart & Metabolic", ("heart", "deficiency")),
     "Swelling / fluid retention (edema)": ("Heart & Metabolic", ("heart",)),
+    "Puffy or swollen face": ("Heart & Metabolic", ("heart",)),
     "Stubborn body fat / plateaued fat loss": ("Heart & Metabolic", ("cut",)),
     "Blood sugar swings": ("Heart & Metabolic", ("cut", "heart")),
     "Unexplained weight gain": ("Heart & Metabolic", ("cut", "deficiency")),
@@ -148,7 +170,85 @@ SYMPTOMS: dict[str, tuple[str, tuple[str, ...]]] = {
     "Excessive thirst": ("Deficiency & Other", ("deficiency", "cut")),
     "Frequent urination": ("Deficiency & Other", ("deficiency", "cut")),
     "Bone / joint aches (possible vitamin D concern)": ("Deficiency & Other", ("deficiency", "joints")),
+    "Possible infertility / trouble conceiving": ("Deficiency & Other", ("deficiency",)),
 }
+
+# Symptom combinations that, together, point toward a specific pattern best
+# confirmed by labs and a doctor -- never by diet alone, no matter how much
+# better a diet makes someone feel day to day. None of the 11 supplement/
+# food issue tags above capture "this looks hormonal" on their own, so this
+# is a separate check on top of the tag system, not an extension of it.
+# Each cluster names the labs.py markers that actually confirm or rule it
+# out, so the alert can show real numbers on file instead of a generic
+# "get this checked" once the user has them recorded.
+CLUSTER_ALERTS: dict[str, dict[str, Any]] = {
+    "hypothyroid_pattern": {
+        "label": "an underactive thyroid (hypothyroidism)",
+        "trigger_symptoms": (
+            "Dry or itchy skin", "Thinning hair / hair loss", "Hair breakage / brittle hair",
+            "Constipation", "Unexplained weight gain", "Cold intolerance",
+            "Slow / low resting heart rate (bradycardia)", "Puffy or swollen face",
+            "Possible infertility / trouble conceiving", "Low energy / fatigue",
+        ),
+        "min_matches": 3,
+        "markers": ("tsh", "free_t4", "free_t3"),
+        "note": (
+            "Diagnosis is confirmed by TSH, Free T4, and Free T3 lab values, not by how "
+            "many of these symptoms you have or how a diet makes you feel day to day. "
+            "If you're not already being medically monitored for this, that's the next "
+            "step before changing what you eat -- a diet cannot correct thyroid hormone "
+            "levels the way appropriate treatment can, however much more energy it gives you."
+        ),
+    },
+}
+
+
+def _lab_lines_for(marker_keys: tuple[str, ...]) -> list[str]:
+    """Real recorded values for these markers, or [] if labs.py isn't
+    reachable or nothing's on file yet -- never fabricates a value."""
+    try:
+        import labs as L
+    except ImportError:
+        return []
+    entries = L.load_labs().get("entries", {})
+    lines = []
+    for key in marker_keys:
+        entry = entries.get(key)
+        if not entry:
+            continue
+        spec = L.MARKERS[key]
+        status = L.marker_status(key, entry["value"])
+        lines.append(f"  - {spec['name']}: {entry['value']} {entry.get('unit', spec['unit'])} "
+                      f"({status}), recorded {entry.get('date', 'unknown date')}")
+    return lines
+
+
+def cluster_alerts(selected: list[str]) -> list[str]:
+    """Markdown lines for every symptom cluster this selection matches
+    (order follows CLUSTER_ALERTS, not selection order, so results are
+    stable across runs). [] if nothing matches -- most check-ins won't."""
+    lines = []
+    for cluster in CLUSTER_ALERTS.values():
+        matches = [s for s in selected if s in cluster["trigger_symptoms"]]
+        if len(matches) < cluster["min_matches"]:
+            continue
+        lines.append(f"## Pattern worth flagging: {cluster['label']}")
+        lines.append("")
+        lines.append(f"You selected {len(matches)} symptoms commonly seen together with "
+                      f"{cluster['label']}: {', '.join(matches)}.")
+        lines.append("")
+        lines.append(cluster["note"])
+        lab_lines = _lab_lines_for(cluster["markers"])
+        lines.append("")
+        if lab_lines:
+            lines.append("What's on file for you:")
+            lines.extend(lab_lines)
+        else:
+            marker_names = "/".join(m.upper() for m in cluster["markers"])
+            lines.append(f"No {marker_names} on file yet — run `python3 labs.py providers` "
+                          "to see how to add them.")
+        lines.append("")
+    return lines
 
 
 def _load_food_evidence() -> dict[str, Any]:
@@ -277,11 +377,12 @@ def build_report(selected: list[str]) -> dict[str, Any]:
             "symptom": label, "tags": tags, "foods": foods, "supplements": supplements,
             "lifestyle": lifestyle,
         })
-    return {"sections": sections}
+    return {"sections": sections, "cluster_alerts": cluster_alerts(selected)}
 
 
 def render_short(report: dict[str, Any]) -> str:
     lines = ["# Symptom check-in — quick view", "", "Issue-tag matches and cached evidence are not a diagnosis or medical clearance.", ""]
+    lines.extend(report.get("cluster_alerts", []))
     for s in report["sections"]:
         lines.append(f"## {s['symptom']}")
         if s.get("urgent"):
@@ -309,6 +410,7 @@ def render_short(report: dict[str, Any]) -> str:
 
 def render_deep(report: dict[str, Any]) -> str:
     lines = ["# Symptom check-in — full detail", "", "Issue-tag matches and cached evidence are not a diagnosis or medical clearance.", ""]
+    lines.extend(report.get("cluster_alerts", []))
     for s in report["sections"]:
         if s.get("urgent"):
             lines.extend((f"## {s['symptom']}", "", s["urgent"], ""))
@@ -356,45 +458,107 @@ def render_deep(report: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def filter_labels(query: str) -> list[str]:
+    """Symptom labels containing `query` (case-insensitive), in SYMPTOMS'
+    own order. An empty/whitespace query matches everything -- typing
+    "hair" or "sleep" lets someone jump straight to what applies to them
+    instead of arrow-keying through 60+ items to find it."""
+    q = query.strip().lower()
+    if not q:
+        return list(SYMPTOMS)
+    return [label for label in SYMPTOMS if q in label.lower()]
+
+
+def grouped_rows(labels: list[str]) -> list[tuple[str | None, str | None]]:
+    """(header, None) or (None, label) rows -- exactly one row per label,
+    plus one header row every time the group changes, so the picker can
+    show real section headers ("Skin & Hair", "Digestion", ...) instead of
+    one flat 60-item list. A previous version tracked group changes but
+    never actually drew the header line."""
+    rows: list[tuple[str | None, str | None]] = []
+    last_group = None
+    for label in labels:
+        group, _tags = SYMPTOMS[label]
+        if group != last_group:
+            rows.append((group, None))
+            last_group = group
+        rows.append((None, label))
+    return rows
+
+
 def select_symptoms() -> list[str] | None:
-    """Grouped checklist, same curses interaction convention as the rest of this app."""
-    labels = list(SYMPTOMS)
+    """Grouped, filterable checklist, same curses interaction convention as
+    the rest of this app, plus "/" to type-filter (Enter/Esc leaves filter
+    mode; the filter itself stays active until cleared)."""
     selected: set[str] = set()
     result: dict[str, list[str] | None] = {"value": None}
 
     def run(stdscr) -> None:
         curses.curs_set(0)
         cursor = 0
+        query = ""
+        filtering = False
         while True:
+            visible = filter_labels(query)
+            cursor = max(0, min(cursor, len(visible) - 1)) if visible else 0
+            rows = grouped_rows(visible)
+            # Position within `rows` of the currently-selected symptom, for
+            # scrolling/highlighting -- header rows never carry the cursor.
+            cursor_row = next((i for i, (_h, label) in enumerate(rows)
+                               if label == (visible[cursor] if visible else None)), 0)
+
             height, width = stdscr.getmaxyx()
             stdscr.erase()
-            stdscr.addnstr(0, 0, "SYMPTOM CHECK-IN — Space toggle · Enter/x apply · q cancel",
-                            max(1, width - 1), curses.A_BOLD)
+            if filtering:
+                header = f"SYMPTOM CHECK-IN — filter: {query}_  (Enter/Esc: done typing)"
+            else:
+                header = "SYMPTOM CHECK-IN — ↑↓ move · Space toggle · / filter · Enter apply · q cancel"
+            stdscr.addnstr(0, 0, header, max(1, width - 1), curses.A_BOLD)
+            if not visible:
+                stdscr.addnstr(2, 0, f"No symptoms match {query!r}.", max(1, width - 1))
             page_size = max(1, height - 3)
-            first = max(0, min(cursor - page_size // 2, len(labels) - page_size))
-            last_group = None
-            row = 2
-            for index in range(first, min(len(labels), first + page_size)):
-                label = labels[index]
-                group, _tags = SYMPTOMS[label]
-                if group != last_group:
-                    row += 0
-                    last_group = group
-                mark = "[x]" if label in selected else "[ ]"
-                attr = curses.A_REVERSE if index == cursor else curses.A_NORMAL
-                stdscr.addnstr(row, 0, f"{mark} {label}", max(1, width - 1), attr)
-                row += 1
-                if row >= height - 1:
+            first = max(0, min(cursor_row - page_size // 2, max(0, len(rows) - page_size)))
+            row_y = 2
+            for row_index in range(first, min(len(rows), first + page_size)):
+                group, label = rows[row_index]
+                if group is not None:
+                    stdscr.addnstr(row_y, 0, f"-- {group} --", max(1, width - 1), curses.A_BOLD)
+                else:
+                    mark = "[x]" if label in selected else "[ ]"
+                    attr = curses.A_REVERSE if row_index == cursor_row else curses.A_NORMAL
+                    stdscr.addnstr(row_y, 0, f"{mark} {label}", max(1, width - 1), attr)
+                row_y += 1
+                if row_y >= height - 1:
                     break
             stdscr.addnstr(height - 1, 0, f"{len(selected)} selected", max(1, width - 1), curses.A_DIM)
             stdscr.refresh()
             key = stdscr.getch()
+
+            if filtering:
+                if key in (10, 13, curses.KEY_ENTER, 27):
+                    filtering = False
+                elif key in (curses.KEY_BACKSPACE, 127, 8):
+                    query = query[:-1]
+                elif 32 <= key <= 126:
+                    query += chr(key)
+                continue
+
+            if not visible:
+                if key == ord("/"):
+                    filtering, query = True, ""
+                elif key in (ord("q"), 27):
+                    result["value"] = None
+                    return
+                continue
+
             if key in (curses.KEY_UP, ord("k")):
-                cursor = (cursor - 1) % len(labels)
+                cursor = (cursor - 1) % len(visible)
             elif key in (curses.KEY_DOWN, ord("j")):
-                cursor = (cursor + 1) % len(labels)
+                cursor = (cursor + 1) % len(visible)
             elif key == ord(" "):
-                selected.symmetric_difference_update({labels[cursor]})
+                selected.symmetric_difference_update({visible[cursor]})
+            elif key == ord("/"):
+                filtering = True
             elif key in (10, 13, curses.KEY_ENTER, ord("x")):
                 result["value"] = list(selected)
                 return

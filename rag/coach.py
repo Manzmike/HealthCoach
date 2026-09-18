@@ -604,6 +604,13 @@ def main():
             print("Import it: Apple Calendar (File > Import...), Google Calendar "
                   "(Settings > Import & export), or Outlook (File > Open & Export > Import/Export).")
         return
+    import symptom_checkin as SC
+    if SC.looks_like_symptom_checkin_request(q):
+        # A checklist request, not a research question -- no evidence
+        # retrieval here either; this launches the same curses picker as
+        # `python3 symptom_checkin.py` directly.
+        SC.main()
+        return
     import lancedb
     from sentence_transformers import SentenceTransformer
 
