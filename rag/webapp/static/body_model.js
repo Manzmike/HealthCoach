@@ -17,7 +17,7 @@
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   // Leave a deliberate breathing margin so the head and feet stay visible in
   // the 430px desktop stage and the shorter mobile stage.
-  const MODEL_SCALE = 4.0;
+  const MODEL_SCALE = 1.55;
   const VIEW_DISTANCE = 5.2;
   const MATRIX_DIMENSIONS = {
     sex: [

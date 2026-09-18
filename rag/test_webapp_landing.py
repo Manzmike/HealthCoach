@@ -72,6 +72,7 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn(b"rotateX(-Math.PI / 2)", response.data)
         self.assertIn(b"upright", response.data)
         self.assertIn(b"MODEL_SCALE", response.data)
+        self.assertIn(b"MODEL_SCALE = 1.55", response.data)
         self.assertIn(b"VIEW_DISTANCE", response.data)
         self.assertNotIn(b"https://", response.data)
 
