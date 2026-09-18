@@ -15,15 +15,35 @@
   const personalized = canvas.dataset.personalized === "true";
   const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Presentation presets are examples, not health categories or targets.
-  const PRESETS = [
-    { label: "Example · woman · shorter frame", detail: "shorter height · slimmer arms · narrower shoulders", height: 0.88, width: 0.83, depth: 0.9, shoulder: 0.88, arm: 0.86, leg: 0.9, hip: 0.98 },
-    { label: "Example · woman · taller frame", detail: "taller height · longer arms · moderate frame", height: 1.08, width: 0.92, depth: 0.94, shoulder: 0.94, arm: 1.04, leg: 1.1, hip: 1.02 },
-    { label: "Example · man · shorter frame", detail: "shorter height · moderate arms · compact frame", height: 0.91, width: 0.98, depth: 1.02, shoulder: 1.03, arm: 0.9, leg: 0.92, hip: 0.94 },
-    { label: "Example · man · average frame", detail: "average height · moderate arms · moderate frame", height: 1.0, width: 1.0, depth: 1.0, shoulder: 1.08, arm: 1.0, leg: 1.0, hip: 0.96 },
-    { label: "Example · man · taller frame", detail: "taller height · longer arms · broader shoulders", height: 1.14, width: 1.08, depth: 1.07, shoulder: 1.14, arm: 1.1, leg: 1.16, hip: 0.98 },
-    { label: "Example · broader frame", detail: "broader torso · larger arm proportions · example only", height: 1.0, width: 1.16, depth: 1.15, shoulder: 1.18, arm: 1.12, leg: 1.0, hip: 1.08 }
-  ];
+  // The preview is a matrix, not a set of body ideals: 2 sexes × 3 heights ×
+  // 3 waists × 3 arm scales × 3 leg scales = 162 illustrative combinations.
+  const MATRIX_DIMENSIONS = {
+    sex: [
+      { label: "woman", shoulder: 0.96, hip: 1.04 },
+      { label: "man", shoulder: 1.08, hip: 0.96 }
+    ],
+    height: [
+      { label: "smallest height", cm: 150, value: 0.86 },
+      { label: "middle height", cm: 175, value: 1.0 },
+      { label: "tallest height", cm: 200, value: 1.14 }
+    ],
+    waist: [
+      { label: "smallest waist", cm: 60, value: 0.78 },
+      { label: "middle waist", cm: 80, value: 1.0 },
+      { label: "largest waist", cm: 110, value: 1.22 }
+    ],
+    armScale: [
+      { label: "smallest arms", value: 0.78 },
+      { label: "middle arms", value: 1.0 },
+      { label: "largest arms", value: 1.22 }
+    ],
+    legScale: [
+      { label: "smallest legs", value: 0.82 },
+      { label: "middle legs", value: 1.0 },
+      { label: "largest legs", value: 1.18 }
+    ]
+  };
+  const PRESETS = buildMatrix();
 
   const PARTS = [
     { key: "head", x: 0, y: 2.75, z: 0, sx: 0.34, sy: 0.39, sz: 0.34, group: "head" },
@@ -93,8 +113,8 @@
   }
   function transitionProfile(now) {
     if (!transitionStart) return current;
-    const progress = clamp((now - transitionStart) / 1400, 0, 1), eased = progress * progress * (3 - 2 * progress);
-    if (progress >= 1) { current = target; transitionStart = 0; nextSwitch = now + 2200; return current; }
+    const progress = clamp((now - transitionStart) / 900, 0, 1), eased = progress * progress * (3 - 2 * progress);
+    if (progress >= 1) { current = target; transitionStart = 0; nextSwitch = now + 600; return current; }
     return blend(current, target, eased);
   }
   function beginTransition(now) { presetIndex = (presetIndex + 1) % PRESETS.length; target = PRESETS[presetIndex]; transitionStart = now; setExampleOverlay(target); }
@@ -102,9 +122,36 @@
   function setPersonalOverlay() { if (overlayTitle) overlayTitle.textContent = "Your confirmed approximation"; if (overlayText) overlayText.textContent = "Uses confirmed measurements as a visual guide — not a scan."; canvas.setAttribute("aria-label", "Rotating 3D approximation based on confirmed measurements. Use arrow keys or drag to rotate."); }
   function personalizedPreset() {
     const height = number(canvas.dataset.height, 175), weight = number(canvas.dataset.weight, 75), bodyFat = number(canvas.dataset.bodyFat, 18), bmi = weight / Math.pow(height / 100, 2), width = clamp(0.86 + (bmi - 21) * 0.018 + (bodyFat - 18) * 0.004, 0.78, 1.24), isWoman = canvas.dataset.sex === "female";
-    return { label: "Your confirmed approximation", detail: "confirmed height, weight, and optional body-fat data", height: clamp(height / 175, 0.82, 1.18), width: width, depth: width, shoulder: isWoman ? 0.96 : 1.08, arm: clamp(width, 0.84, 1.16), leg: clamp(height / 175, 0.86, 1.16), hip: isWoman ? 1.04 : 0.96 };
+    return { label: "Your confirmed approximation", detail: "confirmed height, weight, and optional body-fat data", height: clamp(height / 175, 0.82, 1.18), width: width, waist: width, depth: width, shoulder: isWoman ? 0.96 : 1.08, arm: clamp(width, 0.84, 1.16), armScale: clamp(width, 0.84, 1.16), leg: clamp(height / 175, 0.86, 1.16), legScale: clamp(height / 175, 0.86, 1.16), hip: isWoman ? 1.04 : 0.96 };
   }
-  function partDimensions(part, profile) { const xFrame = part.group === "arm" ? profile.shoulder : profile.width, xSize = part.group === "arm" ? profile.arm : profile.width, ySize = part.group === "arm" ? profile.arm : part.group === "leg" ? profile.leg : profile.height; return { x: part.x * xFrame, y: part.y * profile.height, sx: part.sx * xSize * (part.group === "hip" ? profile.hip : 1), sy: part.sy * ySize, sz: part.sz * profile.depth }; }
+  function buildMatrix() {
+    const profiles = [];
+    MATRIX_DIMENSIONS.sex.forEach(function (sex) {
+      MATRIX_DIMENSIONS.height.forEach(function (height) {
+        MATRIX_DIMENSIONS.waist.forEach(function (waist) {
+          MATRIX_DIMENSIONS.armScale.forEach(function (armScale) {
+            MATRIX_DIMENSIONS.legScale.forEach(function (legScale) {
+              const position = profiles.length + 1;
+              profiles.push({
+                label: "Example · " + sex.label,
+                detail: height.label + " (" + height.cm + " cm) · " + waist.label + " (" + waist.cm + " cm) · " + armScale.label + " · " + legScale.label + " · matrix " + position + "/162",
+                height: height.value, width: waist.value, waist: waist.value, depth: waist.value,
+                shoulder: sex.shoulder, arm: armScale.value, armScale: armScale.value,
+                leg: legScale.value, legScale: legScale.value, hip: sex.hip
+              });
+            });
+          });
+        });
+      });
+    });
+    return profiles;
+  }
+  function partDimensions(part, profile) {
+    const xFrame = part.group === "arm" ? profile.shoulder : profile.width;
+    const xSize = part.group === "arm" ? profile.armScale : part.group === "torso" && part.key === "abdomen" ? profile.waist : profile.width;
+    const ySize = part.group === "arm" ? profile.armScale : part.group === "leg" ? profile.legScale : profile.height;
+    return { x: part.x * xFrame, y: part.y * profile.height, sx: part.sx * xSize * (part.group === "hip" ? profile.hip : 1), sy: part.sy * ySize, sz: part.sz * profile.depth };
+  }
   function blend(a, b, amount) { const result = {}; Object.keys(a).forEach(function (key) { result[key] = typeof a[key] === "number" ? a[key] + (b[key] - a[key]) * amount : b[key]; }); return result; }
   function resizeCanvas() { const ratio = Math.min(window.devicePixelRatio || 1, 2), width = Math.max(1, Math.floor(canvas.clientWidth * ratio)), height = Math.max(1, Math.floor(canvas.clientHeight * ratio)); if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; } }
   canvas.addEventListener("keydown", function (event) { if (event.key === "ArrowLeft" || event.key === "ArrowRight") { event.preventDefault(); rotation += event.key === "ArrowLeft" ? -0.12 : 0.12; render(performance.now()); } });
@@ -113,7 +160,7 @@
   canvas.addEventListener("pointerup", function () { dragging = false; }); canvas.addEventListener("pointercancel", function () { dragging = false; });
   window.addEventListener("resize", function () { render(performance.now()); }, { passive: true });
   if (personalized) setPersonalOverlay(); else setExampleOverlay(PRESETS[0]);
-  nextSwitch = performance.now() + 3200; render(performance.now()); if (!reducedMotion) window.requestAnimationFrame(animationFrame);
+  nextSwitch = performance.now() + 1800; render(performance.now()); if (!reducedMotion) window.requestAnimationFrame(animationFrame);
 
   function makeProgram(context, vertex, fragment) { const vs = compile(context, context.VERTEX_SHADER, vertex), fs = compile(context, context.FRAGMENT_SHADER, fragment); if (!vs || !fs) return null; const result = context.createProgram(); context.attachShader(result, vs); context.attachShader(result, fs); context.linkProgram(result); return context.getProgramParameter(result, context.LINK_STATUS) ? result : null; }
   function compile(context, type, source) { const shader = context.createShader(type); context.shaderSource(shader, source); context.compileShader(shader); return context.getShaderParameter(shader, context.COMPILE_STATUS) ? shader : null; }

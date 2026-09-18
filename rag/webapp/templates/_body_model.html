@@ -17,7 +17,7 @@
             data-body-fat="{{ confirmed_intake.dexa.body_fat_pct if confirmed_intake is defined and confirmed_intake.updated_at else "" }}"></canvas>
     <div class="model-overlay" aria-hidden="true">
       <strong id="modelOverlayTitle">{{ "Your confirmed approximation" if confirmed_intake is defined and confirmed_intake.updated_at else "Add your data to see your metrics" }}</strong>
-      <span id="modelOverlayText">{{ "Uses confirmed measurements as a visual guide — not a scan." if confirmed_intake is defined and confirmed_intake.updated_at else "Previewing example women’s and men’s sizes, heights, weights, and arm proportions." }}</span>
+      <span id="modelOverlayText">{{ "Uses confirmed measurements as a visual guide — not a scan." if confirmed_intake is defined and confirmed_intake.updated_at else "Previewing an illustrative range matrix of women’s and men’s heights, waists, arms, legs, and weights." }}</span>
     </div>
   </div>
   <p class="model-caption">Visual guide only. Personal measurements and DEXA values appear only after you confirm them.</p>

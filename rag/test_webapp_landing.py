@@ -17,6 +17,7 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn(b'id="bodyModel"', response.data)
         self.assertIn(b'data-personalized="false"', response.data)
         self.assertIn(b"Add your data to see your metrics", response.data)
+        self.assertIn(b"illustrative range matrix", response.data)
         self.assertIn(b"Generic model", response.data)
         self.assertIn(b"/static/body_model.js", response.data)
         self.assertIn(b"reviewed before it is saved", response.data)
@@ -55,6 +56,11 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn(b"webgl", response.data.lower())
         self.assertIn(b"requestAnimationFrame", response.data)
         self.assertIn(b"PRESETS", response.data)
+        self.assertIn(b"MATRIX_DIMENSIONS", response.data)
+        self.assertIn(b"buildMatrix", response.data)
+        self.assertIn(b"waist", response.data)
+        self.assertIn(b"armScale", response.data)
+        self.assertIn(b"legScale", response.data)
         self.assertNotIn(b"https://", response.data)
 
 
