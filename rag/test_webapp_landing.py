@@ -87,6 +87,13 @@ class LandingSurfaceTests(unittest.TestCase):
         self.assertIn("3D-Human-Body-Shape", text)
         self.assertIn("MIT", text)
 
+    def test_model_overlay_is_translucent_and_keeps_text_legible(self):
+        response = app.test_client().get("/static/style.css")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b".model-overlay", response.data)
+        self.assertIn(b"rgba(246, 244, 236, 0.72)", response.data)
+        self.assertIn(b"backdrop-filter: blur", response.data)
+
 
 if __name__ == "__main__":
     unittest.main()

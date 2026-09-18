@@ -242,7 +242,11 @@ a:hover { color: var(--ink); }
 .body-model { display: block; width: min(100%, 360px); height: auto; max-height: 430px; outline: none; }
 .model-stage:focus-within { box-shadow: inset 0 0 0 3px var(--focus); }
 .model-caption { color: var(--ink-soft); font-size: 0.78rem; margin: 0.5rem 0.3rem 0.1rem; }
-.model-overlay { position: absolute; left: 0.75rem; right: 0.75rem; top: 0.75rem; max-width: 29ch; border: 1px solid var(--line); background: var(--panel); padding: 0.5rem 0.65rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+.model-overlay { position: absolute; left: 0.75rem; right: 0.75rem; top: 0.75rem; max-width: 29ch; border: 1px solid rgba(91, 92, 76, 0.42); background: rgba(246, 244, 236, 0.72); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); padding: 0.5rem 0.65rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+:root[data-theme="dark"] .model-overlay { border-color: rgba(167, 167, 148, 0.42); background: rgba(32, 36, 28, 0.76); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .model-overlay { border-color: rgba(167, 167, 148, 0.42); background: rgba(32, 36, 28, 0.76); }
+}
 .model-overlay strong, .model-overlay span { display: block; }
 .model-overlay strong { font-family: var(--serif); font-size: 0.9rem; }
 .model-overlay span { color: var(--ink-soft); font-size: 0.72rem; line-height: 1.35; margin-top: 0.15rem; }
