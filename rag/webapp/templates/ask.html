@@ -2,9 +2,9 @@
 {% block title %}Ask — HealthCoach{% endblock %}
 {% block content %}
 <h1>Ask a question</h1>
-<p class="muted">Retrieved from your local evidence library only. No claim without a cited passage.</p>
+<p class="lede">Retrieved from your local evidence library only. No claim without a cited passage.</p>
 
-<form method="post" action="{{ url_for('ask') }}" class="card">
+<form method="post" action="{{ url_for('ask') }}" class="panel">
   <div class="field">
     <label for="question">Your question</label>
     <textarea id="question" name="question" required>{{ question }}</textarea>
@@ -18,30 +18,31 @@
   {% endif %}
   {% for section in sections %}
     {% if sections|length > 1 %}
-      <h2>{{ section.topic|upper }}: {{ section.text }}</h2>
+      <h2>{{ section.topic|capitalize }}: {{ section.text }}</h2>
     {% endif %}
-    <div class="card">
+    <div class="reading">
       {% if section.no_evidence %}
         <p>No sufficiently relevant evidence was found in your library for this question.</p>
         {% if section.related_html %}
-          {{ section.related_html|safe }}
+          <div class="marginalia">{{ section.related_html|safe }}</div>
         {% endif %}
         {% if section.offer_fetch %}
           <form method="post" action="{{ url_for('ask_fetch_sources') }}">
             <input type="hidden" name="question" value="{{ question }}">
             <input type="hidden" name="topic_text" value="{{ section.text }}">
-            <button type="submit" class="secondary">Search for new sources now
+            <button type="submit" class="quiet">Search for new sources now
               (live network request, can take a minute or two)</button>
           </form>
         {% endif %}
       {% else %}
         {{ section.answer_html|safe }}
         {% if section.schedule_html %}
-          <hr class="divider">
+          <hr class="rule">
           {{ section.schedule_html|safe }}
         {% endif %}
       {% endif %}
     </div>
+    {% if not loop.last %}<hr class="rule">{% endif %}
   {% endfor %}
 {% endif %}
 {% endblock %}

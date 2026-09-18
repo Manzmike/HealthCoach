@@ -188,7 +188,7 @@ def schedule_add():
     label = request.form.get("label", "")
     start_input = request.form.get("start", "")
     end_input = request.form.get("end", "")
-    days_input = request.form.get("days", "")
+    days_input = ",".join(request.form.getlist("days"))
     error = None
     try:
         category = SB._resolve_category(category_input)

@@ -2,18 +2,18 @@
 {% block title %}Schedule — HealthCoach{% endblock %}
 {% block content %}
 <h1>Schedule</h1>
-<p class="muted">One weekly template. Editing here or in the terminal builder edits the same file.</p>
+<p class="lede">One weekly template. Editing here or in the terminal builder edits the same file.</p>
 
-{% if error %}<div class="error">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice">{{ error }}</div>{% endif %}
 
-<div class="week-grid">
+<div class="week-spread">
   {% for day, blocks in days %}
     <div class="day-column">
       <h3>{{ day }}</h3>
       {% for block in blocks %}
-        <div class="block-chip">
+        <div class="block-card" data-category="{{ block.category }}">
           <span class="time">{{ block.start }}–{{ block.end }}</span>
-          {{ block.label }} <span class="muted">({{ block.category }})</span>
+          <span class="cat-dot" data-category="{{ block.category }}"></span>{{ block.label }}
           <form method="post" action="{{ url_for('schedule_remove') }}">
             <input type="hidden" name="index" value="{{ block.index }}">
             <button type="submit" class="remove">remove</button>
@@ -24,31 +24,41 @@
   {% endfor %}
 </div>
 
-<div class="card">
+<div class="panel">
   <h2>Add a block</h2>
-  <form method="post" action="{{ url_for('schedule_add') }}" class="inline">
+  <form method="post" action="{{ url_for('schedule_add') }}">
     <div class="field">
-      <label for="category">Category</label>
-      <input type="text" id="category" name="category" list="categoryList" placeholder="gym, work, meal..." required>
-      <datalist id="categoryList">
-        {% for c in categories %}<option value="{{ c }}">{% endfor %}
-      </datalist>
+      <label>Category</label>
+      <input type="hidden" name="category" id="categoryValue" required>
+      <div class="chip-row" id="categoryChips">
+        {% for c in categories %}
+          <button type="button" class="chip" data-category="{{ c }}" data-value="{{ c }}">{{ c.replace("_", " ")|capitalize }}</button>
+        {% endfor %}
+      </div>
     </div>
     <div class="field">
+      <label>Days</label>
+      <div class="chip-row" id="dayChips">
+        {% for d in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] %}
+          <label class="chip" data-day="{{ d }}">
+            <input type="checkbox" name="days" value="{{ d }}">{{ d }}
+          </label>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="field" style="max-width: 260px;">
       <label for="label">Label</label>
       <input type="text" id="label" name="label" placeholder="Evening lift">
     </div>
-    <div class="field">
-      <label for="days">Days</label>
-      <input type="text" id="days" name="days" placeholder="mon/wed/fri, weekdays, every day" required>
-    </div>
-    <div class="field">
-      <label for="start">Start</label>
-      <input type="text" id="start" name="start" placeholder="7am" required>
-    </div>
-    <div class="field">
-      <label for="end">End</label>
-      <input type="text" id="end" name="end" placeholder="8:15am" required>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <div class="field" style="max-width: 160px;">
+        <label for="start">Start</label>
+        <input type="time" id="start" name="start" required>
+      </div>
+      <div class="field" style="max-width: 160px;">
+        <label for="end">End</label>
+        <input type="time" id="end" name="end" required>
+      </div>
     </div>
     <button type="submit">Add block</button>
   </form>
@@ -59,4 +69,28 @@
 <a href="{{ url_for('schedule_export') }}"><button>Export .ics</button></a>
 <p class="muted">Import into Apple Calendar (File &gt; Import...), Google Calendar (Settings &gt; Import &amp;
   export), or Outlook (File &gt; Open &amp; Export &gt; Import/Export).</p>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll("#categoryChips .chip");
+  var hidden = document.getElementById("categoryValue");
+  chips.forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      chips.forEach(function (c) { c.classList.remove("active"); });
+      chip.classList.add("active");
+      hidden.value = chip.dataset.value;
+    });
+  });
+  document.querySelectorAll("#dayChips .chip").forEach(function (chip) {
+    // <label> already toggles its nested checkbox natively on any click
+    // inside it -- listen for that instead of also toggling it ourselves,
+    // which would double-toggle (net no-op) on every click but the tiny
+    // checkbox square itself.
+    var box = chip.querySelector("input[type=checkbox]");
+    box.addEventListener("change", function () {
+      chip.classList.toggle("active", box.checked);
+    });
+  });
+})();
+</script>
 {% endblock %}

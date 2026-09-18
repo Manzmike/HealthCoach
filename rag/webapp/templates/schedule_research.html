@@ -2,17 +2,18 @@
 {% block title %}Evidence for {{ label }} — HealthCoach{% endblock %}
 {% block content %}
 <h1>What the evidence says about placing "{{ label }}"</h1>
-<p class="muted">Category: {{ category }}</p>
+<p class="lede">Category: {{ category }}</p>
 
 {% for section in sections %}
-  <div class="card">
+  <div class="reading">
     {% if section.no_evidence %}
       <p>No sufficiently relevant evidence was found for this.</p>
-      {% if section.related_html %}{{ section.related_html|safe }}{% endif %}
+      {% if section.related_html %}<div class="marginalia">{{ section.related_html|safe }}</div>{% endif %}
     {% else %}
       {{ section.answer_html|safe }}
     {% endif %}
   </div>
+  {% if not loop.last %}<hr class="rule">{% endif %}
 {% endfor %}
 
 <p><a href="{{ url_for('schedule') }}">&larr; Back to schedule</a></p>

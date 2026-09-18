@@ -2,31 +2,31 @@
 {% block title %}HealthCoach{% endblock %}
 {% block content %}
 <h1>HealthCoach</h1>
-<p class="muted">A local, private front door to your evidence, schedule, symptoms, and labs. Nothing here leaves this machine.</p>
+<p class="lede">A local, private front door to your evidence, schedule, symptoms, and labs. Nothing here leaves this machine.</p>
 
-<div class="status-grid">
-  <a class="status-pill" href="{{ url_for('ask') }}">
-    <span class="label">Ask a question</span>
-    <span class="value">Evidence lookup</span>
+<div class="tile-row">
+  <a class="tile" href="{{ url_for('ask') }}">
+    <span class="tile-label">Ask a question</span>
+    <span class="tile-value">Evidence lookup</span>
   </a>
-  <a class="status-pill" href="{{ url_for('symptoms') }}">
-    <span class="label">Symptom check-in</span>
-    <span class="value">Pick what you're feeling</span>
+  <a class="tile" href="{{ url_for('symptoms') }}">
+    <span class="tile-label">Symptom check-in</span>
+    <span class="tile-value">Pick what you're feeling</span>
   </a>
-  <a class="status-pill" href="{{ url_for('schedule') }}">
-    <span class="label">Schedule</span>
-    <span class="value">{{ "Saved" if has_schedule else "Not built yet" }}</span>
+  <a class="tile" href="{{ url_for('schedule') }}">
+    <span class="tile-label">Schedule</span>
+    <span class="tile-value">{{ "Saved" if has_schedule else "Not built yet" }}</span>
   </a>
-  <a class="status-pill" href="{{ url_for('labs_page') }}">
-    <span class="label">Labs</span>
-    <span class="value">{{ "Values on file" if has_labs else "None recorded" }}</span>
+  <a class="tile" href="{{ url_for('labs_page') }}">
+    <span class="tile-label">Labs</span>
+    <span class="tile-value">{{ "Values on file" if has_labs else "None recorded" }}</span>
   </a>
 </div>
 
-<div class="card">
-  <p><strong>Report:</strong> {{ "available" if report_available else "not created yet" }} &nbsp;·&nbsp;
-     <strong>Profile:</strong> {{ "saved" if profile_saved else "not saved yet" }}</p>
+<div class="panel">
+  <p><strong>Report:</strong> {{ "available" if report_available else "not created yet" }}
+     &nbsp;&nbsp; <strong>Profile:</strong> {{ "saved" if profile_saved else "not saved yet" }}</p>
   <p class="muted">Peptide/nootropic/food catalogs, weekly check-in, and Bevel sharing aren't part of this
-     web app yet -- see <a href="{{ url_for('more') }}">More</a> for the terminal command for each.</p>
+     web app yet — see <a href="{{ url_for('more') }}">More</a> for the terminal command for each.</p>
 </div>
 {% endblock %}

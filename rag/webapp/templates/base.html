@@ -4,19 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}HealthCoach{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <nav class="topnav">
-    <a href="{{ url_for('home') }}" class="brand">HealthCoach</a>
-    <a href="{{ url_for('ask') }}">Ask</a>
-    <a href="{{ url_for('symptoms') }}">Symptoms</a>
-    <a href="{{ url_for('schedule') }}">Schedule</a>
-    <a href="{{ url_for('labs_page') }}">Labs</a>
-    <a href="{{ url_for('more') }}">More</a>
-  </nav>
-  <main class="content">
-    {% block content %}{% endblock %}
-  </main>
+  <div class="app-shell">
+    <nav class="tabindex">
+      <a href="{{ url_for('home') }}" class="brand">HealthCoach</a>
+      <a href="{{ url_for('ask') }}" class="tab{% if request.endpoint == 'ask' %} current{% endif %}">Ask</a>
+      <a href="{{ url_for('symptoms') }}" class="tab{% if request.endpoint == 'symptoms' %} current{% endif %}">Symptoms</a>
+      <a href="{{ url_for('schedule') }}" class="tab{% if request.endpoint and request.endpoint.startswith('schedule') %} current{% endif %}">Schedule</a>
+      <a href="{{ url_for('labs_page') }}" class="tab{% if request.endpoint and request.endpoint.startswith('labs') %} current{% endif %}">Labs</a>
+      <a href="{{ url_for('more') }}" class="tab{% if request.endpoint == 'more' %} current{% endif %}">More</a>
+    </nav>
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
 </body>
 </html>

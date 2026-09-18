@@ -2,27 +2,27 @@
 {% block title %}Labs — HealthCoach{% endblock %}
 {% block content %}
 <h1>Labs</h1>
-<p class="muted">Private, stored only on this machine (rag/.healthcoach/labs.json).</p>
+<p class="lede">Private, stored only on this machine (rag/.healthcoach/labs.json).</p>
 
-{% if error %}<div class="error">{{ error }}</div>{% endif %}
+{% if error %}<div class="notice">{{ error }}</div>{% endif %}
 
 <table>
-  <tr><th>Marker</th><th>Value</th><th>Reference range</th><th>Status</th><th>Date</th><th>Source</th></tr>
+  <tr><th>Marker</th><th class="num">Value</th><th>Reference range</th><th>Status</th><th>Date</th><th>Source</th></tr>
   {% for row in rows %}
     <tr>
       <td>{{ row.name }}</td>
-      <td>{{ row.value }} {{ row.unit }}</td>
-      <td>{{ row.ref_low }}–{{ row.ref_high }} {{ row.ref_unit }}</td>
-      <td class="status-{{ row.status }}">{{ row.status }}</td>
+      <td class="num">{{ row.value }} {{ row.unit }}</td>
+      <td class="muted">{{ row.ref_low }}–{{ row.ref_high }} {{ row.ref_unit }}</td>
+      <td class="status-{{ row.status }}"><span class="status-dot"></span>{{ row.status|capitalize }}</td>
       <td>{{ row.date }}</td>
-      <td>{{ row.source }}</td>
+      <td class="muted">{{ row.source }}</td>
     </tr>
   {% else %}
     <tr><td colspan="6" class="muted">No labs recorded yet.</td></tr>
   {% endfor %}
 </table>
 
-<div class="card">
+<div class="panel">
   <h2>Add a value manually</h2>
   <form method="post" action="{{ url_for('labs_add') }}" class="inline">
     <div class="field">
@@ -44,14 +44,16 @@
       <label for="date">Date</label>
       <input type="date" id="date" name="date">
     </div>
-    <label><input type="checkbox" name="confirm_unit" value="1"> confirm unit override</label>
+    <label style="display:flex; align-items:center; gap:0.4rem;">
+      <input type="checkbox" name="confirm_unit" value="1" style="width:auto;"> confirm unit override
+    </label>
     <button type="submit">Save value</button>
   </form>
 </div>
 
-<div class="card">
+<div class="panel">
   <h2>Import from a lab-report PDF</h2>
-  <p class="muted">Any downloaded PDF -- Function Health, Quest, LabCorp, a hospital portal export. Nothing is
+  <p class="muted">Any downloaded PDF — Function Health, Quest, LabCorp, a hospital portal export. Nothing is
     saved automatically; every match found is shown for you to confirm, edit, or skip.</p>
   <form method="post" action="{{ url_for('labs_import') }}" enctype="multipart/form-data" class="inline">
     <div class="field">
@@ -62,10 +64,10 @@
   </form>
 </div>
 
-<div class="card">
+<div class="panel">
   <h2>Live connector</h2>
   <p class="muted">Function Health and HealthEx are available as Claude Code connectors, but authentication
-    happens in Claude Code itself, not this web app -- run <code>/mcp</code> there and select the provider.
+    happens in Claude Code itself, not this web app — run <code>/mcp</code> there and select the provider.
     Once connected, ask Claude to pull your labs; it records them here the same way manual entry does, shown
     to you before anything is saved.</p>
 </div>
