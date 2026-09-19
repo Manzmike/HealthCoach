@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Supplements & Research — HealthCoach{% endblock %}
+{% block content %}
+<header class="page-header">
+  <div>
+    <p class="eyebrow">Evidence library</p>
+    <h1>Supplements &amp; research</h1>
+    <p class="lede">Browse supplements, peptides, nootropics, and research compounds in one place. Nothing here is an automatic recommendation or dosing plan.</p>
+  </div>
+</header>
+
+<div class="notice" role="note">
+  <strong>How “strong” works:</strong> strong human evidence means at least two unique, on-topic A/B human sources survived the local evidence checks. It describes research coverage, not safety, personal fit, or permission to use something.
+</div>
+
+<form method="get" class="panel research-filters">
+  <div class="form-grid">
+    <div class="field">
+      <label for="family">Research section</label>
+      <select id="family" name="family">
+        <option value="all"{% if selected_family == "all" %} selected{% endif %}>All sections</option>
+        {% for value, label in family_options.items() %}<option value="{{ value }}"{% if selected_family == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="field">
+      <label for="coverage">Evidence coverage</label>
+      <select id="coverage" name="coverage">
+        <option value="all"{% if selected_coverage == "all" %} selected{% endif %}>All coverage levels</option>
+        {% for value, label in coverage_options.items() %}<option value="{{ value }}"{% if selected_coverage == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <label for="researchFilter">Search this catalog</label>
+    <input id="researchFilter" type="search" placeholder="Try creatine, sleep, focus, peptide…" autocomplete="off">
+  </div>
+  <button type="submit" class="quiet">Apply filters</button>
+</form>
+
+<div class="section-heading-row">
+  <div><h2 class="section-title">{{ entries|length }} research topics</h2><p class="muted">Choose a topic to open a source-bound question in Ask.</p></div>
+  <a class="button quiet" href="{{ url_for('supplements', coverage='STRONG') }}">Show strong coverage</a>
+</div>
+
+<div class="research-grid" id="researchGrid">
+  {% for entry in entries %}
+  <article class="panel research-card" data-search="{{ (entry.name ~ ' ' ~ entry.family_label ~ ' ' ~ entry.issues|join(' ') ~ ' ' ~ entry.policy)|lower }}">
+    <div class="section-heading-row research-card-heading">
+      <div><p class="eyebrow">{{ entry.family_label }}</p><h2>{{ entry.name }}</h2></div>
+      <span class="evidence-badge evidence-{{ entry.coverage|lower }}">{{ entry.coverage_label }}</span>
+    </div>
+    <p class="muted">Research queue: {{ entry.queue }}{% if entry.selected %} · In your tracked catalog{% endif %}</p>
+    <div class="tag-row">{% for issue in entry.issues %}<span class="tag">{{ issue }}</span>{% endfor %}</div>
+    {% if entry.policy %}<p><strong>Boundary:</strong> {{ entry.policy }}</p>{% endif %}
+    {% if entry.gate %}<p class="muted"><strong>Review gate:</strong> {{ entry.gate }}</p>{% endif %}
+    <a class="button" href="{{ url_for('ask', question=entry.query) }}">Research this topic</a>
+  </article>
+  {% else %}
+  <div class="panel" role="status"><h2>No topics match those filters.</h2><p class="muted">Try All sections and All coverage levels.</p></div>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var input = document.getElementById("researchFilter");
+  var cards = document.querySelectorAll("#researchGrid [data-search]");
+  input.addEventListener("input", function () {
+    var query = input.value.trim().toLowerCase();
+    cards.forEach(function (card) {
+      card.hidden = query && card.dataset.search.indexOf(query) === -1;
+    });
+  });
+})();
+</script>
+{% endblock %}

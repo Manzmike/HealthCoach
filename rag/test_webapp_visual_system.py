@@ -32,7 +32,7 @@ class _Structure(HTMLParser):
 
 
 class SharedGuiStructureTests(unittest.TestCase):
-    PAGES = ("/ask", "/food", "/meals", "/workouts", "/lifestyle", "/settings", "/setup", "/setup/intake", "/schedule", "/symptoms", "/labs", "/more")
+    PAGES = ("/ask", "/food", "/supplements", "/meals", "/workouts", "/lifestyle", "/settings", "/setup", "/setup/intake", "/schedule", "/symptoms", "/labs", "/more")
 
     def _page(self, path):
         response = app.test_client().get(path)
@@ -54,6 +54,10 @@ class SharedGuiStructureTests(unittest.TestCase):
     def test_settings_marks_itself_as_the_current_page(self):
         _, html = self._page("/settings")
         self.assertIn('href="/settings" class="tab current" aria-current="page"', html)
+
+    def test_supplements_marks_itself_as_the_current_page(self):
+        _, html = self._page("/supplements")
+        self.assertIn('href="/supplements" class="tab current" aria-current="page"', html)
 
     def test_food_and_labs_tables_have_responsive_wrappers_and_column_headers(self):
         for path in ("/food", "/labs"):

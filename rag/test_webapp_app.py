@@ -50,10 +50,18 @@ class _IsolatedState(unittest.TestCase):
 class GetRoutesRenderTests(unittest.TestCase):
     def test_every_get_page_renders_ok(self):
         client = app.test_client()
-        for path in ("/", "/ask", "/symptoms", "/schedule", "/labs", "/more",
+        for path in ("/", "/ask", "/supplements", "/symptoms", "/schedule", "/labs", "/more",
                      "/workouts", "/lifestyle", "/meals"):
             with self.subTest(path=path):
                 self.assertEqual(client.get(path).status_code, 200)
+
+    def test_sidebar_exposes_the_supplements_research_catalog(self):
+        response = app.test_client().get("/supplements")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b">Supplements<", response.data)
+        self.assertIn(b"Peptides", response.data)
+        self.assertIn(b"Nootropics", response.data)
+        self.assertIn(b"Strong human evidence", response.data)
 
 
 class ScheduleRoutesTests(_IsolatedState):

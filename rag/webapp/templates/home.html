@@ -43,6 +43,10 @@
     <span class="tile-label">Food</span>
     <span class="tile-value">Diet gate and evidence-graded foods</span>
   </a>
+  <a class="tile" href="{{ url_for('supplements') }}">
+    <span class="tile-label">Supplements</span>
+    <span class="tile-value">Research supplements, peptides, and nootropics</span>
+  </a>
   <a class="tile" href="{{ url_for('schedule') }}">
     <span class="tile-label">Schedule</span>
     <span class="tile-value">{{ "View saved week" if has_schedule else "Set up your week" }}</span>
@@ -56,8 +60,8 @@
 <div class="panel">
   <p><strong>Report:</strong> {{ "available" if report_available else "not created yet" }}
      &nbsp;&nbsp; <strong>Profile:</strong> {{ "saved" if profile_saved else "not saved yet" }}</p>
-  <p class="muted">Peptide/nootropic catalogs, weekly check-in, and Bevel sharing remain terminal-only — see
-     <a href="{{ url_for('more') }}">More</a> for the command for each.</p>
+  <p class="muted">Browse supplements, peptides, and nootropics from the new <a href="{{ url_for('supplements') }}">Supplements</a> page. Deep source refreshes and Bevel sharing remain available from
+     <a href="{{ url_for('more') }}">More</a>.</p>
   <p><a class="button" href="{{ url_for('settings') }}">Open Settings</a></p>
 </div>
 {% endblock %}

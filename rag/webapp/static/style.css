@@ -151,6 +151,45 @@ body {
   padding: 2.5rem 2rem 4rem;
 }
 
+.research-filters .form-grid { margin-bottom: 0; }
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.research-card { margin: 0; }
+.research-card h2 { font-size: 1.12rem; margin-bottom: 0.2rem; }
+.research-card-heading { align-items: flex-start; gap: 0.75rem; }
+.research-card .button { margin-top: 0.35rem; }
+
+.evidence-badge {
+  display: inline-block;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.evidence-strong { color: var(--normal); border-color: var(--normal); }
+.evidence-weak { color: var(--low); border-color: var(--low); }
+.evidence-none { color: var(--high); border-color: var(--high); }
+.evidence-not_evaluated { color: var(--ink-soft); }
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.75rem 0; }
+.tag {
+  background: var(--accent-soft);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
+  font-size: 0.75rem;
+}
+
 @media (max-width: 720px) {
   .app-shell { flex-direction: column; }
   .tabindex {
@@ -169,6 +208,7 @@ body {
   }
   .tabindex a.tab.current { border-bottom-color: var(--accent); }
   .content { padding: 1.5rem 1.1rem 3rem; }
+  .research-grid { grid-template-columns: 1fr; }
 }
 
 /* --- Type --------------------------------------------------------------- */

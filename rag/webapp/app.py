@@ -235,7 +235,7 @@ def settings():
 @app.route("/ask", methods=["GET", "POST"])
 def ask():
     if request.method == "GET":
-        return render_template("ask.html", question="", sections=None)
+        return render_template("ask.html", question=request.args.get("question", ""), sections=None)
     question = request.form.get("question", "").strip()
     if not question:
         return render_template("ask.html", question="", sections=None)
@@ -274,6 +274,77 @@ def _sections_from_results(results: list[dict], *, with_schedule_block: bool = F
 def _run_question(question: str) -> list[dict]:
     results = coach.answer_question(question, get_stack=_get_stack, load_model=_load_model)
     return _sections_from_results(results, with_schedule_block=True)
+
+
+# --------------------------------------------------------------------------
+# /supplements -- one browser home for supplements and research-only topics
+
+_RESEARCH_FAMILY_LABELS = {
+    "supplement": "Supplements",
+    "peptide": "Peptides",
+    "nootropic": "Nootropics",
+    "gray_market": "Research compounds",
+}
+
+_RESEARCH_COVERAGE_LABELS = {
+    "STRONG": "Strong human evidence",
+    "WEAK": "Limited human evidence",
+    "NONE": "No human evidence found",
+    "NOT_EVALUATED": "Not evaluated yet",
+}
+
+
+def _supplement_entries() -> list[dict]:
+    ledger = CL.load_ledger()
+    ledger_rows = {str(row["id"]): row for row in ledger.get("candidates", [])}
+    entries = []
+    for candidate in (*audit.CATALOG, *audit.PEPTIDE_CATALOG):
+        family = audit.default_ledger_class(candidate)
+        row = ledger_rows.get(candidate.key, {})
+        coverage = str(row.get("last_coverage") or "NOT_EVALUATED").upper()
+        if coverage not in _RESEARCH_COVERAGE_LABELS:
+            coverage = "NOT_EVALUATED"
+        issue_labels = [audit.ISSUES.get(issue, issue.replace("_", " ").title()) for issue in candidate.issues]
+        query = (
+            f"What does the strongest human evidence say about {candidate.name}? "
+            f"Focus on {', '.join(issue_labels) or 'general health'}, benefits, harms, interactions, "
+            "product quality, and what remains unknown. This is research only, not a personal protocol."
+        )
+        entries.append({
+            "id": candidate.key,
+            "name": candidate.name,
+            "family": family,
+            "family_label": _RESEARCH_FAMILY_LABELS.get(family, "Research"),
+            "queue": candidate.queue.replace("Submitted: ", "").replace("Selected: ", ""),
+            "issues": issue_labels,
+            "coverage": coverage,
+            "coverage_label": _RESEARCH_COVERAGE_LABELS[coverage],
+            "selected": bool(row),
+            "use_status": row.get("use_status", "not_in_use"),
+            "policy": candidate.policy or "Research review required",
+            "gate": candidate.gate,
+            "query": query,
+        })
+    return entries
+
+
+@app.route("/supplements")
+def supplements():
+    entries = _supplement_entries()
+    family = request.args.get("family", "all")
+    coverage = request.args.get("coverage", "all")
+    if family != "all":
+        entries = [entry for entry in entries if entry["family"] == family]
+    if coverage != "all":
+        entries = [entry for entry in entries if entry["coverage"] == coverage]
+    return render_template(
+        "supplements.html",
+        entries=entries,
+        selected_family=family,
+        selected_coverage=coverage,
+        family_options=_RESEARCH_FAMILY_LABELS,
+        coverage_options=_RESEARCH_COVERAGE_LABELS,
+    )
 
 
 # --------------------------------------------------------------------------
