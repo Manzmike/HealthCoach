@@ -124,7 +124,7 @@ verification workflow, and remaining limitations. This is decision support, not 
 HealthCoach also has a local browser GUI (`./hc-web`, see [`rag/README.md`](rag/README.md#a-browser-gui-for-weekly-planning))
 for the most-used flows.
 
-▶ **[Watch the full walkthrough](demo/healthcoach-walkthrough.mp4)** (~85s, silent, with title
+▶ **[Watch the full walkthrough](demo/healthcoach-walkthrough.mp4)** (~112s, silent, with title
 cards for each section) — or browse the individual clips below, one per feature.
 
 | | |
