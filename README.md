@@ -130,9 +130,10 @@ cards for each section) — or browse the individual clips below, one per featur
 | | |
 |---|---|
 | **Setup & body model**<br>Private-first setup and the rotating anthropometric body model.<br>![Home and body model walkthrough](demo/01-home-body-model.gif) | **Ask**<br>Ask a question and get a sourced answer from the local evidence library.<br>![Ask a question walkthrough](demo/02-ask.gif) |
-| **Food**<br>Filter the food catalog and attach a source-linked reason before selecting.<br>![Food catalog walkthrough](demo/03-food.gif) | **Schedule**<br>Drag to sketch a block, then check what the evidence says about placing it.<br>![Schedule builder walkthrough](demo/04-schedule.gif) |
-| **Labs**<br>Add a lab value manually or import one from a PDF.<br>![Labs walkthrough](demo/05-labs.gif) | **Settings & symptoms**<br>The settings control center and the symptom check-in.<br>![Settings and symptom check-in walkthrough](demo/06-settings-symptoms.gif) |
-| **More**<br>The terminal bridge — every deeper `./hc` workflow, one command away.<br>![More actions walkthrough](demo/07-more-terminal-bridge.gif) | |
+| **Food**<br>Filter the food catalog and attach a source-linked reason before selecting.<br>![Food catalog walkthrough](demo/03-food.gif) | **Meals**<br>Add one to seven meals and review the week alongside selected foods.<br>![Meals walkthrough](demo/04-meals.gif) |
+| **Workouts**<br>Generate a weekly workout plan and review practical recommendations.<br>![Workouts walkthrough](demo/05-workouts.gif) | **Lifestyle**<br>Compare current and target habits, then analyze the change plan.<br>![Lifestyle walkthrough](demo/06-lifestyle.gif) |
+| **Calendar**<br>Build a weekly schedule and review evidence before exporting it.<br>![Calendar walkthrough](demo/07-calendar.gif) | **Symptoms**<br>Complete the date-based weekly symptom check-in.<br>![Symptoms walkthrough](demo/08-symptoms.gif) |
+| **Settings & labs**<br>Update the control center and add or import lab values.<br>![Settings and labs walkthrough](demo/09-settings-labs.gif) | **More**<br>The terminal bridge — every deeper `./hc` workflow, one command away.<br>![More actions walkthrough](demo/10-more.gif) |
 
 ## The concept
 
