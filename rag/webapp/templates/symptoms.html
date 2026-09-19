@@ -2,12 +2,15 @@
 {% block title %}Symptoms — HealthCoach{% endblock %}
 {% block content %}
 <header class="page-header">
-  <div><p class="eyebrow">Personal context</p><h1>Symptom check-in</h1>
-  <p class="lede">Issue-tag matches and cached evidence are not a diagnosis or medical clearance.</p></div>
+  <div><p class="eyebrow">Personal context</p><h1>Weekly symptoms</h1>
+  <p class="lede">Record what changed during this seven-day window. Flags are advisory and are not a diagnosis.</p></div>
 </header>
 
-{% if show_form %}
+{% include "_week_toolbar.html" %}
+
+{% if editable %}
 <form method="post" action="{{ url_for('symptoms') }}" class="panel">
+  <input type="hidden" name="week_start" value="{{ week_start }}">
   <div class="field" style="max-width: 320px;">
     <label for="filterBox">Type to filter</label>
     <input type="text" id="filterBox" placeholder="e.g. hair, sleep, joints…" autocomplete="off" aria-label="Filter symptoms">
@@ -24,24 +27,27 @@
       {% endif %}
     {% endfor %}
   </div>
-  <button type="submit">Get flags for selected symptoms</button>
+  <div class="field">
+    <label for="symptomNotes">Notes for this week</label>
+    <textarea id="symptomNotes" name="notes" rows="3" placeholder="When did you notice a change?">{{ notes }}</textarea>
+  </div>
+  <button type="submit">Save weekly check-in · Get flags for selected symptoms</button>
 </form>
-{% else %}
-<div class="panel">
-  <h2>No check-in running</h2>
-  <p class="muted">Start a check-in only when you want to enter symptoms. Your selections are used to generate a report and are not a diagnosis.</p>
-  <p><a class="button" href="{{ url_for('symptoms', edit=1) }}">Start a symptom check-in</a></p>
-</div>
 {% endif %}
 
 {% if report_html %}
   <div class="panel reading">
-    <h2>Quick view</h2>
+    <h2>Weekly flags</h2>
     {{ report_html|safe }}
     <details>
       <summary>Show full detail</summary>
       {{ deep_html|safe }}
     </details>
+  </div>
+{% elif not editable %}
+  <div class="panel">
+    <h2>No symptoms saved for this week</h2>
+    <p class="muted">This week is outside its input window. Choose the current week if you need a new check-in.</p>
   </div>
 {% endif %}
 
@@ -54,17 +60,14 @@
     var q = box.value.trim().toLowerCase();
     var groupHeadings = grid.querySelectorAll("[data-group-heading]");
     var labels = grid.querySelectorAll("label[data-label]");
-    labels.forEach(function (el) {
-      el.style.display = !q || el.dataset.label.indexOf(q) !== -1 ? "" : "none";
-    });
+    labels.forEach(function (el) { el.style.display = !q || el.dataset.label.indexOf(q) !== -1 ? "" : "none"; });
     groupHeadings.forEach(function (heading) {
-      var node = heading.nextElementSibling;
-      var anyVisible = false;
+      var node = heading.nextElementSibling, visible = false;
       while (node && !node.hasAttribute("data-group-heading")) {
-        if (node.style.display !== "none") anyVisible = true;
+        if (node.style.display !== "none") visible = true;
         node = node.nextElementSibling;
       }
-      heading.style.display = anyVisible ? "" : "none";
+      heading.style.display = visible ? "" : "none";
     });
   });
 })();

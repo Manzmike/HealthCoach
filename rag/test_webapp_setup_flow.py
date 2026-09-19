@@ -78,12 +78,12 @@ class SetupFlowTests(unittest.TestCase):
         self.assertIn(b"Add a value manually", editing.data)
         self.assertIn(b"Edit labs", normal.data)
 
-    def test_normal_symptom_page_hides_checklist_until_edit_is_requested(self):
+    def test_current_symptom_window_is_editable_without_a_settings_detour(self):
         normal = self.client.get("/symptoms")
         editing = self.client.get("/symptoms?edit=1")
-        self.assertNotIn(b"Get flags for selected symptoms", normal.data)
+        self.assertIn(b"Get flags for selected symptoms", normal.data)
         self.assertIn(b"Get flags for selected symptoms", editing.data)
-        self.assertIn(b"Start a symptom check-in", normal.data)
+        self.assertIn(b"Weekly workspace", normal.data)
 
     def test_finish_setup_marks_setup_complete_and_returns_home(self):
         Setup.mark_step("diet", path=self.setup_path)

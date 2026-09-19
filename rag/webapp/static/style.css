@@ -295,6 +295,31 @@ a:hover { color: var(--ink); }
 .review-card dd { margin: 0; overflow-wrap: anywhere; }
 .review-actions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
 
+/* --- Weekly planning workspace ------------------------------------------ */
+
+.week-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: end; gap: 1rem; margin-bottom: 0.75rem; }
+.week-toolbar h2 { margin: 0; }
+.week-toolbar p { margin-bottom: 0; }
+.week-picker { display: flex; align-items: end; gap: 0.5rem; }
+.week-picker label { margin: 0; }
+.week-picker input { min-width: 9.5rem; }
+.week-nav { display: flex; gap: 0.5rem; }
+.window-note, .readonly-note { border-left: 3px solid var(--accent); color: var(--ink-soft); padding: 0.45rem 0.75rem; margin: 0 0 1.5rem; }
+.readonly-note { border-left-color: var(--low); }
+.choice-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0.45rem; }
+.choice-stack { display: grid; gap: 0.45rem; }
+.choice { display: flex; align-items: center; gap: 0.45rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 0.55rem 0.65rem; margin: 0; }
+.choice input { flex: 0 0 auto; }
+.plan-list { display: grid; gap: 0.65rem; margin: 1rem 0; }
+.plan-item { border-left: 3px solid var(--accent); background: var(--paper); padding: 0.7rem 0.85rem; }
+.plan-item strong, .plan-item span { display: block; }
+.plan-item span { color: var(--ink-soft); font-size: 0.82rem; }
+.plan-item p { margin: 0.3rem 0 0; font-size: 0.9rem; }
+.meal-list { display: grid; gap: 0.8rem; margin-bottom: 1rem; }
+.meal-row { border: 1px solid var(--line); padding: 0.75rem; }
+.meal-row legend { font-family: var(--serif); font-size: 1rem; padding: 0 0.35rem; }
+.meal-row[hidden] { display: none; }
+
 @media (max-width: 820px) {
   .landing-hero { grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr); gap: 1.4rem; }
   .pathway-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -314,6 +339,12 @@ a:hover { color: var(--ink); }
   .body-model { max-height: 360px; }
   .section-heading-row { display: block; }
   .section-heading-row > a { display: inline-block; margin-top: 0.45rem; }
+  .week-toolbar { grid-template-columns: 1fr; align-items: start; }
+  .week-picker { display: grid; grid-template-columns: 1fr auto; align-items: end; }
+  .week-picker label { grid-column: 1 / -1; }
+  .week-picker input { min-width: 0; }
+  .week-nav { justify-content: space-between; }
+  .choice-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 /* --- Panels & structure -------------------------------------------------- */

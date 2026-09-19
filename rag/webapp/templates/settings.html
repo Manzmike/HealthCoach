@@ -33,8 +33,13 @@
   </section>
   <section class="panel">
     <h2>Symptom inputs</h2>
-    <p class="muted">Open a fresh check-in only when you want to enter symptoms.</p>
-    <p><a class="button quiet" href="{{ url_for('symptoms', edit=1) }}">Start symptom check-in</a></p>
+    <p class="muted">Choose a seven-day window and save a dated check-in.</p>
+    <p><a class="button quiet" href="{{ url_for('symptoms', edit=1) }}">Open weekly symptoms</a></p>
+  </section>
+  <section class="panel">
+    <h2>Weekly planning</h2>
+    <p class="muted">Set a workout target, improve lifestyle habits, or plan one to seven meals.</p>
+    <p><a class="button quiet" href="{{ url_for('workouts') }}">Workouts</a> <a class="button quiet" href="{{ url_for('lifestyle') }}">Lifestyle</a> <a class="button quiet" href="{{ url_for('meals') }}">Meals</a></p>
   </section>
   <section class="panel">
     <h2>Lab inputs</h2>

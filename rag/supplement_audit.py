@@ -1703,29 +1703,29 @@ WHOLE_FOOD_CATALOG: tuple[Candidate, ...] = (
               ("01_food_inflammation/beets_dietary_nitrate",), ("endurance", "heart"),
               ("beets", "beetroot", "beet root", "beet juice"), policy="FOOD REVIEW"),
     Candidate("oregano", "Oregano as a culinary herb", QUEUE_WHOLE_FOOD,
-              ("01_food_inflammation/oregano",), ("heart", "gi"),
-              ("origanum vulgare",), policy="FOOD REVIEW; OIL/EXTRACT IS A DIFFERENT FORM"),
+              ("01_food_inflammation/oregano", "01_food_inflammation/food_families/herb_spice_cocoa"), ("heart", "gi"),
+              ("oregano", "origanum vulgare", "herb", "spice"), policy="FOOD REVIEW; OIL/EXTRACT IS A DIFFERENT FORM; PARENT FAMILY ROUTE IS EXPLICIT"),
     Candidate("saffron_food", "Saffron as a culinary spice", QUEUE_WHOLE_FOOD,
-              ("01_food_inflammation/saffron_food",), ("stress",),
-              ("crocus sativus", "saffron food"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+              ("01_food_inflammation/saffron_food", "01_food_inflammation/food_families/herb_spice_cocoa"), ("stress",),
+              ("crocus sativus", "saffron food", "spice"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM; PARENT FAMILY ROUTE IS EXPLICIT"),
     Candidate("kimchi", "Kimchi / fermented vegetables", QUEUE_WHOLE_FOOD,
               ("01_food_inflammation/fermented_veg_sauerkraut_kimchi",), ("gi", "heart"),
               ("kimchi", "fermented vegetables"), policy="FOOD REVIEW"),
     Candidate("tamarind", "Tamarind fruit or paste", QUEUE_WHOLE_FOOD,
-              ("01_food_inflammation/tamarind",), ("heart", "gi"),
-              ("tamarindus indica", "tamarind pulp"), policy="FOOD REVIEW"),
+              ("01_food_inflammation/tamarind", "01_food_inflammation/food_families/fruit"), ("heart", "gi"),
+              ("tamarindus indica", "tamarind pulp", "fruit"), policy="FOOD REVIEW; PARENT FAMILY ROUTE IS EXPLICIT"),
     Candidate("blueberries", "Blueberries, fresh or frozen", QUEUE_WHOLE_FOOD,
               ("01_food_inflammation/blueberries",), ("heart", "focus"),
               ("blueberries", "blueberry", "vaccinium"), policy="FOOD REVIEW"),
     Candidate("garlic_food", "Garlic as food", QUEUE_WHOLE_FOOD,
-              ("01_food_inflammation/garlic_food",), ("heart",),
-              ("garlic food", "allium sativum", "cooked garlic", "fresh garlic"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+              ("01_food_inflammation/garlic_food", "01_food_inflammation/food_families/herb_spice_cocoa"), ("heart",),
+              ("garlic", "garlic food", "allium sativum", "cooked garlic", "fresh garlic", "herb", "spice"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM; PARENT FAMILY ROUTE IS EXPLICIT"),
     Candidate("ginger_food", "Ginger as food", QUEUE_WHOLE_FOOD,
-              ("01_food_inflammation/ginger_food",), ("gi", "joints"),
-              ("ginger food", "zingiber officinale", "culinary ginger"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
+              ("01_food_inflammation/ginger_food", "01_food_inflammation/food_families/herb_spice_cocoa"), ("gi", "joints"),
+              ("ginger", "ginger food", "zingiber officinale", "culinary ginger", "herb", "spice"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM; PARENT FAMILY ROUTE IS EXPLICIT"),
     Candidate("honey_treats", "Honey as food / treat", QUEUE_WHOLE_FOOD,
-              ("01_food_inflammation/honey_food",), ("cut", "endurance"),
-              ("honey food", "honey consumption"), policy="FOOD/TREAT REVIEW"),
+              ("01_food_inflammation/honey_food", "01_food_inflammation/food_families/honey"), ("cut", "endurance"),
+              ("honey", "honey food", "honey consumption"), policy="FOOD/TREAT REVIEW; PARENT FAMILY ROUTE IS EXPLICIT"),
     Candidate("cinnamon_food", "Cinnamon as a culinary spice", QUEUE_WHOLE_FOOD,
               ("01_food_inflammation/cinnamon_food", "07_supplements/cinnamon_glucose"), ("heart",),
               ("cinnamon food", "ceylon cinnamon", "cinnamomum"), policy="FOOD REVIEW; EXTRACT IS A DIFFERENT FORM"),
@@ -1824,6 +1824,126 @@ EXPANDED_FOOD_GROUP_SPECS_V2: tuple[tuple[str, tuple[str, ...], tuple[str, ...]]
 )
 
 
+# Expanded selector rows can be a cultivar, cut, species, or preparation for which
+# a separate randomized literature does not exist.  Such rows may use a parent
+# food-family corpus, but the route and parent terms must be explicit.  This is
+# deliberately narrower than a free-text/global fallback: the source folder is
+# dedicated to one family and the passage still has to contain one of these terms.
+_FOOD_FAMILY_BY_GROUP = {
+    "whole_fruits_berries_citrus": "fruit",
+    "whole_vegetables_leafy_cruciferous": "vegetable",
+    "whole_grains_starches": "grain",
+    "legumes_pulses_soy": "legume",
+    "nuts_seeds_whole_foods": "nut_seed",
+    "animal_proteins_organs": "animal_protein",
+    "fish_seafood_whole_foods": "seafood",
+    "fermented_dairy_culinary_fats": "dairy_fermented_fat",
+    "herbs_spices_cocoa": "herb_spice_cocoa",
+    "fruit": "fruit",
+    "veg": "vegetable",
+    "herb": "herb_spice_cocoa",
+    "grain": "grain",
+    "legume": "legume",
+    "nut": "nut_seed",
+    "protein": "animal_protein",
+    "seafood": "seafood",
+    "seaveg": "sea_vegetable",
+    "dairyfat": "dairy_fermented_fat",
+}
+_FOOD_FAMILY_BY_KEY = {
+    "honey_treats": "honey",
+    # Seaweed was historically grouped with culinary herbs; keep that legacy
+    # route visible but use the dedicated sea-vegetable family for coverage.
+    "seaweed": "sea_vegetable",
+}
+_FOOD_FAMILY_ALIASES = {
+    "fruit": ("fruit", "whole fruit", "fruit consumption"),
+    "vegetable": ("vegetable", "whole vegetable", "vegetable consumption"),
+    "grain": ("whole grain", "whole grains", "grain consumption"),
+    "legume": ("legume", "pulse", "bean", "lentil"),
+    "nut_seed": ("nut", "nuts", "seed", "seeds"),
+    "animal_protein": ("meat", "poultry", "animal protein", "organ meat"),
+    "seafood": ("fish", "seafood", "fish consumption"),
+    "sea_vegetable": ("seaweed", "sea vegetable", "edible seaweed"),
+    "dairy_fermented_fat": ("dairy", "fermented food", "fermented dairy", "culinary fat"),
+    "herb_spice_cocoa": ("herb", "spice", "cocoa", "culinary herb"),
+}
+_FOOD_PARENT_ALIASES = {
+    "gala_apples": ("apple", "apples"), "fuji_apples": ("apple", "apples"),
+    "honeycrisp_apples": ("apple", "apples"), "granny_smith_apples": ("apple", "apples"),
+    "red_delicious_apples": ("apple", "apples"), "golden_delicious_apples": ("apple", "apples"),
+    "pink_lady_apples": ("apple", "apples"), "cosmic_crisp_apples": ("apple", "apples"),
+    "navel_oranges": ("orange", "oranges"), "valencia_oranges": ("orange", "oranges"),
+    "blood_oranges": ("orange", "oranges"), "mandarins": ("citrus", "orange"),
+    "clementines": ("citrus", "orange"), "bartlett_pears": ("pear", "pears"),
+    "anjou_pears": ("pear", "pears"), "bosc_pears": ("pear", "pears"),
+    "hass_avocados": ("avocado", "avocados"), "red_grapes": ("grape", "grapes"),
+    "green_grapes": ("grape", "grapes"), "mangoes": ("mango", "mangoes"),
+    "mature_coconut_meat": ("coconut", "coconut meat"), "young_coconut": ("coconut",),
+    "curly_kale": ("kale",), "lacinato_kale": ("kale",),
+    "green_cabbage": ("cabbage",), "red_cabbage": ("cabbage",),
+    "napa_cabbage": ("cabbage",), "savoy_cabbage": ("cabbage",),
+    "red_beets": ("beet", "beetroot", "beets"), "golden_beets": ("beet", "beetroot", "beets"),
+    "russet_potatoes": ("potato", "potatoes"), "yukon_gold_potatoes": ("potato", "potatoes"),
+    "red_potatoes": ("potato", "potatoes"), "fingerling_potatoes": ("potato", "potatoes"),
+    "orange_sweet_potatoes": ("sweet potato", "sweet potatoes"),
+    "japanese_sweet_potatoes": ("sweet potato", "sweet potatoes"),
+    "green_bell_peppers": ("bell pepper", "bell peppers"), "red_bell_peppers": ("bell pepper", "bell peppers"),
+    "yellow_bell_peppers": ("bell pepper", "bell peppers"), "orange_bell_peppers": ("bell pepper", "bell peppers"),
+    "white_button_mushrooms": ("mushroom", "mushrooms"), "cremini_mushrooms": ("mushroom", "mushrooms"),
+    "portobello_mushrooms": ("mushroom", "mushrooms"), "shiitake_mushrooms": ("mushroom", "mushrooms"),
+    "oyster_mushrooms": ("mushroom", "mushrooms"), "maitake_mushrooms": ("mushroom", "mushrooms"),
+    "rolled_oats": ("oat", "oats"), "steel_cut_oats": ("oat", "oats"), "oat_groats": ("oat", "oats"),
+    "jasmine_rice": ("rice",), "basmati_rice": ("rice",), "white_quinoa": ("quinoa",),
+    "red_quinoa": ("quinoa",), "black_quinoa": ("quinoa",),
+    "brown_lentils": ("lentil", "lentils"), "green_lentils": ("lentil", "lentils"),
+    "red_lentils": ("lentil", "lentils"), "french_lentils_puy_lentils": ("lentil", "lentils"),
+    "black_lentils_beluga_lentils": ("lentil", "lentils"), "cannellini_beans": ("bean", "beans"),
+    "adzuki_beans": ("bean", "beans"), "mung_beans": ("bean", "beans"), "lima_beans": ("bean", "beans"),
+    "black_eyed_peas": ("pea", "peas"), "green_split_peas": ("pea", "peas"),
+    "yellow_split_peas": ("pea", "peas"), "tempeh": ("soy", "fermented soy"),
+    "cacao_nibs": ("cacao", "cocoa", "dark chocolate"),
+    "chicken_breast_boneless_skinless": ("chicken", "poultry"), "chicken_breast_bone_in": ("chicken", "poultry"),
+    "chicken_thighs_boneless": ("chicken", "poultry"), "chicken_thighs_bone_in": ("chicken", "poultry"),
+    "whole_chicken": ("chicken", "poultry"), "whole_turkey": ("turkey", "poultry"),
+    "turkey_breast": ("turkey", "poultry"), "turkey_thighs": ("turkey", "poultry"),
+    "ground_beef_80_20": ("beef", "red meat"), "ground_beef_90_10": ("beef", "red meat"),
+    "ground_chuck": ("beef", "red meat"), "ribeye_steak": ("beef", "red meat"),
+    "new_york_strip_steak": ("beef", "red meat"), "filet_mignon": ("beef", "red meat"),
+    "pork_chops": ("pork", "red meat"), "pork_loin": ("pork", "red meat"),
+    "pork_tenderloin": ("pork", "red meat"), "ground_pork": ("pork", "red meat"),
+    "lamb_chops": ("lamb", "red meat"), "rack_of_lamb": ("lamb", "red meat"),
+    "leg_of_lamb": ("lamb", "red meat"), "ground_lamb": ("lamb", "red meat"),
+}
+
+
+def _food_family_for_group(group_folder: str) -> str | None:
+    return _FOOD_FAMILY_BY_GROUP.get(group_folder.rsplit("/", 1)[-1])
+
+
+def food_evidence_folders(key: str, group_folder: str) -> tuple[str, ...]:
+    """Return the item, declared group, and explicit parent-family routes."""
+    folders = [f"01_food_inflammation/whole_food_library/{key}"]
+    if group_folder and group_folder not in folders:
+        folders.append(group_folder)
+    family = _FOOD_FAMILY_BY_KEY.get(key) or _food_family_for_group(group_folder)
+    if family:
+        folders.append(f"01_food_inflammation/food_families/{family}")
+    return tuple(dict.fromkeys(folders))
+
+
+def food_evidence_aliases(key: str, display_name: str) -> tuple[str, ...]:
+    """Return exact item terms plus explicit parent/family terms for routing."""
+    aliases = [key.replace("_", " "), display_name.lower()]
+    aliases.extend(_FOOD_PARENT_ALIASES.get(key, ()))
+    for group_folder, _issues, keys in EXPANDED_FOOD_GROUP_SPECS + EXPANDED_FOOD_GROUP_SPECS_V2:
+        if key in keys:
+            family = _FOOD_FAMILY_BY_KEY.get(key) or _food_family_for_group(group_folder)
+            aliases.extend(_FOOD_FAMILY_ALIASES.get(family, ()))
+            break
+    return tuple(dict.fromkeys(alias for alias in aliases if alias))
+
+
 def expanded_food_candidates() -> tuple[Candidate, ...]:
     labels = dict(FOOD_ADDITION_OPTIONS)
     candidates: list[Candidate] = []
@@ -1831,10 +1951,10 @@ def expanded_food_candidates() -> tuple[Candidate, ...]:
         for key in keys:
             label = labels[key]
             plain = label.split("│", 1)[-1].strip()
-            aliases = tuple(dict.fromkeys((key.replace("_", " "), plain.lower())))
+            aliases = food_evidence_aliases(key, plain)
             candidates.append(Candidate(
                 key, plain, QUEUE_WHOLE_FOOD,
-                (f"01_food_inflammation/whole_food_library/{key}",), issues, aliases,
+                food_evidence_folders(key, _group_folder), issues, aliases,
                 policy="WHOLE-FOOD REVIEW; USER-SUPPLIED BENEFIT CLAIMS REQUIRE DIRECT HUMAN SUPPORT",
             ))
     return tuple(candidates)

@@ -17,6 +17,11 @@
       <a href="{{ url_for('home') }}" class="brand" translate="no">HealthCoach</a>
       <a href="{{ url_for('ask') }}" class="tab{% if request.endpoint == 'ask' %} current{% endif %}"{% if request.endpoint == 'ask' %} aria-current="page"{% endif %}>Ask</a>
       <a href="{{ url_for('food') }}" class="tab{% if request.endpoint and request.endpoint.startswith('food') %} current{% endif %}"{% if request.endpoint and request.endpoint.startswith('food') %} aria-current="page"{% endif %}>Food</a>
+      <a href="{{ url_for('meals') }}" class="tab{% if request.endpoint and request.endpoint.startswith('meals') %} current{% endif %}"{% if request.endpoint and request.endpoint.startswith('meals') %} aria-current="page"{% endif %}>Meals</a>
+      <a href="{{ url_for('workouts') }}" class="tab{% if request.endpoint and request.endpoint.startswith('workouts') %} current{% endif %}"{% if request.endpoint and request.endpoint.startswith('workouts') %} aria-current="page"{% endif %}>Workouts</a>
+      <a href="{{ url_for('lifestyle') }}" class="tab{% if request.endpoint and request.endpoint.startswith('lifestyle') %} current{% endif %}"{% if request.endpoint and request.endpoint.startswith('lifestyle') %} aria-current="page"{% endif %}>Lifestyle</a>
+      <a href="{{ url_for('schedule') }}" class="tab{% if request.endpoint and request.endpoint.startswith('schedule') %} current{% endif %}"{% if request.endpoint and request.endpoint.startswith('schedule') %} aria-current="page"{% endif %}>Calendar</a>
+      <a href="{{ url_for('symptoms') }}" class="tab{% if request.endpoint == 'symptoms' %} current{% endif %}"{% if request.endpoint == 'symptoms' %} aria-current="page"{% endif %}>Symptoms</a>
       <a href="{{ url_for('settings') }}" class="tab{% if request.endpoint in ('settings', 'setup') %} current{% endif %}"{% if request.endpoint in ('settings', 'setup') %} aria-current="page"{% endif %}>Settings</a>
       <a href="{{ url_for('more') }}" class="tab{% if request.endpoint == 'more' %} current{% endif %}"{% if request.endpoint == 'more' %} aria-current="page"{% endif %}>More</a>
     </nav>

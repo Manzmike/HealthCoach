@@ -20,6 +20,7 @@ picks up where it left off.
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 from pathlib import Path
 from typing import Any
@@ -32,6 +33,7 @@ OUT_PATH = HERE / "food_evidence.json"
 CURATED_PATH = HERE / "food_curated_evidence.json"
 
 MAX_BULLETS_PER_SIDE = 4
+FOOD_EVIDENCE_SCHEMA_VERSION = "HC_FOOD_EVIDENCE_V3"
 
 _COVERAGE_RANK = {"NONE": 0, "WEAK": 1, "STRONG": 2}
 
@@ -46,19 +48,31 @@ _CURATED = _load_curated_evidence()
 
 
 def _effective_coverage(catalog_key: str, local_coverage: str) -> str:
-    """Coverage-boost only: real curated ABCD citations (whole_foods_evidence_ABCD.xlsx) can
-    raise coverage to STRONG — which lifts the B+ replication cap in _letter_from_tally — but
-    can NEVER supply a favor/harm vote itself. We only have these sources' titles/tiers/URLs,
-    not their full text, so we can't honestly scan them for sentiment the way local full-text
-    hits are scanned. The actual net tally still comes only from what local retrieval finds."""
-    rec = _CURATED.get(catalog_key)
-    if not rec:
-        return local_coverage
-    ab_sources = sum(1 for s in rec.get("sources", []) if s.get("tier") in ("A", "B"))
-    curated_coverage = "STRONG" if ab_sources >= 2 else local_coverage
-    if _COVERAGE_RANK.get(curated_coverage, 0) > _COVERAGE_RANK.get(local_coverage, 0):
-        return curated_coverage
+    """Return only full-text local coverage.
+
+    The curated workbook remains useful as a discovery/source-trail layer, but
+    its title/tier/URL rows do not contain enough text to pass the human-food
+    gate. Citation metadata must never turn a local NONE/WEAK result into
+    STRONG.
+    """
     return local_coverage
+
+
+def route_signature(candidate: audit.Candidate) -> str:
+    payload = {
+        "folders": list(candidate.folders),
+        "aliases": list(candidate.aliases),
+        "name": candidate.name,
+    }
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()[:20]
+
+
+def needs_refresh(record: dict[str, Any], signature: str) -> bool:
+    return (
+        record.get("schema_version") != FOOD_EVIDENCE_SCHEMA_VERSION
+        or record.get("route_signature") != signature
+    )
 
 
 def _sentences(text: str) -> list[str]:
@@ -90,9 +104,81 @@ def _cite(hit: dict) -> str:
     )
 
 
-def evidence_for_food(candidate: audit.Candidate, tbl, emb, reranker) -> dict[str, Any]:
+def _source_identity(hit: dict) -> str:
+    return str(hit.get("doi") or hit.get("source_pdf") or "")
+
+
+def direct_food_hits(candidate: audit.Candidate, rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return one qualifying full-text hit per source from explicit food routes.
+
+    Ranked retrieval is useful for relevance ordering, but its top-k window can
+    crowd out valid family-level papers for a cultivar or cut. This deterministic
+    fallback is deliberately narrower than global search: the row must be in a
+    configured item/family folder, contain an explicit candidate or parent-family
+    alias, carry an A/B grade, and pass the existing human dietary-exposure gate.
+    """
+    selected: dict[str, dict[str, Any]] = {}
+    folders = set(candidate.folders)
+    for row in rows:
+        if str(row.get("folder") or "") not in folders:
+            continue
+        if str(row.get("grade") or "").upper() not in {"A", "B"}:
+            continue
+        if not audit.hit_is_on_topic(candidate, row):
+            continue
+        if not audit.whole_food_human_hit(row):
+            continue
+        key = _source_identity(row)
+        if key:
+            selected.setdefault(key, dict(row, _retrieval_mode="explicit-food-route"))
+    return list(selected.values())
+
+
+def augment_food_evidence(
+    evidence: audit.Evidence, candidate: audit.Candidate, rows: list[dict[str, Any]]
+) -> audit.Evidence:
+    """Merge explicit-route full-text hits and recompute food coverage."""
+    merged: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    # Prefer the explicit-route chunk when ranked search returned another chunk
+    # from the same DOI that lacks the human/dietary signal. Source identity is
+    # still deduplicated; this only chooses the qualifying passage for that source.
+    for hit in [*direct_food_hits(candidate, rows), *evidence.hits]:
+        key = _source_identity(hit)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        merged.append(hit)
+
+    human_sources: dict[str, dict[str, Any]] = {}
+    for hit in merged:
+        if str(hit.get("grade") or "").upper() not in {"A", "B"}:
+            continue
+        if hit.get("folder") not in candidate.folders:
+            continue
+        if not audit.hit_is_on_topic(candidate, hit) or not audit.whole_food_human_hit(hit):
+            continue
+        human_sources.setdefault(_source_identity(hit), hit)
+    count = len(human_sources)
+    coverage = "STRONG" if count >= 2 else "WEAK" if count == 1 else "NONE"
+    grades = [str(hit.get("grade") or "—") for hit in human_sources.values()]
+    best = min(grades, key=lambda value: {"A": 0, "B": 1, "C": 2}.get(value, 9)) if grades else "—"
+    dois = {key for key in human_sources if key.lower().startswith("10.")}
+    return audit.Evidence(
+        coverage, best, count, len(dois),
+        "human dietary-topic evidence retrieved; culinary serving versus extract/form fit still requires passage review"
+        if human_sources else "not established",
+        merged, evidence.hybrid_fallback, evidence.retrieval_notes,
+    )
+
+
+def evidence_for_food(
+    candidate: audit.Candidate, tbl, emb, reranker, indexed_rows: list[dict[str, Any]] | None = None
+) -> dict[str, Any]:
     names = [candidate.name, *candidate.aliases]
     evidence = audit.retrieve_candidate(tbl, emb, reranker, candidate, ["general whole-food nutrition"], "")
+    if indexed_rows is not None:
+        evidence = augment_food_evidence(evidence, candidate, indexed_rows)
     tally = cm._tally_sources(evidence, names)
     coverage = _effective_coverage(candidate.key, evidence.coverage)
     letter, why = cm._letter_from_tally(tally, coverage, is_food=True)
@@ -118,6 +204,8 @@ def evidence_for_food(candidate: audit.Candidate, tbl, emb, reranker) -> dict[st
 
     curated = _CURATED.get(candidate.key)
     return {
+        "schema_version": FOOD_EVIDENCE_SCHEMA_VERSION,
+        "route_signature": route_signature(candidate),
         "display_name": candidate.name,
         "grade": letter,
         "grade_why": why,
@@ -135,6 +223,16 @@ def main() -> int:
     from sentence_transformers import SentenceTransformer
     import coach as HC
 
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--refresh", action="store_true",
+                        help="recompute existing records whose schema or route changed")
+    parser.add_argument("--force", action="store_true",
+                        help="recompute selected records even when their schema/route is current")
+    parser.add_argument("--only", action="append", default=[], metavar="KEY",
+                        help="refresh only these catalog keys; repeat for multiple keys")
+    args = parser.parse_args()
+
     results: dict[str, dict] = {}
     if OUT_PATH.exists():
         results = json.loads(OUT_PATH.read_text())
@@ -142,14 +240,22 @@ def main() -> int:
     emb = SentenceTransformer(HC.EMB_MODEL, device="mps")
     tbl = lancedb.connect(HC.DBDIR).open_table(HC.TABLE)
     reranker = HC.load_reranker()
+    indexed_rows = [dict(row) for row in tbl.search().select(
+        ["folder", "grade", "doi", "source_pdf", "text"]
+    ).limit(1_000_000).to_list()]
 
     catalog = list(audit.WHOLE_FOOD_CATALOG)
+    only = set(args.only)
     for i, c in enumerate(catalog, 1):
-        if c.key in results:
+        if only and c.key not in only:
+            continue
+        if c.key in results and not args.refresh and not args.force:
+            continue
+        if c.key in results and not args.force and not needs_refresh(results[c.key], route_signature(c)):
             continue
         print(f"[{i}/{len(catalog)}] {c.key} ({c.name})...", end=" ", flush=True)
         try:
-            results[c.key] = evidence_for_food(c, tbl, emb, reranker)
+            results[c.key] = evidence_for_food(c, tbl, emb, reranker, indexed_rows)
         except Exception as exc:
             print(f"FAILED: {exc}")
             continue

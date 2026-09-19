@@ -42,16 +42,11 @@ _CURATED_FOOD_EVIDENCE = _load_curated_food_evidence()
 
 
 def _effective_food_coverage(item_id: str, local_coverage: str) -> str:
-    """Coverage-boost only (see food_evidence.py for the full rationale): real curated ABCD
-    citations can raise coverage to STRONG — lifting the B+ replication cap — but never supply
-    a favor/harm vote themselves, since we only have their titles/tiers/URLs, not full text."""
-    rec = _CURATED_FOOD_EVIDENCE.get(item_id)
-    if not rec:
-        return local_coverage
-    ab_sources = sum(1 for s in rec.get("sources", []) if s.get("tier") in ("A", "B"))
-    curated_coverage = "STRONG" if ab_sources >= 2 else local_coverage
-    if _COVERAGE_RANK.get(curated_coverage, 0) > _COVERAGE_RANK.get(local_coverage, 0):
-        return curated_coverage
+    """Return full-text local coverage only.
+
+    Curated citation rows are discovery metadata; without local source text
+    they cannot establish human food coverage or lift a replication cap.
+    """
     return local_coverage
 
 BASELINE_FACTS = (

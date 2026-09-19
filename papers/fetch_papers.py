@@ -705,6 +705,19 @@ ANCHORS.update({
     'fish_eggs':['fish roe','fish eggs','caviar consumption'],
     'gelatin_broth':['bone broth','gelatin food','collagen food'],
 })
+ANCHORS.update({
+    'fruit': ['fruit', 'fruit consumption', 'fruit intake'],
+    'vegetable': ['vegetable', 'vegetable consumption', 'vegetable intake'],
+    'grain': ['whole grain', 'whole grains', 'grain intake'],
+    'legume': ['legume', 'pulse', 'bean', 'lentil'],
+    'nut_seed': ['nuts', 'seeds', 'nut intake'],
+    'animal_protein': ['meat', 'poultry', 'animal protein'],
+    'seafood': ['fish', 'seafood', 'fish intake'],
+    'sea_vegetable': ['seaweed', 'sea vegetable', 'edible seaweed'],
+    'dairy_fermented_fat': ['dairy', 'fermented food', 'yogurt'],
+    'herb_spice_cocoa': ['culinary herb', 'spice', 'cocoa'],
+    'honey': ['honey', 'honey consumption', 'oral honey'],
+})
 def anchor_ok(folder_rel, rec):
     kws = ANCHORS.get(os.path.basename(folder_rel))
     if not kws: return True
@@ -930,7 +943,8 @@ TOPICS = [
   T("01_food_inflammation/oregano", "oregano-food", 5, 10, [
      "oregano culinary consumption human trial",
      "Origanum vulgare food human systematic review",
-     "dietary oregano human health"]),
+     "dietary oregano human health"],
+     also=("01_food_inflammation/food_families/herb_spice_cocoa",)),
   T("01_food_inflammation/saffron_food", "saffron-food", 5, 10, [
      "saffron food consumption human randomized trial",
      "Crocus sativus human systematic review food",
@@ -939,7 +953,8 @@ TOPICS = [
   T("01_food_inflammation/tamarind", "tamarind-food", 5, 10, [
      "tamarind fruit consumption human trial",
      "Tamarindus indica food human systematic review",
-     "tamarind pulp dietary intervention human"], seeds=[("PMC","PMC7050219")]),
+     "tamarind pulp dietary intervention human"],
+     seeds=[("PMC","PMC7050219"), ("PMC","PMC5952527")]),
   T("01_food_inflammation/blueberries", "blueberry-food", 7, 12, [
      "whole blueberry consumption randomized controlled trial humans",
      "blueberries cardiovascular cognition systematic review human",
@@ -949,7 +964,8 @@ TOPICS = [
      "garlic food consumption randomized trial humans",
      "cooked fresh garlic dietary intervention systematic review",
      "Allium sativum food blood pressure human trial"],
-     seeds=[("PMC","PMC2442048"),("PMC","PMC8031974")]),
+     seeds=[("PMC","PMC2442048"),("PMC","PMC8031974"), ("PMC", "PMC4620724")],
+     also=("01_food_inflammation/food_families/herb_spice_cocoa",)),
   T("01_food_inflammation/ginger_food", "ginger-food", 7, 12, [
      "ginger food consumption randomized trial humans nausea",
      "culinary ginger dietary intervention systematic review",
@@ -962,12 +978,14 @@ TOPICS = [
   T("01_food_inflammation/cinnamon_food", "cinnamon-food", 7, 12, [
      "cinnamon food consumption randomized controlled trial humans",
      "culinary cinnamon dietary intervention systematic review",
-     "Ceylon cinnamon food human trial safety"], seeds=[("PMC","PMC8804376")]),
+     "Ceylon cinnamon food human trial safety"], seeds=[("PMC","PMC8804376")],
+     also=("01_food_inflammation/food_families/herb_spice_cocoa",)),
   T("01_food_inflammation/turmeric_food", "turmeric-food", 7, 12, [
      "turmeric food consumption randomized controlled trial humans",
      "culinary turmeric dietary intervention systematic review",
      "Curcuma longa food human trial bioavailability"],
-     seeds=[("MED","35623903"),("MED","39478418")]),
+     seeds=[("MED","35623903"),("MED","39478418")],
+     also=("01_food_inflammation/food_families/herb_spice_cocoa",)),
   T("01_food_inflammation/copper_foods", "copper", 6, 10, [
      "dietary copper status human",
      "copper deficiency review"], aa=False),
@@ -1358,7 +1376,8 @@ TOPICS = [
      "heat acclimatization exercise training",
      "exercise performance in the heat",
      "hydration and endurance in hot humid conditions",
-     "thermoregulation heat stress athletes"], cohort=True, aa=False),
+     "thermoregulation heat stress athletes"], cohort=True, aa=False,
+     seeds=[("PMC", "PMC6543994"), ("PMC", "PMC6890862"), ("PMC", "PMC11569670")]),
   T("02_training_desk/core_abs_training", "core-abs", 8, 12, [
      "core training abdominal muscle activation",
      "trunk stability exercise performance",
@@ -1915,10 +1934,83 @@ TOPICS = [
      "tianeptine abuse dependence case series",
      "tianeptine opioid receptor atypical antidepressant",
      "tianeptine FDA warning exposure"], aa=False),
-  T("08_peptides_gray/ru58841", "ru58841", 5, 16, [
+T("08_peptides_gray/ru58841", "ru58841", 5, 16, [
      "RU58841 topical antiandrogen hair loss",
      "RU58841 systemic absorption safety"], aa=False),
 ]
+
+# Family-level whole-food evidence is used only for explicitly declared
+# varieties/cuts whose literature is normally indexed under the parent food.
+# Each family has its own folder so a generic food paper cannot enter every
+# candidate through the global retrieval fallback.
+WHOLE_FOOD_FAMILY_TOPICS = [
+  T("01_food_inflammation/food_families/fruit", "food-family-fruit", 3, 6, [
+     "whole fruit consumption systematic review human adults",
+     "fruit intake randomized controlled trial human adults",
+     "fruit dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/vegetable", "food-family-vegetable", 3, 6, [
+     "whole vegetable consumption systematic review human adults",
+     "vegetable intake randomized controlled trial human adults",
+     "vegetable dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/grain", "food-family-grain", 3, 6, [
+     "whole grain consumption systematic review human adults",
+     "whole grain intake randomized controlled trial human adults",
+     "whole grain dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/legume", "food-family-legume", 3, 6, [
+     "legume pulse bean consumption systematic review human adults",
+     "legume intake randomized controlled trial human adults",
+     "beans lentils dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/nut_seed", "food-family-nut-seed", 3, 6, [
+     "nuts seeds consumption systematic review human adults",
+     "nut intake randomized controlled trial human adults",
+     "nuts seeds dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/animal_protein", "food-family-animal-protein", 3, 6, [
+     "meat poultry animal protein consumption systematic review human adults",
+     "meat poultry intake randomized controlled trial human adults",
+     "animal protein dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/seafood", "food-family-seafood", 3, 6, [
+     "fish seafood consumption systematic review human adults",
+     "fish seafood intake randomized controlled trial human adults",
+     "seafood dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/sea_vegetable", "food-family-sea-vegetable", 3, 6, [
+     "edible seaweed sea vegetable consumption systematic review human adults",
+     "seaweed intake randomized controlled trial human adults",
+     "seaweed dietary intake meta-analysis human health",
+  ], aa=False, seeds=[("MED", "37545570"), ("MED", "35233943"), ("MED", "32486114")]),
+  T("01_food_inflammation/food_families/dairy_fermented_fat", "food-family-dairy-fermented-fat", 3, 6, [
+     "dairy fermented food culinary fat consumption systematic review human adults",
+     "yogurt fermented dairy intake randomized controlled trial human adults",
+     "dairy fermented food dietary pattern meta-analysis human health",
+  ], aa=False),
+  T("01_food_inflammation/food_families/herb_spice_cocoa", "food-family-herb-spice-cocoa", 3, 6, [
+     "culinary herbs spices cocoa consumption systematic review human adults",
+     "cocoa spice intake randomized controlled trial human adults",
+     "culinary herb dietary intake meta-analysis human health",
+  ], aa=False, seeds=[("DOI", "10.1186/s12263-019-0636-8")]),
+  T("01_food_inflammation/food_families/honey", "food-family-honey", 3, 6, [
+     "oral honey consumption systematic review clinical trials human adults",
+     "honey intake randomized controlled trial human adults",
+     "honey dietary intervention cardiometabolic meta-analysis human adults",
+  ], aa=False, seeds=[("MED", "33552217"), ("MED", "36379223"), ("MED", "29908688")]),
+]
+TOPICS.extend(WHOLE_FOOD_FAMILY_TOPICS)
+
+# Lifestyle questions are distinct from the office-training folder: keep a
+# dedicated behavior route for schedule, sitting, sleep, and work-life prompts.
+TOPICS.append(T(
+    "03_sleep_stress/sedentary_behavior", "sedentary-behavior", 8, 15, [
+        "sedentary behavior interruption intervention systematic review human adults",
+        "breaking up sitting postprandial glucose randomized human adults",
+        "occupational sitting health intervention employees human adults",
+    ], aa=False, seeds=[("PMC", "PMC12732512"), ("PMC", "PMC12380701"), ("PMC", "PMC6985064")],
+))
 
 # Two independent on-topic human papers are the minimum needed for STRONG coverage in the
 # report. Thin foods remain explicit coverage gaps; the acquisition engine never substitutes

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Lifestyle — HealthCoach{% endblock %}
+{% block content %}
+<header class="page-header">
+  <div><p class="eyebrow">Better daily life</p><h1>Lifestyle</h1>
+  <p class="lede">Name what is true now and choose the small changes you want to live toward.</p></div>
+</header>
+{% include "_week_toolbar.html" %}
+
+{% if editable %}
+<form method="post" action="{{ url_for('lifestyle') }}" class="panel">
+  <input type="hidden" name="week_start" value="{{ week_start }}">
+  <div class="form-grid">
+    <fieldset class="field"><legend>Current lifestyle</legend><div class="choice-stack">
+      {% for value, label in habit_options %}<label class="choice"><input type="checkbox" name="current" value="{{ value }}"{% if value in week.lifestyle.current %} checked{% endif %}> {{ label }}</label>{% endfor %}
+    </div></fieldset>
+    <fieldset class="field"><legend>Target lifestyle</legend><div class="choice-stack">
+      {% for value, label in habit_options %}<label class="choice"><input type="checkbox" name="target" value="{{ value }}"{% if value in week.lifestyle.target %} checked{% endif %}> {{ label }}</label>{% endfor %}
+    </div></fieldset>
+  </div>
+  <div class="field"><label for="lifestyleNotes">What would make this week better?</label><textarea id="lifestyleNotes" name="notes" rows="3" placeholder="Describe the change in your own words">{{ week.lifestyle.notes }}</textarea></div>
+  <button type="submit">Save lifestyle goals</button>
+</form>
+{% endif %}
+
+<div class="panel">
+  <div class="section-heading-row"><div><h2 class="section-title">Current calendar</h2><p class="muted">Calendar blocks are included when lifestyle recommendations are analyzed.</p></div><a class="button quiet" href="{{ url_for('schedule', edit=1) }}">Edit calendar</a></div>
+  {% if calendar_blocks %}<ul>{% for block in calendar_blocks %}<li>{{ block.days|join(", ") }} · {{ block.label }} · {{ block.start }}–{{ block.end }}</li>{% endfor %}</ul>{% else %}<p class="muted">No calendar blocks saved yet.</p>{% endif %}
+  <form method="post" action="{{ url_for('lifestyle_analyze') }}"><input type="hidden" name="week_start" value="{{ week_start }}"><button type="submit">Analyze lifestyle and calendar</button></form>
+</div>
+
+{% if analysis_stale %}<div class="notice" role="status">Your lifestyle or calendar changed since the last analysis. Analyze again for current recommendations.</div>{% endif %}
+{% if analysis %}<div class="panel reading"><h2>Lifestyle recommendations</h2><p class="muted">Analyzed {{ analysis.analyzed_at }}.</p>{% for section in analysis.sections %}<h3>{{ section.topic }}</h3>{% if section.no_evidence %}<p class="muted">No sufficiently relevant evidence was found.</p>{% else %}{{ section.answer_html|safe }}{% endif %}{% endfor %}</div>{% endif %}
+{% endblock %}

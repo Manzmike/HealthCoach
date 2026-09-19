@@ -92,7 +92,7 @@ HealthCoach resumes intake answers embedded inside `HEALTHCOACH_REPORT.md`. `STA
 GROUND ZERO` requires typing `RESET`; even then, the existing report is not replaced until the
 new generation actually begins successfully.
 
-### A browser GUI for the four most-used flows
+### A browser GUI for weekly planning
 
 ```bash
 cd ~/GitHub/HealthCoach/rag
@@ -101,17 +101,21 @@ cd ~/GitHub/HealthCoach/rag
 
 Opens a local web page (`http://127.0.0.1:5231`, your browser only -- nothing leaves this
 machine, and it never binds to anything but loopback) with real checkboxes, a visual weekly
-calendar, and forms in place of the terminal for: asking a question, the symptom check-in, the
-diet-gated food catalog, the schedule builder (with a one-click `.ics` export), and labs. It
+calendar, and forms in place of the terminal for: asking a question, dated weekly symptoms,
+workout generation, lifestyle goals, one-to-seven meal planning, the diet-gated food catalog,
+the schedule builder (with a one-click `.ics` export), and labs. It
 reads and writes the exact same files `./hc` and `coach.py` already use where those flows share
 state; food preferences, drafts, analysis, and weekly selections stay local under `.healthcoach/`.
 Peptide/nootropic catalogs, weekly check-in, Bevel sharing, and source refreshes remain `./hc`
 only; the web app's "More" page lists the terminal command for each.
 
 The browser opens with a two-step setup walkthrough for the diet gate and health priorities.
-After setup, Home shows result pages by default; symptom, schedule, and lab entry controls stay
-hidden until opened from Settings. Settings is also where you edit food inputs or reset the
-walkthrough. Resetting the walkthrough never deletes saved health data.
+After setup, the left sidebar opens the weekly workspace directly. Choose a date to create a
+seven-day window; inputs are editable during that window and read-only afterward. Every planner
+has an explicit Analyze action, and changing inputs makes the previous analysis stale. Weekly
+workspace state is stored locally in `rag/.healthcoach/weekly_workspace.json`; existing Food,
+Schedule, Labs, and symptom logic remains compatible. Settings is still where you edit food
+inputs or reset the walkthrough. Resetting the walkthrough never deletes saved health data.
 
 `LOG THE COMPLETED WEEK` is a three-page keyboard grid. Tab moves through Training, Recovery,
 and Fuel; arrows choose a day and field; Space cycles fixed answers; Enter edits a number; and
@@ -500,6 +504,21 @@ After that finishes, return to the one dashboard and rebuild the report:
 
 You do not need to refresh again for every report. Repeat it only when intentionally updating
 the research library.
+
+### Audit selector evidence coverage
+
+Run the strict offline audit after an acquisition, ingest, or food-evidence refresh:
+
+```bash
+cd ~/GitHub/HealthCoach/rag
+./.venv/bin/python coverage_audit.py --strict --json-out /tmp/healthcoach-coverage.json
+```
+
+The audit reports `STRONG` only when a configured food, workout, or lifestyle target has at
+least two distinct A/B human-relevant sources. `WEAK` means one qualifying source; `NONE`
+means no qualifying source. Citation-only metadata, USDA nutrition rows, animal-only studies,
+and duplicate chunks cannot raise a target to `STRONG`. A strict run exits non-zero if any
+configured target is below `STRONG`, so do not relabel a gap to make the command pass.
 
 ### Refresh the five focus/nootropic topics
 

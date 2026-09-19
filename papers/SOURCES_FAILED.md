@@ -978,3 +978,3487 @@ it is not read by any script.
 - REFERENCE UNRESOLVED | MED:14559057 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
 - REFERENCE UNRESOLVED | MED:16595757 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
 - REFERENCE UNRESOLVED | MED:17469900 | cited by https://www.jayfeldmanwellness.com/why-eat-less-and-exercise-more-is-the-worst-advice-for-fat-loss-and-health/
+- FAIL pdf | A | 10.1002/hsr2.73126 | Effects of Kiwifruit Consumption on Blood Pressure in Adults: A Systematic Revie | no OA PDF resolved
+- FAIL pdf | A | 10.1111/jhn.70337 | Dietary Pattern and Risk of Thyroid Cancer: A Systematic Review | no OA PDF resolved
+- FAIL pdf | A | 10.2196/92139 | Application of Just-in-Time Adaptive Interventions in Dietary Health Management: | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18142299 | Diet, Nutrition, and Rhinosinusitis: A Systematic Review of Dietary Intervention | no OA PDF resolved
+- FAIL pdf | A | 10.1097/gox.0000000000007803 | Carbon Nanodot-enabled Fluorescent Nerve Conduits for Peripheral Nerve Repair: A | no OA PDF resolved
+- FAIL pdf | A | 10.1002/hsr2.73126 | Effects of Kiwifruit Consumption on Blood Pressure in Adults: A Systematic Revie | no OA PDF resolved
+- FAIL pdf | A | 10.1002/advs.202519899 | eQTL Meta-Analysis Reveals Conserved and Population-Specific Regulatory Variatio | no OA PDF resolved
+- FAIL pdf | A | 10.12688/f1000research.180136.2 | Impact of Nutritional and Organoleptic Use of Underutilized Green Leafy Vegetabl | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15152678 | Dietary Green Leafy Vegetables and Cardiovascular Disease Risk: A Systematic Rev | no OA PDF resolved
+- FAIL pdf | A | 10.1111/jhn.70337 | Dietary Pattern and Risk of Thyroid Cancer: A Systematic Review | no OA PDF resolved
+- FAIL pdf | A | 10.2196/92139 | Application of Just-in-Time Adaptive Interventions in Dietary Health Management: | no OA PDF resolved
+- FAIL pdf | B | 10.3390/foods15152733 | Tackling Waste of Fruits and Vegetables in Chilean Households with Tailored Info | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.advnut.2026.100640 | Dietary Patterns and Cardiovascular Diseases in Individuals with Type 2 Diabetes | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15152678 | Dietary Green Leafy Vegetables and Cardiovascular Disease Risk: A Systematic Rev | no OA PDF resolved
+- FAIL pdf | A | 10.12688/f1000research.180136.2 | Impact of Nutritional and Organoleptic Use of Underutilized Green Leafy Vegetabl | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.advnut.2026.100640 | Dietary Patterns and Cardiovascular Diseases in Individuals with Type 2 Diabetes | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18172783 | Vegetable and Fruit Consumption Among Adolescents in the Gulf Cooperation Counci | no OA PDF resolved
+- FAIL pdf | A | 10.2196/92139 | Application of Just-in-Time Adaptive Interventions in Dietary Health Management: | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18101516 | Nutrition Recommendations for People Living After Cancer: A Systematic Review an | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- FAIL pdf | A | 10.2196/92139 | Application of Just-in-Time Adaptive Interventions in Dietary Health Management: | no OA PDF resolved
+- FAIL pdf | A | 10.1111/os.70386 | Chinese Guideline on Risk Management of Osteoporosis in the General Public | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172746 | Effects of a Commercial Fruit, Vegetable and Berry Juice Powder Concentrate on M | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15152678 | Dietary Green Leafy Vegetables and Cardiovascular Disease Risk: A Systematic Rev | no OA PDF resolved
+- FAIL pdf | B | 10.3390/foods15152733 | Tackling Waste of Fruits and Vegetables in Chilean Households with Tailored Info | no OA PDF resolved
+- FAIL pdf | A | 10.2196/92139 | Application of Just-in-Time Adaptive Interventions in Dietary Health Management: | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.pmedr.2026.103440 | Motivational interviewing for health behavior change among young adults in Canad | no OA PDF resolved
+- FAIL pdf | B | 10.1186/s12875-026-03335-0 | Evaluating the outcomes of a community-based health literacy intervention for hy | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172873 | Whole Grain Oats and Barley Products Modify Lipoproteins and Cardiometabolic Ris | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172873 | Whole Grain Oats and Barley Products Modify Lipoproteins and Cardiometabolic Ris | no OA PDF resolved
+- FAIL pdf | B | 10.3389/fnut.2026.1907908 | Whole wheat bread improves postprandial glucose tolerance in adults with prediab | no OA PDF resolved
+- FAIL pdf | A | 10.1097/ede.0000000000001932 | Novel Pooling Method for Nonlinear Cohort Analysis and Meta-analysis Estimates:  | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15030524 | The Slovenian Nutrition Guidelines 2025: A Comparison with the Prior Slovenian F | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172873 | Whole Grain Oats and Barley Products Modify Lipoproteins and Cardiometabolic Ris | no OA PDF resolved
+- FAIL pdf | B | 10.3389/fnut.2026.1907908 | Whole wheat bread improves postprandial glucose tolerance in adults with prediab | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172758 | Whole-Grain Staple Replacement and Cardiometabolic Phenotypes in Adults at High  | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.cdnut.2026.109510 | Metabolic Phenotyping Identifies Responders to Sustainable Healthy Diets: Analys | no OA PDF resolved
+- FAIL pdf | B | 10.2196/91145 | A Web-Based Virtual Environment Behavioral Intervention as Cardiovascular Diseas | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172854 | Sourdough Bread and Baker's Yeast Bread Affect Gut Symptoms and Targeted Gut Mic | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu18172873 | Whole Grain Oats and Barley Products Modify Lipoproteins and Cardiometabolic Ris | no OA PDF resolved
+- FAIL pdf | A | 10.1093/nutrit/nuaf190 | Acute Effects of Non-Oil-Seed Pulses on Parameters of Cardiometabolic Health: A  | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmjnph-2025-001449 | Legume and soy consumption and the risk of hypertension: a systematic review and | no OA PDF resolved
+- FAIL pdf | A | 10.3390/ani16081215 | Chemical Composition Tables of Locally Available Ruminant Feeds in West Africa:  | no OA PDF resolved
+- FAIL pdf | A | 10.1002/fsn3.71365 | Effects of Non-Soy Legumes on Body Weight and Body Composition: A Systematic Rev | no OA PDF resolved
+- FAIL pdf | A | 10.3390/plants15111636 | Physiological and Biochemical Responses of Two Major Legume Crops to Seed Primin | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmjnph-2025-001449 | Legume and soy consumption and the risk of hypertension: a systematic review and | no OA PDF resolved
+- FAIL pdf | A | 10.1093/nutrit/nuaf190 | Acute Effects of Non-Oil-Seed Pulses on Parameters of Cardiometabolic Health: A  | no OA PDF resolved
+- FAIL pdf | A | 10.1002/fsn3.71365 | Effects of Non-Soy Legumes on Body Weight and Body Composition: A Systematic Rev | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s13062-026-00788-2 | Harnessing meta-analysis and artificial intelligence to reveal conserved regulat | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15030524 | The Slovenian Nutrition Guidelines 2025: A Comparison with the Prior Slovenian F | no OA PDF resolved
+- FAIL pdf | A | 10.3389/fendo.2026.1859725 | Effects of breakfast macronutrient composition on postprandial glycemic control  | no OA PDF resolved
+- FAIL pdf | A | 10.1093/nutrit/nuaf190 | Acute Effects of Non-Oil-Seed Pulses on Parameters of Cardiometabolic Health: A  | no OA PDF resolved
+- FAIL pdf | B | 10.1186/s12966-026-01924-x | Implementation and effectiveness of a food education intervention to promote pla | no OA PDF resolved
+- FAIL pdf | A | 10.1002/fsn3.71365 | Effects of Non-Soy Legumes on Body Weight and Body Composition: A Systematic Rev | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s12903-026-08964-6 | From systemic immune dysregulation to oral disease: evidence linking food allerg | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- FAIL pdf | A | 10.21037/tcr-2026-1439 | Dietary risk factors for lung cancer: an umbrella review of systematic review an | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15132329 | Effects of Edible Insect Enrichment of Meat-Based and Meat Analogue Products on  | no OA PDF resolved
+- FAIL pdf | A | 10.3390/ani16142232 | How Nutritionally Sound Is Commercially Available Vegan Pet Food Relative to Mea | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmjph-2025-003197 | Ultra-processed food and risk of gastric cancer: a systematic review | no OA PDF resolved
+- FAIL pdf | A | 10.3389/fnut.2026.1797987 | Association between red meat consumption and risk of stroke: a meta-analysis of  | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s12916-026-05028-y | A systematic review of ultra-processed food subtypes and risk of type 2 diabetes | no OA PDF resolved
+- FAIL pdf | A | 10.3390/biology15151288 | Guanidinoacetic Acid as a Dietary Additive for Lambs: A Meta-Analysis on Perform | no OA PDF resolved
+- FAIL pdf | A | 10.1002/fsn3.72136 | Global Distribution and Comparative Resistance Profiles of &lt;i&gt;Escherichia  | no OA PDF resolved
+- FAIL pdf | A | 10.3389/fnut.2026.1797987 | Association between red meat consumption and risk of stroke: a meta-analysis of  | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.psj.2026.107379 | Black soldier fly larvae meal effects on broiler performance, carcass, and meat  | no OA PDF resolved
+- FAIL pdf | A | 10.21037/tcr-2026-1439 | Dietary risk factors for lung cancer: an umbrella review of systematic review an | no OA PDF resolved
+- FAIL pdf | A | 10.1002/vms3.70960 | META-Analysis of the Relationship Between c.282C&gt;G Polymorphism of the CAST G | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15091545 | Utilizing Apple Pomace in Meat Products: A Systematic Review and Meta-Analysis | no OA PDF resolved
+- FAIL pdf | A | 10.1002/vms3.70857 | A Systematic Review and Meta-Analysis on Campylobacter Species Prevalence in Chi | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- FAIL pdf | A | 10.1096/fj.202600792r | Dietary Intake of Animal and Plant-Based Protein on Adiposity Measurements and B | no OA PDF resolved
+- FAIL pdf | A | 10.1111/jhn.70331 | Comparison of Olive Versus Fish Oil Based Parenteral Nutrition and Clinical Outc | no OA PDF resolved
+- FAIL pdf | A | 10.1111/jhn.70337 | Dietary Pattern and Risk of Thyroid Cancer: A Systematic Review | no OA PDF resolved
+- FAIL pdf | A | 10.3389/fnut.2026.1836928 | Systematic review and meta-analysis of randomized controlled trials assessing th | no OA PDF resolved
+- FAIL pdf | A | 10.1590/acb411326 | The use of xenografts with fish skin for the treatment of burns: a systematic re | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.fawpar.2026.e00344 | Methods for the detection of anisakid material in different food matrices: A sys | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18152483 | DHA Alone, EPA + DHA, EPA + DHA + GLA, and EPA + DHA with or Without Vitamin D D | no OA PDF resolved
+- FAIL pdf | A | 10.4103/ijpvm.ijpvm_393_24 | Diet during Pregnancy and Allergy Onset in the Childhood: A Systematic Literatur | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s10067-026-08247-z | Animal-derived collagen and Islamic religious prescriptions: a systematic review | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.namjnl.2026.100115 | The rise of new approach methodologies (NAMs) for environmental safety assessmen | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3389/fnut.2026.1910648 | Effects of sourdough and yeast fermented breads consumption on glycaem
+- FAIL pdf | B | 10.3390/nu18172873 | Whole Grain Oats and Barley Products Modify Lipoproteins and Cardiometabolic Ris | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | PMC13582765 | Ultra-processed Foods and Athletes: Current Insights on Classification
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.1093/nutrit/nuaf190 | Acute Effects of Non-Oil-Seed Pulses on Parameters of Cardiometabolic
+- FAIL pdf | C | 10.3390/nu18111779 | Brain Foods: A Narrative Review of Food Items and Their Impact on Cognition over | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3389/fnut.2026.1893035 | Exploring finger millet as an underutilised African indigenous grain c
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3389/fnut.2026.1905861 | Are fermented foods safe for human health? A systematic analysis of th
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/nu18172792 | Longitudinal Analysis of Associations Between Dietary Patterns and Inc
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/nu18162698 | Dietary Fiber Intake, Food Sources, and Their Associations with Metabo
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3389/fnut.2026.1839131 | The beef terroir: moving from a commodity and its role in human evolut
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/nu18101625 | Dietary Carbohydrates and ADHD Symptoms: A Systematic Review
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3389/fpubh.2026.1887866 | Unravelling the obesity epidemic among young people in Qatar: a litera
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.1016/j.advnut.2026.100610 | Gut Microbiome-Associated Effects of Plant-Based Diets on Glucose Home
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/nu18122007 | Psychospiritual Profiles Differentiate Dietary and Lifestyle Behaviors
+- FAIL pdf | C | 10.1186/s40795-026-01350-z | Whole and refined grains consumption and social interaction in children: a cross | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.1093/nutrit/nuaf083 | Cereal Fibers and Satiety: A Systematic Review
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/nu18132041 | Ultra-Processed Foods, MASLD, and Cognitive Aging: A Processing-Center
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3389/fnut.2026.1902349 | Rethinking the hepatoprotective potential of vegetarian diets in dysfu
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.7759/cureus.108667 | Ceramides and Type 2 Diabetes: A Scoping Review of Mechanisms, Insulin
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/nu18152548 | Mediterranean Diet and Physical Exercise for Cardiometabolic Health: A
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.3390/foods15172955 | Recognition of Food Processing and Its Association with Consumption Pa
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.1016/s0140-6736(18)31809-9 | Carbohydrate quality and human health: a series of systematic reviews
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.1016/s0140-6736(12)61766-8 | A comparative risk assessment of burden of disease and injury attribut
+- OFF-TOPIC | 01_food_inflammation/food_families/grain | 10.1016/s0140-6736(20)30752-2 | Global burden of 87 risk factors in 204 countries and territories, 199
+- FAIL pdf | A | 10.1111/jhn.70337 | Dietary Pattern and Risk of Thyroid Cancer: A Systematic Review | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s40520-026-03363-x | Fish consumption and brain structure: a comprehensive systematic review of obser | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18111779 | Brain Foods: A Narrative Review of Food Items and Their Impact on Cognition over | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom16050648 | Allergic Anisakiasis: An Integrated Review of Human, Animal and Cellular Evidenc | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s12879-026-13141-9 | Edwardsiella tarda infections in humans: a systematic review of reported cases a | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/seafood | 10.3390/nu18152538 | Omega-3 Polyunsaturated Fatty Acid Formulations in Cardiovascular Prev
+- FAIL pdf | C | 10.3390/nu18172792 | Longitudinal Analysis of Associations Between Dietary Patterns and Incident Suic | no OA PDF resolved
+- FAIL pdf | C | 10.2903/j.efsa.2026.9865 | Frequency of consumption of different fish, crustacean and mollusc species contr | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/seafood | 10.3390/nu18162612 | Estimated Dose-Dependent Associations Between Dietary Intake and Stres
+- FAIL pdf | C | 10.4103/idoj.idoj_160_25 | Unusual Causes of Food-Induced Anaphylaxis - A Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/seafood | 10.3390/nu18162594 | Food-Derived Omega-3 Fatty Acids and Cognitive Aging: Integrating Nutr
+- FAIL pdf | C | 10.1016/j.jacadv.2026.102591 | A Clinician's Guide for Trending Cardiovascular Nutritional Controversies in 202 | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/seafood | PMC13582765 | Ultra-processed Foods and Athletes: Current Insights on Classification
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1093/heapro/daag085 | Understanding how food literacy is characterized and measured in the P
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1111/jhn.70095 | Edible Algae Reduce Blood Pressure in Humans: A Systematic Review and
+- FAIL pdf | C | 10.3390/nu17152448 | Sustainable Nutrition and Food Allergy: A State-of-the-Art Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/molecules31101648 | Food-Derived Antihypertensive Peptides: Mechanisms, Multi-Methodologic
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2026.1766041 | Secret heroes of the sea: brown macroalgae and their bioactive powers-
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1016/j.advnut.2026.100636 | Current Evidence on Dietary Patterns and Consumer Food Choices in the
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods15172990 | Research Progress on Sodium Reduction Strategies for Meat Products
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1186/s40795-026-01365-6 | Evaluation of dietary iron exposure across iron compounds and fortific
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2025.1681512 | Nutrient adequacy and environmental foot-print of Mediterranean, pesco
+- FAIL pdf | C | 10.2903/j.efsa.2024.9112 | Risk assessment of complex organoarsenic species in food | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1111/nbu.70011 | Is There a Specific Role for Fungal Protein Within Food Based Dietary
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods14234165 | Occurrence and Dietary Exposure of PFAS in Singapore: Insights from a
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu16081199 | Sodium and Human Health: What Can Be Done to Improve Sodium Balance be
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.2903/j.efsa.2024.9034 | Update of the risk assessment of brominated phenols and their derivati
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1039/d4ra07277d | Sustainable and biocompatible hybrid materials-based sulfated polysacc
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2023.1193848 | Bioactive compounds for human and planetary health
+- FAIL pdf | C | 10.3390/foods11050714 | Seaweeds as Ingredients to Lower Glycemic Potency of Cereal Foods Synergisticall | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods13071010 | Dairy, Plant, and Novel Proteins: Scientific and Technological Aspects
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.29219/fnr.v68.10489 | Challenges and opportunities when moving food production and consumpti
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods11233858 | Valorization of Local Legumes and Nuts as Key Components of the Medite
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/ijms22083816 | Whole Alga, Algal Extracts, and Compounds as Ingredients of Functional
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu14010194 | Long-Term Space Nutrition: A Scoping Review
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.2903/j.efsa.2024.8640 | Risks for animal and human health related to the presence of polychlor
+- FAIL pdf | C | 10.3390/md20060342 | Phytochemical and Potential Properties of Seaweeds and Their Recent Applications | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph17186528 | The Evolution Road of Seaweed Aquaculture: Cultivation Technologies and the Indu | no OA PDF resolved
+- FAIL pdf | C | 10.3390/md16080250 | Potential Role of Seaweed Polyphenols in Cardiovascular-Associated Disorders | no OA PDF resolved
+- FAIL pdf | C | 10.3390/md17060314 | Integral Utilization of Red Seaweed for Bioactive Production | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18172774 | Assessment of Food Consumption Frequency Among Schoolchildren: Cross-Sectional S | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/nu18122025 | A Cross-Sectional Study of Nutrition Knowledge, Diet Quality, Lifestyl
+- FAIL pdf | C | 10.1002/fsn3.72287 | Consumer Perceptions and Behaviors Toward Fermented Foods: Insights From a Canad | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/foods15162782 | Beyond Composition: Processing-Driven Transformations and Functional T
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.2147/dmso.s632111 | Nutrition Transition, Processed Foods, and Cardiometabolic Risk in Som
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3389/fnut.2026.1789372 | Nutritional interventions for late-life depression: evidence, mechanis
+- FAIL pdf | C | 10.1016/j.advnut.2025.100554 | Current Research in Fermented Foods: Bridging Tradition and Science | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspective on Me | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71887 | Fermented Foods and Beverages of Ethiopia: Substrates, Traditional Preparation T | no OA PDF resolved
+- FAIL pdf | A | 10.1007/s00394-026-04009-4 | Quantitative comparison of food-based dietary guidelines: alignment with the Slo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.1159/000551530 | Inflammation and Chronic Disease: The Mediterranean Diet in Precision
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.1159/000552770 | Lifestyle and Environment Aspects Challenging Kidney Health
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/foods15142471 | Psychology of Eating the Future: Consumer Acceptance, Digital Influenc
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/nu18172882 | Bioavailability of Nutrients from Animal-Derived Foods Versus Other So
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/microorganisms14071482 | From Food Systems to Gut Microbiota: Dietary Substrates, Microbial Exp
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.5720/kjcn.2026.00059 | Development of a simplified NOVA-based scoring tool for assessing ultr
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3389/fpubh.2026.1887866 | Unravelling the obesity epidemic among young people in Qatar: a litera
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/nu18152502 | Nutrition and Hydration Strategies for Heatwave Adaptation: A Narrativ
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.1016/j.fochx.2026.103856 | Diet, the protective bridge connecting nutrition and cardiovascular he
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3389/fnut.2026.1826362 | From tradition to nutrition: wild and cultivated Aymara food plants as
+- OFF-TOPIC | 01_food_inflammation/food_families/dairy_fermented_fat | 10.3390/nu18121991 | Multi-Axis Functional Mechanisms of the Milpa Diet in Obesity: A Scopi
+- FAIL pdf | A | 10.3390/foods15040656 | Three-Tier Plate, Triple Win: Health, Sustainability, and Equity in the Slovenia | no OA PDF resolved
+- FAIL pdf | C | 10.1093/nutrit/nuaf114 | Impact of Fermented Dairy on Gastrointestinal Health and Associated Biomarkers | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.jnha.2026.100942 | Yogurt and human health across history, culture, and science: Lessons for modern | no OA PDF resolved
+- FAIL pdf | C | PMC13580679 | Bioactive Peptides in Probiotic Fermented Foods: Structure-Activity Relationship | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71872 | Fermented Dairy Products as Modulators of the Gut Microbiome: Greek Yogurt as a  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.advnut.2025.100554 | Current Research in Fermented Foods: Bridging Tradition and Science | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fpubh.2026.1799734 | A narrative review of nutritional components, health effects, and disease preven | no OA PDF resolved
+- FAIL pdf | C | 10.3390/foods15112024 | Dairy Bioactive Compounds as Precision Modulators of Gut Microbiota: From Molecu | no OA PDF resolved
+- FAIL pdf | C | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota: A Narrativ | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1907913 | Plant-food components at the microbiota-neuroinflammation interface: h
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fonc.2026.1749287 | The meat processing exposome in Africa: integrating traditional culina
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1859472 | Clinical evidence for microbial-derived polyphenol metabolites in heal
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/ph19081230 | Integrating Precision Nutrition with GLP-1 Receptor Agonist Therapy: M
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/molecules31081353 | Probiotics and Fermented Foods in Human Nutrition
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1111/1750-3841.70039 | Nova fails to appreciate the value of plant-based meat and dairy alter
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1186/s12966-023-01516-z | Adapting the Planetary Health Diet Index for children and adolescents
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/toxics12050318 | Lead Levels in the Most Consumed Mexican Foods: First Monitoring Effor
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu17223506 | Dietary Bioactive Compounds and Their Role in Allergy Prevention: A Co
+- FAIL pdf | C | 10.3390/nu15061436 | The Role of Diet as a Modulator of the Inflammatory Process in the Neurological  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/foods15081301 | Mushrooms as Sustainable Protein Alternatives: Nutritional-Functional
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/antiox12122086 | Diet and Aging: The Role of Polyphenol-Rich Diets in Slow Down the Sho
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.cdnut.2024.104499 | Adaptation of the Diet Quality Questionnaire as a Global Public Good f
+- FAIL pdf | C | 10.3390/foods9050645 | Coumarins in Food and Methods of Their Determination | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu14040823 | Effects of Diet, Lifestyle, Chrononutrition and Alternative Dietary In
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/metabo12010050 | Gut Microbiota Metabolites in Major Depressive Disorder-Deep Insights
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2020.606378 | Goals in Nutrition Science 2020-2025
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu10060737 | Comparative Analysis of the Classification of Food Products in the Mex
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu5093646 | Nutritional recommendations for cardiovascular disease prevention
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/biom12030367 | The Role of Epigenetic Modifications in Human Cancers and the Use of N
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3168/jds.2015-9445 | Invited review: Recommendations for reporting intervention studies on
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1097/00000441-184306120-00021 | A Treatise on Food and Diet, with Observations on the Dietetical Regim
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1907913 | Plant-food components at the microbiota-neuroinflammation interface: h
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu17223506 | Dietary Bioactive Compounds and Their Role in Allergy Prevention: A Co
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fmolb.2025.1607330 | Phytonutrients and their neuroprotective role in brain disorders
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/foods15071115 | Effects of Gingerbread Cookie Enrichment with Native and Supercritical
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2024.1409339 | Phytonutrients in the promotion of healthspan: a new perspective
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/jcm13247541 | Review of Supplements That Patients Commonly Report Using for Dementia
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1080/15502783.2026.2629828 | International Society of Sports Nutrition position stand: effects of d
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.advnut.2023.09.011 | The Role of Diet in the Prevention of Hypertension and Management of B
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/antiox14060725 | Functional and Therapeutic Roles of Plant-Derived Antioxidants in Type
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/ph17070967 | Medicinal Plant Extracts against Cardiometabolic Risk Factors Associat
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2023.1213223 | Diet and lifestyle impact the development and progression of Alzheimer
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2024.1433390 | Practical supplements for prevention and management of migraine attack
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/ijms241310751 | Molecular Aspects of a Diet as a New Pathway in the Prevention and Tre
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/molecules31081353 | Probiotics and Fermented Foods in Human Nutrition
+- FAIL pdf | C | 10.3390/nu15061436 | The Role of Diet as a Modulator of the Inflammatory Process in the Neurological  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.7150/ijbs.98107 | Harnessing the Anti-Inflammatory Properties of Polyphenols in the Trea
+- FAIL pdf | A | 10.1002/fsn3.3856 | Antiobesity effect of healthy food crops and functional foods: A systematic revi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/antiox12020416 | Insights on Dietary Polyphenols as Agents against Metabolic Disorders:
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1002/fsn3.3387 | Fortification of chocolates with high-value-added plant-based substanc
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1007/s11883-023-01165-4 | Natural Sirtuin1 Activators and Atherosclerosis: an Overview
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu14051104 | The Effect of Dietary Interventions on Hypertriglyceridemia: From Publ
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu13041165 | Functional Food and Bioactive Compounds on the Modulation of the Funct
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1002/jcsm.13057 | The beneficial therapeutic effects of plant-derived natural products f
+- FAIL pdf | C | 10.3390/antiox12040903 | The Effect of Bioactive Aliment Compounds and Micronutrients on Non-Alcoholic Fa | no OA PDF resolved
+- FAIL pdf | C | 10.1039/c8fo01997e | The effects of polyphenols and other bioactives on human health | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2017/5812401 | Effects of Polyphenol Intake on Metabolic Syndrome: Current Evidences from Human | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1002/ptr.6419 | Polyphenols: A concise overview on the chemistry, occurrence, and huma
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1038/s41598-018-29032-2 | Impact of Edible Cricket Consumption on Gut Microbiota in Healthy Adul
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu9020117 | Impact of Flavonols on Cardiometabolic Biomarkers: A Meta‐Analysis of
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/ijms21165642 | Anti-Obesity Effects of Polyphenol Intake: Current Status and Future P
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.bbi.2019.04.001 | The effect of blueberry interventions on cognitive performance and moo
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3945/an.110.000117 | Herbal Extracts and Phytochemicals: Plant Secondary Metabolites and th
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3945/jn.110.131490 | The Biological Relevance of Direct Antioxidant Effects of Polyphenols
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1186/s12937-020-00557-5 | Effect of green tea consumption on blood lipids: a systematic review a
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu10101523 | Relationship between Mediterranean Dietary Polyphenol Intake and Obesi
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1371/journal.pone.0165791 | Association between Polyphenol Intake and Hypertension in Adults and O
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1038/nrn2421 | Brain foods: the effects of nutrients on brain function
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1155/2016/6719534 | Antioxidant Intake and Antitumor Therapy: Toward Nutritional Recommend
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1007/s00394-019-01987-6 | Factors affecting intake, metabolism and health benefits of phenolic a
+- FAIL pdf | C | 10.1155/2013/289392 | Cocoa Polyphenols: Can We Consider Cocoa and Chocolate as Potential Functional F | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu5082969 | Plasma and Dietary Antioxidant Status as Cardiovascular Disease Risk F
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.bbadis.2011.10.006 | Antioxidant clinical trials in mild cognitive impairment and Alzheimer
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/s0140-6736(25)01565-x | Ultra-processed foods and human health: the main thesis and the eviden
+- FAIL pdf | C | 10.3390/nu11061425 | Mixed Spices at Culinary Doses Have Prebiotic Effects in Healthy Adults: A Pilot | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.2903/j.efsa.2014.3846 | Scientific Opinion on Dietary Reference Values for selenium
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.ajcnut.2025.101183 | Consuming an unprocessed diet reduces energy intake: a post-hoc analys
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.2196/59227 | Effects of Defatted Rice Bran–Fortified Bread on the Gut Microbiota Co
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2024.1258570 | Effects of wolfberry (Lycium barbarum) consumption on the human plasma
+- FAIL pdf | B | 10.3390/foods14234141 | Variation of Salivary pH After Sweet and Oat Biscuit Intake—A Crossover Randomiz | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1080/10408398.2025.2584482 | Red meat intake and its influences on inflammation and immune function
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.tjnut.2024.10.022 | Pistachio Consumption Increases Macular Pigment Optical Density in Hea
+- FAIL pdf | C | 10.1016/j.cct.2026.108316 | Effects of Pistachio Consumption on Cognition, Cardiometabolic Risk Factors, and | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.nutres.2018.12.004 | Encapsulation of lipids as emulsion-alginate beads reduces food intake
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1186/s12986-026-01122-3 | Effects of regular consumption of a β-glucan-rich oyster mushroom powd
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.54448/ijn26208 | A randomized controlled trial on the efficacy of intermittent fasting
+- FAIL pdf | B | 10.1016/j.jnutbio.2021.108854 | Consumption of 85% cocoa dark chocolate improves mood in association with gut mi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1200/jco.2024.42.16_suppl.e14562 | Impact of urolithin A supplementation, a mitophagy activator on mitoch
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.clnu.2026.106610 | Micronutrient intake and status of adults consuming plant-based meat a
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.tjnut.2023.03.013 | Effects of adding lean red meat to a U.S.-Style Healthy Vegetarian Die
+- FAIL pdf | B | 10.3945/ajcn.115.116178 | Safety and efficacy of cocoa flavanol intake in healthy adults: a randomized, co | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu17071200 | Effects of Blueberry Consumption on Fecal Microbiome Composition and C
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu17122047 | Modulation of Gut Microbiota by Whole Encapsulated Brown Seaweed (Hima
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.tjnut.2024.12.017 | Mode of Action of Psyllium in Reducing Gas Production from Inulin and
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1007/s12602-025-10604-4 | The Effects of Lactobacillus paracasei NB23 on IGF-1, Muscle Function,
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.2196/82436 | Effect of Branched-Chain Amino Acid Supplementation Alone or Combined
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3177/jnsv.72.141 | Verification of the Effect of Heat-Killed Saccharomyces cerevisiae PA
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.2196/81857 | Effects of Allulose vs Aspartame Consumption on Postprandial Glucagon-
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu18060961 | Dietary β-1,3/1,6-Glucan from Baker’s Yeast Supports Upper Respiratory
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1002/mnfr.70334 | Assessing a Panel of Biomarkers in Plasma Reflecting Dietary Intakes:
+- FAIL pdf | C | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the Quality o | no OA PDF resolved
+- FAIL pdf | C | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1159/000552770 | Lifestyle and Environment Aspects Challenging Kidney Health
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu18172837 | Medicine-Food Homology Plants and Bioactive Compounds in Polyendocrine
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1830854 | Association of maternal diet with human milk fatty acid and macronutri
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1080/13880209.2026.2693375 | Rarely reported cases of hepatotoxicity associated with turmeric- and
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1752309 | From diet to disease modulation: the multi-targeted effects of medicin
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2025.1597788 | Beyond seasoning nutrients bioactive ingredients and healthcare effect
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/molecules31020311 | Antidiabetic and Anti-Inflammatory Potential of Zingiberaceae Plants i
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/plants15172694 | Neuroprotective and Neuromodulatory Potential of &lt;i&gt;Valeriana of
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1002/fsn3.71419 | Nutritional Composition, Therapeutic Benefits, and Functional Food Pot
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.bbrep.2026.102610 | The influence of rosmarinic acid on male reproductive health: Biologic
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1111/jhn.70316 | Environmental Performance Indicators Used in Healthcare Foodservices:
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fonc.2026.1749287 | The meat processing exposome in Africa: integrating traditional culina
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2025.1661136 | Nutritional interventions for osteoarthritis: targeting the metabolism
+- FAIL pdf | C | 10.1113/ep093781 | The importance of high-quality heat adaptation research in females | no OA PDF resolved
+- FAIL pdf | A | 10.1080/15502783.2026.2669307 | Carbohydrate supplementation for endurance exercise in the heat: a systematic re | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s12967-026-07992-8 | Performance changes during and post-exercise in combined heat and hypoxia enviro | no OA PDF resolved
+- FAIL pdf | C | 10.3390/metabo16080548 | Creatinine Normalization Over-Corrects Urinary Electrolytes but Not Protein: Imp | no OA PDF resolved
+- FAIL pdf | B | 10.1177/00469580261427681 | Active Heat Acclimation Training Offered Better Results in Thermal Rooms in Basi | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/heat_acclimatization | 10.1113/ep093875 | Beyond single stressors/stimuli in adaptive physiology: Dose-response
+- FAIL pdf | C | 10.3390/ani16162517 | Infrared Thermographic Assessment of Exercise-Induced Changes in Local Surface T | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/heat_acclimatization | 10.3389/fphys.2026.1781446 | A theoretical framework for predicting altitude effects on physical em
+- FAIL pdf | C | PMC12360643 | Guest editorial: Preparation for training in the heat season: key considerations | no OA PDF resolved
+- FAIL pdf | C | 10.1113/ep093359 | Brain strain: Blood flow and metabolism in environmental extremes | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/heat_acclimatization | 10.1016/j.mmr.2026.100064 | Therapeutic hypoxia to protect and revive ischemic heart and brain
+- FAIL pdf | C | 10.3390/ijerph23050549 | Heat-Related Illnesses Among U.S. Agricultural Workers from 2016 to 2024: Conten | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph23050594 | Cardiovascular Exercise Physiology Under Hypoxia, Microgravity, and Heat Stress: | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/heat_acclimatization | 10.3389/fpsyg.2026.1767922 | Agency denied: PADA and the perils of paternalistic dog care
+- FAIL pdf | C | PMC13405708 | Exertional rhabdomyolysis among U.S. active component service members, 2021-2025 | no OA PDF resolved
+- FAIL pdf | C | 10.1055/a-2877-8927 | Palm Cooling's Heart Rate and Thermal Impact on Exercise in Multiple Sclerosis P | no OA PDF resolved
+- FAIL pdf | B | 10.14814/phy2.70981 | Effects of exercise in cool versus hot conditions on pathways of gut permeabilit | no OA PDF resolved
+- FAIL pdf | A | 10.4085/1062-6050-44.3.332 | Preseason Heat-Acclimatization Guidelines for Secondary School Athletics | no OA PDF resolved
+- FAIL pdf | C | 10.1177/19417381211050643 | Effects of Heat Acclimatization, Heat Acclimation, and Intermittent Exercise Hea | no OA PDF resolved
+- FAIL pdf | C | 10.2165/00007256-200737080-00002 | Thermoregulation during Exercise in the Heat | no OA PDF resolved
+- FAIL pdf | C | 10.1111/sms.12409 | Heat acclimatization does not improve VO2max or cycling performance in a cool cl | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/heat_acclimatization | 10.1186/s12970-018-0242-y | ISSN exercise & sports nutrition review update: research & recommendat
+- FAIL pdf | C | 10.1152/ajpregu.1998.275.1.r129 | A physiological strain index to evaluate heat stress | no OA PDF resolved
+- FAIL pdf | C | 10.1111/sms.12408 | Adaptations and mechanisms of human heat acclimation: Applications for competiti | no OA PDF resolved
+- OFF-TOPIC | 02_training_desk/heat_acclimatization | 10.3389/fphys.2014.00073 | Monitoring training status with HR measures: do all roads lead to Rome
+- FAIL pdf | C | 10.1113/jp270880 | CrossTalk opposing view: Heat acclimatization does not improve exercise performa | no OA PDF resolved
+- FAIL pdf | C | 10.1111/sms.12437 | Sprint performance under heat stress: A review | no OA PDF resolved
+- FAIL pdf | C | 10.1080/02640410400005909 | Exercise in the heat: challenges and opportunities | no OA PDF resolved
+- FAIL pdf | C | 10.1123/ijsnem.2018-0256 | Special Environments: Altitude and Heat | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s12966-026-01953-6 | Acute cognitive effects of interruptions to prolonged sitting with brief standin | no OA PDF resolved
+- FAIL pdf | A | 10.3390/metabo16080528 | Acute Effects of Interrupting Prolonged Sitting on Glucose, Insulin and Lipid Me | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s12966-026-01942-9 | Effect of breaking up prolonged sitting with physical activity on executive func | no OA PDF resolved
+- FAIL pdf | A | 10.2196/91820 | Digital Health Technology for Improving Physical Function in Adults With Chronic | no OA PDF resolved
+- FAIL pdf | C | 10.2196/81284 | The Effects of Multi-Theory Model-Based Behavior Change Intervention with Stairc | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s12877-026-07651-z | Sedentary behavior and cognitive impairment risk in older Chinese adults: effect | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18172748 | Lifestyle Medicine as Co-Therapy During Incretin-Based Anti-Obesity Pharmacother | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fpubh.2026.1754818 | Sedentary behavior among university students and its socio-ecological correlates | no OA PDF resolved
+- FAIL pdf | B | 10.2196/73388 | Effects of Using a Smartphone App Combined With Behavior Change Techniques on th | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.jshs.2025.101088 | Short bouts of accumulated exercise: Review and consensus statement on definitio | no OA PDF resolved
+- FAIL pdf | A | 10.3390/healthcare14162644 | The Impact of Martial Arts-Based Fall Training Programs on Health and Well-Being | no OA PDF resolved
+- FAIL pdf | C | 10.2196/82510 | Effects of 5-Minute Light-Intensity Physical Activity Breaks (Sit-Cycling and St | no OA PDF resolved
+- FAIL pdf | C | 10.3390/life16081283 | Moving Beyond Outcome-Based Exercise Studies in Cognitive Aging: A Mechanism-Inf | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph22071133 | Implementation of Behavior Change Theories and Techniques for Physical Activity  | no OA PDF resolved
+- FAIL pdf | B | 10.1186/s12889-026-26484-4 | Micro-exercise breaks every hour: a feasible strategy to improve metabolic healt | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.eclinm.2026.103992 | Weight maintenance after discontinuation of GLP-1 therapies | no OA PDF resolved
+- FAIL pdf | A | 10.1136/bmj.l4570 | Dose-response associations between accelerometry measured physical activity and  | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s12160-016-9830-8 | Just-in-Time Adaptive Interventions (JITAIs) in Mobile Health: Key Components an | no OA PDF resolved
+- FAIL pdf | C | 10.1152/physrev.00022.2022 | Physiology of sedentary behavior | no OA PDF resolved
+- FAIL pdf | C | 10.1037/a0016136 | Effective techniques in healthy eating and physical activity interventions: A me | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1111/1541-4337.12918 | Iodine from brown algae in human nutrition, with an emphasis on bioacc
+- FAIL pdf | A | 10.3390/nu12061606 | Vegans, Vegetarians, and Omnivores: How Does Dietary Choice Influence Iodine Int | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1093/heapro/daag085 | Understanding how food literacy is characterized and measured in the P
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1111/jhn.70095 | Edible Algae Reduce Blood Pressure in Humans: A Systematic Review and
+- FAIL pdf | C | 10.3390/nu17152448 | Sustainable Nutrition and Food Allergy: A State-of-the-Art Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/molecules31101648 | Food-Derived Antihypertensive Peptides: Mechanisms, Multi-Methodologic
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2026.1766041 | Secret heroes of the sea: brown macroalgae and their bioactive powers-
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1016/j.advnut.2026.100636 | Current Evidence on Dietary Patterns and Consumer Food Choices in the
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods15172990 | Research Progress on Sodium Reduction Strategies for Meat Products
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1186/s40795-026-01365-6 | Evaluation of dietary iron exposure across iron compounds and fortific
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2025.1681512 | Nutrient adequacy and environmental foot-print of Mediterranean, pesco
+- FAIL pdf | C | 10.2903/j.efsa.2024.9112 | Risk assessment of complex organoarsenic species in food | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1111/nbu.70011 | Is There a Specific Role for Fungal Protein Within Food Based Dietary
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods14234165 | Occurrence and Dietary Exposure of PFAS in Singapore: Insights from a
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu16081199 | Sodium and Human Health: What Can Be Done to Improve Sodium Balance be
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.2903/j.efsa.2024.9034 | Update of the risk assessment of brominated phenols and their derivati
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1039/d4ra07277d | Sustainable and biocompatible hybrid materials-based sulfated polysacc
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2023.1193848 | Bioactive compounds for human and planetary health
+- FAIL pdf | C | 10.3390/foods11050714 | Seaweeds as Ingredients to Lower Glycemic Potency of Cereal Foods Synergisticall | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods13071010 | Dairy, Plant, and Novel Proteins: Scientific and Technological Aspects
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.29219/fnr.v68.10489 | Challenges and opportunities when moving food production and consumpti
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods11233858 | Valorization of Local Legumes and Nuts as Key Components of the Medite
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/ijms22083816 | Whole Alga, Algal Extracts, and Compounds as Ingredients of Functional
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu14010194 | Long-Term Space Nutrition: A Scoping Review
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.2903/j.efsa.2024.8640 | Risks for animal and human health related to the presence of polychlor
+- FAIL pdf | C | 10.3390/md20060342 | Phytochemical and Potential Properties of Seaweeds and Their Recent Applications | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph17186528 | The Evolution Road of Seaweed Aquaculture: Cultivation Technologies and the Indu | no OA PDF resolved
+- FAIL pdf | C | 10.3390/md16080250 | Potential Role of Seaweed Polyphenols in Cardiovascular-Associated Disorders | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph18094968 | Seaweeds as Valuable Sources of Essential Fatty Acids for Human Nutrition | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.aaf.2022.09.001 | Seaweed farming for food and nutritional security, climate change mitigation and | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.fufo.2022.100142 | Seaweeds, an aquatic plant-based protein for sustainable nutrition - A review | no OA PDF resolved
+- FAIL pdf | A | 10.3390/su13116174 | A Systematic Review on Seaweed Functionality: A Sustainable Bio-Based Material | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.fshw.2015.08.001 | Dietary seaweeds and obesity | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000512971 | Iodine, Seaweed, and the Thyroid | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1007/s10811-016-0974-5 | Algae as nutritional and functional food sources: revisiting our under
+- FAIL pdf | C | 10.1016/j.abb.2020.108364 | Nutraceutical characteristics of the brown seaweed carotenoid fucoxanthin | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1016/j.impact.2022.100441 | Nano- and microplastics: a comprehensive review on their exposure rout
+- FAIL pdf | C | 10.3390/md19040188 | Xanthophylls from the Sea: Algae as Source of Bioactive Carotenoids | no OA PDF resolved
+- FAIL pdf | C | 10.3390/plants12122287 | Seaweeds in Food: Current Trends | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.5772/intechopen.77038 | Role of Vegetables in Human Nutrition and Disease Prevention
+- FAIL pdf | C | 10.3390/nu18101535 | Dietary Dried Laver (Porphyra tenera) Modulates Gut Microbiota Composition and D | no OA PDF resolved
+- FAIL pdf | C | 10.7762/cnr.2026.0003 | Applying traditional K-foods to official development assistance programs for mic | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18081289 | The Effects of Seaweed and Microalgae Supplementation on Exercise Performance an | no OA PDF resolved
+- FAIL pdf | C | 10.1159/000553204 | Carrageenan: Food Additive or Health Concern? A Comprehensive Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/metabo16070485 | Content of Vitamin D&lt;sub&gt;2&lt;/sub&gt; in Alternative Biological
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu18152538 | Omega-3 Polyunsaturated Fatty Acid Formulations in Cardiovascular Prev
+- FAIL pdf | C | 10.3390/ijms27114753 | Brown Seaweeds and Their Bioactive Compounds in Type 2 Diabetes: Mechanisms Unde | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1017/jns.2026.10110 | Precision nutrition in Asian populations: a Multi-omics review of mech
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1016/j.puhip.2026.100846 | Effectiveness of culturally adapted lifestyle intervention package on
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu18020277 | Algae and Algal Protein in Human Nutrition: A Narrative Review of Heal
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu17233774 | Marine-Algal-Derived Postbiotics Modulating the Gut Microbiota-Adipose
+- FAIL pdf | C | 10.1016/j.isci.2026.115647 | Seaweed bioactives: A comprehensive review of their nutritional, medicinal, and  | no OA PDF resolved
+- FAIL pdf | B | 10.3390/md24060213 | Ascophyllan Supplementation Is Safe and Associated with Exploratory Modulation o | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu17122047 | Modulation of Gut Microbiota by Whole Encapsulated Brown Seaweed (&lt;i&gt;Himan | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.2147/dnnd.s608341 | Spermidine in Alzheimer's Disease: Evidence from Animal Models and Hum
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1080/07853890.2026.2637282 | Navigating the potential of algal peptides: health effects, market app
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2025.1682419 | The effects of &lt;i&gt;Lactobacillus&lt;/i&gt; and/or &lt;i&gt;Bifido
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fendo.2026.1880500 | Dietary fibers to boost endogenous GLP-1 secretion and satiety: a scop
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/foods15071145 | The Impact of Alternative Protein Sources on Gut Microbiota: Limitatio
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/biomedicines14051112 | Agaro-Oligosaccharide Supplementation Alters the Gut Microbiota, Revea
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1002/edm2.70228 | The Impact of Macronutrient Ordering on Postprandial Glycaemic Control
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3389/fnut.2026.1750434 | Phlorotannins and glycolipid metabolism: comprehensive regulatory role
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1186/s43556-026-00499-0 | Gut microbiota and aging: current understanding and future perspective
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/ijms160612871 | Fatty Acids Composition of Vegetable Oils and Its Contribution to Diet
+- FAIL pdf | C | 10.1080/00318884.2019.1640533 | Seaweeds as nutraceuticals for health and nutrition | no OA PDF resolved
+- FAIL pdf | C | 10.3390/md14020027 | Emergent Sources of Prebiotics: Seaweeds and Microalgae | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.fshw.2019.08.001 | Seaweed nutraceuticals and their therapeutic role in disease prevention | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/nu10030360 | Protein for Life: Review of Optimal Protein Intake, Sustainable Dietar
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1002/ptr.6419 | Polyphenols: A concise overview on the chemistry, occurrence, and huma
+- FAIL pdf | C | 10.3390/ijerph18094968 | Seaweeds as Valuable Sources of Essential Fatty Acids for Human Nutrition | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1016/j.clnu.2020.11.035 | Intake and adequacy of the vegan diet. A systematic review of the evid
+- FAIL pdf | C | 10.3390/md13085447 | Potential Bioactive Compounds from Seaweed for Diabetes Management | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1079/nrr200374 | Whole grains and human health
+- FAIL pdf | C | 10.1111/nyas.14041 | Excess iodine intake: sources, assessment, and effects on thyroid function | no OA PDF resolved
+- FAIL pdf | C | 10.3390/md17060327 | Prebiotics from Seaweeds: An Ocean of Opportunity? | no OA PDF resolved
+- FAIL pdf | B | 10.3390/md18010008 | Seaweed Secondary Metabolites with Beneficial Health Effects: An Overview of Suc | no OA PDF resolved
+- FAIL pdf | C | 10.3390/md16080250 | Potential Role of Seaweed Polyphenols in Cardiovascular-Associated Disorders | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.fshw.2015.08.001 | Dietary seaweeds and obesity | no OA PDF resolved
+- FAIL pdf | C | 10.3390/cosmetics8010008 | Seaweeds Compounds: An Ecosustainable Source of Cosmetic Ingredients? | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.1093/nutrit/nuaa008 | From carotenoid intake to carotenoid blood and tissue concentrations –
+- OFF-TOPIC | 01_food_inflammation/food_families/sea_vegetable | 10.3390/md17050304 | Microalgae for High-Value Products Towards Human Health and Nutrition
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/jcm15145693 | Effects of Nutritional Supplements on Vascular Function: A Narrative R
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fnut.2026.1907913 | Plant-food components at the microbiota-neuroinflammation interface: h
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18132062 | Observational Assessments of Chicken, Beef, and Seafood Proportions wi
+- FAIL pdf | A | 10.1177/11786388251413660 | The Therapeutic Effect of Garlic Supplements on the Metabolic Profile of Patient | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/nutrit/nuaf238 | Elucidating the Probiotic Potential of Lactobacillus and Bifidobacteri
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fmed.2026.1785577 | Impact of nutritional profile on pain and functionality in patients wi
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s12966-026-01924-x | Implementation and effectiveness of a food education intervention to p
+- FAIL pdf | C | 10.3390/ijerph23040471 | Impact of Micro and Nanoplastics on Reproductive Cancer and the Potential Antica | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18091320 | The Mediterranean Diet and Cardiovascular Protection: Biochemical Mechanisms wit | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18121843 | Effect of Inulin-Type Fructans on Body Composition, Carbohydrate Metab
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1007/s00394-026-04097-2 | Effects of reduced gluten intake through the inclusion of yellow pea-b
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu17233675 | Health-Promoting Potential of the Mediterranean Diet and Challenges fo
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fnut.2026.1878608 | Impact of Mediterranean diet-based nutritional intervention on gluten-
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota:
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s12905-026-04454-7 | The connection between nutrition education, behavior, and body composi
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/ijms27157047 | Nutrition as Modulator of Oxidative Stress in Cancer Prevention and Tr
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s13063-025-09273-z | Nutrition intervention of groceries for Black residents of Boston to s
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18040699 | Nutritional Management of Irritable Bowel Syndrome
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s12889-026-26476-4 | Effect of postoperative coffee consumption on gastrointestinal functio
+- FAIL pdf | C | 10.1093/jn/136.3.716s | Clarifying the Real Bioactive Constituents of Garlic | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jn/136.3.736s | Garlic and Cardiovascular Disease: A Critical Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1017/s0007114508939830 | Food-chain selenium and human health: emphasis on intake
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu9091021 | Effects of Probiotics, Prebiotics, and Synbiotics on Human Health
+- FAIL pdf | C | 10.1093/jn/131.3.989s | Cholesterol-Lowering Effect of Garlic Extracts and Organosulfur Compounds: Human | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2015/401630 | Immunomodulation and Anti-Inflammatory Effects of Garlic Compounds | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1079/bjn2000280 | Selenium in global food systems
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3322/canjclin.56.5.254 | American Cancer Society Guidelines on Nutrition and Physical Activity
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu7010706 | Egg and Egg-Derived Foods: Effects on Human Health and Use as Function
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3945/ajcn.2008.27131 | Food sources of nitrates and nitrites: the physiologic context for pot
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/jn/132.12.3772 | Functional Foods: Benefits, Concerns and Challenges—A Position Paper f
+- FAIL pdf | C | 10.1016/j.jfda.2016.11.003 | Black garlic: A critical review of its production, bioactivity, and application | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1007/s13197-011-0269-4 | Role of nutraceuticals in human health
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fmicb.2016.00979 | Bifidobacteria and Butyrate-Producing Colon Bacteria: Importance and S
+- FAIL pdf | C | 10.3945/jn.115.210427 | Aged Garlic Extract Modifies Human Immunity | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu11081806 | Fermented Foods: Definitions and Characteristics, Impact on the Gut Mi
+- FAIL pdf | C | 10.1093/jn/136.3.864s | Cancer Chemoprevention by Garlic and Garlic-Containing Sulfur and Selenium Compo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s40795-026-01318-z | Development of the Asian Mediterranean Diet and its sensory acceptabil
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18172786 | Nutritional Monitoring and Intervention in Paediatric Inflammatory Bow
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1017/jns.2026.10096 | The impact of dietary interventions on quality of life in adults with
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1021/acs.analchem.5c06769 | Quantitative Food Compounds Enable Dietary Ontology Referencing across
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.7762/cnr.2025.14.2.127 | Development of Nutritional Counseling Materials for ASD Children: Focu
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu17233675 | Health-Promoting Potential of the Mediterranean Diet and Challenges fo
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1016/j.fochx.2026.104044 | Mitigating lipid oxidation in meat products using nano-formulated esse
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18162624 | From Glucosinolate Content to Isothiocyanate Yield: Rethinking &lt;i&g
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fpubh.2026.1762653 | Tackling type 2 diabetes in Qatar: integrating nutrition, physical act
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1177/11786388261426556 | Assessment of Dominant Dietary Patterns in Hemodialysis Patients Using
+- FAIL pdf | C | 10.3390/ijerph23040471 | Impact of Micro and Nanoplastics on Reproductive Cancer and the Potential Antica | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/foods15173024 | Traditional Dairy and Olive Food Preferences Are Associated with Medit
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18132062 | Observational Assessments of Chicken, Beef, and Seafood Proportions wi
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fonc.2026.1749287 | The meat processing exposome in Africa: integrating traditional culina
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu17132247 | Were Our Grandmothers Right? Soup as Medicine-A Systematic Review of P
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s40795-026-01365-6 | Evaluation of dietary iron exposure across iron compounds and fortific
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18081281 | A Descriptive Analysis of Mediterranean Diet Meal Plans Using the Diet
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18010117 | Development of a Meal-Planning Exchange List for Traditional Sweets an
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1016/j.jarlif.2026.100064 | Dietary intake characteristics in older adults: A systematic review of
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/cvr/cvaf218 | The Mediterranean diet and cardiovascular disease
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1017/jns.2026.10136 | Estimated prebiotic intake and depression in US adults: repeated cross
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu17061071 | Development of the Australian Dietary Guidelines Adherence Tool (ADG-A
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fnut.2026.1792521 | A comprehensive multi-evidence framework for network pharmacology-base
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu18081290 | Long-Term Outcomes of Mediterranean-Adapted Crohn's Disease Exclusion
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu12020334 | Defining a Healthy Diet: Evidence for the Role of Contemporary Dietary
+- FAIL pdf | A | 10.1093/jn/137.10.2264 | Does Garlic Reduce Risk of Colorectal Cancer? A Systematic Review , ,3 | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1111/j.1467-3010.2007.00616.x | Carbohydrates and dietary fibre
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu14132641 | Therapeutic Benefits and Dietary Restrictions of Fiber Intake: A State
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1017/s1368980011002515 | Mediterranean diet pyramid today. Science and cultural updates
+- FAIL pdf | C | 10.3389/fimmu.2024.1277074 | Garlic bioactive substances and their therapeutic applications for improving hum | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3322/canjclin.56.5.254 | American Cancer Society Guidelines on Nutrition and Physical Activity
+- FAIL pdf | C | 10.2147/ibpc.s51434 | Potential of garlic (Allium sativum) in lowering high blood pressure: mechanisms | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.2527/jas.2013-6583 | SPECIAL TOPICS — Mitigation of methane and nitrous oxide emissions fro
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/molecules26102959 | Dietary Plant Polyphenols: Effects of Food Processing on Their Content
+- FAIL pdf | C | 10.1039/d1fo03180e | Biological properties and therapeutic applications of garlic and its components | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.4251/wjgo.v4.i7.156 | Carcinoma of the stomach: A review of epidemiology, pathogenesis, mole
+- FAIL pdf | C | 10.1093/jn/132.9.2494 | Effects on the Human Serum Lipoprotein Profile of β-Glucan, Soy Protein and Isof | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/antiox6030070 | Antioxidant Activity of Spices and Their Impact on Human Health: A Rev
+- FAIL pdf | C | 10.3390/antiox10111847 | Garlic (Allium sativum L.) Bioactives and Its Role in Alleviating Oral Pathologi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/1479-5868-5-31 | Relationships between the home environment and physical activity and d
+- FAIL pdf | C | 10.3389/fphar.2022.865801 | Herb and Spices in Colorectal Cancer Prevention and Treatment: A Narrative Revie | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu11071613 | Gut Microbiome: Profound Implications for Diet and Disease
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1111/j.1365-2125.2012.04420.x | Vascular effects of dietary nitrate (as found in green leafy vegetable
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3945/ajcn.2008.27131 | Food sources of nitrates and nitrites: the physiologic context for pot
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1016/j.gfs.2021.100606 | How do food safety concerns affect consumer behaviors and diets in low
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nu14214637 | A Comprehensive Review on Nutraceuticals: Therapy Support and Formulat
+- FAIL pdf | C | 10.1016/j.aninu.2023.04.011 | Potential use of garlic products in ruminant feeding: A review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1016/j.heliyon.2023.e18140 | Origin, dietary exposure, and toxicity of endocrine-disrupting food ch
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1001/jamainternmed.2015.1668 | Mediterranean Diet and Age-Related Cognitive Decline
+- FAIL pdf | C | 10.1021/acsomega.5c11125 | A Comparative Review of Phytochemical Composition, Bioactivity, and Health Impli | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/molecules31172986 | From Plant Chemistry to Reproducible Antidiabetic Products: A Critical
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fphar.2026.1868266 | Medicinal plants as biological and socio-ecological components of One
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/pharmaceutics18020166 | The Conventional and Alternative Therapeutic Approaches in Arterial St
+- OFF-TOPIC | 01_food_inflammation/garlic_food | PMC12556356 | Culinary spices as functional feed additives in aquaculture: Growth, i
+- FAIL pdf | A | 10.1177/11786388251413660 | The Therapeutic Effect of Garlic Supplements on the Metabolic Profile of Patient | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1007/s10787-026-02251-0 | Medicinal plants as alternative and adjunct antimicrobial agents in ea
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.22038/ijbms.2025.84150.18198 | Assessing the efficacy of herbal supplements for managing obesity: A c
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/nano16080483 | Ayurvedic Medicinal Plants and Plant-Derived Extracellular Vesicles: C
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fcvm.2025.1514911 | Medicinal plants administered to control hypertension in Ethiopia: eth
+- FAIL pdf | C | 10.3390/life16010175 | Medicinal Plants and Phytochemicals in Cardioprotection-Mechanistic Pathways and | no OA PDF resolved
+- FAIL pdf | C | 10.3390/antiox13101182 | Chemical Composition and Antioxidant Activity of Six <i>Allium</i> Extracts Usin | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.1186/s13002-025-00793-1 | Ethnobotanical study on medicinal plants used in the Aseer province, S
+- FAIL pdf | C | 10.3390/biomedicines14040947 | Synergistic Interactions Between Medicinal Plant Bioactive and Standard Chemothe | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3389/fphar.2026.1782223 | Organosulfur compounds as dual-action agents: a critical review of ant
+- OFF-TOPIC | 01_food_inflammation/garlic_food | 10.3390/foods13244176 | Phytochemistry, Anti-cancer, and Anti-diabetic Properties of Plant-Bas
+- FAIL pdf | C | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1007/s12035-026-06065-7 | Plant-derived Natural Products in Neurological and Psychiatric Disorde
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1007/s11130-026-01519-8 | Spices and Essential Oils in Food Preservation: From Natural Additives
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1017/s0007114526106448 | Anxiety-metabolism networks in human anorexia nervosa: Responses to ca
+- FAIL pdf | B | 10.1080/15502783.2026.2724102 | Effects of cinnamon supplementation combined with exercise training on anthropom | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3390/nu18142266 | Beyond GLP-1 Agonists: Plant-Derived Bioactive Compounds as Adjunctive
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1016/j.advnut.2026.100611 | Flavonoids
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1002/fsn3.71776 | Innovations in Herbal Functional Beverages: From Green Formulation and
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1093/nutrit/nuaf195 | The Role of Immunological Challenges, Oxidative Stress, and Dietary In
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3390/nu18152496 | From Diet to Dysbiosis: How Nutritional Factors Shape Gut Microbiota a
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1186/s12872-026-05557-7 | Sustainable diets and functional foods for the prevention of cardio-me
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1016/j.advnut.2026.100623 | A Framework for Developing Intake and Use Guidance for Dietary Supplem
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3390/foods15081356 | Polyphenol Composition, Antioxidant Properties, and Health Benefits of
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1186/s13063-025-09273-z | Nutrition intervention of groceries for Black residents of Boston to s
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3389/fimmu.2026.1850656 | Microbiota-targeted therapeutic strategies for elderly-onset rheumatoi
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1002/fsn3.71575 | Obesity and Natural Products: Mechanisms, Therapeutic Potential, and F
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1002/cam4.71242 | Research Advances of the Effects of Food and Medicine Homology Substan
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3390/nu18142394 | Fenugreek Is Superior to Guar Gum, Locust Bean Gum and Tara Gum for Me
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.3390/nu18091320 | The Mediterranean Diet and Cardiovascular Protection: Biochemical Mech
+- FAIL pdf | C | 10.1155/2014/642942 | Cinnamon: A Multifaceted Medicinal Plant | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1007/s11906-018-0812-z | The Global Epidemic of the Metabolic Syndrome
+- OFF-TOPIC | 01_food_inflammation/cinnamon_food | 10.1016/j.jada.2010.03.018 | Advanced Glycation End Products in Foods and a Practical Guide to Thei
+- FAIL pdf | A | 10.1002/ptr.7500 | Zingiberaceae plants/curcumin consumption and multiple health outcomes: An umbre | no OA PDF resolved
+- FAIL pdf | A | 10.1002/ptr.8340 | Curcumin on Human Health: A Comprehensive Systematic Review and Meta-Analysis of | no OA PDF resolved
+- FAIL pdf | C | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu18172837 | Medicine-Food Homology Plants and Bioactive Compounds in Polyendocrine
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs
+- FAIL pdf | C | 10.1080/13880209.2026.2693375 | Rarely reported cases of hepatotoxicity associated with turmeric- and curcuminoi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu18172870 | Targeting Ferroptosis, Pyroptosis, and NRF2 Signaling with Dietary Pol
+- FAIL pdf | C | 10.3390/ani16091355 | A Tolerance Study of Turmeric Extract in Healthy Adult Cats | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18081197 | Turmeric: A Comprehensive Review of Its Botany, Traditional Uses, Phytochemistry | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3389/fnut.2026.1835417 | Benefits of an anti-inflammatory diet compared to a low-residue diet d
+- FAIL pdf | B | 10.4103/ijpvm.ijpvm_276_23 | The Effect of Curcumin Plus Piperine on Mental Health Status, Sleep Quality, and | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1017/s0007114526106448 | Anxiety-metabolism networks in human anorexia nervosa: Responses to ca
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s12872-026-05974-8 | The Impact of Indian Adapted Mediterranean Diet (IAMD) on Dietary Infl
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu18162732 | The Role of Anti-Inflammatory Nutrition in Metabolic Syndrome and Card
+- FAIL pdf | C | 10.3390/nu18081274 | The Role of Dietary Supplements in the Treatment of Endometriosis: A Critical Re | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3389/fendo.2026.1717915 | Integrative approaches to healthy aging in postmenopausal women: the s
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s12872-026-05557-7 | Sustainable diets and functional foods for the prevention of cardio-me
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s11130-026-01519-8 | Spices and Essential Oils in Food Preservation: From Natural Additives
+- FAIL pdf | B | 10.1080/15502783.2025.2568048 | A randomized, placebo-controlled, crossover clinical trial to evaluate the effec | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1002/fsn3.71776 | Innovations in Herbal Functional Beverages: From Green Formulation and
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/toxins18050223 | Nutritional Factors Affecting Uremic Toxin Production
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu18172837 | Medicine-Food Homology Plants and Bioactive Compounds in Polyendocrine
+- FAIL pdf | C | 10.1080/13880209.2026.2693375 | Rarely reported cases of hepatotoxicity associated with turmeric- and curcuminoi | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18172786 | Nutritional Monitoring and Intervention in Paediatric Inflammatory Bowel Disease | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/curroncol33020076 | Culinary Nutrition Interventions for Those Living with and Beyond Canc
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/foods15101647 | Nutrient-Aware Personalized Meal Recommendation Using Structured Food
+- FAIL pdf | A | 10.3390/foods15010060 | Clinical Potential of &lt;i&gt;Curcuma longa&lt;/i&gt; Linn. as Nutraceutical/Di | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s11130-026-01519-8 | Spices and Essential Oils in Food Preservation: From Natural Additives
+- FAIL pdf | C | 10.1002/fsn3.72331 | From Macronutrients to Functional Foods: Nutritional Strategies for Recovery Fol | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu18081197 | Turmeric: A Comprehensive Review of Its Botany, Traditional Uses, Phytochemistry | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1159/000551530 | Inflammation and Chronic Disease: The Mediterranean Diet in Precision
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/jcm15041421 | Culturally Informed Dietary Approaches for Cardiometabolic Risk Reduct
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu17132247 | Were Our Grandmothers Right? Soup as Medicine-A Systematic Review of P
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3389/fonc.2026.1749287 | The meat processing exposome in Africa: integrating traditional culina
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s12602-026-11028-4 | A Multidisciplinary Review of the Microbial, Functional, and Consumer
+- FAIL pdf | C | 10.3389/fnut.2026.1824908 | Targeting cellular senescence through nutritional senotherapeutics in brain agin | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3389/fimmu.2026.1830618 | Dietary patterns, metabolic pathways and metainflammation in hidradeni
+- FAIL pdf | C | 10.3390/nu18030408 | Hepatoprotective Potential of Curcumin in the Prevention of Liver Dysfunction in | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/ijms27157047 | Nutrition as Modulator of Oxidative Stress in Cancer Prevention and Tr
+- FAIL pdf | C | 10.3389/fnut.2026.1752309 | From diet to disease modulation: the multi-targeted effects of medicinal-food ho | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/antiox15010010 | Antioxidants and Exercise Performance: Focus on Mediterranean Diet
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.2478/v10102-012-0009-2 | Toxicity of lead: a review with recent updates
+- FAIL pdf | C | 10.5740/jaoacint.18-0418 | Health Benefits of Culinary Herbs and Spices | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.2337/diaclin.33.4.198 | Legumes: Health Benefits and Culinary Approaches to Increase Intake
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/antiox6030070 | Antioxidant Activity of Spices and Their Impact on Human Health: A Rev
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu9070728 | Dietary Natural Products for Prevention and Treatment of Breast Cancer
+- FAIL pdf | C | 10.3389/fphar.2022.865801 | Herb and Spices in Colorectal Cancer Prevention and Treatment: A Narrative Revie | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1016/j.crfs.2022.09.009 | A review on health benefits of phenolics derived from dietary spices
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/alzrt265 | Dietary regulation of PI3K/AKT/GSK-3β pathway in Alzheimer’s disease
+- FAIL pdf | C | 10.1007/s11010-021-04201-6 | Turmeric and its bioactive constituents trigger cell signaling mechanisms that p | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu13010054 | Dietary Supplements during COVID-19 Outbreak. Results of Google Trends Analysis  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/molecules28104024 | Antioxidant Activity in Extracts from Zingiberaceae Family: Cardamom, Turmeric,  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1155/2017/7467962 | Dietary Polyphenols in the Prevention of Stroke
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/foods12112265 | Sustainable Strategies for Increasing Legume Consumption: Culinary and
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu10101523 | Relationship between Mediterranean Dietary Polyphenol Intake and Obesi
+- FAIL pdf | B | 10.1016/j.jff.2021.104449 | Effects of culinary herbs and spices on obesity: A systematic literature review  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.31665/jfb.2019.6186 | Bioactives from culinary spices and herbs: a review
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s00394-017-1460-9 | Optimal nutrition and the ever-changing dietary landscape: a conferenc
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1371/journal.pone.0198030 | Data-driven analysis of biomedical literature suggests broad-spectrum
+- FAIL pdf | C | 10.1055/s-0035-1546131 | Natural Products for the Treatment of Type 2 Diabetes Mellitus | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1155/2022/4748447 | Ginger for Healthy Ageing: A Systematic Review on Current Evidence of
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1016/j.foodchem.2022.135286 | Gut microbial modulation by culinary herbs and spices
+- FAIL pdf | A | 10.3390/foods15010060 | Clinical Potential of Curcuma longa Linn. as Nutraceutical/Dietary Supplement fo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1038/s41430-025-01622-0 | The effectiveness of dietary intervention in osteoarthritis management
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3389/fnut.2023.1243095 | Dietary intervention improves metabolic levels in patients with type 2
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu16071030 | Effect of a Low-Calorie Dietary Intervention on Liver Health and Body
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1016/s2468-1253(25)00054-8 | Efficacy of dietary interventions in irritable bowel syndrome: a syste
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1016/j.numecd.2023.05.024 | Exercise training, dietary intervention, or combined interventions and
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s12884-025-07185-z | Effective dietary interventions during pregnancy: a systematic review
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1080/10408398.2018.1463966 | Dietary intervention and health in patients with systemic lupus erythe
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1371/journal.pone.0325947 | Can the development of cooking skills influence nutritional status and
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3389/fnut.2022.846591 | Effects of Dietary Intervention on Inflammatory Markers in Metabolic S
+- FAIL pdf | A | 10.3390/nu16234150 | Polyphenol Intervention Ameliorates Non-Alcoholic Fatty Liver Disease: An Update | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1177/15598276251370976 | Culinary Medicine Interventions Among Racial and Ethnic Minority and U
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s40795-019-0293-8 | The effect of culinary interventions (cooking classes) on dietary inta
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s12884-025-07876-7 | Behavior change techniques in pregnancy dietary interventions: a syste
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1080/10408398.2025.2526680 | The effectiveness of online culinary nutrition courses on cooking skil
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu16030464 | The Efficacy of Dietary Interventions in Patients with Gastroesophagea
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s12978-024-01758-5 | Ranking the dietary interventions by their effectiveness in the manage
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1038/s41430-024-01426-8 | Mediterranean-style dietary interventions in adults with cancer: a sys
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1111/1753-0407.13086 | Effect of exercise on hepatic steatosis: Are benefits seen without die
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1016/j.jneb.2024.08.002 | Outcomes of children’s cooking programs: a systematic review of interv
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/healthcare13121417 | Artificial Intelligence Applications to Personalized Dietary Recommend
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1093/nutrit/nuae149 | Do Personalized Nutrition Interventions Improve Dietary Intake and Ris
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s00394-020-02240-1 | Reducing postprandial glucose in dietary intervention studies and the
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu17020336 | Dietary Intake, Mediterranean and Nordic Diet Adherence in Alzheimer’s
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1186/s12967-025-06586-0 | Gut microbiome changes and cancer immunotherapy outcomes associated wi
+- FAIL pdf | A | 10.3390/nu18081197 | Turmeric: A Comprehensive Review of Its Botany, Traditional Uses, Phytochemistry | no OA PDF resolved
+- FAIL pdf | C | 10.1080/13880209.2026.2693375 | Rarely reported cases of hepatotoxicity associated with turmeric- and curcuminoi | no OA PDF resolved
+- FAIL pdf | C | 10.3390/vetsci13070675 | Anticoccidial Efficacy of Solid-Dispersion Formulations Containing &lt;i&gt;Curc | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s12035-026-06065-7 | Plant-derived Natural Products in Neurological and Psychiatric Disorde
+- FAIL pdf | C | 10.1155/jnme/9985642 | A Review of Curcumin in Chronic Disease Management: Anti-Inflammatory Pathways,  | no OA PDF resolved
+- FAIL pdf | A | 10.3390/foods15010060 | Clinical Potential of &lt;i&gt;Curcuma longa&lt;/i&gt; Linn. as Nutraceutical/Di | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18142279 | Curcumin in Atherogenic Dyslipidemia: Linking Preclinical Mechanistic Insights t | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18101534 | A Review of the Properties of Clinically Evaluated Plant-Derived Agents in the T | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/nu18172837 | Medicine-Food Homology Plants and Bioactive Compounds in Polyendocrine
+- FAIL pdf | C | 10.1021/acsomega.6c01375 | Persistence and Dissipation Pattern of Azoxystrobin and Difenoconazole in Turmer | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s13643-026-03225-7 | Effects of curcuminoids on allergic rhinitis diseases: a systematic review and m | no OA PDF resolved
+- FAIL pdf | C | 10.3390/life16081319 | Toxicity of Some Natural Products in the Treatment of Rheumatoid Arthritis | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18030408 | Hepatoprotective Potential of Curcumin in the Prevention of Liver Dysfunction in | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fnut.2026.1752309 | From diet to disease modulation: the multi-targeted effects of medicinal-food ho | no OA PDF resolved
+- FAIL pdf | C | 10.3390/foods15020354 | Recent Progress in Curcumin Extraction, Synthesis, and Applications: A Comprehen | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms26146880 | Adipo-Modulation by Turmeric Bioactive Phenolic Components: From Curcuma Plant t | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.1007/s11259-026-11336-8 | Plant extracts and phytochemicals in canine and feline mammary cancer
+- OFF-TOPIC | 01_food_inflammation/turmeric_food | 10.3390/molecules31172986 | From Plant Chemistry to Reproducible Antidiabetic Products: A Critical
+- FAIL pdf | B | 10.3390/cancers18162565 | Multidimensional LDCT Imaging Endpoints for a Randomized Pilot Phase II Trial of | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- FAIL pdf | C | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the Quality o | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- FAIL pdf | C | 10.3390/cimb47060418 | The Preventive Power of the Mediterranean Diet Against Blue-Light-Induced Retina | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71419 | Nutritional Composition, Therapeutic Benefits, and Functional Food Potential of  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.bbrep.2026.102610 | The influence of rosmarinic acid on male reproductive health: Biologic
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.7759/cureus.109280 | Derivation and Validation of a Food Inflammatory Index Calibrated to B
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/md24070229 | &lt;i&gt;Salicornia europaea&lt;/i&gt; L. as a Marine Bioactive Resour
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s11130-026-01519-8 | Spices and Essential Oils in Food Preservation: From Natural Additives
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1159/000551530 | Inflammation and Chronic Disease: The Mediterranean Diet in Precision
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s40520-025-03199-x | Mediterranean diet and Cantonese cuisine for human health: report from
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/ma19132915 | Nano-Enabled Advances in Tea Tree Essential Oil (&lt;i&gt;Melaleuca al
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/antibiotics14121250 | Essential Oils as Antimicrobial Agents Against WHO Priority Bacterial
+- OFF-TOPIC | 01_food_inflammation/oregano | PMC13582323 | Targeting pancreatic cancer with natural compounds: molecular mechanis
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/ani16162525 | Effects of Dietary &lt;i&gt;Alpinia officinarum&lt;/i&gt; Extract on P
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fvets.2026.1690420 | Does the definition of human ultra-processed foods apply to dog and ca
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu18081281 | A Descriptive Analysis of Mediterranean Diet Meal Plans Using the Diet
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/ijms26188977 | Genome-Based Mexican Diet Bioactives Target Molecular Pathways in HBV,
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/cancers18010073 | Nutritional Impact on Breast Cancer in Menopausal and Post-Menopausal
+- OFF-TOPIC | 01_food_inflammation/oregano | PMC12556356 | Culinary spices as functional feed additives in aquaculture: Growth, i
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fphar.2026.1768006 | Systems-level actions of luteolin in female reproductive disorders: fr
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1111/1750-3841.70039 | Nova fails to appreciate the value of plant-based meat and dairy alter
+- FAIL pdf | C | 10.1002/fsn3.70734 | Dietary Carvacrol Attenuates Cyclophosphamide-Induced Neurotoxicity: Implication | no OA PDF resolved
+- FAIL pdf | C | 10.5740/jaoacint.18-0418 | Health Benefits of Culinary Herbs and Spices | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/antiox6030070 | Antioxidant Activity of Spices and Their Impact on Human Health: A Rev
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/ijms151019183 | Culinary Herbs and Spices: Their Bioactive Properties, the Contributio
+- FAIL pdf | C | 10.3748/wjg.v11.i47.7499 | Bactericidal and anti-adhesive properties of culinary and medicinal plants again | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1186/s12916-016-0730-3 | Nut consumption and risk of cardiovascular disease, total cancer, all-
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.foodchem.2022.135286 | Gut microbial modulation by culinary herbs and spices
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu11061425 | Mixed Spices at Culinary Doses Have Prebiotic Effects in Healthy Adult
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules22010070 | Biological Activities of Essential Oils: From Plant Chemoecology to Tr
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.31665/jfb.2019.6186 | Bioactives from culinary spices and herbs: a review
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1111/nyas.13045 | Sauces, spices, and condiments: definitions, potential benefits, consu
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules21070901 | Polyphenols: Extraction Methods, Antioxidative Action, Bioavailability
+- FAIL pdf | C | 10.3390/nu15234867 | A Scoping Review of the Clinical Evidence for the Health Benefits of Culinary Do | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/ijerph16060942 | The Mediterranean Diet: From an Environment-Driven Food Culture to an
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1039/c9fo02438g | The effect of culinary doses of spices in a high-saturated fat, high-c
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1111/1541-4337.70076 | A comprehensive review on ultraviolet disinfection of spices and culin
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1017/s0029665123003567 | How and why ultra-processed foods harm human health
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s11101-025-10194-7 | Medicinal plants and human health: a comprehensive review of bioactive
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.cpt.2024.07.003 | Spices and culinary herbs for the prevention and treatment of breast c
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s44187-025-00417-3 | A review on the versatile applications of plant-based essential oils i
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu14091981 | Associations between Frequency of Culinary Herb Use and Gut Microbiota
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1111/joim.13728 | Diet strategies for promoting healthy aging and longevity: An epidemio
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s00421-019-04104-x | Mechanisms of vitamin D on skeletal muscle function: oxidative stress,
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/app11135943 | Nutritional, Medicinal, and Cosmetic Value of Bioactive Compounds in B
+- FAIL pdf | C | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the Quality o | no OA PDF resolved
+- FAIL pdf | C | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs | no OA PDF resolved
+- FAIL pdf | C | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, and Relation | no OA PDF resolved
+- FAIL pdf | C | 10.3390/antibiotics14121250 | Essential Oils as Antimicrobial Agents Against WHO Priority Bacterial Pathogens: | no OA PDF resolved
+- FAIL pdf | C | PMC12556356 | Culinary spices as functional feed additives in aquaculture: Growth, immunity, a | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ani16162525 | Effects of Dietary &lt;i&gt;Alpinia officinarum&lt;/i&gt; Extract on Performance | no OA PDF resolved
+- FAIL pdf | C | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms26188977 | Genome-Based Mexican Diet Bioactives Target Molecular Pathways in HBV, HCV, and  | no OA PDF resolved
+- FAIL pdf | A | 10.1111/1541-4337.70355 | Deciphering Pigmented Rice Varieties as Sustainable and Unexplored Valuable Sour | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu15234867 | A Scoping Review of the Clinical Evidence for the Health Benefits of Culinary Do | no OA PDF resolved
+- FAIL pdf | C | 10.1111/1750-3841.70956 | Characterizing the Flavor of New Zealand Native Plants Using Consumer-Derived At | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.cpt.2024.07.003 | Spices and culinary herbs for the prevention and treatment of breast cancer: A c | no OA PDF resolved
+- FAIL pdf | C | 10.3390/life15050812 | Milpa Diet for MASLD in Mesoamerican Populations: Feasibility, Advantages, and F | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.70734 | Dietary Carvacrol Attenuates Cyclophosphamide-Induced Neurotoxicity: Implication | no OA PDF resolved
+- FAIL pdf | C | PMC13580039 | Flavonoids: biological activities, nutritional and immunological aspects, therap | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu14091981 | Associations between Frequency of Culinary Herb Use and Gut Microbiota | no OA PDF resolved
+- FAIL pdf | C | 10.1093/milmed/usae367 | Spices and Herbs Increase Vegetable Palatability Among Military Service Members | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.vas.2026.100771 | A meta-analysis of &lt;i&gt;Origanum vulgare&lt;/i&gt; impact on egg production  | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.71413 | Bioactive Potential of &lt;i&gt;Origanum vulgare&lt;/i&gt; Rhizomes: Phenolic Co | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fonc.2026.1924878 | Uncharted phytochemical frontiers: a systematic review of novel bioact
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.fochx.2026.103673 | Spice essential oils as natural preservatives in processed sausages: a
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1155/ijm/7468450 | Action Mechanism of Essential Oils or Their Components Against Pathoge
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1186/s13048-026-02030-z | Herbal compounds in the treatment of polycystic ovary syndrome: an upd
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/plants15172731 | Nine Centuries, Seven Words: Cross-Cultural and Cross-Temporal Evidenc
+- FAIL pdf | C | 10.3390/plants15040542 | Investigating the Biological Effects of Plant Essential Oils on Plant-Decaying P | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1002/cre2.70235 | Preventive and Therapeutic Effects of Plant-Derived Compounds on Tooth
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/antibiotics14121250 | Essential Oils as Antimicrobial Agents Against WHO Priority Bacterial
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1002/vms3.71119 | Medicinal Plants in Poultry During Post-Antibiotic Era in One-Health A
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.fochx.2025.103378 | Reducing acrylamide in bread with plant additives: a systematic review
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s11686-026-01313-1 | Sustainable Production and In Vitro Giardicidal Activity of Bioactive
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/antibiotics15030312 | Essential Oils for Flea and Tick Control in Companion Animals: A Criti
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1155/anu/8992384 | Medicinal and Aromatic Plant Oils in Aquafeeds: Mechanistic Perspectiv
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1002/fsn3.72050 | In Vitro Antineoplastic Effects of &lt;i&gt;Zataria multiflora&lt;/i&g
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s11686-026-01302-4 | Thymol and Carvacrol Against Echinococcus spp.: Experimental Evidence,
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s13659-026-00606-2 | A review on natural enzyme inhibitors: an effective approach to contro
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fnut.2026.1774718 | Thymol: properties, synthesis, mechanism of action, and applications
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/biology15120948 | From Plant Metabolites to Pollinator Safety: Rethinking Selectivity of
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/life16040643 | A Natural Monoterpene, Carvacrol, Mitigates Bisphenol A-Triggered Hepa
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fphar.2026.1766470 | Natural compounds as multitarget agents in Alzheimer's diseases: evide
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.jff.2015.06.018 | Phenolics and polyphenolics in foods, beverages and spices: Antioxidan
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fmicb.2022.962619 | Current status of pesticide effects on environment, human health and i
+- FAIL pdf | C | 10.3390/molecules22010165 | Green Synthesis and Characterization of Palladium Nanoparticles Using Origanum v | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2016/1404505 | Antioxidant, Antibacterial, and Cytotoxic Activities of the Ethanolic Origanum v | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.foodchem.2014.02.099 | Decoction, infusion and hydroalcoholic extract of Origanum vulgare L.: Different | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/antiox6030070 | Antioxidant Activity of Spices and Their Impact on Human Health: A Rev
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu11112786 | Antimicrobial, Antioxidant, and Immunomodulatory Properties of Essenti
+- FAIL pdf | C | 10.15835/nbha47311296 | Ecology, Cultivation and Utilization of the Aromatic Greek Oregano (Origanum vul | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fmicb.2012.00287 | Food applications of natural antimicrobial compounds
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fmicb.2016.02161 | Essential Oils: Sources of Antimicrobials and Food Preservatives
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fphar.2020.586548 | A Systematic Review of Plants With Antibacterial Activities: A Taxonom
+- FAIL pdf | C | 10.1111/jfpp.13516 | Chemical composition and antioxidant activity of essential oils in Origanum vulg | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/pr11020590 | A Review on Antimicrobial Packaging for Extending the Shelf Life of Fo
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules26051263 | Progresses in Food Packaging, Food Quality, and Safety—Controlled-Rele
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules20047329 | Antibacterial Activity of Essential Oils and Their Isolated Constituen
+- FAIL pdf | C | 10.3390/biom10070988 | Bioactive Natural Compounds and Antioxidant Activity of Essential Oils from Spic | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.ultsonch.2021.105625 | Review of ultrasound combinations with hybrid and innovative technique
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/plants9080961 | A Review on Applications and Uses of Thymus in the Food Industry
+- FAIL pdf | C | 10.1111/plb.12572 | Inhibitory effect of Thymus vulgaris and Origanum vulgare essential oils on viru | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.5586/asbp.2012.040 | Wild plants used for food by Hungarian ethnic groups living in the Car
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules28041845 | Therapeutic Potential of Phenolic Compounds in Medicinal Plants—Natura
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.heliyon.2023.e21196 | Phytochemicals and bioactive constituents in food packaging - A system
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/polym11030560 | Polymeric Antimicrobial Food Packaging and Its Applications
+- FAIL pdf | A | 10.1016/j.fochx.2026.103673 | Spice essential oils as natural preservatives in processed sausages: a systemati | no OA PDF resolved
+- FAIL pdf | A | 10.1186/s13048-026-02030-z | Herbal compounds in the treatment of polycystic ovary syndrome: an updated syste | no OA PDF resolved
+- FAIL pdf | A | 10.1002/cre2.70235 | Preventive and Therapeutic Effects of Plant-Derived Compounds on Tooth Erosion:  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/plants15040542 | Investigating the Biological Effects of Plant Essential Oils on Plant-Decaying P | no OA PDF resolved
+- FAIL pdf | C | 10.3390/antibiotics14121250 | Essential Oils as Antimicrobial Agents Against WHO Priority Bacterial Pathogens: | no OA PDF resolved
+- FAIL pdf | A | 10.1016/j.fochx.2025.103378 | Reducing acrylamide in bread with plant additives: a systematic review | no OA PDF resolved
+- FAIL pdf | C | 10.1155/anu/8992384 | Medicinal and Aromatic Plant Oils in Aquafeeds: Mechanistic Perspectives on Grow | no OA PDF resolved
+- FAIL pdf | C | 10.3390/molecules31162938 | Multi-Platform Metabolomics for Fraud Detection in Spices and Botanical Food Sup | no OA PDF resolved
+- FAIL pdf | C | 10.3390/gels11120978 | Essential Oils and Cultural Heritage Conservation: Are They Safe, Environmentall | no OA PDF resolved
+- FAIL pdf | C | 10.3390/plants13233442 | Essential Oils as Alternative Green Broad-Spectrum Biocides | no OA PDF resolved
+- FAIL pdf | C | 10.3390/pathogens14121216 | In Vitro Evaluation of the Antimicrobial Activity of Eighteen Essential Oils Aga | no OA PDF resolved
+- FAIL pdf | C | 10.1002/mbo3.70339 | Essential Oils and Their Multifunctional Activities Against Pseudomonas aerugino | no OA PDF resolved
+- FAIL pdf | C | 10.3390/plants15131997 | Genetic Diversity, Population Structure, Integration of Genome-Wide Association  | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ph19030372 | Optimization of Thyme, Cinnamon, and Black Seed Oil Combinations for Enhanced An | no OA PDF resolved
+- FAIL pdf | C | 10.1002/iub.70010 | Conventional and innovative approaches to black fungi control for stone heritage | no OA PDF resolved
+- FAIL pdf | C | 10.3390/molecules31162751 | Bioactive Chitosan-Alginate Films with Oregano or Turmeric: Effects on Blueberry | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- FAIL pdf | A | 10.1016/j.vas.2026.100771 | A meta-analysis of &lt;i&gt;Origanum vulgare&lt;/i&gt; impact on egg production  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.vas.2026.100804 | Phytogenic as a natural resource for gut health management: a sustaina
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu18132139 | Uses of Spices Amongst Generation Z Students at a University Located i
+- FAIL pdf | C | 10.30466/vrf.2026.2056009.4700 | Effects of post-feed restriction of thyme, oregano and probiotics supplementatio | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules31162938 | Multi-Platform Metabolomics for Fraud Detection in Spices and Botanica
+- FAIL pdf | C | 10.3390/ani16111639 | Antibacterial Activity and Safety of Oregano Oil-Lauric Acid Cationic Nanostruct | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.fochx.2026.103981 | Glycerophospholipid metabolism as a central hub: Sublancin and oregano essential | no OA PDF resolved
+- FAIL pdf | C | 10.3390/plants15162518 | Mycorrhizal Fungal Inoculation Reshapes Chemotype, Nutritional Status, and Metab | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1155/anu/8992384 | Medicinal and Aromatic Plant Oils in Aquafeeds: Mechanistic Perspectiv
+- FAIL pdf | C | 10.1093/nutrit/nuaf247 | Exploratory Studies on the Potential Health Benefits of Spices and Herbs | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the Quality o | no OA PDF resolved
+- FAIL pdf | C | 10.1093/tas/txaf172 | A blend of microencapsulated essential oils improves performance, economic index | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.psj.2026.107146 | The compound of microencapsulated essential oils improves productive parameters, | no OA PDF resolved
+- FAIL pdf | C | 10.3390/vetsci12121213 | Metabolic and Endocrine Markers of Oregano Essential Oil Effects on Antibacteria | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.5713/ab.250961 | Plant bioactive compounds as functional feed additives for improving l
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s13659-026-00606-2 | A review on natural enzyme inhibitors: an effective approach to contro
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fvets.2026.1930378 | Short-term supplementation of thymol and carvacrol regulates feed inta
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fmicb.2026.1883961 | Editorial: Assessing the environmental impact of ruminants: mitigation
+- FAIL pdf | C | 10.1002/fsn3.71419 | Nutritional Composition, Therapeutic Benefits, and Functional Food Potential of  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.psj.2025.105301 | Oregano-based feed additive reduces Salmonella enterica serovar Enteritidis colo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3389/fnut.2026.1776512 | Harnessing diet to modulate inflammation and symptom progression in en
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1017/s1368980013002115 | Designing and developing a literature-derived, population-based dietar
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/i8090950 | Dietary Polyphenols and Their Biological Significance
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1016/j.jff.2015.06.018 | Phenolics and polyphenolics in foods, beverages and spices: Antioxidan
+- FAIL pdf | C | 10.3390/molecules22060989 | Essential Oils of Oregano: Biological Activity beyond Their Antimicrobial Proper | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1002/ptr.6419 | Polyphenols: A concise overview on the chemistry, occurrence, and huma
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/molecules28041845 | Therapeutic Potential of Phenolic Compounds in Medicinal Plants—Natura
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/antiox6030070 | Antioxidant Activity of Spices and Their Impact on Human Health: A Rev
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1186/s12937-016-0217-2 | An overview on the role of dietary phenolics for the treatment of canc
+- FAIL pdf | C | 10.1111/j.1745-4514.2000.tb00715.x | ANTIOXBDANT PROPERTIES OF OREGANO (ORIGANUM VULGARE) LEAF EXTRACTS | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.2903/j.efsa.2019.5634 | Guidance on harmonised methodologies for human health, animal health a
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1155/2019/7010467 | A Review on Flavonoid Apigenin: Dietary Intake, ADME, Antimicrobial Ef
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu11092216 | Beneficial Effects of Dietary Polyphenols on Gut Microbiota and Strate
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1155/2021/2713511 | Lycopene: Food Sources, Biological Activities, and Human Health Benefi
+- FAIL pdf | C | 10.1016/j.psj.2021.101163 | Effects of oregano essential oil as an antibiotic growth promoter alternative on | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2015/525218 | Effects of Dietary Supplementation of Oregano Essential Oil to Sows on Oxidative | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3945/jn.110.131490 | The Biological Relevance of Direct Antioxidant Effects of Polyphenols
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.2903/j.efsa.2012.2831 | Lead dietary exposure in the European population
+- FAIL pdf | C | 10.1155/2007/23296 | Effects of a Combination of Thyme and Oregano Essential Oils on TNBS-Induced Col | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1007/s10068-019-00631-7 | Lipid oxidation and its implications to meat quality and human health
+- FAIL pdf | C | 10.3168/jds.2020-19686 | Effects of the macroalga Asparagopsis taxiformis and oregano leaves on methane e | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.3390/nu13010007 | Influence of Mediterranean Diet on Human Gut Microbiota
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.2741/3820 | Amino acid metabolism in intestinal bacteria: links between gut ecolog
+- OFF-TOPIC | 01_food_inflammation/oregano | 10.1002/fsn3.70101 | Dietary Phytochemicals in Health and Disease: Mechanisms, Clinical Evi
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1907913 | Plant-food components at the microbiota-neuroinflammation interface: h
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fonc.2026.1749287 | The meat processing exposome in Africa: integrating traditional culina
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2026.1859472 | Clinical evidence for microbial-derived polyphenol metabolites in heal
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/ph19081230 | Integrating Precision Nutrition with GLP-1 Receptor Agonist Therapy: M
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/molecules31081353 | Probiotics and Fermented Foods in Human Nutrition
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1111/1750-3841.70039 | Nova fails to appreciate the value of plant-based meat and dairy alter
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1186/s12966-023-01516-z | Adapting the Planetary Health Diet Index for children and adolescents
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/toxics12050318 | Lead Levels in the Most Consumed Mexican Foods: First Monitoring Effor
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu17223506 | Dietary Bioactive Compounds and Their Role in Allergy Prevention: A Co
+- FAIL pdf | C | 10.3390/nu15061436 | The Role of Diet as a Modulator of the Inflammatory Process in the Neurological  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/foods15081301 | Mushrooms as Sustainable Protein Alternatives: Nutritional-Functional
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/antiox12122086 | Diet and Aging: The Role of Polyphenol-Rich Diets in Slow Down the Sho
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1016/j.cdnut.2024.104499 | Adaptation of the Diet Quality Questionnaire as a Global Public Good f
+- FAIL pdf | C | 10.3390/foods9050645 | Coumarins in Food and Methods of Their Determination | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu14040823 | Effects of Diet, Lifestyle, Chrononutrition and Alternative Dietary In
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/metabo12010050 | Gut Microbiota Metabolites in Major Depressive Disorder-Deep Insights
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3389/fnut.2020.606378 | Goals in Nutrition Science 2020-2025
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu10060737 | Comparative Analysis of the Classification of Food Products in the Mex
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/nu5093646 | Nutritional recommendations for cardiovascular disease prevention
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3390/biom12030367 | The Role of Epigenetic Modifications in Human Cancers and the Use of N
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.3168/jds.2015-9445 | Invited review: Recommendations for reporting intervention studies on
+- OFF-TOPIC | 01_food_inflammation/food_families/herb_spice_cocoa | 10.1097/00000441-184306120-00021 | A Treatise on Food and Diet, with Observations on the Dietetical Regim
+- FAIL pdf | C | 10.3390/curroncol31090423 | Chemotherapy-Induced Alopecia by Docetaxel: Prevalence, Treatment and Prevention | no OA PDF resolved
+- FAIL pdf | A | 10.1002/ski2.15 | An Appraisal of Laboratory Models of Androgenetic Alopecia: A Systematic Review | no OA PDF resolved
+- FAIL pdf | C | 10.1002/bmc.70602 | Investigation Into the Metabolism and Elimination Behavior of RU 58841, and Its  | no OA PDF resolved
+- FAIL pdf | C | 10.17169/refubium-7392 | Follicular penetration of nano-sized particulate FA-PLGA and the dye RhBITC in d | no OA PDF resolved
+- FAIL pdf | C | 10.1002/bmc.70602 | Investigation Into the Metabolism and Elimination Behavior of RU 58841, and Its  | no OA PDF resolved
+- FAIL pdf | C | 10.17169/refubium-7392 | Follicular penetration of nano-sized particulate FA-PLGA and the dye RhBITC in d | no OA PDF resolved
+- FAIL pdf | A | 10.1155/2021/6666832 | The Effects of Oral Consumption of Honey on Key Metabolic Profiles in Adult Pati | no OA PDF resolved
+- FAIL pdf | A | 10.1093/nutrit/nuac086 | Effect of honey on cardiometabolic risk factors: a systematic review and meta-an | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.clnesp.2018.04.016 | The effect of honey consumption compared with sucrose on lipid profile in young  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18152574 | The Case for Vinegar Ingestion
+- FAIL pdf | A | 10.1155/prm/3601001 | Therapeutic Interventions to Manage Oral Mucositis and Their Impact on Quality o | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s13668-026-00790-0 | Ultra-Processed Foods and Metabolic Dysfunction: Mechanisms, Clinical
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18142291 | Diet Quality, Food Processing, and Nutrient Adequacy in Vegan, Vegetar
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1111/jre.70136 | The Journey of Oral Hygiene: The Past, the Present, the Future
+- FAIL pdf | C | 10.3390/antiox15081016 | Disruption of Antioxidant Defense Systems in Honey Bees and Wild Bees Under Envi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fcimb.2026.1834886 | Mechanisms of caries induced by sugars: a narratives review from micro
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/foods15162782 | Beyond Composition: Processing-Driven Transformations and Functional T
+- FAIL pdf | C | 10.1002/fsn3.71165 | Health Effects of Bee Products: A Comprehensive Review | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1806903 | Ultra-processed food consumption across early life: implications for p
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1894194 | Stevia-derived sweeteners in reduced-sugar foods: formulation strategi
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.47895/amp.v60i10.12775 | Philippine Clinical Practice Guidelines for Periodic Health Examinatio
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3892/br.2026.2181 | Association of diet with intestinal permeability and inflammation mark
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1515/med-2025-1301 | Strategies for hyperkalemia management in dialysis patients: A systema
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18142240 | Dietary Therapies in Inflammatory Bowel Disease and Their Effects on D
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota:
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.25122/jml-2025-0135 | Artificial sweeteners and their implications for patients with diabete
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1111/joor.70025 | A Systematic Review and Meta-Analysis on the Application of Thickened
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1111/jcpe.70122 | Dental Biofilm-Induced Gingivitis in Children and Adolescents Without
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1186/s12903-026-08100-4 | Radiation-induced oral side effects in head and neck cancer: a scoping
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.fochx.2026.104002 | Virgin coconut oil: A comprehensive review of its health impacts and f
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/s41538-026-00882-9 | Sugar reduction in complex food systems: linking metabolic mechanisms,
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.7573/dic.2025-7-12 | Holistic care in mild upper respiratory tract infections (MURTIs): an
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/ijms27052218 | From Probiotics to Postbiotics-An Update on Their Biotherapeutic Poten
+- FAIL pdf | C | 10.1155/2017/1259510 | Honey, Propolis, and Royal Jelly: A Comprehensive Review of Their Biological Act | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/foods8030092 | Prebiotics: Definition, Types, Sources, Mechanisms, and Clinical Appli
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1002/cncr.33100 | MASCC/ISOO clinical practice guidelines for the management of mucositi
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2337/dci19-0014 | Nutrition Therapy for Adults With Diabetes or Prediabetes: A Consensus
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/s0140-6736(19)31133-x | Ending the neglect of global oral health: time for radical action
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/s0140-6736(15)60901-1 | Safeguarding human health in the Anthropocene epoch: report of The Roc
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1371/journal.pone.0105017 | The Immune System in Children with Malnutrition—A Systematic Review
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/toxics9030042 | Heavy Metals and Pesticides Toxicity in Agricultural Soil and Plants:
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1210/jc.2016-2573 | Pediatric Obesity—Assessment, Treatment, and Prevention: An Endocrine
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj-2022-071609 | Dietary sugar consumption and health: umbrella review
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3945/ajcn.2008.26792 | Nonnutritive sweetener consumption in humans: effects on appetite and
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1111/prd.12393 | The oral microbiome: Role of key organisms and complex networks in ora
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1155/2017/9217567 | The Clinical Efficacy and Safety of Tulsi in Humans: A Systematic Revi
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu11112611 | Prevention of Type 2 Diabetes by Lifestyle Changes: A Systematic Revie
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1186/1475-2891-9-54 | Immunomodulatory dietary polysaccharides: a systematic review of the l
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2337/dc13-2042 | Nutrition Therapy Recommendations for the Management of Adults With Di
+- FAIL pdf | C | 10.1002/14651858.cd001973.pub4 | Interventions for treating oral mucositis for patients with cancer receiving tre | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2018/8367846 | Honey as a Potential Natural Antioxidant Medicine: An Insight into Its Molecular | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu15133056 | A Comprehensive Review of the Effect of Honey on Human Health | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/oxygen2020006 | Free Radical Properties, Source and Targets, Antioxidant Consumption a
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s11101-018-9591-z | Comprehensive review of antimicrobial activities of plant flavonoids
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s00520-010-0873-2 | A systematic review of dental disease in patients undergoing cancer th
+- FAIL pdf | C | 10.3390/biology11020233 | The Honey Bee Apis mellifera: An Insect at the Interface between Human and Ecosy | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1093/nutrit/nuab012 | Rare sugars and their health effects in humans: a systematic review an
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18162652 | Diet, Ultra-Processed Foods, and Food Additives in Crohn's Disease: A
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/ijms27177620 | Magnesium and Diabetes: A Review of Recent Studies on the Efficacy of
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1894194 | Stevia-derived sweeteners in reduced-sugar foods: formulation strategi
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.advnut.2026.100708 | Interpreting Lower HDL Cholesterol in Plant-Based Diets: Mechanisms an
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18152526 | Dietary Quality Along a Plant-Based Continuum: The Role of Added Salt,
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/s41598-026-56002-w | Real-world and computational identification of herbal candidates assoc
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1017/jns.2026.10096 | The impact of dietary interventions on quality of life in adults with
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.4317/medoral.27790 | Use of topical Vitamin E in oral mucositis in patients undergoing onco
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18132148 | Protein Consumption and Cognitive Health in Aging: Associations with S
+- FAIL pdf | B | 10.1016/j.tjnut.2026.101595 | The Effects of a Powdered Meal Replacement on Inflammation, Gut Microbiota, and  | no OA PDF resolved
+- FAIL pdf | A | 10.3390/nu17223521 | Nutritional and Supplemental Interventions for Prevention and Treatment of Oral  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1177/17562848261479366 | Multiple paths to health: A scoping review of dietary interventions fo
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18040557 | The Role of Zinc in Pediatric Respiratory Infections: Evidence from Cl
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota:
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18152574 | The Case for Vinegar Ingestion
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1902349 | Rethinking the hepatoprotective potential of vegetarian diets in dysfu
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fcvm.2026.1732874 | Effectiveness and safety of Guipi Mixture for the treatment of prematu
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu17243902 | Effects of Greek Yogurt Supplementation and Exercise on Markers of Bon
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s13668-026-00790-0 | Ultra-Processed Foods and Metabolic Dysfunction: Mechanisms, Clinical
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.fochx.2026.104002 | Virgin coconut oil: A comprehensive review of its health impacts and f
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | PMC13297864 | Microalgae as Novel Food Resources: Technological Breakthroughs, Appli
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18071026 | Rationale, Design, and Participant Baseline Characteristics of a Paral
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj.e7492 | Dietary sugars and body weight: systematic review and meta-analyses of
+- FAIL pdf | C | 10.1155/2017/1259510 | Honey, Propolis, and Royal Jelly: A Comprehensive Review of Their Biological Act | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3945/ajcn.113.081521 | Dietary sugars and cardiometabolic risk: systematic review and meta-an
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3945/ajcn.2008.26792 | Nonnutritive sweetener consumption in humans: effects on appetite and
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2337/dci19-0014 | Nutrition Therapy for Adults With Diabetes or Prediabetes: A Consensus
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2337/dc13-2042 | Nutrition Therapy Recommendations for the Management of Adults With Di
+- FAIL pdf | C | 10.1016/j.sjbs.2016.12.010 | Role of honey in modern medicine | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1017/s0033291714001573 | A randomized controlled trial of in-patient treatment for anorexia ner
+- FAIL pdf | C | 10.1155/2018/8367846 | Honey as a Potential Natural Antioxidant Medicine: An Insight into Its Molecular | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1093/ije/dyi170 | Randomized controlled trial: effect of nutritional counselling in gene
+- FAIL pdf | C | 10.3390/biology11020233 | The Honey Bee Apis mellifera: An Insect at the Interface between Human and Ecosy | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.ajcnut.2022.11.008 | Sugar-sweetened beverage consumption and weight gain in children and a
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1161/circulationaha.106.176158 | Diet and Lifestyle Recommendations Revision 2006
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/sj.ejcn.1602939 | Carbohydrate intake and obesity
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu10060740 | Impact of a Modified Version of Baby-Led Weaning on Infant Food and Nu
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3945/ajcn.2010.29924 | Urinary metabolites as biomarkers of polyphenol intake in humans: a sy
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj.g7647 | Preferred reporting items for systematic review and meta-analysis prot
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/molecules27010233 | Role of Phenolic Compounds in Human Disease: Current Knowledge and Fut
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1155/2015/837042 | Properties of Resveratrol: In Vitro and In Vivo Studies about Metaboli
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu14132641 | Therapeutic Benefits and Dietary Restrictions of Fiber Intake: A State
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3233/nha-1615 | High-flavonoid intake induces cognitive improvements linked to changes
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.advnut.2026.100708 | Interpreting Lower HDL Cholesterol in Plant-Based Diets: Mechanisms an
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18142291 | Diet Quality, Food Processing, and Nutrient Adequacy in Vegan, Vegetar
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18152526 | Dietary Quality Along a Plant-Based Continuum: The Role of Added Salt,
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s13668-026-00790-0 | Ultra-Processed Foods and Metabolic Dysfunction: Mechanisms, Clinical
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18152574 | The Case for Vinegar Ingestion
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18132148 | Protein Consumption and Cognitive Health in Aging: Associations with S
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18111683 | Impact of Adherence to a Plant-Based Residential Lifestyle Medicine Pr
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18071026 | Rationale, Design, and Participant Baseline Characteristics of a Paral
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/s41538-026-00882-9 | Sugar reduction in complex food systems: linking metabolic mechanisms,
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1894194 | Stevia-derived sweeteners in reduced-sugar foods: formulation strategi
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18091320 | The Mediterranean Diet and Cardiovascular Protection: Biochemical Mech
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1806903 | Ultra-processed food consumption across early life: implications for p
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj-2024-082007 | Intermittent fasting strategies and their effects on body weight and o
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3389/fnut.2026.1902349 | Rethinking the hepatoprotective potential of vegetarian diets in dysfu
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3892/br.2026.2181 | Association of diet with intestinal permeability and inflammation mark
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2147/tcrm.s540144 | Modulating Metabolic Health and Physiological Functions: Advances in D
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s13668-026-00740-w | Free Sugars Consumption and Type 2 Diabetes: What Are the Concerns and
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.clnu.2026.106691 | Metabolomic signature of ultra-processed foods and cardiovascular morb
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.fochx.2026.104002 | Virgin coconut oil: A comprehensive review of its health impacts and f
+- FAIL pdf | C | 10.3390/nu17243888 | Blueberries and Honeysuckle Berries: Anthocyanin-Rich Polyphenols for Vascular E | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/ijms27115048 | A Systematic Review of Folate and the Human Enteric Microbiome: Biolog
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/s42255-025-01381-z | Effect of sweeteners and sweetness enhancers on weight management and
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj.e7492 | Dietary sugars and body weight: systematic review and meta-analyses of
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3945/ajcn.113.081521 | Dietary sugars and cardiometabolic risk: systematic review and meta-an
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.jacc.2015.08.025 | Fructose and Cardiometabolic Health
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2337/dci19-0014 | Nutrition Therapy for Adults With Diabetes or Prediabetes: A Consensus
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.2337/dc13-2042 | Nutrition Therapy Recommendations for the Management of Adults With Di
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj.n1651 | Effect of low glycaemic index or load dietary patterns on glycaemic co
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu11112611 | Prevention of Type 2 Diabetes by Lifestyle Changes: A Systematic Revie
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu12102983 | Dietary Strategies for Metabolic Syndrome: A Comprehensive Review
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s00394-016-1345-3 | Controversies about sugars: results from systematic reviews and meta-a
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1002/mnfr.201600707 | Association between dietary inflammatory index and inflammatory marker
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1093/advances/nmz113 | Associations between Dietary Pulses Alone or with Other Legumes and Ca
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/s41392-022-01211-8 | Epigenetic regulation of aging: implications for interventions of agin
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1038/s41569-020-00437-9 | Lifestyle interventions for the prevention and treatment of hypertensi
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3945/ajcn.114.086314 | Fructose, high-fructose corn syrup, sucrose, and nonalcoholic fatty li
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj.k2340 | Dietary carbohydrates: role of quality and quantity in chronic disease
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu14040823 | Effects of Diet, Lifestyle, Chrononutrition and Alternative Dietary In
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s00125-023-05894-8 | Evidence-based European recommendations for the dietary management of
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s00125-022-05760-z | Nordic dietary patterns and cardiometabolic outcomes: a systematic rev
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1111/obr.12699 | Pathways and mechanisms linking dietary components to cardiometabolic
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1001/jamanetworkopen.2022.2092 | Association of Low- and No-Calorie Sweetened Beverages as a Replacemen
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1136/bmj.k4644 | Food sources of fructose-containing sugars and glycaemic control: syst
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu10111783 | Impact of a Healthy Dietary Pattern on Gut Microbiota and Systemic Inf
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.3390/nu11071613 | Gut Microbiome: Profound Implications for Diet and Disease
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1007/s40279-019-01187-6 | Exercise as Medicine for Mental and Substance Use Disorders: A Meta-re
+- OFF-TOPIC | 01_food_inflammation/food_families/honey | 10.1016/j.ajcnut.2022.11.008 | Sugar-sweetened beverage consumption and weight gain in children and a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.5281/zenodo.4443900 | Egyptian Journal of Plant Protection Research Institute
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1111/micc.70082 | eNOS Uncoupling, Shear-Stress Tolerance, and the Two-Threshold Model o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fnut.2026.1695902 | Plant-derived nutritional components in thyroid disease-related neurop
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/ijms26157520 | Antioxidants and Reactive Oxygen Species: Shaping Human Health and Dis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1021/acsomega.4c02927 | Role of Phytonutrients in the Prevention and Treatment of Chronic Dise
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu17071214 | Mitochondria at the Crossroads: Linking the Mediterranean Diet to Meta
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu15112618 | A Critical Review on Vasoactive Nutrients for the Management of Endoth
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu16193271 | Emerging Targets and Treatments for Sarcopenia: A Narrative Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1007/s00394-023-03265-y | Acute effects of a chewable beetroot-based supplement on cognitive per
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1186/s12263-020-00667-z | Food intake biomarkers for green leafy vegetables, bulb vegetables, an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fnagi.2021.724595 | Influence of Dietary Nutrient Intake on Episodic Memory Across the Adu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1016/j.jacc.2018.08.2160 | Lifestyle Modifications for Preventing and Treating Heart Failure
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/plants12061217 | Recent Developments in Polyphenol Applications on Human Health: A Revi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1002/mnfr.201600982 | Development of a reference database for assessing dietary nitrate in v
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu15010047 | Nutrition Strategies Promoting Healthy Aging: From Improvement of Card
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/ijms26157520 | Antioxidants and Reactive Oxygen Species: Shaping Human Health and Dis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/foods10061314 | Current Knowledge on Beetroot Bioactive Compounds: Role of Nitrate and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1155/2019/2125070 | A Review of the Science of Colorful, Plant-Based Food and Practical St
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1155/2016/5137431 | Dietary Phytochemicals: Natural Swords Combating Inflammation and Oxid
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.5772/intechopen.77038 | Role of Vegetables in Human Nutrition and Disease Prevention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/sports5020028 | Nutrition and Supplementation in Soccer
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1186/s12263-020-00667-z | Food intake biomarkers for green leafy vegetables, bulb vegetables, an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu7095371 | Food Processing and the Mediterranean Diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1016/j.pharmthera.2014.06.009 | Pharmacology and therapeutic role of inorganic nitrite and nitrate in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/foods10040859 | A Narrative Review on Dietary Strategies to Provide Nitric Oxide as a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1002/fsn3.3229 | Food, gut barrier dysfunction, and related diseases: A new target for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/foods13050691 | The Cardioprotective Role of Nitrate-Rich Vegetables
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/app10249144 | The Beneficial Health Effects of Vegetables and Wild Edible Greens: Th
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu16244368 | Mechanisms and Potential Benefits of Neuroprotective Agents in Neurolo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1016/j.niox.2023.05.005 | Short-term beetroot juice supplementation improves muscle speed and po
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1007/s13668-025-00678-5 | Nitrate and Nitrite in the Diet: Protective and Harmful Effects in Hea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.14814/phy2.14574 | Acute beetroot juice supplementation improves exercise tolerance and c
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu17030393 | Nitric Oxide in Parkinson’s Disease: The Potential Role of Dietary Nit
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.7600/jpfsm.10.1 | Update on vegetarian and vegan athletes: a review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1080/10942912.2023.2272564 | A review on various extraction and detection methods of bio-functional
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fonc.2026.1805804 | Advances in polyphenol-based strategies for musculoskeletal recovery a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1002/alz.71772 | MIND diet, cerebrovascular health, and cognition among community-dwell
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu17233675 | Health-Promoting Potential of the Mediterranean Diet and Challenges fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu17193073 | Dose-Response Effect of Watermelon Consumption on Ambulatory Blood Pre
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fnut.2025.1691952 | Diet type and the oral microbiome
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.20945/2359-4292-2025-0374 | Supplements for bone health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1161/hypertensionaha.125.17950 | Food as Medicine for Hypertension: Microbiota as Mediators
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.7759/cureus.110693 | Primary Vascular Dysregulation in Normal-Tension Glaucoma: Pathophysio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fnut.2026.1695902 | Plant-derived nutritional components in thyroid disease-related neurop
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/ijms27041660 | Potential Efficacy of Polyphenols and Isothiocyanates in the Managemen
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fmolb.2025.1607330 | Phytonutrients and their neuroprotective role in brain disorders
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1113/ep093920 | The acute effects of exercise intensity and inorganic nitrate suppleme
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/metabo16040241 | Towards Metabolomics-Guided Healthy and Anti-Aging Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1016/j.cdnut.2025.104588 | Design and Implementation of the Protein-Distinct Macronutrient-Equiva
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fnut.2025.1686777 | Vitamins and minerals and their role in cancer: a comprehensive review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1111/micc.70082 | eNOS Uncoupling, Shear-Stress Tolerance, and the Two-Threshold Model o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1007/s13668-025-00634-3 | Ketogenic Diet Intervention for Obesity Weight-Loss- A Narrative Revie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu18060895 | Development and Evaluation of a Functional Food Consumption Index (Fun
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.1093/jee/toag057 | Potential use of mealworm frass as soil amendment and pest management
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu17060956 | Clinical Insights into Non-Alcoholic Fatty Liver Disease and the Thera
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu16111768 | Nutritional Ergogenic Aids in Cycling: A Systematic Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu18091365 | The Therapeutic Potential of Polyphenols in Modulating Barrier Lipids,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3390/nu17243954 | Beetroot Juice Supplementation as a Healthy Aging Strategy Through Imp
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/arugula | 10.3389/fnut.2024.1448130 | The role of isothiocyanate-rich plants and supplements in neuropsychia
+- FAIL pdf | C | 10.3390/ijms18091890 | Brassica-Derived Plant Bioactives as Modulators of Chemopreventive and Inflammat | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu18081281 | A Descriptive Analysis of Mediterranean Diet Meal Plans Using the Diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.7759/cureus.37131 | An Analysis of the Nutritional Adequacy of Mass-Marketed Vegan Recipes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/ajcn/nqac154 | Effect of a ketogenic diet versus Mediterranean diet on glycated hemog
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/advances/nmz114 | Perspective: Whole and Refined Grains and Health—Evidence Supporting “
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.2147/cia.s423373 | Vascular Aging: Assessment and Intervention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.tjnut.2023.06.003 | Metabolomic Profiling of an Ultraprocessed Dietary Pattern in a Domici
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fimmu.2021.764384 | Interplay Between Skin Microbiota Dysbiosis and the Host Immune System
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu15061475 | Nutritional Considerations in Celiac Disease and Non-Celiac Gluten/Whe
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1177/1559827620907344 | Home Meal Preparation: A Powerful Medical Intervention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/foods12030546 | ‘Superfoods’: Reliability of the Information for Consumers Available o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.7759/cureus.37131 | An Analysis of the Nutritional Adequacy of Mass-Marketed Vegan Recipes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/biomedicines11113063 | Gut–Kidney–Heart: A Novel Trilogy
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17111854 | A Culinary-Based Intensive Lifestyle Program for Patients with Obesity
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1088/2053-2563/aafb0d | Biomechanical Modeling of the Cardiovascular System
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17162687 | Associations of the MIND Diet with Human Health Outcomes: A Scoping Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s40795-025-01102-5 | Development of an Indian-adapted anti-inflammatory Mediterranean diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17132188 | Should Grain-Based Staple Foods Be Included in Admonitions to “Avoid P
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu18081281 | A Descriptive Analysis of Mediterranean Diet Meal Plans Using the Diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.34297/ajbsr.2024.24.003222 | Eating Healthy (“The No White Diet”)
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17020314 | Improving Cooking Skills, Lifestyle Behaviors, and Clinical Outcomes f
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | PMC10917465 | Enhancing Pain Management for Open Inguinal Hernia Repair With a Novel
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17111854 | A Culinary-Based Intensive Lifestyle Program for Patients with Obesity
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/ajcn/nqac154 | Effect of a ketogenic diet versus Mediterranean diet on glycated hemog
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/toxins9090276 | Report from the 1st MYCOKEY International Conference Global Mycotoxin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.15167/2421-4248/jpmh2019.60.3s1 | Atti del 52° Congresso Nazionale: Società Italiana di Igiene, Medicina
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/molecules27061948 | General Health Benefits and Pharmacological Activities of Triticum aes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.jcs.2017.11.010 | Do ancient types of wheat have health benefits compared with modern br
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu2010016 | The Gluten-Free Diet: Safety and Nutritional Quality
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1053/j.gastro.2016.10.046 | The Vagus Nerve in Appetite Regulation, Mood, and Intestinal Inflammat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1136/gut.2010.225268 | Diversity in oat potential immunogenicity: basis for the selection of
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/ajcn/nqac154 | Effect of a ketogenic diet versus Mediterranean diet on glycated hemog
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1101/cshperspect.a034199 | Vagus Nerve Stimulation at the Interface of Brain–Gut Interactions
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1002/bjs.9691 | Randomized clinical trial of the effect of gum chewing on postoperativ
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1002/j.1536-4801.2005.tb00917.x | Guideline for the Diagnosis and Treatment of Celiac Disease in Childre
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/eurjpc/zwad028 | Vascular ageing: moving from bench towards bedside
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1089/ars.2016.6963 | Atherothrombosis and Oxidative Stress: Mechanisms and Management in El
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/advances/nmz114 | Perspective: Whole and Refined Grains and Health—Evidence Supporting “
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/foods10092124 | The 10,000-Year Success Story of Wheat!
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.jcs.2014.01.005 | Reducing the incidence of allergy and intolerance to cereals
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1038/mp.2017.97 | A relationship between the aldosterone–mineralocorticoid receptor path
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.tjnut.2023.06.003 | Metabolomic Profiling of an Ultraprocessed Dietary Pattern in a Domici
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu9040412 | “Eat as If You Could Save the Planet and Win!” Sustainability Integrat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.2147/cia.s423373 | Vascular Aging: Assessment and Intervention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3748/wjg.v21.i27.8221 | Non-celiac gluten sensitivity: Time for sifting the grain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.31665/jfb.2022.18317 | Natural nutraceuticals, especially functional foods, their major bioac
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1177/1559827620907344 | Home Meal Preparation: A Powerful Medical Intervention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s42234-022-00091-1 | Strategies for precision vagus neuromodulation
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu15061475 | Nutritional Considerations in Celiac Disease and Non-Celiac Gluten/Whe
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s12916-022-02423-z | Homelessness and health-related outcomes: an umbrella review of observ
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.obpill.2026.100264 | Population trends in nutritional status and socioeconomic divergence i
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17162687 | Associations of the MIND Diet with Human Health Outcomes: A Scoping Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1136/bmjopen-2023-082725 | Aortic stiffness after living kidney donation: a systematic review and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1155/jobe/8472196 | Association of Genetic, Environmental, and Nutritional Factors With Me
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/foods13213436 | Hybrid Meat Sausages with Cereal Ingredients: A Systematic Review and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1212/wnl.0000000000214655 | Contrast-Associated Acute Kidney Injury After Thrombectomy for Ischemi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/medicina59071184 | Superfoods for Type 2 Diabetes: A Narrative Review and Proposal for Ne
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.7759/cureus.37131 | An Analysis of the Nutritional Adequacy of Mass-Marketed Vegan Recipes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/ijerph191610333 | What Drives Abdominal Obesity in Peru? A Multilevel Analysis Approach
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1590/1980-57642021dn15-010001 | Clinical characteristics of older patients with COVID-19: a systematic
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.15167/2421-4248/jpmh2026.66.1s1 | Atti 57° Congresso Nazionale Società Italiana Igiene, Medicina Prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fphar.2020.583422 | Postoperative Ileus and Postoperative Gastrointestinal Tract Dysfuncti
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s13012-021-01110-6 | Proceedings from the 13th Annual Conference on the Science of Dissemin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.15167/2421-4248/jpmh2019.60.3s1 | Atti del 52° Congresso Nazionale: Società Italiana di Igiene, Medicina
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/molecules27061948 | General Health Benefits and Pharmacological Activities of Triticum aes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.jnutbio.2017.09.001 | Ancient wheat species and human health: Biochemical and clinical impli
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fimmu.2017.01452 | The Vagus Nerve in the Neuro-Immune Axis: Implications in the Patholog
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1161/hypertensionaha.115.06554 | Impaired Flow-Mediated Dilation Before, During, and After Preeclampsia
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fphar.2020.583422 | Postoperative Ileus and Postoperative Gastrointestinal Tract Dysfuncti
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1053/j.gastro.2016.10.046 | The Vagus Nerve in Appetite Regulation, Mood, and Intestinal Inflammat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fnut.2020.593711 | Neglected and Underutilized Crop Species: The Key to Improving Dietary
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.cellimm.2017.12.009 | Muscularis macrophages: Key players in intestinal homeostasis and dise
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/ajcn/nqac154 | Effect of a ketogenic diet versus Mediterranean diet on glycated hemog
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1101/cshperspect.a034199 | Vagus Nerve Stimulation at the Interface of Brain–Gut Interactions
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s40798-021-00406-7 | Factors Influencing Team Performance: What Can Support Teams in High-P
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1037/pspi0000130 | Meta-lay theories of scientific potential drive underrepresented stude
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/eurjpc/zwad028 | Vascular ageing: moving from bench towards bedside
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1002/uog.17367 | Preclinical atherosclerosis at the time of pre‐eclamptic pregnancy and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1089/ars.2016.6963 | Atherothrombosis and Oxidative Stress: Mechanisms and Management in El
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.2147/vhrm.s25270 | Arterial stiffness, central hemodynamics, and cardiovascular risk in h
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1109/access.2023.3272890 | MetaOmniCity: Toward Immersive Urban Metaverse Cyberspaces Using Smart
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.ijcard.2017.10.075 | Carotid-femoral pulse wave velocity in a healthy adult sample: The ELS
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s13033-016-0059-5 | Violent events, ward climate and ideas for violence prevention among n
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1080/09585192.2016.1234503 | Listen carefully: transgender voices in the workplace
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/advances/nmz114 | Perspective: Whole and Refined Grains and Health—Evidence Supporting “
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fmed.2021.643973 | Intestinal Mucosal Wound Healing and Barrier Integrity in IBD–Crosstal
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1038/hr.2012.198 | Resistance exercise training reduces arterial reservoir pressure in ol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu9040412 | “Eat as If You Could Save the Planet and Win!” Sustainability Integrat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1152/ajpheart.00670.2018 | Lysyl oxidase-like 2 depletion is protective in age-associated vascula
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1089/ars.2016.6963 | Atherothrombosis and Oxidative Stress: Mechanisms and Management in El
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu15061475 | Nutritional Considerations in Celiac Disease and Non-Celiac Gluten/Whe
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1111/nbu.12515 | Eating on the night shift: A need for evidence‐based dietary guideline
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.34297/ajbsr.2024.24.003222 | Eating Healthy (“The No White Diet”)
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.82227/repository.uwtsd.ac.uk.00004207 | The Impact of Hypertension on Mental Health Among Older People in Sout
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu18091445 | The Gut Microbiota as a Mediator Linking the MIND Diet to Alzheimer's
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.1007/s44446-026-00111-0 | Therapeutic potential of phytochemical compounds in cardiovascular dis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu17132138 | Ingesting Nuts Can Regulate Adipokines Expression in Individuals Livin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu18010148 | The Hidden Players in Multiple Sclerosis Nutrition: A Narrative Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu17060948 | Gut Microbiota Modulation Through Mediterranean Diet Foods: Implicatio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu15071733 | Effect of Nuts on Gastrointestinal Health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu14193934 | Is Melatonin the "Next Vitamin D"?: A Review of Emerging Science, Clin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu15010046 | Dietary Approaches to Stop Hypertension via Indo-Mediterranean Foods,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3389/fnut.2022.1002574 | The nutritional functions of dietary sphingomyelin and its application
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu10030339 | A Pecan-Rich Diet Improves Cardiometabolic Risk Factors in Overweight
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pistachios | 10.3390/nu9070673 | Nuts and Dried Fruits: An Update of Their Beneficial Effects on Type 2
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu18172870 | Targeting Ferroptosis, Pyroptosis, and NRF2 Signaling with Dietary Pol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3389/fnut.2026.1907913 | Plant-food components at the microbiota-neuroinflammation interface: h
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/life16061022 | Polyphenols and ADPKD: A Further Aid from Nature?
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu18142362 | Natural Products as Nutritional Supplements in Human Disease Preventio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/jcdd13050219 | Potential Role of Polyphenols in Platelet Aggregation and Blood Coagul
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu18162713 | Resveratrol and Curcumin in Stroke Therapy: From Experimental Evidence
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu18142266 | Beyond GLP-1 Agonists: Plant-Derived Bioactive Compounds as Adjunctive
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3389/fnut.2026.1918360 | Dietary bioactive compounds targeting insulin resistance: mechanisms a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/ijms27093930 | Dietary Polyphenols in Aging: A Systems-Level Perspective on Mitochond
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/biomedicines14030527 | Probiotics and Phytoantioxidants as Emerging Neuroprotective Strategie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/jcm15103934 | The Role of Diet and Gut Microbiome in CKD Progression and Therapy
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3389/fnut.2026.1849842 | Dietary polyphenols in pediatric obesity and cardiometabolic risk: mec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu18172856 | Dietary Polyphenols in Type 2 Diabetes: A Metabolite-Centric Review of
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu18050788 | Physiological and Recovery Responses to Dietary Polyphenols in the Con
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/molecules31111840 | Natural Bioactive Compounds Targeting Gut Barrier Integrity and Metabo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/life16050822 | Targeting Glyoxalase-1 Pathway with Natural Compounds: A Translational
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1002/fsn3.71575 | Obesity and Natural Products: Mechanisms, Therapeutic Potential, and F
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/ijms27104592 | Beneficial Effects of Natural Bioactive Compounds on Eye Health: A Nar
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/cimb48040367 | Natural Products Targeting Immune Mechanisms in Ocular Inflammation: U
+- FAIL pdf | A | 10.21873/invivo.14235 | Resveratrol Supplementation and its Potential Benefits in Obesity-related Non-co | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/antiox15060693 | Polyphenol-Mediated Modulation of Oxidative Stress Pathways in Type 1
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/antiox15040509 | Resveratrol and Redox Regulation in Cardiovascular Disease Across the
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | PMC13578413 | The protective effect of chemical and natural compounds against amioda
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/antiox15030319 | Next-Generation Dietary Antioxidants in Women's Reproductive Health: M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1002/mnfr.70297 | Benefits of Nutrients and Phytonutrients in Nuts and Legumes on Platel
+- FAIL pdf | C | 10.1016/j.fshw.2019.12.005 | Health aspects of peanuts as an outcome of its chemical composition | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.fufo.2022.100140 | Functional components of peanuts (Arachis Hypogaea L.) and health benefits: A re | no OA PDF resolved
+- FAIL pdf | C | 10.18388/abp.2018_2749 | Health benefits of resveratrol administration | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijms20071523 | Resveratrol and Its Effects on the Vascular System | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3945/an.115.011627 | Resveratrol: How Much Wine Do You Have to Drink to Stay Healthy?
+- FAIL pdf | C | 10.1111/j.1755-5949.2008.00045.x | Resveratrol: A Natural Compound with Pharmacological Potential in Neurodegenerat | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/ijms20030535 | The Effects of Resveratrol in the Treatment of Metabolic Syndrome
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1007/s11095-008-9661-9 | Cancer is a Preventable Disease that Requires Major Lifestyle Changes
+- FAIL pdf | C | 10.3390/nu14040823 | Effects of Diet, Lifestyle, Chrononutrition and Alternative Dietary Intervention | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1039/c8fo01997e | The effects of polyphenols and other bioactives on human health
+- FAIL pdf | C | 10.3390/molecules24040667 | Therapeutic Approaches of Resveratrol on Endometriosis via Anti-Inflammatory and | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/molecules21101374 | An Overview of Plant Phenolic Compounds and Their Importance in Human
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1038/s41698-017-0038-6 | The therapeutic potential of resveratrol: a review of clinical trials
+- FAIL pdf | B | 10.1016/j.clnu.2021.09.020 | Consumption of peanut products improves memory and stress response in healthy ad | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1155/2021/5571733 | Antioxidative Stress Mechanisms behind Resveratrol: A Multidimensional
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1002/ptr.6419 | Polyphenols: A concise overview on the chemistry, occurrence, and huma
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3389/fphys.2018.00477 | Role of ROS and Nutritional Antioxidants in Human Diseases
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/biom9100551 | Antidiabetic Potential of Medicinal Plants and Their Active Components
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/molecules26092495 | The Role of Resveratrol in Human Male Fertility
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1093/ije/dyq250 | Cohort Profile: Design and methods of the PREDIMED study
+- FAIL pdf | C | 10.3390/antiox8080302 | Health Benefits of Nut Consumption in Middle-Aged and Elderly Population | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.3390/nu8010017 | Polyphenols and Glycemic Control
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/peanuts | 10.1530/erc-13-0171 | Resveratrol and cancer: focus on in vivo evidence
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1590/1806-9061-2020-1261 | Dietary Lactic Acid Bacteria Modulate Yolk Components and Cholesterol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1111/j.1745-4573.1990.tb00363.x | NUTRIENT CHARACTERIZATION OF COLOR MODIFIED AND UNALTERED FLAKED TURKE
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1002/fsn3.4752 | Simultaneous Application of Electron Beam Irradiation and Freezing as
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1155/2023/6615992 | Microbial Food Safety Assessment of Organic Food and Feed: Notificatio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.15666/aeer/2204_33893402 | META-ANALYSIS OF PROBIOTIC (LACTOBACILLUS) ON PERFORMANCE OUTCOMES AND
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu18132207 | Effects of Dietary Protein Quantity, Source, and Type on Plasma Lipids
+- FAIL pdf | B | 10.1016/j.cdnut.2025.107615 | Effects of Minimally Processed Red Meat within a Plant-Forward Diet on Biomarker | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu18111779 | Brain Foods: A Narrative Review of Food Items and Their Impact on Cogn
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3389/fnut.2026.1839131 | The beef terroir: moving from a commodity and its role in human evolut
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1016/j.cdnut.2025.107589 | Effects of Diets Containing Beef Compared with Poultry on Pancreatic β
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu18091446 | Sustaining Muscle, Cardiovascular Health, and the Environment: Is Plan
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu18081273 | The Mediterranean Diet and Cerebrovascular Risk Factors: A Lifeline fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3389/fnut.2025.1525011 | Considering the nutritional benefits and health implications of red me
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1002/mnfr.70189 | Effect of the Consumption of Lean Red Meat from Beef (Pirenaica Breed)
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3389/fnut.2024.1424912 | Nutritional importance of animal-sourced foods in a healthy diet
+- FAIL pdf | B | 10.1016/j.cdnut.2025.104588 | Design and Implementation of the Protein-Distinct Macronutrient-Equivalent Diet  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu15163550 | Poultry Consumption and Human Cardiometabolic Health-Related Outcomes:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu18061002 | A Dose-Response Study on the Relationship Between Red Meat Intake and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu17071280 | The Association Between Lifestyle Interventions and Trimethylamine N-O
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1016/j.jaccao.2025.07.008 | Diet and Prevention of Cardiovascular Disease and Cancer: JACC: Cardio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu17152446 | Western Diet and Cognitive Decline: A Hungarian Perspective-Implicatio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | PMC10916397 | Meat and meat products – a scoping review for Nordic Nutrition Recomme
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/ijms26199625 | Diet and Lifestyle Interventions in Metabolic Dysfunction-Associated F
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/ph18060766 | Microbiota-Accessible Borates as Novel and Emerging Prebiotics for Hea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.22074/ijfs.2025.2029021.1683 | The Role of Nutrition in Endometriosis Prevention and Management: A Co
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu15234898 | A Review of Healthy Dietary Choices for Cardiovascular Disease: From I
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1016/j.advnut.2022.10.005 | Meat Consumption and Gut Microbiota: a Scoping Review of Literature an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1159/000542155 | European Association for the Study of Obesity (EASO) Position Statemen
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu17020227 | Obesity Incidence According to Branched-Chain Amino Acid Intake and Pl
+- FAIL pdf | C | 10.3390/foods13121905 | Pork Meat Composition and Health: A Review of the Evidence | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu4070711 | Effects of Eating Fresh Lean Pork on Cardiometabolic Health Parameters | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu6020682 | A Comparison of Regular Consumption of Fresh Lean Pork, Beef and Chicken on Body | no OA PDF resolved
+- FAIL pdf | C | 10.3945/ajcn.115.111757 | Dietary Approaches to Stop Hypertension diet retains effectiveness to reduce blo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1093/ajcn/nqab079 | Building better guidelines for healthy and sustainable diets
+- FAIL pdf | C | 10.22175/mmb.12953 | Pork consumption and its relationship to human nutrition and health: a scoping r | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu11071613 | Gut Microbiome: Profound Implications for Diet and Disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.1186/1741-7015-12-112 | Definitions and potential health benefits of the Mediterranean diet: v
+- FAIL pdf | B | 10.1093/ajcn/nqy075 | A Mediterranean-style eating pattern with lean, unprocessed red meat has cardiom | no OA PDF resolved
+- FAIL pdf | A | 10.2147/dmso.s51440 | Systematic review of clinical studies related to pork intake and metabolic syndr | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3945/an.115.009654 | Plant Protein and Animal Proteins: Do They Differentially Affect Cardi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/pork | 10.3390/nu15122749 | Global Impacts of Western Diet and Its Effects on Metabolism and Healt
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu18162594 | Food-Derived Omega-3 Fatty Acids and Cognitive Aging: Integrating Nutr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3389/fnut.2026.1742942 | Docosahexaenoic acid intake and health in adults and older adults: a n
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3389/fnut.2026.1844290 | Marine-derived PUFAs and peptides for aging-related memory deficits: p
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/md24060197 | Marine Lipids and Alzheimer's Disease: Biochemistry, Bioaccessibility/
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/md24040139 | A Review of Omega-3 Fatty Acids from Marine Source Supplements and Enh
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu18081178 | DHA: Nutritional Programming During the First 1000 Days of Life
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu17243931 | Dietary Patterns of Docosahexaenoic Acid Intake and Supplementation fr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/biomedicines13092045 | Exploring the Role of Polyunsaturated Fatty Acids in Children's Sleep
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/ijms26157360 | Comparative Analysis of the Antioxidant and Anti-Inflammatory Effects
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu18142362 | Natural Products as Nutritional Supplements in Human Disease Preventio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.7759/cureus.88461 | Risk of Osteoporosis and Anemia in Plant-Based Diets: A Systematic Rev
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1007/s11357-026-02188-w | Fish consumption and cognitive function in aging: a systematic review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3389/fnut.2025.1581848 | Gut microbiota, nutrients, and depression
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1002/alz.71368 | Ferroptotic neurodegeneration and diet: a narrative review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3389/fnut.2025.1539355 | The intricate interplay between dietary habits and cognitive function:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/ijms25168675 | Omega-3 Polyunsaturated Fatty Acids in Depression
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu17040608 | Integrative Roles of Functional Foods, Microbiotics, Nutrigenetics, an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.29219/fnr.v68.10485 | Fish - a scoping review for Nordic Nutrition Recommendations 2023
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1080/15502783.2026.2629828 | International Society of Sports Nutrition position stand: effects of d
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3389/fnut.2024.1325099 | Optimal omegas - barriers and novel methods to narrow omega-3 gaps. A
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/ani16081222 | Advances in Functional Pet Food Research: Health-Driven Ingredients, N
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/ijms26188849 | Plant-Derived Nutraceuticals in Mental Health and Brain Function: Mech
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3389/fnut.2026.1695902 | Plant-derived nutritional components in thyroid disease-related neurop
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1146/annurev-food-111317-095850 | Omega-3 Polyunsaturated Fatty Acids and Their Health Benefits
+- FAIL pdf | C | 10.1289/ehp.11368 | Quantitative Approach for Incorporating Methylmercury Risks and Omega-3 Fatty Ac | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu6031293 | Neuroprotective Properties of the Marine Carotenoid Astaxanthin and Omega-3 Fatt | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1161/cir.0000000000000574 | Seafood Long-Chain n-3 Polyunsaturated Fatty Acids and Cardiovascular
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1016/j.plipres.2016.05.001 | Global survey of the omega-3 fatty acids, docosahexaenoic acid and eic
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1017/s0029665117003950 | Very long-chain n -3 fatty acids and human health: fact, fiction and t
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu8020099 | Docosahexaenoic Acid and Cognition throughout the Lifespan
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1186/s13058-015-0571-6 | Omega-3 fatty acids for breast cancer prevention and survivorship
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/nu12082428 | Diet, Stress and Mental Health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3390/ijms131115401 | Marine Omega-3 Phospholipids: Metabolism and Biological Activities
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1186/1471-2458-14-643 | Epidemiologic studies of modifiable factors associated with cognition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.3945/ajcn.2009.28313 | Updated systematic review and meta-analysis of the effects of n−3 long
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1017/s0007114512001456 | Dietary sources of omega 3 fatty acids: public health risks and benefi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1139/er-2015-0029 | Production, distribution, and abundance of long-chain omega-3 polyunsa
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/salmon | 10.1177/2047487319869400 | Lifestyle factors and high-risk atherosclerosis: Pathways and mechanis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1093/ckj/sfag168 | Fish oil supplements in patients with chronic kidney disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1016/j.jacadv.2026.102591 | A Clinician's Guide for Trending Cardiovascular Nutritional Controvers
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1002/fsn3.70181 | Bioactive Compounds in Seafood: Implications for Health and Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/brainsci15060641 | Sleep Deprivation and Alzheimer's Disease: A Review of the Bidirection
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1007/s11912-025-01641-x | The Impact of Diet and Nutrition on Prostate Cancer - Food for Thought
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18020231 | A Conceptual Digital Health Framework for Longevity Optimization: Infl
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu16172927 | Characteristics, Physiopathology and Management of Dyslipidemias in Pr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/ijerph20031683 | Promising Sources of Plant-Derived Polyunsaturated Fatty Acids: A Narr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu13051422 | Seafood Intake as a Method of Non-Communicable Diseases (NCD) Preventi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1007/s40279-021-01509-7 | Fish Oil for Healthy Aging: Potential Application to Master Athletes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/life13051120 | Nutritional Factors: Benefits in Glaucoma and Ophthalmologic Pathologi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | PMC7120155 | Respiratory
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1155/2015/715859 | Performance Enhancing Diets and the PRISE Protocol to Optimize Athleti
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu5093646 | Nutritional recommendations for cardiovascular disease prevention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1161/01.atv.0000038493.65177.94 | Fish Consumption, Fish Oil, Omega-3 Fatty Acids, and Cardiovascular Di
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu8100629 | Maternal Diet and Nutrient Requirements in Pregnancy and Breastfeeding
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.5539/gjhs.v4n3p72 | Seafood Consumption and Components for Health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3389/fendo.2022.891233 | Fish and the Thyroid: A Janus Bifrons Relationship Caused by Pollutant
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3389/fnut.2021.780844 | Fish Nutritional Value as an Approach to Children's Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1017/s0025315415001356 | Mercury, selenium and fish oils in marine food webs and implications f
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3945/ajcn.113.067421 | Fish intake during pregnancy, fetal growth, and gestational length in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1111/nyas.13062 | Nutrient intake, nutritional status, and cognitive function with aging
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1002/ijc.25802 | Intake of n‐3 and n‐6 polyunsaturated fatty acids and development of c
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.4330/wjc.v6.i2.38 | The role of nutrition and nutraceutical supplements in the treatment o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1055/a-0713-1058 | Diet and Lifestyle Before and During Pregnancy – Practical Recommendat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1111/j.1750-3841.2012.02626.x | Fatty Acid Profile and Sensory Characteristics of Table Eggs from Layi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1186/1824-7288-39-7 | The origins of health and disease: the influence of maternal diseases
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu13051422 | Seafood Intake as a Method of Non-Communicable Diseases (NCD) Preventi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1017/s0007114516003548 | Dietary fish protein hydrolysates containing bioactive motifs affect s
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/md20110662 | Marine Sources of DHA-Rich Phospholipids with Anti-Alzheimer Effect
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1002/fsn3.70181 | Bioactive Compounds in Seafood: Implications for Health and Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1093/jn/nxz286 | Plasma DHA Is Related to Sleep Timing and Duration in a Cohort of Mexi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1186/s12967-024-05095-w | Underrated aspects of a true Mediterranean diet: understanding traditi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3389/fnut.2022.879929 | Seafood Discards: A Potent Source of Enzymes and Biomacromolecules Wit
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1016/j.envres.2018.09.005 | Risk tradeoffs associated with traditional food advisories for Labrado
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3153/jfhs18006 | BENEFITS OF FISH CONSUMPTION FOR HEALTHY AND BALANCED NUTRITION DURING
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu16152453 | Functional Lipids and Cardiovascular Disease Reduction: A Concise Revi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18162594 | Food-Derived Omega-3 Fatty Acids and Cognitive Aging: Integrating Nutr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1093/nutrit/nuaf195 | The Role of Immunological Challenges, Oxidative Stress, and Dietary In
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/metabo16070485 | Content of Vitamin D&lt;sub&gt;2&lt;/sub&gt; in Alternative Biological
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18111669 | Effect of Omega-3 Fatty Acid Intake on Circulating Biomarkers of Atria
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/jcm15166390 | The Gut-Brain Axis in Fetal Alcohol Spectrum Disorder (FASD): Why the
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1371/journal.pone.0340861 | A supply and demand intervention increased fish consumption among rura
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1186/s12889-026-27393-2 | Systematic adaptation of a visual-aided adolescent nutrition intervent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1007/s13668-026-00752-6 | The Role of Gut Microbiota in Postmenopausal Women: Implications for L
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18132072 | The Role of Polyunsaturated Fatty Acids (PUFAs) in the Primary Prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18152538 | Omega-3 Polyunsaturated Fatty Acid Formulations in Cardiovascular Prev
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1016/j.jacadv.2026.102591 | A Clinician's Guide for Trending Cardiovascular Nutritional Controvers
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3389/fimmu.2026.1798089 | Anti-inflammatory diets for prediabetes remission: a mechanistic and p
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3389/fnut.2026.1742942 | Docosahexaenoic acid intake and health in adults and older adults: a n
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1159/000551530 | Inflammation and Chronic Disease: The Mediterranean Diet in Precision
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1093/nutrit/nuaf089 | Omega-3 Polyunsaturated Fatty Acids and Adipose Tissue Inflammation in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1080/15502783.2026.2696421 | The effect of the Mediterranean diet combined with physical activity o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1007/s40123-025-01281-1 | Role of B Vitamins in Preventing the Development and Progression of Ag
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu18091318 | From Plate to Mind: Scientific Perspectives on Foods That May Influenc
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/ph19030399 | Efficacy and Safety of Herbal Supplements with Anxiolytic, Antidepress
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.1002/fsn3.71309 | Nutritional Interventions for Enhancing Sleep Quality: The Role of Die
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3390/nu17223506 | Dietary Bioactive Compounds and Their Role in Allergy Prevention: A Co
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.20945/2359-4292-2025-0374 | Supplements for bone health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sardines | 10.3389/fnut.2026.1844290 | Marine-derived PUFAs and peptides for aging-related memory deficits: p
+- FAIL pdf | C | 10.3390/foods15010028 | Eastern European Fermented Foods: Nutritional Value, Functional Potential, and C | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.1016/j.advnut.2025.100412 | Unpacking Food Fermentation: Clinically Relevant Tools for Fermented F
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/molecules31020360 | Fermented Plant-Based Foods and Postbiotics for Glycemic Control-Micro
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/microorganisms13061335 | Using Postbiotics from Functional Foods for Managing Colorectal Cancer
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3389/fnut.2025.1668889 | Impact of fermented foods consumption on gastrointestinal wellbeing in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/ph18060766 | Microbiota-Accessible Borates as Novel and Emerging Prebiotics for Hea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/molecules31081353 | Probiotics and Fermented Foods in Human Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/microorganisms13112521 | Probiotic Potential of Traditional and Emerging Microbial Strains in F
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3389/fnut.2025.1653666 | Vitamins formed by microorganisms in fermented foods: effects on human
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/nu16162646 | An Anti-Inflammatory Diet and Its Potential Benefit for Individuals wi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/nu17172734 | Multi-Species Synbiotic Supplementation Enhances Gut Microbial Diversi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.1111/1750-3841.70074 | Evaluation of antiobesogenic properties of fermented foods: In silico
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/microorganisms12020234 | The Potential Impact of Probiotics on Human Health: An Update on Their
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.1007/s40520-024-02860-1 | Functional foods in Mediterranean diet: exploring the functional featu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/cimb46070418 | Beyond the Coagulation Cascade: Vitamin K and Its Multifaceted Impact
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3389/fnut.2022.902642 | Global Regulatory Frameworks for Fermented Foods: A Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/pharmaceutics14112543 | Gut Dysbiosis and Diabetic Foot Ulcer: Role of Probiotics
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/nu11051189 | Health-Promoting Components in Fermented Foods: An Up-to-Date Systemat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/nu14071527 | Fermented Foods, Health and the Gut Microbiome
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.1007/s10068-024-01674-1 | Plant-based probiotic foods: current state and future trends
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/microorganisms12020234 | The Potential Impact of Probiotics on Human Health: An Update on Their
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/sauerkraut | 10.3390/nu11051189 | Health-Promoting Components in Fermented Foods: An Up-to-Date Systemat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1007/s00204-020-02739-w | Arsenic intoxication: general aspects and chelating agents
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fmed.2024.1494740 | Renal health benefits and therapeutic effects of parsley (Petroselinum
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.5772/intechopen.96136 | Use of Selected Antioxidant-Rich Spices and Herbs in Foods
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.19044/esj.2023.v19n18p66 | Some Medicinal Plants with Anti-breast Cancer Activity and the Input o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2025.1503149 | Tiryāq in traditional Persian medicine: a survey of antidotal plants a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/cimb47060418 | The Preventive Power of the Mediterranean Diet Against Blue-Light-Indu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ijms262311502 | Therapeutic Potential of Latin American Medicinal Plants in Oral Disea
+- FAIL pdf | C | 10.1080/07853890.2023.2245325 | Effects of a spice-blended honey muffin on salivary inflammation markers in adul | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fmed.2023.1168560 | Diet and ideal food pyramid to prevent or support the treatment of dia
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules30153096 | Potential of Quercetin as a Promising Therapeutic Agent Against Type 2
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ijms25168982 | Carotenoid Supplementation for Alleviating the Symptoms of Alzheimer's
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1002/iid3.70301 | The Role of Reactive Oxygen Species (ROS) in Periodontitis: A Potentia
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu17030530 | Management of Fibromyalgia: Novel Nutraceutical Therapies Beyond Tradi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fnut.2023.1278125 | School-based intervention impacts availability of vegetables and bever
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.2174/1570159x21666230621143944 | Edible Herbal Medicines as an Alternative to Common Medication for Sle
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fnut.2021.680452 | Introducing Plant-Based Mediterranean Diet as a Lifestyle Medicine App
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules28083610 | The Research Progress of Extraction, Purification and Analysis Methods
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu13124545 | Placing a Well-Designed Vegan Diet for Slovenes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu14183753 | Polyphenol Intake in Pregnant Women on Gestational Diabetes Risk and N
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.5498/wjp.v8.i3.97 | Antidepressant foods: An evidence-based nutrient profiling system for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules25235597 | Neuroprotective Effects of Quercetin in Pediatric Neurological Disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/biomedicines12081636 | The Pros and Cons of Estrogens in Prostate Cancer: An Update with a Fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu13020282 | The Role of Natural Antioxidants in the Prevention of Dementia-Where D
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | PMC7313110 | Proceedings of the Canadian Society of Allergy and Clinical Immunology
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1186/s12966-018-0704-2 | Multilevel approaches to increase fruit and vegetable intake in low-in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu14091981 | Associations between Frequency of Culinary Herb Use and Gut Microbiota
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2019/2125070 | A Review of the Science of Colorful, Plant-Based Food and Practical St
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2019/7010467 | A Review on Flavonoid Apigenin: Dietary Intake, ADME, Antimicrobial Ef
+- FAIL pdf | C | 10.21273/hortsci.44.2.438 | Selenization of Basil and Cilantro Through Foliar Applications of Selenate-selen | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.5772/intechopen.78656 | Coriander and Its Phytoconstituents for the Beneficial Effects
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2013/219840 | Chelation: Harnessing and Enhancing Heavy Metal Detoxification—A Revie
+- FAIL pdf | C | 10.33915/etd.3870 | The Effect of Sodium Selenate Biofortification on Plant Yield, Mineral Content,  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fmicb.2017.01069 | Metagenomics: The Next Culture-Independent Game Changer
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.5740/jaoacint.18-0418 | Health Benefits of Culinary Herbs and Spices
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2019/7010467 | A Review on Flavonoid Apigenin: Dietary Intake, ADME, Antimicrobial Ef
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules28020867 | Microgreens—A Comprehensive Review of Bioactive Molecules and Health B
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1093/advances/nmz075 | Perspective: Dietary Biomarkers of Intake and Exposure—Exploration wit
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2015.00323 | Anti-hypertensive Herbs and their Mechanisms of Action: Part I
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2018.00102 | Resveratrol—Potential Antibacterial Agent against Foodborne Pathogens
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules22060933 | Selenium Enrichment of Horticultural Crops
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2016.00309 | Current Therapeutic Cannabis Controversies and Clinical Trial Design I
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1038/s41467-024-46346-0 | Predicting and improving complex beer flavor through machine learning
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2010/753512 | Global Distribution, Public Health and Clinical Impact of the Protozoa
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.5498/wjp.v8.i3.97 | Antidepressant foods: An evidence-based nutrient profiling system for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1017/s0007114524001405 | Overview of anti-inflammatory diets and their promising effects on non
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2023/7890188 | Angiotensin-Converting Enzyme and Hypertension: A Systemic Analysis of
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ijms23158124 | The Impact of Plant Phytochemicals on the Gut Microbiota of Humans for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1039/d1fo03180e | Biological properties and therapeutic applications of garlic and its c
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2019/2125070 | A Review of the Science of Colorful, Plant-Based Food and Practical St
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1093/jn/135.7.1763 | Some Dietary and Adipose Tissue Carotenoids Are Associated with the Ri
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1007/s00204-020-02739-w | Arsenic intoxication: general aspects and chelating agents
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/cancers12071985 | Anti-Cancer Potential of Cannabinoids, Terpenes, and Flavonoids Presen
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.14740/gr1622 | Intestinal Parasitic Infections in 2023
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/cjid/8837624 | Prevalence and Associated Risk Factors of &lt;i&gt;Cyclospora cayetane
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1186/s12889-025-25392-3 | Strengthening equity in gardening initiatives for children and youth:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/microorganisms14010076 | <i>Listeria monocytogenes</i> and <i>Listeria ivanovii</i> Virulence a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1590/s1984-29612024040 | Parasitic contamination in vegetables for human consumption: a systema
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1080/19490976.2025.2551113 | Linking the edible plant microbiome and human gut microbiome
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fpubh.2025.1531751 | Exposure to pesticides in Chile and its relationship with carcinogenic
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/metabo14010016 | The Role of the Olfactory System in Obesity and Metabolism in Humans:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1111/1541-4337.70534 | Increasing the Acceptability of Insect-Based Foods as Future Foods: A
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1186/s40795-024-00828-y | Genetic determinants of food preferences: a systematic review of obser
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ijms262311502 | Therapeutic Potential of Latin American Medicinal Plants in Oral Disea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1186/s40795-026-01402-4 | Association between dietary patterns and metabolic syndrome and its co
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fmed.2024.1337785 | Essential oils: a systematic review on revolutionizing health, nutriti
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1016/j.advnut.2025.100531 | Ingestive Behavior and Precision Nutrition: Part of the Puzzle
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1186/s40246-025-00882-y | Harnessing phytochemicals for engineering health solutions
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/microorganisms12112267 | Microbial Contamination and Antibiotic Resistance in Fresh Produce and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/microorganisms11092171 | <i>Cyclospora cayetanensis</i>: A Perspective (2020-2023) with Emphasi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1186/s12906-024-04553-8 | What is the state of the art on traditional medicine interventions for
+- FAIL pdf | A | 10.3390/nu15092070 | Mexican Plants Involved in Glucose Homeostasis and Body Weight Control: Systemat | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1017/s0007114524001405 | Overview of anti-inflammatory diets and their promising effects on non
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ijms25169118 | Dietary Polyphenols and Gut Microbiota Cross-Talk: Molecular and Thera
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ijms25168982 | Carotenoid Supplementation for Alleviating the Symptoms of Alzheimer's
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1017/s0950268821000200 | A scoping review of the detection, epidemiology and control of <i>Cycl
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu17030530 | Management of Fibromyalgia: Novel Nutraceutical Therapies Beyond Tradi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/plants14030400 | Aromatherapy and Essential Oils: Holistic Strategies in Complementary
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/metabo14010016 | The Role of the Olfactory System in Obesity and Metabolism in Humans:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules27010209 | Coriandrum sativum L.: A Review on Ethnopharmacology, Phytochemistry,
+- FAIL pdf | C | 10.1093/fqsafe/fyac019 | The antimicrobial interventions of cilantro (Coriandrum sativum) in mitigating c | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1136/bmjopen-2017-020574 | Consumption of ultra-processed foods and associated sociodemographic f
+- FAIL pdf | C | 10.33915/etd.3870 | The Effect of Sodium Selenate Biofortification on Plant Yield, Mineral Content,  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1155/2013/219840 | Chelation: Harnessing and Enhancing Heavy Metal Detoxification—A Revie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1146/annurev-arplant-102820-032704 | Phyllosphere Microbiome
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/ph16071020 | Recent Advances in Potential Health Benefits of Quercetin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fmicb.2017.01829 | A Review on the Applications of Next Generation Sequencing Technologie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1016/j.tics.2020.11.005 | Human Olfaction at the Intersection of Language, Culture, and Biology
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/molecules28020867 | Microgreens—A Comprehensive Review of Bioactive Molecules and Health B
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1038/s41467-022-30187-w | Large-scale GWAS of food liking reveals genetic determinants and genet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/seaweed | 10.1007/s10811-016-0974-5 | Algae as nutritional and functional food sources: revisiting our under
+- FAIL pdf | C | 10.3390/md13085447 | Potential Bioactive Compounds from Seaweed for Diabetes Management | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/seaweed | 10.3390/md24030116 | Marine Bioactive Compounds from Functional Seafoods: Pharmacological M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/seaweed | 10.1007/s10811-016-0974-5 | Algae as nutritional and functional food sources: revisiting our under
+- FAIL pdf | C | 10.1038/s41598-024-64556-w | Exposure to iodine, essential and non-essential trace element through seaweed co | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/seaweed | 10.1053/j.gastro.2011.02.011 | Development of the Human Gastrointestinal Microbiota and Insights From
+- FAIL pdf | C | 10.1016/j.fshw.2019.08.001 | Seaweed nutraceuticals and their therapeutic role in disease prevention | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/seaweed | 10.3390/md24030116 | Marine Bioactive Compounds from Functional Seafoods: Pharmacological M
+- FAIL pdf | A | PMC13352089 | Efficacy of Honey as A Moisturizing Ingredient in Cosmetic Formulations: A Syste | no OA PDF resolved
+- FAIL pdf | B | 10.3390/foods15091572 | Does Consuming Fresh Ultraviolet Light-Exposed Mushrooms Offset the Seasonal Dec | no OA PDF resolved
+- FAIL pdf | B | 10.3390/cancers18142294 | β-Glucans, Triterpenes and Nucleoside Analogs of Edible and Medicinal Mushrooms  | no OA PDF resolved
+- FAIL pdf | B | 10.3390/cancers18142294 | β-Glucans, Triterpenes and Nucleoside Analogs of Edible and Medicinal Mushrooms  | no OA PDF resolved
+- FAIL pdf | A | 10.3390/medsci14010042 | Application of Medicinal Mushrooms for the Treatment of Peripheral Nerve Injury: | no OA PDF resolved
+- FAIL pdf | B | 10.3390/cancers18142294 | β-Glucans, Triterpenes and Nucleoside Analogs of Edible and Medicinal Mushrooms  | no OA PDF resolved
+- FAIL pdf | B | 10.1186/s12986-026-01122-3 | Effects of regular consumption of a β-glucan-rich oyster mushroom powder on chol | no OA PDF resolved
+- FAIL pdf | B | 10.1002/brb3.71193 | Adaptogenic Effects of Mushroom Blend Supplementation on Stress, Fatigue, and Sl | no OA PDF resolved
+- FAIL pdf | B | 10.3390/nu15194221 | Effectiveness of Fish Roe, Snow Fungus, and Yeast Supplementation for Cognitive  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/fsn3.71640 | Effect of Miracle Berry on Taste Modification Properties Among Adults
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1111/1750-3841.71331 | Upcycling of Mixed Fruit Juice By-Products for Flour Production and Ap
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu18142228 | NutriSteppe-AI: Development, Architecture, and Explainable Design of a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/fsn3.71518 | Dry-Milled Corn and Corn Products and Health: A Narrative Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3389/fmed.2025.1690743 | Oral intake management in laboring women: a scoping review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1038/s41598-025-20936-4 | Lifestyle data-based multiclass obesity prediction with interpretable
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1007/s12602-026-11028-4 | A Multidisciplinary Review of the Microbial, Functional, and Consumer
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1080/07853890.2025.2583756 | Anticancer potential of dietary fiber for colorectal carcinoma: a narr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu18071130 | The Potential Role of Dietary (Poly)phenols in Cardiometabolic Risk Du
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1016/j.tjnut.2026.101373 | The Effect of Three Daily Servings of Full-Fat Dairy for 12 Weeks on B
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1186/s12916-025-04347-w | The effect of fruit smoothie supplementation on psychological distress
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/life15111720 | Fructose Malabsorption, Gut Microbiota and Clinical Consequences: A Na
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1186/s12911-025-03333-9 | Explainable extratreeclassifier model for early detection of type 2 di
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1093/nutrit/nuad116 | Roles of citrus fruits on energy expenditure, body weight management,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1017/s000711452500073x | Impact of (poly)phenol-rich dietary sources on DNA damage: insights fr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/vms3.70977 | Synbiotics are Better Than Probiotics and Prebiotics for Use as Nutrit
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu18040637 | Individually Recognized Functional Ingredients of Korean Health Functi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/foods15132374 | Fatty Acid Profiling of "Mollar de Elche" Pomegranate (&lt;i&gt;Punica
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu17030441 | Effects of Frozen Red Dragon Fruit Consumption on Metabolic Markers in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/ijms26188977 | Genome-Based Mexican Diet Bioactives Target Molecular Pathways in HBV,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1007/s13668-024-00583-3 | Miracle Fruit, a Potential Taste-modifier to Improve Food Preferences:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu17152496 | The Ten Dietary Commandments for Patients with Irritable Bowel Syndrom
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1080/29933935.2026.2650247 | Precision nutrition through diet-gut microbiome interactions: Emerging
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/foods13142253 | Anticancer Potential of Flavonoids: Their Role in Cancer Prevention an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1111/1541-4337.12351 | The Bioavailability, Transport, and Bioactivity of Dietary Flavonoids:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.2903/j.efsa.2014.3597 | Dietary exposure to inorganic arsenic in the European population
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu8030156 | Dietary Natural Products for Prevention and Treatment of Liver Cancer
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1038/nplants.2016.112 | Neglecting legumes has compromised human health and sustainable food p
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1017/s0007114508939830 | Food-chain selenium and human health: emphasis on intake
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.2903/j.efsa.2012.2831 | Lead dietary exposure in the European population
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/ptr.6419 | Polyphenols: A concise overview on the chemistry, occurrence, and huma
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1007/s12011-019-01727-1 | Mineral Content of the Pulp and Peel of Various Citrus Fruit Cultivars
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/(sici)1097-0215(19980529)76:5<659::aid-ijc8>3.0.co;2-p | Dietary habits and stomach cancer in Shanghai, China
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1017/s0007114511006313 | Reliability, comparative validity and stability of dietary patterns de
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3389/fimmu.2021.712608 | Effects of Citrus Fruit Juices and Their Bioactive Components on Infla
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.4081/aiua.2015.2.105 | Dietary treatment of urinary risk factors for renal stone formation. A
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1016/j.chemosphere.2013.06.085 | A human health risk assessment of rare earth elements in soil and vege
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1073/pnas.2112063119 | Deforestation reduces fruit and vegetable consumption in rural Tanzani
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/microorganisms9050965 | Effect of Gut Microbiota Biotransformation on Dietary Tannins and Huma
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu12061717 | Understanding the Composition, Biosynthesis, Accumulation and Transpor
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1155/2021/6662259 | Bioactive Substances, Heavy Metals, and Antioxidant Activity in Whole
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/ajpa.20519 | Contributions of biogeochemistry to understanding hominin dietary ecol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1017/s0007114511006465 | Patterns and trends of beverage consumption among children and adults
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1002/mnfr.201000415 | Dietary supplements and human health: For better or for worse?
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/molecules28020887 | Major Phytochemicals: Recent Advances in Health Benefits and Extractio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1093/jn/131.6.1714 | A Vegetable/Fruit Concentrate with High Antioxidant Capacity Has No Ef
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.1371/journal.pone.0056354 | The Impact of Organic Farming on Quality of Tomatoes Is Associated to
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/nu6093747 | Dietary Determinants of and Possible Solutions to Iron Deficiency for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/limes | 10.3390/cells10061474 | Dietary Flavonoids and Insulin Signaling in Diabetes and Obesity
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.jcs.2017.11.010 | Do ancient types of wheat have health benefits compared with modern br
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3402/fnr.v54i0.5056 | Whole grain for whom and why?
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.jnutbio.2017.09.001 | Ancient wheat species and human health: Biochemical and clinical impli
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.jcs.2017.11.010 | Do ancient types of wheat have health benefits compared with modern br
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/molecules27061948 | General Health Benefits and Pharmacological Activities of Triticum aes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3402/fnr.v54i0.5056 | Whole grain for whom and why?
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.5772/intechopen.1009499 | Wheat as a Nutritional Powerhouse: Shaping Global Food Security
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu12041118 | Lactic Acid Fermentation of Cereals and Pseudocereals: Ancient Nutriti
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu9040412 | “Eat as If You Could Save the Planet and Win!” Sustainability Integrat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1177/1559827620907344 | Home Meal Preparation: A Powerful Medical Intervention
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.31665/jfb.2022.18317 | Natural nutraceuticals, especially functional foods, their major bioac
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1080/09637486.2021.1980865 | Gluten-free diet intervention reduces thiamine intake in two weeks, in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.21203/rs.3.rs-9598876/v1 | Technological and nutritional optimization of bread using purple, eink
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.56237/jhes-24-020 | Selected Socio-Demographic Factors and Whole Grains Perception and Eat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/nu18091417 | Dietary Iron Sources Among 9-Month-Old Infants from Low-Income Househo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1007/s00394-026-04087-4 | Validation and cultural adaptation of the pregnancy-adapted Mediterran
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.psj.2026.106733 | Dynamic linkages between chicken meat production, consumption, income
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/nu18111779 | Brain Foods: A Narrative Review of Food Items and Their Impact on Cogn
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1002/alz.71772 | MIND diet, cerebrovascular health, and cognition among community-dwell
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/molecules31162928 | Plant-Based Approaches for Inhibition of Advanced Glycation End Produc
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.2903/j.efsa.2026.10178 | Assessment of genetically modified RF3 Canola Quality (CQ) &lt;i&gt;Br
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3389/fnut.2025.1665566 | Gender-specific effects of meat consumption on type 2 diabetes: a narr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/vetsci13080832 | Pomegranate (&lt;i&gt;Punica granatum&lt;/i&gt; L.) in Veterinary Medi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1186/s12872-026-05557-7 | Sustainable diets and functional foods for the prevention of cardio-me
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/nu18152571 | Transitioning Towards Sustainable Diets: Pulses, Their Role in Modulat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1007/s00394-026-04030-7 | Nutrition interventions in women with polycystic ovary syndrome: a sys
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/foods15111911 | Fatty Acid Profile, Oxidative Stability, and Quality Traits of Meat fr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/ani15223245 | Sustainability of Animal Production Chains: Alternative Protein Source
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1101/2025.10.03.25337243 | NMR metabolomic profiles in white British and British Indian vegetaria
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.advnut.2026.100645 | Vitamin D Fortification of Dairy Products in the United Kingdom: What
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1007/s12011-026-05053-1 | Silicon in Poultry Nutrition: Biological Roles, Bioavailability, and I
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1007/s11250-026-05193-5 | Processed animal proteins in poultry nutrition: nutritional value, dig
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.psj.2025.106225 | Meat quality of hens fed an unblanched, high-oleic peanut diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1038/s41598-025-05624-7 | Growth performance, meat quality, cecal microbiota and metabolomics pr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1186/s12889-026-26988-z | An ecological study of the association between childhood stunting, wat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1186/s12884-026-08721-1 | The relationship between first trimester maternal diet and early pregn
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1007/s11250-025-04466-9 | A review on the potential use of eubiotics in non-chicken poultry spec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1093/cvr/cvaf218 | The Mediterranean diet and cardiovascular disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/s0140-6736(19)30041-8 | Health effects of dietary risks in 195 countries, 1990–2017: a systema
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1017/s1368980010002077 | Trends in meat consumption in the USA
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.2337/diacare.25.3.417 | Dietary Fat and Meat Intake in Relation to Risk of Type 2 Diabetes in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3402/fnr.v59.27606 | Role of poultry meat in a balanced diet aimed at maintaining health an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1186/1741-7015-11-63 | Meat consumption and mortality - results from the European Prospective
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.foodpol.2016.11.002 | Should we stop meating like this? Reducing meat consumption through su
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1111/joim.12543 | Potential health hazards of eating red meat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1080/03079450400013162 | Clostridium perfringensin poultry: an emerging threat for animal and p
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.foodpol.2020.101847 | Viewpoint: Regulating meat consumption to improve health, the environm
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3382/ps.2008-00244 | Effects of dietary inclusion of probiotic and synbiotic on growth perf
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.jscs.2010.06.006 | Impact of mycotoxins on humans and animals
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1038/ejcn.2016.52 | The 2015 Dutch food-based dietary guidelines
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1080/09712119.2015.1079527 | Recent advances in the role of organic acids in poultry nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.5851/kosfa.2016.36.5.567 | Application of Probiotics for the Production of Safe and High-quality
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3389/fsufs.2020.00134 | Considering Plant-Based Meat Substitutes and Cell-Based Meats: A Publi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3389/fmicb.2014.00282 | Antibiotics in Canadian poultry productions and anticipated alternativ
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1017/s1368980011002515 | Mediterranean diet pyramid today. Science and cultural updates
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3945/an.116.012567 | Alignment of Healthy Dietary Patterns and Environmental Sustainability
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1093/ps/85.6.960 | Reducing the Carriage of Foodborne Pathogens in Livestock and Poultry
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1017/s0007114508939830 | Food-chain selenium and human health: emphasis on intake
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1093/ajcn/83.6.1369 | Dietary patterns are associated with biochemical markers of inflammati
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1038/nrgastro.2017.75 | Expert consensus document: The International Scientific Association fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.5713/ajas.2010.r.07 | Trace Mineral Nutrition in Poultry and Swine
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.1016/j.psj.2022.101696 | Alternatives to antibiotics for organic poultry production: types, mod
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/turkey | 10.3390/ani11061620 | Overview of the Use of Probiotics in Poultry Production
+- FAIL pdf | C | 10.3390/foods15173058 | Quality and Consumer Acceptability of Organ-Enhanced Ground Beef Patties | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/foods15081324 | Jurisdictional Comparison in the Utilization and Valorization of Anima
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/foods15173041 | Impacts of Food Adulteration and Contamination: Health, Socio-Economic
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fnut.2026.1790394 | High unprocessed beef intake (&gt;100 g/d) linked to elevated triglyce
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fvets.2026.1909059 | Impacts of heavy metal-contaminated feed on growing goats: nutrient di
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.14202/vetworld.2026.1707-1723 | Veterinary-sanitary evaluation and biochemical quality of beef from ca
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fnut.2026.1714510 | A study on dietary diversification intervention for elderly patients w
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1038/s41538-025-00699-y | Exploring the role of food-source microRNAs as potential nutritional b
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fpubh.2026.1793324 | The Change Club intervention: 2-year impacts from a cluster-randomized
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fnut.2026.1830797 | Plant-based diets for human health with implications for cardiometabol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/nu18020348 | Carnivore Diet: A Scoping Review of the Current Evidence, Potential Be
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1038/s41467-026-76257-1 | Early life sugar rationing and ageing related diseases, biological age
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/biology15171519 | Dietary Reactive Oxygen Species and Oxidative Stress: Pathogenic Mecha
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fnut.2026.1809278 | Determinants and socioeconomic inequalities in vitamin A-rich food con
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1002/mbo3.70331 | Clostridioides difficile as a Zoonotic and Foodborne Pathogen: Reviewi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1002/alz.71772 | MIND diet, cerebrovascular health, and cognition among community-dwell
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1080/10495398.2026.2631838 | Research progress on biological functions of astragalus stems and leav
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1002/vms3.70654 | Investigation of the Prevalence of Toxoplasma gondii in Meat, Meat Org
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1017/s1368980025000539 | Intimate partner violence and reduced dietary iron and vitamin A intak
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/ani16081244 | Modernizing Livestock Operations: Smart Feedlot Technologies and Their
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1007/s11250-025-04355-1 | Comparative analysis of Feedlot and Free-range cattle management on Bo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1007/s44463-025-00035-8 | Utilization of animal by-products as sources of bioactive compounds an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1159/000552770 | Lifestyle and Environment Aspects Challenging Kidney Health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/nu17142263 | Assessing Choline, Carnitine, and Betaine Intake and Their Effects on
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1161/circulationaha.105.171600 | Heart Disease and Stroke Statistics—2006 Update
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1016/j.clnu.2016.07.015 | ESPEN guidelines on nutrition in cancer patients
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1017/s1368980010002077 | Trends in meat consumption in the USA
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1016/s0140-6736(19)30041-8 | Health effects of dietary risks in 195 countries, 1990–2017: a systema
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1017/s1751731109991091 | Intramuscular fat content in meat-producing animals: development, gene
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1093/ajcn/70.3.412 | Whole-grain consumption and risk of coronary heart disease: results fr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fphys.2018.00477 | Role of ROS and Nutritional Antioxidants in Human Diseases
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.5772/intechopen.77045 | Nutritional Composition of Meat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1007/s00726-020-02823-6 | Important roles of dietary taurine, creatine, carnosine, anserine and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1093/ajcn/84.1.289 | Global nutrition dynamics: the world is shifting rapidly toward a diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1007/s13197-011-0290-7 | Utilization of byproducts and waste materials from meat, poultry and f
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1161/cir.0000000000000510 | Dietary Fats and Cardiovascular Disease: A Presidential Advisory From
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1289/ehp.02110445 | How sustainable agriculture can address the environmental and human he
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3390/ijms19113425 | The Impact of Nutrition and Environmental Epigenetics on Human Health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1007/s10113-016-1057-5 | Reducing meat consumption in developed and transition countries to cou
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fnut.2018.00087 | The Role of Polyphenols in Human Health and Food Systems: A Mini-Revie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1136/bmjopen-2015-008705 | Global, regional and national consumption of major food groups in 1990
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1073/pnas.1417508112 | A red meat-derived glycan promotes inflammation and cancer progression
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.3389/fsufs.2020.00128 | Plant-Based Meats, Human Health, and Climate Change
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.2527/jas.2007-0467 | Invited Review: Role of livestock in human nutrition and health for po
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1039/c5fo01530h | Dietary protein intake and human health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1111/obr.13126 | Ultra‐processed foods and the nutrition transition: Global, regional a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1038/s41598-021-93100-3 | A metabolomics comparison of plant-based meat and grass-fed meat indic
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1093/ajcn.81.2.341 | Origins and evolution of the Western diet: health implications for the
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/beef_heart | 10.1016/j.animal.2021.100287 | Review: Trends for meat, milk and egg consumption for the next decades
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s13659-025-00550-7 | Advancement in nanocarrier-mediated delivery of herbal bioactives: fro
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s10787-024-01631-8 | Herbal remedies for oral and dental health: a comprehensive review of
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/polym15163473 | Hyaluronic Acid-Extraction Methods, Sources and Applications
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s13668-024-00548-6 | Nutritional Considerations During Major Weight Loss Therapy: Focus on
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC12974566 | Research Communications of the 34th ECVIM-CA Congress 18-20 September
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1002/jev2.70157 | ISEV2025 Abstract Book
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3389/fonc.2022.867655 | Nano-Drug Delivery Systems Entrapping Natural Bioactive Compounds for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1039/d1na00859e | A review on contemporary nanomaterial-based therapeutics for the treat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/jpm12122029 | Nutrition Education to Reduce Metabolic Dysfunction for Spinal Cord In
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC7480431 | ISEV2020 Abstract Book
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s00726-020-02823-6 | Important roles of dietary taurine, creatine, carnosine, anserine and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC11245638 | ISEV2024 Abstract Book
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/bioengineering5020046 | Honey-Based Templates in Wound Healing and Tissue Engineering
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/ijms22137130 | Antimicrobial Activity of Curcumin in Nanoformulations: A Comprehensiv
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1016/j.foodhyd.2020.106110 | Molar mass effect in food and health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s11307-022-01794-2 | World Molecular Imaging Congress 2022
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1021/acs.chemrev.0c00752 | High-Throughput Methods in the Discovery and Study of Biomaterials and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC11188014 | Abstracts of the Annual Meeting of the ”Iuliu Haţieganu” University of
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC8495465 | Arterial Thromboembolism
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1111/jvim.15904 | 2020 ACVIM Forum On Demand Research Abstract Program
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1002/jev2.12224 | ISEV2022 Abstract Book
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC9771672 | E
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s43032-022-00883-5 | SRI 2022: Scientific Abstracts
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC7419731 | Abstracts
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | PMC8551951 | 20th IUPAB International Congress, 45th SBBf Congress and 50th Annual
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s00726-020-02823-6 | Important roles of dietary taurine, creatine, carnosine, anserine and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.5772/3318 | Bioactive Food Peptides in Health and Disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.5772/32358 | Hydrocolloids in Food Industry
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1038/s41598-021-88058-1 | Effects of strontium ions with potential antibacterial activity on in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s10570-020-03674-w | Cellulose and its derivatives: towards biomedical applications
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1016/j.tifs.2021.12.008 | Compositional, structural design and nutritional aspects of texture-mo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1016/j.actbio.2020.02.022 | Antibacterial biohybrid nanofibers for wound dressings
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1186/s40643-019-0243-y | Seafood waste: a source for preparation of commercially employable chi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1038/s41598-017-15971-9 | Preparation and functional evaluation of collagen oligopeptide-rich hy
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/md23050190 | Recent Advancements in Marine Collagen: Exploring New Sources, Process
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1111/1541-4337.13087 | Wool keratin as a novel alternative protein: A comprehensive review of
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1016/j.mattod.2018.02.001 | Nanocellulose as a natural source for groundbreaking applications in m
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/nu15214561 | Common Beans as a Source of Amino Acids and Cofactors for Collagen Bio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s00289-022-04443-4 | A comprehensive review on recent advances in preparation, physicochemi
+- FAIL pdf | C | 10.1111/1750-3841.16962 | Hyaluronan and chondroitin sulfate in chicken–vegetable bone broth delay osteopo | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.7759/cureus.48838 | Development, Characterization, and Antibacterial Analysis of the Selen
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1111/j.1365-2184.2012.00826.x | Equisetum arvense hydromethanolic extracts in bone tissue regeneration
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1155/2021/6646702 | Preparation of Polyurethane/Pluronic F127 Nanofibers Containing Pepper
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/md11030747 | Chondroitin Sulfate, Hyaluronic Acid and Chitin/Chitosan Production Us
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s42452-025-07780-x | Collagen and collagen-derived materials: synthesis, structure, classif
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/ijms241210296 | Hyaluronic Acid: A Powerful Biomolecule with Wide-Ranging Applications
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/ijerph21060687 | Impact of Specific Bioactive Collagen Peptides on Joint Discomforts in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.3390/biom13040579 | Antimicrobial and Osteogenic Effects of Collagen Membrane Decorated wi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/gelatin_broth | 10.1007/s00394-021-02787-7 | Bioactive fish collagen peptides weaken intestinal inflammation by ori
+- FAIL pdf | C | 10.3390/foods15050946 | Nutritional Composition, Textural, Histological and Structural Properties of Gia | no OA PDF resolved
+- FAIL pdf | C | 10.3390/foods15061073 | Criteria for the Characterization of Seafood Byproducts to Allow Tracing Their G | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1038/s41598-025-16332-7 | Nutritional profiling and sensory evaluation of hilsa Tenualosa Ilisha
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/ani14162425 | Exploring the Multifaceted Potential of Endangered Sturgeon: Caviar, M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/foods14030394 | Nutritional Quality of Plant-Based Fish and Seafood Analogs: A Study o
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3389/fnut.2025.1664129 | Dissecting the causal association of diet with thyroid cancer: a syste
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.2903/j.efsa.2026.9994 | Dietary exposure to lycopene from background diet, novel foods and foo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.4168/aair.2025.17.3.288 | Global Perspectives on Allergen Labeling: Harmonization of Regulations
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.2903/j.efsa.2026.9855 | Scientific opinion on the amendment of the specifications for vegetabl
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1016/j.crfs.2025.101112 | A selection of African traditional and emerging foods: processing, com
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1017/s0007114524000072 | Towards consistency in dietary pattern scoring: standardising scoring
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/medicina59091651 | IgE-Mediated and Non-IgE-Mediated Fish Allergy in Pediatric Age: A Hol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/nu15204338 | Impact of Maternal Fish Consumption on Serum Docosahexaenoic Acid (DHA
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/ani15162381 | Well-Being of the Baltic Herring and Bycatch Fish Species from FAO Maj
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/nu16091286 | The Benefits of the Mediterranean Diet on Inflamm-Aging in Childhood O
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/jox13030033 | Indigo Carmine: Between Necessity and Concern
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3389/falgy.2021.676903 | Seafood Allergy in Asia: Geographical Specificity and Beyond
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/ijerph19052762 | Estimation of Target Hazard Quotients and Potential Health Risks for T
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1016/j.heliyon.2022.e09547 | Immunity boosting roles of biofunctional compounds available in aquafo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1007/s10068-021-00943-7 | Codex Alimentarius commission on ensuring food safety and promoting fa
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.2903/j.efsa.2023.8106 | Re-evaluation of calcium carbonate (E 170) as a food additive in foods
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/md19020116 | Fish Waste: From Problem to Valuable Resource
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/nu12113454 | The Role of Lipid Composition in the Sensory Attributes and Acceptabil
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1002/fsn3.676 | Chemical composition and functional properties of roe concentrates fro
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/md19020116 | Fish Waste: From Problem to Valuable Resource
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3389/fbioe.2016.00059 | Enzymes in Fish and Seafood Processing
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1017/s1368980009005904 | Exploration of biomarkers for total fish intake in pregnant Norwegian
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1111/raq.12470 | Cleaner fish in aquaculture: review on diseases and vaccination
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1186/1471-244x-10-38 | Dietary intake of fish, omega-3, omega-6 polyunsaturated fatty acids a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1371/journal.pone.0206483 | Fine Endmesolithic fish caviar meal discovered by proteomics in foodcr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.18176/jiaci.0381 | What Do We Know About Fish Allergy at the End of the Decade?
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/medicina57010076 | IgE-Mediated Fish Allergy in Children
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/foods12010228 | Identification of Fish Species and Targeted Genetic Modifications Base
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1016/j.ijgfs.2024.100944 | Proximate nutritional composition of roe from fish, crustaceans, musse
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.4236/fns.2011.27101 | Fatty Acids Profile, Atherogenic (IA) and Thrombogenic (IT) Health Lip
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1111/raq.12194 | Use of lumpfish for sea‐lice control in salmon farming: challenges and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.1080/10942912.2023.2252622 | Lipidomics: a comprehensive review in navigating the functional qualit
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/fish_eggs | 10.3390/ani14162425 | Exploring the Multifaceted Potential of Endangered Sturgeon: Caviar, M
+- FAIL pdf | C | 10.4062/biomolther.2012.20.5.446 | The pharmacology of actoprotectors: practical application for improvement of men | no OA PDF resolved
+- FAIL pdf | C | 10.5142/jgr.2013.37.144 | Actoprotective effect of ginseng: improving mental and physical performance | no OA PDF resolved
+- FAIL pdf | C | 10.4062/biomolther.2012.20.5.446 | The Pharmacology of Actoprotectors: Practical Application for Improvement of Men | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.5142/jgr.2013.37.144 | Actoprotective effect of ginseng: improving mental and physical perfor
+- FAIL pdf | C | 10.35333/jrp.2020.136 | The effect of 3,7-diazabicyclo[3.3.1]nonanescontaining monoterpenoid moieties on | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.1186/s12888-025-06468-1 | Are neurasthenia and depression the same disease entity? An electroenc
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.32756/0869-5490-2023-4-36-40 | Optimal dosage regimen of Ranquilon® for patients with anxiety associa
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.1186/s13104-017-2625-6 | Hemisphere specific EEG related to alternate nostril yoga breathing
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3892/etm.2018.6123 | Instant sedative effect of acupuncture at GV20 on the frequency of ele
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3390/jox15030088 | The Occurrence of Illicit Smart Drugs or Nootropics in Europe and Aust
+- FAIL pdf | C | 10.4062/biomolther.2012.20.5.446 | The pharmacology of actoprotectors: practical application for improvement of men | no OA PDF resolved
+- FAIL pdf | C | 10.4062/biomolther.2012.20.5.446 | The Pharmacology of Actoprotectors: Practical Application for Improvement of Men | no OA PDF resolved
+- FAIL pdf | C | 10.3390/nu13082861 | Plant Adaptogens—History and Future Perspectives | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.1002/ardp.202300595 | Nascent pharmacological advancement in adamantane derivatives
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3390/foods13233785 | Anti-Aging Effect of Traditional Plant-Based Food: An Overview
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3390/jox15030088 | The Occurrence of Illicit Smart Drugs or Nootropics in Europe and Aust
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.1155/2023/5852315 | New Psychoactive Substances: Major Groups, Laboratory Testing Challeng
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.12775/qs.2024.15.51854 | Exploring the therapeutic potential of Ashwagandha (Withania somnifera
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3390/biology14101429 | Bacterial Transformation of Adamantane and Its Derivatives: Regioselec
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3390/reactions4010007 | A Brief Review: Advancement in the Synthesis of Amine through the Leuc
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.5530/jyp.2019.11.71 | An Overview of Performance Enhancing Drugs (PED’s) in Sports and WADA
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.1051/ata/2000035 | Les produits dopants de demain
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.3390/nu18152552 | Current Evidence and Practical Considerations for Adaptogen Use in Exe
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.25959/23238149 | Monitoring the internet for nootropic substances available to Australi
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.25959/23238158 | The neural correlates of selective stopping
+- OFF-TOPIC | 08_peptides_gray/bromantane | 10.4316/sam.2023.0215 | Analysis of risks and implications of doping in sports performance in
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s41182-026-00923-9 | In vitro cytotoxicity of medicinal plants used in prostate cancer mana
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5534/wjmh.190043 | 'Testosterone Boosting' Supplements Composition and Claims Are not Sup
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2016/9706429 | Effects of the Aqueous Extract of Eremomastax speciosa (Acanthaceae) o
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4103/0973-7847.112832 | Exploring scientifically proven herbal aphrodisiacs
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of <i>Ipomoea batatas</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A review on plants used for improvement of sexual performance and viri
+- FAIL pdf | C | 10.1111/j.1745-7262.2005.00052.x | Aphrodisiac potentials of the aqueous extract of Fadogia agrestis (Schweinf. Ex  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.bjp.2018.07.006 | Microscopic characterization and HPTLC of the leaves, stems and roots of Fadogia | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/j.1745-7262.2007.00210.x | Study of the efficacy of Korean Red Ginseng in the treatment of erecti
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2019.01.046 | Male sexual dysfunction: A review of literature on its pathological me
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A Review on Plants Used for Improvement of Sexual Performance and Viri
+- FAIL pdf | C | 10.1093/jsxmed/qdad060.365 | (391) Comparative Analysis of YouTube and TikTok Videos on Treatments for Low Te | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1530/rep-08-0069 | Effects of Kaempferia parviflora extracts on reproductive parameters a
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1007/s12610-009-0030-2 | Medicinal plants as potential male anti-infertility agents: a review
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/and.12677 | A review of the potential of medicinal plants in the management and tr
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5897/ajb09.430 | Aphrodisiac properties of some Zimbabwean medicinal plants formulation
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2305-0500(13)60060-3 | Effects of aqueous extract of Cnestis ferruginea (Vahl ex De Cantolle)
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/and.13509 | Plants in the management of male infertility
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1080/87559129.2023.2238055 | Ergogenic properties, safety evaluation and regulations of selected in
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2305-0500(13)60062-7 | Aqueous root extract of Lecaniodiscus cupanioides restores the alterat
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4236/asm.2013.31006 | Aphrodisiac Activity of Aqueous Extract of Phoenix dactylifera Pollen
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.sajb.2018.08.011 | Sexual prowess from nature: A systematic review of medicinal plants us
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-018-0086-7 | Evaluation of aphrodisiac activity of ethanol extract of Ganoderma luc
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of Ipomoea batatas L. Lam.
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1080/19396368.2019.1612482 | Dietary fluted pumpkin seeds induce reversible oligospermia and androg
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s41182-026-00923-9 | In vitro cytotoxicity of medicinal plants used in prostate cancer mana
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of <i>Ipomoea batatas</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2019.01.046 | Male sexual dysfunction: A review of literature on its pathological me
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.9790/3008-09316164 | The effect of oral administration of aqueous extract of Newbouldia lae
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2305-0500(13)60060-3 | Effects of aqueous extract of Cnestis ferruginea (Vahl ex De Cantolle)
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.30574/gscbps.2020.12.3.0297 | Evaluating the effect of ethanol leaf extract of Gongronema latifolium
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1007/s10068-018-00547-8 | Ameliorative effects of Lycium chinensis on male sexual dysfunction an
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A Review on Plants Used for Improvement of Sexual Performance and Viri
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/1472-6882-12-8 | Effect of aqueous extract of Arctium lappa L. (burdock) roots on the s
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3109/13880200903207094 | Anabolic and androgenic activities of Bulbine natalensis stem in male
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/s2221-6189(13)60105-5 | An overview of the current methodologies used for evaluation of aphrod
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-017-2008-5 | In vitro and in vivo aphrodisiac properties of the seed extract from A
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of Ipomoea batatas L. Lam.
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.apjtb.2015.12.003 | Sub-chronic effects of a Phthirusa pyrifolia aqueous extract on reprod
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s43094-020-00154-7 | Rising trends towards the development of oral herbal male contraceptiv
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.51791/njap.v45i4.560 | Hormone inducive effects of Syzygium aromaticum (Clove) extract on the
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.5281/zenodo.4266024 | Evaluating the effect of ethanol leaf extract of Gongronema latifolium
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.21926/obm.genet.2401221 | A Review on Male Infertility and Herbal Medicine: Complementary and Al
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4236/asm.2013.31006 | Aphrodisiac Activity of Aqueous Extract of Phoenix dactylifera Pollen
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.30880/jst.2023.15.02.002 | Aphrodisiac Potentials of Aqueous Extract of Azanza Garckeana Fruit Pu
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.48077/scihor.24(8).2021.15-25 | The Development of Phyto- and Tissue Origin Medicines for Veterinary R
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1080/2314808x.2023.2300560 | Erectile dysfunction: basics and its management using plant products
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s41182-026-00923-9 | In vitro cytotoxicity of medicinal plants used in prostate cancer mana
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3390/plants15121836 | Traditional Medicinal Plants Used for Cancer Treatment in Sub-Saharan
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2018/7804135 | Biotoxicological Analyses of Trimeroside from <i>Baccharis trimera</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of <i>Ipomoea batatas</i>
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.4103/0973-7847.112832 | Exploring scientifically proven herbal aphrodisiacs
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.21010/ajtcam.v14i1.22 | ETHNOBOTANICAL STUDY OF PLANTS USED TO TREAT ASTHMA IN THE MARITIME RE
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A review on plants used for improvement of sexual performance and viri
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2013/182064 | Acute and Subchronic Toxicity Study ofEuphorbia hirtaL. Methanol Extra
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2019.01.046 | Male sexual dysfunction: A review of literature on its pathological me
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-020-00228-2 | An exploratory analysis on the toxicity & safety profile of Polyherbal
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.biopha.2020.110227 | Ketogenic diet improves and restores redox status and biochemical indi
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.toxrep.2020.01.020 | Combined administration of exogenous melatonin and insulin ameliorates
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2014/868062 | A Review on Plants Used for Improvement of Sexual Performance and Viri
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2016/3509323 | Acute and Subchronic Oral Toxicity Evaluation of Aqueous Root Extract
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8939854 | Scientific Validation of Ethnomedicinal Use of Ipomoea batatas L. Lam.
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2019/8497980 | Subcutaneous Injection of Myrrh Essential Oil in Mice: Acute and Subac
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s40816-019-0106-2 | RETRACTED ARTICLE: Acute and sub-acute (30-day) toxicity studies of Ae
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.bjp.2016.03.004 | A subchronic toxicity study of ethanol root extract of baked Aconitum
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.sjbs.2022.01.050 | Acute oral toxicity assessment and anti-hyperuricemic activity of Aloc
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1016/j.toxrep.2018.03.004 | Bioactive profiling and therapeutic potential of mushroom (Pleurotus t
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2011/738103 | Effect of Aqueous Extract of Massularia acuminata Stem on Sexual Behav
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3109/13880209.2013.764325 | Male rat hormone imbalance, testicular changes and toxicity associated
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/and.13509 | Plants in the management of male infertility
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1530/rep-08-0069 | Effects of Kaempferia parviflora extracts on reproductive parameters a
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1186/s12906-015-0880-4 | Effect of the aqueous extract of the aerial parts of Monsonia angustif
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.14202/vetworld.2022.2525-2534 | Aqueous extract of bay leaf (Laurus nobilis) ameliorates testicular to
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1088/1755-1315/210/1/012013 | Protective Effects Of Curcumin Against Benzopyrene Induced Liver Toxic
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1155/2021/5543320 | Antidepressant and Anxiolytic Effects and Subacute Toxicity of the Aer
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.3390/ph16030402 | Pirimicarb Induction of Behavioral Disorders and of Neurological and R
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1111/and.12677 | A review of the potential of medicinal plants in the management and tr
+- OFF-TOPIC | 07_supplements/fadogia_agrestis | 10.1039/d4ma00050a | Selective induction of apoptotic cell death in lung carcinoma cells by
+- FAIL pdf | B | 10.23736/s0022-4707.17.07022-0 | Acute ingestion of neuromuscular enhancement supplements do not improve power ou | no OA PDF resolved
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu18040595 | The Real-World Early Neuroprotective Effects of Oral Citicoline Combin
+- OFF-TOPIC | 07_supplements/uridine | 10.1002/cns.71085 | Mild Cognitive Impairment Diagnosis and Care Algorithms and the Role o
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/ijms27157012 | Alcohol Consumption and Gut Microbiota-Derived Metabolites in Primates
+- OFF-TOPIC | 07_supplements/uridine | 10.1007/s40266-026-01329-2 | Opioids to Treat Chronic Pain in the Older Adult: A Clinical Consensus
+- OFF-TOPIC | 07_supplements/uridine | 10.1016/j.tjpad.2025.100367 | Risk reduction and precision prevention across the Alzheimer's disease
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/ph19030519 | Pleiotropic Bioactivity of Caterpillar Fungus, Orange Cordyceps, and C
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu18030445 | Interconnected Developmental Trajectories of the Brain, Gut, and Sleep
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/antiox14091078 | Management and Prevention of Neurodegenerative Disorders: Can Antioxid
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu17111941 | Effects of Oral Nutrition Supplementation with or Without Multi-Domain
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu16234240 | Acute Alpha-Glycerylphosphorylcholine Supplementation Enhances Cogniti
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu17091431 | Dietary Nucleotides Enhance Neurogenesis, Cognitive Capacity, Muscle F
+- OFF-TOPIC | 07_supplements/uridine | 10.3389/fnut.2024.1286725 | Enhancing cognitive function in older adults: dietary approaches and i
+- OFF-TOPIC | 07_supplements/uridine | 10.3389/fnut.2026.1676497 | Vitamin deficiencies and Alzheimer's disease: evidence and implication
+- OFF-TOPIC | 07_supplements/uridine | 10.1002/fsn3.71417 | Ameliorative Effect of Beetroot Against Folic Acid Deficiency: A Revie
+- OFF-TOPIC | 07_supplements/uridine | 10.1016/j.advnut.2025.100520 | Gut Microbiota and Nutrition in Nursing Homes: Challenges and Translat
+- OFF-TOPIC | 07_supplements/uridine | 10.3389/fneur.2024.1434210 | FORTCARE-MCI study protocol: evaluation of Fortasyn Connect in the man
+- OFF-TOPIC | 07_supplements/uridine | 10.1159/000535869 | Personalized Paths: Unlocking Alzheimer's via the Gut-Brain Axis
+- OFF-TOPIC | 07_supplements/uridine | 10.1186/s13195-024-01522-8 | Nutrition guidance within a multimodal intervention improves diet qual
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu15245116 | Improving Cognitive Function with Nutritional Supplements in Aging: A
+- OFF-TOPIC | 07_supplements/uridine | 10.1186/s13195-024-01468-x | Integrating a multimodal lifestyle intervention with medical food in p
+- OFF-TOPIC | 07_supplements/uridine | 10.7759/cureus.33982 | A Systematic Review of Dietary Supplements in Alzheimer's Disease
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/life15101567 | Virosomes: Beyond Vaccines
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/ijms26157328 | Are Hippocampal Hypoperfusion and ATP Depletion Prime Movers in the Ge
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/nu17050922 | Exploring the Efficacy and Safety of Nutritional Supplements in Alzhei
+- OFF-TOPIC | 07_supplements/uridine | 10.3390/metabo15030208 | Metabolomics in Parkinson's Disease and Correlation with Disease State
+- OFF-TOPIC | 07_supplements/uridine | 10.2741/s153 | Cognition dopamine and bioactive lipids in schizophrenia
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/chir.70083 | Growth Hormone-Releasing Peptides: Investigation of Their Secondary St
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/dta.3898 | Gel Electrophoretic Detection of Black Market ACE-031
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/metabo13080949 | Metabolism Study of Anamorelin, a GHSR1a Receptor Agonist Potentially
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- FAIL pdf | C | 10.2147/jep.s249747 | Attenuation of Visceral and Somatic Nociception by Ghrelin Mimetics | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.5056/jnm16183 | Future Treatment of Constipation-associated Disorders: Role of Relamor
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1177/1536012120952623 | A Decade's Progress in the Development of Molecular Imaging Agents Tar
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms19103067 | Enhanced Pulsatile Growth Hormone Secretion and Altered Metabolic Horm
+- FAIL pdf | C | 10.2147/jep.s35396 | Efficacy of ipamorelin, a ghrelin mimetic, on gastric dysmotility in a rodent mo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/antib11010001 | Impact of Intrinsic and Extrinsic Factors on the Pharmacokinetics of P
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/molecules25051093 | Peptides from Natural or Rationally Designed Sources Can Be Used in Ov
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms18020273 | From Belly to Brain: Targeting the Ghrelin Receptor in Appetite and Fo
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1155/2010/493614 | The prokinetic face of ghrelin
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth hormone (GH) hypersecretion and GH receptor resistance in streptozotocin  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.6061/clinics/2012(03)11 | Growth hormone response to growth hormone-releasing peptide-2 in growt
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2013.00081 | Ghrelin receptors in non-Mammalian vertebrates
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fphar.2010.00145 | The hungry stomach: physiology, disease, and drug development opportun
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/s0065-7743(03)38037-6 | Compound name, code numcer and subject index, vol. 38
+- FAIL pdf | C | 10.1021/jm980197u | Novel Orally Active Growth Hormone Secretagogues | no OA PDF resolved
+- FAIL pdf | C | 10.1677/joe.0.1650569 | The GH secretagogues ipamorelin and GH-releasing peptide-6 increase bone mineral | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/joe.0.1650139 | Specific binding sites for synthetic growth hormone secretagogues in n
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/eje.0.1450711 | Systemic ghrelin levels in subjects with growth hormone deficiency are
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/jme.1.01945 | The co-existence of two growth hormone receptors in teleost fish and t
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1046/j.1365-2265.1999.00784.x | Growth hormone and exercise
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- FAIL pdf | C | 10.5478/msl.2016.7.3.55 | LC-MS/MS Method for Simultaneous Analysis of Growth Hormone-Releasing Peptides a | no OA PDF resolved
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth Hormone (GH) Hypersecretion and GH Receptor Resistance in Streptozotocin  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ijms.2021.116531 | Detection of the synthetic peptide ipamorelin in dried blood spots by means of U | no OA PDF resolved
+- FAIL pdf | C | 10.1677/joe.1.06593 | Seabream ghrelin: cDNA cloning, genomic organization and promoter studies | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1359/jbmr.041237 | Ghrelin Directly Regulates Bone Formation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/s41467-021-25364-2 | Molecular recognition of an acyl-peptide hormone and activation of ghr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1177/00912700122009971 | Pharmacokinetic and Pharmacodynamic Modeling of NN703, a Growth Hormon
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.2460/ajvr.67.1.180 | Ghrelin, an endogenous growth hormone secretagogue with diverse endocr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1208/s12248-014-9687-3 | Strategic Approaches to Optimizing Peptide ADME Properties
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/joe-11-0373 | A novel GH secretagogue, A233, exhibits enhanced growth activity and i
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1159/000071232 | A Tripeptidyl Ensemble Perspective of Interactive Control of Growth Ho
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- FAIL pdf | C | 10.2147/jep.s35396 | Efficacy of ipamorelin, a ghrelin mimetic, on gastric dysmotility in a rodent mo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1007/s00216-020-02634-4 | Fully automated dried blood spot sample preparation enables the detect
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1101/2021.06.09.447478 | Molecular recognition of an acyl-peptide hormone and activation of ghr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2013.00081 | Ghrelin Receptors in Non-Mammalian Vertebrates
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.7759/cureus.110657 | Unregulated Peptide Use in the Age of Biohacking: Digital Promotion, G
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms19103067 | Enhanced Pulsatile Growth Hormone Secretion and Altered Metabolic Horm
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth hormone (GH) hypersecretion and GH receptor resistance in streptozotocin  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.6061/clinics/2012(03)11 | Growth hormone response to growth hormone-releasing peptide-2 in growt
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2013.00081 | Ghrelin receptors in non-Mammalian vertebrates
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1155/2010/879503 | Integrating GHS into the Ghrelin System
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | PMC7161796 | Abstracts of Poster Section B
+- FAIL pdf | C | 10.1677/joe.0.1650569 | The GH secretagogues ipamorelin and GH-releasing peptide-6 increase bone mineral | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.143.2.558 | GH-Releasing Peptide-2 Increases Fat Mass in Mice Lacking NPY: Indicat
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/eje.0.1450711 | Systemic ghrelin levels in subjects with growth hormone deficiency are
+- FAIL pdf | C | 10.1155/edr.2003.73 | Growth Hormone (GH) Hypersecretion and GH Receptor Resistance in Streptozotocin  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1359/jbmr.041237 | Ghrelin Directly Regulates Bone Formation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1046/j.1365-2265.1999.00784.x | Growth hormone and exercise
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/jme.1.01945 | The co-existence of two growth hormone receptors in teleost fish and t
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/joe-11-0373 | A novel GH secretagogue, A233, exhibits enhanced growth activity and i
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1677/joe.0.1650139 | Specific binding sites for synthetic growth hormone secretagogues in n
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1159/000071232 | A Tripeptidyl Ensemble Perspective of Interactive Control of Growth Ho
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1177/00912700122009971 | Pharmacokinetic and Pharmacodynamic Modeling of NN703, a Growth Hormon
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.14401/kasmed.2014.21.2.51 | Human Circadian Rhythms
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms19103067 | Enhanced Pulsatile Growth Hormone Secretion and Altered Metabolic Horm
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.2460/ajvr.67.1.180 | Ghrelin, an endogenous growth hormone secretagogue with diverse endocr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/14651858.cd012229.pub2 | Ghrelin for the management of cachexia associated with cancer
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4172/2157-7536.1000108 | Exercise, Science and Designer Doping: Traditional and Emerging Trends
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3109/10826084.2015.1082595 | Netnography of Female Use of the Synthetic Growth Hormone CJC-1295: Pu
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3389/fendo.2013.00081 | Ghrelin Receptors in Non-Mammalian Vertebrates
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1530/ec-26-0317 | PERSPECTIVE: Beyond the GH-IGF-1 axis: a network perspective integrati
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1042/bsr20250362 | Integrative role of orexigenic peptides in neuroprotection and neurode
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27114956 | Special Issue "Hormone Signaling in Human Health and Diseases"
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1042/cs20250793 | How lipid ingestion is sensed: the mechanisms underlying intestinal ho
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ph19071047 | A Lineup for Next Anti-Obesity Medicines: Beyond Incretin-Based Pharma
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1093/stcltm/szag055 | Ghrelin and relamorelin counteract hypoglycemia in mice engrafted with
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ph19070989 | Peptide Hormones in Appetite Regulation: A Complex Network
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | PMC13297421 | A Dimer for Dinner: The Impact of GHS-R1a Heterodimerization on Feedin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1042/bsr20250120 | Recent developments in GPCR signalling in appetite regulation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.jacbts.2026.101635 | The Orally Available Ghrelin Receptor-Agonist AC01 Improves Systolic F
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1007/s13679-026-00728-1 | The Ghrelin-LEAP2 System in Obesity and Diabetes: Pathophysiological R
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4292/wjgpt.v17.i2.118616 | Evolving prokinetic therapy: New targets and therapeutic opportunities
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/clinem/dgag116 | Pathogenesis of nonfamilial somatotroph adenomas
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.psj.2026.107210 | The gut-brain axis in avian appetite regulation: Integrating periphera
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1007/s12020-026-04696-3 | Genetic determinants of obesity: mechanisms, clinical implications, an
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/cancers18172738 | Cancer Cachexia Research and Drug Development: Lessons from Failures a
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/biom16081155 | Mechanisms of Obesity-Related Kidney Disease: From Adipose Depot Biolo
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1007/s44417-026-00014-7 | Neuroendocrine crosstalk between sex and metabolic hormones: mechanism
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/jne.70143 | GHSR agonism increases blood glucose but delays food intake in GHSR hy
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1002/jcsm.70277 | KARIs, Ghrelin Receptor Agonists With Excellent Brain Permeability, In
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/cimb48030296 | Role of Growth Hormone (GH) and Other Somatotropic Axis Elements in Re
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/nu18050787 | GABA Enhances Growth Hormone Expression by Modulating Somatotroph Pit-
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.3390/ijms27177536 | LEAP2 Regulates Insulin Secretion from INS-1E Beta Cells and Rat Pancr
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.4103/ijp.ijp_176_24 | Hexarelin promotes the survival of retinal ganglion cells after optic
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1186/s13098-026-02185-1 | White adipose tissue expansion as the driver of insulin resistance and
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1073/pnas.0305930101 | Ghrelin stimulation of growth hormone release and appetite is mediated
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1021/jm0001727 | Structure−Function Studies on the New Growth Hormone-Releasing Peptide
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/me.2005-0059 | Nonpeptide and Peptide Growth Hormone Secretagogues Act Both as Ghreli
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1073/pnas.0811680106 | Growth hormone-releasing hormone as an agonist of the ghrelin receptor
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/j.mce.2007.05.010 | Unacylated ghrelin is not a functional antagonist but a full agonist o
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci21134 | Ghrelin inhibits leptin- and activation-induced proinflammatory cytoki
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/en.2003-0899 | Ghrelin and Des-Octanoyl Ghrelin Promote Adipogenesis Directly in Vivo
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1124/mol.109.056101 | Growth Hormone Secretagogues and Growth Hormone Releasing Peptides Act
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1053/gast.2001.22158 | Ghrelin is an appetite-stimulatory signal from stomach with structural
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci26002 | Mice lacking ghrelin receptors resist the development of diet-induced
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/mp.2013.135 | A ghrelin–growth hormone axis drives stress-induced vulnerability to e
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1152/ajpendo.00196.2004 | Anti-inflammatory effect of the ghrelin agonist growth hormone-releasi
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1083/jcb.200207165 | Ghrelin and des-acyl ghrelin inhibit cell death in cardiomyocytes and
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1021/acs.jmedchem.8b01644 | N-Terminal Liver-Expressed Antimicrobial Peptide 2 (LEAP2) Region Exhi
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1373/clinchem.2004.032482 | Endocrine Regulation of Energy Metabolism: Review of Pathobiochemical
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci75276 | The arcuate nucleus mediates GLP-1 receptor agonist liraglutide-depend
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1210/me.2005-0084 | Ghrelin Amplifies Dopamine Signaling by Cross Talk Involving Formation
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1136/gut.52.7.947 | Antagonism of ghrelin receptor reduces food intake and body weight gai
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1016/s0014-5793(03)00051-6 | Ghrelin and growth hormone secretagogue receptor are expressed in the
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1136/gut.2005.065896 | Gastric motor effects of peptide and non-peptide ghrelin agonists in m
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1111/j.1365-2036.2005.02658.x | Influence of ghrelin on gastric emptying and meal‐related symptoms in
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- OFF-TOPIC | 08_peptides_gray/ipamorelin | 10.1038/s41467-021-26735-5 | Structural basis of human ghrelin receptor signaling by ghrelin and th
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.70033 | Annual Banned-Substance Review 18th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3835 | Annual Banned-Substance Review 17th Edition-Analytical Approaches in H
+- FAIL pdf | C | 10.1002/ansa.202200027 | Probing for peptidic drugs (2-10 kDa) in doping control blood samples | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ghir.2009.03.001 | Activation of the GH/IGF-1 axis by CJC-1295, a long-acting GHRH analog, results  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone syntheti
+- FAIL pdf | C | 10.1073/pnas.0900977106 | Neuronal M 3 muscarinic acetylcholine receptors are essential for somatotroph pr | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1172/jci138540 | DNA damage and growth hormone hypersecretion in pituitary somatotroph
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.peptides.2021.170716 | Synthesis of potent antagonists of receptors for growth hormone-releas
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/elps.202200278 | Online large volume sample staking preconcentration and separation of
+- FAIL pdf | C | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐1295 and oth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41598-017-09968-7 | Plasma biomarker proteins for detection of human growth hormone admini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2020.606089 | Growth Hormone and Neuronal Hemoglobin in the Brain—Roles in Neuroprot
+- FAIL pdf | C | 10.1016/j.sampre.2025.100190 | Development of smart samplers and their comparison to dried serum spots for the  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.1730 | Identification of the growth hormone‐releasing hormone analogue [Pro1,
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.17925/ee.2011.07.01.40 | Optimal Therapy of Growth Hormone Deficiency in the Child and Adolesce
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0090916 | Polymorphisms in the Insulin-Like Growth Factor Axis Are Associated wi
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/oby.2011.235 | Heterogeneity Among White Adipose Tissue Depots in Male C57BL/6J Mice
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.forsciint.2021.110771 | Analysis of pharmaceutical products and dietary supplements seized fro
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/jms.4996 | Chromatographic–mass spectrometric analysis of peptidic analytes (2–10
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s11357-010-9179-z | Plasma biomarkers of mouse aging
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1186/1472-6882-12-118 | Protective effect of the Japanese traditional medicine juzentaihoto on
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3199 | Annual banned‐substance review: Analytical approaches in human sports
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1590/s0004-27302008000500024 | Novas opções e preparações na terapia com hormônio de crescimento
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC12545866 | SAT-014 ATAC sequencing analysis elucidates novel GHRH-Induced DNA Dam
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.70033 | Annual Banned-Substance Review 18th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1021/acsomega.2c05296 | Synthetic Peptides in Doping Control: A Powerful Tool for an Analytica
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/elps.70052 | Recent Developments in Capillary and Microchip Electroseparations of P
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41598-017-09968-7 | Plasma biomarker proteins for detection of human growth hormone admini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC6796240 | UEG Week 2018 Oral Presentations
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/bf03375463 | 40<sup>th</sup> EASD Annual Meeting of the European Association for th
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC7161867 | Abstracts of Poster Section C
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1093/gerona/glx143 | Trajectories of IGF-I Predict Mortality in Older Adults: The Cardiovas
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2022.1033479 | The mechanism and efficacy of GLP-1 receptor agonists in the treatment
+- FAIL pdf | C | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐1295 and oth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone syntheti
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0014205 | Reversal of Obesity and Insulin Resistance by a Non-Peptidic Glucagon-
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2020.606089 | Growth Hormone and Neuronal Hemoglobin in the Brain—Roles in Neuroprot
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/oby.2011.235 | Heterogeneity Among White Adipose Tissue Depots in Male C57BL/6J Mice
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0090916 | Polymorphisms in the Insulin-Like Growth Factor Axis Are Associated wi
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41598-017-09968-7 | Plasma biomarker proteins for detection of human growth hormone admini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.forsciint.2016.09.017 | The study of doping market: How to produce intelligence from Internet
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/life13020301 | The Role of Adiponectin during Pregnancy and Gestational Diabetes
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/cancers10120471 | Chemoresistance and the Self-Maintaining Tumor Microenvironment
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.17925/ee.2011.07.01.40 | Optimal Therapy of Growth Hormone Deficiency in the Child and Adolesce
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.2147/ijn.s217923 | Mesenchymal stem cell therapy assisted by nanotechnology: a possible c
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fonc.2022.869672 | Bax/Bcl-2 Cascade Is Regulated by the EGFR Pathway: Therapeutic Target
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1186/1687-9856-2014-9 | Proteomic analysis allows for early detection of potential markers of
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/app11083393 | Proteomics in Forensic Analysis: Applications for Human Samples
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jendso/bvac077 | Adult Growth Hormone Deficiency: Diagnostic and Treatment Journeys Fro
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/cells11061008 | MicroRNA as a Potential Therapeutic Molecule in Cancer
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.2162 | Challenges in detecting substances for equine anti‐doping
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s11357-011-9304-7 | Decreased insulin sensitivity and increased oxidative damage in wastin
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1186/s43556-021-00041-4 | Drug resistance: from bacteria to cancer
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.ensci.2026.100616 | The effect of growth hormone-releasing hormone on cognition and brain
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2026.1842422 | Proteoformics-driven new concept of human growth hormone in clinical e
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41419-026-08699-w | Growth hormone-releasing hormone attenuates amyloid deposition and neu
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/jcm15020541 | Pharmacologic Treatments for the Preservation of Lean Body Mass During
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fnmol.2025.1549366 | How the ghrelin receptor recognizes the acyl-modified orexigenic hormo
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/cimb47030192 | The Role of the Arcuate Nucleus in Regulating Hunger and Satiety in Pr
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2024.1456195 | Growth hormone/insulin-like growth factor I axis in health and disease
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1177/1098612x251380011 | Clinical therapeutics in feline medicine: updates for old and new drug
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms252313086 | The Aggravating Role of Failing Neuropeptide Networks in the Developme
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fimmu.2023.1108630 | Intrathymic somatotropic circuitry: consequences upon thymus involutio
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s13402-026-01223-4 | Targeting tumor-associated G-protein coupled receptors: beyond single-
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1089/neu.2022.0384 | Growth Hormone Deficiency Following Traumatic Brain Injury in Pediatri
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1177/1557988317718662 | Growth Hormone Secretagogue Treatment in Hypogonadal Men Raises Serum
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1038/s41392-019-0036-y | Targeting growth hormone function: strategies and therapeutic applicat
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/life16010104 | The Roles of the Membrane-Anchored Glycoprotein RECK in Animal Develop
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fcell.2021.630248 | A Balanced Act: The Effects of GH-GHR-IGF1 Axis on Mitochondrial Funct
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/molecules25051093 | Peptides from Natural or Rationally Designed Sources Can Be Used in Ov
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1042/bsr20181061 | Ghrelin, a gastrointestinal hormone, regulates energy balance and lipi
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.12688/f1000research.12057.1 | Update on GH therapy in adults
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3389/fendo.2023.1087053 | Cell non-autonomous regulation of cerebrovascular aging processes by t
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | PMC13390741 | ICE2026/JES2026 Abstract Book
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3390/ijms21228848 | Effect of Acute Sprint Exercise on Myokines and Food Intake Hormones i
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1093/annonc/12.suppl_2.s89 | Ectopic secretion of growth hormone-releasing hormone (GHRH) in neuroe
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.3109/07853899808999399 | Orally active growth hormone secretagogues: state of the art and clini
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.138.11.4552 | Hypothalamic Growth Hormone Secretagogue-Receptor (GHS-R) Expression I
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1177/153537020122601102 | Peripheral Signals Conveying Metabolic Information to the Brain: Short
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1016/j.molmet.2019.09.010 | Glucagon-like peptide 1 (GLP-1)
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1046/j.1365-2265.1999.00753.x | Can GHRH or GH secretagogues re‐initiate pituitary GH pulsatility?
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.2741/1033 | Biochemical regulation of non-rapid-eye-movement sleep
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1172/jci119587 | Simultaneous stimulation of slow-wave sleep and growth hormone secreti
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1155/2013/518909 | Structure and Physiological Actions of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.2019-00111 | Actions and Potential Therapeutic Applications of Growth Hormone–Relea
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/er.2018-00216 | Growth Hormone Deficiency: Health and Longevity
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.7860/jcdr/2014/9863.4767 | Ghrelin: Ghrelin as a Regulatory Peptide in Growth Hormone Secretion
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1371/journal.pone.0009159 | Ghrelin Stimulation of Growth Hormone-Releasing Hormone Neurons Is Dir
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1172/jci118516 | Endogenous growth hormone (GH)-releasing hormone is required for GH re
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/en.2008-1482 | Use of the Metallothionein Promoter-Human Growth Hormone-Releasing Hor
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1136/gut.2004.062604 | Ghrelin: a new player in the control of gastrointestinal functions
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1007/s11154-024-09930-9 | GHRH in diabetes and metabolism
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1677/joe.1.05883 | Hypothalamic hormones a.k.a. hypothalamic releasing factors
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1079/bjn20061787 | Ghrelin: a hormone regulating food intake and energy homeostasis
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone syntheti
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1677/joe.0.1630269 | Effect of GHRH and peptides from the vasoactive intestinal peptide fam
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1210/jc.2004-0282 | Age and Secretagogue Type Jointly Determine Dynamic Growth Hormone Res
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1530/rep-06-0249 | Role of ghrelin in reproduction
+- OFF-TOPIC | 08_peptides_gray/cjc1295 | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1186/s12967-026-08126-w | Mesenchymal Stem cell therapy with GHRH receptor analog resolves post-
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41419-026-08699-w | Growth hormone-releasing hormone attenuates amyloid deposition and neu
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/jacs.6c09445 | Site-Specific and Programmable Editing of Serine and Threonine in Unpr
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fragi.2026.1790247 | Therapeutic peptides in gerontology: mechanisms and applications for h
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms26073267 | Growth Hormone-Releasing Hormone Antagonists Increase Radiosensitivity
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s11154-024-09917-6 | A novel approach for the treatment of AML, through GHRH antagonism: MI
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms252011200 | Antagonist of Growth Hormone-Releasing Hormone Receptor MIA-690 Suppre
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.18632/oncotarget.28579 | Exploring the role of GHRH antagonist MIA-602 in overcoming Doxorubici
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/acs.jcim.4c00577 | Identification of Small-Molecule Antagonists Targeting the Growth Horm
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1073/pnas.2308342120 | Growth hormone-releasing hormone receptor antagonist MIA-602 attenuate
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1073/pnas.2209810120 | GHRH agonist MR-409 protects β-cells from streptozotocin-induced diabe
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fimmu.2023.1231363 | Growth hormone-releasing hormone antagonist MIA-602 inhibits inflammat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.3835 | Annual Banned-Substance Review 17th Edition-Analytical Approaches in H
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/acsomega.2c05296 | Synthetic Peptides in Doping Control: A Powerful Tool for an Analytica
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.celrep.2025.115836 | Discovery of peptides as key regulators of metabolic and cardiovascula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/pros.24339 | Tumorigenic transformation of human prostatic epithelial cell line RWP
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.70033 | Annual Banned-Substance Review 18th Edition-Analytical Approaches in H
+- FAIL pdf | C | 10.1002/ansa.202200027 | Probing for peptidic drugs (2-10 kDa) in doping control blood samples | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2008-1333 | The Effects of Central Adiposity on Growth Hormone (GH) Response to GH
+- FAIL pdf | C | 10.1002/dta.3183 | Advances in the detection of growth hormone releasing hormone synthetic analogs | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1172/jci32830 | Growth hormone enhances thymic function in HIV-1–infected adults
+- FAIL pdf | C | 10.1002/elps.202200278 | Online large volume sample staking preconcentration and separation of enantiomer | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1095/biolreprod66.3.555 | Placental Growth Hormone and Lactogen Production by Perifused Ovine Pl
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s11154-024-09929-2 | The development of growth hormone-releasing hormone analogs: Therapeut
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2010-2264 | The Association of Growth Hormone Parameters with Skeletal Muscle Phos
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.1730 | Identification of the growth hormone‐releasing hormone analogue [Pro1,
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.13878 | THE CONCISE GUIDE TO PHARMACOLOGY 2017/18: G protein‐coupled receptors
+- FAIL pdf | C | 10.1016/j.sampre.2025.100190 | Development of smart samplers and their comparison to dried serum spots for the  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41419-026-08699-w | Growth hormone-releasing hormone attenuates amyloid deposition and neu
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1021/acs.jcim.4c00577 | Identification of Small-Molecule Antagonists Targeting the Growth Horm
+- FAIL pdf | C | 10.1002/bmc.5741 | In‐house standards derived from doping peptides: Enzymatic and serum stability a | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐12
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.celrep.2025.115836 | Discovery of peptides as key regulators of metabolic and cardiovascula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1371/journal.pone.0278293 | Experience of switching from a daily to a less frequent administration
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.abd.2024.09.008 | Chronic pruritus: a narrative review
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fimmu.2023.1231363 | Growth hormone-releasing hormone antagonist MIA-602 inhibits inflammat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1073/pnas.2308342120 | Growth hormone-releasing hormone receptor antagonist MIA-602 attenuate
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- FAIL pdf | C | 10.1177/1557988317718662 | Growth Hormone Secretagogue Treatment in Hypogonadal Men Raises Serum Insulin-Li | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/medicina58101373 | Fatal Form of COVID-19 in a Young Male Bodybuilder Anabolic Steroid Us
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41598-019-57292-z | Antinflammatory, antioxidant, and behavioral effects induced by admini
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- FAIL pdf | C | 10.2147/ciia.2006.1.4.307 | Sermorelin: a better approach to management of adult-onset growth hormone insuff | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | PMC2544375 | Comments on "growth hormone (GH)-releasing hormone and GH secretagogue
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1161/jaha.114.001464 | Growth hormone-releasing hormone agonists reduce myocardial infarct sc
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.6061/clinics/2012(03)11 | Growth hormone response to growth hormone-releasing peptide-2 in growt
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.31887/dcns.2001.3.3/mvvitiello | Treating age-related changes in somatotrophic hormones, sleep, and cog
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.13878 | THE CONCISE GUIDE TO PHARMACOLOGY 2017/18: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/bph.13348 | The Concise Guide to PHARMACOLOGY 2015/16: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1155/edr.2003.73 | Growth hormone (GH) hypersecretion and GH receptor resistance in strep
+- OFF-TOPIC | 08_peptides_gray/sermorelin | PMC7271219 | Spezielle Arzneimitteltherapie in der Schwangerschaft
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1172/jci32830 | Growth hormone enhances thymic function in HIV-1–infected adults
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2008-1333 | The Effects of Central Adiposity on Growth Hormone (GH) Response to GH
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1210/jc.2010-2264 | The Association of Growth Hormone Parameters with Skeletal Muscle Phos
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2157-7536.1000109 | Gender Differences in Skin Aging and the Changing Profile of the Sex H
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.2554 | An immuno polymerase chain reaction screen for the detection of CJC‐12
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1371/journal.pone.0278293 | Experience of switching from a daily to a less frequent administration
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41514-025-00231-2 | A 50-year journey in the development of treatment for benign prostatic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2161-0673.1000113 | Exercise, Science and Designer Doping: Traditional and Emerging Trends
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4172/2157-7536.1000108 | Exercise, Science and Designer Doping: Traditional and Emerging Trends
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.jaci.2022.01.030 | Selected recent advances in understanding the role of human mast cells
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s13346-024-01609-7 | Porous silicon and silica carriers for delivery of peptide therapeutic
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/app11083393 | Proteomics in Forensic Analysis: Applications for Human Samples
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/elps.202300141 | Capillary electrophoresis in the analysis of therapeutic peptides—A re
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.5662/wjm.v4.i3.163 | World health dilemmas: Orphan and rare diseases, orphan drugs and orph
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.2337/dbi24-0026 | A Contemporary Rationale for Agonism of the GIP Receptor in the Treatm
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/cells12111506 | Degranulation of Mast Cells as a Target for Drug Development
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/ejoc.202300028 | Synthesis and Applications of Peptides and Peptidomimetics in Drug Dis
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fragi.2026.1790247 | Therapeutic peptides in gerontology: mechanisms and applications for h
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.3898 | Gel Electrophoretic Detection of Black Market ACE-031
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.celrep.2025.115836 | Discovery of peptides as key regulators of metabolic and cardiovascula
+- FAIL pdf | C | 10.1177/1557988317718662 | Growth Hormone Secretagogue Treatment in Hypogonadal Men Raises Serum Insulin-Li | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.5056/jnm16183 | Future Treatment of Constipation-associated Disorders: Role of Relamor
+- OFF-TOPIC | 08_peptides_gray/sermorelin | PMC2544375 | Comments on "growth hormone (GH)-releasing hormone and GH secretagogue
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3389/fimmu.2018.03027 | Mas-Related G Protein-Coupled Receptor-X2 (MRGPRX2) in Drug Hypersensi
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1155/2010/493614 | The prokinetic face of ghrelin
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- FAIL pdf | C | 10.21037/atm-20-6561 | A potentially effective drug for patients with recurrent glioma: sermorelin | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1164/rccm.201402-0373st | An Official American Thoracic Society/European Respiratory Society Sta
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41392-020-00435-w | G protein-coupled receptors: structure- and function-based drug discov
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.talanta.2017.06.034 | Analysis of illegal peptide drugs via HILIC-DAD-MS
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1007/s00210-016-1247-1 | Pharmacological treatment options for mast cell activation disease
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/elps.202300141 | Capillary electrophoresis in the analysis of therapeutic peptides—A re
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1080/1547691x.2021.1877375 | In vitro prediction of in vivo pseudo-allergenic response via MRGPRX2
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.3390/app11083393 | Proteomics in Forensic Analysis: Applications for Human Samples
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1002/dta.3602 | Annual banned‐substance review 16th edition—Analytical approaches in h
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1016/j.peh.2024.100293 | Novel wellbeing and repair peptide use in the UK: Netnographic finding
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.22541/au.159122261.11891577 | State-of-the-Art Clinical Results of Growth Hormone Secretagogues, SAR
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.37118/ijdr.19112.06.2020 | State-of-the-art clinical results of growth hormone secretagogues, sar
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1097/jsm.0000000000001152 | Athletes With Attention-Deficit/Hyperactivity Disorder: Position State
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1155/2023/5852315 | New Psychoactive Substances: Major Groups, Laboratory Testing Challeng
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.21518/ms2025-223 | L-Ornithine salts as somatotropic axis modulators for the correction o
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.1177/19417381251411343 | Injuries, Injections, and Internet Forums: A Qualitative Study of Redd
+- OFF-TOPIC | 08_peptides_gray/sermorelin | 10.4236/ojcd.2026.163007 | Growth Hormone Secretagogues: Between Endocrine Physiology and the The
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/jcemcr/luag221 | Reversible predominant thyrotropin axis dysfunction with meningitis in
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/jcemcr/luag229 | Coexisting mild autonomous cortisol secretion and isolated adrenocorti
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/jgf2.70132 | Taste and Smell Disturbances Associated With Secondary Adrenal Insuffi
+- FAIL pdf | C | 10.1002/chir.70083 | Growth Hormone-Releasing Peptides: Investigation of Their Secondary Structure, T | no OA PDF resolved
+- FAIL pdf | B | 10.3390/ph19030468 | Growth Hormone-Releasing Peptide-6 (GHRP-6) Ameliorates Post-Infarct Ventricular | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1530/edm-26-0036 | Differential reversibility of anterior and posterior pituitary dysfunc
+- FAIL pdf | C | 10.1186/s12951-025-03888-9 | Growth hormone-releasing peptide 6 (GHRP-6) hydrogel for acute kidney injury the | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej25-0480 | Pituitary dysfunction in trans-sellar encephalocele: a two-case report
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej26-0108 | Anti-pituitary-specific transcription factor-1 hypophysitis developing
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.110657 | Unregulated Peptide Use in the Age of Biohacking: Digital Promotion, G
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/j.aed.2026.03.014 | Triphasic Adrenocorticotropic Hormone Dynamics During Immune Checkpoin
+- FAIL pdf | C | 10.22074/ijfs.2025.2038272.1745 | Assessing The Effectiveness of Growth Hormone Releasing Protein-6 in Improving H | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/ccr3.72533 | Behavioral Therapy Ameliorates Severe Obesity With Low Levels of Plasm
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej25-0442 | Endocrine disorders in pediatric medulloblastoma survivors treated wit
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/cancers18050838 | Thyrotroph Pituitary Neuroendocrine Tumors: Molecular Pathology, Diagn
+- FAIL pdf | C | 10.1210/endocr/bqae166 | Intranasal Delivery of a Ghrelin Mimetic Engages the Brain Ghrelin Signaling Sys | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fendo.2026.1842422 | Proteoformics-driven new concept of human growth hormone in clinical e
+- FAIL pdf | C | 10.3390/biology14080941 | The Ghrelin Analog GHRP-6, Delivered Through Aquafeeds, Modulates the Endocrine  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fspor.2026.1740663 | Systematic review of undeclared prohibited substances and pharmacologi
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s13256-026-05924-0 | Pitfalls in the management of undiagnosed secondary adrenal insufficie
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/2211-5463.70265 | Cyclic azapeptide CD36 ligand attenuates cardiac injury and reduces lo
+- FAIL pdf | C | 10.1042/cs20050374 | Use of growth-hormone-releasing peptide-6 (GHRP-6) for the prevention of multipl | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.00196.2004 | Anti-inflammatory effect of the ghrelin agonist growth hormone-releasing peptide | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1038/sj.ijo.0800807 | Growth hormone in obesity
+- FAIL pdf | C | 10.1073/pnas.92.15.7001 | Design and biological activities of L-163,191 (MK-0677): a potent, orally active | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/er.2007-0036 | Growth Hormone, Insulin-Like Growth Factors, and the Skeleton
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1053/gast.2002.35954 | The role of the gastric afferent vagal nerve in ghrelin-induced feedin
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- FAIL pdf | C | 10.3389/fphar.2024.1402138 | Growth hormone releasing peptide-6 (GHRP-6) prevents doxorubicin-induced myocard | no OA PDF resolved
+- FAIL pdf | C | 10.1136/gut.2005.065896 | Gastric motor effects of peptide and non-peptide ghrelin agonists in mice in viv | no OA PDF resolved
+- FAIL pdf | C | 10.1210/endo.138.2.4907 | Induction of c-fos Messenger Ribonucleic Acid in Neuropeptide Y and Growth Hormo | no OA PDF resolved
+- FAIL pdf | C | 10.1210/endo.139.1.5811 | Identification of a Pituitary Growth Hormone-Releasing Peptide (GHRP) Receptor S | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.mce.2011.02.002 | Insulin and growth hormone-releasing peptide-6 (GHRP-6) have differential benefi | no OA PDF resolved
+- FAIL pdf | C | 10.1161/01.res.85.9.796 | Identification and Characterization of a New Growth Hormone–Releasing Peptide Re | no OA PDF resolved
+- FAIL pdf | C | 10.1021/jm300557t | Azapeptide Analogues of the Growth Hormone Releasing Peptide 6 as Cluster of Dif | no OA PDF resolved
+- FAIL pdf | C | 10.1042/bj20040036 | Identification of the growth hormone-releasing peptide binding site in CD36: a p | no OA PDF resolved
+- FAIL pdf | C | 10.1208/pt0802043 | Formation of acylated growth hormone-releasing peptide-6 by poly(lactide-co-glyc | no OA PDF resolved
+- FAIL pdf | C | 10.1136/gut.2004.062604 | Ghrelin: a new player in the control of gastrointestinal functions | no OA PDF resolved
+- FAIL pdf | C | 10.1523/jneurosci.3913-06.2007 | Ghrelin Effects on the Circadian System of Mice | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- FAIL pdf | C | 10.3748/wjg.v18.i24.3145 | Gastric mucosal damage in water immersion stress: Mechanism and prevention with  | no OA PDF resolved
+- FAIL pdf | C | 10.1210/mend.10.1.8838145 | Identification of a new G-protein-linked receptor for growth hormone secretagogu | no OA PDF resolved
+- FAIL pdf | C | 10.2337/diabetes.51.12.3412 | The Rat Arcuate Nucleus Integrates Peripheral Signals Provided by Leptin, Insuli | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jc.2004-1719 | Growth Hormone Releasing Peptide-2 (GHRP-2), Like Ghrelin, Increases Food Intake | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1002/jgf2.70132 | Taste and Smell Disturbances Associated With Secondary Adrenal Insuffi
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/jcemcr/luag221 | Reversible predominant thyrotropin axis dysfunction with meningitis in
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.1016/j.psj.2025.106199 | Effect of intracerebroventricular (ICV) injection of antimicrobial peptide expre | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ph19070989 | Peptide Hormones in Appetite Regulation: A Complex Network
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | PMC13296771 | The Ghrelin/GHSR-1a Axis Attenuates Preeclampsia-like Features with De
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s13256-026-05924-0 | Pitfalls in the management of undiagnosed secondary adrenal insufficie
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fspor.2026.1740663 | Systematic review of undeclared prohibited substances and pharmacologi
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.110657 | Unregulated Peptide Use in the Age of Biohacking: Digital Promotion, G
+- FAIL pdf | C | 10.1210/endocr/bqae166 | Intranasal Delivery of a Ghrelin Mimetic Engages the Brain Ghrelin Signaling Sys | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1093/sexmed/qfag050 | Access without approval: state-level determinants of peptide availabil
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s13679-026-00728-1 | The Ghrelin-LEAP2 System in Obesity and Diabetes: Pathophysiological R
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.81495 | Slowly Progressive Secondary Adrenal Insufficiency Due to Pembrolizuma
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7759/cureus.70401 | Gilteritinib-Induced Hypopituitarism: A Case Report
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1042/bsr20250362 | Integrative role of orexigenic peptides in neuroprotection and neurode
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1186/s12917-025-04823-8 | The interaction between rumen microbiota and neurotransmitters plays a
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fcell.2025.1709098 | G protein-coupled receptors in prostate cancer: research progress and
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1507/endocrj.ej24-0568 | Severe obesity with hypo-leptinemia
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fphys.2025.1627607 | The dual burden of obesity: decoding metabolism and female reproductiv
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.7717/peerj.18898 | Potential role of ghrelin in neuroprotection and cognitive function: i
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1159/000334144 | Anorexigenic and Orexigenic Hormone Modulation of Mammalian Target of
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1053/gast.2002.35954 | The role of the gastric afferent vagal nerve in ghrelin-induced feedin
+- FAIL pdf | C | 10.1210/jc.2004-1719 | Growth Hormone Releasing Peptide-2 (GHRP-2), Like Ghrelin, Increases Food Intake | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci25303 | Loss of constitutive activity of the growth hormone secretagogue recep
+- FAIL pdf | C | 10.1136/gut.2004.062604 | Ghrelin: a new player in the control of gastrointestinal functions | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms15034837 | The Growth Hormone Secretagogue Receptor: Its Intracellular Signaling
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/ijms18020273 | From Belly to Brain: Targeting the Ghrelin Receptor in Appetite and Fo
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/j.molmet.2015.03.005 | Ghrelin
+- FAIL pdf | C | 10.1210/me.2005-0059 | Nonpeptide and Peptide Growth Hormone Secretagogues Act Both as Ghrelin Receptor | no OA PDF resolved
+- FAIL pdf | C | 10.3748/wjg.14.6303 | Growth hormone releasing peptide 2 reverses anorexia associated with chemotherap | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1038/mp.2013.135 | A ghrelin–growth hormone axis drives stress-induced vulnerability to e
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3390/nu10030360 | Protein for Life: Review of Optimal Protein Intake, Sustainable Dietar
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1111/j.1365-2826.2009.01896.x | Ghrelin and Dopamine: New Insights on the Peripheral Regulation of App
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1079/bjn20061787 | Ghrelin: a hormone regulating food intake and energy homeostasis
+- FAIL pdf | C | 10.1038/oby.2006.121 | Obese Subjects Respond to the Stimulatory Effect of the Ghrelin Agonist Growth H | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1007/s40263-014-0178-y | Role of Appetite-Regulating Peptides in the Pathophysiology of Addicti
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1016/s0304-3940(00)01498-1 | Both corticotropin releasing factor and neuropeptide Y are involved in
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1371/journal.pone.0009159 | Ghrelin Stimulation of Growth Hormone-Releasing Hormone Neurons Is Dir
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1080/07853890601149179 | Ghrelin, the peripheral hunger hormone
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1093/humupd/dmp005 | Growth hormone, menopause and ageing: no definite evidence for 'rejuve
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1172/jci21134 | Ghrelin inhibits leptin- and activation-induced proinflammatory cytoki
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.1210/jc.2007-2234 | Evidence for Acyl-Ghrelin Modulation of Growth Hormone Release in the
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3389/fnmol.2011.00023 | Neuroprotective actions of ghrelin and growth hormone secretagogues
+- FAIL pdf | C | 10.2337/diabetes.50.11.2540 | Ghrelin Causes Hyperphagia and Obesity in Rats | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.2147/tcrm.s70068 | Growth hormone therapy for Prader–Willi syndrome: challenges and solut
+- FAIL pdf | B | 10.1515/jpem.2003.16.7.981 | Changes in Appetite and Body Weight in Response to Long-term Oral Administration | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.2467 | Identification of a novel growth hormone releasing peptide (a glycine analogue o | no OA PDF resolved
+- FAIL pdf | C | 10.1007/s11695-017-2769-4 | Laparoscopic Sleeve Gastrectomy Resolves Low GHRP-2-Stimulated Growth Hormone Le | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/ghrp2_6 | 10.3168/jds.2025-27481 | Effect of metabolic disturbances on the plasma concentration and hepat
+- FAIL pdf | C | 10.1002/dta.1787 | Determination of growth hormone releasing peptides metabolites in human urine af | no OA PDF resolved
+- FAIL pdf | C | 10.1152/ajpendo.00196.2004 | Anti-inflammatory effect of the ghrelin agonist growth hormone-releasing peptide | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.120 | Identification of the growth-hormone-releasing peptide-2 (GHRP-2) in a nutrition | no OA PDF resolved
+- FAIL pdf | C | 10.1002/rcm.4619 | Determination of growth hormone secretagogue pralmorelin (GHRP-2) and its metabo | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.166 | Influence of intravenous administration of growth hormone releasing peptide-2 (G | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.domaniend.2004.07.001 | Effects of dietary protein and growth hormone-releasing peptide (GHRP-2) on plas | no OA PDF resolved
+- FAIL pdf | B | 10.1152/ajpregu.2000.279.4.r1467 | Synergy of L-arginine and GHRP-2 stimulation of growth hormone in men and women: | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s0739-7240(00)00050-3 | The effects of growth hormone-releasing peptide-2 (GHRP-2) on the release of gro | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4103/aja202570 | Phytochemical-based nanomedicine as a promising therapeutic strategy f
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.7759/cureus.110657 | Unregulated Peptide Use in the Age of Biohacking: Digital Promotion, G
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40263-025-01246-9 | Multiple Sclerosis in Women: Impact of Different Life Stages on Treatm
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2024.1460033 | The multifaceted nature of diabetic erectile dysfunction: uncovering t
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom12101407 | Ligands for Melanocortin Receptors: Beyond Melanocyte-Stimulating Hormones and A | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/jcm11226723 | Sexual Health after a Breast Cancer Diagnosis: Addressing a Forgotten
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms241512152 | Melanocortin 1 Receptor (MC1R): Pharmacological and Therapeutic Aspect
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.5534/wjmh.200007 | Novel Emerging Therapies for Erectile Dysfunction
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/brainsci13050802 | Erectile Dysfunction: Treatments, Advances and New Therapeutic Strateg
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.12688/f1000research.7885.1 | Advances in the treatment of erectile dysfunction: what's new and upco
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.21037/tau.2016.11.17 | Research in pharmacotherapy for erectile dysfunction
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s11606-020-05890-3 | Abstracts from the 2020 Annual Meeting of the Society of General Inter
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC7167823 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.mayocp.2017.11.002 | The International Society for the Study of Women's Sexual Health Proce
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.jsxm.2016.01.007 | Endocrinologic Control of Men’s Sexual Desire and Arousal/Erection
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/j.1755-5949.2010.00154.x | Dopamine and Oxytocin Interactions Underlying Behaviors: Potential Con
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/nau.23508 | An International Urogynecological Association (IUGA)/International Con
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/jcm11226723 | Sexual Health after a Breast Cancer Diagnosis: Addressing a Forgotten
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4088/jcp.10bs06117blu | Targeting Circuits of Sexual Desire as a Treatment Strategy for Hypoac
+- FAIL pdf | C | 10.1016/j.neuropharm.2025.110299 | Female Syrian hamster analyses of bremelanotide, a US FDA approved drug for the  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/ijwh.s83747 | Female sexual dysfunction: a focus on flibanserin
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2017.06.015 | Evaluation of a melanocortin-4 receptor (MC4R) agonist (Setmelanotide)
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1039/d1cb00154j | Cyclic peptide drugs approved in the last two decades (2001–2021)
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2021.101206 | The melanocortin pathway and energy homeostasis: From discovery to obe
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ph13030040 | 2019 FDA TIDES (Peptides and Oligonucleotides) Harvest
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1053/j.ackd.2013.09.004 | Leveraging Melanocortin Pathways to Treat Glomerular Diseases
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.bbadis.2017.03.020 | Bench-top to clinical therapies: A review of melanocortin ligands from
+- FAIL pdf | C | 10.3390/biom12101407 | Ligands for Melanocortin Receptors: Beyond Melanocyte-Stimulating Hormones and A | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/sxmrev/qeaf025 | The hormonal regulation of men’s sexual desire, arousal, and penile er
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2014-4024 | RM-493, a Melanocortin-4 Receptor (MC4R) Agonist, Increases Resting En
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/jcph.211 | Investigation of safety, tolerability, pharmacokinetics, and pharmacod
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.5772/26773 | Paradigms for Preclinical Investigations of Female Sexual Function and
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/dddt.s15852 | Future prospects in the treatment of erectile dysfunction: focus on av
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.gocm.2022.04.003 | Drug flibanserin–in hypoactive sexual desire disorder
+- FAIL pdf | C | 10.1111/j.1743-6109.2006.00268.x | An effect on the subjective sexual response in premenopausal women with sexual a | no OA PDF resolved
+- FAIL pdf | C | 10.1016/s1090-798x(08)70145-0 | An Effect on the Subjective Sexual Response in Premenopausal Women with Sexual A | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdae161.029 | (035) USE OF BREMELANOTIDE IN MEN WITH SEXUAL DYSFUNCTION AT A SEXUAL MEDICINE C | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdaf068.108 | (122) POSITIVE EFFECTS OF BREMELANOTIDE ON FEMALE SEXUAL AROUSAL AND ORGASM IN P | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/jsxmed/qdaf320.080 | (080) Impact of the Optilume BPH Catheter System on Sexual Function an
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.radonc.2024.110683 | Cost-effectiveness of a nurse-led sexual rehabilitation intervention f
+- FAIL pdf | B | 10.1093/jsxmed/qdae001.304 | (319) Evaluating the Racial Distribution of Clinical Trial Participants for Drug | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdae001.225 | (235) Use of Bremelanotide (Vyleesi) in Men with Sexual Dysfunctions | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.jep.2025.119931 | Bioactivity guided identification of sexual function restorative const
+- FAIL pdf | B | 10.2217/whe-2016-0018 | Bremelanotide for Female Sexual Dysfunctions in Premenopausal Women: A Randomize | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdaf320.390 | (396) Comparative Analysis of Flibanserin, Bremelanotide, and Testosterone Thera | no OA PDF resolved
+- FAIL pdf | C | 10.1080/00224499.2023.2175192 | Small Effects, Questionable Outcomes: Bremelanotide for Hypoactive Sexual Desire | no OA PDF resolved
+- FAIL pdf | C | 10.1093/jsxmed/qdad061.033 | (033) Examining the Neuroanatomical Basis of Bremelanotide, a Drug for Low Sexua | no OA PDF resolved
+- FAIL pdf | A | 10.1080/00224499.2021.1902926 | Failure of a Meta-analysis: A Commentary on Glen Spielmans’s “Re-Analyzing Phase | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/sxmrev/qeag025 | Pelvic floor modalities for the management of female sexual dysfunctio
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1200/jco.2026.44.7_suppl.338 | Patient (pt) preferences for treatment (tx) of non-metastatic hormone-
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s00192-014-2606-4 | A pilot randomized trial of levator injections versus physical therapy
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1200/jco.2023.41.16_suppl.1008 | CANKADO PRO-React eHealth support in patients with HR+ HER2- metastati
+- FAIL pdf | A | 10.1016/j.jmig.2025.06.004 | Title: Female Sexual Desire, Arousal, and Orgasmic Dysfunctions: A Systematic Re | no OA PDF resolved
+- FAIL pdf | C | 10.1111/j.1743-6109.2007.00610.x | Bremelanotide: an overview of preclinical CNS effects on female sexual function | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1177/070674370605100405 | Sexual Function during Bupropion or Paroxetine Treatment of Major Depr
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s11930-004-0021-4 | Melanocortins in sexual function
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2026.1797586 | The melanocortin receptors as targets for general obesity: contextuali
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.apsb.2026.06.035 | Rationale of renewed efforts in developing MC4R modulators to treat me
+- FAIL pdf | C | 10.1021/acs.jmedchem.6c01074 | Goldilocks-Inspired Design of Mid-Size Macrocycles for Selective Targeting of Hu | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s13098-025-02071-2 | The effect of melanocortin-4 receptor agonist drugs on obesity and met
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1080/14756366.2026.2616556 | Synthetic strategies and therapeutic insights into FDA-approved indole
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/sexmed/qfag050 | Access without approval: state-level determinants of peptide availabil
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/nar/gkag455 | PEP-EDIT: a web server for the 3D generation and interactive editing o
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2025.1630199 | A glimpse into the pipeline of anti-obesity medication development: co
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41467-026-73372-x | Dual activation of MC3R and MC4R drives weight loss and reduces food i
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC13296721 | Neural Melanocortin Receptors in Fish: Insights into Growth Regulation
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/jdv.20269 | An overview of benefits and risks of chronic melanocortin-1 receptor a
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fphar.2026.1895800 | NDP-MSH rescues LPS-induced neuroinflammation, synaptic deficits, and
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1021/acssynbio.5c00466 | Tuning the Response of GPCR-Based Yeast Sensors Using Fluorescent Repo
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/ped4.70040 | Monogenic and syndromic obesity in children: Clinical recognition, gen
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/biom14030264 | Exploring FDA-Approved Frontiers: Insights into Natural and Engineered
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/bs15050642 | Sexual Motivation (Desire): Problems with Current Preclinical and Clin
+- FAIL pdf | C | PMC9625176 | RF01 | PMON43 Melanocortin-4 Receptor Agonism Enhances Sexual Brain Processing i | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/biomedicines13020262 | Deep Learning-Based Drug Compounds Discovery for Gynecomastia
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/noajnl/vdaf252 | Nuclear and membrane-bound hormone receptors in glioblastoma: Expressi
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2017.06.015 | Evaluation of a melanocortin-4 receptor (MC4R) agonist (Setmelanotide)
+- FAIL pdf | C | 10.1097/hjh.0000000000001221 | Usefulness of ambulatory blood pressure monitoring to assess the melanocortin re | no OA PDF resolved
+- FAIL pdf | B | 10.2217/whe-2016-0018 | Bremelanotide for Female Sexual Dysfunctions in Premenopausal Women: A Randomize | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.molmet.2021.101206 | The melanocortin pathway and energy homeostasis: From discovery to obe
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2014-4024 | RM-493, a Melanocortin-4 Receptor (MC4R) Agonist, Increases Resting En
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41422-021-00552-3 | Structural insights into ligand recognition and activation of the mela
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.bbadis.2017.03.020 | Bench-top to clinical therapies: A review of melanocortin ligands from
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/molecules24101892 | Current Mechanistic and Pharmacodynamic Understanding of Melanocortin-
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1053/j.ackd.2013.09.004 | Leveraging Melanocortin Pathways to Treat Glomerular Diseases
+- FAIL pdf | B | 10.1111/dom.14672 | Effect of bremelanotide on body weight of obese women: Data from two phase 1 ran | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41467-024-50827-7 | Structure elucidation of a human melanocortin-4 receptor specific orth
+- FAIL pdf | C | 10.1016/j.esxm.2018.01.004 | Evaluation and Management of Hypoactive Sexual Desire Disorder | no OA PDF resolved
+- FAIL pdf | C | 10.1038/bjp.2008.253 | Pharmacological profiling of neuropeptides on rabbit vaginal wall and vaginal ar | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.smim.2022.101603 | Translational advances of melanocortin drugs: Integrating biology, che
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms241512152 | Melanocortin 1 Receptor (MC1R): Pharmacological and Therapeutic Aspect
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1155/2013/985815 | Curbing Inflammation through Endogenous Pathways: Focus on Melanocorti
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms21165728 | Structural Complexity and Plasticity of Signaling Regulation at the Me
+- FAIL pdf | B | 10.1016/j.clinthera.2017.01.018 | Phase I Randomized Placebo-controlled, Double-blind Study of the Safety and Tole | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41573-020-0062-z | Advances in therapeutic peptides targeting G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1111/jdv.20269 | An overview of benefits and risks of chronic melanocortin‐1 receptor a
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.17925/ee.2024.20.2.9 | Setmelanotide: A Melanocortin-4 Receptor Agonist for the Treatment of
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1515/bmc-2015-0023 | Developments and new vistas in the field of melanocortins
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4103/aja202570 | Phytochemical-based nanomedicine as a promising therapeutic strategy f
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC13577838 | Microneedle-mediated intelligent combination delivery for hair regener
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s13293-026-00833-9 | Steroid hormones and nephrolithiasis: regulation of urine components m
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/j.apsb.2026.03.006 | Microneedle technology integrated with diverse therapeutic modalities
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s40959-024-00293-3 | A comprehensive review on the effects of sex hormones on chemotherapy-
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40263-025-01246-9 | Multiple Sclerosis in Women: Impact of Different Life Stages on Treatm
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/s41398-025-03286-7 | Dissecting biological heterogeneity in major depressive disorder based
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/cimb47100790 | Pathogenic and Regulatory Roles of Fibrinolytic Factors in Autoimmune
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3389/fendo.2026.1797586 | The melanocortin receptors as targets for general obesity: contextuali
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms26209948 | Estrogenic Effect of Probiotics on Anxiety and Depression: A Narrative
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/medsci13010013 | Update on the Complications and Management of Liver Cirrhosis
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1021/acsptsci.4c00299 | Structure-Activity Relationship of Synthetic Cathinones: An Updated Re
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/jcm11226723 | Sexual Health after a Breast Cancer Diagnosis: Addressing a Forgotten
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40820-025-01662-y | Microneedle-Based Approaches for Skin Disease Treatment
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/antiox14070771 | Betaine Dietary Supplementation: Healthy Aspects in Human and Animal N
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/jpr.s537222 | Consensus Guidelines for the Use of Peripheral Nerve Stimulation in th
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/cancers14174305 | Bone Health Management in the Continuum of Prostate Cancer Disease
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/cancers14061585 | The Role of ROS as a Double-Edged Sword in (In)Fertility: The Impact o
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.4103/jmh.jmh_302_25 | Clinical Practice Guidelines for Menopause: An Executive Summary and R
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC13254489 | Publication Only
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | PMC13390741 | ICE2026/JES2026 Abstract Book
+- FAIL pdf | C | 10.3390/neurolint14010006 | Bremelanotide for Treatment of Female Hypoactive Sexual Desire | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.36660/abc.20240478 | Brazilian Guideline on Menopausal Cardiovascular Health - 2024
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s00415-024-12730-5 | Diagnosis and treatment of autonomic failure, pain and sleep disturban
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/j.1939-4640.2004.tb02845.x | Insulin‐Dependent Diabetes Affects Testicular Function by FSH‐ and LH‐
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1186/s40035-017-0099-z | Current understanding of the molecular mechanisms in Parkinson's disea
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1080/10253890802046281 | Stress, depression and cardiovascular dysregulation: A review of neuro
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/1520-6394(2000)12:1+<2::aid-da2>3.0.co;2-4 | Role of serotonergic and noradrenergic systems in the pathophysiology
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.18632/oncotarget.10901 | Molecular mechanisms underlying resistance to androgen deprivation the
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/brb3.7 | Epidemic of illicit drug use, mechanisms of action/addiction and strok
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.15406/mseij.2022.06.00183 | Human exposure to heavy metals: toxicity mechanisms and health implica
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1161/cir.0000000000000351 | Acute Myocardial Infarction in Women
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/ncomms5256 | Regulating proton-coupled electron transfer for efficient water splitt
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3390/ijms22158217 | Mechanisms of Central Hypogonadism
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.3122/jabfm.2009.01.080102 | Overtreating Chronic Back Pain: Time to Back Off?
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2147/tcrm.s3025 | The benefits and risks of testosterone replacement therapy: a review
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.2174/157015912800604542 | Immunomodulation Mechanism of Antidepressants: Interactions between Se
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.15406/jabb.2017.03.00082 | Antidepressants: Mechanism of Action, Toxicity and Possible Ameliorati
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s00429-008-0189-x | Brain structural and functional abnormalities in mood disorders: impli
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2009-0345 | Endocrine Treatment of Transsexual Persons:An Endocrine Society Clinic
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1093/brain/awq010 | The default-mode, ego-functions and free-energy: a neurobiological acc
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2018-02697 | Functional Hypogonadotropic Hypogonadism in Men: Underlying Neuroendoc
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1210/jc.2012-4075 | Endocrine Side Effects Induced by Immune Checkpoint Inhibitors
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1136/gut.2003.035758 | Iron, anaemia, and inflammatory bowel diseases
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1016/s2215-0366(19)30132-4 | The Lancet Psychiatry Commission: a blueprint for protecting physical
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1002/ijgo.13102 | Epidemiology and management of uterine fibroids
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1038/npp.2009.104 | Neurocircuitry of Mood Disorders
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1007/s40263-014-0157-3 | The Effects of Novel and Newly Approved Antipsychotics on Serum Prolac
+- OFF-TOPIC | 08_peptides_gray/pt141_bremelanotide | 10.1136/bjsports-2023-106994 | 2023 International Olympic Committee’s (IOC) consensus statement on Re
+- FAIL pdf | C | 10.3390/ijms26062691 | Overview of Epitalon-Highly Bioactive Pineal Tetrapeptide with Promising Propert | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.37796/2211-8039.1433 | Biomedicines in Longevity and Aging the Quest to Resist Biological Dec
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.37796/2211-8039.1433 | Biomedicines in Longevity and Aging The Quest to Resist Biological Dec
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.14200/rmd.2024.0002 | Exploring Peptides for Neurological Health & Longevity
+- FAIL pdf | C | 10.3390/ijms26062691 | Overview of Epitalon-Highly Bioactive Pineal Tetrapeptide with Promising Propert | no OA PDF resolved
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/diseases9040067 | Empowering Melatonin Therapeutics with <i>Drosophila</i> Models
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10522-023-10025-2 | "Development of gerontology would be more effective under governmental
+- OFF-TOPIC | 08_peptides_gray/epitalon | PMC7103906 | Posters
+- OFF-TOPIC | 08_peptides_gray/epitalon | PMC7111269 | Neuronal and glial cell biology
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1111/jpi.12360 | Melatonin as an antioxidant: under promises but over delivers
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10571-023-01324-w | Melatonin and Health: Insights of Melatonin Action, Biological Functio
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1111/j.1600-079x.2007.00519.x | Melatonin, endocrine pancreas and diabetes
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.14748/ssm.v54i2.8149 | Influence of the thymus and pineal gland on immunity and aging
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1093/carcin/17.9.1931 | Study of the post-natal effects of chemopreventive agents on ethylnitr
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.5772/intechopen.112433 | The Relationships of Age-Related Changes in the Biorhythms of the Thym
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.25557/2310-0435.2021.01.19-29 | Medicinal peptide drugs in evidence-based medicine
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/metabo13030405 | Biological Health Markers Associated with Oxidative Stress in Dairy Co
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.17816/maj632545 | Main scientific achievements of the academician of the RAS Vladimir Kh
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.35841/molecular-oncology.1.1.7-13 | The psychoneuroimmunotherapy of human immune-mediated systemic disease
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1111/j.1440-1746.2004.03579.x | Exposure to continuous darkness ameliorates gastric and colonic inflam
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/diseases9040067 | Empowering Melatonin Therapeutics with Drosophila Models
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.2147/cpt.s40209 | Melatonin and its use in atherosclerosis and dyslipidemia
+- FAIL pdf | C | 10.31491/apt.2026.06.227 | The microgram hypothesis: a translational dosing error in Epitalon peptide resea | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1134/s2079086421040046 | The Use of Thymalin for Immunocorrection and Molecular Aspects of Biol
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.23937/2469-5750/1510048 | Natural or Synthetic Anti-Melanogenic Compounds That Block the PDGFR-E
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.31579/2640-1045/219 | Pineal and Coccygeal Glands with Some Functions Poorly Defined: Perspe
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.28933/ijoar-2018-12-0101 | Age-related circadian disturbances in melatonin causing changes in thy
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.1007/s10522-023-10025-2 | “Development of gerontology would be more effective under governmental
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.36468/pharmaceutical-sciences.spl.492 | Melatonin’s Antioxidative Characteristic in Human Aging Retinal Pigmen
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.14200/rmd.2024.0002 | Exploring Peptides for Neurological Health & Longevity
+- FAIL pdf | C | 10.18632/aging.204007 | Epitalon protects against post-ovulatory aging-related damage of mouse oocytes < | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/epitalon | 10.3390/molecules25194389 | Peptides: Prospects for Use in the Treatment of COVID-19
+- FAIL pdf | C | 10.18632/aging.204007 | Epitalon protects against post-ovulatory aging-related damage of mouse oocytes i | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1021/acsomega.8b00595 | Structural Basis of Inhibition of Human Insulin-Regulated Aminopeptida
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1002/eji.201970400 | 17th International Congress of Immunology, 19-23 October 2019, Beijing
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1016/j.neubiorev.2018.05.005 | Cognitive benefits of angiotensin IV and angiotensin-(1–7): A systemat
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.112.199497 | Evaluation of Metabolically Stabilized Angiotensin IV Analogs as Proco
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer’s and Parkinson’s Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1021/acsomega.8b00595 | Structural Basis of Inhibition of Human Insulin-Regulated Aminopeptida
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.2147/jir.s401385 | Diminazene Ameliorates Neuroinflammation by Suppression of Astrocytic
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.54014/ad6f-r6vs | The role of glucose transporter 4 during cognitive enhancement by Angi
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.11648/j.ajpn.20150305.11 | The Development of Small Molecule Angiotensin IV-Based Analogs to Trea
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.71097/ijsat.v17.i2.11342 | From Anti-Aging Medicine to Precision Healthspan Pharmacology: Evidenc
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.26420/annhematoloncol.2022.1388 | Brain RAS in CNS Diseases: Beneficial Effects of Small Molecule Agonis
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1101/2025.09.25.678537 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1177/2689288x251392851 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.12677/pi.2016.51001 | Research Progress for Relative Treatment Targets in Alzheimer’s Diseas
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.2217/nmt.12.71 | News
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer's and Parkinson's Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1002/eji.201970400 | 17th International Congress of Immunology, 19-23 October 2019, Beijing
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.114.218735 | RETRACTED: The Procognitive and Synaptogenic Effects of Angiotensin IV
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.112.199497 | Evaluation of Metabolically Stabilized Angiotensin IV Analogs as Proco
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer’s and Parkinson’s Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1021/acsomega.8b00595 | Structural Basis of Inhibition of Human Insulin-Regulated Aminopeptida
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- FAIL pdf | C | 10.3233/jhd-231507 | Effects of an Angiotensin IV Analog on 3-Nitropropionic Acid-Induced Huntington’ | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.11648/j.ajpn.20150305.11 | The Development of Small Molecule Angiotensin IV-Based Analogs to Trea
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.26420/annhematoloncol.2022.1388 | Brain RAS in CNS Diseases: Beneficial Effects of Small Molecule Agonis
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.71097/ijsat.v17.i2.11342 | From Anti-Aging Medicine to Precision Healthspan Pharmacology: Evidenc
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1186/s12967-026-08008-1 | Umbilical cord mesenchymal stromal cells-derived HGF inhibits STING-me
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1007/s13770-023-00559-4 | Regenerative Strategies in Treatment of Peripheral Nerve Injuries in D
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1002/eji.201970400 | 17th International Congress of Immunology, 19-23 October 2019, Beijing
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1124/jpet.112.199497 | Evaluation of Metabolically Stabilized Angiotensin IV Analogs as Proco
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fcell.2021.683609 | HGF and MET: From Brain Development to Neurological Disorders
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fendo.2013.00158 | A Role for the Brain RAS in Alzheimer’s and Parkinson’s Diseases
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1007/s13770-023-00559-4 | Regenerative Strategies in Treatment of Peripheral Nerve Injuries in D
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biom12101429 | Impact of the Renin-Angiotensin System on the Pathogeny and Pharmacoth
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/biomedicines12081906 | Growth Factors and Their Application in the Therapy of Hereditary Neur
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3389/fphar.2020.590855 | From Angiotensin IV to Small Peptidemimetics Inhibiting Insulin-Regula
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1186/s13195-025-01694-x | Pathway-based network medicine identifies novel natural products for A
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.3390/cells14151188 | Human-Induced Pluripotent Stem Cells (iPSCs) for Disease Modeling and
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.11648/j.ajpn.20150305.11 | The Development of Small Molecule Angiotensin IV-Based Analogs to Trea
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1101/2025.09.25.678537 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.1177/2689288x251392851 | Hepatocyte Growth Factor/MET Activator Rescues Working Memory Deficits
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.71097/ijsat.v17.i2.11342 | From Anti-Aging Medicine to Precision Healthspan Pharmacology: Evidenc
+- OFF-TOPIC | 08_peptides_gray/dihexa | 10.26420/annhematoloncol.2022.1388 | Brain RAS in CNS Diseases: Beneficial Effects of Small Molecule Agonis
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/cti2.1443 | Naturally derived cytokine peptides limit virus replication and severe
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2011/928165 | Pharmacological treatment of obesity in children and adolescents: pres
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and future drug targets in weight management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s12967-015-0762-z | Insulin-like growth factor-1 deficiency and metabolic syndrome
+- FAIL pdf | C | 10.1038/oby.2006.294 | Potential Role of New Therapies in Modifying Cardiovascular Risk in Overweight P | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and Future Drug Targets in Weight Management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/cti2.1443 | Naturally derived cytokine peptides limit virus replication and severe
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1093/infdis/jiad566 | Harnessing Endogenous Peptide Compounds as Potential Therapeutics for
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ph3010125 | Approved and Off-Label Uses of Obesity Medications, and Potential New
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.61186/cmja.12.4.13 | The Effect of 8 Weeks High-Intensity Interval Training and Portulaca O
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/toxics13010025 | Volumetric Absorptive Microsampling in Toxicology
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2011/928165 | Pharmacological treatment of obesity in children and adolescents: pres
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ph3010125 | Approved and Off-Label Uses of Obesity Medications, and Potential New
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and future drug targets in weight management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/1475-2891-3-3 | Obesity: An overview on its current perspectives and treatment options
+- FAIL pdf | C | 10.1038/oby.2006.294 | Potential Role of New Therapies in Modifying Cardiovascular Risk in Overweight P | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2011/928165 | Pharmacological Treatment of Obesity in Children and Adolescents: Pres
+- FAIL pdf | C | 10.4103/2347-2618.137568 | Pharmacological management of obesity: Past, present and future | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s12967-015-0762-z | Insulin-like growth factor-1 deficiency and metabolic syndrome
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ph3010125 | Approved and Off-Label Uses of Obesity Medications, and Potential New
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.anpedi.2011.03.018 | Obesidades pediátricas: de la lactancia a la adolescencia
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11095-010-0341-1 | Current and Future Drug Targets in Weight Management
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1677/jme.0.0250287 | Molecular and cellular actions of a structural domain of human growth
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.14943/doctoral.k13325 | Anti-obesity study of Indonesian medicinal plants : an in vitro study
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.21203/rs.3.rs-885615/v1 | Evaluation of Indonesian Anti-obesity Traditional Medicinal Plants: A
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/cti2.1443 | Naturally derived cytokine peptides limit virus replication and severe
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1093/infdis/jiad566 | Harnessing Endogenous Peptide Compounds as Potential Therapeutics for
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.22038/ajp.2024.23734 | The comparison of the effects of nano-silymarin and silymarin on high-
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/toxics13010025 | Volumetric Absorptive Microsampling in Toxicology
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.61186/cmja.12.4.13 | The Effect of 8 Weeks High-Intensity Interval Training and Portulaca O
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2026.1842422 | Proteoformics-driven new concept of human growth hormone in clinical e
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s40842-018-0068-1 | Growth hormone: isoforms, clinical aspects and assays interference
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11102-021-01191-y | Mice with gene alterations in the GH and IGF family
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2020.00033 | Growth Hormone(s), Testosterone, Insulin-Like Growth Factors, and Cort
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1155/2020/3491764 | Lipoprotein(a) the Insurgent: A New Insight into the Structure, Functi
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.mce.2012.02.009 | Differential placental expression profile of human Growth Hormone/Chor
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/med.21789 | Adipose-derived stromal cells for nonhealing wounds: Emerging opportun
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC13390741 | ICE2026/JES2026 Abstract Book
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC12507378 | Poster Presentation
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.2174/157340313805076322 | Obesity pharmacotherapy: current perspectives and future directions
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-017-4350-z | 53 &lt;sup&gt;rd&lt;/sup&gt; EASD Annual Meeting of the European Assoc
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.jbiotec.2005.02.016 | Optimising two-dye microarray designs for estimating associations with
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7163937 | Poster Sessions
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-008-1203-9 | Diet, delusion and diabetes
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-005-1907-z | Abstracts of the 41st Annual Meeting of the EASD (European Association
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00125-013-3012-z | Abstracts of the 49th EASD (European Association for the Study of Diab
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7164111 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s40635-017-0151-4 | ESICM LIVES 2017 : 30th ESICM Annual Congress. September 23-27, 2017
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7163973 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1083/jcb.70.2.261 | Membrane receptors for hormones and neurotransmitters
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7101945 | Abstracts of the 9th Congress of the International Pediatric Nephrolog
+- OFF-TOPIC | 08_peptides_gray/aod9604 | PMC7104462 | Abstracts
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s00431-006-0349-z | European Academy of Paediatrics, Barcelona, Spain, October 7-10, 2006.
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1210/er.2007-0017 | What Can We Learn from Rodents about Prolactin in Humans?
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3168/jds.s0022-0302(87)80028-0 | Physiology of the Somatotropic Axis with Particular Reference to the R
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2020.00033 | Growth Hormone(s), Testosterone, Insulin-Like Growth Factors, and Cort
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3892/br.2017.930 | Human placental growth hormone in normal and abnormal fetal growth
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1016/j.apsb.2021.04.001 | Oral delivery of proteins and peptides: Challenges, status quo and fut
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1210/clinem/dgz149 | Long-Acting Growth Hormone Preparations – Current Status and Future Co
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s40842-018-0068-1 | Growth hormone: isoforms, clinical aspects and assays interference
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1039/c8mt00221e | Metal-dependent hormone function: the emerging interdisciplinary field
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1038/srep43537 | Adipokines (Leptin, Adiponectin, Resistin) Differentially Regulate All
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s11102-021-01191-y | Mice with gene alterations in the GH and IGF family
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/agriculture13050974 | Challenges of Pasture Feeding Systems—Opportunities and Constraints
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1186/s42269-019-0238-z | Physiological process of fat loss
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3390/ijms252212195 | Oxidative Stress and Placental Pathogenesis: A Contemporary Overview o
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1515/ntrev-2021-0115 | Approved and marketed nanoparticles for disease targeting and applicat
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1002/med.21789 | Adipose‐derived stromal cells for nonhealing wounds: Emerging opportun
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1007/s13167-023-00329-1 | Growth hormone proteoformics atlas created to promote predictive, prev
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.3389/fendo.2025.1584303 | Secretion of placental peptide hormones: functions and trafficking
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.1152/physrev.00057.2024 | Proglucagon-derived peptides: human physiology and therapeutic potenti
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.26420/austinjwomenshealth.2019.1034 | Skin Aging and Modern Age Anti-Aging Strategies
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.18276/ab.2017.24-10 | Growth hormone and growth hormone gene of the American mink (Neovison
+- OFF-TOPIC | 08_peptides_gray/aod9604 | 10.33745/ijzi.2023.v09i02.001 | Neuro-Endocrinology of Amphibians and Reptiles: An Overview
+- FAIL pdf | B | 10.7326/0003-4819-149-9-200811040-00003 | Effects of an oral ghrelin mimetic on body composition and clinical outcomes in  | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.archger.2010.10.004 | MK-0677 (ibutamoren mesylate) for the treatment of patients recovering from hip  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jcem.82.10.4281 | Prophylactic adrenalectomy of a three-year-old girl with congenital ad
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jcem.83.2.4529 | Risk and penetrance of primary hyperparathyroidism in multiple endocri
+- FAIL pdf | C | 10.1001/jama.2017.17069 | Chemical Composition and Labeling of Substances Marketed as Selective Androgen R | no OA PDF resolved
+- FAIL pdf | C | 10.1136/bcr-2025-265728 | Hepatotoxicity induced by MK-677 | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fneur.2026.1709559 | Insulin-like growth factor 1 associated research in Alzheimer's diseas
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- FAIL pdf | C | 10.1210/jcemcr/luae148 | Reversible Gynecomastia and Hypogonadism Due to Usage of Commercial Performance- | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1177/1098612x251379924 | Capromorelin promotes weight gain in cats with unintended weight loss:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.7759/cureus.52011 | Social Interest Data as a Proxy for Off-Label Performance-Enhancing Dr
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3803/enm.2021.1081 | Receptor-Mediated Muscle Homeostasis as a Target for Sarcopenia Therap
+- FAIL pdf | C | 10.3349/ymj.2018.59.10.1174 | Effect of the Orally Active Growth Hormone Secretagogue MK-677 on Somatic Growth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/dta.3835 | Annual Banned-Substance Review 17th Edition-Analytical Approaches in H
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13539-014-0159-5 | Anamorelin HCl (ONO-7643), a novel ghrelin receptor agonist, for the t
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12603-011-0012-x | Progress in the development of new drugs in Alzheimer's disease
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4103/0019-5545.44900 | The prevention and treatment of cognitive decline and dementia: An ove
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.arr.2018.07.004 | Towards frailty biomarkers: Candidates from genes and pathways regulat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer’s Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/jvp.12344 | Capromorelin increases food consumption, body weight, growth hormone,
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- FAIL pdf | C | 10.1113/ep090741 | LGD‐4033 and MK‐677 use impacts body composition, circulating biomarkers, and sk | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.3252 | Equine metabolism of the growth hormone secretagogue MK‐0677 in vitro and in uri | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1159/000475732 | Ghrelin and Growth
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/gerona/glad022 | Growth Hormone Secretagogues as Potential Therapeutic Agents to Restor
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/clinem/dgaf010 | Loss-of-Function GHSR Variants Are Associated With Short Stature and L
+- FAIL pdf | C | 10.1210/jendso/bvab096 | Treatment of Pediatric Growth Hormone Deficiency With Oral Secretagogues Revisit | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2478/jtim-2022-0033 | Binding domain characterization of growth hormone secretagogue recepto
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.biopha.2020.110721 | New understanding of the pathogenesis and treatment of stroke-related
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2174/1874216501206010068 | The Involvement of the GH/IGF-I Axis in Cognitive Functions of Adult P
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab029 | Corroboration of Height Velocity Prediction Markers for rhGH With an O
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/endrev/bnae011 | Relative Energy Deficiency in Sport (REDs): Endocrine Manifestations,
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3803/enm.2021.1081 | Receptor-Mediated Muscle Homeostasis as a Target for Sarcopenia Therap
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1590/s0004-27302008000500003 | Ghrelina e secretagogos do hormônio de crescimento (GHS): modulação da
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- FAIL pdf | C | 10.22541/au.159050681.10910720 | MAJOR APPROACHES THE USE OF GH SECRETAGOGUE (MK-677) FOR MUSCLE MASS GAIN IN ELD | no OA PDF resolved
+- FAIL pdf | C | PMC12545285 | SUN-658 Ibutamoren Mesylate, an Oral Growth Hormone (GH) Secretagogue, Modifies  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.21037/atm-2025-1-184 | Development of pharmacological interventions for the treatment of sarc
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5114/pedm.2025.158544 | New directions in growth hormone treatment in children | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1080/15502783.2022.2056381 | Proceedings of the Eighteenth International Society of Sports Nutritio
+- FAIL pdf | C | 10.3349/ymj.2018.59.10.1174 | Effect of the Orally Active Growth Hormone Secretagogue MK-677 on Somatic Growth | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4235/agmr.2018.22.2.52 | Current Status of Sarcopenia in Korea: A Focus on Korean Geripausal Wo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.arr.2018.07.004 | Towards frailty biomarkers: Candidates from genes and pathways regulat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/jvp.12344 | Capromorelin increases food consumption, body weight, growth hormone,
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12891-023-06512-9 | Post-surgery interventions for hip fracture: a systematic review of ra
+- FAIL pdf | C | 10.1113/ep090741 | LGD‐4033 and MK‐677 use impacts body composition, circulating biomarkers, and sk | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.biopha.2020.110721 | New understanding of the pathogenesis and treatment of stroke-related
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12937-016-0214-5 | Two ghrelin receptor agonists for adults with malnutrition: a systemat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/gerona/glad022 | Growth Hormone Secretagogues as Potential Therapeutic Agents to Restor
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/rco2.9 | Growth hormone secretagogues: history, mechanism of action, and clinic
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13539-014-0149-7 | Are we closer to having drugs to treat muscle wasting disease?
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00223-019-00561-w | Is There Enough Evidence for Osteosarcopenic Obesity as a Distinct Ent
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s11912-025-01718-7 | Host-related Determinants of Response to Immunotherapy in Non-small Ce
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00198-023-06922-4 | Evaluation of mobility recovery after hip fracture: a scoping review o
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pr.113.008433 | Novel and Conventional Receptors for Ghrelin, Desacyl-Ghrelin, and Pha
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/jcm15020541 | Pharmacologic Treatments for the Preservation of Lean Body Mass During
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1124/pharmrev.123.001087 | Steatotic Liver Disease: Pathophysiology and Emerging Pharmacotherapie
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms19061800 | MK-0677, a Ghrelin Agonist, Alleviates Amyloid Beta-Related Pathology
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4235/agmr.2018.22.2.52 | Current Status of Sarcopenia in Korea: A Focus on Korean Geripausal Wo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2174/1874216501206010068 | The Involvement of the GH/IGF-I Axis in Cognitive Functions of Adult P
+- FAIL pdf | C | 10.1002/dta.3252 | Equine metabolism of the growth hormone secretagogue MK‐0677 in vitro and in uri | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/endrev/bnae011 | Relative Energy Deficiency in Sport (REDs): Endocrine Manifestations,
+- FAIL pdf | C | 10.1210/jendso/bvaf149.168 | SUN-658 Ibutamoren Mesylate, an Oral Growth Hormone (GH) Secretagogue, Modifies  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3803/enm.2025.2656 | Sarcopenia and Muscle Aging: Updated Insights into Molecular Mechanism
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s40520-025-03119-z | World Congress on Osteoporosis, Osteoarthritis and Musculoskeletal Dis
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1159/000552071 | 33rd European Congress on Obesity (ECO 2026) - Late Breaking Abstracts
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/jox13020017 | Systematic Review of Safety of Selective Androgen Receptor Modulators
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.molmet.2025.102118 | Glucose-dependent insulinotropic polypeptide (GIP)
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/eci.70059 | Bridging the gap in obesity research: A consensus statement from the E
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC13254489 | Publication Only
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41392-024-01823-2 | Tumor biomarkers for diagnosis, prognosis and targeted therapy
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1080/15502783.2022.2056381 | Proceedings of the Eighteenth International Society of Sports Nutritio
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC12163242 | Publication Only
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/ene.70629 | ePoster
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/cas.70254 | Abstracts of the 84&lt;sup&gt;th&lt;/sup&gt; Annual Meeting of the Jap
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms18040798 | Therapeutic Potential of Targeting the Ghrelin Pathway
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41392-023-01464-x | TRP (transient receptor potential) ion channel family: structures, bio
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4093/dmj.2025.0469 | 2025 Clinical Practice Guidelines for Diabetes Management in Korea: Re
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s12919-021-00227-2 | Novelties in Sport Sciences : Novi Sad, Serbia. 11 September 2021
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/s41392-023-01589-z | Recent advances in targeting the "undruggable" proteins: from drug dis
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC10800223 | 2023 ACVIM Forum Research Abstract Program
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1155/2012/127362 | Sarcopenia and age-related endocrine function
+- FAIL pdf | C | 10.7326/0003-4819-149-9-200811040-00003 | Effects of an Oral Ghrelin Mimetic on Body Composition and Clinical Outcomes in  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.9758/cpn.2016.14.3.238 | Effects of Antipsychotics on Bone Mineral Density in Patients with Sch
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4248/br201301005 | Bone Remodeling and Energy Metabolism: New Perspectives
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1093/ajcn/82.5.923 | Obesity in older adults: technical review and position statement of th
+- FAIL pdf | C | 10.1210/me.2005-0059 | Nonpeptide and Peptide Growth Hormone Secretagogues Act Both as Ghrelin Receptor | no OA PDF resolved
+- FAIL pdf | C | 10.1113/ep090741 | LGD‐4033 and MK‐677 use impacts body composition, circulating biomarkers, and sk | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/nu13124499 | Exercise and Nutrition Impact on Osteoporosis and Sarcopenia—The Incid
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1038/ejcn.2013.116 | Beyond weight loss: a review of the therapeutic uses of very-low-carbo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.yfrne.2010.06.002 | Leptin in human physiology and therapeutics
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/1475-2891-10-9 | Weight Science: Evaluating the Evidence for a Paradigm Shift
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1017/s095442241000034x | Associations between dairy consumption and body weight: a review of th
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/wps.20204 | Effects of antipsychotics, antidepressants and mood stabilizers on ris
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jc.2009-2631 | Congenital Adrenal Hyperplasia Due to Steroid 21-Hydroxylase Deficienc
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/s13098-024-01412-x | The multiple actions of dipeptidyl peptidase 4 (DPP-4) and its pharmac
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2023.1161521 | Obesity and type 2 diabetes mellitus: connections in epidemiology, pat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/14651858.cd003288.pub3 | Protein and energy supplementation in elderly people at risk from maln
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1530/joe-16-0211 | Adipose tissue in control of metabolism
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1186/1743-8977-10-15 | Titanium dioxide nanoparticles: a review of current toxicological data
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/me.2005-0084 | Ghrelin Amplifies Dopamine Signaling by Cross Talk Involving Formation
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1017/s0029665115002438 | The wasting continuum in heart failure: from sarcopenia to cachexia
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3109/09637486.2012.687366 | Wheat bran: its composition and benefits to health, a European perspec
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1042/bsr20181061 | Ghrelin, a gastrointestinal hormone, regulates energy balance and lipi
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s40279-022-01782-0 | Mechanisms for Combined Hypoxic Conditioning and Divergent Exercise Mo
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.arr.2018.07.004 | Towards frailty biomarkers: Candidates from genes and pathways regulat
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.4065/mcp.2010.0336 | The Obesity Paradox and Mortality Associated With Surrogates of Body S
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5114/pedm.2025.158544 | New directions in growth hormone treatment in children | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.21037/atm-2025-1-184 | Development of pharmacological interventions for the treatment of sarc
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC10554400 | OR21-06 Growth Response Of Oral LUM-201 In OraGrowtH210 And OraGrowtH2
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1177/1098612x251379924 | Capromorelin promotes weight gain in cats with unintended weight loss:
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s00228-023-03592-3 | Selective androgen receptor modulator use and related adverse events i
+- FAIL pdf | C | 10.1210/jcemcr/luae148 | Reversible Gynecomastia and Hypogonadism Due to Usage of Commercial Performance- | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | PMC10911832 | Severe liver injury following use of RAD-140, a selective androgen rec
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab096 | Treatment of Pediatric Growth Hormone Deficiency With Oral Secretagogu
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab029 | Corroboration of Height Velocity Prediction Markers for rhGH With an O
+- FAIL pdf | C | PMC8265876 | LUM-201 Elicits Greater GH Response than Standard GH Secretagogues in Pediatric  | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s12035-024-04457-1 | Insulin-Like Growth Factor Signaling in Alzheimer's Disease: Pathophys
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/prp2.1243 | Novel Pharmaceuticals in Appetite Regulation: Exploring emerging gut p
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1097/cm9.0000000000003629 | MASLD development: From molecular pathogenesis toward therapeutic stra
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1016/j.pccm.2024.02.003 | Understanding cachexia and its impact on lung cancer and beyond
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1111/cen.15196 | Ghrelin: An Emerging Therapy for Heart Failure
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvab030 | Development of a Predictive Enrichment Marker for the Oral GH Secretag
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1021/acs.jmedchem.1c02191 | Advances in the Development of Nonpeptide Small Molecules Targeting Gh
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1530/ec-22-0504 | Diagnosis and testing for growth hormone deficiency across the ages: a
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3389/fendo.2025.1706068 | Osteosarcopenia in metabolic dysfunction-associated steatotic liver di
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.7759/cureus.35094 | Selective Androgen Receptor Modulators (SARMs)-Induced Liver Injury: A
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/ph14111084 | Towards Drug Repurposing in Cancer Cachexia: Potential Targets and Can
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1002/vms3.83 | Capromorelin: a ghrelin receptor agonist and novel therapy for stimula
+- FAIL pdf | B | 10.1067/mcp.2001.116514 | Effects of oral administration of ibutamoren mesylate, a nonpeptide growth hormo | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvaf149.1761 | SAT-192 Phase 3 Randomized and Double-blinded Trial Design with LUM-20
+- FAIL pdf | C | 10.1016/j.cca.2025.120578 | Knowing the minimal detectable dose can facilitate the interpretation of a hair  | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jendso/bvaf149.168 | SUN-658 Ibutamoren Mesylate, an Oral Growth Hormone (GH) Secretagogue, Modifies  | no OA PDF resolved
+- FAIL pdf | C | 10.1210/jendso/bvaf149.1594 | SAT-675 The Impact of the Oral Growth Hormone Secretagogue Ibutamoren on Metabol | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1530/endoabs.110.p568 | Evaluation of the pharmacokinetics (PK), pharmacodynamics (PD), and sa
+- FAIL pdf | C | 10.1134/s1061934824020072 | A Study of the Metabolism of Ibutamoren (MK-677), a Growth Hormone Secretagogue, | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.65671/tsj24068 | TESAMORELIN AMONG GROWTH HORMONE SECRETAGOGUE PEPTIDES: A COMPARATIVE
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.51329/mehdiophthal1536 | Efficacy and safety of pilocarpine as a secretagogue versus artificial
+- FAIL pdf | C | 10.1002/rcm.9337 | Characterization of Growth Hormone Secretagogue Small Molecule Ibutamoren (MK-06 | no OA PDF resolved
+- FAIL pdf | C | 10.1002/rcm.9201 | Characterization of Equine Liver Microsomes Generated Metabolites of Growth Horm | no OA PDF resolved
+- FAIL pdf | C | 10.1002/rcm.9201/v1/decision1 | Decision letter for "Characterization of Equine Liver Microsomes Generated Metab | no OA PDF resolved
+- FAIL pdf | C | 10.1002/rcm.9201/v2/response1 | Author response for "Characterization of Equine Liver Microsomes Generated Metab | no OA PDF resolved
+- FAIL pdf | C | 10.1002/rcm.9201/v1/review1 | Review for "Characterization of Equine Liver Microsomes Generated Metabolites of | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13340-020-00426-w | Efficacy and safety of a combination of an insulin secretagogue and a
+- FAIL pdf | C | 10.1134/s1061934818070031 | Determination of Andarine (S-4), a Selective Androgen Receptor Modulator, and Ib | no OA PDF resolved
+- FAIL pdf | C | 10.1021/acs.jmedchem.5c00217 | Design, Biological Characterization, and Discovery of Capromorelin Derivatives a | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1210/jendso/bvaf149.1676 | SUN-092 Oral Growth Hormone Secretagogue (LUM-201) Pediatric Capsule F
+- FAIL pdf | C | 10.1093/jsxmed/qdaf320.196 | (197) Peptides in Practice: Evaluating Efficacy and Safety in Men’s Health | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1007/s13346-026-02116-7 | A dual-function rebamipide cubogel for enhanced ocular penetration and
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1080/03007995.2024.2401096 | Efficacy and safety of insulin degludec biosimilar B01411 versus origi
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.30802/aalas-jaalas-23-000010 | Evaluating the Safety and Efficacy of Capromorelin in Rhesus Macaques
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.2337/db26-1036-or | 1036-OR: ADA Presidents' Select Abstract: Food Insecurity and Level 3
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.1080/08164622.2024.2341841 | Efficacy and safety of artificial tears containing Artemia salina extr
+- OFF-TOPIC | 08_peptides_gray/mk677_ibutamoren | 10.3390/jcm15124823 | Comparative Efficacy and Safety of 0.05% Cyclosporine A and 3% Diquafo
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.nbscr.2025.100114 | Synergies from a distance: Inspirations from the struggles of Dr James
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.nbscr.2025.100118 | Sleep and immune health: How dogs, goats and 'factor S' shaped a field
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27020685 | Peptide-Based Approaches for Pain Relief and Healing in Wounds
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1021/acs.analchem.3c05194 | Deuterium Labeling of Isoaspartic and Isoglutamic Acids for Mass Spect
+- FAIL pdf | C | 10.3390/molecules26175173 | Delta Sleep-Inducing Peptide Recovers Motor Function in SD Rats after Focal Stro | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13062-023-00377-7 | Probing pathways by which rhynchophylline modifies sleep using spatial
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1007/s40211-023-00466-z | [Insomniac symptoms and suicidality-link and management]
+- FAIL pdf | B | 10.3390/biomedicines9040407 | DSIP-Like KND Peptide Reduces Brain Infarction in C57Bl/6 and Reduces Myocardial | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fneur.2025.1627172 | Research progress on the correlation between biological rhythms and th
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood-brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu12082328 | Circadian Variation in Human Milk Composition, a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines10112934 | Rodent Models of Audiogenic Epilepsy: Genetic Aspects, Advantages, Cur
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu14102084 | Nutrients and the Circadian Clock: A Partnership Controlling Adipose T
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines9111575 | Neuropeptides Involved in Facial Nerve Regeneration
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fnins.2021.675732 | Disruptions of Circadian Rhythms and Thrombolytic Therapy During Ische
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1039/d2sc02593k | Development of Cu(ii)-specific peptide shuttles capable of preventing
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1371/journal.pone.0160314 | Novel Nuclear Factor-KappaB Targeting Peptide Suppresses β-Amyloid Ind
+- FAIL pdf | C | 10.1016/j.bbrep.2015.08.015 | Enzymatic attributes of an l-isoaspartyl methyltransferase from <i>Candida utili | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1038/s41598-019-42099-9 | Brain-transportable dipeptides across the blood-brain barrier in mice
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1155/2013/687575 | The role of neuropeptides in suicidal behavior: a systematic review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fpsyt.2016.00072 | Is there Progress? An Overview of Selecting Biomarker Candidates for M
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27093890 | Therapeutic Peptides in Aesthetic, Metabolic and Endocrine Conditions:
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ijms27020685 | Peptide-Based Approaches for Pain Relief and Healing in Wounds
+- FAIL pdf | C | 10.5435/jaaosglobal-d-25-00236 | Therapeutic Peptides in Orthopaedics: Applications, Challenges, and Future Direc | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1016/j.nbscr.2025.100118 | Sleep and immune health: How dogs, goats and 'factor S' shaped a field
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/ncrna11020021 | MicroRNAs: A Novel Approach for Monitoring Treatment Response in Major
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fneur.2025.1627172 | Research progress on the correlation between biological rhythms and th
+- OFF-TOPIC | 08_peptides_gray/dsip | PMC9575633 | The Role of Polyamines in the Mechanisms of Cognitive Impairment
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines10112934 | Rodent Models of Audiogenic Epilepsy: Genetic Aspects, Advantages, Cur
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood-brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu12082328 | Circadian Variation in Human Milk Composition, a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/nu14102084 | Nutrients and the Circadian Clock: A Partnership Controlling Adipose T
+- FAIL pdf | C | 10.1016/j.bbrep.2015.08.015 | Enzymatic attributes of an l-isoaspartyl methyltransferase from <i>Candida utili | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1155/2013/687575 | The role of neuropeptides in suicidal behavior: a systematic review
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fmolb.2022.900882 | Innovative Approach for a Classic Target: Fragment Screening on Trypan
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fpsyt.2022.871754 | The Relationship Between 5-Hydroxytryptamine and Its Metabolite Change
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1039/d2sc02593k | Development of Cu(ii)-specific peptide shuttles capable of preventing
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1371/journal.pone.0160314 | Novel Nuclear Factor-KappaB Targeting Peptide Suppresses β-Amyloid Ind
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fnins.2021.675732 | Disruptions of Circadian Rhythms and Thrombolytic Therapy During Ische
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fncir.2018.00014 | Sleep Deprivation and the Epigenome
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3389/fpsyt.2016.00072 | Is there Progress? An Overview of Selecting Biomarker Candidates for M
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.18699/vj20.687 | The role of microRNAs in learning and long-term memory
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/2045-8118-8-3 | Molecular biology of the blood-brain and the blood-cerebrospinal fluid
+- OFF-TOPIC | 08_peptides_gray/dsip | PMC7162311 | Dedicated Poster Abstracts
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.1186/s13041-023-00997-0 | Circadian rhythms in the blood-brain barrier: impact on neurological d
+- OFF-TOPIC | 08_peptides_gray/dsip | 10.3390/biomedicines9111575 | Neuropeptides Involved in Facial Nerve Regeneration
+- FAIL pdf | C | 10.1021/acschembio.2c00720 | Synthetic ERRα/β/γ Agonist Induces an ERRα-Dependent Acute Aerobic Exercise Resp | no OA PDF resolved
+- FAIL pdf | C | 10.1124/jpet.123.001733 | A Synthetic ERR Agonist Alleviates Metabolic Syndrome | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fphys.2025.1616693 | Targeting ERRs to counteract age-related muscle atrophy associated with physical | no OA PDF resolved
+- FAIL pdf | C | 10.1039/d6cb00077k | Pharmacology of estrogen-related receptors (ERRs) agonists | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.ijbiomac.2026.151450 | Chemical optimization of the exercise mimetic SLU-PP-332 enables insight into es | no OA PDF resolved
+- FAIL pdf | C | 10.3390/biom16020272 | Nuclear Receptor-Targeted Therapies: Reprogramming Metabolism with TRβ, ERRα, an | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/nu17060969 | Exercise Mimetics in Aging: Suggestions from a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | PMC9429973 | Abstract Book for the 27th Congress of the European Hematology Associa
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.bpsgos.2026.100723 | The Estrogen-Mitochondria Axis in Bipolar Disorder: From Fluctuating H
+- FAIL pdf | C | 10.1039/d6cb00077k | Pharmacology of estrogen-related receptors (ERRs) agonists | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1111/acel.70472 | Ghrelin Receptor Deletion or Pharmacological Inhibition Improves Muscl
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/cells15020131 | Thermogenesis in Adipose Tissue: Adrenergic and Non-Adrenergic Pathway
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fcell.2026.1878702 | Targeting nuclear receptors in muscular dystrophies and regenerative m
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/ph19071056 | The Central Role of the AMPK/SIRT1/PGC-1α Signaling Axis in Skeletal M
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1002/jcsm.70333 | Downstream Pathways of Dystrophin Deficiency in Duchenne Muscular Dyst
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/nu18040632 | A Narrative Review on GLP-1 Receptor Agonists for Obesity in Older Wom
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3803/enm.2025.2656 | Sarcopenia and Muscle Aging: Updated Insights into Molecular Mechanism
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1080/07853890.2026.2626085 | Endocrinological aspects of sarcopenic obesity
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1126/sciadv.aed3119 | A multi-functional oral small molecule targeting energy and lipid meta
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.7717/peerj.20700 | Mastering cardiomyocyte mitophagy: molecular governance, pathological
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1186/s12967-025-07005-0 | GPER in metabolic homeostasis and disease: molecular mechanisms, nutri
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fimmu.2026.1886943 | Targeting metabolic inflammation in type 2 diabetes mellitus through e
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/antiox15060778 | The Global Decline in Sperm Count and Testosterone Levels: Trends, Mec
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/nu17060969 | Exercise Mimetics in Aging: Suggestions from a Systematic Review
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/life15020208 | Capsaicin (But Not Other Vanillins) Enhances Estrogen Binding to Its R
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1038/s41392-025-02270-3 | Nuclear receptors in health and disease: signaling pathways, biologica
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1038/s41392-026-02662-z | Insights into the therapeutic strategies for aging and aging-associate
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1016/j.jacadv.2025.102347 | Skeletal Muscle-Cardiac Muscle Aging: Shared Mechanisms and Multimodal
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fpsyt.2025.1714569 | Sex-informed estrogen receptor modulation in schizophrenia: a male-foc
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.1186/s13578-025-01519-2 | PGC-1α: key regulator of mitochondrial biogenesis and cellular differe
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3390/ijms262210996 | Beyond Hunger: The Structure, Signaling, and Systemic Roles of Ghrelin
+- OFF-TOPIC | 08_peptides_gray/slu_pp_332 | 10.3389/fcvm.2026.1779990 | Cardiotoxicity associated with anticancer therapies for gynecological
+- FAIL pdf | C | 10.1038/nature13198 | Nicotinamide N-methyltransferase knockdown protects against diet-induced obesity | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.bcp.2017.11.007 | Selective and membrane-permeable small molecule inhibitors of nicotinamide N-met | no OA PDF resolved
+- FAIL pdf | C | 10.1111/dom.15879 | Nicotinamide N-methyltransferase inhibition mitigates obesity-related metabolic  | no OA PDF resolved
+- FAIL pdf | C | 10.1016/j.drudis.2021.05.011 | Nicotinamide N-methyl transferase (NNMT): An emerging therapeutic target | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/five_amino_1mq | 10.1016/j.jpba.2021.114255 | Development & validation of LC-MS/MS assay for 5-amino-1-methyl quinol
+- FAIL pdf | C | 10.1136/jitc-2024-009281 | NAD<sup>+</sup> metabolism enzyme NNMT in cancer-associated fibroblasts drives t | no OA PDF resolved
+- FAIL pdf | B | 10.1016/s0140-6736(08)61525-1 | Effect of tesofensine on bodyweight loss, body composition, and quality of life  | no OA PDF resolved
+- FAIL pdf | B | 10.1001/archneur.65.5.577 | Tesofensine (NS 2330), a monoamine reuptake inhibitor, in patients with advanced | no OA PDF resolved
+- FAIL pdf | A | 10.1038/oby.2008.56 | Weight loss produced by tesofensine in patients with Parkinson's or Alzheimer's  | no OA PDF resolved
+- FAIL pdf | B | 10.1038/ijo.2010.87 | The effect of the triple monoamine reuptake inhibitor tesofensine on energy meta | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.70104 | Investigations Into the Metabolism and Elimination of Tesofensine in Human Urine | no OA PDF resolved
+- FAIL pdf | C | 10.1002/dta.70104 | Investigations Into the Metabolism and Elimination of Tesofensine in Human Urine | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2025.1630199 | A glimpse into the pipeline of anti-obesity medication development: co
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4274/jcrpe.galenos.2025.2025-12-12 | Current Approaches and Therapeutic Strategies for Hypothalamic Syndrom
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/medicines12030019 | Obesity: Clinical Impact, Pathophysiology, Complications, and Modern I
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3345/cep.2025.02838 | Systematic review of influence of ethnicity on efficacy and safety of
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.obpill.2024.100139 | Obesity in patients with craniopharyngioma in the South Asian region -
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s00213-025-06861-4 | Ascending single-dose study of the safety, pharmacokinetics, and pharm
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2026.1768254 | Quality of life, morbidity, mortality, and long-term prognosis after c
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ijms25158202 | Molecular Mechanisms behind Obesity and Their Potential Exploitation i
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2023.1256514 | Treatment of hypothalamic obesity in people with hypothalamic injury:
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1507/endocrj.ej25-0408 | Diagnostic criteria for acquired hypothalamic obesity - international
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnaf025 | Management of Acquired Hypothalamic Dysfunction and the Hypothalamic S
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/biomedicines13051016 | Management of Acquired Hypothalamic Obesity After Childhood-Onset Cran
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/cancers16193275 | Mechanisms by Which Pharmacotherapy May Impact Cancer Risk among Indiv
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/jendso/bvae200 | Treatment of Hypothalamic Obesity With GLP-1 Analogs
+- FAIL pdf | B | 10.1530/eje-21-0972 | Randomized controlled trial of Tesomet for weight loss in hypothalamic obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.ajcnut.2025.06.015 | Novel strategies for medical management of obesity: mechanisms, clinic
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ijms27041925 | Reexamining Fat: Exploring Diversity, Plasticity, Development, Functio
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/healthcare11030433 | Pharmacological Support for the Treatment of Obesity-Present and Futur
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s11102-024-01429-5 | Semaglutide treatment of hypothalamic obesity - a real-life data study
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.eclinm.2023.101882 | Pharmacotherapy of obesity: an update on the available medications and
+- FAIL pdf | C | PMC8089137 | Weight Loss, Improved Body Composition and Fat Distribution by Tesomet in Acquir | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2022.846880 | Treatment of Acquired Hypothalamic Obesity: Now and the Future
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.jsps.2023.101757 | A narrative review of approved and emerging anti-obesity medications
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2020.0258 | Comprehensive Review of Current and Upcoming Anti-Obesity Drugs
+- FAIL pdf | C | 10.1002/dta.70104 | Investigations Into the Metabolism and Elimination of Tesofensine in Human Urine | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s00213-025-06861-4 | Ascending single-dose study of the safety, pharmacokinetics, and pharm
+- FAIL pdf | C | 10.1371/journal.pone.0325067 | Sex-specific effects of appetite suppressants on stereotypy in rats | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4274/jcrpe.galenos.2025.2025-12-12 | Current Approaches and Therapeutic Strategies for Hypothalamic Syndrom
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/medicines12030019 | Obesity: Clinical Impact, Pathophysiology, Complications, and Modern I
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2025.1630199 | A glimpse into the pipeline of anti-obesity medication development: co
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/genes16121436 | Barriers, Limitations, and Experiences with Clinical Trials-Treatment
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2023.1256514 | Treatment of hypothalamic obesity in people with hypothalamic injury:
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnaf025 | Management of Acquired Hypothalamic Dysfunction and the Hypothalamic S
+- FAIL pdf | B | 10.1530/eje-21-0972 | Randomized controlled trial of Tesomet for weight loss in hypothalamic obesity | no OA PDF resolved
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1155/jobe/7821115 | A Complex Network of Obesity-Risk Genes Revealed by Systematic Bioinfo
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2022.846880 | Treatment of Acquired Hypothalamic Obesity: Now and the Future
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3389/fendo.2021.781361 | Editorial: Developmental Programming of Metabolic Diseases
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/healthcare11030433 | Pharmacological Support for the Treatment of Obesity-Present and Futur
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/jendso/bvae200 | Treatment of Hypothalamic Obesity With GLP-1 Analogs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.eclinm.2023.101882 | Pharmacotherapy of obesity: an update on the available medications and
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1210/endrev/bnad033 | Appetite- and Weight-Regulating Neuroendocrine Circuitry in Hypothalam
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/ph16020212 | Pharmacological Treatments and Natural Biocompounds in Weight Manageme
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.4093/dmj.2020.0258 | Comprehensive Review of Current and Upcoming Anti-Obesity Drugs
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/jcm10194540 | Anti-Obesity Medication Use in Children and Adolescents with Prader-Wi
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1007/s13679-020-00422-w | Long-Term Efficacy and Safety of Anti-Obesity Treatment: Where Do We S
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.3390/nu14091950 | Prader-Willi Syndrome: Possibilities of Weight Gain Prevention and Tre
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1038/s41573-021-00337-8 | Anti-obesity drug discovery: advances and challenges
+- OFF-TOPIC | 05_fat_loss_drugs/tesofensine | 10.1016/j.obpill.2022.100018 | Anti-Obesity Medications and Investigational Agents: An Obesity Medici
+- FAIL pdf | C | 10.21037/tau-2025-480 | Preserving spermatogenesis in testosterone deficiency: innovations in replacemen | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.2147/jmdh.s582182 | Treatment Options for Improving The Semen Quality in Obese Men: A Scop
+- FAIL pdf | C | 10.21037/tau-24-238 | Safety and efficacy of enclomiphene and clomiphene for hypogonadal men | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/jcm15155805 | Micro-TESE in Non-Obstructive Azoospermia: Phenotype-Guided Hormonal O
+- FAIL pdf | C | 10.4103/aja2024104 | Clinician's guide to the management of azoospermia induced by exogenous testoste | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ph17091233 | Clomiphene Citrate Treatment as an Alternative Therapeutic Approach for Male Hyp | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/cells15020158 | When Testosterone Fades: Leydig Cell Aging Shaped by Environmental Tox
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1177/17562872221105017 | Understanding and managing the suppression of spermatogenesis caused b
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.5534/wjmh.180036 | Testosterone Is a Contraceptive and Should Not Be Used in Men Who Desi
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.21037/tau.2018.04.03 | Frontiers in hormone therapy for male infertility
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.4103/1008-682x.142772 | Preserving fertility in the hypogonadal patient: an update
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.4103/1008-682x.173938 | Recovery of spermatogenesis following testosterone replacement therapy
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.21037/tau.2016.08.03 | Testosterone replacement in the infertile man
+- FAIL pdf | C | PMC4708365 | AB04. Novel approaches for testosterone replacement therapy | no OA PDF resolved
+- FAIL pdf | C | 10.4103/1008-682x.179252 | Current medical management of endocrine-related male infertility | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.4103/1008-682x.143736 | Alternatives to testosterone replacement: testosterone restoration
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.4274/jtgga.2016.0107 | Pharmacokinetic, pharmacodynamic, and clinical aspects of ovulation in
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.12688/f1000research.10102.1 | Treatment of Hypogonadism: Current and Future Therapies
+- FAIL pdf | C | 10.21037/tau-2025-480 | Preserving spermatogenesis in testosterone deficiency: innovations in replacemen | no OA PDF resolved
+- FAIL pdf | C | 10.7759/cureus.109299 | Changes in Serum Testosterone After Sublingual Enclomiphene Citrate Combined Wit | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/jcm15155805 | Micro-TESE in Non-Obstructive Azoospermia: Phenotype-Guided Hormonal O
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.7759/cureus.91975 | Strategies for Reversing Exogenous Testosterone-Induced Infertility
+- FAIL pdf | C | 10.21037/tau-24-238 | Safety and efficacy of enclomiphene and clomiphene for hypogonadal men | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3389/fendo.2026.1866059 | The EV-mitochondrial outsourcing network as a therapeutic target for a
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/antiox15060778 | The Global Decline in Sperm Count and Testosterone Levels: Trends, Mec
+- FAIL pdf | C | 10.3390/ph17091233 | Clomiphene Citrate Treatment as an Alternative Therapeutic Approach for Male Hyp | no OA PDF resolved
+- FAIL pdf | C | 10.4103/aja2024104 | Clinician's guide to the management of azoospermia induced by exogenous testoste | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/medicina60020275 | Management of Male Fertility in Hypogonadal Patients on Testosterone R
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/ijms25126531 | History of the Development of Knowledge about the Neuroendocrine Contr
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1007/s11154-022-09759-0 | Reproductive axis ageing and fertility in men
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1177/17562872221105017 | Understanding and managing the suppression of spermatogenesis caused b
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1530/raf-24-0022 | From Bench to Babies - Drug Development for Male Subfertility
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1016/j.ajhg.2024.10.008 | Proteome-wide Mendelian randomization and functional studies uncover t
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.5534/wjmh.180036 | Testosterone Is a Contraceptive and Should Not Be Used in Men Who Desi
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1016/j.aju.2017.11.011 | Systematic review of hormone replacement therapy in the infertile man
+- FAIL pdf | C | 10.21037/tau-2025-480 | Preserving spermatogenesis in testosterone deficiency: innovations in replacemen | no OA PDF resolved
+- FAIL pdf | C | 10.21037/tau-24-238 | Safety and efficacy of enclomiphene and clomiphene for hypogonadal men | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/jcm15155805 | Micro-TESE in Non-Obstructive Azoospermia: Phenotype-Guided Hormonal O
+- FAIL pdf | C | 10.3390/ph17091233 | Clomiphene Citrate Treatment as an Alternative Therapeutic Approach for Male Hyp | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | PMC12047090 | SUN-129 Adverse Events and Toxicity Associated with Selective Androgen
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.3390/medicina60020275 | Management of Male Fertility in Hypogonadal Patients on Testosterone R
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1093/rheumatology/keag084 | Advancing drug development for systemic sclerosis by prioritizing find
+- FAIL pdf | C | 10.4103/aja2024104 | Clinician's guide to the management of azoospermia induced by exogenous testoste | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1530/raf-24-0022 | From Bench to Babies - Drug Development for Male Subfertility
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.21037/tau.2016.08.15 | Off label therapies for testosterone replacement
+- FAIL pdf | B | 10.4103/jhrs.jhrs_15_17 | Ovulation Induction Using Clomiphene Citrate Using Stair - Step Regimen versus T | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.1021/acschembio.2c00076 | Cell Morphological Profiling Enables High-Throughput Screening for PRO
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.4274/jtgga.2016.0107 | Pharmacokinetic, pharmacodynamic, and clinical aspects of ovulation in
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.21037/tau.2018.04.03 | Frontiers in hormone therapy for male infertility
+- OFF-TOPIC | 08_peptides_gray/enclomiphene | 10.4103/1008-682x.143736 | Alternatives to testosterone replacement: testosterone restoration
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1007/s13402-026-01223-4 | Targeting tumor-associated G-protein coupled receptors: beyond single-
+- FAIL pdf | B | 10.1097/md.0000000000016616 | Optimal treatment for spermatogenesis in male patients with hypogonadotropic hyp | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3390/cancers16122288 | Gynotoxic Effects of Chemotherapy and Potential Protective Mechanisms
+- FAIL pdf | C | 10.1177/1557988318818280 | The Pulsatile Gonadorelin Pump Induces Earlier Spermatogenesis Than Cyclical Gon | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.4103/jhrs.jhrs_isar_ifs | Best Practice Recommendations for Infertility Management
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1111/bph.70230 | The Concise Guide to PHARMACOLOGY 2025/26: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1111/bph.16177 | The Concise Guide to PHARMACOLOGY 2023/24: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1111/bph.14748 | THE CONCISE GUIDE TO PHARMACOLOGY 2019/20: G protein-coupled receptors
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3168/jds.2015-9445 | Invited review: Recommendations for reporting intervention studies on
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3168/jds.2014-8433 | Effect of blending Jersey and Holstein-Friesian milk on Cheddar cheese
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | PMC2595998 | From contraception to cancer: a review of the therapeutic applications
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | PMC7271212 | Spezielle Arzneimitteltherapie in der Schwangerschaft
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | PMC7271219 | Spezielle Arzneimitteltherapie in der Schwangerschaft
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.4103/jhrs.jhrs_isar_ifs | Best Practice Recommendations for Infertility Management
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3389/fgeed.2023.1321243 | Germline ablation achieved via CRISPR/Cas9 targeting of <i>NANOS3</i>
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3168/jds.2014-8433 | Effect of blending Jersey and Holstein-Friesian milk on Cheddar cheese
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | PMC7167823 | Poster Presentations
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1002/mgg3.70267 | The Pathogenicity Analysis of a Hypogonadotropic Hypogonadism Patient
+- FAIL pdf | C | 10.3389/fmed.2026.1821097 | Case Report: Homozygous &lt;i&gt;KISS1R&lt;/i&gt; mutation associated with conge | no OA PDF resolved
+- FAIL pdf | C | 10.1186/s12958-026-01535-y | Management of infertility in women with hypothalamic hypogonadotropic hypogonadi | no OA PDF resolved
+- FAIL pdf | C | 10.3389/fendo.2026.1657770 | Successful ovulation and pregnancy with pulsatile GnRH pump therapy in a polycys | no OA PDF resolved
+- FAIL pdf | C | 10.1093/hropen/hoag017 | Clinical and genetic basis of congenital gonadotropin deficiency | no OA PDF resolved
+- FAIL pdf | C | 10.21037/tau-2025-199 | Therapeutic effects of a pulsatile GnRH pump on adult male patients with congeni | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3389/fendo.2025.1571467 | Retrospective analysis of children with 46,XX testicular/ovotesticular
+- FAIL pdf | C | 10.1097/md.0000000000042139 | Two cases of Kallmann syndrome caused by a novel mutation in ANOS1: A case repor | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1016/j.gmg.2025.100037 | PROKR2 mutations and SPRY4 variants with uncertain significance in a K
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3390/reports8030144 | Comprehensive Fertility Management After Pituitary Adenoma Surgery: Le
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.4274/jcrpe.galenos.2024.2024-2-18 | Frequency of Delayed Puberty in Boys with Contemporary Management of D
+- FAIL pdf | C | 10.1007/s43032-024-01637-1 | Efficacy of GnRH Pulses in Hypogonadism Secondary to Primary Empty Sella: Case R | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.12998/wjcc.v12.i19.3961 | Novel compound heterozygous mutations in the <i>hemojuvelin</i> gene i
+- FAIL pdf | C | 10.1136/bcr-2022-250444 | Adult-onset reversible idiopathic hypogonadotropic hypogonadism in male adult ca | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.1007/s00204-026-04380-5 | In vitro models for testicular steroidogenesis: current status and fut
+- FAIL pdf | C | 10.3389/fendo.2023.1248231 | Case Report: Multiple prolactinomas in a young man with Kallmann syndrome and fa | no OA PDF resolved
+- FAIL pdf | C | 10.12998/wjcc.v12.i20.4348 | Pulsatile gonadotropin-releasing hormone therapy induces spermatogenesis in pitu | no OA PDF resolved
+- OFF-TOPIC | 08_peptides_gray/gonadorelin | 10.3389/fendo.2024.1343977 | Clinical phenotype of a Kallmann syndrome patient with IL17RD and CPEB
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/fsn3.71856 | Dietary Polyphenols in Non-Communicable Chronic Diseases: Neuro-Enteri
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18142362 | Natural Products as Nutritional Supplements in Human Disease Preventio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fphys.2026.1766078 | Bioactive compounds as therapeutic modulators of metabolic syndrome: t
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18142266 | Beyond GLP-1 Agonists: Plant-Derived Bioactive Compounds as Adjunctive
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18101483 | The Gut Microbiota-Polyphenol-NLRP3 Inflammasome Axis: A Key Regulator
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/fsn3.71061 | Synergistic Effects of Bioactive Compounds on Human Adiposity Mechanis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18091470 | Dietary Polyphenols in Brain Aging: Molecular Mechanisms and Implicati
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijerph22081205 | A Bibliometric Analysis of Chrononutrition, Cardiometabolic Risk, and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms25169118 | Dietary Polyphenols and Gut Microbiota Cross-Talk: Molecular and Thera
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ph18060766 | Microbiota-Accessible Borates as Novel and Emerging Prebiotics for Hea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/foods14173141 | Functional Ingredients: From Molecule to Market-AI-Enabled Design, Bio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms241813757 | Cardiometabolic Risk: Characteristics of the Intestinal Microbiome and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/antiox14060725 | Functional and Therapeutic Roles of Plant-Derived Antioxidants in Type
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fcvm.2025.1514911 | Medicinal plants administered to control hypertension in Ethiopia: eth
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1021/acs.jafc.2c04519 | Chardonnay Marc as a New Model for Upcycled Co-products in the Food In
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.4103/nrr.nrr-d-24-01523 | Lipid metabolism, microglia, and stroke
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu13020429 | Mediterranean-Type Dietary Pattern and Physical Activity: The Winning
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu12051488 | Effect of Hesperidin on Cardiovascular Disease Risk Factors: The Role
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu8010017 | Polyphenols and Glycemic Control
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | PMC9045588 | Section 1: 5th IUPHAR WCP-NP, 2019 INDIA
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | PMC9243943 | Abstract
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1159/000363668 | Abstracts of the 21th European Congress on Obesity (ECO2014), May 28-3
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | PMC4669991 | UEG Week 2015 Poster Presentations
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/fsn3.71856 | Dietary Polyphenols in Non-Communicable Chronic Diseases: Neuro-Enteri
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18152511 | Natural Bioactive Compounds Targeting Key Hallmarks of Aging: Function
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1894055 | Plant-derived bioactives in depression-related and antidepressant-asso
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1186/s12906-026-05301-w | Traditional diyabath (fermented cooked rice) as a pre-breakfast meal v
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1849842 | Dietary polyphenols in pediatric obesity and cardiometabolic risk: mec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1795350 | Anti-inflammatory diets and mental health: a scoping review of randomi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s00394-026-03974-0 | A randomised, double-blind, placebo-controlled trial to assess the pos
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18172870 | Targeting Ferroptosis, Pyroptosis, and NRF2 Signaling with Dietary Pol
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18142266 | Beyond GLP-1 Agonists: Plant-Derived Bioactive Compounds as Adjunctive
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1111/bcpt.70290 | Low-Dose Fisetin Supplementation and Its Association With Chronic Infl
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18121843 | Effect of Inulin-Type Fructans on Body Composition, Carbohydrate Metab
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/alz.71772 | MIND diet, cerebrovascular health, and cognition among community-dwell
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms27083634 | Decoding the Longevity Networks of the Mediterranean Diet: Systems Bio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1186/s12905-026-04454-7 | The connection between nutrition education, behavior, and body composi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/life16060972 | Sweet Saliva Trial: Exploratory Evaluation of Salivary Microbiome Resp
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18040699 | Nutritional Management of Irritable Bowel Syndrome
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1918360 | Dietary bioactive compounds targeting insulin resistance: mechanisms a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s11883-025-01335-6 | Dietary Management of Atherogenic Dyslipidemia
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.5498/wjp.v15.i9.107828 | Polyphenols: A top-down approach to nutrition and depression
+- FAIL pdf | C | 10.3390/nu18091320 | The Mediterranean Diet and Cardiovascular Protection: Biochemical Mechanisms wit | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms27104343 | Natural Molecules for Brain Health and Resilience
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fmolb.2025.1607330 | Phytonutrients and their neuroprotective role in brain disorders
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/molecules31162810 | Quercetin: Mechanisms of Action, Clinical Evidence in Metabolic Syndro
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1849842 | Dietary polyphenols in pediatric obesity and cardiometabolic risk: mec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1016/j.advnut.2026.100611 | Flavonoids
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2025.1597788 | Beyond seasoning nutrients bioactive ingredients and healthcare effect
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1136/bmjph-2025-003508 | Do tax waivers reduce prices and increase imports of healthy foods? In
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s44446-026-00111-0 | Therapeutic potential of phytochemical compounds in cardiovascular dis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/foods15142561 | Dietary and Supplementation Strategies for Modulating Gut Microbiota:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1894055 | Plant-derived bioactives in depression-related and antidepressant-asso
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s13679-026-00738-z | Cross-Sector Policies for Achieving Equitable Obesity Prevention and F
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18152511 | Natural Bioactive Compounds Targeting Key Hallmarks of Aging: Function
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1177/18911803261435887 | The Effects of Land Management Policies on the Environment and People
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3892/br.2026.2194 | Association between polyphenols and inhalation-induced oxidative stres
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1186/s12889-026-26476-4 | Effect of postoperative coffee consumption on gastrointestinal functio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.7762/cnr.2026.0016 | Short-chain fatty acid-producing psychobiotics in mood disorders: mech
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/fsn3.71565 | Multidimensional Perspective on the Quality of Green Onion: Between th
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms27083634 | Decoding the Longevity Networks of the Mediterranean Diet: Systems Bio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/metabo16060410 | Exploring the Health Effects of Phytoestrogens
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/microorganisms14081763 | Probiotic Yeasts and Bacteria: A Complementary Approach to Gut Health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.4103/jhrs.jhrs_99_25 | Exploring the Association between Arsenic Exposure and Sperm Quality:
+- FAIL pdf | C | 10.3390/nu17152569 | Exploring the Association Between Multidimensional Dietary Patterns and Non-Scar | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1038/s41591-026-04229-5 | LLM-assisted systematic review of large language models in clinical me
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/clt2.70105 | Feeding the Skin Barrier: The Impact of Macro- and Micronutrients on S
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms27104343 | Natural Molecules for Brain Health and Resilience
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1795350 | Anti-inflammatory diets and mental health: a scoping review of randomi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/molecules31162914 | Quercetin as a Multifunctional Flavonol: Molecular Insights and Therap
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18142362 | Natural Products as Nutritional Supplements in Human Disease Preventio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18142396 | Gut Microbial Metabotypes Shape Polyphenol Bioactivity: Toward Precisi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s00394-026-03974-0 | A randomised, double-blind, placebo-controlled trial to assess the pos
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms27052293 | Functional Foods as Vehicles for Bioactive Compounds: Chemical and Nut
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/antiox15030322 | Polyphenols as Adjuvant Treatment for Heart Failure with Preserved Eje
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18101483 | The Gut Microbiota-Polyphenol-NLRP3 Inflammasome Axis: A Key Regulator
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/nu18091470 | Dietary Polyphenols in Brain Aging: Molecular Mechanisms and Implicati
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1002/mnfr.70271 | Metabolomic Profiling and Diet Quality Scoring in a Randomized Crossov
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/molecules31020345 | Probiotic and Bioactive Compounds in Foods: From Antioxidant Propertie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms27031404 | Dietary Polyphenols (Flavonoids) Derived from Plants for Use in Therap
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/cancers18111693 | Gut Microbiota in Colorectal Cancer: Mechanistic Insights, Clinical St
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s13205-026-04776-1 | Oligosaccharide prebiotics in functional foods and therapeutics: innov
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/antiox15010010 | Antioxidants and Exercise Performance: Focus on Mediterranean Diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s00394-026-04011-w | Exploring the associations between lifestyle and dietary patterns with
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3389/fnut.2026.1767453 | Polyphenol metabolites in fermented foods: biotransformation, bioavail
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/biomedicines14051073 | Neuroimmune Regulation of Microvascular Inflammation: The Heart-Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ijms262211074 | The Functional Role of Polyphenols Across the Human Lifespan
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/ph18060766 | Microbiota-Accessible Borates as Novel and Emerging Prebiotics for Hea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s12602-025-10796-9 | Natural and Biological Products Therapeutic Potential in Restoring Gut
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1007/s40520-025-03199-x | Mediterranean diet and Cantonese cuisine for human health: report from
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.1016/j.vas.2026.100569 | From rumen to milk: Dietary polyphenols in dairy cows-A critical revie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/onions | 10.3390/molecules31050756 | Nutritional Strategies and Aging: Current Evidence and Future Directio
+- FAIL pdf | C | 10.3390/nu18071093 | A Narrative Review on Pseudocereals and Cardiometabolic Health: Biological Mecha | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/quinoa | 10.3390/foods15142483 | Biotechnological Modulation of Legumes via Fermentation: Impacts on Nu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/quinoa | 10.3389/fnut.2026.1884184 | Millet: a functional powerhouse against chronic lifestyle disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/quinoa | 10.3389/fnut.2026.1902349 | Rethinking the hepatoprotective potential of vegetarian diets in dysfu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/quinoa | 10.3390/nu18091375 | Maternal Nutrition During Pregnancy and Fetal Outcome, Short- and Long
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu18081281 | A Descriptive Analysis of Mediterranean Diet Meal Plans Using the Diet
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.7759/cureus.37131 | An Analysis of the Nutritional Adequacy of Mass-Marketed Vegan Recipes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17020314 | Improving Cooking Skills, Lifestyle Behaviors, and Clinical Outcomes f
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | PMC10917465 | Enhancing Pain Management for Open Inguinal Hernia Repair With a Novel
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17111854 | A Culinary-Based Intensive Lifestyle Program for Patients with Obesity
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1093/ajcn/nqac154 | Effect of a ketogenic diet versus Mediterranean diet on glycated hemog
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/toxins9090276 | Report from the 1st MYCOKEY International Conference Global Mycotoxin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.15167/2421-4248/jpmh2019.60.3s1 | Atti del 52° Congresso Nazionale: Società Italiana di Igiene, Medicina
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1016/j.obpill.2026.100264 | Population trends in nutritional status and socioeconomic divergence i
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17162687 | Associations of the MIND Diet with Human Health Outcomes: A Scoping Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1136/bmjopen-2023-082725 | Aortic stiffness after living kidney donation: a systematic review and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1155/jobe/8472196 | Association of Genetic, Environmental, and Nutritional Factors With Me
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/foods13213436 | Hybrid Meat Sausages with Cereal Ingredients: A Systematic Review and
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1212/wnl.0000000000214655 | Contrast-Associated Acute Kidney Injury After Thrombectomy for Ischemi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/medicina59071184 | Superfoods for Type 2 Diabetes: A Narrative Review and Proposal for Ne
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu17030470 | From Evidence to Practice: A Narrative Framework for Integrating the M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.7759/cureus.37131 | An Analysis of the Nutritional Adequacy of Mass-Marketed Vegan Recipes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/ijerph191610333 | What Drives Abdominal Obesity in Peru? A Multilevel Analysis Approach
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1590/1980-57642021dn15-010001 | Clinical characteristics of older patients with COVID-19: a systematic
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.15167/2421-4248/jpmh2026.66.1s1 | Atti 57° Congresso Nazionale Società Italiana Igiene, Medicina Prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3389/fphar.2020.583422 | Postoperative Ileus and Postoperative Gastrointestinal Tract Dysfuncti
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.1186/s13012-021-01110-6 | Proceedings from the 13th Annual Conference on the Science of Dissemin
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.15167/2421-4248/jpmh2019.60.3s1 | Atti del 52° Congresso Nazionale: Società Italiana di Igiene, Medicina
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/farro | 10.3390/nu16111738 | Ultra-Processed Foods: A Narrative Review of the Impact on the Human G
+- FAIL pdf | B | 10.3390/nu18050875 | Almond Consumption Improves Inflammatory Profiles Independent of Weight Change:  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/almonds | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/almonds | 10.1002/mnfr.70297 | Benefits of Nutrients and Phytonutrients in Nuts and Legumes on Platel
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18132072 | The Role of Polyunsaturated Fatty Acids (PUFAs) in the Primary Prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1093/ckj/sfag168 | Fish oil supplements in patients with chronic kidney disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.jacadv.2026.102591 | A Clinician's Guide for Trending Cardiovascular Nutritional Controvers
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18101600 | Toward a Targeted Nutritional Strategy for Restoring PUFA Balance: Soc
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1002/fsn3.70181 | Bioactive Compounds in Seafood: Implications for Health and Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18091375 | Maternal Nutrition During Pregnancy and Fetal Outcome, Short- and Long
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/life14101315 | Omega-3 and Sports: Focus on Inflammation
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/brainsci15060641 | Sleep Deprivation and Alzheimer's Disease: A Review of the Bidirection
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu16152453 | Functional Lipids and Cardiovascular Disease Reduction: A Concise Revi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18020231 | A Conceptual Digital Health Framework for Longevity Optimization: Infl
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.29219/fnr.v68.10485 | Fish - a scoping review for Nordic Nutrition Recommendations 2023
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu16234051 | Effects of Increasing Farmed Salmon Intake to the Recommended Fish-Int
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s11912-025-01641-x | The Impact of Diet and Nutrition on Prostate Cancer - Food for Thought
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/ijerph20031683 | Promising Sources of Plant-Derived Polyunsaturated Fatty Acids: A Narr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s40279-021-01509-7 | Fish Oil for Healthy Aging: Potential Application to Master Athletes
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu13051422 | Seafood Intake as a Method of Non-Communicable Diseases (NCD) Preventi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/life13051120 | Nutritional Factors: Benefits in Glaucoma and Ophthalmologic Pathologi
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1186/s12263-019-0656-4 | Biomarkers of meat and seafood intake: an extensive literature review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s11936-016-0487-1 | Omega-3 Fatty Acids and Cardiovascular Disease: Are There Benefits?
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1093/rheumatology/key011 | What is the evidence for a role for diet and nutrition in osteoarthrit
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1289/ehp.1003396 | Risks and benefits of consumption of Great Lakes fish
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s12603-012-0431-3 | Current evidence for the clinical use of long-chain polyunsaturated n-
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1155/2012/729670 | Omega-3 Fatty acids and vitamin d in cardiology
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1155/2012/303456 | The role of long-chained marine N-3 polyunsaturated Fatty acids in car
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18162594 | Food-Derived Omega-3 Fatty Acids and Cognitive Aging: Integrating Nutr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18152538 | Omega-3 Polyunsaturated Fatty Acid Formulations in Cardiovascular Prev
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/metabo16070485 | Content of Vitamin D&lt;sub&gt;2&lt;/sub&gt; in Alternative Biological
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.jacadv.2026.102591 | A Clinician's Guide for Trending Cardiovascular Nutritional Controvers
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/jcm15166390 | The Gut-Brain Axis in Fetal Alcohol Spectrum Disorder (FASD): Why the
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1002/edm2.70228 | The Impact of Macronutrient Ordering on Postprandial Glycaemic Control
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18132072 | The Role of Polyunsaturated Fatty Acids (PUFAs) in the Primary Prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s13668-026-00752-6 | The Role of Gut Microbiota in Postmenopausal Women: Implications for L
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1159/000551530 | Inflammation and Chronic Disease: The Mediterranean Diet in Precision
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/life16060972 | Sweet Saliva Trial: Exploratory Evaluation of Salivary Microbiome Resp
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2026.1742942 | Docosahexaenoic acid intake and health in adults and older adults: a n
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fimmu.2026.1798089 | Anti-inflammatory diets for prediabetes remission: a mechanistic and p
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/jcm15145542 | A Link Between Dietary Modifications Focused on Unsaturated Fatty Acid
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18111669 | Effect of Omega-3 Fatty Acid Intake on Circulating Biomarkers of Atria
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1093/nutrit/nuaf089 | Omega-3 Polyunsaturated Fatty Acids and Adipose Tissue Inflammation in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2025.1677197 | Nutritional strategies against dementia in rural populations
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/ph19030399 | Efficacy and Safety of Herbal Supplements with Anxiolytic, Antidepress
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18091318 | From Plate to Mind: Scientific Perspectives on Foods That May Influenc
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/md24060197 | Marine Lipids and Alzheimer's Disease: Biochemistry, Bioaccessibility/
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu17223506 | Dietary Bioactive Compounds and Their Role in Allergy Prevention: A Co
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2026.1844290 | Marine-derived PUFAs and peptides for aging-related memory deficits: p
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18172917 | The Ketogenic Diet as Adjunctive Strategy in Cancer Treatment-Therapeu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.5498/wjp.v15.i9.107828 | Polyphenols: A top-down approach to nutrition and depression
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18132072 | The Role of Polyunsaturated Fatty Acids (PUFAs) in the Primary Prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.fawpar.2026.e00344 | Methods for the detection of anisakid material in different food matri
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/jcm15145542 | A Link Between Dietary Modifications Focused on Unsaturated Fatty Acid
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1021/acsptsci.6c00186 | Fish Collagen Hydrolysates in Wound Healing: A Patent Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/foods15152590 | Current Analytical Methods and Recent Advances in Histamine Analysis i
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18060966 | Accuracy of AI-Based Nutrient Estimation from Standardized Hospital Me
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18162612 | Estimated Dose-Dependent Associations Between Dietary Intake and Stres
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | PMC13550812 | Omega Fatty Acids in Hair Loss Disorders: A Scoping Review of Preclini
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1159/000551530 | Inflammation and Chronic Disease: The Mediterranean Diet in Precision
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.jacadv.2026.102591 | A Clinician's Guide for Trending Cardiovascular Nutritional Controvers
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18172917 | The Ketogenic Diet as Adjunctive Strategy in Cancer Treatment-Therapeu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18152538 | Omega-3 Polyunsaturated Fatty Acid Formulations in Cardiovascular Prev
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18091318 | From Plate to Mind: Scientific Perspectives on Foods That May Influenc
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s13668-026-00752-6 | The Role of Gut Microbiota in Postmenopausal Women: Implications for L
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18162594 | Food-Derived Omega-3 Fatty Acids and Cognitive Aging: Integrating Nutr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2026.1799601 | Regulation of inflammation by omega-3 and omega-6 fatty acids: a meta-
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.cdnut.2026.109439 | Effectiveness of ω-3 Supplementation on Biochemical, Clinical, and Inf
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s13668-026-00747-3 | Nutritional Approaches to Managing Brain Fog: Insights Into Neuroinfla
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1017/awf.2023.30 | Humane stunning or stun/killing in the slaughter of wild-caught finfis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s00204-026-04469-x | Aging in a highly polluted world: challenges and solutions to prevent
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s40618-026-02852-0 | The role of nutrition on thyroid health and disease: myths and facts
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18081229 | Immunonutrition for the Management of Postsurgery GI Cancer Patients
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18162594 | Food-Derived Omega-3 Fatty Acids and Cognitive Aging: Integrating Nutr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18142362 | Natural Products as Nutritional Supplements in Human Disease Preventio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s13668-026-00752-6 | The Role of Gut Microbiota in Postmenopausal Women: Implications for L
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/ijms27052293 | Functional Foods as Vehicles for Bioactive Compounds: Chemical and Nut
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18172917 | The Ketogenic Diet as Adjunctive Strategy in Cancer Treatment-Therapeu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/md24030116 | Marine Bioactive Compounds from Functional Seafoods: Pharmacological M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2026.1818219 | From nutrient-based to food-based assessment: the evolution of inflamm
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu18152472 | Potential Relevance of Amazonian Diet Components in Parkinson's Diseas
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1007/s00210-026-05015-3 | Decoding the mechanistic basis of liver-muscle communication in health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/foods14173141 | Functional Ingredients: From Molecule to Market-AI-Enabled Design, Bio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/ph18060766 | Microbiota-Accessible Borates as Novel and Emerging Prebiotics for Hea
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1186/s12986-025-01044-6 | Omega-3 fatty acids and chemotherapy-induced toxicities: mechanisms an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2023.1215358 | Nordic diet and its benefits in neurological function: a systematic re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.fochx.2025.103360 | Emerging analytical techniques for lipid profiling in food products: i
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/antiox13080996 | Antioxidant Functions of Vitamin D and CYP11A1-Derived Vitamin D, Tach
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1136/bmj.m2269 | Can nutrition support healthy cognitive ageing and reduce dementia ris
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.1016/j.bbrep.2023.101571 | A review on linking stress, depression, and insulin resistance via low
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/foods12091743 | A Review of Ketogenic Dietary Therapies for Epilepsy and Neurological
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnut.2022.1002574 | The nutritional functions of dietary sphingomyelin and its application
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu15030640 | New Advances in Metabolic Syndrome, from Prevention to Treatment: The
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3390/nu13051677 | Natural Molecules in the Management of Polycystic Ovary Syndrome (PCOS
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.4103/indianjpsychiatry.indianjpsychiatry_39_24 | Lifestyle modification for mental health and well-being
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.2903/j.efsa.2024.8497 | Update of the risk assessment of polybrominated diphenyl ethers (PBDEs
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/mackerel | 10.3389/fnins.2021.747229 | Quality of Life and a Surveillant Endocannabinoid System
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fpls.2026.1898609 | Agronomic management enhances nutritional quality and functional food
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu14204219 | Vitamin K Contribution to DNA Damage-Advantage or Disadvantage? A Huma
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC7164006 | Poster Sessions
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC7087532 | 26th Annual Meeting of the Swiss Societies for Experimental Biology. B
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu17233675 | Health-Promoting Potential of the Mediterranean Diet and Challenges fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ph19081268 | Pyrroloquinoline Quinone and NAD&lt;sup&gt;+&lt;/sup&gt; Metabolism in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/foods14193355 | Rethinking Nutrition in Chronic Kidney Disease: Plant Foods, Bioactive
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.cdnut.2026.107676 | Evaluation of Organically Versus Synthetically Derived Multivitamin an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ijms27104343 | Natural Molecules for Brain Health and Resilience
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ijms27104561 | Flavonoids as Modulators of Neuroinflammation in Affective Disorders:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fmolb.2025.1607330 | Phytonutrients and their neuroprotective role in brain disorders
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fphar.2026.1768006 | Systems-level actions of luteolin in female reproductive disorders: fr
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu17132247 | Were Our Grandmothers Right? Soup as Medicine-A Systematic Review of P
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.5498/wjp.v15.i9.107828 | Polyphenols: A top-down approach to nutrition and depression
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1038/s41522-025-00817-4 | Baseline intestinal microbiota composition influences response to a re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu18060995 | Vitamins as Modulators of Neurodegenerative Disease Pathways: Mechanis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu18172882 | Bioavailability of Nutrients from Animal-Derived Foods Versus Other So
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu18050863 | Mechanistic Modulation of Autophagy by Bioactive Natural Products: Imp
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu17060956 | Clinical Insights into Non-Alcoholic Fatty Liver Disease and the Thera
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/metabo15080528 | Dietary Strategies in the Prevention of MASLD: A Comprehensive Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/antiox15030319 | Next-Generation Dietary Antioxidants in Women's Reproductive Health: M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu17040601 | Impact of Polyphenol-Rich Nutraceuticals on Cognitive Function and Neu
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1007/s40520-025-03199-x | Mediterranean diet and Cantonese cuisine for human health: report from
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fnut.2025.1647740 | Gut microbiome-mediated health effects of fiber and polyphenol-rich di
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.advnut.2026.100611 | Flavonoids
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fnut.2026.1776512 | Harnessing diet to modulate inflammation and symptom progression in en
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/medicina62020408 | Global Burden of &lt;i&gt;Trichostrongylus&lt;/i&gt; Infections in Hum
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf062 | Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Re
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.7759/cureus.106966 | The Effect of Nutrition on Dry Age-Related Macular Degeneration: A Sys
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu17233675 | Health-Promoting Potential of the Mediterranean Diet and Challenges fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ijms27104343 | Natural Molecules for Brain Health and Resilience
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/metabo16060410 | Exploring the Health Effects of Phytoestrogens
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ph19040650 | An Overview of the Presence of Cephalosporin Antibiotics in Aquatic En
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC13580039 | Flavonoids: biological activities, nutritional and immunological aspec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.7759/cureus.108032 | A to Z of Health: An Evidence-Based Narrative Review of Multivitamin-M
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.fawpar.2026.e00341 | From conventional to biosensor-based detection of &lt;i&gt;Cryptospori
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu17081296 | The Impact of Dietary Intake of Furocoumarins and Furocoumarin-Rich Fo
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1136/bmjoq-2024-003100 | Effectiveness of motivational messages on nurses' professional quality
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.fochx.2026.103673 | Spice essential oils as natural preservatives in processed sausages: a
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ani16010041 | Systematic Review and Meta-Analysis of Quality Claims Associated with
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/biology15080625 | Redox Reprogramming of the Diseased Liver by Dietary Flavonoids: From
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1007/s13668-026-00747-3 | Nutritional Approaches to Managing Brain Fog: Insights Into Neuroinfla
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/polym17192705 | Plant-Based Scaffolds for Tissue Engineering: A Review
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1590/s1984-29612024040 | Parasitic contamination in vegetables for human consumption: a systema
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fnut.2026.1747029 | Cold pressed oils: a systematic review on physicochemical properties,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1186/s13099-024-00645-5 | Toxoplasma Gondii in humans, animals and in the environment in Morocco
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ijms27104561 | Flavonoids as Modulators of Neuroinflammation in Affective Disorders:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.4103/jmh.jmh_302_25 | Clinical Practice Guidelines for Menopause: An Executive Summary and R
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu18142362 | Natural Products as Nutritional Supplements in Human Disease Preventio
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf267 | Cardiometabolic and Microbiome Effects of Spices and Herbs
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/antiox15030322 | Polyphenols as Adjuvant Treatment for Heart Failure with Preserved Eje
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ijms27031404 | Dietary Polyphenols (Flavonoids) Derived from Plants for Use in Therap
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/molecules31020345 | Probiotic and Bioactive Compounds in Foods: From Antioxidant Propertie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fimmu.2025.1653378 | Dietary polyphenols and human health: sources, biological activities,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fpls.2026.1898609 | Agronomic management enhances nutritional quality and functional food
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fnut.2025.1679381 | Synergistic effects of polyphenols and exercise on obesity: targeting
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fnut.2026.1747029 | Cold pressed oils: a systematic review on physicochemical properties,
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1007/s40520-025-03199-x | Mediterranean diet and Cantonese cuisine for human health: report from
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.vas.2026.100569 | From rumen to milk: Dietary polyphenols in dairy cows-A critical revie
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fnut.2025.1531327 | Effect of dietary polyphenols along with exercise on hepatic transcrip
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.4103/jmh.jmh_302_25 | Clinical Practice Guidelines for Menopause: An Executive Summary and R
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/foods13111750 | Nutritional Barriers to the Adherence to the Mediterranean Diet in Non
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1242/dmm.052038 | The effects of developmental cadmium exposure on health and disease
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/biom14030338 | Bioactive Compounds from Pigmented Corn (&lt;i&gt;Zea mays&lt;/i&gt; L
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.heliyon.2024.e39996 | Mechanistic insights and therapeutic potential of astilbin and apigeni
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/ijms23158124 | The Impact of Plant Phytochemicals on the Gut Microbiota of Humans for
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1155/2019/2125070 | A Review of the Science of Colorful, Plant-Based Food and Practical St
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu13010273 | Polyphenols and Human Health: The Role of Bioavailability
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC5913041 | SCIENTIFIC ABSTRACTS
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC7104455 | Scientific Abstracts
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu18172837 | Medicine-Food Homology Plants and Bioactive Compounds in Polyendocrine
+- FAIL pdf | C | 10.3390/foods15091521 | A Holistic Approach to Enhancing Bakery Products' Quality and Health Benefits wi | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu18132206 | KetoFLEX 12/3 Diet and Cognitive Health: A Precision-Nutrition Perspec
+- FAIL pdf | A | 10.1177/2515690x261478846 | Does &lt;i&gt;Crocus sativus&lt;/i&gt; (Saffron) Have an Influence or Effect on  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1002/fsn3.71575 | Obesity and Natural Products: Mechanisms, Therapeutic Potential, and F
+- FAIL pdf | A | 10.1002/hsr2.72212 | Adverse Events of Saffron (&lt;i&gt;Crocus sativus&lt;/i&gt; L.): Systematic Rev | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1186/s12872-026-05557-7 | Sustainable diets and functional foods for the prevention of cardio-me
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu17132247 | Were Our Grandmothers Right? Soup as Medicine-A Systematic Review of P
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu18081281 | A Descriptive Analysis of Mediterranean Diet Meal Plans Using the Diet
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fnut.2026.1752309 | From diet to disease modulation: the multi-targeted effects of medicin
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1080/13880209.2026.2693375 | Rarely reported cases of hepatotoxicity associated with turmeric- and
+- FAIL pdf | C | 10.3390/plants15111619 | Unlocking the Power of Plant-Derived Natural Products: Therapeutic Benefits for  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fnut.2025.1629896 | Genetic factors may load the gun, but environmental factors pull the t
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fmolb.2025.1607330 | Phytonutrients and their neuroprotective role in brain disorders
+- FAIL pdf | C | 10.1002/fsn3.70721 | Functional, Nutraceutical and Health Endorsing Perspectives of Saffron | no OA PDF resolved
+- FAIL pdf | C | 10.1002/vms3.70321 | Recycling Agricultural Waste: Sustainable Solutions for Enhancing Livestock Nutr | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fphar.2025.1661035 | Therapeutic efficacy of botanicals in psychological disorders in menop
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1186/s13020-025-01115-z | Curcuma Longa (turmeric): from traditional applications to modern plan
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1186/s12967-024-05095-w | Underrated aspects of a true Mediterranean diet: understanding traditi
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu17071214 | Mitochondria at the Crossroads: Linking the Mediterranean Diet to Meta
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuaf176 | Spices Beyond Antioxidants: From the Gut to the Brain
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC13582323 | Targeting pancreatic cancer with natural compounds: molecular mechanis
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | PMC12556356 | Culinary spices as functional feed additives in aquaculture: Growth, i
+- FAIL pdf | C | 10.3390/molecules29030608 | Exploring the Therapeutic Efficacy of Parsley (<i>Petroselinum crispum</i> Mill. | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/molecules31081353 | Probiotics and Fermented Foods in Human Nutrition
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu14091981 | Associations between Frequency of Culinary Herb Use and Gut Microbiota
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.cpt.2024.07.003 | Spices and culinary herbs for the prevention and treatment of breast c
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fphar.2024.1432221 | Geo-authentic Tibetan medicine: a traditional pharmacological resource
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1002/fsn3.70029 | Investigating Coriander Leaf Phenolics With HPLC-UV and Their Role in
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.1016/j.heliyon.2022.e12698 | The role of dietary antioxidants in type 2 diabetes and neurodegenerat
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3389/fcimb.2025.1605301 | Innovative applications of medicinal mushrooms in functional foods and
+- FAIL pdf | C | 10.3390/nu12092727 | Intake of Dietary Salicylates from Herbs and Spices among Adult Polish Omnivores | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/foods13060929 | Coriander (<i>Coriandrum sativum</i> L.) from Alentejo (South Portugal
+- FAIL pdf | C | 10.3390/antiox11061185 | Dietary Parsley Seed Mitigates Methomyl-Induced Impaired Growth Performance, Hem | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/antiox10060868 | Spices, Condiments, Extra Virgin Olive Oil and Aromas as Not Only Flav
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/nu13093051 | Phenol Biological Metabolites as Food Intake Biomarkers, a Pending Sig
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/molecules27196417 | Polyphenol-Rich Ginger (<i>Zingiber officinale</i>) for Iron Deficienc
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/parsley | 10.3390/molecules28196881 | Essential Components from Plant Source Oils: A Review on Extraction, D
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1093/nutrit/nuag022 | Phytochemicals From Herbs and Spices: Their Absorption, Metabolism, an
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | PMC12556356 | Culinary spices as functional feed additives in aquaculture: Growth, i
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/foods13060929 | Coriander (<i>Coriandrum sativum</i> L.) from Alentejo (South Portugal
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu14091981 | Associations between Frequency of Culinary Herb Use and Gut Microbiota
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu12092727 | Intake of Dietary Salicylates from Herbs and Spices among Adult Polish
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2020.01160 | Traditional Herbal Medicine in Mesoamerica: Toward Its Evidence Base f
+- FAIL pdf | C | 10.3390/foods15010028 | Eastern European Fermented Foods: Nutritional Value, Functional Potential, and C | no OA PDF resolved
+- FAIL pdf | C | 10.3390/molecules29030608 | Exploring the Therapeutic Efficacy of Parsley (<i>Petroselinum crispum</i> Mill. | no OA PDF resolved
+- FAIL pdf | C | 10.3390/ijerph192315531 | Root Vegetables-Composition, Health Effects, and Contaminants | no OA PDF resolved
+- FAIL pdf | C | PMC9471381 | ICIMH 2022 Abstracts | no OA PDF resolved
+- FAIL pdf | C | PMC7290253 | ICIMH 2020 Abstracts | no OA PDF resolved
+- FAIL pdf | C | 10.1155/2013/958567 | Anti-inflammatory activity of bioaccessible fraction from Eryngium foetidum leav | no OA PDF resolved
+- FAIL pdf | C | 10.3168/jds.2015-9445 | Invited review: Recommendations for reporting intervention studies on reproducti | no OA PDF resolved
+- FAIL pdf | C | PMC7159487 | Poster Sessions | no OA PDF resolved
+- FAIL pdf | C | PMC7163973 | Poster Presentations | no OA PDF resolved
+- FAIL pdf | C | PMC7148975 | Cumulative general subject index volumes 1-30 | no OA PDF resolved
+- FAIL pdf | C | 10.2215/cjn.0000000859 | Dietary Advanced Glycation End Products and Cardiovascular-Kidney-Metabolic Comp | no OA PDF resolved
+- FAIL pdf | B | 10.1016/j.clnesp.2018.12.082 | Consumption of yacon flour improves body composition and intestinal function in  | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu18172837 | Medicine-Food Homology Plants and Bioactive Compounds in Polyendocrine
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu18071018 | The Use of Spice Herbs May Reduce Chronic Inflammation and Improve the
+- FAIL pdf | C | 10.3390/foods15091521 | A Holistic Approach to Enhancing Bakery Products' Quality and Health Benefits wi | no OA PDF resolved
+- FAIL pdf | A | 10.1002/hsr2.72212 | Adverse Events of Saffron (&lt;i&gt;Crocus sativus&lt;/i&gt; L.): Systematic Rev | no OA PDF resolved
+- FAIL pdf | C | 10.1177/2515690x261455162 | Saffron and Pregnancy: Cultural Practices, Beliefs, and Safety Evidence: An Inte | no OA PDF resolved
+- FAIL pdf | C | 10.1002/fsn3.70721 | Functional, Nutraceutical and Health Endorsing Perspectives of Saffron | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fnut.2026.1752309 | From diet to disease modulation: the multi-targeted effects of medicin
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1080/13880209.2026.2693375 | Rarely reported cases of hepatotoxicity associated with turmeric- and
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fmolb.2025.1607330 | Phytonutrients and their neuroprotective role in brain disorders
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.1371/journal.pone.0314448 | Associations between spice or pepper (Capsicum annuum) consumption and
+- FAIL pdf | C | 10.1002/vms3.70321 | Recycling Agricultural Waste: Sustainable Solutions for Enhancing Livestock Nutr | no OA PDF resolved
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu15234867 | A Scoping Review of the Clinical Evidence for the Health Benefits of C
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fphar.2025.1661035 | Therapeutic efficacy of botanicals in psychological disorders in menop
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu14010175 | The Role of Bioactive Compounds from Dietary Spices in the Management
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.22038/ijbms.2025.84150.18198 | Assessing the efficacy of herbal supplements for managing obesity: A c
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fphar.2023.1182937 | Natural products as novel anti-obesity agents: insights into mechanism
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu16152414 | Curcumin Reduces Depression in Obese Patients with Type 2 Diabetes: A
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/nu16070934 | Herbal Medicines for the Treatment of Active Ulcerative Colitis: A Sys
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3390/life13040999 | Phytochemicals: A Promising Alternative for the Prevention of Alzheime
+- OFF-TOPIC | 01_food_inflammation/saffron_food | 10.3389/fnut.2022.924192 | Chemoprevention effect of the Mediterranean diet on colorectal cancer:
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | PMC12556356 | Culinary spices as functional feed additives in aquaculture: Growth, i
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1515/med-2025-1183 | Plant polyphenols, terpenes, and terpenoids in oral health
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/foods13060929 | Coriander (<i>Coriandrum sativum</i> L.) from Alentejo (South Portugal
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu12092727 | Intake of Dietary Salicylates from Herbs and Spices among Adult Polish
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3390/nu14091981 | Associations between Frequency of Culinary Herb Use and Gut Microbiota
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.1007/s13659-020-00281-x | Plants Used as Antihypertensive
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2020.01160 | Traditional Herbal Medicine in Mesoamerica: Toward Its Evidence Base f
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.4103/0975-7406.84462 | Pharmacological screening of Coriandrum sativum Linn. for hepatoprotec
+- OFF-TOPIC | 01_food_inflammation/whole_food_library/cilantro | 10.3389/fphar.2015.00323 | Anti-hypertensive Herbs and their Mechanisms of Action: Part I

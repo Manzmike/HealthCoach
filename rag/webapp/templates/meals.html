@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Meals — HealthCoach{% endblock %}
+{% block content %}
+<header class="page-header">
+  <div><p class="eyebrow">Weekly food rhythm</p><h1>Meals</h1>
+  <p class="lede">Add between one and seven meal slots, then analyze the full rhythm alongside your Food selections.</p></div>
+</header>
+{% include "_week_toolbar.html" %}
+
+{% if editable %}
+<form method="post" action="{{ url_for('meals') }}" class="panel" id="mealForm">
+  <input type="hidden" name="week_start" value="{{ week_start }}">
+  <div class="field" style="max-width: 240px;"><label for="mealCount">Number of meals</label><select id="mealCount" name="meal_count">
+    {% for count in range(1, 8) %}<option value="{{ count }}"{% if week.meals|length == count %} selected{% endif %}>{{ count }} meal{% if count != 1 %}s{% endif %}</option>{% endfor %}
+  </select></div>
+  <div class="meal-list">
+    {% for index in range(7) %}
+      {% set meal = week.meals[index] if index < week.meals|length else {"name": "", "notes": ""} %}
+      <fieldset class="meal-row" data-meal-index="{{ index }}"><legend>Meal {{ index + 1 }}</legend>
+        <div class="form-grid"><div class="field"><label for="mealName{{ index }}">Name</label><input id="mealName{{ index }}" name="meal_name_{{ index }}" value="{{ meal.name }}" placeholder="e.g. Breakfast"></div>
+        <div class="field"><label for="mealNotes{{ index }}">What is included?</label><input id="mealNotes{{ index }}" name="meal_notes_{{ index }}" value="{{ meal.notes }}" placeholder="e.g. eggs, fruit, oats"></div></div>
+      </fieldset>
+    {% endfor %}
+  </div>
+  <button type="submit">Save meal plan</button>
+</form>
+{% endif %}
+
+<div class="panel">
+  <h2 class="section-title">Food catalog context</h2>
+  {% if selected_foods %}<p>Selected foods for the current Food week: <strong>{{ selected_foods|join(", ") }}</strong></p>{% else %}<p class="muted">No Food catalog selections are attached to this week yet. You can still analyze the meal slots.</p>{% endif %}
+  <form method="post" action="{{ url_for('meals_analyze') }}"><input type="hidden" name="week_start" value="{{ week_start }}"><button type="submit">Analyze meals and foods</button></form>
+</div>
+
+{% if analysis_stale %}<div class="notice" role="status">The meal plan changed since the last analysis. Analyze again for current recommendations.</div>{% endif %}
+{% if analysis %}<div class="panel reading"><h2>Meal-plan recommendations</h2><p class="muted">Analyzed {{ analysis.analyzed_at }}.</p>{% for section in analysis.sections %}<h3>{{ section.topic }}</h3>{% if section.no_evidence %}<p class="muted">No sufficiently relevant evidence was found.</p>{% else %}{{ section.answer_html|safe }}{% endif %}{% endfor %}</div>{% endif %}
+
+<script>
+(function () {
+  var picker = document.getElementById("mealCount");
+  if (!picker) return;
+  function update() {
+    document.querySelectorAll("[data-meal-index]").forEach(function (row) {
+      row.hidden = Number(row.dataset.mealIndex) >= Number(picker.value);
+    });
+  }
+  picker.addEventListener("change", update);
+  update();
+})();
+</script>
+{% endblock %}

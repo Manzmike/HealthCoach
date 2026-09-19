@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """HealthCoach local web GUI (see docs/superpowers/specs/2026-09-17-
-healthcoach-web-gui-design.md). Four focused pages -- ask a question,
-symptom check-in, schedule builder, labs -- plus a home page and a
-reference list of everything else still reachable through ./hc.
+healthcoach-web-gui-design.md). Focused pages cover questions, weekly
+symptoms, workouts, lifestyle, meals, foods, schedule, and labs, plus a
+home page and a reference list of everything else still reachable through ./hc.
 
 This is a new CALLER of the existing modules, not a new implementation of
 their logic: it reads and writes the exact same files the CLI tools already
@@ -50,6 +50,7 @@ from webapp import render as R  # noqa: E402
 from webapp import schedule_analysis as SA  # noqa: E402
 from webapp import schedule_view as SV  # noqa: E402
 from webapp import setup_state as Setup  # noqa: E402
+from webapp import weekly_workspace as WW  # noqa: E402
 
 app = Flask(__name__)
 
@@ -278,6 +279,37 @@ def _run_question(question: str) -> list[dict]:
 # --------------------------------------------------------------------------
 # /symptoms
 
+def _requested_week() -> str:
+    raw = request.values.get("week") or request.values.get("week_start") or dt.date.today().isoformat()
+    try:
+        return WW.week_dates(raw)[0]
+    except ValueError:
+        return dt.date.today().isoformat()
+
+
+def _week_context(week_start: str, *, endpoint: str, week: dict, error: str | None = None) -> dict:
+    start, end = WW.week_dates(week_start)
+    current = dt.date.fromisoformat(start)
+    return {
+        "week": week,
+        "week_start": start,
+        "week_end": end,
+        "previous_week": (current - dt.timedelta(days=7)).isoformat(),
+        "next_week": (current + dt.timedelta(days=7)).isoformat(),
+        "editable": WW.is_editable(start),
+        "planner_endpoint": endpoint,
+        "error": error,
+    }
+
+
+def _render_analysis(week: dict, section: str, results: list[dict]) -> None:
+    week["analysis"][section] = {
+        "snapshot": WW.analysis_snapshot(week, section),
+        "sections": _sections_from_results(results),
+        "analyzed_at": dt.datetime.now().isoformat(timespec="seconds"),
+    }
+
+
 @app.route("/symptoms", methods=["GET", "POST"])
 def symptoms():
     # The full, unfiltered, grouped list -- the type-to-filter box refines
@@ -285,17 +317,205 @@ def symptoms():
     # need a round trip; filter_labels()/grouped_rows() are the same
     # functions the curses picker uses, just rendered as checkboxes here.
     rows = SC.grouped_rows(SC.filter_labels(""))
-    show_form = request.method == "POST" or request.args.get("edit") == "1"
-    if request.method == "GET":
-        return render_template("symptoms.html", rows=rows, selected=set(),
-                                report_html=None, deep_html=None, show_form=show_form)
-    selected = request.form.getlist("symptom")
-    report = SC.build_report(selected)
-    report_html = R.lines_to_html(SC.render_short(report))
-    deep_html = R.lines_to_html(SC.render_deep(report))
-    return render_template("symptoms.html", rows=rows, selected=set(selected),
-                            report_html=report_html, deep_html=deep_html, show_form=show_form)
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    error = None
+    if request.method == "POST":
+        if not WW.is_editable(week_start):
+            error = "This week is read-only because its seven-day check-in window has ended."
+        else:
+            week["symptoms"] = {
+                "selected": request.form.getlist("symptom"),
+                "notes": request.form.get("notes", "").strip(),
+            }
+            WW.save_week(week, WW.DEFAULT_PATH)
+            week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    selected = week["symptoms"]["selected"]
+    report_html = deep_html = None
+    if selected:
+        report = SC.build_report(selected)
+        report_html = R.lines_to_html(SC.render_short(report))
+        deep_html = R.lines_to_html(SC.render_deep(report))
+    context = _week_context(week_start, endpoint="symptoms", week=week, error=error)
+    context.update(rows=rows, selected=set(selected), report_html=report_html,
+                   deep_html=deep_html, notes=week["symptoms"]["notes"])
+    return render_template("symptoms.html", **context)
 
+
+def _workout_context(week_start: str, week: dict, *, error: str | None = None) -> dict:
+    context = _week_context(week_start, endpoint="workouts", week=week, error=error)
+    analysis = week["analysis"]["workouts"] if WW.analysis_is_current(week, "workouts") else None
+    context.update(
+        level_options=WW.WORKOUT_LEVELS,
+        target_options=WW.WORKOUT_TARGETS,
+        focus_options=WW.WORKOUT_FOCUSES,
+        analysis=analysis,
+        analysis_stale=bool(week["analysis"]["workouts"]["analyzed_at"]) and not analysis,
+    )
+    return context
+
+
+@app.route("/workouts", methods=["GET", "POST"])
+def workouts():
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    error = None
+    if request.method == "POST":
+        if not WW.is_editable(week_start):
+            error = "This week is read-only because its seven-day planning window has ended."
+        else:
+            week["workouts"] = {
+                "current_level": request.form.get("current_level", "beginner"),
+                "target": request.form.get("target", "build_consistency"),
+                "days": request.form.getlist("day"),
+                "focus": request.form.get("focus", "full_body"),
+                "constraints": request.form.get("constraints", "").strip(),
+                "sessions": [],
+            }
+            week = WW.normalize_week(week, week_start)
+            settings = week["workouts"]
+            settings["sessions"] = WW.generate_workouts(
+                settings["current_level"], settings["target"], settings["days"],
+                settings["focus"], settings["constraints"],
+            )
+            WW.save_week(week, WW.DEFAULT_PATH)
+            week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    return render_template("workouts.html", **_workout_context(week_start, week, error=error))
+
+
+@app.route("/workouts/analyze", methods=["POST"])
+def workouts_analyze():
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    settings = week["workouts"]
+    sessions = "; ".join(f"{item['day']}: {item['title']} ({item['duration']})" for item in settings["sessions"])
+    query = (f"Review this weekly workout plan for a {settings['current_level']} person targeting "
+             f"{settings['target']}. Focus: {settings['focus']}. Sessions: {sessions or 'none generated'}. "
+             f"Constraints: {settings['constraints'] or 'none recorded'}. Give conservative, advisory recommendations "
+             "for progression, recovery, and when to seek professional guidance.")
+    results = coach.answer_question(query, get_stack=_get_stack, load_model=_load_model)
+    _render_analysis(week, "workouts", results)
+    WW.save_week(week, WW.DEFAULT_PATH)
+    return redirect(url_for("workouts", week=week_start))
+
+
+def _calendar_blocks() -> list[dict]:
+    return [dict(block) for block in _load_schedule().get("blocks", [])]
+
+
+def _lifestyle_context(week_start: str, week: dict, *, error: str | None = None) -> dict:
+    calendar = _calendar_blocks()
+    view_week = WW.normalize_week(week, week_start)
+    view_week["lifestyle"]["calendar_snapshot"] = calendar
+    context = _week_context(week_start, endpoint="lifestyle", week=view_week, error=error)
+    analysis = week["analysis"]["lifestyle"] if WW.analysis_is_current(view_week, "lifestyle") else None
+    context.update(
+        habit_options=WW.LIFESTYLE_HABITS,
+        calendar_blocks=calendar,
+        analysis=analysis,
+        analysis_stale=bool(week["analysis"]["lifestyle"]["analyzed_at"]) and not analysis,
+    )
+    return context
+
+
+@app.route("/lifestyle", methods=["GET", "POST"])
+def lifestyle():
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    error = None
+    if request.method == "POST":
+        if not WW.is_editable(week_start):
+            error = "This week is read-only because its seven-day planning window has ended."
+        else:
+            week["lifestyle"] = {
+                "current": request.form.getlist("current"),
+                "target": request.form.getlist("target"),
+                "notes": request.form.get("notes", "").strip(),
+                "calendar_snapshot": _calendar_blocks(),
+            }
+            WW.save_week(WW.normalize_week(week, week_start), WW.DEFAULT_PATH)
+            week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    return render_template("lifestyle.html", **_lifestyle_context(week_start, week, error=error))
+
+
+@app.route("/lifestyle/analyze", methods=["POST"])
+def lifestyle_analyze():
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    week["lifestyle"]["calendar_snapshot"] = _calendar_blocks()
+    lifestyle_state = week["lifestyle"]
+    calendar_text = "; ".join(f"{item.get('days', [])}: {item.get('label', '')} {item.get('start', '')}-{item.get('end', '')}" for item in lifestyle_state["calendar_snapshot"])
+    query = (f"Review this person's lifestyle change plan. Current habits: {', '.join(lifestyle_state['current']) or 'not selected'}. "
+             f"Target habits: {', '.join(lifestyle_state['target']) or 'not selected'}. Notes: {lifestyle_state['notes'] or 'none'}. "
+             f"Current calendar blocks: {calendar_text or 'none saved'}. Give practical, incremental recommendations "
+             "for improving daily life without assuming medical facts.")
+    results = coach.answer_question(query, get_stack=_get_stack, load_model=_load_model)
+    _render_analysis(week, "lifestyle", results)
+    WW.save_week(week, WW.DEFAULT_PATH)
+    return redirect(url_for("lifestyle", week=week_start))
+
+
+def _selected_food_names_for_week(week_start: str) -> list[str]:
+    try:
+        state = _food_state()
+    except (OSError, ValueError, KeyError):
+        return []
+    current_start = dt.date.fromisoformat(state["start"])
+    requested_start = dt.date.fromisoformat(week_start)
+    if not current_start <= requested_start <= current_start + dt.timedelta(days=6):
+        return []
+    return sorted(selection["name"] for selection in state["week"]["selected"].values()
+                  if selection.get("category") == "food")
+
+
+def _meals_context(week_start: str, week: dict, *, error: str | None = None) -> dict:
+    week["food_context"] = _selected_food_names_for_week(week_start)
+    context = _week_context(week_start, endpoint="meals", week=week, error=error)
+    analysis = week["analysis"]["meals"] if WW.analysis_is_current(week, "meals") else None
+    context.update(
+        selected_foods=_selected_food_names_for_week(week_start),
+        analysis=analysis,
+        analysis_stale=bool(week["analysis"]["meals"]["analyzed_at"]) and not analysis,
+    )
+    return context
+
+
+@app.route("/meals", methods=["GET", "POST"])
+def meals():
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    error = None
+    if request.method == "POST":
+        if not WW.is_editable(week_start):
+            error = "This week is read-only because its seven-day planning window has ended."
+        else:
+            try:
+                meal_count = int(request.form.get("meal_count", "3"))
+                meals_value = [{"name": request.form.get(f"meal_name_{index}", ""),
+                                "notes": request.form.get(f"meal_notes_{index}", "")}
+                               for index in range(meal_count)]
+                week = WW.normalize_week({**week, "meal_count": meal_count, "meals": meals_value}, week_start)
+                WW.save_week(week, WW.DEFAULT_PATH)
+                week = WW.get_week(week_start, WW.DEFAULT_PATH)
+            except ValueError as exc:
+                error = str(exc)
+    return render_template("meals.html", **_meals_context(week_start, week, error=error))
+
+
+@app.route("/meals/analyze", methods=["POST"])
+def meals_analyze():
+    week_start = _requested_week()
+    week = WW.get_week(week_start, WW.DEFAULT_PATH)
+    foods = _selected_food_names_for_week(week_start)
+    week["food_context"] = foods
+    meal_text = "; ".join(f"{item['name'] or 'Unnamed meal'}: {item['notes'] or 'no notes'}" for item in week["meals"])
+    query = (f"Review this weekly meal plan: {meal_text}. Foods selected in the catalog: {', '.join(foods) or 'none'}. "
+             "Give practical advisory recommendations for variety, adequacy, preparation, and fit with the person's goals. "
+             "Do not diagnose or prescribe.")
+    results = coach.answer_question(query, get_stack=_get_stack, load_model=_load_model)
+    _render_analysis(week, "meals", results)
+    WW.save_week(week, WW.DEFAULT_PATH)
+    return redirect(url_for("meals", week=week_start))
 
 # --------------------------------------------------------------------------
 # /schedule
@@ -519,9 +739,9 @@ def labs_import_confirm():
 # --------------------------------------------------------------------------
 # /food -- browse the evidence-graded food catalog and select items for the
 # current week with a required source-linked reason, then save with one
-# overall reason (or discard). Meals/training/other categories/history stay
-# CLI-only for now (./hc -> week_planner.py --view ...); see
-# docs/superpowers/specs for why this first slice is scoped this narrowly.
+# overall reason (or discard). The weekly workspace's meal and workout
+# planners deliberately keep their own local state while linking back to
+# this evidence-gated Food catalog.
 
 def _food_state() -> dict:
     """Loads everything week_planner.py's curses session would hold in

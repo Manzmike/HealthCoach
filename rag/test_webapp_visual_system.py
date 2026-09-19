@@ -32,7 +32,7 @@ class _Structure(HTMLParser):
 
 
 class SharedGuiStructureTests(unittest.TestCase):
-    PAGES = ("/ask", "/food", "/settings", "/setup", "/setup/intake", "/schedule", "/symptoms", "/labs", "/more")
+    PAGES = ("/ask", "/food", "/meals", "/workouts", "/lifestyle", "/settings", "/setup", "/setup/intake", "/schedule", "/symptoms", "/labs", "/more")
 
     def _page(self, path):
         response = app.test_client().get(path)

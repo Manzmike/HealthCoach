@@ -13,6 +13,7 @@ from unittest.mock import patch
 import labs as L
 import schedule_builder as SB
 from webapp import schedule_analysis as SA
+from webapp import weekly_workspace as WW
 from webapp.app import app
 
 
@@ -35,10 +36,12 @@ class _IsolatedState(unittest.TestCase):
         self.ics_path = str(Path(self.tmp.name) / "schedule_export.ics")
         self.analysis_path = Path(self.tmp.name) / "schedule_analysis.json"
         self.labs_path = Path(self.tmp.name) / "labs.json"
+        self.weekly_path = Path(self.tmp.name) / "weekly_workspace.json"
         for patcher in (patch.object(SB, "DEFAULT_PATH", self.sched_path),
                         patch.object(SB, "DEFAULT_ICS_PATH", self.ics_path),
                         patch.object(SA, "DEFAULT_PATH", self.analysis_path),
-                        patch.object(L, "LABS_PATH", self.labs_path)):
+                        patch.object(L, "LABS_PATH", self.labs_path),
+                        patch.object(WW, "DEFAULT_PATH", self.weekly_path)):
             patcher.start()
             self.addCleanup(patcher.stop)
         self.client = app.test_client()
@@ -47,7 +50,8 @@ class _IsolatedState(unittest.TestCase):
 class GetRoutesRenderTests(unittest.TestCase):
     def test_every_get_page_renders_ok(self):
         client = app.test_client()
-        for path in ("/", "/ask", "/symptoms", "/schedule", "/labs", "/more"):
+        for path in ("/", "/ask", "/symptoms", "/schedule", "/labs", "/more",
+                     "/workouts", "/lifestyle", "/meals"):
             with self.subTest(path=path):
                 self.assertEqual(client.get(path).status_code, 200)
 
@@ -165,6 +169,84 @@ class SymptomsRouteTests(_IsolatedState):
             "Constipation", "Unexplained weight gain", "Cold intolerance",
         ]})
         self.assertIn("underactive thyroid".encode(), r.data)
+
+
+class WeeklyPlannerRoutesTests(_IsolatedState):
+    def setUp(self):
+        super().setUp()
+        self.week_start = __import__("datetime").date.today().isoformat()
+
+    def test_sidebar_exposes_the_weekly_planners(self):
+        response = self.client.get("/food")
+        for label in ("Symptoms", "Workouts", "Lifestyle", "Meals"):
+            self.assertIn(label.encode(), response.data)
+
+    def test_active_week_symptom_checkin_is_saved_by_date(self):
+        response = self.client.post("/symptoms", data={
+            "week_start": self.week_start,
+            "symptom": ["Bloating"],
+            "notes": "After dinner",
+        })
+        self.assertEqual(response.status_code, 200)
+        saved = WW.get_week(self.week_start, self.weekly_path)
+        self.assertEqual(saved["symptoms"]["selected"], ["Bloating"])
+        self.assertEqual(saved["symptoms"]["notes"], "After dinner")
+
+    def test_symptom_checkin_outside_window_is_read_only(self):
+        old_start = (__import__("datetime").date.today() - __import__("datetime").timedelta(days=7)).isoformat()
+        response = self.client.post("/symptoms", data={
+            "week_start": old_start,
+            "symptom": ["Bloating"],
+        })
+        self.assertIn(b"read-only", response.data.lower())
+        self.assertEqual(WW.get_week(old_start, self.weekly_path)["symptoms"]["selected"], [])
+
+    def test_workout_save_generates_a_session_for_each_selected_day(self):
+        response = self.client.post("/workouts", data={
+            "week_start": self.week_start,
+            "current_level": "beginner",
+            "target": "build_strength",
+            "day": ["Mon", "Sat"],
+            "focus": "strength",
+            "constraints": "old knee pain",
+        })
+        self.assertEqual(response.status_code, 200)
+        saved = WW.get_week(self.week_start, self.weekly_path)
+        self.assertEqual([item["day"] for item in saved["workouts"]["sessions"]], ["Mon", "Sat"])
+
+    def test_workout_analysis_is_persisted(self):
+        with patch("webapp.app.coach.answer_question", return_value=[
+            {"topic": "workout", "text": "Weekly plan", "no_evidence": False,
+             "answer": "**Use:** Progress gradually.", "related": "", "schedule_block": "", "weak": False},
+        ]):
+            response = self.client.post("/workouts/analyze", data={"week_start": self.week_start})
+        self.assertEqual(response.status_code, 302)
+        saved = WW.get_week(self.week_start, self.weekly_path)
+        self.assertEqual(saved["analysis"]["workouts"]["sections"][0]["topic"], "workout")
+
+    def test_lifestyle_save_captures_current_and_target_habits(self):
+        response = self.client.post("/lifestyle", data={
+            "week_start": self.week_start,
+            "current": ["desk_work"],
+            "target": ["walking_breaks", "sleep_consistency"],
+            "notes": "Make evenings calmer",
+        })
+        self.assertEqual(response.status_code, 200)
+        saved = WW.get_week(self.week_start, self.weekly_path)
+        self.assertEqual(saved["lifestyle"]["current"], ["desk_work"])
+        self.assertEqual(saved["lifestyle"]["target"], ["walking_breaks", "sleep_consistency"])
+
+    def test_meals_save_accepts_one_to_seven_slots(self):
+        response = self.client.post("/meals", data={
+            "week_start": self.week_start,
+            "meal_count": "7",
+            **{f"meal_name_{i}": f"Meal {i + 1}" for i in range(7)},
+            **{f"meal_notes_{i}": "simple" for i in range(7)},
+        })
+        self.assertEqual(response.status_code, 200)
+        saved = WW.get_week(self.week_start, self.weekly_path)
+        self.assertEqual(len(saved["meals"]), 7)
+        self.assertEqual(saved["meals"][6]["name"], "Meal 7")
 
 
 class LabsRoutesTests(_IsolatedState):

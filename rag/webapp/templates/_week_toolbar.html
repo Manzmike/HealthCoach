@@ -1,0 +1,22 @@
+<div class="week-toolbar panel">
+  <div>
+    <p class="eyebrow">Weekly workspace</p>
+    <h2 class="section-title">{{ week_start }} – {{ week_end }}</h2>
+    <p class="muted">One selected date opens a seven-day planning window.</p>
+  </div>
+  <form method="get" action="{{ url_for(planner_endpoint) }}" class="week-picker">
+    <label for="week_start">Week start</label>
+    <input id="week_start" name="week" type="date" value="{{ week_start }}">
+    <button type="submit" class="quiet">Open week</button>
+  </form>
+  <nav class="week-nav" aria-label="Week navigation">
+    <a class="button quiet" href="{{ url_for(planner_endpoint, week=previous_week) }}">Previous</a>
+    <a class="button quiet" href="{{ url_for(planner_endpoint, week=next_week) }}">Next</a>
+  </nav>
+</div>
+{% if editable %}
+  <p class="window-note" role="status">This week is open for input until {{ week_end }}.</p>
+{% else %}
+  <p class="readonly-note" role="status">This week is read-only. Select the current week to make changes.</p>
+{% endif %}
+{% if error %}<div class="notice" role="alert">{{ error }}</div>{% endif %}

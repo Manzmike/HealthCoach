@@ -86,6 +86,13 @@ A keyboard-first local UI over all of the above, stored in one canonical **`HEAL
   its claims against the library before storing them.
 - `hc-*` shell wrappers (`hc-report`, `hc-supplements`, `hc-bevel`, `hc-refresh-*`) as the command line.
 
+The local Flask browser app also exposes a date-keyed weekly workspace: Symptoms stores a
+seven-day check-in, Workouts generates a deterministic plan from current level/target/days,
+Lifestyle compares current and target habits against the saved calendar, and Meals accepts one
+to seven slots alongside Food selections. Each planner saves under
+`rag/.healthcoach/weekly_workspace.json`, allows edits only during its selected seven-day
+window, and persists explicit advisory analysis that becomes stale after inputs change.
+
 ## Personalization
 
 `profile.txt` (injected into every answer) and optional `history.md` make it *yours*: mid-20s male

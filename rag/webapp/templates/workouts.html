@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Workouts — HealthCoach{% endblock %}
+{% block content %}
+<header class="page-header">
+  <div><p class="eyebrow">Weekly movement plan</p><h1>Workouts</h1>
+  <p class="lede">Choose where you are, where you want to go, and the days you can realistically use.</p></div>
+</header>
+{% include "_week_toolbar.html" %}
+
+{% if editable %}
+<form method="post" action="{{ url_for('workouts') }}" class="panel">
+  <input type="hidden" name="week_start" value="{{ week_start }}">
+  <div class="form-grid">
+    <div class="field"><label for="currentLevel">Current level</label><select id="currentLevel" name="current_level">
+      {% for value, label in level_options %}<option value="{{ value }}"{% if week.workouts.current_level == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select></div>
+    <div class="field"><label for="workoutTarget">Target</label><select id="workoutTarget" name="target">
+      {% for value, label in target_options %}<option value="{{ value }}"{% if week.workouts.target == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select></div>
+    <div class="field"><label for="workoutFocus">Weekly focus</label><select id="workoutFocus" name="focus">
+      {% for value, label in focus_options %}<option value="{{ value }}"{% if week.workouts.focus == value %} selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select></div>
+  </div>
+  <fieldset class="field"><legend>Available days</legend><div class="choice-grid">
+    {% for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] %}
+      <label class="choice"><input type="checkbox" name="day" value="{{ day }}"{% if day in week.workouts.days %} checked{% endif %}> {{ day }}</label>
+    {% endfor %}
+  </div></fieldset>
+  <div class="field"><label for="constraints">Constraints or preferences</label><textarea id="constraints" name="constraints" rows="3" placeholder="e.g. old knee pain, 30 minutes, home equipment only">{{ week.workouts.constraints }}</textarea></div>
+  <button type="submit">Generate this week</button>
+</form>
+{% endif %}
+
+<div class="panel">
+  <div class="section-heading-row"><div><h2 class="section-title">Generated week</h2><p class="muted">This is a planning suggestion. It does not replace clinical or coaching clearance.</p></div><a class="button quiet" href="{{ url_for('schedule', edit=1) }}">Open calendar</a></div>
+  {% if week.workouts.sessions %}
+    <div class="plan-list">{% for session in week.workouts.sessions %}<article class="plan-item"><strong>{{ session.day }} · {{ session.title }}</strong><span>{{ session.duration }}</span><p>{{ session.notes }}</p></article>{% endfor %}</div>
+    <form method="post" action="{{ url_for('workouts_analyze') }}"><input type="hidden" name="week_start" value="{{ week_start }}"><button type="submit">Analyze workout plan</button></form>
+  {% else %}<p class="muted">Choose at least one available day and generate a plan.</p>{% endif %}
+</div>
+
+{% if analysis_stale %}<div class="notice" role="status">The plan changed since the last analysis. Analyze again for current recommendations.</div>{% endif %}
+{% if analysis %}<div class="panel reading"><h2>Workout recommendations</h2><p class="muted">Analyzed {{ analysis.analyzed_at }}.</p>{% for section in analysis.sections %}<h3>{{ section.topic }}</h3>{% if section.no_evidence %}<p class="muted">No sufficiently relevant evidence was found.</p>{% else %}{{ section.answer_html|safe }}{% endif %}{% endfor %}</div>{% endif %}
+{% endblock %}
